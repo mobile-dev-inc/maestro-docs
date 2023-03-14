@@ -2,7 +2,7 @@
 
 ### Input text
 
-Inputs text (regardless of whether any text field is currently focused or not)
+Inputs text (regardless of whether any text field is currently focused or not).
 
 ```yaml
 - inputText: "Hello World"
