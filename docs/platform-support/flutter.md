@@ -2,7 +2,7 @@
 
 <figure><img src="../.gitbook/assets/flutter.png" alt=""><figcaption></figcaption></figure>
 
-Maestro supports Flutter.&#x20;
+Maestro supports Flutter
 
 Commands such as `tapOn` provide you with ways to select these widgets based on text or semantic labels.
 
