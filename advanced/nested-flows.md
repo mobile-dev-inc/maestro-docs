@@ -10,6 +10,14 @@ Runs a flow from a specified file:
 - runFlow: anotherFlow.yaml
 ```
 
+#### Run flows conditionally
+
+Sometimes you'd want to run flows only under certain conditions. Check out more in the page below
+
+{% content-ref url="conditions.md" %}
+[conditions.md](conditions.md)
+{% endcontent-ref %}
+
 #### Example
 
 Let's say you have a login sequence that you'd like to reuse across multiple flows. You can write the login commands in a separate file and run those steps from another Flow:
