@@ -55,19 +55,19 @@ You can mention the names and values of the permissions with `launchApp` command
 
 ```yaml
 - launchApp:
-    permission: { all: deny } 
+    permissions: { all: deny } 
 ```
 
 #### To deny all the permissions but allow medialibrary
 
 ```yaml
 - launchApp:
-    permission: { all: deny, medialibrary: allow } 
+    permissions: { all: deny, medialibrary: allow } 
 ```
 
 #### To deny all the permissions but allow adding voicemail
 
 ```yaml
 - launchApp:
-    permission: { all: deny, com.android.voicemail.permission.ADD_VOICEMAIL: allow } 
+    permissions: { all: deny, com.android.voicemail.permission.ADD_VOICEMAIL: allow } 
 ```
