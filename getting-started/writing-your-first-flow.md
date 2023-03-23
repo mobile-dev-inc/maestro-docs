@@ -11,7 +11,7 @@ appId: your.app.id
 - tapOn: "Text on the screen"
 ```
 
-Make sure an Android device/emulator or iOS simulator is running ([instructions](installing-maestro/#android)) and app is correctly installed on a selected device ([instructions](../reference/build-and-install-your-app/)).
+Make sure an Android device/emulator or iOS simulator is running ([instructions](installing-maestro/#android)) and app is correctly installed on a selected device ([instructions](build-and-install-your-app/)).
 
 Run it!
 

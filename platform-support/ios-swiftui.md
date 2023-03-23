@@ -82,7 +82,7 @@ Switching between different apps during the same flow is also supported by maest
     id: "breadcrumb"
 ```
 
-<figure><img src="../.gitbook/assets/Simulator Screen Shot - iPhone 14 - 2023-01-12 at 22.31.14 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Simulator Screen Shot - iPhone 14 - 2023-01-12 at 22.31.14 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 breadcrumb is an accessibility id \
 of the “Back to SwiftUI app” \

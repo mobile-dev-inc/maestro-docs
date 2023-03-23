@@ -1,4 +1,4 @@
-# Geo Location
+# setLocation
 
 `setLocation` command applies a mock geolocation to the device:
 

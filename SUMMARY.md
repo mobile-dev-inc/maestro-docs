@@ -9,6 +9,8 @@
   * [macOS](getting-started/installing-maestro/macos.md)
   * [Windows](getting-started/installing-maestro/windows.md)
   * [Linux](getting-started/installing-maestro/linux.md)
+* [Build and Install your App](getting-started/build-and-install-your-app/README.md)
+  * [iOS](getting-started/build-and-install-your-app/ios.md)
 * [Run a Sample Flow](getting-started/run-a-sample-flow.md)
 * [Writing Your First Flow](getting-started/writing-your-first-flow.md)
 * [Maestro Studio](getting-started/maestro-studio.md)
@@ -30,24 +32,6 @@
 * [Android contacts flow automation](examples/android-contacts-flow-automation.md)
 * [Facebook signup flow automation](examples/facebook-signup-flow-automation.md)
 * [Advanced: Wikipedia Android](examples/advanced-wikipedia-android.md)
-
-## Reference
-
-* [Tap On View](reference/tap-on-view.md)
-* [Assertions](reference/assertions.md)
-* [Scroll and Swipe](reference/scroll-and-swipe.md)
-* [Back Button Press](reference/back-button-press.md)
-* [Text Input](reference/text-input.md)
-* [Keyboard](reference/keyboard/README.md)
-  * [Copy & Paste text](reference/keyboard/copy-and-paste-text.md)
-* [Take Screenshot](reference/take-screenshot.md)
-* [Open Link](reference/open-link.md)
-* [App Files](reference/app-files.md)
-* [App Lifecycle](reference/app-lifecycle/README.md)
-  * [Configuring Permissions](reference/app-lifecycle/configuring-permissions.md)
-* [Geo Location](reference/geo-location.md)
-* [Build and Install your App](reference/build-and-install-your-app/README.md)
-  * [iOS](reference/build-and-install-your-app/ios.md)
 
 ## CLI
 
@@ -80,7 +64,42 @@
     * [Getting started](advanced/experimental/maestro-mock-server/getting-started.md)
     * [Writing rules](advanced/experimental/maestro-mock-server/writing-rules.md)
   * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
+* [Configuring Permissions](advanced/configuring-permissions.md)
 * [Detect Maestro in your App](advanced/detect-maestro-in-your-app.md)
+
+## API Reference
+
+* [Commands](api-reference/commands/README.md)
+  * [assertVisible](api-reference/commands/assertvisible.md)
+  * [assertNotVisible](api-reference/commands/assertnotvisible.md)
+  * [assertTrue](api-reference/commands/asserttrue.md)
+  * [back](api-reference/commands/back.md)
+  * [clearKeychain](api-reference/commands/clearkeychain.md)
+  * [clearState](api-reference/commands/clearstate.md)
+  * [copyTextFrom](api-reference/commands/copytextfrom.md)
+  * [evalScript](api-reference/commands/evalscript.md)
+  * [eraseText](api-reference/commands/erasetext.md)
+  * [extendedWaitUntil](api-reference/commands/extendedwaituntil.md)
+  * [hideKeyboard](api-reference/commands/hidekeyboard.md)
+  * [inputText](api-reference/commands/inputtext.md)
+  * [launchApp](api-reference/commands/launchapp.md)
+  * [openLink](api-reference/commands/openlink.md)
+  * [pressKey](api-reference/commands/presskey.md)
+  * [pasteText](api-reference/commands/pastetext.md)
+  * [repeat](api-reference/commands/repeat.md)
+  * [runFlow](api-reference/commands/runflow.md)
+  * [runScript](api-reference/commands/runscript.md)
+  * [scroll](api-reference/commands/scroll.md)
+  * [scrollUntilVisible](api-reference/commands/scrolluntilvisible.md)
+  * [setLocation](api-reference/commands/setlocation.md)
+  * [stopApp](api-reference/commands/stopapp.md)
+  * [swipe](api-reference/commands/swipe.md)
+  * [takeScreenshot](api-reference/commands/takescreenshot.md)
+  * [tapOn](api-reference/commands/tapon.md)
+  * [waitForAnimationToEnd](api-reference/commands/waitforanimationtoend.md)
+* [Configuration](api-reference/configuration/README.md)
+  * [Workspace configuration](api-reference/configuration/workspace-configuration.md)
+  * [Flow configuration](api-reference/configuration/flow-configuration.md)
 
 ## Troubleshooting
 

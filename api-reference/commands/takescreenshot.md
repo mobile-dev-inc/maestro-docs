@@ -1,4 +1,4 @@
-# Take Screenshot
+# takeScreenshot
 
 `takeScreenshot` saves a screenshot in a PNG file:
 

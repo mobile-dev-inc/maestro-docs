@@ -1,4 +1,4 @@
-# Tap On View
+# tapOn
 
 Taps on a view on the screen:
 
