@@ -2,7 +2,7 @@
 
 ### How to report an issue
 
-If an issue / bug encountered while using **maestro**, we encourage you to report it in either our public [maestro slack channel](https://mobile-dev-inc.slack.com/ssb/redirect) or [create a github issue](https://github.com/mobile-dev-inc/maestro/issues/new) (please make sure that one doesn't already exist).
+If an issue / bug encountered while using **maestro**, we encourage you to report it in either our public [maestro slack channel](https://docsend.com/view/3r2sf8fvvcjxvbtk) or [create a github issue](https://github.com/mobile-dev-inc/maestro/issues/new) (please make sure that one doesn't already exist).
 
 ### bugreport command
 
