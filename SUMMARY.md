@@ -42,31 +42,6 @@
 * [Continuous Mode](cli/continuous-mode.md)
 * [View Hierarchy](cli/view-hierarchy.md)
 
-## Advanced
-
-* [Nested Flows](advanced/nested-flows.md)
-* [Wait](advanced/wait.md)
-* [Loops](advanced/loops.md)
-* [Conditions](advanced/conditions.md)
-* [Parameters & Constants](advanced/parameters-and-constants.md)
-* [JavaScript](advanced/javascript/README.md)
-  * [Run JavaScript](advanced/javascript/run-javascript.md)
-  * [Outputs](advanced/javascript/outputs.md)
-  * [Access element text](advanced/javascript/access-element-text.md)
-  * [Make HTTP(s) requests](advanced/javascript/make-http-s-requests.md)
-* [Experimental](advanced/experimental/README.md)
-  * [Network Mocking](advanced/experimental/network-mocking/README.md)
-    * [Setup](advanced/experimental/network-mocking/setup/README.md)
-      * [Android](advanced/experimental/network-mocking/setup/android.md)
-      * [iOS](advanced/experimental/network-mocking/setup/ios.md)
-    * [Matching Rules](advanced/experimental/network-mocking/matching-rules.md)
-  * [Maestro Mock Server](advanced/experimental/maestro-mock-server/README.md)
-    * [Getting started](advanced/experimental/maestro-mock-server/getting-started.md)
-    * [Writing rules](advanced/experimental/maestro-mock-server/writing-rules.md)
-  * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
-* [Configuring Permissions](advanced/configuring-permissions.md)
-* [Detect Maestro in your App](advanced/detect-maestro-in-your-app.md)
-
 ## API Reference
 
 * [Commands](api-reference/commands/README.md)
@@ -100,6 +75,31 @@
 * [Configuration](api-reference/configuration/README.md)
   * [Workspace configuration](api-reference/configuration/workspace-configuration.md)
   * [Flow configuration](api-reference/configuration/flow-configuration.md)
+
+## Advanced
+
+* [Nested Flows](advanced/nested-flows.md)
+* [Wait](advanced/wait.md)
+* [Loops](advanced/loops.md)
+* [Conditions](advanced/conditions.md)
+* [Parameters & Constants](advanced/parameters-and-constants.md)
+* [JavaScript](advanced/javascript/README.md)
+  * [Run JavaScript](advanced/javascript/run-javascript.md)
+  * [Outputs](advanced/javascript/outputs.md)
+  * [Access element text](advanced/javascript/access-element-text.md)
+  * [Make HTTP(s) requests](advanced/javascript/make-http-s-requests.md)
+* [Experimental](advanced/experimental/README.md)
+  * [Network Mocking](advanced/experimental/network-mocking/README.md)
+    * [Setup](advanced/experimental/network-mocking/setup/README.md)
+      * [Android](advanced/experimental/network-mocking/setup/android.md)
+      * [iOS](advanced/experimental/network-mocking/setup/ios.md)
+    * [Matching Rules](advanced/experimental/network-mocking/matching-rules.md)
+  * [Maestro Mock Server](advanced/experimental/maestro-mock-server/README.md)
+    * [Getting started](advanced/experimental/maestro-mock-server/getting-started.md)
+    * [Writing rules](advanced/experimental/maestro-mock-server/writing-rules.md)
+  * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
+* [Configuring Permissions](advanced/configuring-permissions.md)
+* [Detect Maestro in your App](advanced/detect-maestro-in-your-app.md)
 
 ## Troubleshooting
 
