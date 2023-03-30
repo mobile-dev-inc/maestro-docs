@@ -44,4 +44,4 @@ Note that not all Maestro commands have been fully implemented in the WebDriver 
 
 #### Maestro Cloud support
 
-Web flows are currently not supported on Maestro Cloud but something that we are actively exploring, so please do not hesitate to reach out in our [public Slack channel](https://mobile-dev-inc.slack.com/ssb/redirect).
+Web flows are currently not supported on Maestro Cloud but something that we are actively exploring, so please do not hesitate to reach out in our [public Slack channel](https://docsend.com/view/3r2sf8fvvcjxvbtk).

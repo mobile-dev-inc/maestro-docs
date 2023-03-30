@@ -19,29 +19,11 @@ env:
 
 ### Run file
 
-`runScript` command runs a provided JavaScript file.
+If you want to run a JavaScript file you can uase the runScript command:
 
-```yaml
-appId: com.example
-env:
-    MY_NAME: John
----
-- launchApp
-- runScript: myScript.js
-- inputText: ${output.myFlow}
-```
-
-A script would typically perform some action and set an output value that could be accessed later. See [outputs.md](outputs.md "mention") for more information.
-
-```javascript
-var uppercaseName = MY_NAME.toUpperCase()
-
-output.myFlow = uppercaseName   // returns 'JOHN'
-```
-
-{% hint style="info" %}
-You can directly access `env` parameters from within JavaScript. See [parameters-and-constants.md](../parameters-and-constants.md "mention") for more information.
-{% endhint %}
+{% content-ref url="../../api-reference/commands/runscript.md" %}
+[runscript.md](../../api-reference/commands/runscript.md)
+{% endcontent-ref %}
 
 #### Passing parameters
 
@@ -56,14 +38,8 @@ You can directly access `env` parameters from within JavaScript. See [parameters
 
 ### Inline
 
-For very simple computations (like the one above), creating a new file might be cumbersome. `evalScript` allows you to specify JavaScript directly in your Maestro flow.
+For very simple computations (like the one above), creating a new file might be cumbersome. For this use case you can use the `evalScript` command:
 
-```yaml
-appId: com.example
-env:
-    MY_NAME: John
----
-- launchApp
-- evalScript: ${output.myFlow = MY_NAME.toUpperCase()}
-- inputText: ${output.myFlow}
-```
+{% content-ref url="../../api-reference/commands/evalscript.md" %}
+[evalscript.md](../../api-reference/commands/evalscript.md)
+{% endcontent-ref %}

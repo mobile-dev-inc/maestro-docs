@@ -1,14 +1,4 @@
-# Keyboard
-
-### hideKeyboard
-
-To hide the software keyboard, use `hideKeyboard` command:
-
-```yaml
-- hideKeyboard
-```
-
-### pressKey
+# pressKey
 
 `pressKey` command allows you to press a set of special keys:
 

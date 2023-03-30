@@ -1,20 +1,6 @@
-# Text Input
+# eraseText
 
-### Input text
-
-Inputs text (regardless of whether any text field is currently focused or not).
-
-```yaml
-- inputText: "Hello World"
-```
-
-{% hint style="warning" %}
-Unfortunately unicode characters are not supported yet. Follow [GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/146) for status updates.
-{% endhint %}
-
-### Erase text
-
-`eraseText` command removes up to 50 characters from the currently selected text field (if any):
+The  `eraseText` command removes up to 50 characters from the currently selected text field (if any):
 
 ```yaml
 - eraseText

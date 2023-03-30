@@ -1,6 +1,4 @@
-# App Files
-
-### clearState
+# clearState
 
 Clears the application state:
 
@@ -30,11 +28,3 @@ idb file rm --application {bundle id}/
 ```
 {% endtab %}
 {% endtabs %}
-
-### clearKeychain
-
-Clears the **entire** iOS keychain (not applicable on Android):
-
-```
-- clearKeychain
-```

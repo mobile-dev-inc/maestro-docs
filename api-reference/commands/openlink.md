@@ -1,4 +1,4 @@
-# Open Link
+# openLink
 
 To open a link on a device (i.e. a deep link):
 
@@ -10,7 +10,7 @@ To open a link on a device (i.e. a deep link):
 
 If your app shows a disambiguation dialog along with other apps that can open the web link:
 
-&#x20;![](../.gitbook/assets/app-disambiguation\_2x.png)
+&#x20;![](../../.gitbook/assets/app-disambiguation\_2x.png)
 
 You can auto-verify the web link to be opened by your app with `autoVerify` attribute:
 
