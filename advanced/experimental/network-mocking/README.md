@@ -1,7 +1,7 @@
 # Network Mocking
 
 {% hint style="warning" %}
-This is an experimental feature. It is not yet supported by Maestro Cloud and breaking changes might be introduced as we work. on it.
+This is an experimental feature. It is not yet supported by Maestro Cloud and breaking changes might be introduced as we work on it.
 {% endhint %}
 
 Network Mocking feature allows you to replace part or all of the network traffic coming from your app with static predefined content **in order to get more predictable test results**.
