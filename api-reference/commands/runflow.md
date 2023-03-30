@@ -48,3 +48,14 @@ appId: com.example.app
 ```
 {% endtab %}
 {% endtabs %}
+
+#### Arguments
+
+`runFlow` command can accepts arguments that will be passed to subflow, the same way as with `-e` or `env` block in the flow itself (see [Parameters & Constants](../../advanced/parameters-and-constants.md)):
+
+```yaml
+- runFlow: 
+    file: anotherFlow.yaml
+    env:
+      MY_PARAMETER="123"
+```

@@ -61,21 +61,17 @@ Constants defined in a nested flow override parameters with the same name in the
 
 ### Accessing variables from the shell
 
-Maestro will automatically read all environment variables from the shell and make them available in your Flows, assuming the environment variable is not manually defined in the Flow or passed as an env parameter.&#x20;
+Maestro will automatically read environment variables from the shell prefixed by `MAESTRO_` and make them available in your Flows, assuming the environment variable is not manually defined in the Flow or passed as an env parameter.&#x20;
 
 ```
-export FOO=bar
+export MAESTRO_FOO=bar
 ```
 
-If you define the variable `FOO` as above, you can simply refer to it in your Flows when running `maestro test` like a normal environment variable:
+If you define the variable `MAESTRO_FOO` as above, you can simply refer to it in your Flows when running `maestro test` or `maestro cloud` like a normal environment variable:
 
 ```
-- tapOn: ${FOO}
+- tapOn: ${MAESTRO_FOO}
 ```
-
-{% hint style="info" %}
-Note that this **only** applies for `maestro test`, when running `maestro cloud` the available environment variables in your shell will not be sent along for security reasons.
-{% endhint %}
 
 ### Parameters and JavaScript
 
