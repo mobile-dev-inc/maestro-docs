@@ -27,5 +27,5 @@ On Android:
 
 On iOS
 
-1. Execute `idb list-targets` to get the `udid` of your simulator.
-2. Execute `idb list-apps --udid <udid>` where you replace `<udid>` with the `udid` from step 1.
+1. Execute `xcrun simctl listapps booted | grep CFBundleIdentifier` to get a list of all installed packages
+2. Search for the appID manually or use `grep` in the above command to search for part of the name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`
