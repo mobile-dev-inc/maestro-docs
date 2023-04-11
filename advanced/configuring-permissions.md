@@ -85,5 +85,5 @@ You can mention the names and values of the permissions with `launchApp` command
 - launchApp:
     permissions:
         all: deny
-         com.android.voicemail.permission.ADD_VOICEMAIL: allow
+        com.android.voicemail.permission.ADD_VOICEMAIL: allow
 ```
