@@ -1,3 +1,7 @@
+---
+description: A step by step guide to install Maestro in Windows
+---
+
 # Windows
 
 Maestro works great on Windows computers, but there are a few unique setup steps to be aware of. This guide will walk you through the end-to-end steps for getting started with Maestro on a Windows machine.
@@ -74,41 +78,85 @@ maestro --version
 
 
 * Download android command line tools zip file from [android official site.](https://developer.android.com/studio)
-* Use these [instruction](https://developer.android.com/studio/install#linux) to setup android command lines correctly in your WSL2 .
-* Make sure you have ANDROID\_HOME in your environment variable of WSL2 as well.
-* To check that everything went good, do following:
-  * Close and relaunch terminal
-  * Run `adb --version` and see that adb version is shown
-  * Since everything is installed fresh, your WSL 2 adb version should perfectly match with windows adb version that we noted down as part of pre-requisites.
+*   Use the following instructions to setup android command lines correctly in your WSL2 .
+
+    * Open WSL2 terminal.
+    * Install JDK using following command `sudo apt install default-jdk`
+    * Create a new directories in your home directory.
+
+    ```
+    ~ $ mkdir Android
+    ~ $ cd Android
+    ```
+
+    * Unzip the android command line tools zip file in the `android` directory using this command: `unzip ~<command_line_zip_filename>.zip`
+    * In the `android` directory:
+
+    ```
+    $ cd cmdline-tools
+    $ mkdir tools
+    $ mv -i * tools
+    ```
+
+    **Note:** Last command will probably give you a warning, but you don’t need the worry about that.
+
+    * Now add the following line to your `~/.bashrc` file:
+
+    ```
+    export ANDROID_HOME=$HOME/Android
+    export PATH=$PATH:$ANDROID_HOME/tools/bin
+    ```
+
+    * Run `source ~/.bashrc` to reload the bashrc file.
+    * Run `sdkmanager --list` to check if everything is working fine.
+    * Run `sdkmanager --install "platform-tools"` to install platform tools.
+    * To check that everything went good, do following:
+      * Close and relaunch terminal
+      * Run `adb --version` and see that adb version is shown
+      * Since everything is installed fresh, your WSL 2 adb version should perfectly match with windows adb version that we noted down as part of pre-requisites.
 
 
 
-**It's time to put some magical elixir and make sure you are able to use android emulators with your WSL2 correctly.**
-
-_Please follow below steps to setup the bridge._
+**Please follow below steps to setup the ADB and make sure you are able to use android emulators with your WSL2 correctly**
 
 * Fire up your android emulator on windows.
 * Once android emulator is up and running, open a POWERSHELL PROMPT.
-* Run this command in Powershell `adb -a -P 5037 nodaemon server`
-* Keep the powershell windows open.
-* Now open your WSL2 terminal and run these commands.
-  * `adb kill-server`&#x20;
-  * `export ADB_SERVER_SOCKET=tcp:<WINDOWS_IPV4_ADDR>:5037`&#x20;
+*   Run this command in Powershell
+
+    ```
+    adb -a -P 5037 nodaemon server
+    ```
+
+    * This will start the adb server in windows host.
+    * Note down the IPV4 address of your windows host PC/machine.
+
+    **TROUBLESHOOTING:**
+
+    * Sometimes you may get `smartsockets..` error when you run `adb -a -P 5037 nodaemon server` command in powershell. In that case you can do following steps:
+      * Open task manager and kill all `adb` related processes.
+      * If Android studio is open, close it and KEEP ONLY emulator running.
+      * If you see a message saying `emulator offline`, IGNORE IT.
+
+    \
+
+* **Note: Don't close the powershell terminal.!!**
+* **Now open your WSL2 terminal and run these commands.**
+  * `adb kill-server`
+  * `export ADB_SERVER_SOCKET=tcp:<WINDOWS_IPV4_ADDR>:5037`
   * `adb devices`
-    * You should see your connected emulator successfully now.
+  * `You should see your connected emulator successfully now.`
 
 
 
-
-
-### All Done ?
+### Ready to start Using Maestro?
 
 Yes at this point you are free to start your automation.
 
 * [Write your first flow](https://maestro.mobile.dev/getting-started/writing-your-first-flow)
-* How to run my flow?
-  * To run your flow run this command in your WSL2 terminal\
-    `maestro --host <WINDOWS_IPV4_ADDR> test flow.yaml`
+* How to run **Maestro commands**?
+  * You can run maestro commands in WSL2 terminal with `--host` flag. eg.
+    * _**maestro --host \<WINDOWS\_IPV4\_ADDR> test flow.yaml**_
+    * _**maestro --host \<WINDOWS\_IPV4\_ADDR> studio**_
 * Check out the [full documentation](https://maestro.mobile.dev/)
 
 ## Known Issue <a href="#2884" id="2884"></a>

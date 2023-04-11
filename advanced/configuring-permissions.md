@@ -1,5 +1,7 @@
 # Configuring Permissions
 
+By default, all permissions are set to `allow` by the launchApp command.
+
 It is possible to launch an app with customized permissions behavior with maestro and change the default behavior of all permissions being granted.
 
 You can provide permission names along with permission values to change the permission state.
@@ -8,11 +10,11 @@ You can provide permission names along with permission values to change the perm
 
 Permissions values can be either of the three states: `allow`, `deny` or `unset.`
 
-| Permission Value | iOS                                                      | Android            |
-| ---------------- | -------------------------------------------------------- | ------------------ |
-| allow            | Permission granted                                       | Permission granted |
-| deny             | Permission denied                                        | Permission denied  |
-| unset            | Permission will be asked during the flow run when needed | Permission denied  |
+| Permission Value | iOS                                      | Android                                  |
+| ---------------- | ---------------------------------------- | ---------------------------------------- |
+| allow            | Permission granted                       | Permission granted                       |
+| deny             | Permission denied                        | Permission will be asked during flow run |
+| unset            | Permission will be asked during flow run | Permission will be asked during flow run |
 
 ### Permission Names
 
@@ -62,12 +64,16 @@ You can mention the names and values of the permissions with `launchApp` command
 
 ```yaml
 - launchApp:
-    permissions: { all: deny, medialibrary: allow } 
+    permissions:
+        all: deny
+        medialibrary: allow
 ```
 
 #### To deny all the permissions but allow adding voicemail
 
 ```yaml
 - launchApp:
-    permissions: { all: deny, com.android.voicemail.permission.ADD_VOICEMAIL: allow } 
+    permissions:
+        all: deny
+         com.android.voicemail.permission.ADD_VOICEMAIL: allow
 ```
