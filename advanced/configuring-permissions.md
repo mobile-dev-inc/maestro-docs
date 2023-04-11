@@ -6,7 +6,45 @@ It is possible to launch an app with customized permissions behavior with maestr
 
 You can provide permission names along with permission values to change the permission state.
 
-### Permission Values
+### Permission Name
+
+Permission names represent all the set of permissions that can be configured on a platform. For example: `bluetooth` on android supports both: `android.permission.BLUETOOTH_CONNECT` and `android.permission.BLUETOOTH_SCAN` permissions.
+
+| Permission Name      | iOS support          | Android support      |
+| -------------------- | -------------------- | -------------------- |
+| calendar             | :white\_check\_mark: | :white\_check\_mark: |
+| camera               | :white\_check\_mark: | :white\_check\_mark: |
+| contacts             | :white\_check\_mark: | :white\_check\_mark: |
+| health               | :white\_check\_mark: | ❌                    |
+| homekit              | :white\_check\_mark: | ❌                    |
+| location             | :white\_check\_mark: | :white\_check\_mark: |
+| medialibrary         | :white\_check\_mark: | :white\_check\_mark: |
+| microphone           | :white\_check\_mark: | :white\_check\_mark: |
+| motion               | :white\_check\_mark: | ❌                    |
+| notifications        | :white\_check\_mark: | :white\_check\_mark: |
+| photos               | :white\_check\_mark: | ❌                    |
+| reminders            | :white\_check\_mark: | ❌                    |
+| siri                 | :white\_check\_mark: | ❌                    |
+| speech               | :white\_check\_mark: | ❌                    |
+| usertracking         | :white\_check\_mark: | ❌                    |
+| bluetooth            | ❌                    | :white\_check\_mark: |
+| phone                | ❌                    | :white\_check\_mark: |
+| storage              | ❌                    | :white\_check\_mark: |
+| my.custom.permission | ❌                    | :white\_check\_mark: |
+
+**Note**: Use `all` as a permission name to represent all the permissions that the app can ask for.
+
+#### Supporting permission IDs for Android
+
+There are permissions supported on Android that are not listed in the table above. It is supported to use the permission IDs on Android. For example, to allow the "add voicemail" permission, use:
+
+```yaml
+- launchApp:
+    permissions:
+        com.android.voicemail.permission.ADD_VOICEMAIL: allow
+```
+
+### Permission Value
 
 Every permission can be set to: `allow`, `deny` or `unset`
 
@@ -16,7 +54,7 @@ Every permission can be set to: `allow`, `deny` or `unset`
 | deny             | Permission denied                        | Permission will be asked during flow run |
 | unset            | Permission will be asked during flow run | Permission will be asked during flow run |
 
-Some iOS permissions can have different values
+Some iOS permissions can have other values
 
 | Permission    | Value    | Description                              |
 | ------------- | -------- | ---------------------------------------- |
@@ -26,51 +64,18 @@ Some iOS permissions can have different values
 | notifications | critical | Allow "emergency" notifications          |
 | photos        | limited  | Allow limited access to photos           |
 
-### Permission Names
-
-Permission names represent all the set of permissions that can be configured on a platform. For example: `bluetooth` on android supports both: `android.permission.BLUETOOTH_CONNECT` and `android.permission.BLUETOOTH_SCAN` permissions.
-
-| Permission Names | iOS                  | Android              |
-| ---------------- | -------------------- | -------------------- |
-| calendar         | :white\_check\_mark: | :white\_check\_mark: |
-| camera           | :white\_check\_mark: | :white\_check\_mark: |
-| contacts         | :white\_check\_mark: | :white\_check\_mark: |
-| health           | :white\_check\_mark: | ❌                    |
-| homekit          | :white\_check\_mark: | ❌                    |
-| location         | :white\_check\_mark: | :white\_check\_mark: |
-| medialibrary     | :white\_check\_mark: | :white\_check\_mark: |
-| microphone       | :white\_check\_mark: | :white\_check\_mark: |
-| motion           | :white\_check\_mark: | ❌                    |
-| notifications    | :white\_check\_mark: | :white\_check\_mark: |
-| photos           | :white\_check\_mark: | ❌                    |
-| reminders        | :white\_check\_mark: | ❌                    |
-| siri             | :white\_check\_mark: | ❌                    |
-| speech           | :white\_check\_mark: | ❌                    |
-| usertracking     | :white\_check\_mark: | ❌                    |
-| bluetooth        | ❌                    | :white\_check\_mark: |
-| phone            | ❌                    | :white\_check\_mark: |
-| storage          | ❌                    | :white\_check\_mark: |
-
-**Note**: You can also use `all` to represent all the set of permissions that the app can ask for.
-
-#### Supporting permission IDs for Android
-
-There are a lot of permissions supported on Android and you might not find a few in the table above. Hence, we support permissions by directly using their IDs. For example, permission to add voice mail in the system can also be done by using the following:&#x20;
-
-`com.android.voicemail.permission.ADD_VOICEMAIL`.
-
 ### Examples
 
-You can mention the names and values of the permissions with `launchApp` command as follows:
+Permissions are set by passing them to the `launchApp` command as follows:
 
-#### To deny all the permissions
+#### Deny all permissions
 
 ```yaml
 - launchApp:
     permissions: { all: deny } 
 ```
 
-#### To deny all the permissions but allow medialibrary
+#### Deny all permissions but allow the medialibrary permission
 
 ```yaml
 - launchApp:
@@ -79,7 +84,7 @@ You can mention the names and values of the permissions with `launchApp` command
         medialibrary: allow
 ```
 
-#### To deny all the permissions but allow adding voicemail
+#### Deny all permissions but allow adding voicemails
 
 ```yaml
 - launchApp:
