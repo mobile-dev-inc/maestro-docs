@@ -1,16 +1,14 @@
 # Configuring Permissions
 
-By default, all permissions are set to `allow` by the launchApp command.
-
-It is possible to launch an app with customized permissions behavior with maestro and change the default behavior of all permissions being granted.
-
-You can provide permission names along with permission values to change the permission state.
+By default, all permissions are set to `allow` by the launchApp command. It is possible to launch an app with custom permissions behaviour by passing the `permissions` argument to `launchApp`.
 
 ### Permission Name
 
-Permission names represent all the set of permissions that can be configured on a platform. For example: `bluetooth` on android supports both: `android.permission.BLUETOOTH_CONNECT` and `android.permission.BLUETOOTH_SCAN` permissions.
+Maestro has standardised names for most permissions.
 
-| Permission Name      | iOS support          | Android support      |
+For example, on Android: `bluetooth` targets both `android.permission.BLUETOOTH_CONNECT` and `android.permission.BLUETOOTH_SCAN`.
+
+| Permission           | iOS support          | Android support      |
 | -------------------- | -------------------- | -------------------- |
 | calendar             | :white\_check\_mark: | :white\_check\_mark: |
 | camera               | :white\_check\_mark: | :white\_check\_mark: |
@@ -36,7 +34,9 @@ Permission names represent all the set of permissions that can be configured on 
 
 #### Supporting permission IDs for Android
 
-There are permissions supported on Android that are not listed in the table above. It is supported to use the permission IDs on Android. For example, to allow the "add voicemail" permission, use:
+There are permissions on Android that are not listed in the table above. Use the permission IDs in place of the permission name to set these permissions.
+
+For example, to allow the "add voicemail" permission, use:
 
 ```yaml
 - launchApp:
