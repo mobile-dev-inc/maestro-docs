@@ -8,13 +8,23 @@ You can provide permission names along with permission values to change the perm
 
 ### Permission Values
 
-Permissions values can be either of the three states: `allow`, `deny` or `unset.`
+Every permission can be set to: `allow`, `deny` or `unset`
 
 | Permission Value | iOS                                      | Android                                  |
 | ---------------- | ---------------------------------------- | ---------------------------------------- |
 | allow            | Permission granted                       | Permission granted                       |
 | deny             | Permission denied                        | Permission will be asked during flow run |
 | unset            | Permission will be asked during flow run | Permission will be asked during flow run |
+
+Some iOS permissions can have different values
+
+| Permission    | Value    | Description                              |
+| ------------- | -------- | ---------------------------------------- |
+| location      | always   | Same as allow                            |
+|               | inuse    | Only allow location whilst using the app |
+|               | never    | Same as deny                             |
+| notifications | critical | Allow "emergency" notifications          |
+| photos        | limited  | Allow limited access to photos           |
 
 ### Permission Names
 
