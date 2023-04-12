@@ -13,7 +13,7 @@ For example, on Android: `bluetooth` targets both `android.permission.BLUETOOTH_
 | calendar             | :white\_check\_mark: | :white\_check\_mark: |
 | camera               | :white\_check\_mark: | :white\_check\_mark: |
 | contacts             | :white\_check\_mark: | :white\_check\_mark: |
-| health               | :white\_check\_mark: | ❌                    |
+| health               | ❌                    | ❌                    |
 | homekit              | :white\_check\_mark: | ❌                    |
 | location             | :white\_check\_mark: | :white\_check\_mark: |
 | medialibrary         | :white\_check\_mark: | :white\_check\_mark: |
