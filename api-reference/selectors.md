@@ -1,7 +1,5 @@
 # Selectors
 
-Commands that interact with a view,&#x20;
-
 For commands that interact with a view, such as tapOn, assertVisible, copyTextFrom among others, require the view to be found using what is called a _selector_. There are many different selectors available for usage:
 
 ```yaml
@@ -32,3 +30,14 @@ Apart from the selectors mentioned above, Maestro is also able to select views u
     rightOf: "View to the left has this text"
     containsChild: "Text in a child view"      # This will match a view that has a *direct* child view with the given text
 ```
+
+### Selecting one view among many similar
+
+If you have multiple views matching the same selector (i.e. many views with text `Hello`), use `index` parameter to specify which one to select exactly. For example, the following command will pick the **3rd view** that has text `Hello`:
+
+```yaml
+- tapOn:
+    text: Hello
+    index: 2
+```
+

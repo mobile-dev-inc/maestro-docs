@@ -47,16 +47,6 @@ To long press on a view or a point, use the same exact properties but with a `lo
     point: 50%,50%
 ```
 
-### Selecting one view among many similar
-
-If you have multiple views matching the same selector (i.e. many views with text `Hello`), use `index` parameter to specify which one to select exactly. For example, the following command will pick the **3rd view** that has text `Hello`:
-
-```yaml
-- tapOn:
-    text: Hello
-    index: 2
-```
-
 ## Example
 
 ```yaml
