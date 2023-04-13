@@ -28,6 +28,7 @@ For example, on Android: `bluetooth` targets both `android.permission.BLUETOOTH_
 | bluetooth            | ❌                    | :white\_check\_mark: |
 | phone                | ❌                    | :white\_check\_mark: |
 | storage              | ❌                    | :white\_check\_mark: |
+| sms                  | ❌                    | :white\_check\_mark: |
 | my.custom.permission | ❌                    | :white\_check\_mark: |
 
 **Note**: Use `all` as a permission name to represent all the permissions that the app can ask for.
