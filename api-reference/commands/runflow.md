@@ -59,3 +59,15 @@ appId: com.example.app
     env:
       MY_PARAMETER="123"
 ```
+
+#### Inline flows
+
+If you would like to use `runFlow` without extracting the commands into a separate flow file, you can run your commands inline like this:
+
+```yaml
+- runFlow:
+    env:
+      INNER_ENV: Inner Parameter
+    commands:
+      - inputText: ${INNER_ENV}
+```
