@@ -4,7 +4,7 @@ To assert whether an element is **visible**, use the following command that take
 
 ```yaml
 - assertNotVisible:
-    # Same exact parameters as in Tap On View
+    # Same exact parameters as tapOn
 ```
 
 This command will wait for view to disappear if it is currently visible.
@@ -18,11 +18,23 @@ You are most likely going to be using the following properties, but please refer
 * `focused` - `true` if view has keyboard focus
 * `selected` - `true` if view is selected
 
-#### Example
+#### Examples
 
-To check whether view with a text `My Button` is visible **and** enabled you can run the following command:
+To check whether view with a text `My Button` is visible you can run the following command:
+
+```yaml
+- assertNotVisible: "My Button"
+```
+
+To check whether view with a text `My Button` that is **also** enabled is not visible you can run the following command:
 
 ```yaml
 - assertNotVisible:
-    # Same exact parameters as `tapOn`
+    text: "My Button"
+    enabled: true
 ```
+
+Such test will fail if _either_
+
+* There is no button with such text
+* There is a button but it is disabled

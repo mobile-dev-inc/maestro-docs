@@ -6,7 +6,7 @@ You can copy text from an element and save it in-memory, to paste later. To find
 
 Copies text from an element and pastes it into a search field.
 
-```
+```yaml
 appId: com.example.app
 ---
 - launchApp

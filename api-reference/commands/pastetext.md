@@ -12,7 +12,7 @@ _Note: Make sure your text field is in focus before using this command._
 
 Copies text from an element and pastes it into a search field.
 
-```
+```yaml
 appId: com.example.app
 ---
 - launchApp

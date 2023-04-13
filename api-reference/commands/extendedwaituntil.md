@@ -8,8 +8,7 @@ Example usage:
 
 ```yaml
 - extendedWaitUntil:
-    visible: 
-        id: "elementId" # or any other selector
+    visible: "My text that should be visible" # or any other selector
     timeout: 10000      # Timeout in milliseconds
 ```
 

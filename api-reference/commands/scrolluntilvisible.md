@@ -23,11 +23,20 @@ By default an element will be considered visible if it is fully displayed in the
 
 #### Example
 
-If we want to scroll towards the bottom until a view with id `com.example.resource.some_view_id` becomes visible:
+If you want to scroll until the text "My text" is visible you can run the following command:
+
+```yaml
+- scrollUntilVisible:
+    element: "My text" # or any other selector
+    direction: DOWN
+```
+
+If we want to scroll towards the bottom until a view with id `com.example.resource.some_view_id` becomes visible, you can use the `id` selector like this:
 
 ```yaml
 - scrollUntilVisible:
     element:
-      id: ".*some_view_id"
+      id: ".*some_view_id" # or any other selector
     direction: DOWN
 ```
+

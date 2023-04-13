@@ -17,6 +17,14 @@ For commands that interact with a view, such as tapOn, assertVisible, copyTextFr
     optional: false  # (default: false) If set to true, test won't fail if view can't be found
 ```
 
+### Shorthand selector for text
+
+If you want to use the text selector you can use the shorthand selector like this:
+
+```yaml
+- tapOn: "Text" # or any other command that works with selectors
+```
+
 ### Relative Position selectors
 
 Apart from the selectors mentioned above, Maestro is also able to select views using their relative position (i.e. "below another view", or "contains child")

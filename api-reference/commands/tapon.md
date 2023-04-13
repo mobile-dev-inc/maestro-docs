@@ -1,12 +1,16 @@
 # tapOn
 
-Taps on a view on the screen using a selector:
+In order to tap on a view with the text "My text"you can use the shorthand selector for text like this:
+
+```yaml
+- tapOn: "My text"
+```
+
+You can also user other selectors such as id:&#x20;
 
 ```yaml
 - tapOn:
-    text: "Text"     # (optional) Finds text or accessibility text that matches regexp
-    id: "id"         # (optional) Finds id that matches regexp
-    # or any other selector
+    id: "id" # or any other selector
 ```
 
 For a full list of selectors, please refer to the [Selectors](../selectors.md) page.
