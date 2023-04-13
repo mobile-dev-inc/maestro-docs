@@ -40,3 +40,13 @@ You can directly access `env` parameters from within JavaScript. See [parameters
     env:
        myParameter: 'Parameter'
 ```
+
+#### Console logging&#x20;
+
+Console logging is supported from the javascript files provided in `runScript` command. Logs from javascript are redirected to the console when using Maestro CLI.&#x20;
+
+{% hint style="warning" %}
+Note that console logging is not yet available in Maestro Cloud
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
