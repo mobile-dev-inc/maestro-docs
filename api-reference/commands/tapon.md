@@ -4,7 +4,7 @@ Taps on a view on the screen using a selector:
 
 ```yaml
 - tapOn:
-    text: "Text"     # (optional) Finds text that matches regexp
+    text: "Text"     # (optional) Finds text or accessibility text that matches regexp
     id: "id"         # (optional) Finds id that matches regexp
     # or any other selector
 ```

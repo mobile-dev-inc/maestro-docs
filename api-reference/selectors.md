@@ -4,7 +4,7 @@ For commands that interact with a view, such as tapOn, assertVisible, copyTextFr
 
 ```yaml
 - tapOn: # or any other command that works with selectors
-    text: "Text"     # (optional) Finds text that matches regexp
+    text: "Text"     # (optional) Finds text or accessibility text that matches regexp. 
     id: "id"         # (optional) Finds id that matches regexp
     index: 0         # (optional) 0-based index of the view to select among those that match all other criteria
     width: 100       # (optional) Finds element of a given width
