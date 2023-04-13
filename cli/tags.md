@@ -72,5 +72,5 @@ maestro test --include-tags=tagA --exclude-tags=tagB workspaceFolder/
 
 The following behaviour should be expected:
 
-* Only flows that have _both_ `tagA` __ **and **_****_ `tagNameToInclude` are going to run
-* Flows that have _either_ `tagB` _ **or**_ `tagNameToExclude` are not going to run (regardless of whether they have both `tagA` and `tagNameToInclude`)
+* Only flows that have _both_ `tagA` **and** `tagNameToInclude` are going to run
+* Flows that have _either_ `tagB` _**or**_ `tagNameToExclude` are not going to run (regardless of whether they have both `tagA` and `tagNameToInclude`)

@@ -49,7 +49,7 @@ brew tap facebook/fb
 brew install facebook/fb/idb-companion
 ```
 
-__
+
 
 _Note: At the moment, Maestro does not support real iOS devices_
 {% endtab %}

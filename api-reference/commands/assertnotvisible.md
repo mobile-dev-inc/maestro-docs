@@ -9,13 +9,7 @@ To assert whether an element is **visible**, use the following command that take
 
 This command will wait for view to disappear if it is currently visible.
 
-Please refer to the `tapOn` documentation for a full list of parameters:
-
-{% content-ref url="tapon.md" %}
-[tapon.md](tapon.md)
-{% endcontent-ref %}
-
-In particular, you are most likely going to be using the following properties:
+You are most likely going to be using the following properties, but please refer to the [Selectors](../selectors.md) page for an exhaustive list of all available selectors:
 
 * `text` - text in a view
 * `id` - id of a view

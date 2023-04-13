@@ -75,6 +75,7 @@
 * [Configuration](api-reference/configuration/README.md)
   * [Workspace configuration](api-reference/configuration/workspace-configuration.md)
   * [Flow configuration](api-reference/configuration/flow-configuration.md)
+* [Selectors](api-reference/selectors.md)
 
 ## Advanced
 

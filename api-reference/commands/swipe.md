@@ -46,10 +46,12 @@ You can also specify elements as a starting point for swipe commands. It will sw
 ```yaml
 - swipe:
    from: 
-     id: "feeditem_identifier" # From (x, y) center of element 
+     id: "feeditem_identifier" # From (x, y) center of element
    direction: UP # To (50% of width, 10% of height)
     
 ```
+
+Note that you can use any selector here to target an element to swipe from. Please refer to the [Selectors](../selectors.md) page for a full list of available selectors.
 
 #### **Swiping Coordinates**
 
