@@ -20,22 +20,12 @@ Simply run the installation script again:
 curl -Ls "https://get.maestro.mobile.dev" | bash
 ```
 
-{% hint style="info" %}
-If you previously installed Maestro through Homebrew you can upgrade Maestro through homebrew directly: `brew upgrade maestro`
-{% endhint %}
-
 ## Installing a specific version of Maestro
 
 To install a specific version, declare a `MAESTRO_VERSION` property and run the same installation command as before:
 
 ```bash
 export MAESTRO_VERSION={version}; curl -Ls "https://get.maestro.mobile.dev" | bash
-```
-
-Note that this operation is not supported for Homebrew installations. We recommend you to switch to the above approach by uninstalling your brew distribution:
-
-```bash
-brew uninstall maestro
 ```
 
 ## Connecting to Your Device
@@ -58,3 +48,12 @@ _Note: At the moment, Maestro does not support real iOS devices_
 `maestro test` will automatically detect and use any local emulator or USB-connected physical device.
 {% endtab %}
 {% endtabs %}
+
+### Homebrew support
+
+We no longer recommend using homebrew to manage your maestro installation and instead recommend the installation script above. To upgrade your maestro installation that was installed via Homebrew we recommend uninstalling it and then reinstalling it using the official instructions:
+
+```bash
+brew uninstall maestro
+curl -Ls "https://get.maestro.mobile.dev" | bash
+```
