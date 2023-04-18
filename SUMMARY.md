@@ -107,5 +107,6 @@
 ## Troubleshooting
 
 * [Known Issues](troubleshooting/known-issues.md)
+* [Frequently Asked Questions](troubleshooting/frequently-asked-questions.md)
 * [Bug Report](troubleshooting/bug-report.md)
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)
