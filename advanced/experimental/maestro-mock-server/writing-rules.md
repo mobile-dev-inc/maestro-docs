@@ -107,40 +107,6 @@ get('/endpoint', async (req, res, session) => {
 });
 ```
 
-### Structuring your rules
-
-You can structure your rules in different files for organization. Consider the following example:
-
-```javascript
-// .maestro/mockserver/index.js
-
-get('/endpoint', (req, res) => {
-    res.json({
-        message: 'Mocked by Maestro Mock Server'
-    });
-});
-```
-
-```javascript
-// .maestro/mockserver/auth.js
-
-post('/login', (req, res, session) => {
-    session.loggedIn = true   // The field name can be anything you want
-
-    res.json({ message: 'success' });
-});
-
-get('/profile', (req, res, session) => {
-    if (!session.loggedIn) {
-        res.status(401).json({ message: 'Not logged in' });
-    } else {
-        res.json({ email: 'ada@lovelace.com' });
-    }
-});
-```
-
-In order to have the rules in `auth.js` applied as well, you need to add `import 'auth.js'` to your `index.js` file.
-
 ### Deploying rules
 
 Simply run `maestro mockserver deploy <path_to_your_mockserver_folder>` to deploy the rules.
