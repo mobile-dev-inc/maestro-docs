@@ -29,3 +29,31 @@ On iOS
 
 1. Execute `xcrun simctl listapps booted | grep CFBundleIdentifier` to get a list of all installed packages
 2. Search for the appID manually or use `grep` in the above command to search for part of the name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`
+
+### \[iOS] Issues with lists (UICollectionView, UITableView) that fetch data on scroll
+
+Apps that have pagination (fetch data on scroll) inside UITableView / UICollectionView views sometimes result in fetching data at the moments when it is not expected, hanging inside the lists, and flows being broken when testing with `maestro`. \
+\
+There is a bug in XCTest framework that makes UITableView / UICollectionView `willDisplayCell` method being called whenever UI test APIs are being called. Since `maestro` relies on XCTest APIs under the hood it might break the pagination logic for some apps.\
+\
+Suggested workaround - inside `willDisplayCell` check whether the indexPath is really visible via `UITableView.indexPathsForVisibleRows` or `UICollectionView.indexPathsForVisibleItems`. [Code example](#user-content-fn-1)[^1]:
+
+```swift
+// This function should be implemented in a class conforming to UITableViewDelegate
+// in case of UICollectionView `collectionView(_:willDisplay:forItemAt:)` from
+// UICollectionViewDelegate should be used
+func tableView(_ tableView: UITableView,
+                   willDisplay cell: UITableViewCell,
+                   forRowAt indexPath: IndexPath) {
+  // additional check whether the cell is currently visible or not is needed
+  // to make sure calls caused by XCTest or other random tableView reloads
+  // do not unintentional data fetch request
+  guard let visibleIndexPaths = tableView.indexPathsForVisibleRows,
+            visibleIndexPaths.contains(indexPath),
+            <additional checks that were previosly there> else { return }
+        
+  print("load new data..")
+}
+```
+
+[^1]: 
