@@ -1,9 +1,5 @@
 # Getting started
 
-{% hint style="info" %}
-Note that this is Android only for now, iOS support is coming soon!
-{% endhint %}
-
 First, install the latest version of `maestro` as this functionality is available from version `1.22.0` and up.
 
 {% content-ref url="../../../getting-started/installing-maestro/" %}
@@ -12,34 +8,48 @@ First, install the latest version of `maestro` as this functionality is availabl
 
 ### Setup
 
-Run the following to start the Maestro Mock Server:
+**Step 1 - Setup Maestro SDK**
 
-```
-maestro mockserver open
-```
+If you haven't already, make sure to setup Maestro SDK in your project first
 
-There, you will be presented with setup instructions walking you through how to integrate the Maestro SDK into your application. Essentially, the following steps are required:
+{% content-ref url="../maestro-sdk/" %}
+[maestro-sdk](../maestro-sdk/)
+{% endcontent-ref %}
 
-1\) Add the following dependency to your `build.gradle` (or similar):
+**Step 2 - Replace base URL**
 
-```
-implementation 'dev.mobile:maestro-sdk-android:+'
-```
+Then, replace your API base url with a base url provided by Maestro SDK:
 
-\
-2\) Initialize the Maestro SDK:
+{% tabs %}
+{% tab title="Android" %}
+```kotlin
+import dev.mobile.maestro.sdk.MaestroSdk
 
-```
-MaestroSdk.init("<project_id>")
-```
-
-Note that the project id will be prefilled in your setup instructions, but if you ever want to retrieve it you can run `maestro mockserver projectid`
-
-3\) Then, replace your API base url with a base url provided by Maestro SDK.
-
-```
+// use baseUrl as you normally would
 val baseUrl = MaestroSdk.mockServer().url("https://api.company.com")
 ```
+{% endtab %}
+
+{% tab title="iOS" %}
+```swift
+import Maestro_SDK
+
+// use baseUrl as you normally would
+let baseUrl = MaestroSdk.mockServer().url(baseUrl: "https://api.company.com")
+```
+{% endtab %}
+
+{% tab title="React Native" %}
+```javascript
+import { mockServerUrl } from 'maestro-rn-sdk';
+
+// use baseUrl as you normally would
+async function getBaseUrl() {
+  await mockServerUrl('https://api.company.com')   
+}
+```
+{% endtab %}
+{% endtabs %}
 
 You can then use `baseUrl` as you normally would.
 
@@ -47,7 +57,9 @@ You can then use `baseUrl` as you normally would.
 The URL passed in should start with `https://` and should **not** have a trailing /, as that is added by Maestro SDK automatically. You can then access your API endpoint by sending requests to `${baseUrl}${path}` - you don't need to add `/` in between.
 {% endhint %}
 
-4\) Build and run your app and you should start seeing events in the Maestro Mock Server UI!
+**Step 3 - Try it out**
+
+Build and run your app and you should start seeing events in the Maestro Mock Server UI!
 
 ### Initializing mockserver workspace
 
