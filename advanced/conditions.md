@@ -24,6 +24,7 @@ Supported conditions include:
 <pre class="language-yaml"><code class="lang-yaml"><strong>visible: { Element matcher }        # True if matching element is visible
 </strong>notVisible: { Element matcher }     # True if matching element is not present
 true: { Value }                     # True if given value is true or not empty
+platform: { Platform }              # True if current platform is given platform (Android|iOS|Web)
 </code></pre>
 
 ### JavaScript
