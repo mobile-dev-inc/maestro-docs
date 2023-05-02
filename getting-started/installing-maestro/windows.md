@@ -81,7 +81,6 @@ maestro --version
 *   Use the following instructions to setup android command lines correctly in your WSL2 .
 
     * Open WSL2 terminal.
-    * Install JDK using following command `sudo apt install default-jdk`
     * Create a new directories in your home directory.
 
     ```
@@ -93,23 +92,28 @@ maestro --version
     * In the `android` directory:
 
     ```
-    $ cd cmdline-tools
     $ mkdir tools
-    $ mv -i * tools
+    $ mv cmdline-tools/* tools/
     ```
 
     **Note:** Last command will probably give you a warning, but you don’t need the worry about that.
 
-    * Now add the following line to your `~/.bashrc` file:
+    * Now add the following line to your `~/.bashrc file`
 
     ```
     export ANDROID_HOME=$HOME/Android
-    export PATH=$PATH:$ANDROID_HOME/tools/bin
+    export PATH=$PATH:$ANDROID_HOME/tools/bin/:$PATH
     ```
 
+    * Save your `~/.bashrc` file and exit.
     * Run `source ~/.bashrc` to reload the bashrc file.
-    * Run `sdkmanager --list` to check if everything is working fine.
-    * Run `sdkmanager --install "platform-tools"` to install platform tools.
+    * Now we will install basic android utilities using following commands:
+      * Run `sdkmanager --list` to check if everything is working fine.
+      * Run `sdkmanager --install "platform-tools"` to install platform tools.
+    * Finally add following into your `~/.bashrc` file
+      * `export PATH=$PATH:$ANDROID_HOME/platform-tools/:$PATH`
+      * Save your `~/.bashrc` file and exit.
+      * Run `source ~/.bashrc` to reload the bashrc file.
     * To check that everything went good, do following:
       * Close and relaunch terminal
       * Run `adb --version` and see that adb version is shown
@@ -136,6 +140,7 @@ maestro --version
       * Open task manager and kill all `adb` related processes.
       * If Android studio is open, close it and KEEP ONLY emulator running.
       * If you see a message saying `emulator offline`, IGNORE IT.
+      * Sometimes, firewall stops your connection with host machine. For that add a firewall rule to allow the connection or check with your organization system admin if using company machine.
 
     \
 
