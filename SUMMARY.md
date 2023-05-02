@@ -114,3 +114,7 @@
 * [Known Issues](troubleshooting/known-issues.md)
 * [Bug Report](troubleshooting/bug-report.md)
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)
+
+## Community
+
+* [Contributions](community/contributions.md)
