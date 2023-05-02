@@ -4,7 +4,7 @@ Maestro comes with its own JavaScript HTTP API
 
 ```javascript
 // script.js
-var response = http.get('https://example.com')
+const response = http.get('https://example.com')
 
 output.script.result = response.body
 ```
@@ -27,7 +27,7 @@ For example, assume that `https://example.com/jsonEndpoint` returns the followin
 
 ```javascript
 // script.js
-var response = http.get('https://example.com/jsonEndpoint')
+const response = http.get('https://example.com/jsonEndpoint')
 
 output.script.result = json(response.body).myField.mySubField
 ```
@@ -38,7 +38,7 @@ To send body to a given endpoint, specify a `body` parameter:
 
 ```javascript
 // script.js
-var response = http.post('https://example.com/myEndpoint', {
+const response = http.post('https://example.com/myEndpoint', {
     body: JSON.stringify(
         {
             myField: "Payload"
@@ -53,7 +53,7 @@ Headers can be provided in a `headers` parameter
 
 ```javascript
 // script.js
-var response = http.get('https://example.com', {
+const response = http.get('https://example.com', {
     headers: {
         Authorization: 'Bearer MyToken'
     }
@@ -73,7 +73,7 @@ To send a request of any other HTTP method, use `http.request`
 
 ```javascript
 // script.js
-var response = http.request('https://example.com`, {
+const response = http.request('https://example.com`, {
     method: "GET"   // or specify any other method, i.e. OPTION
 })
 ```
