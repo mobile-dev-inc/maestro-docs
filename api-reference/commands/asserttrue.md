@@ -14,3 +14,13 @@ This command is primarily designed to be used in combination with Javascript val
 - copyTextFrom: View B
 - assertTrue: ${output.viewA == maestro.copiedText}
 ```
+
+#### Related commands
+
+{% content-ref url="assertvisible.md" %}
+[assertvisible.md](assertvisible.md)
+{% endcontent-ref %}
+
+{% content-ref url="assertnotvisible.md" %}
+[assertnotvisible.md](assertnotvisible.md)
+{% endcontent-ref %}
