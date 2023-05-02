@@ -104,6 +104,8 @@
     * [Getting started](advanced/experimental/maestro-mock-server/getting-started.md)
     * [Writing rules](advanced/experimental/maestro-mock-server/writing-rules.md)
     * [Structuring your workspace](advanced/experimental/maestro-mock-server/structuring-your-workspace.md)
+    * [Commands](advanced/experimental/maestro-mock-server/commands/README.md)
+      * [assertOutgoingRequests](advanced/experimental/maestro-mock-server/commands/assertoutgoingrequests.md)
   * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
 * [Specify a Device](advanced/specify-a-device.md)
 * [Configuring Permissions](advanced/configuring-permissions.md)
