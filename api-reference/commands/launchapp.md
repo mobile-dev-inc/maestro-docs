@@ -34,3 +34,46 @@ If you want to test with a permission with a specific value, specify a permissio
         notifications: unset # notification permission is unset
         android.permission.ACCESS_FINE_LOCATION: deny # Android fine location permission is denied
 ```
+
+### Launch Arguments
+
+You can send launch arguments while launching the app for both iOS and Android.&#x20;
+
+#### Sending launch arguments
+
+Arguments allow sending **String**, **Boolean**, **Double,** and **Integer**. All other data types are by default passed as a String.
+
+```yaml
+- launchApp:
+    appId: "com.example.app"
+    arguments: 
+       foo: "This is a string"
+       isFooEnabled: false
+       fooValue: 3.24
+       fooInt: 3
+```
+
+#### Receiving arguments on Android
+
+```kotlin
+intent.extras?.getBoolean("isFooEnabled")?.let {
+    // Do something with isFooEnabled
+}
+
+intent.extras?.getString("foo")?.let {
+    // Do something with foo
+}
+```
+
+#### Receiving arguments on iOS
+
+```swift
+if ProcessInfo.processInfo.arguments.contains("isFooEnabled") {
+    // Do something with isFooEnabled
+}
+
+// By default all the values received here would be string
+let standardDefaultsDict = UserDefaults.standard.dictionaryRepresentation()
+let foo = (standardDefaultsDict["foo"] as? String) ?? "defaultValue"
+```
+
