@@ -38,3 +38,9 @@ We'd also prefer to render videos locally, but the rendering logic today require
 
 Videos are deleted from our servers after 24 hours.
 
+**What is the maximum duration for a Flow recording?**
+
+The maximum duration is two minutes.
+
+
+
