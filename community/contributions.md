@@ -9,3 +9,4 @@ description: A list of community projects and contributions around Maestro.
 * [React Native Maestro](https://github.com/kiki-le-singe/react-native-maestro)\
   A sample project that uses Maestro to test a React Native app built with Expo
 * [Codemagic CI integration](https://docs.codemagic.io/integrations/maestro-integration/)
+* [Fastlane Plugin](https://github.com/inf2381/fastlane-plugin-maestro)
