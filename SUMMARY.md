@@ -88,6 +88,7 @@
 * [JavaScript](advanced/javascript/README.md)
   * [Run JavaScript](advanced/javascript/run-javascript.md)
   * [Outputs](advanced/javascript/outputs.md)
+  * [Logging](advanced/javascript/logging.md)
   * [Access element text](advanced/javascript/access-element-text.md)
   * [Make HTTP(s) requests](advanced/javascript/make-http-s-requests.md)
 * [Experimental](advanced/experimental/README.md)
