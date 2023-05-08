@@ -17,6 +17,16 @@ By design, Maestro discourages the usage of conditional statements unless absolu
 [nested-flows.md](nested-flows.md)
 {% endcontent-ref %}
 
+### Multiple conditions
+
+```yaml
+- runFlow:
+    when:
+      visible: Some Text
+      platform: iOS
+    file: {reference to another yaml file}
+```
+
 ### Conditions
 
 Supported conditions include:

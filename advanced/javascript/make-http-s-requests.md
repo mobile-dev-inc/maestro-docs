@@ -85,3 +85,59 @@ const response = http.request('https://example.com`, {
 | `ok`       | `true` if request was successful, `false` otherwise |
 | `status`   | HTTP status code (i.e. `200`)                       |
 | `body`     | String body of the response                         |
+
+### Example
+
+Here's an example of using these utilities to perform a common test action, creating a user and populating it with data.
+
+```javascript
+const date = new Date();
+const email = `test${date.getTime().toString()}@test.com`;
+const password = 'test'
+
+function createNewUser() {
+  const url = 'https://my-api/signup'
+
+  const signupResponse = http.post(url, {
+    body: JSON.stringify({
+      email: email,
+      password: 'test'
+    }),
+    headers: {'Content-Type': 'application/json'},
+  });
+
+  const data = json(signupResponse.body);
+
+  return {
+    guid: data.guid,
+    token: data.token
+  }
+}
+
+function fillUserInfo() {
+  const test_user = createNewUser()
+  const url = `https://my-api/user/${test_user.guid}`
+
+  http.request(url, {
+    method: 'PATCH',
+    body: JSON.stringify({
+      age: '46',
+      gender: 'female',
+      country: 'Canada'
+    }),
+    headers: {
+      'Content-Type': 'application/json', 
+       Authorization: test_user.token,
+      },
+  })
+
+  // return email and password for logging in to newly created account
+  return {
+    email: email,
+    password: password
+  }
+
+}
+
+output.test_user = fillUserInfo()
+```
