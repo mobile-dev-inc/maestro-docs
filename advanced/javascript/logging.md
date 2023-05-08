@@ -29,7 +29,7 @@ If you want to log something inline you can use `evalScript` to output it to the
 
 const myVar = 'foo';
 console.log(myVar); // outputs 'foo'
-consolel.log(`myVar is ${myVar}`) // outputs 'myVar is foo'
+console.log(`myVar is ${myVar}`) // outputs 'myVar is foo'
 ```
 
 {% content-ref url="../../api-reference/commands/runscript.md" %}
