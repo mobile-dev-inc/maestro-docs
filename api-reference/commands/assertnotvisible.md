@@ -1,6 +1,6 @@
 # assertNotVisible
 
-To assert whether an element is **visible**, use the following command that takes the same parameters as `tapOn`
+To assert whether an element is **not visible**, use the following command that takes the same parameters as `tapOn`
 
 ```yaml
 - assertNotVisible:
@@ -38,3 +38,13 @@ Such test will fail if _either_
 
 * There is no button with such text
 * There is a button but it is disabled
+
+#### Related commands
+
+{% content-ref url="assertvisible.md" %}
+[assertvisible.md](assertvisible.md)
+{% endcontent-ref %}
+
+{% content-ref url="asserttrue.md" %}
+[asserttrue.md](asserttrue.md)
+{% endcontent-ref %}

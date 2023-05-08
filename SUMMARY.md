@@ -88,6 +88,7 @@
 * [JavaScript](advanced/javascript/README.md)
   * [Run JavaScript](advanced/javascript/run-javascript.md)
   * [Outputs](advanced/javascript/outputs.md)
+  * [Logging](advanced/javascript/logging.md)
   * [Access element text](advanced/javascript/access-element-text.md)
   * [Make HTTP(s) requests](advanced/javascript/make-http-s-requests.md)
 * [Experimental](advanced/experimental/README.md)
@@ -104,6 +105,8 @@
     * [Getting started](advanced/experimental/maestro-mock-server/getting-started.md)
     * [Writing rules](advanced/experimental/maestro-mock-server/writing-rules.md)
     * [Structuring your workspace](advanced/experimental/maestro-mock-server/structuring-your-workspace.md)
+    * [Commands](advanced/experimental/maestro-mock-server/commands/README.md)
+      * [assertOutgoingRequests](advanced/experimental/maestro-mock-server/commands/assertoutgoingrequests.md)
   * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
 * [Specify a Device](advanced/specify-a-device.md)
 * [Configuring Permissions](advanced/configuring-permissions.md)
@@ -115,3 +118,8 @@
 * [Frequently Asked Questions](troubleshooting/frequently-asked-questions.md)
 * [Bug Report](troubleshooting/bug-report.md)
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)
+
+## Community
+
+* [Contributions](community/contributions.md)
+* [Articles & Tutorials](community/articles-and-tutorials.md)

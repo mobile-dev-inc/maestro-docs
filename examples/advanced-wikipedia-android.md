@@ -273,21 +273,18 @@ appId: org.wikimedia
 {% tab title="generateCredentials.js" %}
 ```javascript
 function username() {
-  var date = new Date().getTime().toString();
-  var username = `test_user_placeholder`.replace("placeholder", date);
-  return username;
+  const date = new Date().getTime().toString();
+  return `test_user_${date}`;
 }
 
 function email() {
-  var date = new Date().getTime().toString();
-  var email = `test-user-placeholder@test.com`.replace("placeholder", date);
-  return email;
+  const date = new Date().getTime().toString();
+  return `test-user-${date}@test.com`;
 }
 
 function password() {
-  var date = new Date().getTime().toString();
-  var password = `test-user-password-placeholder`.replace("placeholder", date);
-  return password;
+  const date = new Date().getTime().toString();
+  return `test-user-password-${date}`;
 }
 
 output.credentials = {
@@ -304,8 +301,8 @@ output.credentials = {
 // Fetches test user from API
 function getTestUserFromApi() {
   const url = `https://jsonplaceholder.typicode.com/users/1`;
-  var response = http.get(url);
-  var data = json(response.body);
+  const response = http.get(url);
+  const data = json(response.body);
 
   return {
     username: data.username,

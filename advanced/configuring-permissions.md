@@ -57,13 +57,12 @@ Every permission can be set to: `allow`, `deny` or `unset`
 
 Some iOS permissions can have other values
 
-| Permission    | Value    | Description                              |
-| ------------- | -------- | ---------------------------------------- |
-| location      | always   | Same as allow                            |
-|               | inuse    | Only allow location whilst using the app |
-|               | never    | Same as deny                             |
-| notifications | critical | Allow "emergency" notifications          |
-| photos        | limited  | Allow limited access to photos           |
+| Permission | Value   | Description                              |
+| ---------- | ------- | ---------------------------------------- |
+| location   | always  | Same as allow                            |
+|            | inuse   | Only allow location whilst using the app |
+|            | never   | Same as deny                             |
+| photos     | limited | Allow limited access to photos           |
 
 ### Examples
 

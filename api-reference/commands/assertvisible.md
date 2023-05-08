@@ -38,3 +38,13 @@ Such test will fail if _either_
 
 * There is no button with such text
 * There is a button but it is disabled
+
+#### Related commands
+
+{% content-ref url="assertnotvisible.md" %}
+[assertnotvisible.md](assertnotvisible.md)
+{% endcontent-ref %}
+
+{% content-ref url="asserttrue.md" %}
+[asserttrue.md](asserttrue.md)
+{% endcontent-ref %}
