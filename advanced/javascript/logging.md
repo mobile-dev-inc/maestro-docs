@@ -1,9 +1,9 @@
 # Logging
 
-Maestro supports logging to the console via `console.log`, which you can invoke like how you would usually do it in Javascript.
+Maestro supports logging to the console via `console.log`.
 
 {% hint style="info" %}
-Note that logging with multiple arguments is not supported, meaning that you can not run `console.log('My variable is', variable)`as that will only output `My variable is`.
+Note that logging with multiple arguments is not supported. Running `console.log('My variable is', variable)` will only output `My variable is`.
 {% endhint %}
 
 #### Logging in evalScript
@@ -29,7 +29,7 @@ If you want to log something inline you can use `evalScript` to output it to the
 
 const myVar = 'foo';
 console.log(myVar); // outputs 'foo'
-consolel.log(`myVar is ${myVar}`) // outputs 'myVar is foo'
+console.log(`myVar is ${myVar}`) // outputs 'myVar is foo'
 ```
 
 {% content-ref url="../../api-reference/commands/runscript.md" %}
