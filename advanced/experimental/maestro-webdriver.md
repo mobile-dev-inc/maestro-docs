@@ -1,5 +1,9 @@
 # Maestro WebDriver
 
+{% hint style="warning" %}
+Note that this feature is experimental and **not** under active development
+{% endhint %}
+
 Maestro has experimental support for running flows on Web since version `1.21.0` and here you can read more on how to get started trying it out!
 
 ### Running your first web flow
