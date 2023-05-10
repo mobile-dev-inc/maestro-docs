@@ -1,7 +1,7 @@
-# Network Mocking
+# Network Mocking (deprecated)
 
-{% hint style="warning" %}
-This is an experimental feature. It is not yet supported by Maestro Cloud and breaking changes might be introduced as we work on it.
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
 {% endhint %}
 
 Network Mocking feature allows you to replace part or all of the network traffic coming from your app with static predefined content **in order to get more predictable test results**.
@@ -20,8 +20,8 @@ Network Mocking is an advanced concept and requires setup before using it for th
 
 Here are key facts about Maestro Network Mocking:
 
-* Network Mocking works on a concept of _rules_.&#x20;
-* A rule describes what HTTP(s) requests to incercept and what to reply back.&#x20;
+* Network Mocking works on a concept of _rules_.
+* A rule describes what HTTP(s) requests to incercept and what to reply back.
 * Rules are defined in YAML files. Single YAML file can contain multiple rules.
 * Rule files can be stored in a folder/subfolders and are traversed recursively.
 * Network requests that did not match any rule will continue to their real destination as if there was no mocking in place.

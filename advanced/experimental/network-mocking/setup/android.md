@@ -1,5 +1,9 @@
 # Android
 
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
+{% endhint %}
+
 There are several ways to setup Network Mocking for Android devices.
 
 ### Simplest option. Add a dependency.

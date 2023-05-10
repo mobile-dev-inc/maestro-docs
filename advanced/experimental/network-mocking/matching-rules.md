@@ -1,5 +1,9 @@
 # Matching Rules
 
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
+{% endhint %}
+
 Rules are stored in YAML files and follow the following format:
 
 ```yaml
