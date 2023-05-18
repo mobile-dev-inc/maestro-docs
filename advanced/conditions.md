@@ -39,6 +39,7 @@ By design, Maestro discourages the usage of conditional statements unless absolu
       platform: iOS
     file: {reference to another yaml file}
 ```
+Note that multiple conditions are applied as AND conditions.
 
 ### Conditions
 
