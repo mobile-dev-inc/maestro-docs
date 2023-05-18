@@ -19,7 +19,7 @@ env:
 
 ### Run file
 
-If you want to run a JavaScript file you can uase the runScript command:
+If you want to run a JavaScript file you can use the runScript command:
 
 {% content-ref url="../../api-reference/commands/runscript.md" %}
 [runscript.md](../../api-reference/commands/runscript.md)

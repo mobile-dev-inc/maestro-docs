@@ -1,5 +1,9 @@
 # Getting started
 
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
+{% endhint %}
+
 First, install the latest version of `maestro` as this functionality is available from version `1.22.0` and up.
 
 {% content-ref url="../../../getting-started/installing-maestro/" %}

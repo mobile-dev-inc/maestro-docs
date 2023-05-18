@@ -1,5 +1,9 @@
 # Writing rules
 
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
+{% endhint %}
+
 {% hint style="info" %}
 The mockserver folder **must** contain a file called `index.js` that serves as the root file of your rule definitions. You can then import other files containing other rules resulting in them also being applied.
 {% endhint %}

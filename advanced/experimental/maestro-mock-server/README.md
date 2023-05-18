@@ -1,7 +1,7 @@
-# Maestro Mock Server
+# Maestro Mock Server (deprecated)
 
-{% hint style="warning" %}
-This is an experimental feature. It is not yet supported by Maestro Cloud and breaking changes might be introduced as we work. on it.
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
 {% endhint %}
 
 ### Basics

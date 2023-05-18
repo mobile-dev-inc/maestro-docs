@@ -1,5 +1,9 @@
 # Structuring your workspace
 
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
+{% endhint %}
+
 ## Separating your rules in different files
 
 You can structure your rules in different files for organization and then add imports to your other modules from your `index.js` file. The following example shows how to import all rules defined in `auth.js` - note that importing them is enough.

@@ -1,5 +1,9 @@
 # React Native
 
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
+{% endhint %}
+
 With React Native, you have 2 options of integrating Maestro SDK:
 
 * via React Native library (explained in this page)

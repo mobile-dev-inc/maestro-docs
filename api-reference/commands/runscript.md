@@ -41,6 +41,10 @@ You can directly access `env` parameters from within JavaScript. See [parameters
        myParameter: 'Parameter'
 ```
 
+#### Running conditionally
+
+You can use conditionals to run a JavaScript file when some condition is true. For more information, please refer to the [conditionals](../../advanced/conditions.md) documentation.
+
 #### Console logging&#x20;
 
 Console logging is supported from the javascript files provided in `runScript` command. Logs from javascript are redirected to the console when using Maestro CLI.&#x20;

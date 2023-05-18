@@ -17,6 +17,19 @@ By design, Maestro discourages the usage of conditional statements unless absolu
 [nested-flows.md](nested-flows.md)
 {% endcontent-ref %}
 
+### runScript conditionally
+
+```yaml
+- runScript:
+    when:
+      visible: Some Text
+    file: {reference to a javascript file}
+```
+
+{% content-ref url="../api-reference/commands/runscript.md" %}
+[runscript.md](../api-reference/commands/runscript.md)
+{% endcontent-ref %}
+
 ### Multiple conditions
 
 ```yaml

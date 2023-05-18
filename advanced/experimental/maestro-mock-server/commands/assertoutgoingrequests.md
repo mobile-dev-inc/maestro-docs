@@ -1,11 +1,7 @@
 # assertOutgoingRequests
 
-{% hint style="warning" %}
-This feature is only supported for native iOS and Android applications
-{% endhint %}
-
-{% hint style="warning" %}
-This is an experimental feature. Breaking changes might be introduced as we work. on it.
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
 {% endhint %}
 
 {% hint style="info" %}
