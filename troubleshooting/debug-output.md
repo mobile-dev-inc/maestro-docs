@@ -10,7 +10,7 @@ If a command fails, failure reason will be shown in red at the end.
 
 ### Screenshot On Failure
 
-By default, upon failure a screenshot will be generated under the Maestro directory i.e for Mac it's `~/.maestro/tests/<datetime>/`
+By default, a screenshot will be generated upon failure under the Maestro directory i.e for Mac it's `~/.maestro/tests/<datetime>/`
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-05-18 at 18.54.16.png" alt=""><figcaption></figcaption></figure>
 
@@ -19,7 +19,9 @@ By default, upon failure a screenshot will be generated under the Maestro direct
 Each flow run will generate:
 
 * A `maestro.log` file that contains Maestro related logs
-* A `commands-*.json` file that contains command metadata.
+* A `commands-*.json` file that contains command metadata
+
+Located under the Maestro i.e `~/.maestro/tests/<datetime>/`
 
 {% hint style="info" %}
 Device logs are not supported but it's something we plan to add
