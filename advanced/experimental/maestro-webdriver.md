@@ -38,6 +38,19 @@ You can use the WebDriver in Studio as well according to the following steps:
 
 WebDriver relies on Google Chrome being installed, so make sure that Google Chrome is installed on your system - you can find official installation instructions [here](https://support.google.com/chrome/answer/95346?hl=en\&co=GENIE.Platform%3DDesktop). If you run into any weird errors, please reach out on Slack and we'll try to help you out.
 
+If you are on Windows, please follow these steps to get started in WSL terminal:
+
+```bash
+# first, update system
+sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove
+# download latest chrome package
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+# install Chrome
+sudo apt -y install ./google-chrome-stable_current_amd64.deb
+# check installed chrome version
+google-chrome --version
+```
+
 #### Commands pending implementation
 
 Note that not all Maestro commands have been fully implemented in the WebDriver yet. The following commands are pending implementation:
