@@ -57,7 +57,7 @@ appId: com.example.app
 - runFlow: 
     file: anotherFlow.yaml
     env:
-      MY_PARAMETER="123"
+      MY_PARAMETER: "123"
 ```
 
 #### Inline flows
