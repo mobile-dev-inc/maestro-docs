@@ -111,7 +111,7 @@ Creating an elements folder is good practice as it allows you to keep all of you
 
 ### Ensuring all elements are loaded
 
-Once you begin creating numerous js files to cover all of your app screens and elements, it can become tricky to remember if you've included the right ones at the start of your test, especially if your flow is crossing multiple areas. A nice trick is to simply add your runScript command once to a single common flow, and then you can run that parent flow once at the start of all your other flows to ensure all of your screens and elements are loaded in correctly.
+Once you begin creating numerous js files to cover all of your app screens and elements, it can become tricky to remember if you've included the right ones at the start of your test, especially if your flow is crossing multiple areas. A nice trick is to simply add your `runScript` command once to a single common flow, and then you can run that parent flow once at the start of all your other flows to ensure all of your screens and elements are loaded in correctly.
 
 #### loadElements.yaml
 ```
@@ -140,7 +140,7 @@ appId: com.appID
 
 ## Cross-platform example
 
-If you have the same app across both Android and iOS but the elements have different IDs, you can employ runFlow with a platform conditional to load in the correct elements.
+If you have the same app across both Android and iOS but the elements have different IDs, you can employ `runFlow` with a platform conditional to load in the correct elements.
 
 ```
 - runFlow:
