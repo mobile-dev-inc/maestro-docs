@@ -4,6 +4,7 @@ description: A guide to implementing Page Object Model within Maestro
 
 # Page Object Model
 
+
 ## Content
 
 * Introduction
@@ -27,6 +28,7 @@ Implementating a Page Object Model has many benefits:
 * Improving test/flow maintenance
 
 It allows you to update an element in one place which will then cascade throughout all of your tests/flows. This can save a lot of time when elements are modified and also assist in easier debugging of issues.
+
 
 
 ## Login Page example
@@ -55,6 +57,7 @@ You can then use these variables to reference element IDs, text or even other te
 - tapOn:
 	id: ${output.login.loginBtn}
 ```
+
 
 
 ## Nested example
@@ -96,11 +99,14 @@ You can create nested element structures to better separate/organise screens and
 ```
 
 
+
 ## How to structure and tips
 
 ### Folder structure example
 
 Creating an elements folder is good practice as it allows you to keep all of your element files together. 
+
+![maestro_element_structure](https://github.com/simon-gilmurray/maestro-docs/assets/74550141/5a95fb4c-41f4-42cb-83a6-d093e118a436)
 
 
 ### Ensuring all elements are loaded
@@ -129,6 +135,7 @@ appId: com.appID
 - launchApp
 // Test Steps
 ```
+
 
 
 ## Cross-platform example
