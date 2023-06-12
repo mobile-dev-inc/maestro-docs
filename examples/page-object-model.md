@@ -106,7 +106,30 @@ You can create nested element structures to better separate/organise screens and
 
 Creating an elements folder is good practice as it allows you to keep all of your element files together. 
 
-![maestro_element_structure](https://github.com/simon-gilmurray/maestro-docs/assets/74550141/5a95fb4c-41f4-42cb-83a6-d093e118a436)
+```
+android/
+	cards/
+	elements/
+		cards.js
+		help.js
+		home.js
+		loadElements.yaml
+		login.js
+		nav.js
+	home/
+	login/
+iOS/
+	cards/
+	elements/
+		cards.js
+		help.js
+		home.js
+		loadElements.yaml
+		login.js
+		nav.js
+	home/
+	login/
+```
 
 
 ### Ensuring all elements are loaded
