@@ -32,6 +32,7 @@
 * [Android contacts flow automation](examples/android-contacts-flow-automation.md)
 * [Facebook signup flow automation](examples/facebook-signup-flow-automation.md)
 * [Advanced: Wikipedia Android](examples/advanced-wikipedia-android.md)
+* [Page Object Model](examples/page-object-model.md)
 
 ## CLI
 
