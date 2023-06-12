@@ -108,27 +108,27 @@ Creating an elements folder is good practice as it allows you to keep all of you
 
 ```
 android/
-  cards/
-  elements/
+    cards/
+    elements/
 	cards.js
 	help.js
 	home.js
 	loadElements.yaml
 	login.js
 	nav.js
-  home/
-  login/
+    home/
+    login/
 iOS/
-  cards/
-  elements/
+    cards/
+    elements/
 	cards.js
 	help.js
 	home.js
 	loadElements.yaml
 	login.js
 	nav.js
-  home/
-  login/
+    home/
+    login/
 ```
 
 
