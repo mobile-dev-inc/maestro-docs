@@ -7,6 +7,8 @@ For commands that interact with a view, such as tapOn, assertVisible, copyTextFr
     text: "Text"     # (optional) Finds text or accessibility text that matches regexp. 
     id: "id"         # (optional) Finds id that matches regexp
     index: 0         # (optional) 0-based index of the view to select among those that match all other criteria
+    point: 50%,50%.  # (optional) Relative position on screen. 50%,50%: Middle of screen
+    point: 50, 50    # (optional) Exact coordinates on screen, x:100 y:200, in pixels.
     width: 100       # (optional) Finds element of a given width
     height: 100      # (optional) Finds element of a given height
     tolerance: 10    # (optional) Tolerance to apply when comparing width and height
@@ -52,4 +54,3 @@ If you have multiple views matching the same selector (i.e. many views with text
     text: Hello
     index: 2
 ```
-
