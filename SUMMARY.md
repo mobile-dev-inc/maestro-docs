@@ -112,6 +112,7 @@
 * [Specify a Device](advanced/specify-a-device.md)
 * [Configuring Permissions](advanced/configuring-permissions.md)
 * [Detect Maestro in your App](advanced/detect-maestro-in-your-app.md)
+* [Configuring Maestro driver timeout](advanced/configuring-maestro-driver-timeout.md)
 
 ## Troubleshooting
 
