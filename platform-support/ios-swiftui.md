@@ -10,7 +10,7 @@ In addition to iOS UIKit apps it is possible to write maestro flows for the apps
 
 First lets start with some basic flow for FoodTruck app. Almost every SwiftUI native element is identifiable with maestro studio. For instance here is how the first step of [first\_flow.yaml](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/first\_flow.yaml) was generated:
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-01-12 at 21.48.45 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2023-01-12 at 21.48.45.png" alt=""><figcaption></figcaption></figure>
 
 `index: 0` can be omitted and the first step of the flow looks like that:
 
@@ -82,7 +82,11 @@ Switching between different apps during the same flow is also supported by maest
     id: "breadcrumb"
 ```
 
+<div align="left">
+
 <figure><img src="../.gitbook/assets/Simulator Screen Shot - iPhone 14 - 2023-01-12 at 22.31.14 (2) (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 breadcrumb is an accessibility id \
 of the “Back to SwiftUI app” \

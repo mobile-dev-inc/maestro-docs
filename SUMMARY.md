@@ -32,6 +32,7 @@
 * [Android contacts flow automation](examples/android-contacts-flow-automation.md)
 * [Facebook signup flow automation](examples/facebook-signup-flow-automation.md)
 * [Advanced: Wikipedia Android](examples/advanced-wikipedia-android.md)
+* [Page Object Model](examples/page-object-model.md)
 
 ## CLI
 
@@ -93,11 +94,11 @@
   * [Make HTTP(s) requests](advanced/javascript/make-http-s-requests.md)
 * [Experimental](advanced/experimental/README.md)
   * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
-  * [Maestro SDK](advanced/experimental/maestro-sdk/README.md)
+  * [Maestro SDK (deprecated)](advanced/experimental/maestro-sdk/README.md)
     * [Android](advanced/experimental/maestro-sdk/android.md)
     * [iOS](advanced/experimental/maestro-sdk/ios.md)
     * [React Native](advanced/experimental/maestro-sdk/react-native.md)
-  * [Maestro Mock Server](advanced/experimental/maestro-mock-server/README.md)
+  * [Maestro Mock Server (deprecated)](advanced/experimental/maestro-mock-server/README.md)
     * [Getting started](advanced/experimental/maestro-mock-server/getting-started.md)
     * [Writing rules](advanced/experimental/maestro-mock-server/writing-rules.md)
     * [Structuring your workspace](advanced/experimental/maestro-mock-server/structuring-your-workspace.md)
@@ -119,6 +120,7 @@
 * [Frequently Asked Questions](troubleshooting/frequently-asked-questions.md)
 * [Bug Report](troubleshooting/bug-report.md)
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)
+* [Debug Output](troubleshooting/debug-output.md)
 
 ## Community
 

@@ -1,5 +1,9 @@
 # Android
 
+{% hint style="danger" %}
+This is a deprecated feature that will be removed in a future version of Maestro.
+{% endhint %}
+
 To integrate SDK into your Android app, follow these simple steps:
 
 ### Step 1 - Add a Dependency

@@ -4,7 +4,7 @@
 
 Maestro currently supports iOS Simulator builds (**.app**), AppStore distribution device builds (**.ipa**) are not currently supported. The easiest way to get an app installed on the simulator is by building and running it from Xcode (make sure that simulator target is selected):
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-02-15 at 13.46.55 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-02-15 at 13.46.55.png" alt=""><figcaption></figcaption></figure>
 
 ## Default build location
 
