@@ -72,6 +72,7 @@
   * [swipe](api-reference/commands/swipe.md)
   * [takeScreenshot](api-reference/commands/takescreenshot.md)
   * [tapOn](api-reference/commands/tapon.md)
+  * [doubleTapOn](api-reference/commands/doubletapon.md)
   * [travel](api-reference/commands/travel.md)
   * [waitForAnimationToEnd](api-reference/commands/waitforanimationtoend.md)
 * [Configuration](api-reference/configuration/README.md)
