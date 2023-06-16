@@ -15,6 +15,21 @@ You can also user other selectors such as id:&#x20;
 
 For a full list of selectors, please refer to the [Selectors](../selectors.md) page.
 
+### Repeat taps
+
+In some cases it is desirable to repeat taps. To achieve that, the following is possible:
+
+```yaml
+- tapOn:
+    text: "Button"
+    repeat: 3
+    delay: 500 # (optional) Delay between taps. Default 100ms
+
+- tapOn:
+    id: "someId"
+    repeat: 3
+```
+
 ### Tapping on a specific point on the screen
 
 {% hint style="info" %}
