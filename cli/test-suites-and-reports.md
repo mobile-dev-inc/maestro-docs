@@ -82,10 +82,35 @@ flows:
 
 In this example, all flows A, B and C will be included into the test suite.
 
-### Deterministic ordering
+### Sequential execution
+
+To run your Flows in in a given order you can add the following configuration to your `config.yaml` file:
+
+```yaml
+# config.yaml
+executionOrder:
+    continueOnFailure: false # default is true
+    flowsOrder:
+        - flowA
+        - flowB
+```
+
+This configuration describes to Maestro the order of the Flows you want to run. The list accepts either the Flow file names (without the `.yaml` extension) or the [Flow name](https://maestro.mobile.dev/api-reference/configuration/flow-configuration).
+
+The `continueOnFailure` flag determines whether Maestro should proceed with the execution of subsequent Flows defined in the sequence if a previous one fails. As an example: if `flowA` fails and `continueOnFailure` is `true`, `flowB` will be executed. If the flag is `false`, `flowB` won't be executed. Note that Flows that are not defined in `executionOrder` will not be impacted and will always be run after the sequential Flows, irrespective of this Flow.
 
 {% hint style="warning" %}
-We discourage usage of deterministic ordering as this will block you from parallelising test execution.
+Note that your Flows should **not** depend on device state and should be treated as isolated, even though they run in sequence. A good rule of thumb is to ensure that each Flow can be run on a completely reset device.
+{% endhint %}
+
+#### Configuring part of the Flows to run sequentially
+
+For instance, if you have three Flows `flowA`, `flowB` and `flowC` and you want to run only `flowA` and `flowB` sequentially. In that case, don't add `flowC` and `flowD` to the list and Maestro will run these flows in non-deterministic ordering **after** the Flow sequence has finished executing.
+
+### Deterministic ordering
+
+{% hint style="danger" %}
+Note that deterministic ordering has been deprecated in favour of sequential execution and will be removed in a future version.
 {% endhint %}
 
 {% hint style="warning" %}
