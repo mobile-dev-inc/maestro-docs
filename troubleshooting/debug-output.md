@@ -28,5 +28,5 @@ Device logs are not supported but it's something we plan to add
 {% endhint %}
 
 {% hint style="info" %}
-Such data will be automatically deleted after 7 days
+Such data will be automatically deleted after 14 days
 {% endhint %}
