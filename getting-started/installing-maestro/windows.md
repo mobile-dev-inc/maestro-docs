@@ -81,7 +81,7 @@ maestro --version
 *   Use the following instructions to setup android command lines correctly in your WSL2 .
 
     * Open WSL2 terminal.
-    * Create a new directories in your home directory.
+    * Create a new directory in your home directory.
 
     ```
     ~ $ mkdir Android
