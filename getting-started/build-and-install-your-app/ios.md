@@ -47,3 +47,13 @@ xcodebuild(
       derivedDataPath: IOS_DERIVED_DATA_PATH # this will contain the .app which we need later on
 )
 ```
+
+## Building with Flutter
+
+If you use Flutter to build your app you can create a debug build for simulators using the following command:
+
+```
+flutter build ios --debug --simulator
+```
+
+You can then find your app file in the `build/ios/iphonesimulator/` directory.
