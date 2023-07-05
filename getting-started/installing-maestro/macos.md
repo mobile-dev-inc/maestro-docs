@@ -4,7 +4,7 @@ Dependencies:
 
 * [Xcode](https://developer.apple.com/xcode/) (recommended version is 14 or higher)\
   \
-  Please make sure that Command Line Tools are installed (Xcode -> Settings -> Locations -> Command Line Tools)
+  Please make sure that Command Line Tools are installed (Xcode -> Preferences -> Locations -> Command Line Tools)
 * [idb\_companion](https://github.com/facebook/idb)\
 
 
