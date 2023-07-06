@@ -10,6 +10,7 @@
   * [Windows](getting-started/installing-maestro/windows.md)
   * [Linux](getting-started/installing-maestro/linux.md)
 * [Build and Install your App](getting-started/build-and-install-your-app/README.md)
+  * [Android](getting-started/build-and-install-your-app/android.md)
   * [iOS](getting-started/build-and-install-your-app/ios.md)
 * [Run a Sample Flow](getting-started/run-a-sample-flow.md)
 * [Writing Your First Flow](getting-started/writing-your-first-flow.md)
