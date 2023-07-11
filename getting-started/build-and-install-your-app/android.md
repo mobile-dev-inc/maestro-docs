@@ -4,6 +4,7 @@ Android app binary requirements:
 
 * APK (AAB not supported)
 * Compatible with x86\_64 architecture
+* Requires Android API level 26 or newer
 * Release and Debug builds both supported
 
 ## Building with Gradle
