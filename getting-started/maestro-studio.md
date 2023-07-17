@@ -38,4 +38,6 @@ Maestro Studio automatically generates examples of how you can interact wit the 
 
 You can execute Maestro commands inline in Studio in the REPL view. The commands are written in YAML in the same way as you would write any normal Flow.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-07-13 at 19.01.42.png" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-07-17 at 19.12.37.png" alt=""><figcaption></figcaption></figure>
