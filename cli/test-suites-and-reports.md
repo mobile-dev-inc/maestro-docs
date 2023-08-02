@@ -84,7 +84,7 @@ In this example, all flows A, B and C will be included into the test suite.
 
 ### Sequential execution
 
-To run your Flows in in a given order you can add the following configuration to your `config.yaml` file:
+To run your Flows in a given order you can add the following configuration to your `config.yaml` file:
 
 ```yaml
 # config.yaml
