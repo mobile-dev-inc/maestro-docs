@@ -11,4 +11,5 @@ description: A list of community projects and contributions around Maestro.
 * [Codemagic CI integration](https://docs.codemagic.io/integrations/maestro-integration/)
 * [Fastlane Plugin](https://github.com/inf2381/fastlane-plugin-maestro)
 * [ASDF Plugin](https://github.com/dotanuki-labs/asdf-maestro)
-* [Maestro Test Results to Slack](https://github.com/brett-james-rocketlab/maestro-test-results-to-slack)
+* [Maestro Test Results to Slack](https://github.com/brett-james-rocketlab/maestro-test-results-to-slack)\
+  Parses Maestro results in a given folder and posts to Slack
