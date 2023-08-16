@@ -319,27 +319,3 @@ output.test_user = getTestUserFromApi();
 maestro test run-test.yml
 ```
 
-## Put it all together
-
-Now we can run all the flows with one go
-
-```yaml
-# test-all.yml
-appId: org.wikipedia
----
-- launchApp:
-    clearState: true
-- runFlow: "onboarding/main.yml"
-- runFlow: "dashboard/main.yml"
-- runFlow: "dashboard/search.yml"
-- runFlow: "dashboard/saved.yml"
-- runFlow: "dashboard/feed.yml"
-- runFlow: "dashboard/copy-paste.yml"
-- runFlow: "auth/signup.yml"
-- runFlow: "auth/login.yml"
-```
-
-```bash
-maestro test test-all.yml
-```
-
