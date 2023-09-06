@@ -48,7 +48,7 @@ const response = http.post('https://example.com/myEndpoint', {
 })
 ```
 
-> Setting a `'Content-Type'` header might be required. See [Headers](#headers).
+Setting a `'Content-Type'` header might be required. See [Headers](make-http-s-requests.md#headers).
 
 ### Headers
 
