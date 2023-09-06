@@ -42,8 +42,8 @@
 * [Tags](cli/tags.md)
 * [Recording Your Flow](cli/recording-your-flow.md)
 * [Continuous Mode](cli/continuous-mode.md)
-* [Create Device](cli/create-device.md)
 * [View Hierarchy](cli/view-hierarchy.md)
+* [Create Device](cli/create-device.md)
 
 ## API Reference
 
