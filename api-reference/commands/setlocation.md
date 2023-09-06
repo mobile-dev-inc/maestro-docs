@@ -11,3 +11,7 @@
 {% hint style="warning" %}
 Note that this does not update the _location_ of the emulator/simulator when running in Maestro Cloud so if your backend/app relies on IP location, this will still be set to the default location which is US
 {% endhint %}
+
+{% hint style="info" %}
+Note that for Android, this only works on API level 31 or above. Support for lower levels is coming soon!
+{% endhint %}

@@ -15,6 +15,21 @@ You can also user other selectors such as id:&#x20;
 
 For a full list of selectors, please refer to the [Selectors](../selectors.md) page.
 
+### Repeat taps
+
+In some cases it is desirable to repeat taps. To achieve that, the following is possible:
+
+```yaml
+- tapOn:
+    text: "Button"
+    repeat: 3
+    delay: 500 # (optional) Delay between taps. Default 100ms
+
+- tapOn:
+    id: "someId"
+    repeat: 3
+```
+
 ### Tapping on a specific point on the screen
 
 {% hint style="info" %}
@@ -39,6 +54,18 @@ You can also specify absolute coordinates on the screen to tap on:
     point: 100,200    # This command will tap on point x:100 y:200 on the screen (in pixels)
 ```
 
+### Tapping on a specific point within another element
+
+If you wish to tap on a point on screen inside another element you can do the following:
+
+```
+- tapOn:
+    text: "A text with a hyperlink"
+    point: "90%,50%"
+```
+
+This will find an element with text "A text with a hyperlink" and tapOn towards the end of the sentence where "hyperlink" is located.
+
 ### Long press
 
 To long press on a view or a point, use the same exact properties but with a `longPressOn` command
@@ -50,6 +77,18 @@ To long press on a view or a point, use the same exact properties but with a `lo
 - longPressOn:
     point: 50%,50%
 ```
+
+### Long press on a specific point within another element
+
+If you wish to long press on a point on screen inside another element you can do the following:
+
+```
+- longPressOn:
+    text: "A text with a hyperlink"
+    point: "90%,50%"
+```
+
+This will find an element with text "A text with a hyperlink" and longPressOn towards the end of the sentence where "hyperlink" is located.
 
 ## Example
 
