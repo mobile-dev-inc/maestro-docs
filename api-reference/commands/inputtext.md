@@ -7,7 +7,7 @@ Inputs text (regardless of whether any text field is currently focused or not)
 ```
 
 {% hint style="warning" %}
-Unfortunately unicode characters are not supported yet. Follow the [GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/146) for status updates.
+Unfortunately unicode characters are not supported yet in Android platform. Follow the [GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/146) for status updates.
 {% endhint %}
 
 ### Input random text

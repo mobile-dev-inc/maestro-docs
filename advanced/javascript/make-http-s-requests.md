@@ -11,7 +11,7 @@ output.script.result = response.body
 
 ### JSON
 
-Use `json()` function to parse JSON responses.&#x20;
+Use `json()` function to parse JSON responses.
 
 For example, assume that `https://example.com/jsonEndpoint` returns the following result:
 
@@ -39,6 +39,7 @@ To send body to a given endpoint, specify a `body` parameter:
 ```javascript
 // script.js
 const response = http.post('https://example.com/myEndpoint', {
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(
         {
             myField: "Payload"
@@ -46,6 +47,8 @@ const response = http.post('https://example.com/myEndpoint', {
     )
 })
 ```
+
+Setting a `'Content-Type'` header might be required. See [Headers](make-http-s-requests.md#headers).
 
 ### Headers
 
@@ -80,11 +83,12 @@ const response = http.request('https://example.com`, {
 
 ### Response object
 
-| Field Name | Value                                               |
-| ---------- | --------------------------------------------------- |
-| `ok`       | `true` if request was successful, `false` otherwise |
-| `status`   | HTTP status code (i.e. `200`)                       |
-| `body`     | String body of the response                         |
+| Field Name | Value                                                                                                               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------- |
+| `ok`       | `true` if request was successful, `false` otherwise                                                                 |
+| `status`   | HTTP status code (i.e. `200`)                                                                                       |
+| `body`     | String body of the response                                                                                         |
+| `headers`  | response HTTP headers, where each header value is a string (or a comma-separated string in case of multiple values) |
 
 ### Example
 
@@ -103,7 +107,7 @@ function createNewUser() {
       email: email,
       password: 'test'
     }),
-    headers: {'Content-Type': 'application/json'},
+    headers: {'Content-Type': 'application/json'}
   });
 
   const data = json(signupResponse.body);
@@ -128,7 +132,7 @@ function fillUserInfo() {
     headers: {
       'Content-Type': 'application/json', 
        Authorization: test_user.token,
-      },
+      }
   })
 
   // return email and password for logging in to newly created account

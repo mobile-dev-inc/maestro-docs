@@ -2,10 +2,7 @@
 
 It's sometimes useful to be able to add logic in your app that depends that whether you are running within the context of Maestro. In order to detect Maestro, check to see whether the Maestro-specific port is open on your device:
 
-| Platform | Maestro Port on Device |
-| -------- | ---------------------- |
-| iOS      | 22087                  |
-| Android  | 7001                   |
+<table><thead><tr><th width="146">Platform</th><th>Maestro Port on Device</th></tr></thead><tbody><tr><td>iOS</td><td>22087</td></tr><tr><td>Android</td><td>7001</td></tr></tbody></table>
 
 Here's an example of how to check for Maestro in an Android app:
 

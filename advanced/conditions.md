@@ -17,6 +17,20 @@ By design, Maestro discourages the usage of conditional statements unless absolu
 [nested-flows.md](nested-flows.md)
 {% endcontent-ref %}
 
+Or, if you don't wish to extract your commands into a separate flow file, you can run the commands inline like this:
+
+```yaml
+- runFlow:
+    when:
+      visible: Some Text
+    commands:
+        - tapOn: Some Text
+```
+
+{% content-ref url="../api-reference/commands/runflow.md" %}
+[runflow.md](../api-reference/commands/runflow.md)
+{% endcontent-ref %}
+
 ### runScript conditionally
 
 ```yaml

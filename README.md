@@ -63,12 +63,7 @@ appId: com.apple.MobileAddressBook
 
 ## Platform Support
 
-| Platform        | Support |
-| --------------- | ------- |
-| **iOS**         | ✅       |
-| **Android**     | ✅       |
-| **ReactNative** | ✅       |
-| **Flutter**     | ✅       |
+<table><thead><tr><th width="198">Platform</th><th>Support</th></tr></thead><tbody><tr><td><strong>iOS</strong></td><td>✅</td></tr><tr><td><strong>Android</strong></td><td>✅</td></tr><tr><td><strong>ReactNative</strong></td><td>✅</td></tr><tr><td><strong>Flutter</strong></td><td>✅</td></tr></tbody></table>
 
 ## Resources
 

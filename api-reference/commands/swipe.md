@@ -30,12 +30,7 @@ Example:
 
 Relative start and end coordinates for directional swipe are configured as follows:
 
-| Direction |         Start (x%, y%)        |          End (x%, y%)         |
-| :-------: | :---------------------------: | :---------------------------: |
-|    LEFT   | (90% of width, 50% of height) | (10% of width, 50% of height) |
-|   RIGHT   | (10% of width, 50% of height) | (90% of width, 50% of height) |
-|   DOWN    | (50% of width, 20% of height) | (50% of width, 90% of height) |
-|     UP    | (50% of width, 50% of height) | (50% of width, 10% of height) |
+<table><thead><tr><th width="156" align="center">Direction</th><th width="286.3333333333333" align="center">Start (x%, y%)</th><th align="center">End (x%, y%)</th></tr></thead><tbody><tr><td align="center">LEFT</td><td align="center">(90% of width, 50% of height)</td><td align="center">(10% of width, 50% of height)</td></tr><tr><td align="center">RIGHT</td><td align="center">(10% of width, 50% of height)</td><td align="center">(90% of width, 50% of height)</td></tr><tr><td align="center">DOWN </td><td align="center">(50% of width, 20% of height)</td><td align="center">(50% of width, 90% of height)</td></tr><tr><td align="center">UP</td><td align="center">(50% of width, 50% of height)</td><td align="center">(50% of width, 10% of height)</td></tr></tbody></table>
 
 A common use case for this is to swipe the onboarding pages.
 
