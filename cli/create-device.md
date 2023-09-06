@@ -15,7 +15,7 @@ The device configurations are similar to the ones hosted on Maestro Cloud. Using
 You can start by running
 
 ```sh
-maestro create-device --platform android
+maestro start-device --platform android
 ```
 
 This will create a default Android emulator (Pixel 6, Google APIs 30)
@@ -29,7 +29,7 @@ _Note: Device configurations are limited to a few recommended os versions and de
 You can start by running
 
 ```
-maestro create-device --platform ios
+maestro start-device --platform ios
 ```
 
 This will create a default iOS simulator (iPhone11, iOS 15.5)
