@@ -4,13 +4,13 @@
 
 Maestro can run a suite of tests and generate a test report at the end.
 
-To run a suite, point `maestro test` to a folder that contains the flows
+To run a suite, point `maestro test` to a folder that contains the Flows
 
 ```
-maestro test myFolderWtihTests/
+maestro test myFolderWithTests/
 ```
 
-Maestro will run every flow from the directory _excluding subfolders_. The command will complete successfully if and only if all the flows have completed successfully.
+Maestro will run every flow from the directory _excluding subfolders_. The command will complete successfully if and only if all the Flows have been completed successfully.
 
 ### Generating reports
 
@@ -20,7 +20,7 @@ To generate a report, add a `--format` parameter to a `test` command:
 maestro test --format junit myFolderWithTests/
 ```
 
-Or if you are using Maestro Cloud:
+Or, if you are using Maestro Cloud:
 
 ```
 maestro cloud --format junit myFolderWithTests/
@@ -38,11 +38,11 @@ Once execution completes, the report will be stored in a `report.xml` file in a 
 
 ### Controlling what tests to include
 
-There are multiple mechanisms to control what flows to run when running a test suite.
+There are multiple mechanisms to control what Flows to run when running a test suite.
 
 #### Tags
 
-Flow tags are covered extensively in the following section
+Flow tags are covered extensively in the following section:
 
 {% content-ref url="tags.md" %}
 [tags.md](tags.md)
@@ -50,7 +50,7 @@ Flow tags are covered extensively in the following section
 
 #### Inclusion Patterns
 
-By default, when running a test suite only flows from the top level of a given directory will be executed. Consider the following folder structure:
+By default, when running a test suite, only Flows from the top level of a given directory will be executed. Consider the following folder structure:
 
 ```
 workspace/
@@ -63,7 +63,7 @@ workspace/
 
 When running a `test` or `cloud` command on a `workspace` folder, only `flowA.yaml` will be executed by default (though it is still able to refer to `subFolder/flowB.yaml` and `subFolder/subSubFolder/flowC.yaml` using [`runFlow`](../advanced/nested-flows.md) command).
 
-This behaviour can be customised by using **inclusion** **patterns.** To do that, update your `config.yaml` (create the file if missing) as following:
+This behaviour can be customised by using **inclusion** **patterns.** To do that, update your `config.yaml` (create the file if missing) as follows:
 
 ```yaml
 flows:
@@ -71,7 +71,7 @@ flows:
   - "subFolder/*"
 ```
 
-In such case, **both** flowA and flowB will be included into the test suite **but not flowC**.
+In such case, **both** flowA and flowB will be included in the test suite **but not flowC**.
 
 Tests can also be included recursively:
 
@@ -80,11 +80,11 @@ flows:
   - "**"
 ```
 
-In this example, all flows A, B and C will be included into the test suite.
+In this example, all Flows A, B, and C will be included in the test suite.
 
 ### Sequential execution
 
-To run your Flows in in a given order you can add the following configuration to your `config.yaml` file:
+To run your Flows in a given order, you can add the following configuration to your `config.yaml` file:
 
 ```yaml
 # config.yaml
@@ -105,7 +105,7 @@ Note that your Flows should **not** depend on device state and should be treated
 
 #### Configuring part of the Flows to run sequentially
 
-For instance, if you have three Flows `flowA`, `flowB` and `flowC` and you want to run only `flowA` and `flowB` sequentially. In that case, don't add `flowC` and `flowD` to the list and Maestro will run these flows in non-deterministic ordering **after** the Flow sequence has finished executing.
+For instance, if you have three Flows, `flowA`, `flowB`, and `flowC`, but you want to run only `flowA` and `flowB` sequentially, don't add `flowC` and `flowD` to the list. Maestro will run these Flows in non-deterministic ordering **after** the Flow sequence has finished executing.
 
 ### Deterministic ordering
 
@@ -114,7 +114,7 @@ Note that deterministic ordering has been deprecated in favour of sequential exe
 {% endhint %}
 
 {% hint style="warning" %}
-This option is not supported for Maestro Cloud tests. All tests in a suite are going to be executed in parallel regardless of this setting.
+This option is not supported for Maestro Cloud tests. All tests in a suite are going to be executed in parallel, regardless of this setting.
 {% endhint %}
 
 Normally, tests in a suite are executed in a non-deterministic order. In cases where a fixed order of execution is required, you can force your tests to run in **alphabetical order**. Update your `config.yaml` (or create the file if missing) to enable this behaviour:

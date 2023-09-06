@@ -21,7 +21,13 @@ Each flow run will generate:
 * A `maestro.log` file that contains Maestro related logs
 * A `commands-*.json` file that contains command metadata
 
-Located under the Maestro directory i.e `~/.maestro/tests/<datetime>/`
+Located under the Maestro directory by default: `~/.maestro/tests/<datetime>/` .&#x20;
+
+You can also configure the default path for debug output by using the `--debug-output <path>` option. Example usage:
+
+```
+maestro test --debug-output /path/to/debug/logs
+```
 
 {% hint style="info" %}
 Device logs are not supported but it's something we plan to add
