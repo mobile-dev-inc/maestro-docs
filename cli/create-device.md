@@ -18,9 +18,9 @@ You can start by running
 maestro start-device --platform android
 ```
 
-This will create a default Android emulator (Pixel 6, Google APIs 30)
+This will create a default Android emulator (Pixel 6, Google APIs 30). If the devices already exists, it will simply launch it.
 
-For full options run `maestro create-device`
+For full options run `maestro start-device`
 
 _Note: Device configurations are limited to a few recommended os versions and devices. Such configurations work well with Maestro and Maestro Cloud._
 
@@ -32,9 +32,9 @@ You can start by running
 maestro start-device --platform ios
 ```
 
-This will create a default iOS simulator (iPhone11, iOS 15.5)
+This will create a default iOS simulator (iPhone11, iOS 15.5). If the devices already exists, it will simply launch it.
 
-For full options run `maestro create-device`
+For full options run `maestro start-device`
 
 _Note: Device configurations are limited to a few recommended os versions and devices. Such configurations work well with Maestro and Maestro Cloud._
 
