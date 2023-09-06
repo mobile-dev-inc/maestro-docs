@@ -30,6 +30,12 @@ On iOS
 1. Execute `xcrun simctl listapps booted | grep CFBundleIdentifier` to get a list of all installed packages
 2. Search for the appID manually or use `grep` in the above command to search for part of the name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`
 
+### \[iOS] hideKeyboard flaky
+
+On iOS, `hideKeyboard` is done with the help of scrolling up and down from the middle of the screen since there is no native API to hide the keyboard.&#x20;
+
+If using this command doesn't hide the keyboard we recommend clicking on some non-tappable region with `tapOn` points command, similar to how a user would hide the keyboard when interacting with your app.
+
 ### \[iOS] Issues with lists (UICollectionView, UITableView) that fetch data on scroll
 
 Apps that have pagination (fetch data on scroll) inside UITableView / UICollectionView views sometimes result in fetching data at the moments when it is not expected, hanging inside the lists, and flows being broken when testing with `maestro`. \
