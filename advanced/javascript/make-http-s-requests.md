@@ -39,6 +39,7 @@ To send body to a given endpoint, specify a `body` parameter:
 ```javascript
 // script.js
 const response = http.post('https://example.com/myEndpoint', {
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(
         {
             myField: "Payload"
@@ -46,6 +47,8 @@ const response = http.post('https://example.com/myEndpoint', {
     )
 })
 ```
+
+> Setting a `'Content-Type'` header might be required. See [Headers](#headers).
 
 ### Headers
 
@@ -104,7 +107,7 @@ function createNewUser() {
       email: email,
       password: 'test'
     }),
-    headers: {'Content-Type': 'application/json'},
+    headers: {'Content-Type': 'application/json'}
   });
 
   const data = json(signupResponse.body);
@@ -129,7 +132,7 @@ function fillUserInfo() {
     headers: {
       'Content-Type': 'application/json', 
        Authorization: test_user.token,
-      },
+      }
   })
 
   // return email and password for logging in to newly created account
