@@ -14,7 +14,7 @@ Maestro works great on Windows computers, but there are a few unique setup steps
    1. To check if your ANDROID\_HOME setup is correctly done, open a PowerShell terminal and run this command `adb --version.`
    2. Note down the ADB version.
 4. Install Java JDK 11 and set JAVA\_HOME
-   1. Run `java  --version` to check if the Java is installed correctly.
+   1. Run `java --version` to check if the Java is installed correctly.
 
 ## Steps <a href="#8b4a" id="8b4a"></a>
 
@@ -75,8 +75,6 @@ maestro --version
 
 ### Let's set you up to use Android in your freshly installed WSL2
 
-
-
 * Download the Android command line tools zip file from [Android official site.](https://developer.android.com/studio)
 *   Use the following instructions to set up Android command lines correctly in your WSL2.
 
@@ -89,11 +87,12 @@ maestro --version
     ```
 
     * Unzip the Android command line tools zip file in the `android` directory using this command: `unzip ~<command_line_zip_filename>.zip`
-    * In the `android` directory:
+    * In the  `Android` directory perform following actions.
 
     ```
-    $ mkdir tools
-    $ mv cmdline-tools/* tools/
+    $ mkdir latest
+    $ mv cmdline-tools/* latest/
+    $ mv latest/ cmdline-tools/
     ```
 
     **Note:** Last command will probably give you a warning, but you don’t need the worry about that.
@@ -102,7 +101,7 @@ maestro --version
 
     ```
     export ANDROID_HOME=$HOME/Android
-    export PATH=$PATH:$ANDROID_HOME/tools/bin/:$PATH
+    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/:$PATH
     ```
 
     * Save your `~/.bashrc` file and exit.
@@ -118,8 +117,6 @@ maestro --version
       * Close and relaunch terminal
       * Run `adb --version` and see that adb version is shown
       * Since everything is installed fresh, your WSL 2 adb version should perfectly match with Windows ADB version that we noted down as part of the pre-requisites.
-
-
 
 **Please follow the below steps to setup the ADB and make sure you are able to use Android emulators with your WSL2 correctly**
 
@@ -141,15 +138,12 @@ maestro --version
       * If Android Studio is open, close it and **keep only** emulator running.
       * If you see a message saying `emulator offline`, **ignore it**.
       * Sometimes, the firewall stops your connection with the host machine. For that, add a firewall rule to allow the connection or check with your organization system admin if using a company machine.
-
 * **Note: Don't close the PowerShell terminal!**
 * **Now open your WSL2 terminal and run these commands.**
   * `adb kill-server`
   * `export ADB_SERVER_SOCKET=tcp:<WINDOWS_IPV4_ADDR>:5037`
   * `adb devices`
   * `You should see your connected emulator successfully now.`
-
-
 
 ### Ready to start Using Maestro?
 
@@ -163,8 +157,6 @@ Yes, at this point, you are free to start your automation.
 * Check out the [full documentation](https://maestro.mobile.dev/)
 
 ## Known Issue <a href="#2884" id="2884"></a>
-
-
 
 ```
 If your Android emulator is not up and running in the Windows host, the Maestro test
