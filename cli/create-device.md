@@ -38,15 +38,3 @@ For full options run `maestro start-device`
 
 _Note: Device configurations are limited to a few recommended os versions and devices. Such configurations work well with Maestro and Maestro Cloud._
 
-###
-
-<details>
-
-<summary></summary>
-
-
-
-</details>
-
-Why
-
