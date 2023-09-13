@@ -43,7 +43,7 @@
 * [Recording Your Flow](cli/recording-your-flow.md)
 * [Continuous Mode](cli/continuous-mode.md)
 * [View Hierarchy](cli/view-hierarchy.md)
-* [Create Device](cli/create-device.md)
+* [Start Device](cli/start-device.md)
 
 ## API Reference
 
