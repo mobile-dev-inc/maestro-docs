@@ -22,17 +22,17 @@ Here’s what you’ll see:
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-07-13 at 18.54.53.png" alt=""><figcaption></figcaption></figure>
 
-You can either visually select UI elements in order to receive suggestions on how to interact with the element in your Flow or enter Maestro commands in the REPL and run them through clicking `ENTER`.
+You can either visually select UI elements in order to receive suggestions on how to interact with the element in your Flow, or enter Maestro commands in the REPL and run them by pressing `Run`.
 
 ### Visually Select a UI Element <a href="#2508" id="2508"></a>
 
-Click on the device screenshot to select a UI element, i.e. Settings icon on iOS simulator.&#x20;
+Click on the device screenshot to select a UI element, e.g. Settings icon on the iOS simulator.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-07-13 at 18.58.06.png" alt=""><figcaption></figcaption></figure>
 
 #### Automatically Generated Examples <a href="#725d" id="725d"></a>
 
-Maestro Studio automatically generates examples of how you can interact wit the selected element in your Flows. You can either double click on the example to have it be executed directly or copy it, read the docs and other things via the hotkeys available.
+Maestro Studio automatically generates examples of how you can interact with the selected element in your Flows. You can double click on the example to execute it directly, or use the hotkeys to copy it to the clipboard or open the relevant documentation.
 
 ### Executing commands in the REPL
 

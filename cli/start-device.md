@@ -1,8 +1,8 @@
 ---
-description: Maestro offers a few convenience methods to create a device
+description: Maestro offers a few convenience methods to start or create a device
 ---
 
-# Create Device
+# Start Device
 
 You can use Maestro to create an Android emulator or an iOS simulator.&#x20;
 
@@ -10,7 +10,7 @@ The device configurations are similar to the ones hosted on Maestro Cloud. Using
 
 
 
-### Create an Android emulator using Maestro
+### Start an Android emulator using Maestro
 
 You can start by running
 
@@ -24,7 +24,7 @@ For full options run `maestro start-device`
 
 _Note: Device configurations are limited to a few recommended os versions and devices. Such configurations work well with Maestro and Maestro Cloud._
 
-### Create an iOS simulator using Maestro
+### Start an iOS simulator using Maestro
 
 You can start by running
 
