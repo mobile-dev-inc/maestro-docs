@@ -50,6 +50,25 @@ const response = http.post('https://example.com/myEndpoint', {
 
 Setting a `'Content-Type'` header might be required. See [Headers](make-http-s-requests.md#headers).
 
+You can also send multipart form data by specyfying `multipartForm` parameter:
+```javascript
+// script.js
+const response = http.post('https://example.com/myEndpoint', {
+    multipartForm: {
+      "uploadType": "import",
+      "data": {
+        "filePath": filePath,
+        "mediaType": "text/csv"
+      }
+    },
+})
+```
+
+In `multipartForm` you can include many fields. It is also possible to upload multiple files in one request by using objects with filePath property.
+`filePath` is required for the files. `mediaType` is optional.
+
+> **ℹ️ Note** If you include both `body` and `multipartForm` in one request then `body` will be ignored.
+
 ### Headers
 
 Headers can be provided in a `headers` parameter
