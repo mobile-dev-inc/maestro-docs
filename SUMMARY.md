@@ -48,6 +48,7 @@
 ## API Reference
 
 * [Commands](api-reference/commands/README.md)
+  * [addMedia](api-reference/commands/addmedia.md)
   * [assertVisible](api-reference/commands/assertvisible.md)
   * [assertNotVisible](api-reference/commands/assertnotvisible.md)
   * [assertTrue](api-reference/commands/asserttrue.md)
