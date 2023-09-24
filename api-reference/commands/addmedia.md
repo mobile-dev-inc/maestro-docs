@@ -3,7 +3,7 @@
 Allows you to add media to the device's gallery for both Android and iOS, making them accessible for use in your application flow.
 
 ```yaml
-- addMedia
+- addMedia:
     - "./assets/foo.png" # path of media file in workspace
     - "./assets/foo.mp4"
 ```
