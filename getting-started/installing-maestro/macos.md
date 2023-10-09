@@ -4,10 +4,9 @@ Dependencies:
 
 * [Xcode](https://developer.apple.com/xcode/) (recommended version is 14 or higher)\
   \
-  Please make sure that Command Line Tools are installed (Xcode -> Preferences -> Locations -> Command Line Tools)\
+  Please make sure that Command Line Tools are installed (Xcode -> Preferences -> Locations -> Command Line Tools)
 
-
-Follow the default install instructions
+After setting up the macOS dependencies above, follow the default installation instructions:
 
 {% content-ref url="./" %}
 [.](./)
