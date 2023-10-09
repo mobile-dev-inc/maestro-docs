@@ -10,7 +10,7 @@ Note that when you specify a device, Maestro will not start the device.
 
 {% tabs %}
 {% tab title="Android" %}
-To list your running Android device, run the following command in your terminal:
+To list your running Android devices, run the following command in your terminal:
 
 ```bash
 adb devices
@@ -32,7 +32,7 @@ From the output, locate the device identifier for the device you want to use wit
 
 ### Passing the Device Identifier to Maestro
 
-When running any Maestro command that requires a device, for instance, `test` or `studio`. You must first pass the device identifier with the `--device` parameter before running the command.
+When running any Maestro command that requires a device (e.g. `test` or `studio`), you must first pass the device identifier with the `--device` parameter before running the command.
 
 For example, to run Maestro Studio on an Android device with identifier `emulator-5554` use the following command:
 
@@ -47,5 +47,5 @@ maestro --device 5B6D77EF-2AE9-47D0-9A62-70A1ABBC5FA2 test flow.yaml
 ```
 
 {% hint style="warning" %}
-Even with multiple devices open. Maestro is unable to run tests in parallel.
+Even with multiple devices open, Maestro is unable to run tests in parallel.
 {% endhint %}

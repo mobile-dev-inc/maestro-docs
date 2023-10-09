@@ -1,12 +1,12 @@
 # tapOn
 
-In order to tap on a view with the text "My text"you can use the shorthand selector for text like this:
+In order to tap on a view with the text "My text" you can use the shorthand selector for text like this:
 
 ```yaml
 - tapOn: "My text"
 ```
 
-You can also user other selectors such as id:&#x20;
+You can also use other selectors such as id:&#x20;
 
 ```yaml
 - tapOn:
@@ -68,7 +68,7 @@ This will find an element with text "A text with a hyperlink" and tapOn towards 
 
 ### Long press
 
-To long press on a view or a point, use the same exact properties but with a `longPressOn` command
+To long press on a view or a point, use the same exact properties but with a `longPressOn` command:
 
 ```yaml
 - longPressOn: Text
