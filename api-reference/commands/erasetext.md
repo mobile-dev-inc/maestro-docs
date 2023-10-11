@@ -13,3 +13,17 @@ If you need to remove more characters, you can specify a number explicitly:
 ```
 
 _Note: This is for searches looking for clearText._
+
+***
+
+{% hint style="warning" %}
+**Flakiness on iOS**
+{% endhint %}
+
+We have seen cases where `eraseText` can be flaky on iOS. The maestro team is aware of that and is working on it. In the meantime, you can use the following commands to workaround the flakiness of the command:
+
+```
+- longPressOn: "<input text id>"
+- tapOn: 'Select All'
+- eraseText
+```
