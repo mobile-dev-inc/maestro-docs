@@ -106,6 +106,7 @@
 * [Detect Maestro in your App](advanced/detect-maestro-in-your-app.md)
 * [Configuring Maestro driver timeout](advanced/configuring-maestro-driver-timeout.md)
 * [onFlowStart / onFlowComplete hooks](advanced/onflowstart-onflowcomplete-hooks.md)
+* [Testing in different locales](advanced/testing-in-different-locales.md)
 
 ## Troubleshooting
 
