@@ -6,7 +6,7 @@ In order to tap on a view with the text "My text" you can use the shorthand sele
 - tapOn: "My text"
 ```
 
-You can also use other selectors such as id:&#x20;
+You can also use other selectors such as id:
 
 ```yaml
 - tapOn:
@@ -29,6 +29,27 @@ In some cases it is desirable to repeat taps. To achieve that, the following is 
     id: "someId"
     repeat: 3
 ```
+
+
+
+### Control wait time
+
+Maestro usually waits for the screen to settle before moving to the next command, however that is not always desirable.
+
+If you app or screen has the following:
+
+* Moving elements like a countdown timer
+* Non-blocking animation that are part of the UI
+
+Then you can use `waitToSettleTimeoutMs` to limit the time Maestro wait for things to settle
+
+```yaml
+- tapOn:
+    text: "Button"
+    waitToSettleTimeoutMs: 500 # ms
+```
+
+**Note:** This will be a best effort timeout. Maestro will not interrupt core operations to honor the timeout.
 
 ### Tapping on a specific point on the screen
 
