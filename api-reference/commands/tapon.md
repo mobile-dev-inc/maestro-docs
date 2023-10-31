@@ -36,12 +36,12 @@ In some cases it is desirable to repeat taps. To achieve that, the following is 
 
 Maestro usually waits for the screen to settle before moving to the next command, however that is not always desirable.
 
-If you app or screen has the following:
+If your app or screen has the following:
 
 * Moving elements like a countdown timer
-* Non-blocking animation that are part of the UI
+* Non-blocking animations that are part of the UI
 
-Then you can use `waitToSettleTimeoutMs` to limit the time Maestro wait for things to settle
+Then, you can use `waitToSettleTimeoutMs` to limit the time Maestro waits for things to settle
 
 ```yaml
 - tapOn:
