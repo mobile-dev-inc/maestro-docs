@@ -6,9 +6,10 @@ To scroll towards a direction until an element becomes visible in the view hiera
 </strong>    element:
       id: "viewId" # or any other selector
     direction: DOWN # DOWN|UP|LEFT|RIGHT (optional, default: DOWN)
-    timeout: 50000 # (optional, default: 20000ms)
+    timeout: 50000 # (optional, default: 20000) ms
     speed: 40 # 0-100 (optional, default: 40) Scroll speed. Higher values scroll faster.
-    visibilityPercentage: 100 # 0-100 (optional, default 100) Percentage of element visible in viewport
+    visibilityPercentage: 100 # 0-100 (optional, default: 100) Percentage of element visible in viewport
+    centerElement: false # true|false (optional, default: false)
 </code></pre>
 
 Please refer to the [Selectors](../selectors.md) page for a full list of supported selectors.
@@ -21,7 +22,24 @@ The scroll will move towards the direction specified `DOWN|UP|LEFT|RIGHT`. For e
 
 By default an element will be considered visible if it is fully displayed in the viewport. You can adjust that threshold by modifying `visibilityPercentage`.
 
-#### Example
+
+
+**Center Element**
+
+If enabled, it will attempt to stop when the element is closer to the screen center.&#x20;
+
+In case it's not possible to bring the element to the center (i.e it's the last element in the list), it will stop scrolling after few attempts.
+
+```yaml
+- scrollUntilVisible:
+    centerElement: true
+    element:
+      text: "Item 6"
+```
+
+
+
+### Example
 
 If you want to scroll until the text "My text" is visible you can run the following command:
 
