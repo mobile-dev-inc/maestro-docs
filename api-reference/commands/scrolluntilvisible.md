@@ -14,17 +14,13 @@ To scroll towards a direction until an element becomes visible in the view hiera
 
 Please refer to the [Selectors](../selectors.md) page for a full list of supported selectors.
 
-#### Direction
+### Direction
 
 The scroll will move towards the direction specified `DOWN|UP|LEFT|RIGHT`. For example, if `DOWN` is specified then it will start scrolling towards the bottom of the screen.
 
-#### Visibility Percentage
-
-By default an element will be considered visible if it is fully displayed in the viewport. You can adjust that threshold by modifying `visibilityPercentage`.
 
 
-
-**Center Element**
+### Center Element
 
 If enabled, it will attempt to stop when the element is closer to the screen center.&#x20;
 
@@ -36,6 +32,12 @@ In case it's not possible to bring the element to the center (i.e it's the last 
     element:
       text: "Item 6"
 ```
+
+
+
+### Visibility Percentage
+
+By default an element will be considered visible if it is fully displayed in the viewport. You can adjust that threshold by modifying `visibilityPercentage`.
 
 
 
