@@ -19,7 +19,6 @@ For commands that interact with a view, such as tapOn, assertVisible, copyTextFr
     optional: false  # (default: false) If set to true, test won't fail if view can't be found
     childOf: "selector"  # (optional) Searches the view inside the parent view. Parent view is first searched using the selector provided in childOf field.  
 ```
-```
 
 ### Shorthand selector for text
 
@@ -31,7 +30,7 @@ If you want to use the text selector you can use the shorthand selector like thi
 
 ### Relative Position selectors
 
-Apart from the selectors mentioned above, Maestro is also able to select views using their relative position (i.e. "below another view", "contains child", or "child of")
+Apart from the selectors mentioned above, Maestro is also able to select views using their relative position (i.e. "below another view", or "contains child")
 
 ```yaml
 - tapOn: # or any other command that works with selectors
@@ -45,6 +44,7 @@ Apart from the selectors mentioned above, Maestro is also able to select views u
         - id: "title_id"
           text: "A descendant view has id 'title_id' and this text"
         - "Another descendant view has this text"
+```
 
 ### Selecting one view among many similar
 
