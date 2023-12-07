@@ -13,13 +13,13 @@ Maestro works great on Windows computers, but there are a few unique setup steps
 3. Add ANDROID\_HOME to your Windows environment variable.
    1. To check if your ANDROID\_HOME setup is correctly done, open a PowerShell terminal and run this command `adb --version.`
    2. Note down the ADB version.
-4. Install Java JDK 11 and set JAVA\_HOME
+4. Install Java JDK 17 and set JAVA\_HOME
    1. Run `java --version` to check if the Java is installed correctly.
 
 ## Steps <a href="#8b4a" id="8b4a"></a>
 
 1. Install WSL2 (Window Subsystem for Linux)
-2. Install Java 11
+2. Install Java 17
 3. Install Maestro
 
 ## 1. Install WSL 2 <a href="#0215" id="0215"></a>
@@ -50,7 +50,7 @@ sudo apt upgrade
 After restarting the system, open the Terminal application and click on the dropdown to select Ubuntu. Type in the following command:
 
 ```bash
-sudo apt install openjdk-11-jdk
+sudo apt install openjdk-17-jdk
 ```
 
 ## 3. Install Maestro
@@ -92,7 +92,7 @@ maestro --version
     ```
     $ mkdir latest
     $ mv cmdline-tools/* latest/
-    $ mv latest/ cmdline-tools/
+    $ mv latest/ cmdline-tools/tools/
     ```
 
     **Note:** Last command will probably give you a warning, but you don’t need the worry about that.
@@ -101,7 +101,7 @@ maestro --version
 
     ```
     export ANDROID_HOME=$HOME/Android
-    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/:$PATH
+    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/latest/bin/:$PATH
     ```
 
     * Save your `~/.bashrc` file and exit.
