@@ -14,8 +14,8 @@ For the Button component definition:
 
 ```dart
 <Button
-	title="Go"
-	onPress={() => Alert.alert('Success!')}
+  title="Go"
+  onPress={() => Alert.alert('Success!')}
 />
 ```
 
@@ -35,9 +35,9 @@ For the Button component definition:
 
 ```dart
 <Button
-	title="Go"
+  title="Go"
   testID="continue"
-	onPress={() => Alert.alert('Success!')}
+  onPress={() => Alert.alert('Success!')}
 />
 ```
 
