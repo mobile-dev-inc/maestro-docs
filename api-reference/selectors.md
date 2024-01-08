@@ -39,6 +39,8 @@ Apart from the selectors mentioned above, Maestro is also able to select views u
     leftOf: "View to the right has this text"
     rightOf: "View to the left has this text"
     containsChild: "Text in a child view"      # This will match a view that has a *direct* child view with the given text
+    childOf:                                   # This will help to select from children of view with id 'buy-now'
+        - id: "buy-now"
     containsDescendants:                       # This will match a view that has all the descendant views given below
         - id: "title_id"
           text: "A descendant view has id 'title_id' and this text"
