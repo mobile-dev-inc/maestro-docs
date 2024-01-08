@@ -47,6 +47,7 @@
 
 ## API Reference
 
+* [Labels](api-reference/labels.md)
 * [Commands](api-reference/commands/README.md)
   * [addMedia](api-reference/commands/addmedia.md)
   * [assertVisible](api-reference/commands/assertvisible.md)
