@@ -19,7 +19,7 @@ Maestro works great on Windows computers, but there are a few unique setup steps
 ## Steps <a href="#8b4a" id="8b4a"></a>
 
 1. Install WSL2 (Window Subsystem for Linux)
-2. Install Java 11
+2. Install Java 21
 3. Install Maestro
 
 ## 1. Install WSL 2 <a href="#0215" id="0215"></a>
@@ -50,7 +50,7 @@ sudo apt upgrade
 After restarting the system, open the Terminal application and click on the dropdown to select Ubuntu. Type in the following command:
 
 ```bash
-sudo apt install openjdk-11-jdk
+sudo apt install openjdk-21-jdk
 ```
 
 ## 3. Install Maestro
