@@ -28,6 +28,21 @@ To install a specific version, declare a `MAESTRO_VERSION` property and run the 
 export MAESTRO_VERSION={version}; curl -Ls "https://get.maestro.mobile.dev" | bash
 ```
 
+## Installing a specific version of Maestro in a Dockerfile
+
+Define a variable for the version you want to install
+```dockerfile
+ENV MAESTRO_VERSION {version}
+```
+Then download and install Maestro and add it to your path
+```dockerfile
+RUN mkdir -p /opt/maestro && \
+wget -q -O /tmp/${MAESTRO_VERSION} "https://github.com/mobile-dev-inc/maestro/releases/download/cli-${MAESTRO_VERSION}/maestro.zip" && \
+unzip -q /tmp/${MAESTRO_VERSION} -d /opt/ && \
+rm /tmp/${MAESTRO_VERSION}
+ENV PATH=/opt/maestro/bin:${PATH}
+```
+
 ## Connecting to Your Device
 
 {% tabs %}
