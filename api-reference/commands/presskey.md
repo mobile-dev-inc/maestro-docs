@@ -8,7 +8,8 @@
 * `backspace` - backspace button
 * `volume up` and `volume down` - control the volume
 * `back` - back button (Android only)
-* `power` - power button (Android only)&#x20;
+* `power` - power button (Android only)
+* `tab` - tab button (Android only)&#x20;
 
 ```yaml
 - pressKey: Enter
