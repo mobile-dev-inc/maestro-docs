@@ -29,3 +29,12 @@ Some of the controls are specific to Android TV Remote:
 * `Remote Media Previous`
 * `Remote Media Rewind`
 * `Remote Media Fast Forward`
+* `Remote System Navigation Up`
+* `Remote System Navigation Down`
+* `Remote Button A`
+* `Remote Button B`
+* `Remote Menu`
+* `TV Input`
+* `TV Input HDMI 1`
+* `TV Input HDMI 2`
+* `TV Input HDMI 3`
