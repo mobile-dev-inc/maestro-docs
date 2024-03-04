@@ -113,10 +113,10 @@ Maybe the app gets multi-language support, and now you have to decide on the lan
 When you start facing these problems, you should consider using the **accessibility identifier** instead of semantics labels.
 
 {% hint style="info" %}
-This is a new feature that [we contributed to Flutter](https://github.com/flutter/engine/pull/47961) to make it easier to test apps made with it. Currently it's available on Flutter beta channel, but it'll be included in the next stable Flutter release (likely January/February 2024). To use it now, switch to the beta channel:
+This is a new feature that [we contributed to Flutter](https://github.com/flutter/engine/pull/47961) to make it easier to test apps made with it. It's available on the stable channel since Flutter 3.19 (released on February 15th, 2024). To use it, upgrade to the latest stable Flutter release:
 
 ```
-flutter channel beta
+flutter channel stable
 flutter upgrade
 ```
 {% endhint %}
