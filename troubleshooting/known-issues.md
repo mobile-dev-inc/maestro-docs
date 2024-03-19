@@ -42,7 +42,7 @@ Apps that have pagination (fetch data on scroll) inside UITableView / UICollecti
 \
 There is a bug in XCTest framework that makes UITableView / UICollectionView `willDisplayCell` method being called whenever UI test APIs are being called. Since `maestro` relies on XCTest APIs under the hood it might break the pagination logic for some apps.\
 \
-Suggested workaround - inside `willDisplayCell` check whether the indexPath is really visible via `UITableView.indexPathsForVisibleRows` or `UICollectionView.indexPathsForVisibleItems`. [Code example](#user-content-fn-1)[^1]:
+Suggested workaround - inside `willDisplayCell` check whether the indexPath is really visible via `UITableView.indexPathsForVisibleRows` or `UICollectionView.indexPathsForVisibleItems`. Code example:
 
 ```swift
 // This function should be implemented in a class conforming to UITableViewDelegate
@@ -62,4 +62,7 @@ func tableView(_ tableView: UITableView,
 }
 ```
 
-[^1]: 
+### \[iOS] Landscape orientation is not supported
+
+See [this GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/565).
+
