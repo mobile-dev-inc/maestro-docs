@@ -65,6 +65,12 @@ true: { Value }                     # True if given value is true or not empty
 platform: { Platform }              # True if current platform is given platform (Android|iOS|Web)
 </code></pre>
 
+All of the normal element matchers are supported.
+
+{% content-ref url="../api-reference/selectors.md" %}
+[selectors.md](../api-reference/selectors.md)
+{% endcontent-ref %}
+
 ### JavaScript
 
 Usage of JavaScript conditions is possible via `true` condition:
