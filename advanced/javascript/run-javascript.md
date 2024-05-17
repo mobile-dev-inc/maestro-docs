@@ -57,6 +57,27 @@ The maestro object contains the following properties:
 | `copiedText`  | Results of the [copyTextFrom](../../api-reference/commands/copytextfrom.md) command. See [Access element text](./access-element-text.md) |
 | `platform`    | The platform the test is running on. Either `ios` or `android` |
 
+The platform might be useful for conditional logic that differs based on platform. For example, you might want to handle location permission prompts on iOS and Android. Example:
+
+```yaml
+- runScript: setPermissionsVars.js
+- tapOn: "Enable Location"
+- assertVisible: ${output.locationPermissionAlert}
+- tapOn: ${output.locationPermissionButton}
+```
+
+```javascript
+// setPermissionsVars.js
+if (maestro.platform === 'ios') {
+    output.locationPermissionAlert = "This app uses your location to show you information about your local environment"
+    output.locationPermissionButton = "Allow"
+}
+if (maestro.platform === 'android') {
+    output.locationPermissionAlert = "Allow access to this device's location?"
+    output.locationPermissionButton = "While using the app"
+}
+```
+
 #### relativePoint
 
 A function for converting decimal values to string percentages of the format that Maestro commands expect.
