@@ -129,7 +129,7 @@ appId: org.wikipedia
 {% tabs %}
 {% tab title="search.yml" %}
 ```yaml
-appId: org.wikimedia
+appId: org.wikipedia
 ---
 - tapOn: "Search Wikipedia"
 - inputText: "Sun"
@@ -212,8 +212,8 @@ maestro test run-test.yml
 ```yaml
 # run-test.yml
 appId: org.wikipedia
-- launchApp
 ---
+- launchApp
 - runFlow: "auth/signup.yml"
 - runFlow: "auth/login.yml"
 ```
