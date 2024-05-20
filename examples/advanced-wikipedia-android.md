@@ -118,8 +118,8 @@ maestro test run-test.yml
 ```yaml
 # run-test.yml
 appId: org.wikipedia
-- launchApp
 ---
+- launchApp
 - runFlow: "dashboard/search.yml"
 - runFlow: "dashboard/feed.yml"
 - runFlow: "dashboard/copy-paste.yml"
@@ -147,7 +147,7 @@ appId: org.wikipedia
 
 {% tab title="feed.yml" %}
 ```yaml
-appId: org.wikimedia
+appId: org.wikipedia
 ---
 - tapOn: "Explore"
 - scrollUntilVisible:
@@ -161,7 +161,7 @@ appId: org.wikimedia
 
 {% tab title="copy-paste.yml" %}
 ```yaml
-appId: org.wikimedia
+appId: org.wikipedia
 ---
 - tapOn: "Explore"
 - scrollUntilVisible:
@@ -181,7 +181,7 @@ appId: org.wikimedia
 
 {% tab title="saved.yml" %}
 ```yaml
-appId: org.wikimedia
+appId: org.wikipedia
 ---
 - tapOn: "Saved"
 - tapOn: "Default list for your saved articles"
@@ -221,7 +221,7 @@ appId: org.wikipedia
 {% tabs %}
 {% tab title="login.yml" %}
 ```yaml
-appId: org.wikimedia
+appId: org.wikipedia
 ---
 - tapOn: "More"
 - tapOn: "LOG IN.*"
@@ -244,7 +244,7 @@ appId: org.wikimedia
 
 {% tab title="signup.yml" %}
 ```yaml
-appId: org.wikimedia
+appId: org.wikipedia
 ---
 - tapOn: "More"
 - tapOn: "LOG IN.*"
@@ -318,4 +318,3 @@ output.test_user = getTestUserFromApi();
 ```bash
 maestro test run-test.yml
 ```
-
