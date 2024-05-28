@@ -32,6 +32,12 @@ Once execution completes, the report will be stored in a `report.xml` file in a 
 
 * `junit` - JUnit XML format
 
+![xml](https://github.com/depapp/maestro-docs/assets/6134774/abcd3d3d-9154-4b49-85b5-274c31997771)
+
+* `html` - HTML format
+
+![html](https://github.com/depapp/maestro-docs/assets/6134774/8fedda56-de5e-411d-8501-63bf3c581e90)
+
 #### Additional options
 
 * `--output {file}` allows to override the report filename
