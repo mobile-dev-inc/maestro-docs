@@ -15,3 +15,5 @@ fun isMaestro(): Boolean {
     }
 }
 ```
+
+An alternative is to use [arguments](../api-reference/commands/launchapp.md#launch-arguments) and have your app detect a particular parameter to indicate Maestro's usage, e.g. `isE2ETest`.
