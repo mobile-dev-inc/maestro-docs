@@ -36,5 +36,5 @@ Labels are also a useful alternative to comments for contributors trying to unde
 - extendedWaitUntil:
     visible: "Recommended Products"
     timeout: 5000
-    label: "Wait for all personalised content to load"
+    label: "Wait for all personalized content to load"
 ```
