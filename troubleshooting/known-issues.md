@@ -14,6 +14,23 @@ Sometimes, tapOn will try to tap again if it doesn't detect a hierarchy change. 
     retryTapIfNoChange: false
 ```
 
+### \[Android] Unable to clear state
+
+When running tests against a real device you may receive an error of `(Unable to clear state for app <package>)` when running either
+
+```yaml
+- clearState
+```
+
+or
+
+```yaml
+- launchApp:
+    clearState: true
+```
+
+This error is common on physical devices by Oppo. The workaround is to return to the Developer Settings where ADB Debugging was enabled, and disable 'Verify apps over USB'.
+
 ### App does not launch
 
 Either the app is not installed or the `appId` is wrong. Note that depending on the app type, the identifier can be different.

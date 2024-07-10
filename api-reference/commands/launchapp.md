@@ -77,3 +77,17 @@ let standardDefaultsDict = UserDefaults.standard.dictionaryRepresentation()
 let foo = (standardDefaultsDict["foo"] as? String) ?? "defaultValue"
 ```
 
+#### Receiving arguments in React Native
+
+```typescript
+import { LaunchArguments } from 'react-native-launch-arguments'
+
+export const isFooEnabled = () => {
+  try {
+    const foo = LaunchArguments.value().isFooEnabled
+    return !!foo
+  } catch (e) {
+    return false
+  }
+}
+```
