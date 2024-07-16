@@ -13,7 +13,7 @@ appId: yourAppId
 ...
 ```
 
-Your recording will then be available
+Your recording will then be available in your test directory.
 
 {% content-ref url="stoprecording.md" %}
 [stoprecording.md](stoprecording.md)
