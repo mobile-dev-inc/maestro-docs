@@ -57,7 +57,7 @@ The maestro object contains the following properties:
 | `copiedText`  | Results of the [copyTextFrom](../../api-reference/commands/copytextfrom.md) command. See [Access element text](./access-element-text.md) |
 | `platform`    | The platform the test is running on. Either `ios` or `android` |
 
-The platform might be useful for conditional logic that differs based on platform. For example, you might want to handle location permission prompts on iOS and Android. Example:
+The `maestro.platform` value might be useful for conditional logic that differs between Android and iOS. For example, you might want to handle location permission differently:
 
 ```yaml
 - runScript: setPermissionsVars.js
