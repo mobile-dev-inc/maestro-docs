@@ -20,6 +20,12 @@ The scroll will move towards the direction specified `DOWN|UP|LEFT|RIGHT`. For e
 
 
 
+### Timeout
+
+The timeout (in miliseconds) defines how long it should scroll and look for the specified element. The test fails if the timeout ends before the specified element is visible. If the element is visible, the test will move on with the next command / step.
+
+
+
 ### Center Element
 
 If enabled, it will attempt to stop when the element is closer to the screen center.&#x20;
