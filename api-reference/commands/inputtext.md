@@ -20,3 +20,14 @@ There are several convenience methods for entering a random text input:
 - inputRandomNumber      # Enters a random integer number
 - inputRandomText        # Enters random unstructured text
 ```
+
+#### Length
+
+You can pass length as argument for `Number` and `Text`
+
+```yaml
+- inputRandomNumber:
+    length: 10  #(default: 8)
+- inputRandomText:
+    length: 10  #(default: 8)
+```
