@@ -29,11 +29,19 @@ If you want to run a JavaScript file you can use the runScript command:
 
 `runScript` accepts `env` parameters, in the same way as `runFlow` does (see [nested-flows.md](../nested-flows.md "mention")).
 
+Passing a parameter:
+
 ```javascript
 - runScript:
     file: script.js
     env:
        myParameter: 'Parameter'
+```
+
+Reading a parameter in Javascript:
+
+```javascript
+const readPassedParameter = myParameter;
 ```
 
 ### Inline
