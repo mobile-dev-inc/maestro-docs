@@ -31,6 +31,19 @@ In some cases it is desirable to repeat taps. To achieve that, the following is 
 ```
 
 
+### retryTapIfNoChange
+
+Sometimes, tapOn will try to tap again if it doesn't detect a hierarchy change. To fix such cases, use retryTapIfNoChange. For example:
+
+```yaml
+- tapOn:
+    id: "someId"
+    retryTapIfNoChange: false
+```
+
+In this example, the tapOn will never try to tap again.
+
+
 
 ### Control wait time
 
