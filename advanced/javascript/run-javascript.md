@@ -38,7 +38,7 @@ Passing a parameter:
        myParameter: 'Parameter'
 ```
 
-Reading a parameter in Javascript:
+Reading a parameter in JavaScript:
 
 ```javascript
 const readPassedParameter = myParameter;
