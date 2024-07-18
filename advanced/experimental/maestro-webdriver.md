@@ -8,18 +8,16 @@ Maestro has experimental support for running flows on Web since version `1.21.0`
 
 ### Running your first web flow
 
-It doesn't take much to get started with Maestro on web -- simply replace `appId` with the website you want to launch and then write your flows as usual.
+It doesn't take much to get started with Maestro on web – simply replace `appId` with the website you want to launch and then write your flows as usual.
 
-```
+```yaml
 appId: "https://maestro.mobile.dev"
 ---
 - launchApp
-- tapOn:
-    id: "Search…"
-    index: 1
+- tapOn: "Ask or Search"
 - inputText: "Tap On View"
-- tapOn: "Go to page"
-- assertVisible: "Taps on a view on the screen.*"
+- tapOn: ".*tapOn.*"
+- assertVisible: "In order to tap on a view with the text \"My text\".*"
 ```
 
 ### Maestro Studio support
