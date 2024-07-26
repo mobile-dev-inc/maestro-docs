@@ -16,6 +16,7 @@
 * [Writing Your First Flow](getting-started/writing-your-first-flow.md)
 * [Maestro Studio](getting-started/maestro-studio.md)
 * [Running Flows on CI](getting-started/running-flows-on-ci.md)
+* [Structuring your test suite](https://blog.mobile.dev/maestro-best-practices-structuring-your-test-suite-54ec390c5c82)
 
 ## Platform Support
 
