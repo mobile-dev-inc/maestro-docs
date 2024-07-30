@@ -51,3 +51,58 @@ For very simple computations (like the one above), creating a new file might be 
 {% content-ref url="../../api-reference/commands/evalscript.md" %}
 [evalscript.md](../../api-reference/commands/evalscript.md)
 {% endcontent-ref %}
+
+### Inbuilt functions & properties
+
+Whilst the JavaScript environment is limited, there are a few inbuilt things that can be used:
+
+#### maestro object
+
+The maestro object contains the following properties:
+
+| Field Name    | Value                    |
+| ----------    | ------------------------ |
+| `copiedText`  | Results of the [copyTextFrom](../../api-reference/commands/copytextfrom.md) command. See [Access element text](./access-element-text.md) |
+| `platform`    | The platform the test is running on. Either `ios` or `android` |
+
+The `maestro.platform` value might be useful for conditional logic that differs between Android and iOS. For example, you might want to handle location permission differently:
+
+```yaml
+- runScript: setPermissionsVars.js
+- tapOn: "Enable Location"
+- assertVisible: ${output.locationPermissionAlert}
+- tapOn: ${output.locationPermissionButton}
+```
+
+```javascript
+// setPermissionsVars.js
+if (maestro.platform === 'ios') {
+    output.locationPermissionAlert = "This app uses your location to show you information about your local environment"
+    output.locationPermissionButton = "Allow"
+}
+if (maestro.platform === 'android') {
+    output.locationPermissionAlert = "Allow access to this device's location?"
+    output.locationPermissionButton = "While using the app"
+}
+```
+
+#### relativePoint
+
+A function for converting decimal values to string percentages of the format that Maestro commands expect.
+
+```yaml
+- evalScript: ${output.specialPoint = relativePoint(0.13, 0.56)}
+- tapOn:
+    point: ${output.specialPoint} # Taps on the point '13%,56%'
+```
+
+#### Others
+
+The following inbuilt functions are documented in [Make HTTP(s) requests](./make-http-s-requests.md):
+
+* http.request
+* http.get
+* http.post
+* http.put
+* http.delete
+* json
