@@ -63,6 +63,7 @@
   * [extendedWaitUntil](api-reference/commands/extendedwaituntil.md)
   * [hideKeyboard](api-reference/commands/hidekeyboard.md)
   * [inputText](api-reference/commands/inputtext.md)
+  * [killApp](api-reference/commands/killapp.md)
   * [launchApp](api-reference/commands/launchapp.md)
   * [openLink](api-reference/commands/openlink.md)
   * [pressKey](api-reference/commands/presskey.md)
