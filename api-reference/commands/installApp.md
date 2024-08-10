@@ -5,8 +5,7 @@ The `installApp` command installs an application on a device, ensuring that the 
 - installApp: "path/to/app.apk"
 ```
 For Android, this command performs the equivalent of running the following command in the terminal:
-bash
-Kodu kopyala
+
 ```
 adb install "path/to/app.apk"
 ```
