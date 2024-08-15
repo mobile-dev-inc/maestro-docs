@@ -12,6 +12,13 @@ Run the following command to install Maestro on Mac OS, Linux or Windows (WSL):
 curl -Ls "https://get.maestro.mobile.dev" | bash
 ```
 
+If you're on macOS, you can use Homebrew instead of the install script above:
+
+```bash
+brew tap mobile-dev-inc/tap
+brew install maestro
+```
+
 ## Upgrading the CLI
 
 Simply run the installation script again:
@@ -63,12 +70,3 @@ _Note: At the moment, Maestro does not support real iOS devices_
 `maestro test` will automatically detect and use any local emulator or USB-connected physical device.
 {% endtab %}
 {% endtabs %}
-
-### Homebrew support
-
-We no longer recommend using homebrew to manage your maestro installation and instead recommend the installation script above. To upgrade your maestro installation that was installed via Homebrew we recommend uninstalling it and then reinstalling it using the official instructions:
-
-```bash
-brew uninstall maestro
-curl -Ls "https://get.maestro.mobile.dev" | bash
-```
