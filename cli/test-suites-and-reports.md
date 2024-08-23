@@ -112,20 +112,3 @@ Note that your Flows should **not** depend on device state and should be treated
 #### Configuring part of the Flows to run sequentially
 
 For instance, if you have three Flows, `flowA`, `flowB`, and `flowC`, but you want to run only `flowA` and `flowB` sequentially, don't add `flowC` and `flowD` to the list. Maestro will run these Flows in non-deterministic ordering **after** the Flow sequence has finished executing.
-
-### Deterministic ordering
-
-{% hint style="danger" %}
-Note that deterministic ordering has been deprecated in favour of sequential execution and will be removed in a future version.
-{% endhint %}
-
-{% hint style="warning" %}
-This option is not supported for Maestro Cloud tests. All tests in a suite are going to be executed in parallel, regardless of this setting.
-{% endhint %}
-
-Normally, tests in a suite are executed in a non-deterministic order. In cases where a fixed order of execution is required, you can force your tests to run in **alphabetical order**. Update your `config.yaml` (or create the file if missing) to enable this behaviour:
-
-```yaml
-local:
-  deterministicOrder: true
-```
