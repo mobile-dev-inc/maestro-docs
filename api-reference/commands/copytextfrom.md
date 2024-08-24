@@ -4,7 +4,7 @@ You can copy text from an element and save it in-memory, to paste later. To find
 
 ### Usage Example
 
-Copies text from an element and pastes it into a search field.
+Copy text from an element and paste it into a search field:
 
 ```yaml
 appId: com.example.app
@@ -15,4 +15,18 @@ appId: com.example.app
 - tapOn:
     id: "searchFieldId"
 - pasteText
+```
+
+The copied text can also be access in JavaScript using the `maestro.copiedText`
+property:
+
+```
+appId: com.example.app
+---
+- launchApp
+- copyTextFrom:
+    id: "someId"
+- tapOn:
+    id: "searchFieldId"
+- inputText: ${'Pasted using JavaScript: ' + maestro.copiedText}
 ```
