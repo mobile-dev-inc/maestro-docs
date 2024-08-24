@@ -26,5 +26,7 @@ The command is removing the contents of the application's data folder. An equiva
 ```
 idb file rm --application {bundle id}/
 ```
+
+[It's also possible to use `xcrun simctl` for that.](https://stackoverflow.com/a/56746729/7009800)
 {% endtab %}
 {% endtabs %}
