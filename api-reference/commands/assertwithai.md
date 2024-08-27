@@ -6,11 +6,6 @@ This is an **experimental** feature powered by LLM technology.
 
 {% endhint %}
 
-```yaml
-- assertWithAI:
-    assertion: A two-factor authentication prompt, with space for 6 digits, is visible.
-```
-
 ### When to use?
 
 {% hint style="warning" %}
@@ -25,6 +20,12 @@ assertion using default assertion commands.
 
 Asserting the presence of a two-factor authentication prompt is a good example.
 
+<figure><img src="../.gitbook/assets/uber_2fa.png" alt=""><figcaption></figcaption></figure>
+
+```yaml
+- assertWithAI:
+    assertion: A two-factor authentication prompt, with space for 6 digits, is visible.
+```
 
 
 ### Output
