@@ -42,3 +42,7 @@ test run:
     │   ├── ai-report-(My first flow).html
     │   ├── ai-report-(My second flow).html
 ```
+
+{% content-ref url="ai-configuration.md" %}
+[ai-configuration.md](ai-configuration.md)
+{% endcontent-ref %}
