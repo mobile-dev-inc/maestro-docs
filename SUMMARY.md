@@ -83,9 +83,12 @@
   * [doubleTapOn](api-reference/commands/doubletapon.md)
   * [travel](api-reference/commands/travel.md)
   * [waitForAnimationToEnd](api-reference/commands/waitforanimationtoend.md)
+  * [assertWithAI](api-reference/commands/assertwithai.md)
+  * [assertNoDefectsWithAi](api-reference/commands/assertnodefectswithai.md)
 * [Configuration](api-reference/configuration/README.md)
   * [Workspace configuration](api-reference/configuration/workspace-configuration.md)
   * [Flow configuration](api-reference/configuration/flow-configuration.md)
+  * [AI configuration](api-reference/configuration/ai-configuration.md)
 * [Selectors](api-reference/selectors.md)
 
 ## Advanced
