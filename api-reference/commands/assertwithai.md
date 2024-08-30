@@ -44,5 +44,5 @@ test run:
 ```
 
 {% content-ref url="ai-configuration.md" %}
-[ai-configuration.md](ai-configuration.md)
+[ai-configuration.md](../../api-reference/configuration/ai-configuration.md)
 {% endcontent-ref %}
