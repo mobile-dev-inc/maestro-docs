@@ -101,7 +101,7 @@ maestro --version
 
     ```
     export ANDROID_HOME=$HOME/Android
-    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/:$PATH
+    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
     ```
 
     * Save your `~/.bashrc` file and exit.
@@ -110,7 +110,7 @@ maestro --version
       * Run `sdkmanager --list` to check if everything is working fine.
       * Run `sdkmanager --install "platform-tools"` to install platform tools.
     * Finally, add the following into your `~/.bashrc` file
-      * `export PATH=$PATH:$ANDROID_HOME/platform-tools/:$PATH`
+      * `export PATH=$PATH:$ANDROID_HOME/platform-tools`
       * Save your `~/.bashrc` file and exit.
       * Run `source ~/.bashrc` to reload the bashrc file.
     * To check that everything went well, do the following:
