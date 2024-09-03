@@ -16,7 +16,7 @@ export MAESTRO_CLI_AI_MODEL=claude-3-5-sonnet-20240620
 
 Currently supported:
 
-– GPT family of models from OpenAI
+- GPT family of models from OpenAI
 - Claude family of models from Anthropic
 
 Support for more models and providers is tracked [in this issue](https://github.com/mobile-dev-inc/maestro/issues/1957).
