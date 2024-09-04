@@ -20,3 +20,9 @@ Similarly, it can wait until an element disappears:
         id: "elementId" # or any other selector
     timeout: 10000
 ```
+
+#### See also
+
+{% content-ref url="../../advanced/wait.md" %}
+[wait.md](../../advanced/wait.md)
+{% endcontent-ref %}
