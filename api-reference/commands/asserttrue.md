@@ -16,6 +16,15 @@ values. For example, you can assert that two views have the same text:
 - assertTrue: ${output.viewA == maestro.copiedText}
 ```
 
+You can also use it to immediately fail the test:
+
+```yaml
+- assertTrue:
+    condition: ${false}
+    label: This will always fail
+```
+
+
 #### Related commands
 
 {% content-ref url="assertvisible.md" %}
