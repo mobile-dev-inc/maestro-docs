@@ -23,8 +23,8 @@ Support for more models and providers is tracked [in this issue](https://github.
 
 ### API key
 
-To use this command, an API key for the LLM service is required. To set it, export the
-`MAESTRO_CLI_AI_KEY` env var.
+To use this command, an API key for the LLM service is required. To set it,
+export the `MAESTRO_CLI_AI_KEY` env var.
 
 For example, to set the key for OpenAI:
 
@@ -37,3 +37,8 @@ or for Anthropic:
 ```console
 export MAESTRO_CLI_AI_KEY=sk-ant-api03-U9vWi8GDrxRAvA2RL2RMCImYCQr8BFCbNOq2woeRXLNz2Iy4PbY1X2137leSm92mitI7F9IwxKIrXtXgTIzj7A-2AvgbwAA
 ```
+
+{% hint style="info" %}
+**You need to bring your own API key.** The keys above are just examples and are
+not valid.
+{% endhint %}
