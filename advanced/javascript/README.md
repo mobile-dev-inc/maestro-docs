@@ -7,8 +7,10 @@ filesystem), those scripts offer just enough functionality to write more
 sophisticated conditions or make HTTP requests.
 
 {% hint style="warning" %}
-Currently, Maestro by default uses the [Rhino](https://github.com/mozilla/rhino) JavaScript runtime to execute JavaScript, which has very limited modern JavaScript support. For a full list of API compatibility, please refer to [compatibility table](https://mozilla.github.io/rhino/compat/engines.html).
-We therefore recommend relying on pre-ES6 APIs as much as possible to avoid any unexpected errors.
+Currently, Maestro by default uses the [Rhino](https://github.com/mozilla/rhino)
+JavaScript runtime to execute JavaScript, which has very limited modern
+JavaScript support. For a full list of API compatibility, please refer to
+[compatibility table](https://mozilla.github.io/rhino/compat/engines.html).
 {% endhint %}
 
 {% hint style="info %}
