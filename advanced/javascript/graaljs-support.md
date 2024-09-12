@@ -1,24 +1,38 @@
 # GraalJS support
 
-It is possible to use GraalJS instead of Rhino JS for javascript evaluation. GraalJS is fully ECMAScript 2022 compliant while Rhino JS only supports ES5.
+It is possible to use the [GraalJS](https://github.com/oracle/graaljs) runtime
+instead of [Rhino](https://github.com/mozilla/rhino) for JavaScript evaluation.
+GraalJS is fully ECMAScript 2022 compliant while Rhino only supports ECMAScript
+5.
 
-This feature is experimental for now, but we intend to make GraalJS the default if all goes well.
+{% hint style="info %}
+Right now, Rhino is the default JavaScript engine, but we intend to make GraalJS
+the default soon and then deprecate and remove Rhino.
 
-#### Enable GraalJS via Flow config
+[This issue track the progress](https://github.com/mobile-dev-inc/maestro/issues/2049).
+{% endhint %}
 
-> **ℹ️ Note** This only has an effect if present at the top-level flow. It is ignored when included in any subflows.
+#### Enable GraalJS via flow config
+
+{% hint style="warning" %}
+This only has an effect if present in the top-level flow. It is ignored when
+included in any subflows.
+{% endhint %}
 
 ```yaml
 appId: com.example.app
 jsEngine: graaljs
 ---
-# Note: The ?? operator is an example of an ES2020 feature and is not supported by Rhino JS
+# The ?? operator is an example of an ES2020 feature and is not supported by Rhino
 - inputText: ${null ?? 'foo'}
 ```
 
 #### Enable GraalJS via environment variable
 
-> **⚠️ Warning** This env var will have no effect when running on Maestro Cloud. Use the Flow config above instead to opt into GraalJS on Maestro Cloud.
+{% hint style="warning" %}
+The env var will have no effect when running on Maestro Cloud. Use the flow
+config above to opt into GraalJS on Maestro Cloud.
+{% endhint %}
 
 ```bash
 export MAESTRO_USE_GRAALJS=true
@@ -29,7 +43,10 @@ maestro test my-flow.yaml
 
 There are some differences between the new `GraalJsEngine` and the current `RhinoJsEngine` implementation that are worth noting. All of the differences below and some others are documented and tested by the `GraalJsEngineTest` and `RhinoJsEngineTest` tests.
 
-**tldr; The variable scoping with the GraalJS implementation is more consistent and understandable**
+{% hint style="info" %}
+**TL;DR** is that the variable scoping when using GraalJS is more consistent and
+understandable.
+{% endhint %}
 
 | Rhino JS                                                                                                                                                                                                                                                                                                                            | GraalJS                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
