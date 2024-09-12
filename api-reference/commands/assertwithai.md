@@ -32,7 +32,6 @@ Asserting the presence of a two-factor authentication prompt is a good example.
     assertion: A two-factor authentication prompt, with space for 6 digits, is visible.
 ```
 
-
 ### Output
 
 Output is generated in HTML and JSON formats in the folder for the individual
@@ -49,7 +48,7 @@ test run:
 ```
 
 
-#### See also
+### Configuration
 
 {% content-ref url="../../api-reference/configuration/ai-configuration.md" %}
 [ai-configuration.md](../../api-reference/configuration/ai-configuration.md)

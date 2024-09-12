@@ -1,12 +1,10 @@
 # Specify a Device
 
-If you have multiple devices open, you can specify which device to run Maestro on. To do this, you must first obtain the device identifier and then pass it to Maestro.
+If you have multiple devices open, you can specify which device to run Maestro
+on. To do this, you must first obtain the device identifier and then pass it to
+Maestro.
 
-{% hint style="info" %}
-Note that when you specify a device, Maestro will not start the device.
-{% endhint %}
-
-### Obtaining the device Identifier
+### Obtain the device identifier
 
 {% tabs %}
 {% tab title="Android" %}
@@ -30,7 +28,7 @@ From the output, locate the device identifier for the device you want to use wit
 {% endtab %}
 {% endtabs %}
 
-### Passing the device identifier to Maestro
+## Pass the device identifier to Maestro
 
 When running any Maestro command that requires a device (e.g. `test` or `studio`), you must first pass the device identifier with the `--device` parameter before running the command.
 
@@ -47,22 +45,34 @@ Similarly, to run `flow.yaml` on an iOS simulator with identifier
 maestro --device 5B6D77EF-2AE9-47D0-9A62-70A1ABBC5FA2 test flow.yaml
 ```
 
-### Running in parallel
+## Run flows in parallel
 
-Maestro can run tests in parallell with two strategies.
+Maestro can run tests in parallel, also known as "sharding".
 
-#### --shard-all
+{% embed url="https://youtu.be/07zqZ6DP9Rg" %}
+
+There are two sharding strategies available.
+
+### --shard-all
 
 To run tests in parallel, you can use the `--shard-all` parameter. This
-parameter will run the same tests in parallel on available devices.
+parameter will run the same tests in parallel on available devices:
 
 ```
 maestro test --shard-all 3 .maestro
 ```
 
-To run with `--shard-all 3`, you need to have are 3 available devices. If there
-are less, Maestro will print an error and request you to run more devices.
+### --shard-split
 
-#### --shard-split
+Let’s say you have 3 running devices and 9 tests, but now you want to split this
+test suite into 3 chunks of tests and run them in parallel on connected devices:
 
+```
+maestro test --shard-split 3 .maestro
+```
 
+{% hint style="warning" %}
+To run with `--shard-all 3` or `--shard-split`, you need to have 3 available
+devices. If there are less, Maestro will print an error and request you to run
+more devices.
+{% endhint %}

@@ -37,7 +37,7 @@ test run:
     │   ├── ai-report-(My second flow).html
 ```
 
-#### See also
+### Configuration
 
 {% content-ref url="../../api-reference/configuration/ai-configuration.md" %}
 [ai-configuration.md](../../api-reference/configuration/ai-configuration.md)
