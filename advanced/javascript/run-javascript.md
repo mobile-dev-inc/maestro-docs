@@ -1,15 +1,26 @@
 # Run JavaScript
 
+Maestro is not a JavaScript testing framework, but we recognize not everything
+can (or should) be written in YAML. That's why we have JavaScript support.
+
 There are several ways to run JavaScript, depending on your needs.
 
-### Inject
+{% hint style="info %}
+Right now, Rhino is the default JavaScript engine in Maestro, but we intend to
+make GraalJS the default soon and then deprecate and remove Rhino.
 
-Everything within `${}` blocks is evaluated as JavaScript, allowing you to insert dynamically computed values into any other Maestro command.
+**Learn more about [GraalJS support](./graaljs-support.md)**.
+{% endhint %}
+
+## Inject
+
+Everything within `${}` blocks is evaluated as JavaScript, allowing you to
+insert dynamically computed values into any other Maestro command.
 
 ```yaml
 appId: com.example
 env:
-    MY_NAME: John
+  MY_NAME: John
 ---
 - launchApp
 - inputText: ${1 + 1}               # Inputs '2'
@@ -17,7 +28,7 @@ env:
 - tapOn: ${MY_NAME}                 # Taps on element with text 'John'
 ```
 
-### Run file
+## Run file
 
 If you want to run a JavaScript file you can use the runScript command:
 
@@ -25,26 +36,28 @@ If you want to run a JavaScript file you can use the runScript command:
 [runscript.md](../../api-reference/commands/runscript.md)
 {% endcontent-ref %}
 
-#### Passing parameters
+### Passing parameters
 
-`runScript` accepts `env` parameters, in the same way as `runFlow` does (see [nested-flows.md](../nested-flows.md "mention")).
+`runScript` accepts `env` parameters, in the same way as `runFlow` does (see
+[nested-flows.md](../nested-flows.md "mention")).
 
 Passing a parameter:
 
-```javascript
+```yaml
 - runScript:
     file: script.js
     env:
-       myParameter: 'Parameter'
+       myParameter: Parameter
 ```
 
 Reading a parameter in JavaScript:
 
 ```javascript
 const readPassedParameter = myParameter;
+console.log(readPassedParameter); // Outputs 'Parameter'
 ```
 
-### Inline
+## Inline
 
 For very simple computations (like the one above), creating a new file might be cumbersome. For this use case you can use the `evalScript` command:
 
@@ -52,20 +65,22 @@ For very simple computations (like the one above), creating a new file might be 
 [evalscript.md](../../api-reference/commands/evalscript.md)
 {% endcontent-ref %}
 
-### Inbuilt functions & properties
+## Inbuilt functions & properties
 
 Whilst the JavaScript environment is limited, there are a few inbuilt things that can be used:
 
-#### maestro object
+### object `maestro`
 
-The maestro object contains the following properties:
+The `maestro` object contains the following properties:
 
 | Field Name    | Value                    |
 | ----------    | ------------------------ |
 | `copiedText`  | Results of the [copyTextFrom](../../api-reference/commands/copytextfrom.md) command. See [Access element text](./access-element-text.md) |
 | `platform`    | The platform the test is running on. Either `ios` or `android` |
 
-The `maestro.platform` value might be useful for conditional logic that differs between Android and iOS. For example, you might want to handle location permission differently:
+The `maestro.platform` value is useful for conditional logic that differs
+between Android and iOS. For example, you might want to handle location
+permission differently:
 
 ```yaml
 - runScript: setPermissionsVars.js
@@ -74,6 +89,7 @@ The `maestro.platform` value might be useful for conditional logic that differs 
 - tapOn: ${output.locationPermissionButton}
 ```
 
+{% code title="setPermissionsVars.js" %}
 ```javascript
 // setPermissionsVars.js
 if (maestro.platform === 'ios') {
@@ -85,10 +101,12 @@ if (maestro.platform === 'android') {
     output.locationPermissionButton = "While using the app"
 }
 ```
+{% endcode %}
 
-#### relativePoint
+### function `relativePoint`
 
-A function for converting decimal values to string percentages of the format that Maestro commands expect.
+The `relativePoint` function converts decimal values to string percentages,
+which is the format that Maestro commands expect.
 
 ```yaml
 - evalScript: ${output.specialPoint = relativePoint(0.13, 0.56)}
@@ -96,9 +114,9 @@ A function for converting decimal values to string percentages of the format tha
     point: ${output.specialPoint} # Taps on the point '13%,56%'
 ```
 
-#### Others
+### Others
 
-The following inbuilt functions are documented in [Make HTTP(s) requests](./make-http-s-requests.md):
+The following inbuilt functions are documented in [Make HTTP requests](./make-http-s-requests.md):
 
 * http.request
 * http.get

@@ -1,4 +1,4 @@
-# Make HTTP(s) requests
+# Make HTTP requests
 
 Maestro comes with its own JavaScript HTTP API
 

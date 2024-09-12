@@ -102,7 +102,7 @@
   * [Outputs](advanced/javascript/outputs.md)
   * [Logging](advanced/javascript/logging.md)
   * [Access element text](advanced/javascript/access-element-text.md)
-  * [Make HTTP(s) requests](advanced/javascript/make-http-s-requests.md)
+  * [Make HTTP requests](advanced/javascript/make-http-s-requests.md)
   * [GraalJS support](advanced/javascript/graaljs-support.md)
 * [Experimental](advanced/experimental/README.md)
   * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
