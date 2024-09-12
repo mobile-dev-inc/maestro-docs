@@ -9,7 +9,8 @@ The following properties can be configured on a given Flow:
 * `onFlowStart`: This is a hook that takes a list of Maestro commands as an argument. These commands will be executed before the initiation of each flow. Typically, this hook is used to run various setup scripts.
 * `onFlowComplete`: This hook accepts a list of Maestro commands that are executed upon the completion of each flow. It's important to note that these commands will run regardless of whether a particular flow has ended successfully or has encountered a failure. Typically, this hook is used to run various teardown / cleanup scripts.
 
-```yaml title="flow.yaml"
+{% code title="flow.yaml" %}
+```yaml
 appId: my.app
 name: Custom Flow name
 tags:
@@ -29,4 +30,4 @@ onFlowComplete:
 ---
 - launchApp
 ```
-
+{% endcode %}
