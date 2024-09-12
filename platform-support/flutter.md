@@ -8,7 +8,7 @@ Flutter is a first class citizen for Maestro. It can test both pure and hybrid (
 
 Maestro can interact with widgets that have semantics information attached. By default, this includes all widgets that display text (`data` in the Text widget, `hintText` in the TextField, and so on). You can also attach semantics information to any widget using Flutter's [Semantics widget](https://api.flutter.dev/flutter/widgets/Semantics-class.html).
 
-#### Example: Tap on a widget
+### Example: Tap on a widget
 
 Given an `InkWell` widget with a `Text` widget child:
 
@@ -24,7 +24,7 @@ InkWell(
 The following command will tap on it:
 
 ```yaml
-- tapOn: "Open Browser"
+- tapOn: Open Browser
 ```
 
 ***
@@ -41,7 +41,7 @@ FloatingActionButton(
 Then the `FloatingActionButton` can be interacted with using the following command:
 
 ```yaml
-- tapOn: "fabAddIcon"
+- tapOn: fabAddIcon
 ```
 
 {% hint style="info" %}
@@ -64,10 +64,10 @@ Semantics(
 ```
 
 ```yaml
-- tapOn: "funky yellow box"
+- tapOn: funky yellow box
 ```
 
-#### Example: Enter text in a widget
+### Example: Enter text in a widget
 
 To enter text in the following text field widget:
 
@@ -83,11 +83,11 @@ TextField(
 Use this command:
 
 ```yaml
-- tapOn: "Enter your username"
-- inputText: "charlie_root"
+- tapOn: Enter your username
+- inputText: charlie_root
 ```
 
-#### Example: Assert a widget is visible
+### Example: Assert a widget is visible
 
 ```dart
 Text(
@@ -97,7 +97,7 @@ Text(
 ```
 
 ```yaml
-- assertVisible: "Welcome back, dear Test User!"
+- assertVisible: Welcome back, dear Test User!
 ```
 
 {% hint style="info" %}
@@ -121,7 +121,7 @@ flutter upgrade
 ```
 {% endhint %}
 
-#### Example: Tap on a widget by semantics identifier
+### Example: Tap on a widget by semantics identifier
 
 ```dart
 Semantics(
@@ -135,10 +135,10 @@ Semantics(
 
 ```yaml
 - tapOn:
-    id: "signin_button"
+    id: signin_button
 ```
 
-#### Example: Enter text in a widget by semantics identifier
+### Example: Enter text in a widget by semantics identifier
 
 ```dart
 Semantics(
@@ -154,11 +154,11 @@ Semantics(
 
 ```yaml
 - tapOn:
-    id: "username_textfield"
-- inputText: "charlie_root"
+    id: username_textfield
+- inputText: charlie_root
 ```
 
-### Good practices
+## Good practices
 
 Let's say you have a `FancyButton` widget in your app. These buttons are important for you, and you want to ensure they always have an accessibility identifier assigned so they can be reliably interacted with using Maestro. The code sample below requires all callers of `FancyButton` to pass an accessibility identifier:
 
@@ -204,7 +204,7 @@ Semantics(
 )
 ```
 
-Of course, there's always danger of a developer accidentally not using the `FancyButton` widget and defering to the built-in `ElevatedButton`. To combat that, we recommend setting up lint rules that forbid using `ElevatedButton` and enforce replacing it with a `FancyButton` instead. For example you can use [the leancode\_lint package](https://pub.dev/packages/leancode\_lint) with the following configuration in `analysis_options.yaml`:
+Of course, there's always danger of a developer accidentally not using the `FancyButton` widget and defering to the built-in `ElevatedButton`. To combat that, we recommend setting up lint rules that forbid using `ElevatedButton` and enforce replacing it with a `FancyButton` instead. For example you can use [the leancode_lint package](https://pub.dev/packages/leancode_lint) with the following configuration in `analysis_options.yaml`:
 
 ```yaml
 include: package:leancode_lint/analysis_options.yaml
@@ -268,13 +268,9 @@ And you can easily interact with the widget using Maestro:
 
 ```yaml
 - tapOn:
-    id: "unlock_reward"
+    id: unlock_reward
 ```
 
 ## Known Limitations
 
 Maestro cannot be used to test Flutter Desktop or Flutter Web apps (yet).
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
