@@ -1,41 +1,55 @@
-# Configuring Permissions
+# Configure Permissions
 
-By default, all permissions are set to `allow` by the launchApp command. It is possible to launch an app with custom permissions behaviour by passing the `permissions` argument to `launchApp`.
+By default, all permissions are set to `allow` by the launchApp command. It is
+possible to launch an app with custom permissions behaviour by passing the
+`permissions` argument to `launchApp`:
 
-### Permission Name
+```yaml
+- launchApp:
+    permissions:
+      all: deny
+      camera: allow
+      location: allow
+```
 
-Maestro has standardised names for most permissions.
+
+## Available permissions
+
+Maestro has standardized names for most permissions.
 
 For example, on Android: `bluetooth` targets both `android.permission.BLUETOOTH_CONNECT` and `android.permission.BLUETOOTH_SCAN`.
 
-| Permission           | iOS support          | Android support      |
-| -------------------- | -------------------- | -------------------- |
-| calendar             | :white\_check\_mark: | :white\_check\_mark: |
-| camera               | :white\_check\_mark: | :white\_check\_mark: |
-| contacts             | :white\_check\_mark: | :white\_check\_mark: |
-| health               | ❌                    | ❌                    |
-| homekit              | :white\_check\_mark: | ❌                    |
-| location             | :white\_check\_mark: | :white\_check\_mark: |
-| medialibrary         | :white\_check\_mark: | :white\_check\_mark: |
-| microphone           | :white\_check\_mark: | :white\_check\_mark: |
-| motion               | :white\_check\_mark: | ❌                    |
-| notifications        | :white\_check\_mark: | :white\_check\_mark: |
-| photos               | :white\_check\_mark: | ❌                    |
-| reminders            | :white\_check\_mark: | ❌                    |
-| siri                 | :white\_check\_mark: | ❌                    |
-| speech               | :white\_check\_mark: | ❌                    |
-| usertracking         | :white\_check\_mark: | ❌                    |
-| bluetooth            | ❌                    | :white\_check\_mark: |
-| phone                | ❌                    | :white\_check\_mark: |
-| storage              | ❌                    | :white\_check\_mark: |
-| sms                  | ❌                    | :white\_check\_mark: |
-| my.custom.permission | ❌                    | :white\_check\_mark: |
+| Permission           | iOS support | Android support |
+|----------------------|-------------|-----------------|
+| calendar             | ✅          | ✅              |
+| camera               | ✅          | ✅              |
+| contacts             | ✅          | ✅              |
+| health               | ❌          | ❌              |
+| homekit              | ✅          | ❌              |
+| location             | ✅          | ✅              |
+| medialibrary         | ✅          | ✅              |
+| microphone           | ✅          | ✅              |
+| motion               | ✅          | ❌              |
+| notifications        | ✅          | ✅              |
+| photos               | ✅          | ❌              |
+| reminders            | ✅          | ❌              |
+| siri                 | ✅          | ❌              |
+| speech               | ✅          | ❌              |
+| usertracking         | ✅          | ❌              |
+| bluetooth            | ❌          | ✅              |
+| phone                | ❌          | ✅              |
+| storage              | ❌          | ✅              |
+| sms                  | ❌          | ✅              |
+| my.custom.permission | ❌          | ✅              |
 
-**Note**: Use `all` as a permission name to represent all the permissions that the app can ask for.
+{% hint style="info" %}
+Use `all` as a permission name to represent all the permissions that the app can ask for.
+{% endhint %}
 
-#### Supporting permission IDs for Android
+### Supporting permission IDs for Android
 
-There are permissions on Android that are not listed in the table above. Use the permission IDs in place of the permission name to set these permissions.
+There are permissions on Android that are not listed in the table above. Use the
+permission IDs in place of the permission name to set these permissions.
 
 For example, to allow the "add voicemail" permission, use:
 
@@ -45,7 +59,7 @@ For example, to allow the "add voicemail" permission, use:
         com.android.voicemail.permission.ADD_VOICEMAIL: allow
 ```
 
-### Permission Value
+## Available permission names
 
 Every permission can be set to: `allow`, `deny` or `unset`
 
@@ -55,7 +69,7 @@ Every permission can be set to: `allow`, `deny` or `unset`
 | deny             | Permission denied                        | Permission will be asked during flow run |
 | unset            | Permission will be asked during flow run | Permission will be asked during flow run |
 
-Some iOS permissions can have other values
+Some iOS permissions can have other values:
 
 | Permission | Value   | Description                              |
 | ---------- | ------- | ---------------------------------------- |
@@ -64,18 +78,18 @@ Some iOS permissions can have other values
 |            | never   | Same as deny                             |
 | photos     | limited | Allow limited access to photos           |
 
-### Examples
+## Examples
 
 Permissions are set by passing them to the `launchApp` command as follows:
 
-#### Deny all permissions
+### Deny all permissions
 
 ```yaml
 - launchApp:
     permissions: { all: deny } 
 ```
 
-#### Deny all permissions but allow the medialibrary permission
+### Deny all permissions but allow the `medialibrary` permission
 
 ```yaml
 - launchApp:
@@ -84,7 +98,7 @@ Permissions are set by passing them to the `launchApp` command as follows:
         medialibrary: allow
 ```
 
-#### Deny all permissions but allow adding voicemails
+### Deny all permissions but allow adding voicemails
 
 ```yaml
 - launchApp:

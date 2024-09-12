@@ -107,9 +107,9 @@
 * [Experimental](advanced/experimental/README.md)
   * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
 * [Specify a Device](advanced/specify-a-device.md)
-* [Configuring Permissions](advanced/configuring-permissions.md)
+* [Configure Permissions](advanced/configuring-permissions.md)
 * [Detect Maestro in your App](advanced/detect-maestro-in-your-app.md)
-* [Configuring Maestro driver timeout](advanced/configuring-maestro-driver-timeout.md)
+* [Configure Maestro driver timeout](advanced/configuring-maestro-driver-timeout.md)
 * [onFlowStart / onFlowComplete hooks](advanced/onflowstart-onflowcomplete-hooks.md)
 * [Testing in different locales](advanced/testing-in-different-locales.md)
 
