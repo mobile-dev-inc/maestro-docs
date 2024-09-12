@@ -74,7 +74,7 @@ command fails. The warning will be displayed:
 
 ```
 ✅ Launch app "com.example.example"
-⚠️  Assert that "Summer sale is here!" is visible (warned)
+⚠️ Assert that "Summer sale is here!" is visible (warned)
 ✅ Tap on "Sign up now!"
 ```
 
