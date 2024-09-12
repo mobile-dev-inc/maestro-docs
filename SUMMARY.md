@@ -83,6 +83,7 @@
   * [doubleTapOn](api-reference/commands/doubletapon.md)
   * [travel](api-reference/commands/travel.md)
   * [waitForAnimationToEnd](api-reference/commands/waitforanimationtoend.md)
+* [Common command arguments](api-reference/common-commands-arguments.md)
 * [Selectors](api-reference/selectors.md)
 * [Configuration](api-reference/configuration/README.md)
   * [Workspace configuration](api-reference/configuration/workspace-configuration.md)
