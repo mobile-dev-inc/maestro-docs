@@ -32,7 +32,7 @@ If you want to use the `text` selector, you can use the following shorthand:
 ### Relative position selectors
 
 Apart from the selectors mentioned above, Maestro is also able to select views
-using their relative position (i.e. "below another view", or "contains child")
+using their relative position (i.e. "below another view", or "contains child"):
 
 ```yaml
 - tapOn: # or any other command that works with selectors
