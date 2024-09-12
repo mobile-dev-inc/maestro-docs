@@ -84,11 +84,11 @@
   * [doubleTapOn](api-reference/commands/doubletapon.md)
   * [travel](api-reference/commands/travel.md)
   * [waitForAnimationToEnd](api-reference/commands/waitforanimationtoend.md)
+* [Selectors](api-reference/selectors.md)
 * [Configuration](api-reference/configuration/README.md)
   * [Workspace configuration](api-reference/configuration/workspace-configuration.md)
   * [Flow configuration](api-reference/configuration/flow-configuration.md)
   * [AI configuration](api-reference/configuration/ai-configuration.md)
-* [Selectors](api-reference/selectors.md)
 
 ## Advanced
 
@@ -104,14 +104,14 @@
   * [Access element text](advanced/javascript/access-element-text.md)
   * [Make HTTP requests](advanced/javascript/make-http-s-requests.md)
   * [GraalJS support](advanced/javascript/graaljs-support.md)
-* [Experimental](advanced/experimental/README.md)
-  * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
 * [Specify a Device](advanced/specify-a-device.md)
 * [Configure Permissions](advanced/configuring-permissions.md)
-* [Detect Maestro in your App](advanced/detect-maestro-in-your-app.md)
+* [Detect Maestro in your app](advanced/detect-maestro-in-your-app.md)
 * [Configure Maestro driver timeout](advanced/configuring-maestro-driver-timeout.md)
 * [onFlowStart / onFlowComplete hooks](advanced/onflowstart-onflowcomplete-hooks.md)
-* [Testing in different locales](advanced/testing-in-different-locales.md)
+* [Test in different locales](advanced/testing-in-different-locales.md)
+* [Experimental](advanced/experimental/README.md)
+  * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
 
 ## Troubleshooting
 
