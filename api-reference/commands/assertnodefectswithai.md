@@ -22,6 +22,10 @@ being centered within their containers.
 We hope for `assertNoDefectsWithAI` to be used as a "smoke test" for parts of
 your app that you want to ensure that "look right".
 
+### Demo
+
+{% embed url="https://youtu.be/tfawnGqEhF0" %}
+
 ### Output
 
 Output is generated in HTML and JSON formats in the folder for the individual
@@ -36,6 +40,8 @@ test run:
     │   ├── ai-report-(My first flow).html
     │   ├── ai-report-(My second flow).html
 ```
+
+<figure><img src="../.gitbook/assets/ai_demo.png" alt=""><figcaption></figcaption></figure>
 
 ### Configuration
 

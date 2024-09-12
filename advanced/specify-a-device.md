@@ -49,7 +49,7 @@ maestro --device 5B6D77EF-2AE9-47D0-9A62-70A1ABBC5FA2 test flow.yaml
 
 Maestro can run tests in parallel, also known as "sharding".
 
-{% embed url="https://youtu.be/07zqZ6DP9Rg" %}
+{% embed url="https://youtu.be/VS1TqvZz398" %}
 
 There are two sharding strategies available.
 
