@@ -7,7 +7,8 @@ There are several ways to run JavaScript, depending on your needs.
 
 {% hint style="info %}
 Right now, Rhino is the default JavaScript engine in Maestro, but we intend to
-make GraalJS the default soon and then deprecate and remove Rhino.
+make GraalJS the default soon and then deprecate and remove Rhino. We recommend
+everyone to opt-in to use GraalJS.
 
 **Learn more about [GraalJS support](./graaljs-support.md)**.
 {% endhint %}
