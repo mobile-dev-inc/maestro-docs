@@ -21,8 +21,14 @@ customize the command's name:
     label: Swipe for onboarding
 ```
 
-This has an additional advantage of being able to remove sensitive content from
-console output, for example this:
+```
+✅ Tap on Buy Now button
+✅ Input the company email
+✅ Swipe for onboarding
+```
+
+Setting a label can have an additional advantage of being able to remove
+sensitive content from console output, for example this:
 
 ```
 ✅ Tap on "Password"
