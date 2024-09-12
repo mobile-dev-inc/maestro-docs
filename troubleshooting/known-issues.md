@@ -78,8 +78,3 @@ func tableView(_ tableView: UITableView,
   print("load new data..")
 }
 ```
-
-### \[iOS] Landscape orientation is not supported
-
-See [this GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/565).
-
