@@ -40,7 +40,7 @@
 * [Cloud](cli/cloud.md)
 * [Test Suites & Reports](cli/test-suites-and-reports.md)
 * [Tags](cli/tags.md)
-* [Recording Your Flow](cli/recording-your-flow.md)
+* [Record Your Flow](cli/recording-your-flow.md)
 * [Continuous Mode](cli/continuous-mode.md)
 * [View Hierarchy](cli/view-hierarchy.md)
 * [Start Device](cli/start-device.md)
