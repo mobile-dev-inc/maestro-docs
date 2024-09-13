@@ -55,7 +55,7 @@ There are some differences between the new `GraalJsEngine` and the current `Rhin
 ---
 - evalScript: ${const name = 'joe'}
 - evalScript: ${name === 'joe'}
-</code></pre></td><td>✅ Variables are accessible across scripts</td><td>✅ Variables are accessible across scripts</td></tr><tr><td>Handling special characters</td><td><pre class="language-yaml"><code class="lang-yaml">appId: com.example.app
+</code></pre></td><td>✅ Variables are accessible across scripts</td><td>❌ Variables can't be accessed across scripts</td></tr><tr><td>Handling special characters</td><td><pre class="language-yaml"><code class="lang-yaml">appId: com.example.app
 env:
   FOO: \
 ---
