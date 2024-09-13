@@ -8,7 +8,7 @@ commands, additional configuration is required.
 [assertwithai.md](../commands/assertwithai.md)
 {% endcontent-ref %}
 
-{% content-ref url="../commands/nested-flows.md" %}
+{% content-ref url="../commands/assertnodefectswithai.md" %}
 [assertnodefectswithai.md](../commands/assertnodefectswithai.md)
 {% endcontent-ref %}
 
