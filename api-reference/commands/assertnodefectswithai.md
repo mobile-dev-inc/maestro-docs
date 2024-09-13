@@ -41,7 +41,7 @@ test run:
     │   ├── ai-report-(My second flow).html
 ```
 
-<figure><img src="../.gitbook/assets/ai_demo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ai_demo.png" alt=""><figcaption></figcaption></figure>
 
 ### Configuration
 
