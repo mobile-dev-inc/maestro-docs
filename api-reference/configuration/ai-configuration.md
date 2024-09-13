@@ -4,11 +4,11 @@ Some commands, such as `assertWithAI` and `assertNoDiffWithAI`, use generative
 AI models, which are not built directly in Maestro CLI. Therefore, to use such
 commands, additional configuration is required.
 
-{% content-ref url="assertwithai.md" %}
+{% content-ref url="../commands/assertwithai.md" %}
 [assertwithai.md](../commands/assertwithai.md)
 {% endcontent-ref %}
 
-{% content-ref url="nested-flows.md" %}
+{% content-ref url="../commands/nested-flows.md" %}
 [assertnodefectswithai.md](../commands/assertnodefectswithai.md)
 {% endcontent-ref %}
 
