@@ -1,13 +1,9 @@
 # GraalJS support
 
-It is possible to use the [GraalJS](https://github.com/oracle/graaljs) runtime
-instead of [Rhino](https://github.com/mozilla/rhino) for JavaScript evaluation.
-GraalJS is fully ECMAScript 2022 compliant while Rhino only supports ECMAScript
-5.
+It is possible to use the [GraalJS](https://github.com/oracle/graaljs) runtime instead of [Rhino](https://github.com/mozilla/rhino) for JavaScript evaluation. GraalJS is fully ECMAScript 2022 compliant while Rhino only supports ECMAScript 5.
 
-{% hint style="info %}
-Right now, Rhino is the default JavaScript engine, but we intend to make GraalJS
-the default soon and then deprecate and remove Rhino.
+{% hint style="info" %}
+Right now, Rhino is the default JavaScript engine, but we intend to make GraalJS the default soon and then deprecate and remove Rhino.
 
 [This issue track the progress](https://github.com/mobile-dev-inc/maestro/issues/2049).
 {% endhint %}
@@ -15,8 +11,7 @@ the default soon and then deprecate and remove Rhino.
 #### Enable GraalJS via flow config
 
 {% hint style="warning" %}
-This only has an effect if present in the top-level flow. It is ignored when
-included in any subflows.
+This only has an effect if present in the top-level flow. It is ignored when included in any subflows.
 {% endhint %}
 
 ```yaml
@@ -30,8 +25,7 @@ jsEngine: graaljs
 #### Enable GraalJS via environment variable
 
 {% hint style="warning" %}
-The env var will have no effect when running on Maestro Cloud. Use the flow
-config above to opt into GraalJS on Maestro Cloud.
+The env var will have no effect when running on Maestro Cloud. Use the flow config above to opt into GraalJS on Maestro Cloud.
 {% endhint %}
 
 ```bash
@@ -44,8 +38,7 @@ maestro test my-flow.yaml
 There are some differences between the new `GraalJsEngine` and the current `RhinoJsEngine` implementation that are worth noting. All of the differences below and some others are documented and tested by the `GraalJsEngineTest` and `RhinoJsEngineTest` tests.
 
 {% hint style="info" %}
-**TL;DR** is that the variable scoping when using GraalJS is more consistent and
-understandable.
+**TL;DR** is that the variable scoping when using GraalJS is more consistent and understandable.
 {% endhint %}
 
 | Rhino JS                                                                                                                                                                                                                                                                                                                            | GraalJS                                                                                                                         |
@@ -54,21 +47,18 @@ understandable.
 
 **Some examples**
 
-|                                      | Example                                                                                                             | Rhino JS                                  | GraalJS                                                              |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------- |
-| Redeclaring variables across scripts | <pre><code>appId: com.example
+<table data-full-width="true"><thead><tr><th>Case</th><th width="363">Code sample</th><th>Rhino JS</th><th>GraalJS</th></tr></thead><tbody><tr><td>Redeclaring variables across scripts</td><td><pre class="language-yaml"><code class="lang-yaml">appId: com.example.example
 ---
 - evalScript: ${const foo = null}
 - evalScript: ${const foo = null}
-</code></pre> | ❌ Variable redeclarations throw an error  | ✅ Variable names can be reused across scripts                        |
-| Accessing variables across scripts   | <pre><code>appId: com.example
+</code></pre></td><td>❌ Variable redeclarations throw an error</td><td>✅ Variable names can be reused across scripts</td></tr><tr><td>Accessing variables across scripts</td><td><pre class="language-yaml"><code class="lang-yaml">appId: com.example.example
 ---
 - evalScript: ${const name = 'joe'}
-- assertTrue: ${name === 'joe'}
-</code></pre> | ✅ Variables are accessible across scripts | ❌ Variables can't be accessed across scripts                         |
-| Special character handling           | <pre><code>appId: com.example.app
+- evalScript: ${name === 'joe'}
+</code></pre></td><td>✅ Variables are accessible across scripts</td><td>✅ Variables are accessible across scripts</td></tr><tr><td>Handling special characters</td><td><pre class="language-yaml"><code class="lang-yaml">appId: com.example.app
 env:
   FOO: \
 ---
+- tapOn: Username
 - inputText: ${FOO}
-</code></pre>                               | ❌ Single backslash causes an exception    | ✅ Single backslash and all other special chars are handled correctly |
+</code></pre></td><td>❌ Single backslash causes an exception</td><td>✅ Single backslash and all other special chars are handled correctly</td></tr></tbody></table>
