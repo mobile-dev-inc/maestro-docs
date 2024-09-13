@@ -4,6 +4,14 @@ Some commands, such as `assertWithAI` and `assertNoDiffWithAI`, use generative
 AI models, which are not built directly in Maestro CLI. Therefore, to use such
 commands, additional configuration is required.
 
+{% content-ref url="assertwithai.md" %}
+[assertwithai.md](../commands/assertwithai.md)
+{% endcontent-ref %}
+
+{% content-ref url="nested-flows.md" %}
+[assertnodefectswithai.md](../commands/assertnodefectswithai.md)
+{% endcontent-ref %}
+
 ### Model
 
 The default model is the latest GPT-4o.
