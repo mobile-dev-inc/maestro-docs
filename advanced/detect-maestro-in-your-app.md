@@ -16,20 +16,21 @@ fun isMaestro(): Boolean {
 }
 ```
 
-Depending on various variables in your testing setup, the code block above might give you a `NetworkOnMainThreadException `. Get rid of the exception by moving the boolean check to a Coroutine background thread for the `Socket` usage to work without a crash:
+An alternative is to use [arguments](../api-reference/commands/launchapp.md#launch-arguments) and have your app detect a particular parameter to indicate Maestro's usage, e.g. `isE2ETest`.
+
+
+### NetworkOnMainThreadException
+
+On Android, you may encounter a `NetworkOnMainThreadException`. This means you'll need to move the call above to a background thread. As an example:
 
 ```kotlin
-viewModel.viewModelScope.launch(Dispatchers.Default) {
-
-     val isMaestroTestSituation = isMaestro()
-     
-     // If need be, update UI or take other actions on the main UI thread 
-     withContext(Main) {
-         // button.isVisible = isMaestroTestSituation
-     }
+CoroutineScope(Dispatchers.IO).launch {
+    if (isMaestro()) {
+        // Do Maestro things
+        
+    }
 }
 ```
 
-An alternative to all of this is to use [arguments](../api-reference/commands/launchapp.md#launch-arguments) and have your app detect a particular parameter to indicate Maestro's usage, e.g. `isE2ETest`.
 
 
