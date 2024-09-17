@@ -16,4 +16,20 @@ fun isMaestro(): Boolean {
 }
 ```
 
-An alternative is to use [arguments](../api-reference/commands/launchapp.md#launch-arguments) and have your app detect a particular parameter to indicate Maestro's usage, e.g. `isE2ETest`.
+Depending on various variables in your testing setup, the code block above might give you a `NetworkOnMainThreadException `. Get rid of the exception by moving the boolean check to a Coroutine background thread for the `Socket` usage to work without a crash:
+
+```kotlin
+viewModel.viewModelScope.launch(Dispatchers.Default) {
+
+     val isMaestroTestSituation = isMaestro()
+     
+     // If need be, update UI or take other actions on the main UI thread 
+     withContext(Main) {
+         // button.isVisible = isMaestroTestSituation
+     }
+}
+```
+
+An alternative to all of this is to use [arguments](../api-reference/commands/launchapp.md#launch-arguments) and have your app detect a particular parameter to indicate Maestro's usage, e.g. `isE2ETest`.
+
+
