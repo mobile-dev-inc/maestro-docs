@@ -17,3 +17,20 @@ fun isMaestro(): Boolean {
 ```
 
 An alternative is to use [arguments](../api-reference/commands/launchapp.md#launch-arguments) and have your app detect a particular parameter to indicate Maestro's usage, e.g. `isE2ETest`.
+
+
+### NetworkOnMainThreadException
+
+On Android, you may encounter a `NetworkOnMainThreadException`. This means you'll need to move the call above to a background thread. As an example:
+
+```kotlin
+CoroutineScope(Dispatchers.IO).launch {
+    if (isMaestro()) {
+        // Do Maestro things
+        
+    }
+}
+```
+
+
+
