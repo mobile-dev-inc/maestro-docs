@@ -73,7 +73,7 @@ The following commands will enter "Hello, Maestro!" in the TextInput component:
 
 ### Create a sample app
 
-Follow the _Expo Go Quickstart_ instructions on [react native environment setup](https://reactnative.dev/docs/environment-setup)
+Follow the _Expo Go Quickstart_ instructions on [React Native environment setup](https://reactnative.dev/docs/environment-setup)
 
 Replace the contents of App.js with:
 
@@ -98,7 +98,7 @@ export default function App() {
       />
       <Text>Number of taps: {taps}</Text>
       <TextInput
-        testId="text_input"
+        testID="text_input"
         placeholder="Change me!"
         onChangeText={setText}
       />
