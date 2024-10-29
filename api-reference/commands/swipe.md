@@ -34,6 +34,39 @@ Relative start and end coordinates for directional swipe are configured as follo
 
 A common use case for this is to swipe the onboarding pages.
 
+##### Precision with `to:`
+
+You can also use `to:`, allowing a directional swipe to become more precise (such as moving a date/time picker wheel by a single minute):
+
+```yaml
+# change minutes picker ahead 1m
+- swipe:
+    from: 
+        id: "one-off-minutes"
+    to: 0%, 73%
+
+# if at end of picker, change hours picker ahead 1 and move minutes back to beginning of hour
+- runFlow:
+    when:
+      visible: 
+        id: "one-off-minutes-59"
+    commands:
+        - swipe:
+            from: 
+                id: "one-off-hours"
+            to: 0%, 73%
+        - repeat:
+            while:
+                notVisible:
+                    id: "one-off-minutes-00"
+            commands:
+                - swipe:
+                    from:
+                        id: "one-off-minutes"
+                    to: 0%, 100%
+                    duration: 1
+```
+
 #### **Swiping elements**
 
 You can also specify elements as a starting point for swipe commands. It will swipe from the middle of the element in the direction you specify. Example:
