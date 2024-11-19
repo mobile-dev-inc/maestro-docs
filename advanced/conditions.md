@@ -9,8 +9,8 @@ By design, Maestro discourages the usage of conditional statements unless absolu
 ```yaml
 - runFlow:
     when:
-      visible: Some Text
-    file: {reference to another yaml file}
+      visible: 'Some Text'
+    file: folder/some-flow.yaml
 ```
 
 {% content-ref url="nested-flows.md" %}
@@ -22,9 +22,9 @@ Or, if you don't wish to extract your commands into a separate flow file, you ca
 ```yaml
 - runFlow:
     when:
-      visible: Some Text
+      visible: 'Some Text'
     commands:
-        - tapOn: Some Text
+        - tapOn: 'Some Text'
 ```
 
 {% content-ref url="../api-reference/commands/runflow.md" %}
@@ -36,8 +36,8 @@ Or, if you don't wish to extract your commands into a separate flow file, you ca
 ```yaml
 - runScript:
     when:
-      visible: Some Text
-    file: {reference to a javascript file}
+      visible: 'Some Text'
+    file: some-script.js
 ```
 
 {% content-ref url="../api-reference/commands/runscript.md" %}
@@ -49,10 +49,11 @@ Or, if you don't wish to extract your commands into a separate flow file, you ca
 ```yaml
 - runFlow:
     when:
-      visible: Some Text
+      visible: 'Some Text'
       platform: iOS
-    file: {reference to another yaml file}
+    file: folder/some-flow.yaml
 ```
+
 Note that multiple conditions are applied as AND conditions.
 
 ### Conditions
@@ -65,7 +66,22 @@ true: { Value }                     # True if given value is true or not empty
 platform: { Platform }              # True if current platform is given platform (Android|iOS|Web)
 </code></pre>
 
-All of the normal element matchers are supported.
+All of the normal element matchers are supported, e.g.
+
+```yaml
+- runFlow:
+    when:
+      visible:
+        id: 'someId'
+        text: 'Some Text'
+        below:
+          text: 'Some Other Text'
+        childOf:
+          id: 'someParentId'
+          text: 'Some Parent Text'
+        index: 2
+    file: folder/some-flow.yaml
+```
 
 {% content-ref url="../api-reference/selectors.md" %}
 [selectors.md](../api-reference/selectors.md)
