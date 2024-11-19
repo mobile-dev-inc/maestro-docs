@@ -7,8 +7,8 @@ There are many different selectors available:
 
 ```yaml
 - tapOn: # or any other command that works with selectors
-    text: Text       # (optional) Finds element with text or accessibility text that matches regep
-    id: id           # (optional) Finds element with accessibility identifier that matches regexp
+    text: 'Text'     # (optional) Finds element with text or accessibility text that matches the regular expression
+    id: 'the_id'     # (optional) Finds element with accessibility identifier that matches the regular expression
     index: 0         # (optional) 0-based index of the view to select among those that match all other criteria
     point: 50%, 50%  # (optional) Relative position on screen. "50%, 50%" is the middle of screen
     point: 50, 75    # (optional) Exact coordinates on screen. x:50 y:50, in pixels
@@ -26,7 +26,7 @@ There are many different selectors available:
 If you want to use the `text` selector, you can use the following shorthand:
 
 ```yaml
-- tapOn: Text # or any other command that works with selectors
+- tapOn: 'Text' # or any other command that works with selectors
 ```
 
 ### Relative position selectors
@@ -60,4 +60,44 @@ example, the following command will pick the **3rd view** that has text `Hello`:
 - tapOn:
     text: Hello
     index: 2
+```
+
+### Using Regular Expressions
+
+All text fields in Maestro element selectors are regular expressions. Whilst this document isn't intending to replace documentation on regular expressions (use your favourite search engine), here are a few examples of how it operates. In these examples, we've used `assertVisible`, but it's applicable to any text or id field.
+
+#### Partial Matches
+
+If you're on a screen with the sentence 'the quick brown fox jumps over the lazy log', and want to assert on two words in the sentence this won't work:
+
+```yaml
+- assertVisible: 'brown fox'
+```
+
+Because it's a regular expression, it needs to match the text of the entire element. This would work:
+
+```yaml
+- assertVisible: '.*brown fox.*'
+```
+
+#### Patterns
+
+Regular Expressions are powerful. Imagine a screen that generates a random 6-digit number. Assuming you don't want to imbue your test with all of the material to generate an identical random number, you could assert that you're getting a number of the correct format like this:
+
+```yaml
+- assertVisible: '[0-9]{6}'
+```
+
+#### Escaping
+
+One downside of regular expressions is that like any expression, there are control characters. If you're attempting to assert on the text 'Movies [NEW]', this won't work:
+
+```yaml
+- assertVisible: 'Movies [NEW]'
+```
+
+That's because square brackets have meaning in regular expressions. Instead, you'll need this:
+
+```yaml
+- assertVisible: 'Movies \[NEW\]'
 ```
