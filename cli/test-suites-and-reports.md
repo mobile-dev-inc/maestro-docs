@@ -21,7 +21,7 @@ Maestro can run a list of tests and generate a test report at the end.
 To run a list of tests, pass to `maestro test` the Flows paths to the Flows you want to run separated by spaces:
 
 ```
-maestro test "myFolderWithTests/test1.yaml myFolderWithTests/test2.yaml"
+maestro test myFolderWithTests/test1.yaml myFolderWithTests/test2.yaml
 ```
 
 Maestro will run the flow for each file provided. The command will complete successfully if and only if all the Flows have been completed successfully.
