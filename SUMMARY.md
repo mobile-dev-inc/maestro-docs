@@ -27,6 +27,7 @@
 * [React Native](platform-support/react-native.md)
 * [Flutter](platform-support/flutter.md)
 * [Web Views](platform-support/web-views.md)
+* [Web (Desktop Browser)](platform-support/web-desktop-browser.md)
 
 ## Examples
 
@@ -112,8 +113,6 @@
 * [onFlowStart / onFlowComplete hooks](advanced/onflowstart-onflowcomplete-hooks.md)
 * [Test in different locales](advanced/testing-in-different-locales.md)
 * [Structuring your test suite](https://blog.mobile.dev/maestro-best-practices-structuring-your-test-suite-54ec390c5c82)
-* [Experimental](advanced/experimental/README.md)
-  * [Maestro WebDriver](advanced/experimental/maestro-webdriver.md)
 
 ## Troubleshooting
 
