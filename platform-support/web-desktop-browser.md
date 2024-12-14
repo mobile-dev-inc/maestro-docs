@@ -1,5 +1,7 @@
 # Web (Desktop Browser)
 
+<figure><img src="../.gitbook/assets/Chromium Banner.png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
 Desktop support is currently in Beta. We would appreciate your feedback!
 {% endhint %}
