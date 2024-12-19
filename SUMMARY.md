@@ -62,6 +62,7 @@
   * [evalScript](api-reference/commands/evalscript.md)
   * [eraseText](api-reference/commands/erasetext.md)
   * [extendedWaitUntil](api-reference/commands/extendedwaituntil.md)
+  * [extractTextWithAI](api-reference/commands/extracttextwithai.md)
   * [hideKeyboard](api-reference/commands/hidekeyboard.md)
   * [inputText](api-reference/commands/inputtext.md)
   * [killApp](api-reference/commands/killapp.md)
