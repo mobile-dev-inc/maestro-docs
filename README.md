@@ -1,5 +1,5 @@
 ---
-description: Maestro is the simplest and most effective mobile UI testing framework.
+description: Maestro is the simplest and most effective UI testing framework.
 ---
 
 # What is Maestro?
@@ -8,7 +8,7 @@ description: Maestro is the simplest and most effective mobile UI testing framew
 
 ## Why Maestro?
 
-Maestro is built on learnings from its predecessors (Appium, Espresso, UIAutomator, XCTest) and allows you to easily define and test your Flows.
+Maestro is built on learnings from its predecessors (Appium, Espresso, UIAutomator, XCTest, Selenium, Playwright) and allows you to easily define and test your Flows.
 
 {% hint style="info" %}
 **What are Flows?** Think of Flows as parts of the user journey in your app. Login, Checkout and Add to Cart are three examples of possible Flows that can be defined and tested using Maestro.
@@ -22,7 +22,7 @@ Maestro is built on learnings from its predecessors (Appium, Espresso, UIAutomat
 
 ## Examples
 
-#### Twitter
+#### Twitter (Mobile)
 
 <figure><img src=".gitbook/assets/twitter_continuous_v3_fast.gif" alt=""><figcaption></figcaption></figure>
 
@@ -59,11 +59,21 @@ appId: com.apple.MobileAddressBook
 - tapOn: "Done"
 ```
 {% endtab %}
+
+{% tab title="Web" %}
+```yaml
+url: https://example.com
+---
+- launchApp
+- tapOn: More information...
+- assertVisible: Further Reading
+```
+{% endtab %}
 {% endtabs %}
 
 ## Platform Support
 
-<table><thead><tr><th width="198">Platform</th><th>Support</th></tr></thead><tbody><tr><td><strong>iOS</strong></td><td>✅</td></tr><tr><td><strong>Android</strong></td><td>✅</td></tr><tr><td><strong>ReactNative</strong></td><td>✅</td></tr><tr><td><strong>Flutter</strong></td><td>✅</td></tr></tbody></table>
+<table><thead><tr><th width="198">Platform</th><th>Support</th></tr></thead><tbody><tr><td><strong>iOS</strong></td><td>✅</td></tr><tr><td><strong>Android</strong></td><td>✅</td></tr><tr><td>Web (Desktop)</td><td>✅</td></tr><tr><td>Web (WebView)</td><td>✅</td></tr><tr><td><strong>ReactNative</strong></td><td>✅</td></tr><tr><td><strong>Flutter</strong></td><td>✅</td></tr></tbody></table>
 
 ## Resources
 
