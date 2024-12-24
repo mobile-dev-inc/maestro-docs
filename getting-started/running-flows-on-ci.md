@@ -1,13 +1,13 @@
 # Running Flows on CI
 
-### Maestro Cloud
+### Robin
 
-The easiest way to test your Flows in CI is to run your Flows on Maestro Cloud. Since your flows run in the cloud there's no need to configure any simulators or emulators on your end. Check out the [**Maestro Cloud Documentation**](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/svtyylAfMzJBiYhqoqHt/) to get started in less than 5 minutes:
+The easiest way to test your flows in CI is to run your flows on Robin. Since your flows run in the cloud there's no need to configure any simulators or emulators on your end. Check out the [**Robin Documentation**](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/BgsTHJKly2ot47sddGqS/) to get started in less than 5 minutes:
 
-{% content-ref url="https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/svtyylAfMzJBiYhqoqHt/" %}
-[Maestro Cloud Documentation](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/svtyylAfMzJBiYhqoqHt/)
+{% content-ref url="https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/BgsTHJKly2ot47sddGqS/" %}
+[Robin Documentation](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/BgsTHJKly2ot47sddGqS/)
 {% endcontent-ref %}
 
 ### Alternatives
 
-Maestro CLI can run Flows on any Android device/emulator that supports ADB connections and any iOS device/simulator that supports Facebook's IDB. You can manually orchestrate your Flow execution against any provider that supports these protocols. Just use the Maestro CLI to run your Flows like you would locally.
+Maestro CLI can run flows on any Android device/emulator that supports ADB connections and any iOS simulator that supports Facebook's IDB. You can manually orchestrate your flow execution against any provider that supports these protocols. Just use the Maestro CLI to run your flows like you would locally.
