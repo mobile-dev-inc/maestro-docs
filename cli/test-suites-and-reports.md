@@ -20,7 +20,7 @@ To generate a report, add a `--format` parameter to a `test` command:
 maestro test --format junit myFolderWithTests/
 ```
 
-Or, if you are using Robin:
+Or, if you are using [Robin](https://www.robintest.com/):
 
 ```
 maestro cloud --format junit myFolderWithTests/

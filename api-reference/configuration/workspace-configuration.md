@@ -25,7 +25,7 @@ excludeTags:
 
 ### Robin configuration
 
-There are other workspace configuration options available that relate to Robin which are not outlined here. Please refer to the [Robin documentation](https://docs.robintest.com/) for more information.
+There are other workspace configuration options available that relate to [Robin](https://www.robintest.com/) which are not outlined here. Please refer to the [Robin documentation](https://docs.robintest.com/) for more information.
 
 ## Environment variables
 

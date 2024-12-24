@@ -25,7 +25,7 @@ jsEngine: graaljs
 #### Enable GraalJS via environment variable
 
 {% hint style="warning" %}
-The env var will have no effect when running on Robin. Use the flow config above to opt into GraalJS on Robin.
+The env var will have no effect when running on [Robin](https://www.robintest.com/). Use the flow config above to opt into GraalJS on [Robin](https://www.robintest.com/).
 {% endhint %}
 
 ```bash

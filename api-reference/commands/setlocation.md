@@ -9,7 +9,7 @@
 ```
 
 {% hint style="warning" %}
-Note that this only updates the co-ordinate location of the emulator/simulator. When running in Robin, if your app relies on IP location, this will still resolve to US.
+Note that this only updates the co-ordinate location of the emulator/simulator. When running in [Robin](https://www.robintest.com/), if your app relies on IP location, this will still resolve to US.
 {% endhint %}
 
 {% hint style="info" %}
