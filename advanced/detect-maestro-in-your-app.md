@@ -1,5 +1,7 @@
 # Detect Maestro in your app
 
+{% tabs %}
+{% tab title="Mobile" %}
 ## Using launch arguments
 
 The recommended way to check if maestro is currently running is to use [arguments](../api-reference/commands/launchapp.md#launch-arguments) and have your app detect a particular parameter to indicate Maestro's usage, e.g. `isE2ETest`.
@@ -40,3 +42,20 @@ CoroutineScope(Dispatchers.IO).launch {
     }
 }
 ```
+{% endtab %}
+
+{% tab title="Web" %}
+## Using JS property
+
+Maestro defines `window.maestro` property during test execution, so you can simply check if it is defined to check whether your app is running under a Maestro test:
+
+```javascript
+if (window.maestro) {
+  console.log("Maestro test is running!");
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
+
