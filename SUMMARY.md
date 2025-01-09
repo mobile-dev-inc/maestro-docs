@@ -1,5 +1,6 @@
 # Table of contents
 
+* [Run Maestro in the cloud](https://robintest.com/)
 * [Star on GitHub](https://github.com/mobile-dev-inc/maestro)
 * [What is Maestro?](README.md)
 
