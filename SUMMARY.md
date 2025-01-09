@@ -1,7 +1,7 @@
 # Table of contents
 
 * [What is Maestro?](README.md)
-* [GitHub Repo](https://github.com/mobile-dev-inc/maestro)
+* [Star on GitHub](https://github.com/mobile-dev-inc/maestro)
 
 ## Getting Started
 
