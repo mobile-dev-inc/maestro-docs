@@ -4,13 +4,13 @@ description: Maestro is the simplest and most effective UI testing framework.
 
 # What is Maestro?
 
-{% embed url="https://vimeo.com/767721667/d972c5f08e" %}
-
 {% hint style="success" %}
 **Running in the Cloud**
 
 [Robin](https://www.robintest.com) is the official Maestro cloud platform. Run your flows on Robin for the most stable, secure, and intelligent Maestro execution. Learn more at [**robintest.com**](https://www.robintest.com)
 {% endhint %}
+
+{% embed url="https://vimeo.com/767721667/d972c5f08e" %}
 
 ## Why Maestro?
 

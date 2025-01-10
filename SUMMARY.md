@@ -1,10 +1,11 @@
 # Table of contents
 
-* [What is Maestro?](README.md)
-* [GitHub Repo](https://github.com/mobile-dev-inc/maestro)
+* [Run Maestro in the cloud](https://robintest.com/)
+* [Star on GitHub](https://github.com/mobile-dev-inc/maestro)
 
 ## Getting Started
 
+* [What is Maestro?](README.md)
 * [Installing Maestro](getting-started/installing-maestro/README.md)
   * [macOS](getting-started/installing-maestro/macos.md)
   * [Windows](getting-started/installing-maestro/windows.md)
