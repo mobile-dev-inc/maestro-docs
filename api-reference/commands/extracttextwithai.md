@@ -9,7 +9,17 @@ This is an **experimental** feature powered by LLM technology. All feedback is w
 - inputText: ${aiOutput}
 ```
 
-Takes a screenshot and tries to extract text value from the screen using LLM. Output is then written into `aiOutput`variable.
+Takes a screenshot and tries to extract text value from the screen using LLM. Output is then written into `aiOutput` variable.
+
+The name of the variable is also configurable:
+
+```yaml
+- extractTextWithAI:
+    query: 'CAPTCHA value'
+    outputVariable: 'theCaptchaValue'
+```
+
+For AI commands to work, AI must be configured first:
 
 {% content-ref url="../configuration/ai-configuration.md" %}
 [ai-configuration.md](../configuration/ai-configuration.md)
@@ -36,7 +46,7 @@ Takes a screenshot and tries to extract text value from the screen using LLM. Ou
 Amazon reports its search results without any distinct IDs assigned to each item. We also don't know what will show up in the results beforehand. To work around this problem we can use AI to hint us what is the label of the first product item on this page and then tap on it:
 
 ```yaml
-- extractWithAI: Title of the first item on this page
+- extractTextWithAI: Title of the first item on this page
 - tapOn: ${aiOutput}
 ```
 
