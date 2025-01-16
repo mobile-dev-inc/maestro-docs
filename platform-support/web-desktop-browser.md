@@ -32,6 +32,16 @@ maestro test example.yaml
 Maestro will spend some time downloading Chromium on the first launch. Each following test will run much faster.
 {% endhint %}
 
+### Maestro Studio
+
+To launch Maestro Studio for Web, specify the platform with the `-p web` option:
+
+```
+maestro -p web studio
+```
+
+### Other Resources
+
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
