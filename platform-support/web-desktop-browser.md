@@ -34,7 +34,7 @@ Maestro will spend some time downloading Chromium on the first launch. Each foll
 
 ### Maestro Studio
 
-To launch Maestro Studio for Web, specify the platform with the `-p web` option:
+To launch Maestro Studio for Web, use the `-p web` option:
 
 ```
 maestro -p web studio
