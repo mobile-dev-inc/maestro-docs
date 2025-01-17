@@ -4,14 +4,16 @@ description: A step by step guide to installing Maestro on Windows
 
 # Windows
 
-Maestro works great on Windows computers, but there are a few unique setup steps to be aware of. This guide will walk you through the end-to-end steps for getting started with Maestro on a Windows machine.
+Maestro works great on Windows computers, but there are a few unique setup steps to be aware of. This guide will walk you through the end-to-end steps for getting started with Maestro on a Windows machine. 
+
+Alternatively, if you would like a video guide for this installation process you can directly click [here](https://www.youtube.com/watch?v=VLi1Pu2Kb-4).
 
 ### Pre-Requisites
 
 1. PowerShell is installed in your Windows system.
-2. Install Android Studio on your Windows machine.
+2. Install [Android Studio](https://developer.android.com/studio) on your Windows machine.
 3. Add ANDROID\_HOME to your Windows environment variable.
-   1. To check if your ANDROID\_HOME setup is correctly done, open a PowerShell terminal and run this command `adb --version.`
+   1. To check if your ANDROID\_HOME setup is correctly done, open a PowerShell terminal and run this command `adb --version`.
    2. Note down the ADB version.
 4. Install Java JDK 11 and set JAVA\_HOME
    1. Run `java --version` to check if the Java is installed correctly.
@@ -58,7 +60,7 @@ sudo apt install openjdk-21-jdk
 Installing Maestro is now just a matter of running following one command.
 
 ```
-     curl -Ls "https://get.maestro.mobile.dev" | bash
+curl -Ls "https://get.maestro.mobile.dev" | bash
 ```
 
 **Tada! 🎉**
@@ -75,18 +77,28 @@ maestro --version
 
 ### Let's set you up to use Android in your freshly installed WSL2
 
-* Download the Android command line tools zip file from [Android official site.](https://developer.android.com/studio)
-*   Use the following instructions to set up Android command lines correctly in your WSL2.
+* Download the Android command line tools zip file by using the following command -
+  
+  Note - **Before running the command, replace the `<>` in the URL with the version number listed under the Command Line Tools section on the [Android Studio](https://developer.android.com/studio) website.**.
+
+  ```
+  curl \
+  --output commandlinetools-linux.zip \
+  "https://dl.google.com/android/repository/commandlinetools-linux-<>_latest.zip"
+  ```
+  
+* Use the following instructions to set up Android command lines correctly in your WSL2.
 
     * Open WSL2 terminal.
     * Create a new directory in your home directory.
 
     ```
-    ~ $ mkdir Android
-    ~ $ cd Android
+    $ cd ~
+    $ mkdir Android
+    $ cd Android
     ```
 
-    * Unzip the Android command line tools zip file in the `android` directory using this command: `unzip ~<command_line_zip_filename>.zip`
+    * Unzip the Android command line tools zip file in the `Android` directory using this command: `unzip commandlinetools-linux.zip`
     * In the  `Android` directory perform following actions.
 
     ```
@@ -129,7 +141,7 @@ maestro --version
     ```
 
     * This will start the adb server in the Windows host.
-    * Note down the IPV4 address of your Windows host PC/machine.
+    * Note down the IPV4 address of your Windows host PC/machine. You can get the IP address of your Windows device by typing `Get-NetIPAddress` on your PowerShell terminal.
 
     **TROUBLESHOOTING:**
 
@@ -161,6 +173,7 @@ Yes, at this point, you are free to start your automation.
 ```
 If your Android emulator is not up and running in the Windows host, the Maestro test
 command fails to find the installed emulator.
+
 At this point, it is recommended that you fire up your emulator before running the flow 
 using Maestro.
 ```
