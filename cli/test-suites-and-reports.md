@@ -130,7 +130,6 @@ Maestro introduces a new feature that leverages AI to analyze your end-to-end (E
 maestro login
 ```
 
-> Quick Note: You don't need to be a paying customer to try out this feature. Users on the 7-day trial can also leverage this capability.
 
 **Analyzing your tests**: To analyze your test flows with AI, use the --analyze flag with the maestro test command:
 
