@@ -130,7 +130,6 @@ Maestro introduces a new feature that leverages AI to analyze your end-to-end (E
 maestro login
 ```
 
-
 **Analyzing your tests**: To analyze your test flows with AI, use the --analyze flag with the maestro test command:
 
 ```bash
