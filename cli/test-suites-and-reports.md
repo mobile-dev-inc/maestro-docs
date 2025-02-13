@@ -112,3 +112,78 @@ Note that your Flows should **not** depend on device state and should be treated
 #### Configuring part of the Flows to run sequentially
 
 For instance, if you have three Flows, `flowA`, `flowB`, and `flowC`, but you want to run only `flowA` and `flowB` sequentially, don't add `flowC` and `flowD` to the list. Maestro will run these Flows in non-deterministic ordering **after** the Flow sequence has finished executing.
+
+#### Analyze
+
+{% hint style="warning" %}
+
+This is an **experimental** feature powered by LLM technology. All feedback is
+welcome.
+
+{% endhint %}
+
+Maestro introduces a new feature that leverages AI to analyze your end-to-end (E2E) mobile tests and provide actionable insights based on your test logs, commands, and screenshots captured during your test runs. The AI-powered analysis identifies potential issues in your app's functionality, UI, and internationalization, helping you improve app quality efficiently.
+
+**Login Requirement:** Before you use the AI analysis feature, ensure you are logged into Maestro. Run the following command:
+
+```bash
+maestro login
+```
+
+**Analyzing your tests**: To analyze your test flows with AI, use the --analyze flag with the maestro test command:
+
+```bash
+maestro test flow-file.yaml --analyze
+```
+
+{% hint style="info" %}
+
+While we aim for precision, please note that this is a beta release, and the results should be validated before making critical decision
+
+{% endhint %}
+
+This will enable AI analysis and provide a detailed report based on your test artifacts:
+
+##### Examples
+
+Successful Analysis
+
+Command:
+
+```bash
+maestro test flow-file.yaml --analyze
+```
+
+Output:
+
+```bash
+🔎 Analyzing Flow(s)...
+
+To view the report, open the following link in your browser:
+file:///path/to/your/insights-report.html
+
+Analyze support is in Beta. We would appreciate your feedback in our Slack channel: #community-chat
+
+```
+
+<figure><img src="../.gitbook/assets/analyze-report.png" alt=""><figcaption></figcaption></figure>
+
+No Issues Found
+
+If no issues are detected, you will see a message like this:
+
+```bash
+Hey, we analyzed your flow for spelling, grammar, and internationalization issues, and good news 🙌 we didn't find any issues!
+```
+
+##### Disabling Notifications
+
+To disable the AI analysis notification, set the `MAESTRO_CLI_ANALYSIS_NOTIFICATION_DISABLED` environment variable to true before running Maestro:
+
+```bash
+export MAESTRO_CLI_ANALYSIS_NOTIFICATION_DISABLED=true
+```
+
+##### Feedback
+
+The Analyze feature is currently in Beta. Share your feedback and suggestions in our Slack channel:[#community-chat](https://mobile-dev-inc.slack.com/archives/C083YB8N42G)
