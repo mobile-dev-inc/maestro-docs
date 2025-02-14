@@ -54,7 +54,7 @@ Add a step in your CI workflow that executes the `maestro cloud` command:
 maestro cloud --apiKey <apiKey> --project-id <projectId> <appFile> .maestro/
 ```
 
-<table data-header-hidden><thead><tr><th width="144"></th><th></th></tr></thead><tbody><tr><td><strong>&#x3C;apiKey></strong></td><td>Robin API Key</td></tr><tr><td>&#x3C;projectId></td><td>Robin Project ID</td></tr><tr><td><strong>&#x3C;appFile></strong></td><td>The APK file or .app directory (<a href="broken-reference">instructions</a>)</td></tr><tr><td><strong>.maestro/</strong></td><td>The directory that contains your Flows</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="144"></th><th></th></tr></thead><tbody><tr><td><strong>&#x3C;apiKey></strong></td><td>Robin API Key</td></tr><tr><td>&#x3C;projectId></td><td>Robin Project ID</td></tr><tr><td><strong>&#x3C;appFile></strong></td><td>The APK file or .app directory (<a href="../reference/build-your-app-for-robin.md">instructions</a>)</td></tr><tr><td><strong>.maestro/</strong></td><td>The directory that contains your Flows</td></tr></tbody></table>
 
 To set a name for your upload, use the `--name` option:
 
