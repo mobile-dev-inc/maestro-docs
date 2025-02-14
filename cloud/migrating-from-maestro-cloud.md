@@ -60,7 +60,7 @@ maestro cloud --api-key <ROBIN_API_KEY> --project-id <ROBIN_PROJECT_ID> <app> <f
 
 **If you're using a CI integration**
 
-CI Integrations have been updated to support specifying the Robin Project ID - please refer to the [CI Integration docs](broken-reference) to learn how to set up your specific CI integration with your new API Key and Robin Project ID.
+CI Integrations have been updated to support specifying the Robin Project ID - please refer to the [CI Integration docs](ci-integration/) to learn how to set up your specific CI integration with your new API Key and Robin Project ID.
 
 **Updating device OS version**
 
