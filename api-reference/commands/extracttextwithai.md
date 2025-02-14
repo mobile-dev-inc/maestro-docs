@@ -50,7 +50,7 @@ Amazon reports its search results without any distinct IDs assigned to each item
 - tapOn: ${aiOutput}
 ```
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Configuration
 

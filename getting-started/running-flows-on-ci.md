@@ -4,8 +4,8 @@
 
 The easiest way to test your flows in CI is to run your flows on [Robin](https://www.robintest.com/). Since your flows run in the cloud there's no need to configure any simulators or emulators on your end. Check out the [**Robin Documentation**](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/BgsTHJKly2ot47sddGqS/) to get started in less than 5 minutes:
 
-{% content-ref url="https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/BgsTHJKly2ot47sddGqS/" %}
-[Robin Documentation](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/BgsTHJKly2ot47sddGqS/)
+{% content-ref url="../cloud/robin.md" %}
+[robin.md](../cloud/robin.md)
 {% endcontent-ref %}
 
 ### Alternatives
