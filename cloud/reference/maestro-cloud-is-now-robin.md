@@ -19,7 +19,7 @@ You can run your Maestro tests in the exact same simple way could on Maestro Clo
 ### **Getting Started is Easy**
 
 * **Get started with Robin:** [Create your Robin account for free](https://signin.robintest.com/sign-up) and get started in minutes.
-* **Explore Robin’s Documentation:** Check out the steps for [migrating from Maestro Cloud](broken-reference).
+* **Explore Robin’s Documentation:** Check out the steps for [migrating from Maestro Cloud](../migrating-from-maestro-cloud.md).
 
 If you're coming from Maestro Cloud, we are here to support a seamless transition. If you're new to Maestro, check out [the documentation](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/n5KVIOjVkVjYRyVWZ0yT/) to learn why Maestro is becoming the de-facto standard for Mobile and Web E2E testing.&#x20;
 
