@@ -25,7 +25,7 @@ excludeTags:
 
 ### Robin configuration
 
-There are other workspace configuration options available that relate to [Robin](https://www.robintest.com/) which are not outlined here. Please refer to the [Robin documentation](https://docs.robintest.com/) for more information.
+There are other workspace configuration options available that relate to [Robin](https://www.robintest.com/) which are not outlined here. Please refer to the [Robin documentation](../../cloud/robin.md) for more information.
 
 ## Environment variables
 
@@ -34,7 +34,7 @@ There are other workspace configuration options available that relate to [Robin]
 | MAESTRO\_API\_URL                 | The URL of the Maestro API to use. Probably only useful to Mobile Inc developers. | String  | `https://api.mobile.dev` | -                                                            |
 | MAESTRO\_CLI\_AI\_KEY             | Key for external AI service used in AI operations.                                | String  | -                        | [Docs](ai-configuration.md).                                 |
 | MAESTRO\_CLI\_NO\_ANALYTICS       | Disables Maestro analytics collection                                             | Boolean | `false`                  | -                                                            |
-| MAESTRO\_CLOUD\_API\_KEY          | The API key to use when communicating with Robin                                  | String  | -                        | [Robin documentation](https://docs.robintest.com/)           |
+| MAESTRO\_CLOUD\_API\_KEY          | The API key to use when communicating with Robin                                  | String  | -                        | [Robin documentation](../../cloud/robin.md)                  |
 | MAESTRO\_DISABLE\_UPDATE\_CHECK   | Disable the check for newer Maestro versions when running the CLI                 | Boolean | `false`                  | -                                                            |
 | MAESTRO\_DRIVER\_STARTUP\_TIMEOUT | The maximum time to wait for a driver to start.                                   | Number  | `15000`                  | [Docs](../../advanced/configuring-maestro-driver-timeout.md) |
 | MAESTRO\_USE\_GRAALJS             | Use GraalJS instead of RhinoJS for JavaScript execution                           | Boolean | `false`                  | [Docs](../../advanced/javascript/graaljs-support.md).        |

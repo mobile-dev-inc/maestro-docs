@@ -116,10 +116,7 @@ For instance, if you have three Flows, `flowA`, `flowB`, and `flowC`, but you wa
 #### Analyze
 
 {% hint style="warning" %}
-
-This is an **experimental** feature powered by LLM technology. All feedback is
-welcome.
-
+This is an **experimental** feature powered by LLM technology. All feedback is welcome.
 {% endhint %}
 
 Maestro introduces a new feature that leverages AI to analyze your end-to-end (E2E) mobile tests and provide actionable insights based on your test logs, commands, and screenshots captured during your test runs. The AI-powered analysis identifies potential issues in your app's functionality, UI, and internationalization, helping you improve app quality efficiently.
@@ -137,14 +134,12 @@ maestro test flow-file.yaml --analyze
 ```
 
 {% hint style="info" %}
-
 While we aim for precision, please note that this is a beta release, and the results should be validated before making critical decision
-
 {% endhint %}
 
 This will enable AI analysis and provide a detailed report based on your test artifacts:
 
-##### Examples
+**Examples**
 
 Successful Analysis
 
@@ -176,7 +171,7 @@ If no issues are detected, you will see a message like this:
 Hey, we analyzed your flow for spelling, grammar, and internationalization issues, and good news 🙌 we didn't find any issues!
 ```
 
-##### Disabling Notifications
+**Disabling Notifications**
 
 To disable the AI analysis notification, set the `MAESTRO_CLI_ANALYSIS_NOTIFICATION_DISABLED` environment variable to true before running Maestro:
 
@@ -184,6 +179,6 @@ To disable the AI analysis notification, set the `MAESTRO_CLI_ANALYSIS_NOTIFICAT
 export MAESTRO_CLI_ANALYSIS_NOTIFICATION_DISABLED=true
 ```
 
-##### Feedback
+**Feedback**
 
-The Analyze feature is currently in Beta. Share your feedback and suggestions in our Slack channel:[#community-chat](https://mobile-dev-inc.slack.com/archives/C083YB8N42G)
+The Analyze feature is currently in Beta. Share your feedback and suggestions in our Slack channel: [#community-chat](https://mobile-dev-inc.slack.com/archives/C083YB8N42G)
