@@ -18,18 +18,6 @@
 * [Maestro Studio](getting-started/maestro-studio.md)
 * [Running Flows on CI](getting-started/running-flows-on-ci.md)
 
-## Platform Support
-
-* [Supported Platforms](platform-support/supported-platforms.md)
-* [Android - Views](platform-support/android-views.md)
-* [Android - Jetpack Compose](platform-support/android-jetpack-compose.md)
-* [iOS - UIKit](platform-support/ios-uikit.md)
-* [iOS - SwiftUI](platform-support/ios-swiftui.md)
-* [React Native](platform-support/react-native.md)
-* [Flutter](platform-support/flutter.md)
-* [Web Views](platform-support/web-views.md)
-* [Web (Desktop Browser)](platform-support/web-desktop-browser.md)
-
 ## Cloud
 
 * [Get started on Robin](https://robintest.com/)
@@ -62,6 +50,18 @@
   * [IP Allowlist](cloud/reference/ip-allowlist.md)
   * [Maestro Cloud is now Robin](cloud/reference/maestro-cloud-is-now-robin.md)
   * [System Status](https://status.mobile.dev/)
+
+## Platform Support
+
+* [Supported Platforms](platform-support/supported-platforms.md)
+* [Android - Views](platform-support/android-views.md)
+* [Android - Jetpack Compose](platform-support/android-jetpack-compose.md)
+* [iOS - UIKit](platform-support/ios-uikit.md)
+* [iOS - SwiftUI](platform-support/ios-swiftui.md)
+* [React Native](platform-support/react-native.md)
+* [Flutter](platform-support/flutter.md)
+* [Web Views](platform-support/web-views.md)
+* [Web (Desktop Browser)](platform-support/web-desktop-browser.md)
 
 ## Examples
 
