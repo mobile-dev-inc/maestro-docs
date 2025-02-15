@@ -1,6 +1,6 @@
 # Robin
 
-[Robin](https://robintest.com/) is the official Maestro platform. Ship your apps with confidence by running your Maestro tests on Robin's hosted enterprise-grade cloud infrastructure .
+[Robin](https://robintest.com/) is the official Maestro platform. Ship your apps with confidence by running your Maestro tests on Robin's hosted enterprise-grade cloud infrastructure before releasing to production.
 
 ## CI Support
 
