@@ -9,7 +9,7 @@ of [ISO-639-1](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes) +
 
 Let's see some examples:
 
-{% code title="Create a new iOS simulator with locale set to Italy (Italian)"}
+{% code title="Create a new iOS simulator with locale set to Italy (Italian)" %}
 ```console
 maestro start-device \
   --platform ios \
