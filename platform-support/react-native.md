@@ -178,7 +178,5 @@ In some cases, you may run into issues with nested tappable / accessible element
 ## Resources
 
 * [A great introduction to Maestro with React Native](https://dev.to/b42/test-your-react-native-app-with-maestro-5bfj) by Alexander Hodes
+* [E2E testing of React Native apps using EAS and Maestro (Expo documentation)](https://docs.expo.dev/build-reference/e2e-tests/)
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
