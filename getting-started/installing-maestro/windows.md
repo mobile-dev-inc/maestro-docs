@@ -24,7 +24,7 @@ C:\Users\jake\maestro
 {% step %}
 ### Update your PATH environment variable
 
-Update your PATH environment variable to include the `maestro\bin` folder.
+Update your PATH environment variable to include the `maestro\bin` folder. You may need to restart your terminal for this to take effect.
 
 ```
 setx PATH "%PATH%;C:\Users\jake\maestro\bin"

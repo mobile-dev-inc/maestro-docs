@@ -36,8 +36,7 @@ Sometimes, tapOn will try to tap again if it doesn't detect a hierarchy change. 
 
 ### Unable to clear state
 
-When running tests against a real device you may receive an error of `(Unable to
-clear state for app <package>)` when running either:
+When running tests against a real device you may receive an error of `(Unable to clear state for app <package>)` when running either:
 
 ```yaml
 - clearState
@@ -50,38 +49,25 @@ or:
     clearState: true
 ```
 
-This error is common on physical devices by Oppo. The workaround is to return to
-the Developer Settings where ADB Debugging was enabled, and disable 'Verify apps
-over USB'.
+This error is common on physical devices by Oppo. The workaround is to return to the Developer Settings where ADB Debugging was enabled, and disable 'Verify apps over USB'. Some users have reported needing to enable "Disable permission monitoring" too.
 
 ## iOS
 
 ### `hideKeyboard` command is flaky
 
-On iOS, `hideKeyboard` is done with the help of scrolling up and down from the
-middle of the screen since there is no native API to hide the keyboard.
+On iOS, `hideKeyboard` is done with the help of scrolling up and down from the middle of the screen since there is no native API to hide the keyboard.
 
-If using this command doesn't hide the keyboard we recommend clicking on some
-non-tappable region with `tapOn` points command, similar to how a user would
-hide the keyboard when interacting with your app.
+If using this command doesn't hide the keyboard we recommend clicking on some non-tappable region with `tapOn` points command, similar to how a user would hide the keyboard when interacting with your app.
 
 ### Issues with lists (UICollectionView, UITableView) that fetch data on scroll
 
-Apps that have pagination (fetch data on scroll) inside UITableView /
-UICollectionView views sometimes result in fetching data at the moments when it
-is not expected, hanging inside the lists, and flows being broken when testing
-with Maestro.
+Apps that have pagination (fetch data on scroll) inside UITableView / UICollectionView views sometimes result in fetching data at the moments when it is not expected, hanging inside the lists, and flows being broken when testing with Maestro.
 
-There is a bug in XCTest framework that makes UITableView / UICollectionView
-`willDisplayCell` method being called whenever UI test APIs are being called.
-Since Maestro relies on XCTest APIs under the hood it might break the pagination
-logic for some apps.
+There is a bug in XCTest framework that makes UITableView / UICollectionView `willDisplayCell` method being called whenever UI test APIs are being called. Since Maestro relies on XCTest APIs under the hood it might break the pagination logic for some apps.
 
 #### Suggested workaround
 
-Inside `willDisplayCell` check whether the indexPath is really visible via
-`UITableView.indexPathsForVisibleRows` or
-`UICollectionView.indexPathsForVisibleItems`:
+Inside `willDisplayCell` check whether the indexPath is really visible via `UITableView.indexPathsForVisibleRows` or `UICollectionView.indexPathsForVisibleItems`:
 
 ```swift
 // This function should be implemented in a class conforming to UITableViewDelegate
