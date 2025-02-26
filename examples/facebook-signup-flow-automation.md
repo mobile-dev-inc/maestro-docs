@@ -9,7 +9,7 @@ Some notable interactions in this Flow:
 1. Clicking on any element using: `tapOn`
 2. Long pressing an element using: `longPressOn`
 3. Asserting visibility of element using: `assertVisible`
-4. Keyboard press using: `keyPress`
+4. Keyboard press using: `pressKey`
 5. Random data input using: `inputRandomPersonName`, `inputRandomNumber`, `inputRandomText` & `inputRandomEmail`
 6. Android back navigation using: `back`
 
