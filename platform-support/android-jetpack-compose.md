@@ -52,4 +52,4 @@ You can tap on this using `testTag`:&#x20;
 
 ## Resources
 
-* [How to automate your UI testing using Maestro](https://www.composables.co/blog/maestro)
+* [How to automate your UI testing using Maestro](https://composables.com/jetpack-compose-tutorials/maestro)
