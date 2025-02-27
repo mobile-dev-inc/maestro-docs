@@ -30,16 +30,6 @@ You can set up Robin to notify you and your team about upload results from **a s
 
 <figure><img src="../../.gitbook/assets/settings-update-slack-bot.png" alt=""><figcaption></figcaption></figure>
 
-
-**Tutorial video:**
-
-<figure>
-  <video controls>
-    <source src="../../.gitbook/assets/maestro-slack-bot-demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</figure>
-
 **Coming soon:**
 - Customize the message that is sent to the channel
 - Receive notifications only for failed uploads
