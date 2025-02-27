@@ -1,5 +1,7 @@
 # repeat
 
+A command to repeat a set commands until a condition is met.
+
 #### Repeat N times
 
 Repeats set of commands N times
@@ -14,7 +16,7 @@ Repeats set of commands N times
 
 #### Repeat-while
 
-Repeat set of commands until a condition satisfies.
+Repeat set of commands until a condition is satisfied.
 
 ```yaml
 - repeat:
@@ -42,8 +44,6 @@ To learn more about conditions, see the following section:
 [conditions.md](../../advanced/conditions.md)
 {% endcontent-ref %}
 
-To learn more about JavaScript support refer to the following page:
-
-{% content-ref url="../../advanced/javascript/" %}
-[javascript](../../advanced/javascript/)
-{% endcontent-ref %}
+{% hint style="info" %}
+If you need to, you can specify both a count and a condition, for example repeating a set of commands whilst an element isn't visible, up to a maximum count of 10 times
+{% endhint %}

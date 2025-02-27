@@ -46,3 +46,23 @@ To assert on values that exist on different screens, store them in variables.
     commands:
       - evalScript: ${console.log('Prices match! Both are ' + output.secondPrice)}
 ```
+
+
+
+### How do I generate a random number?
+
+Whilst there are commands for random strings and names, there's no function for generating random numbers. Users can use JavaScript to generate a number in the range they need.
+
+randomNumber.js :
+
+```javascript
+// Generate an 8 digit random number
+output.randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
+```
+
+flow.yaml:
+
+```yaml
+- runScript: ../scripts/randomNumber.js
+- evalScript: ${EMAIL = "maestro+" + output.randomNumber + "@domain.com"}
+```

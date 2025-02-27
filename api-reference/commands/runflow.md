@@ -71,3 +71,9 @@ If you would like to use `runFlow` without extracting the commands into a separa
     commands:
       - inputText: ${INNER_ENV}
 ```
+
+
+
+{% hint style="warning" %}
+Remember that when using Robin and requiring another file, you must specify a folder on the command line not just the flow file, e.g. `maestro cloud myApp.apk ./myTestsFolder` else Robin won't have the files required to run your tests, and you'll receive a 'Failed to parse file' error.
+{% endhint %}

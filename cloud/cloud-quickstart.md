@@ -42,9 +42,7 @@ cd ./samples
 maestro cloud --api-key <ROBIN_API_KEY> --project-id <ROBIN_PROJECT_ID> sample.zip ios-flow.yaml
 ```
 
-{% hint style="info" %}
-Note that if you want to run any of the **advanced** examples you need to upload the full `samples` folder, since the advanced Flows make use of subflows. More information about subflows and what Flows to include can be found [here](../cli/test-suites-and-reports.md#controlling-what-tests-to-include).&#x20;
-{% endhint %}
+To run any flow that depends on other files (like the **advanced** examples) you need to upload the full folder, so that Robin has all of the files it needs. More information about subflows and what Flows to include can be found [here](../cli/test-suites-and-reports.md#controlling-what-tests-to-include).
 
 To run both Android Flows in Robin, you can for example run the following command outside of the `samples` folder.
 
