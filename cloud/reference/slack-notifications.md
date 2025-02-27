@@ -1,49 +1,46 @@
 # Slack Notifications
 
-{% hint style="info" %}
-Native Slack integration coming soon
-{% endhint %}
 
-You can set up Robin to notify you and your team when a Flow fails. That's useful to easily keep track if your app is working as expected.&#x20;
+You can set up Robin to notify you and your team about upload results. That's useful to easily keep track if your app is working as expected.&#x20;
 
-At this moment, we only support sending emails to Slack, but we are working on a more rich Slack integration. In order to get messages posted to a channel in your workspace, please follow these steps:
 
-1. Configure your Slack channel to allow posting messages via email ([docs](https://slack.com/help/articles/206819278-Send-emails-to-Slack#h_01F4WDZG8RTCTNAMR4KJ7D419V))
-2. Customize the integration:\
-   Email Name: `Robin Notification`\
-   Email Icon: [Download icon here](https://storage.googleapis.com/mobile.dev/Robin.png)
+1. Go to the settings in your Robin Console
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/robin-console-settings.png" alt=""><figcaption></figcaption></figure>
 
-1. Update your `config.yaml` with the following to ensure emails are sent to your channel:
+2. Click on the `Connect Slack` button
 
-```
-# .maestro/config.yaml
-notifications:
-  email:
-    enabled: true
-    recipients:
-      - emailaddresstoyourchannel@slack.com
-      ... any other emails you want to send notifications to
-```
+   {% hint style="info" %}
+   Then you are going to be redirected to the slack page, where you need to authorize the integration and select the channel you want to receive the notifications.
+   {% endhint %}
 
-{% hint style="info" %}
-Note that the `config.yaml` file should be present in the root of your workspace along with your Flows, which by default is `.maestro` if you do not explicitly pass another folder as the workspace.
-{% endhint %}
+<figure><img src="../../.gitbook/assets/slack-integration-redirect.png" alt=""><figcaption></figcaption></figure>
 
-4. That's it! When a Flow fails a message will be posted in your channel.
+3. After you have authorized the integration, you will be redirected back to the Robin Console, and the integration will be enabled.
 
-### Receiving notifications on success
+<figure><img src="../../.gitbook/assets/slack-bot-onboarding.png" alt=""><figcaption></figcaption></figure>
 
-By default, emails are only sent when a failure is detected. If you want to be notified on successful runs as well, add `onSuccess: true` to your config:
+4. That's it! When an upload finishes a message will be posted in your channel.
 
-```
-# .maestro/config.yaml
-notifications:
-  email:
-    enabled: true
-    onSuccess: true
-    recipients:
-      - emailaddresstoyourchannel@slack.com
-      ... any other emails you want to send success notifications to
-```
+<figure><img src="../../.gitbook/assets/slack-bot-successful-upload.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/slack-bot-failure-upload.png" alt=""><figcaption></figcaption></figure>
+
+5. If you want to disable the integration or change the channel that receives the notifications, you can easily do it in the settings page.
+
+<figure><img src="../../.gitbook/assets/settings-update-slack-bot.png" alt=""><figcaption></figcaption></figure>
+
+
+**Tutorial video:**
+
+<figure>
+  <video controls>
+    <source src="../../.gitbook/assets/maestro-slack-bot-demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
+
+**Coming soon:**
+- Customize the message that is sent to the channel
+- Receive notifications only for failed uploads
+- AI integration
