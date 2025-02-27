@@ -1,7 +1,7 @@
 # Slack Notifications
 
 
-You can set up Robin to notify you and your team about upload results. That's useful to easily keep track if your app is working as expected.&#x20;
+You can set up Robin to notify you and your team about upload results from **a specific project**. That's useful to easily keep track if your app is working as expected.&#x20;
 
 
 1. Go to the settings in your Robin Console
