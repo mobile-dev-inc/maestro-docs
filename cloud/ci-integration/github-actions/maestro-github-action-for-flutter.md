@@ -32,7 +32,7 @@ jobs:
 ## iOS
 
 ```yaml
-name: Build and test (Flutter iOS)
+name: Build and run Maestro tests (Flutter iOS)
 
 on:
   workflow_dispatch:

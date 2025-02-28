@@ -1,6 +1,6 @@
 # Bitrise
 
-Robin is compatible with all CI systems and provides native integrations with a number of common providers including Bitrise. You can start running your Flows in CI with just a few clicks using the Maestro Cloud Bitrise Step.
+Maestro cloud testing is compatible with all CI systems and provides native integrations with a number of common providers including Bitrise. You can start running your Flows in CI with just a few clicks using the Maestro Cloud Bitrise Step.
 
 ### Setting up Bitrise
 
@@ -18,6 +18,6 @@ Robin is compatible with all CI systems and provides native integrations with a 
 4. Lastly, fill out the following information in the step configuration:
    1. API Key
    2. Path to your built binary
-   3. Robin Project ID
-      1. Project ID can be found under "Settings" in the Robin console
-5. That's it! You should now be able to make uploads to Robin via Bitrise.
+   3. Project ID
+      1. Project ID can be found under "Settings" in the Maestro console
+5. That's it! You should now be able to run Maestro tests in the cloud via Bitrise.
