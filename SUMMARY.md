@@ -1,6 +1,5 @@
 # Table of contents
 
-* [Run Maestro in the cloud](https://robintest.com/)
 * [Star on GitHub](https://github.com/mobile-dev-inc/maestro)
 
 ## Getting Started
@@ -20,8 +19,7 @@
 
 ## Cloud
 
-* [Get started on Robin](https://robintest.com/)
-* [Robin](cloud/robin.md)
+* [Run Maestro tests in the cloud](cloud/run-maestro-tests-in-the-cloud.md)
 * [Cloud Quickstart](cloud/cloud-quickstart.md)
 * [CI Integration](cloud/ci-integration/README.md)
   * [GitHub Actions](cloud/ci-integration/github-actions/README.md)
