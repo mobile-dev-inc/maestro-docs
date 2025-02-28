@@ -1,9 +1,9 @@
 # CI Integration
 
-There are two main ways to integrate Robin into your CI workflow:
+There are two main ways to integrate Maestro cloud testing into your CI workflow:
 
 * Option 1: Install the Maestro CLI and use the `maestro cloud` command
-* Option 2: Use Robin's native CI integration (if it exists for your CI platform)
+* Option 2: Use Maestro's native CI integration (if it exists for your CI platform)
 
 Follow the link below for your CI platform to learn how to start running your Flows in CI!
 
