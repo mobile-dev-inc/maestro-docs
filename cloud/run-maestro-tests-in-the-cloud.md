@@ -10,7 +10,7 @@ icon: rocket-launch
 🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
 {% endhint %}
 
-Ship your apps with confidence by running your Maestro tests on our hosted enterprise-grade cloud infrastructure.
+Ship your apps with confidence by running your tests on Maestro's hosted enterprise-grade cloud infrastructure.
 
 ## CI Support
 
