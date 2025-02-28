@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Migrating from Maestro Cloud
 
 {% hint style="info" %}
@@ -40,7 +44,7 @@ _Note: Treat your API key like a password. Do not share it publicly._
 2. Navigate to Settings
 3. Copy the Project ID
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-10-16 at 09.49.09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2024-10-16 at 09.49.09.png" alt=""><figcaption></figcaption></figure>
 
 This project ID will be required in both your CI and CLI updates and is **not secret**.
 
@@ -64,7 +68,7 @@ maestro cloud --api-key <ROBIN_API_KEY> --project-id <ROBIN_PROJECT_ID> <app> <f
 
 **If you're using a CI integration**
 
-CI Integrations have been updated to support specifying the Robin Project ID - please refer to the [CI Integration docs](ci-integration/) to learn how to set up your specific CI integration with your new API Key and Robin Project ID.
+CI Integrations have been updated to support specifying the Robin Project ID - please refer to the [CI Integration docs](cloud/ci-integration/) to learn how to set up your specific CI integration with your new API Key and Robin Project ID.
 
 **Updating device OS version**
 
@@ -74,8 +78,8 @@ Make sure that you specify the intended OS version - the defaults are different 
 
 The default OS versions for Robin are iOS 16 and Android API level 33, which is different from Maestro Cloud, which had defaults of iOS 15 and API level 30.  Please refer to the docs below with information on how to configure OS version.
 
-{% content-ref url="reference/configuring-os-version.md" %}
-[configuring-os-version.md](reference/configuring-os-version.md)
+{% content-ref url="cloud/reference/configuring-os-version.md" %}
+[configuring-os-version.md](cloud/reference/configuring-os-version.md)
 {% endcontent-ref %}
 
 ### Troubleshooting

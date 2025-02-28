@@ -31,7 +31,6 @@
   * [CircleCI](cloud/ci-integration/circleci.md)
   * [Integration with any CI platform](cloud/ci-integration/integration-with-any-ci-platform.md)
 * [Pull Request Integration](cloud/pull-request-integration.md)
-* [Migrating from Maestro Cloud](cloud/migrating-from-maestro-cloud.md)
 * [Cloud Reference](cloud/reference/README.md)
   * [Build your app for the cloud](cloud/reference/build-your-app-for-robin.md)
   * [Configuring OS Version](cloud/reference/configuring-os-version.md)
@@ -47,6 +46,10 @@
   * [Reusing App Binary](cloud/reference/reusing-app-binary.md)
   * [IP Allowlist](cloud/reference/ip-allowlist.md)
   * [System Status](https://status.mobile.dev/)
+
+***
+
+* [Migrating from Maestro Cloud](migrating-from-maestro-cloud.md)
 
 ## Platform Support
 
