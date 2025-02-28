@@ -1,6 +1,10 @@
 # CircleCI
 
-The following guide will help you setup Robin in CircleCI.
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
+The following guide will help you setup Maestro cloud testing in CircleCI.
 
 #### Save API key and project ID in your repository
 
@@ -37,19 +41,19 @@ It’s common to have some Flow files that are only meant to be executed as part
 
 
 
-## Add Robin Upload Job
+## Add Maestro Upload Job
 
 Once everything is setup you can integrate maestro by adding another job in your `.circleci/config.yml`
 
 ```yaml
-robin-upload:
+maestro-upload:
     docker:
       - image: cimg/openjdk:19.0.1
     steps:
       - attach_workspace:
           at: .
       - run:
-          name: Download maestro and upload to Robin
+          name: Download maestro and run in the cloud
           command: |
             curl -Ls "https://get.maestro.mobile.dev" | bash
             export PATH="$PATH":"$HOME/.maestro/bin"
@@ -88,7 +92,7 @@ The following `config.yml` will:
 
 * Build an android app
 * Save the workspace and output apk
-* Upload your flows and apk to Robin
+* Upload your flows and apk
 
 ```yaml
 version: 2.1
@@ -140,7 +144,7 @@ The following `config.yml` will:
 
 * Build an iOS app
 * Save the workspace and output `your_ios_app.app`
-* Upload your flows and `.app` binary to Robin
+* Upload your flows and `.app` binary
 
 ```yaml
 version: 2.1

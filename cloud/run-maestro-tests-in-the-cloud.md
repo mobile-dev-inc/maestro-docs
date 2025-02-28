@@ -1,6 +1,10 @@
 # Run Maestro tests in the cloud
 
-Ship your apps with confidence by running your Maestro tests on our hosted enterprise-grade cloud infrastructure before releasing to production.
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
+Ship your apps with confidence by running your Maestro tests on our hosted enterprise-grade cloud infrastructure.
 
 ## CI Support
 
@@ -14,7 +18,7 @@ You can integrate Maestro into any CI platform via the Maestro CLI, and we're in
 
 ## Getting Started
 
-* If you don't already have access to the platform you [create an account here](https://robintest.com/)
+* If you don't already have access to the platform you [create an account here](https://maestro.dev/)
 * Check out the [Quickstart](cloud-quickstart.md) guide to get started with running your Maestro Flows in Robin within minutes
 * Public Slack Channel: [**Join the workspace**](https://docsend.com/view/3r2sf8fvvcjxvbtk) then head to the `#robin` channel to discuss all things Robin
 

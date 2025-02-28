@@ -1,8 +1,12 @@
 # Bitbucket Pipelines
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 ## Setup
 
-In order to use the Maestro Cloud Pipe to upload to Robin, you'll need to add the API key and project IDs as secret environment variables in your Bitbucket repository.
+In order to use the Maestro Cloud Pipe to run Maestro tests in the cloud, you'll need to add the API key and project IDs as secret environment variables in your Bitbucket repository.
 
 1. Go to your Repository -> Repository settings -> Repository Variables
 2. Save your API Key and project id as a secured env variables
@@ -67,7 +71,7 @@ script:
 
 The pipe will:
 
-* Upload your app and flows to Maestro Cloud
+* Upload your app and flows to be run on Maestro's enterprise-grade cloud infrastructure
 * Wait for flows to complete (can be configured)
 * Complete with fail/pass depending on flow results
 

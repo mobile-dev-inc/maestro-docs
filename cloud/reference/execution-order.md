@@ -1,5 +1,9 @@
 # Execution Order
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 By default, Robin will run the Flows from your upload in parallel, however, that are some cases when a sequential order is needed.
 
 To run your Flows in Robin in a given order you can add the following configuration to your `config.yaml` file:

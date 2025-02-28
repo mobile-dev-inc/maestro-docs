@@ -1,5 +1,9 @@
 # Cloud Quickstart
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 Before wiring into CI, we recommend uploading a local build from your terminal to see the process working end-to-end. These steps should take you less than 5 minutes.
 
 ## 1. Install the Maestro CLI

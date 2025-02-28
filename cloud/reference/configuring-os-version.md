@@ -1,5 +1,9 @@
 # Configuring OS Version
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 ### Android
 
 You can configure your Flows to run on a specific Android OS version (API level) using the `android-api-level` parameter when running the `maestro cloud` command:

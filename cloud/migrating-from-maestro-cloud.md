@@ -1,5 +1,9 @@
 # Migrating from Maestro Cloud
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 ## Maestro Cloud to Robin Migration Guide
 
 Welcome to the migration guide for transitioning from **Maestro Cloud** to **Robin**. This guide will help you update your integration—whether using a **Continuous Integration (CI) system** or the **Command Line Interface (CLI)**—with the necessary changes to smoothly switch to Robin.

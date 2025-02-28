@@ -1,5 +1,9 @@
 # Upload Types
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 When integrating with Robin, there are three types of uploads that can be made to the platform.
 
 #### Adhoc&#x20;

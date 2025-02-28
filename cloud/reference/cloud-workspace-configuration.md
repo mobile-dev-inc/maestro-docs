@@ -1,5 +1,9 @@
 # Cloud Workspace Configuration
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 A workspace is a directory containing all your Flows and config.yaml. The workspace is usually named `.maestro` which is the recommendation, but you can name it whatever you like and pass it in when uploading to Robin either via CI or using the CLI.&#x20;
 
 In `config.yaml`, there are two types of configurations you can make:&#x20;

@@ -1,5 +1,9 @@
 # Maestro GitHub Action for Flutter
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 ## Android
 
 ```yaml

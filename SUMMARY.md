@@ -32,8 +32,8 @@
   * [Integration with any CI platform](cloud/ci-integration/integration-with-any-ci-platform.md)
 * [Pull Request Integration](cloud/pull-request-integration.md)
 * [Migrating from Maestro Cloud](cloud/migrating-from-maestro-cloud.md)
-* [Reference](cloud/reference/README.md)
-  * [Build your app for Robin](cloud/reference/build-your-app-for-robin.md)
+* [Cloud Reference](cloud/reference/README.md)
+  * [Build your app for the cloud](cloud/reference/build-your-app-for-robin.md)
   * [Configuring OS Version](cloud/reference/configuring-os-version.md)
   * [Configuring device locale](cloud/reference/configuring-device-locale.md)
   * [Device timezones](cloud/reference/device-timezones.md)
@@ -46,7 +46,6 @@
   * [Limits](cloud/reference/limits.md)
   * [Reusing App Binary](cloud/reference/reusing-app-binary.md)
   * [IP Allowlist](cloud/reference/ip-allowlist.md)
-  * [Maestro Cloud is now Robin](cloud/reference/maestro-cloud-is-now-robin.md)
   * [System Status](https://status.mobile.dev/)
 
 ## Platform Support

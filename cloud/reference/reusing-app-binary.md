@@ -1,5 +1,9 @@
 # Reusing App Binary
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 ### Why to reuse an app binary?
 
 To execute a variety of test scenarios on the same build, multiple `maestro upload` requests are often necessary. Since a binary upload can be time-consuming and resource-intensive, Maestro offers a solution to optimize this process. By using the **`--app-binary-id`** option, provided after a successful upload, users can reuse the cached binary for subsequent uploads, saving both time and space.

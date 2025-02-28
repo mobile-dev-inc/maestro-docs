@@ -1,5 +1,9 @@
 # Configuring device locale
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
+
 `maestro cloud` supports testing different app locales by changing a device locale for a given upload automatically by setting `--device-locale` parameter. The parameter `--device-locale` is a combination of [`ISO-639-1`](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) `+` [`ISO-3166-1`](https://en.wikipedia.org/wiki/ISO_3166-1) with using underscore `_` symbol in between them. If the parameter is omitted default `en_US` locale will be used. Here are some example usages:
 
 ```

@@ -1,18 +1,20 @@
 # Slack Notifications
 
+{% hint style="info" %}
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+{% endhint %}
 
-You can set up Robin to notify you and your team about upload results from **a specific project**. That's useful to easily keep track if your app is working as expected.&#x20;
-
+You can set up Robin to notify you and your team about upload results from **a specific project**. That's useful to easily keep track if your app is working as expected.
 
 1. Go to the settings in your Robin Console
 
 <figure><img src="../../.gitbook/assets/robin-console-settings.png" alt=""><figcaption></figcaption></figure>
 
-2. Click on the `Connect Slack` button
+2.  Click on the `Connect Slack` button
 
-   {% hint style="info" %}
-   Then you are going to be redirected to the slack page, where you need to authorize the integration and select the channel you want to receive the notifications.
-   {% endhint %}
+    {% hint style="info" %}
+    Then you are going to be redirected to the slack page, where you need to authorize the integration and select the channel you want to receive the notifications.
+    {% endhint %}
 
 <figure><img src="../../.gitbook/assets/slack-integration-redirect.png" alt=""><figcaption></figcaption></figure>
 
@@ -31,6 +33,7 @@ You can set up Robin to notify you and your team about upload results from **a s
 <figure><img src="../../.gitbook/assets/settings-update-slack-bot.png" alt=""><figcaption></figcaption></figure>
 
 **Coming soon:**
-- Customize the message that is sent to the channel
-- Receive notifications only for failed uploads
-- AI integration
+
+* Customize the message that is sent to the channel
+* Receive notifications only for failed uploads
+* AI integration
