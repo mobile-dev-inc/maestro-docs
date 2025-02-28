@@ -1,10 +1,10 @@
-# Robin
+# Run Maestro tests in the cloud
 
-[Robin](https://robintest.com/) is the official Maestro platform. Ship your apps with confidence by running your Maestro tests on Robin's hosted enterprise-grade cloud infrastructure before releasing to production.
+Ship your apps with confidence by running your Maestro tests on our hosted enterprise-grade cloud infrastructure before releasing to production.
 
 ## CI Support
 
-You can integrate [Robin](https://robintest.com/) into any CI platform via the Maestro CLI, and we're in the process of building out native integrations into the most common platforms. Check out the [**CI Integration docs**](ci-integration/) for details.
+You can integrate Maestro into any CI platform via the Maestro CLI, and we're in the process of building out native integrations into the most common platforms. Check out the [**CI Integration docs**](ci-integration/) for details.
 
 <table><thead><tr><th width="225">CI Platform</th><th width="153.3073110285006">Support via CLI</th><th width="385.66666666666674">Native Integration</th></tr></thead><tbody><tr><td><a href="ci-integration/github-actions/"><strong>GitHub Actions</strong></a></td><td>✅</td><td>✅</td></tr><tr><td><a href="ci-integration/bitrise.md"><strong>Bitrise</strong></a></td><td>✅</td><td>✅</td></tr><tr><td><a href="ci-integration/bitbucket-pipelines.md"><strong>Bitbucket</strong></a></td><td>✅</td><td>✅</td></tr><tr><td><a href="ci-integration/circleci.md"><strong>CircleCI</strong></a></td><td>✅</td><td>✅</td></tr><tr><td><a href="ci-integration/integration-with-any-ci-platform.md">All other CI platforms</a></td><td>✅</td><td>-</td></tr></tbody></table>
 
@@ -18,7 +18,7 @@ You can integrate [Robin](https://robintest.com/) into any CI platform via the M
 * Check out the [Quickstart](cloud-quickstart.md) guide to get started with running your Maestro Flows in Robin within minutes
 * Public Slack Channel: [**Join the workspace**](https://docsend.com/view/3r2sf8fvvcjxvbtk) then head to the `#robin` channel to discuss all things Robin
 
-## Why Robin
+## Why run in the cloud?
 
 * Guaranteed Parallelism for Consistent Testing
 * Unlimited Maestro testing
