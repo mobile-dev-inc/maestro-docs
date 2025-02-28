@@ -1,20 +1,20 @@
 # GitHub Actions
 
-Robin is compatible with all CI systems and provides native integrations with a number of common providers including GitHub Actions. You can start running your Flows in CI with just a few lines of configuration using the [Maestro Cloud GitHub Action](http://github.com/mobile-dev-inc/action-maestro-cloud).
+Maestro cloud testing is compatible with all CI systems and provides native integrations with a number of common providers including GitHub Actions. You can start running your Flows in CI with just a few lines of configuration using the [Maestro Cloud GitHub Action](http://github.com/mobile-dev-inc/action-maestro-cloud).
 
 ## Setup
 
 #### Add your API key secret
 
-The GitHub Action will need to authenticate with Robin. So the first step is to expose your API key as a GitHub “Repository Secret”.
+The GitHub Action will need to authenticate with your Maestro account. So the first step is to expose your API key as a GitHub “Repository Secret”.
 
 **Add your API key as a “Repository Secret”**
 
 1. Navigate to your GitHub repo and click on Settings in top nav bar.
 2. In repository settings page click on `Secrets -> Actions`. It will open Action Secrets page.
-3. On Action Secrets page, click on `New Repository Secret` button. Use `ROBIN_API_KEY` as the secret name and paste your Robin API key from the previous step into the “Secret” value text box. Click “Add Secret” to add the secret.
+3. On Action Secrets page, click on `New Repository Secret` button. Use `MAESTRO_API_KEY` as the secret name and paste your Maestro API key from the previous step into the “Secret” value text box. Click “Add Secret” to add the secret.
 
-**Add your Robin Project ID**
+**Add your Project ID**
 
 The project ID is not a secret, so you either specify it as `project-id` in your workflow file or you add it as an env variable.
 
@@ -25,7 +25,7 @@ Please refer to the Action documentation [here](https://github.com/marketplace/a
 ## Example
 
 ```yaml
-name: Build and upload to Robin (Native Android)
+name: Build and test (Native Android)
 
 on:
   push:
@@ -47,9 +47,9 @@ jobs:
       - run: ./gradlew assembleDebug
       - uses: mobile-dev-inc/action-maestro-cloud@v1
         with:
-          api-key: ${{ secrets.ROBIN_API_KEY }}
+          api-key: ${{ secrets.MAESTRO_API_KEY }}
           # note that you can supply the project id any way you like, it is not secret
-          project-id: ${{ secrets.ROBIN_PROJECT_ID }}
+          project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
           app-file: app/build/outputs/apk/debug/app-debug.apk
 ```
 
@@ -84,7 +84,7 @@ Next, you’ll need to update your GitHub Actions workflow to add in the Maestro
 * For every `push or pull_request` to `main` branch trigger this job
 * Build the application
 * Upload the built application and Flow files to Maestro Cloud
-* Note the `ROBIN_API_KEY` is the same secret you added to your Github repository earlier
+* Note the `MAESTRO_API_KEY` is the same secret you added to your Github repository earlier
 
 ### Usage examples
 
