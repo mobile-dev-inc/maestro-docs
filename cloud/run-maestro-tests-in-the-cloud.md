@@ -1,4 +1,10 @@
+---
+icon: rocket-launch
+---
+
 # Run Maestro tests in the cloud
+
+
 
 {% hint style="info" %}
 🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
