@@ -1,7 +1,7 @@
 # Maestro GitHub Action for iOS
 
 ```
-name: Build and upload to Robin (Native iOS)
+name: Build and run Maestro tests (Native iOS)
 
 on:
   push:
@@ -19,6 +19,6 @@ jobs:
         with:
           api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
           # note that you can supply the project id any way you like, it is not secret
-          project-id: ${{ secrets.ROBIN_PROJECT_ID }}
+          project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
           app-file: build/MyApp.app
 ```

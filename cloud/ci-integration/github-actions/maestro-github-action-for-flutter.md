@@ -3,7 +3,7 @@
 ## Android
 
 ```yaml
-name: Build and upload to Robin (Flutter Android)
+name: Build and run Maestro tests (Flutter Android)
 
 on:
   workflow_dispatch:
@@ -25,14 +25,14 @@ jobs:
         with:
           api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
           # note that you can supply the project id any way you like, it is not secret
-          project-id: ${{ secrets.ROBIN_PROJECT_ID }}
+          project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
           app-file: build/app/outputs/flutter-apk/app-debug.apk
 ```
 
 ## iOS
 
 ```yaml
-name: Build and upload to Robin (Flutter iOS)
+name: Build and test (Flutter iOS)
 
 on:
   workflow_dispatch:
@@ -54,6 +54,6 @@ jobs:
         with:
           api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
           # note that you can supply the project id any way you like, it is not secret
-          project-id: ${{ secrets.ROBIN_PROJECT_ID }}
+          project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
           app-file: build/ios/iphonesimulator/Runner.app # replace `Runner` with your app name
 ```

@@ -25,7 +25,7 @@ Please refer to the Action documentation [here](https://github.com/marketplace/a
 ## Example
 
 ```yaml
-name: Build and test (Native Android)
+name: Build and run Maestro tests (Native Android)
 
 on:
   push:
