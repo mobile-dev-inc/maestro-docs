@@ -12,7 +12,7 @@ curl -Ls "https://get.maestro.mobile.dev" | bash
 
 ## 2. Retrieve your API Key and Project ID
 
-Log in to Robin, click Settings and copy your Project ID. Please reach out to your mobile.dev representative to obtain your API key.
+Log in to the Maestro console, click Settings and copy your Project ID. Please reach out to your mobile.dev representative to obtain your API key.
 
 ## 3. Download the Samples
 
@@ -24,39 +24,39 @@ maestro download-samples
 
 You can of course choose to upload your own app and Flow file, but we recommend using the samples first to see how it works!
 
-## 4. Run your Flow on Robin
+## 4. Run your Flow in the cloud
 
-Use the `maestro cloud` command to run your flow on Robin. This command works the same whether you're running it locally or in CI.
+Use the `maestro cloud` command to run your flow in the cloud. This command works the same whether you're running it locally or in CI.
 
 #### Android
 
 ```bash
 cd ./samples
-maestro cloud --api-key <ROBIN_API_KEY> --project-id <ROBIN_PROJECT_ID> sample.apk android-flow.yaml
+maestro cloud --api-key <API_KEY> --project-id <PROJECT_ID> sample.apk android-flow.yaml
 ```
 
 #### iOS
 
 ```bash
 cd ./samples
-maestro cloud --api-key <ROBIN_API_KEY> --project-id <ROBIN_PROJECT_ID> sample.zip ios-flow.yaml
+maestro cloud --api-key <API_KEY> --project-id <PROJECT_ID> sample.zip ios-flow.yaml
 ```
 
-To run any flow that depends on other files (like the **advanced** examples) you need to upload the full folder, so that Robin has all of the files it needs. More information about subflows and what Flows to include can be found [here](../cli/test-suites-and-reports.md#controlling-what-tests-to-include).
+To run any flow that depends on other files (like the **advanced** examples) you need to upload the full folder, so that Maestro has all of the files it needs. More information about subflows and what Flows to include can be found [here](../cli/test-suites-and-reports.md#controlling-what-tests-to-include).
 
-To run both Android Flows in Robin, you can for example run the following command outside of the `samples` folder.
+To run both Android Flows in the cloud, you can for example run the following command outside of the `samples` folder.
 
 ```bash
 maestro cloud samples/sample.apk samples
 ```
 
-## 5. View results in Robin
+## 5. View results in the console
 
-A link to Robin is printed out after your Flow is uploaded successfully. Click on the link to view the results of your upload. It may take a minute or so before your results are ready.
+A link to the Maestro console is printed out after your Flow is uploaded successfully. Click on the link to view the results of your upload. It may take a minute or so before your results are ready.
 
 ## Congrats 🎉
 
-Congrats, you just ran your first Flow on Robin! 🙌
+Congrats, you just ran your first Maestro Flow in the cloud! 🙌
 
 Now that's you've seen how this works locally, let's take a look at how this can be integrated into your CI workflows:
 
