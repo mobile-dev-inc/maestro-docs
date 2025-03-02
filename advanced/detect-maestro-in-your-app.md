@@ -9,7 +9,7 @@ The recommended way to check if maestro is currently running is to use [argument
 ## Checking for open ports (deprecated)
 
 {% hint style="warning" %}
-Using ports is deprecated and may stop working at any time in future maestro updates and is not supported on Robin.
+Using ports is deprecated and may stop working at any time in future maestro updates and is not supported when [running in the cloud](../cloud/run-maestro-tests-in-the-cloud.md).
 {% endhint %}
 
 
