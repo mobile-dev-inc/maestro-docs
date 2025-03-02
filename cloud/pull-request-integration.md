@@ -4,7 +4,7 @@
 🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
 {% endhint %}
 
-Robin also provides support for native pull request integration. This is useful if you'd like to run your Flows asynchronously but still block pull requests from landing if flow failures are detected.
+Maestro also provides support for native pull request integration. This is useful if you'd like to run your Flows asynchronously but still block pull requests from landing if flow failures are detected.
 
 {% hint style="info" %}
 Maestro Cloud currently supports **Pull Request Integration** for GitHub and GitHub Enterprise only.
@@ -65,7 +65,7 @@ maestro cloud \
 
 ### 2. Grant access to pull requests
 
-In order to update the status of pull requests, you'll need to grant Robin permissions to do so.
+In order to update the status of pull requests, you'll need to grant Maestro permissions to do so.
 
 * [Install the Maestro Cloud GitHub App](https://github.com/apps/maestro-cloud-app)
 

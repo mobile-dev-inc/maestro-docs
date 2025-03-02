@@ -1,8 +1,12 @@
 # Cloud
 
-### Robin
+The easiest way to test your Flows in CI is to [run your flows in the cloud](../cloud/run-maestro-tests-in-the-cloud.md). Since your flows run in the cloud there's no need to configure any simulators or emulators on your end.
 
-The easiest way to test your Flows in CI is to run your Flows on [Robin](https://www.robintest.com/). Since your flows run in the cloud there's no need to configure any simulators or emulators on your end. Check out the [**Robin Documentation**](../cloud/run-maestro-tests-in-the-cloud.md) to get started in less than 5 minutes:
+```
+maestro cloud --api-key <API_KEY> --project-id <PROJECT_ID> sample.zip ios-flow.yaml
+```
+
+Check out the cloud documentation to get started in less than 5 minutes:
 
 {% content-ref url="../cloud/run-maestro-tests-in-the-cloud.md" %}
 [run-maestro-tests-in-the-cloud.md](../cloud/run-maestro-tests-in-the-cloud.md)

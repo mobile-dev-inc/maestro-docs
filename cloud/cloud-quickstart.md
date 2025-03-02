@@ -8,7 +8,7 @@ Before wiring into CI, we recommend uploading a local build from your terminal t
 
 ## 1. Install the Maestro CLI
 
-We'll be using the `maestro cloud` command below to upload to Robin, so start by [**installing the Maestro CLI**](../getting-started/installing-maestro/) if you haven't already:
+We'll be using the `maestro cloud` command below to run your flows in the cloud, so start by [**installing the Maestro CLI**](../getting-started/installing-maestro/) if you haven't already:
 
 ```
 curl -Ls "https://get.maestro.mobile.dev" | bash
@@ -20,7 +20,7 @@ Log in to the Maestro console, click Settings and copy your Project ID. Please r
 
 ## 3. Download the Samples
 
-Use the download-samples command to download a sample app and Flow file to upload to Robin:
+Use the download-samples command to download a sample app and Flow file:
 
 ```
 maestro download-samples

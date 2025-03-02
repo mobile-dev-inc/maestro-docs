@@ -6,7 +6,7 @@ description: Maestro offers a few convenience methods to start or create a devic
 
 You can use Maestro to create an Android emulator or an iOS simulator.&#x20;
 
-The device configurations are similar to the ones hosted on [Robin](https://www.robintest.com/). Using such devices will help you create [Robin](https://www.robintest.com/) compatible flows.
+The device configurations are similar to the ones hosted on [Maestro's cloud platform](../cloud/run-maestro-tests-in-the-cloud.md). Using such devices will help you create compatible flows.
 
 
 
@@ -22,7 +22,7 @@ This will create a default Android emulator (Pixel 6, Google API 30). If the dev
 
 For full options run `maestro start-device`
 
-_Note: Device configurations are limited to a few recommended OS versions and devices. Such configurations work well with Maestro and_ [_Robin_](https://www.robintest.com/)_._
+_Note: Device configurations are limited to a few recommended OS versions and devices. Such configurations work well when_ [_running flows in the cloud_](../cloud/run-maestro-tests-in-the-cloud.md)_._
 
 ### Start an iOS simulator using Maestro
 
@@ -36,5 +36,5 @@ This will create a default iOS simulator (iPhone11, iOS 15.5). If the device alr
 
 For full options run `maestro start-device`
 
-_Note: Device configurations are limited to a few recommended os versions and devices. Such configurations work well with Maestro and Robin._
+_Note: Device configurations are limited to a few recommended os versions and devices. Such configurations work well when_ [_running flows in the cloud_](../cloud/run-maestro-tests-in-the-cloud.md)_._
 

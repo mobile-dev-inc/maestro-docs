@@ -10,11 +10,11 @@ To execute a variety of test scenarios on the same build, multiple `maestro uplo
 
 ### Finding the app binary ID
 
-After uploading to Robin the app binary id will be returned in the CLI response
+After uploading, the app binary id will be returned in the CLI response
 
 <figure><img src="../../.gitbook/assets/app_binary.png" alt=""><figcaption></figcaption></figure>
 
-It's also visible at the top of a run in Robin
+It's also visible at the top of a run in the Maestro console
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
@@ -49,7 +49,7 @@ maestro cloud --api-key=123 --project-id=456 --app-file=app.apk --flows=flow.yam
 Why to reuse an app binary?
 To execute a variety of test scenarios on the same build, multiple maestro upload requests are often necessary. Since a binary upload can be time-consuming and resource-intensive, Maestro offers a solution to optimize this process. By using the --app-binary-id option, provided after a successful upload, users can reuse the cached binary for subsequent uploads, saving both time and space.
 Surface app binary
-After uploading to Robin the app binary id will be returned in the CLI response
+After uploading, the app binary id will be returned in the CLI response
 
 --app-binary-id
 You can now re-use a previous app binary by providing the appBinaryId. This will skip binary re-upload and improve iteration speed.

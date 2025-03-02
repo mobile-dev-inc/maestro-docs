@@ -4,7 +4,7 @@
 🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
 {% endhint %}
 
-You can set up Robin to notify you and your team when a Flow fails. That's useful to easily keep track if your app is working as expected.&#x20;
+You can set up Maestro to notify you and your team when a Flow in the cloud. That's useful to easily keep track if your app is working as expected.&#x20;
 
 In the `config.yaml` file add the list of emails that should receive the notifications:
 

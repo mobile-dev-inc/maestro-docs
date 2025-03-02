@@ -4,9 +4,9 @@
 🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
 {% endhint %}
 
-You can set up Robin to notify you and your team about upload results from **a specific project**. That's useful to easily keep track if your app is working as expected.
+You can set up Maestro to notify you and your team about results from **a specific project when** [running in the cloud](../run-maestro-tests-in-the-cloud.md). That's useful to easily keep track if your app is working as expected.
 
-1. Go to the settings in your Robin Console
+1. Go to the settings in your Maestro Console
 
 <figure><img src="../../.gitbook/assets/robin-console-settings.png" alt=""><figcaption></figcaption></figure>
 
@@ -18,7 +18,7 @@ You can set up Robin to notify you and your team about upload results from **a s
 
 <figure><img src="../../.gitbook/assets/slack-integration-redirect.png" alt=""><figcaption></figcaption></figure>
 
-3. After you have authorized the integration, you will be redirected back to the Robin Console, and the integration will be enabled.
+3. After you have authorized the integration, you will be redirected back to the Maestro Console, and the integration will be enabled.
 
 <figure><img src="../../.gitbook/assets/slack-bot-onboarding.png" alt=""><figcaption></figcaption></figure>
 

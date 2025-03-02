@@ -57,4 +57,4 @@ You can configure your Flows to run on a specific iOS major version using the `i
 maestro cloud --ios-version 17 myapp.app myflows/
 ```
 
-Robin will automatically select an appropriate minor version, meaning that if you specify iOS 16 your Flows will for example be run on 16.2. If you happen to specify a minimum deployment target version that is below the selected minor version (for example 16.0), an error message will be surfaced with instructions on how to recover.\
+Maestro will automatically select an appropriate minor version, meaning that if you specify iOS 16 your Flows will for example be run on 16.2. If you happen to specify a minimum deployment target version that is below the selected minor version (for example 16.0), an error message will be surfaced with instructions on how to recover.\
