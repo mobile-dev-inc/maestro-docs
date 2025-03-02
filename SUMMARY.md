@@ -32,7 +32,7 @@
   * [Integration with any CI platform](cloud/ci-integration/integration-with-any-ci-platform.md)
 * [Pull Request Integration](cloud/pull-request-integration.md)
 * [Cloud Reference](cloud/reference/README.md)
-  * [Build your app for the cloud](cloud/reference/build-your-app-for-robin.md)
+  * [Build your app for the cloud](cloud/reference/build-your-app-for-cloud.md)
   * [Configuring OS Version](cloud/reference/configuring-os-version.md)
   * [Configuring device locale](cloud/reference/configuring-device-locale.md)
   * [Device timezones](cloud/reference/device-timezones.md)
