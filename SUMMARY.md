@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Maestro.dev](https://www.maestro.dev)
+* [Home](https://www.maestro.dev)
 * [Star us on GitHub](https://github.com/mobile-dev-inc/maestro)
 
 ## Getting Started
