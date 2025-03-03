@@ -27,7 +27,7 @@ You can integrate Maestro into any CI platform via the Maestro CLI, and we're in
 * If you don't already a Maestro account you can [create your Maestro account here](https://maestro.dev/)
 * Maestro cloud testing requires a Cloud Plan, so make sure to start a Cloud Plan Trial before proceeding
 * Check out the [Quickstart](cloud-quickstart.md) guide to get started with running your Maestro Flows in the cloud within minutes
-* Public Slack Channel: [**Join the workspace**](https://docsend.com/view/3r2sf8fvvcjxvbtk) then head to the `#robin` channel to discuss anything related to Maestro cloud testing
+* Public Slack Channel: [**Join the workspace**](https://docsend.com/view/3r2sf8fvvcjxvbtk) then head to the `#cloud` channel to discuss anything related to Maestro cloud testing
 
 ## Why run in the cloud?
 
