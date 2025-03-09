@@ -4,6 +4,10 @@ description: A step by step guide to installing Maestro on Windows
 
 # Windows
 
+
+
+## Option 1: Installation on Windows
+
 {% stepper %}
 {% step %}
 #### Download the latest Maestro Release
@@ -38,9 +42,11 @@ setx PATH "%PATH%;C:\Users\jake\maestro\bin"
 {% endstep %}
 {% endstepper %}
 
-## WSL2
+## Option 2: Installation in WSL2
 
-If you prefer WSL2 for your working environment, this section will walk you through the end-to-end steps for getting started with Maestro on a Windows machine. It's not as straightforward as installing Maestro on Windows directly.
+If you prefer WSL2 for your working environment, this section will walk you through the end-to-end steps for getting started with Maestro on a Windows machine.&#x20;
+
+Note: It's more involved than installing Maestro on Windows directly, and requires passing additional configuration at runtime too.
 
 ### Pre-Requisites
 
