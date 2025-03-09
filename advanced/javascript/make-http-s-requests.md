@@ -51,6 +51,7 @@ const response = http.post('https://example.com/myEndpoint', {
 Setting a `'Content-Type'` header might be required. See [Headers](make-http-s-requests.md#headers).
 
 You can also send multipart form data by specyfying `multipartForm` parameter:
+
 ```javascript
 // script.js
 const response = http.post('https://example.com/myEndpoint', {
@@ -64,8 +65,7 @@ const response = http.post('https://example.com/myEndpoint', {
 })
 ```
 
-In `multipartForm` you can include many fields. It is also possible to upload multiple files in one request by using objects with filePath property.
-`filePath` is required for the files. `mediaType` is optional.
+In `multipartForm` you can include many fields. It is also possible to upload multiple files in one request by using objects with filePath property. `filePath` is required for the files. `mediaType` is optional.
 
 > **ℹ️ Note** If you include both `body` and `multipartForm` in one request then `body` will be ignored.
 
@@ -164,3 +164,47 @@ function fillUserInfo() {
 
 output.test_user = fillUserInfo()
 ```
+
+### Shared Functions
+
+The output object in JavaScript can hold functions as well as values and JSON objects. You can use this to put all of your bespoke API calls into the output object, and call them from elsewhere in your flow.
+
+_api.js:_
+
+```javascript
+function createUser(username) {
+  return http.post("https://my-api/register", {
+    body: {
+      "username": username,
+      "name": "Test User"
+    }
+  })
+}
+
+
+function getUserHistory(username) {
+  return http.get("https://my-api/users/" + username + "/history")
+}
+
+output.api = {
+  createUser,
+  getUserHistory
+}
+```
+
+_flow.yaml:_
+
+```
+appId: com.example
+onFlowStart:
+  - runScript: ./util/api.js
+---
+- launchApp
+- evalScript: ${output.createUser('myTestUser')}
+- tapOn: 'username'
+- inputText: 'myTestUser'
+```
+
+### Additional Information
+
+For test developers looking for additional information on the API, and the structure of objects, the Maestro implementation is a wrapper around okhttp3.
