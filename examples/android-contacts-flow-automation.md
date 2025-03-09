@@ -12,7 +12,7 @@ Some notable interactions in this Flow:
 
 ## **Flow File**
 
-{% code title="contacts.yaml" %}
+{% code title="# contacts.yaml" %}
 ```yaml
 appId: com.android.contacts
 ---

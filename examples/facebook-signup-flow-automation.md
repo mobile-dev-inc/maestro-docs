@@ -4,6 +4,10 @@
 
 This flow demonstrates how Maestro can automate signing up with Facebook.
 
+{% hint style="info" %}
+Note: Facebook has since added checks in their app to prevent this flow from being automated.
+{% endhint %}
+
 Some notable interactions in this Flow:
 
 1. Clicking on any element using: `tapOn`
@@ -15,7 +19,7 @@ Some notable interactions in this Flow:
 
 ## **Flow File**
 
-{% code title="contacts.yaml" %}
+{% code title="facebook.yaml" %}
 ```yaml
 appId: com.facebook.katana
 ---
@@ -61,8 +65,3 @@ appId: com.facebook.katana
 ```
 {% endcode %}
 
-## **How to run the flow**
-
-{% hint style="info" %}
-Note: Facebook has since added checks in their app to prevent this flow from being automated.
-{% endhint %}

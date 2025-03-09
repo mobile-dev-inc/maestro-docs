@@ -8,6 +8,7 @@ The following properties can be configured on a given Flow:
 * `env`: map of environment variables that should be made available for this Flow
 * `onFlowStart`: This is a hook that takes a list of Maestro commands as an argument. These commands will be executed before the initiation of each flow. Typically, this hook is used to run various setup scripts.
 * `onFlowComplete`: This hook accepts a list of Maestro commands that are executed upon the completion of each flow. It's important to note that these commands will run regardless of whether a particular flow has ended successfully or has encountered a failure. Typically, this hook is used to run various teardown / cleanup scripts.
+* `jsEngine`: Used to override the default JavaScript engine to use another supported engine instead ([docs](../../advanced/javascript/graaljs-support.md)).
 
 {% code title="flow.yaml" %}
 ```yaml
@@ -27,6 +28,7 @@ onFlowComplete:
   - runFlow: teardown.yaml
   - runScript: teardown.js
   - <any other command>
+jsEngine: graaljs
 ---
 - launchApp
 ```

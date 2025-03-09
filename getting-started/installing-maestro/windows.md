@@ -6,27 +6,23 @@ description: A step by step guide to installing Maestro on Windows
 
 {% stepper %}
 {% step %}
-
-### Download the latest Maestro Release
+#### Download the latest Maestro Release
 
 {% embed url="https://github.com/mobile-dev-inc/maestro/releases/latest/download/maestro.zip" %}
 {% endstep %}
 
 {% step %}
-
-### Extract the Maestro zip
+#### Extract the Maestro zip
 
 Extract the zip file you downloaded in the previous step to any location. For instance:
 
 ```shell
 C:\Users\jake\maestro
 ```
-
 {% endstep %}
 
 {% step %}
-
-### Update your PATH environment variable
+#### Update your PATH environment variable
 
 Update your PATH environment variable to include the `maestro\bin` folder. You may need to restart your terminal for this to take effect.
 
@@ -36,7 +32,7 @@ setx PATH "%PATH%;C:\Users\jake\maestro\bin"
 {% endstep %}
 
 {% step %}
-### Connect to a device
+#### Connect to a device
 
 `maestro test` will automatically detect and use any local emulator or USB-connected physical device.
 {% endstep %}
@@ -117,33 +113,29 @@ maestro --version
 
 * Download the Android command line tools zip file from [Android official site.](https://developer.android.com/studio)
 * Use the following instructions to set up Android command lines correctly in your WSL2.
-
   * Open WSL2 terminal.
-  * Create a new directory in your home directory.
+  *   Create a new directory in your home directory.
 
-    ```shell
-    ~ $ mkdir Android
-    ~ $ cd Android
-    ```
-
+      ```shell
+      ~ $ mkdir Android
+      ~ $ cd Android
+      ```
   * Unzip the Android command line tools zip file in the `android` directory using this command: `unzip ~<command_line_zip_filename>.zip`
-  * In the  `Android` directory perform following actions.
+  *   In the `Android` directory perform following actions.
 
-    ```shell
-    $ mkdir latest
-    $ mv cmdline-tools/* latest/
-    $ mv latest/ cmdline-tools/
-    ```
+      ```shell
+      $ mkdir latest
+      $ mv cmdline-tools/* latest/
+      $ mv latest/ cmdline-tools/
+      ```
 
-    **Note:** Last command will probably give you a warning, but you don’t need the worry about that.
+      **Note:** Last command will probably give you a warning, but you don’t need the worry about that.
+  *   Now add the following line to your `~/.bashrc file`
 
-  * Now add the following line to your `~/.bashrc file`
-
-    ```shell
-    export ANDROID_HOME=$HOME/Android
-    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-    ```
-
+      ```shell
+      export ANDROID_HOME=$HOME/Android
+      export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+      ```
   * Save your `~/.bashrc` file and exit.
   * Run `source ~/.bashrc` to reload the bashrc file.
   * Now, we will install basic Android utilities using the following commands:
@@ -162,12 +154,11 @@ Please follow the below steps to setup the ADB and make sure you are able to use
 
 * Launch your Android emulator on Windows.
 * Once the Android emulator is up and running, open a PowerShell prompt.
-* Run this command in PowerShell
+*   Run this command in PowerShell
 
     ```powershell
     adb -a -P 5037 nodaemon server
     ```
-
 * This will start the adb server in the Windows host.
 * Note down the IPV4 address of your Windows host PC/machine.
 

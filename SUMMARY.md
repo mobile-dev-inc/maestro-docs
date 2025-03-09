@@ -37,8 +37,6 @@
   * [Configuring OS Version](cloud/reference/configuring-os-version.md)
   * [Configuring device locale](cloud/reference/configuring-device-locale.md)
   * [Device timezones](cloud/reference/device-timezones.md)
-  * [Cloud Workspace Configuration](cloud/reference/cloud-workspace-configuration.md)
-  * [Execution Order](cloud/reference/execution-order.md)
   * [Email Notifications](cloud/reference/email-notifications.md)
   * [Slack Notifications](cloud/reference/slack-notifications.md)
   * [Managing Secrets](cloud/reference/managing-secrets.md)
@@ -160,6 +158,8 @@
 * [Bug Report](troubleshooting/bug-report.md)
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)
 * [Debug Output](troubleshooting/debug-output.md)
+* [HOWTOs](troubleshooting/howtos/README.md)
+  * [scrollUntilVisible for fragments](troubleshooting/howtos/scrolluntilvisible-for-fragments.md)
 
 ## Community
 
