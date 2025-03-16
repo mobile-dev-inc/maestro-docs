@@ -66,3 +66,9 @@ flow.yaml:
 - runScript: ../scripts/randomNumber.js
 - evalScript: ${EMAIL = "maestro+" + output.randomNumber + "@domain.com"}
 ```
+
+
+
+### Why are my tests slower in Maestro's cloud environment?
+
+The cloud environment optimises for reliability and repeatability, on the belief that slower correct results beat faster inconsistent results, every time. Each device, between one test and the next, is wiped and recreated, so that there's no chance of any test ever affecting any other. Compared with running locally, this adds 2-4 minutes between tests. To improve total time to finish a run, consider adding additional parallel runners. Another option is restructuring your tests for fewer longer tests, but be sure you're not making the same mistake, and sacrificing reliability or information in favour of speed.
