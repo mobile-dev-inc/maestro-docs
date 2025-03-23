@@ -2,7 +2,9 @@
 
 ### Running multiple tests
 
-Maestro can run a suite of tests and generate a test report at the end.
+#### Using a folder
+
+Maestro can run a suite of tests that live in a folder and generate a test report at the end.
 
 To run a suite, point `maestro test` to a folder that contains the Flows
 
@@ -11,6 +13,18 @@ maestro test myFolderWithTests/
 ```
 
 Maestro will run every flow from the directory _excluding subfolders_. The command will complete successfully if and only if all the Flows have been completed successfully.
+
+#### Using a list of flows
+
+Maestro can run a list of tests and generate a test report at the end.
+
+To run a list of tests, pass to `maestro test` the Flows paths to the Flows you want to run separated by spaces:
+
+```
+maestro test myFolderWithTests/test1.yaml myFolderWithTests/test2.yaml
+```
+
+Maestro will run the flow for each file provided. The command will complete successfully if and only if all the Flows have been completed successfully.
 
 ### Generating reports
 
@@ -95,10 +109,10 @@ To run your Flows in a given order, you can add the following configuration to y
 ```yaml
 # config.yaml
 executionOrder:
-    continueOnFailure: false # default is true
-    flowsOrder:
-        - flowA
-        - flowB
+  continueOnFailure: false # default is true
+  flowsOrder:
+    - flowA
+    - flowB
 ```
 
 This configuration describes to Maestro the order of the Flows you want to run. The list accepts either the Flow file names (without the `.yaml` extension) or the [Flow name](https://maestro.mobile.dev/api-reference/configuration/flow-configuration).
