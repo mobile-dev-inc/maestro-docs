@@ -1,8 +1,8 @@
 # Webhook Notifications
 
-You can set up Robin to send webhook notifications about upload results from **a specific project**. This allows you to integrate Robin's upload events with your custom workflows, monitoring systems, or other external services.
+You can set up Maestro Cloud to send webhook notifications about upload results from **a specific project**. This allows you to integrate Maestro Cloud's upload events with your custom workflows, monitoring systems, or other external services.
 
-1. Go to the settings in your Robin Console
+1. Go to the settings in your Maestro Cloud Console
 
 {% hint style="info" %}
 Webhooks provide a flexible way to receive real-time notifications about upload events programmatically.
