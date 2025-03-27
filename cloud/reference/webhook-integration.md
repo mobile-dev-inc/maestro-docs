@@ -22,9 +22,7 @@ Webhooks provide a flexible way to receive real-time notifications about upload 
 
 4.  Get your Webhook Token
 
-    {% hint style="info" %}
     Copy the token provided in the settings page, to use it in your webhook endpoint as the Bearer Token.
-    {% endhint %}
 
     <figure><img src="../../.gitbook/assets/webhook-management-token.png" alt="Webhook URL Configuration"></figcaption></figure>
 
@@ -84,10 +82,9 @@ When an upload event occurs, a POST request will be sent to your configured URL 
 }
 ```
 
-6. Manage Webhook Integration
+7.  Manage Webhook Integration
 
 - You can update or disable the webhook at any time in the settings
 - You can have multiple webhooks configured for the same project
 - Test your webhook configuration with a sample payload
 
-<figure><img src="../../.gitbook/assets/webhook-management.png" alt="Webhook Management"></figcaption></figure>
