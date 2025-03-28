@@ -52,7 +52,7 @@ Videos are deleted from our servers after 24 hours.
 
 ### what is the maximum duration for a Flow recording?
 
-The maximum duration is two minutes.
+The maximum duration is two minutes for devices running Android API level 33 or lower.
 
 
 
