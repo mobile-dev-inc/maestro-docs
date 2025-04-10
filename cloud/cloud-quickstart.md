@@ -16,7 +16,9 @@ curl -Ls "https://get.maestro.mobile.dev" | bash
 
 ## 2. Retrieve your API Key and Project ID
 
-Log in to the Maestro console, click Settings and copy your Project ID. Please reach out to your mobile.dev representative to obtain your API key.
+Log in to the Maestro console, click Settings and copy your Project ID and generate an API Key.
+
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 ## 3. Download the Samples
 

@@ -29,8 +29,7 @@ curl -fsSL "https://get.maestro.mobile.dev" | bash
 
 ## Installing a specific version of Maestro
 
-To install a specific version, export the `MAESTRO_VERSION` environment variable
-and run the same installation command as before:
+To install a specific version, export the `MAESTRO_VERSION` environment variable and run the same installation command as before:
 
 ```bash
 export MAESTRO_VERSION={version}; curl -Ls "https://get.maestro.mobile.dev" | bash
@@ -58,7 +57,6 @@ ENV PATH=/opt/maestro/bin:${PATH}
 
 ## Connecting to Your Device
 
-`maestro test` will automatically detect and use any local emulator or
-USB-connected physical device.
+`maestro test` will automatically detect and use any local emulator or USB-connected physical device.
 
 _Note: At the moment, Maestro does not support physical iOS devices_

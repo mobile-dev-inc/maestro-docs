@@ -1,7 +1,6 @@
 # Selectors
 
-Commands that interact with a view (e.g `tapOn`, `assertVisible`,
-`copyTextFrom`) require the view to be specified using using a _selector_.
+Commands that interact with a view (e.g `tapOn`, `assertVisible`, `copyTextFrom`) require the view to be specified using using a _selector_.
 
 There are many different selectors available:
 
@@ -31,8 +30,7 @@ If you want to use the `text` selector, you can use the following shorthand:
 
 ### Relative position selectors
 
-Apart from the selectors mentioned above, Maestro is also able to select views
-using their relative position (i.e. "below another view", or "contains child"):
+Apart from the selectors mentioned above, Maestro is also able to select views using their relative position (i.e. "below another view", or "contains child"):
 
 ```yaml
 - tapOn: # or any other command that works with selectors
@@ -52,9 +50,7 @@ using their relative position (i.e. "below another view", or "contains child"):
 
 ### Selecting one view among many similar
 
-If you have multiple views matching the same selector (i.e. many views with text
-`Hello`), use `index` parameter to specify which one to select exactly. For
-example, the following command will pick the **3rd view** that has text `Hello`:
+If you have multiple views matching the same selector (i.e. many views with text `Hello`), use `index` parameter to specify which one to select exactly. For example, the following command will pick the **3rd view** that has text `Hello`:
 
 ```yaml
 - tapOn:
@@ -90,7 +86,7 @@ Regular Expressions are powerful. Imagine a screen that generates a random 6-dig
 
 #### Escaping
 
-One downside of regular expressions is that like any expression, there are control characters. If you're attempting to assert on the text 'Movies [NEW]', this won't work:
+One downside of regular expressions is that like any expression, there are control characters. If you're attempting to assert on the text 'Movies \[NEW]', this won't work:
 
 ```yaml
 - assertVisible: 'Movies [NEW]'

@@ -1,14 +1,12 @@
 # killApp
 
-The `killApp` command kills the app on Android. On iOS and Web, it's just an
-alias for `stopApp`.
+The `killApp` command kills the app on Android. On iOS and Web, it's just an alias for `stopApp`.
 
 ```yaml
 - killApp
 ```
 
-Killing the app on Android triggers a **System-initiated Process Death**. It is
-the equivalent of calling:
+Killing the app on Android triggers a **System-initiated Process Death**. It is the equivalent of calling:
 
 ```console
 adb shell am kill {package name}
@@ -27,10 +25,7 @@ appId: com.example
 ```
 {% endcode %}
 
-It is advised to use this set of commands as a subFlow (e.g.
-`trigger-process-death.yaml`) and re-use it via `runFlow` in every other test,
-to re-check the data of the screen under test after the System-initiated Process
-Death:
+It is advised to use this set of commands as a subFlow (e.g. `trigger-process-death.yaml`) and re-use it via `runFlow` in every other test, to re-check the data of the screen under test after the System-initiated Process Death:
 
 ```yaml
 appId: com.example

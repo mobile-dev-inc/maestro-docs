@@ -17,8 +17,7 @@ appId: com.example.app
 - pasteText
 ```
 
-The copied text can also be access in JavaScript using the `maestro.copiedText`
-property:
+The copied text can also be access in JavaScript using the `maestro.copiedText` property:
 
 ```
 appId: com.example.app

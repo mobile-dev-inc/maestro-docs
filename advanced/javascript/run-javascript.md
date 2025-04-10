@@ -1,22 +1,18 @@
 # Run JavaScript
 
-Maestro is not a JavaScript testing framework, but we recognize not everything
-can (or should) be written in YAML. That's why we have JavaScript support.
+Maestro is not a JavaScript testing framework, but we recognize not everything can (or should) be written in YAML. That's why we have JavaScript support.
 
 There are several ways to run JavaScript, depending on your needs.
 
-{% hint style="info %}
-Right now, Rhino is the default JavaScript engine in Maestro, but we intend to
-make GraalJS the default soon and then deprecate and remove Rhino. We recommend
-everyone to opt-in to use GraalJS.
+{% hint style="info" %}
+Right now, Rhino is the default JavaScript engine in Maestro, but we intend to make GraalJS the default soon and then deprecate and remove Rhino. We recommend everyone to opt-in to use GraalJS.
 
-**Learn more about [GraalJS support](./graaljs-support.md)**.
+**Learn more about** [**GraalJS support**](graaljs-support.md).
 {% endhint %}
 
 ## Inject
 
-Everything within `${}` blocks is evaluated as JavaScript, allowing you to
-insert dynamically computed values into any other Maestro command.
+Everything within `${}` blocks is evaluated as JavaScript, allowing you to insert dynamically computed values into any other Maestro command.
 
 ```yaml
 appId: com.example
@@ -39,8 +35,7 @@ If you want to run a JavaScript file you can use the runScript command:
 
 ### Passing parameters
 
-`runScript` accepts `env` parameters, in the same way as `runFlow` does (see
-[nested-flows.md](../nested-flows.md "mention")).
+`runScript` accepts `env` parameters, in the same way as `runFlow` does (see [nested-flows.md](../nested-flows.md "mention")).
 
 Passing a parameter:
 
@@ -74,14 +69,12 @@ Whilst the JavaScript environment is limited, there are a few inbuilt things tha
 
 The `maestro` object contains the following properties:
 
-| Field Name    | Value                    |
-| ----------    | ------------------------ |
-| `copiedText`  | Results of the [copyTextFrom](../../api-reference/commands/copytextfrom.md) command. See [Access element text](./access-element-text.md) |
-| `platform`    | The platform the test is running on. Either `ios` or `android` |
+| Field Name   | Value                                                                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `copiedText` | Results of the [copyTextFrom](../../api-reference/commands/copytextfrom.md) command. See [Access element text](access-element-text.md) |
+| `platform`   | The platform the test is running on. Either `ios` or `android`                                                                         |
 
-The `maestro.platform` value is useful for conditional logic that differs
-between Android and iOS. For example, you might want to handle location
-permission differently:
+The `maestro.platform` value is useful for conditional logic that differs between Android and iOS. For example, you might want to handle location permission differently:
 
 ```yaml
 - runScript: setPermissionsVars.js
@@ -106,8 +99,7 @@ if (maestro.platform === 'android') {
 
 ### function `relativePoint`
 
-The `relativePoint` function converts decimal values to string percentages,
-which is the format that Maestro commands expect.
+The `relativePoint` function converts decimal values to string percentages, which is the format that Maestro commands expect.
 
 ```yaml
 - evalScript: ${output.specialPoint = relativePoint(0.13, 0.56)}
@@ -117,7 +109,7 @@ which is the format that Maestro commands expect.
 
 ### Others
 
-The following inbuilt functions are documented in [Make HTTP requests](./make-http-s-requests.md):
+The following inbuilt functions are documented in [Make HTTP requests](make-http-s-requests.md):
 
 * http.request
 * http.get

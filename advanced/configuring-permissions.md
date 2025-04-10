@@ -1,8 +1,6 @@
 # Configure Permissions
 
-By default, all permissions are set to `allow` by the launchApp command. It is
-possible to launch an app with custom permissions behaviour by passing the
-`permissions` argument to `launchApp`:
+By default, all permissions are set to `allow` by the launchApp command. It is possible to launch an app with custom permissions behaviour by passing the `permissions` argument to `launchApp`:
 
 ```yaml
 - launchApp:
@@ -12,7 +10,6 @@ possible to launch an app with custom permissions behaviour by passing the
       location: allow
 ```
 
-
 ## Available permissions
 
 Maestro has standardized names for most permissions.
@@ -20,27 +17,27 @@ Maestro has standardized names for most permissions.
 For example, on Android: `bluetooth` targets both `android.permission.BLUETOOTH_CONNECT` and `android.permission.BLUETOOTH_SCAN`.
 
 | Permission           | iOS support | Android support |
-|----------------------|-------------|-----------------|
-| calendar             | ✅          | ✅              |
-| camera               | ✅          | ✅              |
-| contacts             | ✅          | ✅              |
-| health               | ❌          | ❌              |
-| homekit              | ✅          | ❌              |
-| location             | ✅          | ✅              |
-| medialibrary         | ✅          | ✅              |
-| microphone           | ✅          | ✅              |
-| motion               | ✅          | ❌              |
-| notifications        | ✅          | ✅              |
-| photos               | ✅          | ❌              |
-| reminders            | ✅          | ❌              |
-| siri                 | ✅          | ❌              |
-| speech               | ✅          | ❌              |
-| usertracking         | ✅          | ❌              |
-| bluetooth            | ❌          | ✅              |
-| phone                | ❌          | ✅              |
-| storage              | ❌          | ✅              |
-| sms                  | ❌          | ✅              |
-| my.custom.permission | ❌          | ✅              |
+| -------------------- | ----------- | --------------- |
+| calendar             | ✅           | ✅               |
+| camera               | ✅           | ✅               |
+| contacts             | ✅           | ✅               |
+| health               | ❌           | ❌               |
+| homekit              | ✅           | ❌               |
+| location             | ✅           | ✅               |
+| medialibrary         | ✅           | ✅               |
+| microphone           | ✅           | ✅               |
+| motion               | ✅           | ❌               |
+| notifications        | ✅           | ✅               |
+| photos               | ✅           | ❌               |
+| reminders            | ✅           | ❌               |
+| siri                 | ✅           | ❌               |
+| speech               | ✅           | ❌               |
+| usertracking         | ✅           | ❌               |
+| bluetooth            | ❌           | ✅               |
+| phone                | ❌           | ✅               |
+| storage              | ❌           | ✅               |
+| sms                  | ❌           | ✅               |
+| my.custom.permission | ❌           | ✅               |
 
 {% hint style="info" %}
 Use `all` as a permission name to represent all the permissions that the app can ask for.
@@ -48,8 +45,7 @@ Use `all` as a permission name to represent all the permissions that the app can
 
 ### Supporting permission IDs for Android
 
-There are permissions on Android that are not listed in the table above. Use the
-permission IDs in place of the permission name to set these permissions.
+There are permissions on Android that are not listed in the table above. Use the permission IDs in place of the permission name to set these permissions.
 
 For example, to allow the "add voicemail" permission, use:
 

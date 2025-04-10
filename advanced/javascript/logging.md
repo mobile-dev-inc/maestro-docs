@@ -8,8 +8,7 @@ Logging with multiple arguments is not supported. Running `console.log('My varia
 
 ### Logging with `evalScript` command
 
-If you want to log something inline you can use `evalScript` to output it to the
-console without having to create a separate file:
+If you want to log something inline you can use `evalScript` to output it to the console without having to create a separate file:
 
 ```yaml
 - evalScript: ${console.log('Hello from Javascript')}
@@ -26,7 +25,7 @@ console without having to create a separate file:
 ```
 
 {% code title="script.js" %}
-```javascript 
+```javascript
 const myVar = 'foo';
 console.log(myVar); // outputs 'foo'
 console.log(`myVar is ${myVar}`) // outputs 'myVar is foo'

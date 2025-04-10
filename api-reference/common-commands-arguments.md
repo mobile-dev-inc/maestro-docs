@@ -1,11 +1,10 @@
-# Arguments common for all commands
+# Common command arguments
 
 Some arguments are common to all commands.
 
 ## Labels
 
-Each Maestro command accepts an optional `label` attribute that lets you
-customize the command's name:
+Each Maestro command accepts an optional `label` attribute that lets you customize the command's name:
 
 ```yaml
 - tapOn:
@@ -27,8 +26,7 @@ customize the command's name:
 ✅ Swipe for onboarding
 ```
 
-Setting a label can have an additional advantage of being able to remove
-sensitive content from console output, for example this:
+Setting a label can have an additional advantage of being able to remove sensitive content from console output, for example this:
 
 ```
 ✅ Tap on "Password"
@@ -46,8 +44,7 @@ becomes:
 The values will still appear in the logs of the run.
 {% endhint %}
 
-Labels are also a useful alternative to comments for contributors trying to
-understand the intent of a particular step.
+Labels are also a useful alternative to comments for contributors trying to understand the intent of a particular step.
 
 ```yaml
 - extendedWaitUntil:
@@ -58,8 +55,7 @@ understand the intent of a particular step.
 
 ## Optional
 
-Each Maestro command accepts an optional `optional` attribute that lets control
-what should happen if the command fails.
+Each Maestro command accepts an optional `optional` attribute that lets control what should happen if the command fails.
 
 ```yaml
 - launchApp: com.example.example
@@ -69,8 +65,7 @@ what should happen if the command fails.
 - tapOn: Sign up now!
 ```
 
-If `optional` is set to `true`, the flow will continue executing even if the
-command fails. The warning will be displayed:
+If `optional` is set to `true`, the flow will continue executing even if the command fails. The warning will be displayed:
 
 ```
 ✅ Launch app "com.example.example"
@@ -78,13 +73,8 @@ command fails. The warning will be displayed:
 ✅ Tap on "Sign up now!"
 ```
 
-The default value of `optional` for almost all commands is `false`, which means
-that the flow will stop executing if any command fails. The only exception (at
-least for now) are AI-powered commands, which have `optional` set to `true` by
-default.
+The default value of `optional` for almost all commands is `false`, which means that the flow will stop executing if any command fails. The only exception (at least for now) are AI-powered commands, which have `optional` set to `true` by default.
 
 {% hint style="info" %}
-Setting the `optional` attribute doesn't make sense on some commands, e.g.
-`back` or `startRecording`. Nevertheless, it's still possible to set it, but it
-won't have any effect.
+Setting the `optional` attribute doesn't make sense on some commands, e.g. `back` or `startRecording`. Nevertheless, it's still possible to set it, but it won't have any effect.
 {% endhint %}

@@ -1,10 +1,7 @@
 # assertWithAI
 
 {% hint style="warning" %}
-
-This is an **experimental** feature powered by LLM technology. All feedback is
-welcome.
-
+This is an **experimental** feature powered by LLM technology. All feedback is welcome.
 {% endhint %}
 
 ```yaml
@@ -12,20 +9,15 @@ welcome.
     assertion: Login and password text fields are visible.
 ```
 
-Takes a screenshot, uploads it to an LLM with a pre-made prompt combined with
-`assertion`, and asks the model if assertion is true.
+Takes a screenshot, uploads it to an LLM with a pre-made prompt combined with `assertion`, and asks the model if assertion is true.
 
 ### When to use?
 
-We hope for `assertWithAI` to be useful when it's hard (or even impossible) to
-write the assertion using default assertion commands.
+We hope for `assertWithAI` to be useful when it's hard (or even impossible) to write the assertion using default assertion commands.
 
 Asserting the presence of a two-factor authentication prompt is a good example.
 
-<figure>
-<img src="../.gitbook/assets/uber_2fa.png" alt="">
-<figcaption></figcaption>
-</figure>
+<figure><img src="../.gitbook/assets/uber_2fa.png" alt=""><figcaption></figcaption></figure>
 
 ```yaml
 - assertWithAI:
@@ -38,8 +30,7 @@ Asserting the presence of a two-factor authentication prompt is a good example.
 
 ### Output
 
-Output is generated in HTML and JSON formats in the folder for the individual
-test run:
+Output is generated in HTML and JSON formats in the folder for the individual test run:
 
 ```
 ~/.maestro
@@ -55,6 +46,6 @@ test run:
 
 ### Configuration
 
-{% content-ref url="../../api-reference/configuration/ai-configuration.md" %}
-[ai-configuration.md](../../api-reference/configuration/ai-configuration.md)
+{% content-ref url="../configuration/ai-configuration.md" %}
+[ai-configuration.md](../configuration/ai-configuration.md)
 {% endcontent-ref %}

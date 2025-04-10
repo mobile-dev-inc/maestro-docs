@@ -1,11 +1,6 @@
 # Test in different locales
 
-It is possible to use `maestro start-device` command to create a new device with
-a custom locale. This functionality enables an option to write and test Maestro
-flows for different languages. The parameter `--device-locale` is a combination
-of [ISO-639-1](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes) +
-[ISO-3166-1](https://en.wikipedia.org/wiki/ISO\_3166-1), separated by an underscore
-`_` symbol in between them.
+It is possible to use `maestro start-device` command to create a new device with a custom locale. This functionality enables an option to write and test Maestro flows for different languages. The parameter `--device-locale` is a combination of [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) + [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1), separated by an underscore `_` symbol in between them.
 
 Let's see some examples:
 
