@@ -50,6 +50,7 @@ Flows will be run on iOS simulators&#x20;
 
 * iOS 16 (default)
 * iOS 17
+* iOS 18
 
 You can configure your Flows to run on a specific iOS major version using the `ios-version` parameter when running the `maestro cloud` command:
 
@@ -58,3 +59,10 @@ maestro cloud --ios-version 17 myapp.app myflows/
 ```
 
 Maestro will automatically select an appropriate minor version, meaning that if you specify iOS 16 your Flows will for example be run on 16.2. If you happen to specify a minimum deployment target version that is below the selected minor version (for example 16.0), an error message will be surfaced with instructions on how to recover.\
+
+#### Using a specific iOS minor version & device
+
+You can also configure your Flows to run on a specific iOS minor version and device using the `--device-os` and `--device-model` parameters when running the `maestro cloud` command. The following values are supported:
+
+* --device-model - `iPhone-11`, `iPad-10th-generation`, `Apple-TV-4K-3rd-generation-4K`, `Apple-Watch-Series-10-46mm`
+* --device-os - `iOS-16-2`, `iOS-16-4`, `iOS-17-5`, `iOS-18-2`, `watchOS-11-2`, `tvOS-18-2`
