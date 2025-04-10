@@ -1,5 +1,9 @@
 # iOS
 
+This all assumes you've got Xcode plus Simulator runtimes installed. If you haven't, and want to know how, we've made a video walkthrough:
+
+{% embed url="https://www.youtube.com/watch?v=HX9vcw4Po1s" %}
+
 ## Building with Xcode
 
 Maestro currently supports iOS Simulator builds (**.app**), AppStore distribution device builds (**.ipa**) are not currently supported. The easiest way to get an app installed on the simulator is by building and running it from Xcode (make sure that simulator target is selected):
@@ -57,3 +61,9 @@ flutter build ios --debug --simulator
 ```
 
 You can then find your app file in the `build/ios/iphonesimulator/` directory.
+
+
+
+## Running on a Simulator
+
+Once you've got your .app file, installing it should be as simple as dragging and dropping it onto the running Simulator.
