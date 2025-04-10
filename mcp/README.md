@@ -27,7 +27,7 @@ MCP uses a simple but powerful architecture:
 
 ## Installing Maestro MCP
 
-Maestro MCP is distributed in the form of a [Python package](https://github.com/mobile-dev-inc/maestro-mcp). It requires the latest Maestro cli and Python 3.11+ to function correctly.
+[Maestro MCP](https://github.com/mobile-dev-inc/maestro-mcp) is distributed in the form of a [Python package](https://github.com/mobile-dev-inc/maestro-mcp). It requires the latest Maestro cli and Python 3.11+ to function correctly.
 
 After installing the [Maestro CLI](../getting-started/installing-maestro), install Maestro MCP with:
 
@@ -40,6 +40,7 @@ pip install maestro-mcp
 Configuration varies depending on the MCP Client you are using. 
 
 ### Claude Desktop
+
 For Claude, you can follow the instructions in the [Claude documentation](https://modelcontextprotocol.io/quickstart/user).
 
 The configuration file is typically located at `~/Library/Application Support/Claude/claude_desktop_config.json` on OSX or `%APPDATA%\Claude\claude_desktop_config.json` on Windows. Add the following configuration to the file and restart Claude:
