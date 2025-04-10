@@ -16,7 +16,11 @@ On Android:
 On iOS
 
 1. Execute `xcrun simctl listapps booted | grep CFBundleIdentifier` to get a list of all installed packages
-2. Search for the appID manually or use `grep` in the above command to search for part of the name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`
+2. Search for the appID manually or use `grep` in the above command to search for part of the name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`&#x20;
+
+### Maestro isn't compatible with all versions of Java
+
+Where the Java version is very old or very new, Maestro might not be immediately compatible. Yeah, we know - switching Java versions is a pain, even moreso if you've got a specific version installed for something else with specific compatibility needs. Use jenv or sdkman to get around this. There's a Maestro guide on how to install and use sdkman [here](https://www.youtube.com/watch?v=yR7BGMjK0vM).
 
 ## Android
 
