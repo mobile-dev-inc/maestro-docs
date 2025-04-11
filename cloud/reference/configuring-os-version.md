@@ -41,15 +41,13 @@ Flows will be run on iOS simulators&#x20;
 
 #### Simulator Specs
 
-* x86 architecture
+* ARM or x86 architecture (via Rosetta)
 * iOS version 16 (default)
-* iPhone 11
-* 828x1792, 326 ppi
+* iPhone 11 (default)
+* 828x1792, 326 ppi (iPhone 11)
 
-**Supported iOS runtimes:**
 
-* iOS 16 (default)
-* iOS 17
+### Using the `ios-version` parameter (deprecated)
 
 You can configure your Flows to run on a specific iOS major version using the `ios-version` parameter when running the `maestro cloud` command:
 
@@ -57,4 +55,23 @@ You can configure your Flows to run on a specific iOS major version using the `i
 maestro cloud --ios-version 17 myapp.app myflows/
 ```
 
-Maestro will automatically select an appropriate minor version, meaning that if you specify iOS 16 your Flows will for example be run on 16.2. If you happen to specify a minimum deployment target version that is below the selected minor version (for example 16.0), an error message will be surfaced with instructions on how to recover.\
+Maestro will automatically select an appropriate minor version, meaning that if you specify iOS 16 your Flows will for example be run on 16.2. If you happen to specify a minimum deployment target version that is below the selected minor version (for example 16.0), an error message will be surfaced with instructions on how to recover.
+
+Notice this mode is deprecated and will be removed in a future release. Current supported values are `16`, `17` and `18`. If you use this flag, your tests will always run with an iPhone 11 simulator.
+
+
+#### Using a specific iOS minor version & device (recommended)
+
+You can configure your Flows to run on a specific iOS runtime and device using the `--device-os` and `--device-model` flags when running the `maestro cloud` command. 
+
+The following values are supported:
+
+* --device-model - `iPhone-11`, `iPhone-16-Pro`, `iPhione-16`, `iPad-10th-generation`, `Apple-TV-4K-3rd-generation-4K`, `Apple-Watch-Series-10-46mm`
+* --device-os - `iOS-16-2`, `iOS-16-4`, `iOS-17-5`, `iOS-18-2`, `watchOS-11-2`, `tvOS-18-2`
+
+For example, to run your Flows on iOS 18.2 with an iPhone 16 Pro, you would use:
+
+```
+maestro cloud --device-os iOS-18-2 --device-model iPhone-16-Pro myapp.app myflows/
+```
+
