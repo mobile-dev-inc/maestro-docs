@@ -27,13 +27,31 @@ MCP uses a simple but powerful architecture:
 
 ## Installing Maestro MCP
 
-[Maestro MCP](https://github.com/mobile-dev-inc/maestro-mcp) is distributed in the form of a [Python package](https://github.com/mobile-dev-inc/maestro-mcp). It requires the latest Maestro cli and Python 3.11+ to function correctly.
+### Make sure Python 3.11 is in use
 
-After installing the [Maestro CLI](../getting-started/installing-maestro), install Maestro MCP with:
+[Maestro MCP](https://github.com/mobile-dev-inc/maestro-mcp) is distributed in the form of a [Python package](https://github.com/mobile-dev-inc/maestro-mcp). It requires the latest Maestro cli and Python 3.11+ to function correctly. Verify the python version you have with:
+
+```
+python --version
+```
+
+If you don't have Python 3.11 or higher, you can install it with tools such as Anaconda, Pyenv or downloading Python directly.
+
+### Install the latest Maestro CLI
+
+Follow the [Maestro CLI](../getting-started/installing-maestro) installation instructions as usual. Maestro MCP requires the latest Maestro cli to function correctly.
+
+
+### Installing Maestro MCP
+
+Install Maestro MCP with:
 
 ```bash
 pip install maestro-mcp
 ```
+
+You can now use it on any MCP Client of your choice.
+
 
 ## Configuring your MCP Client
 
@@ -59,6 +77,13 @@ The configuration file is typically located at `~/Library/Application Support/Cl
 }
 ```
 
-You might have to specify the full path to your python installation, depending on your system configuration. For example, if you're using pyenv on OSX, you might need to use `/Users/<your user>/.pyenv/versions/3.11.10/bin/python` instead of `python`.
+If you have more than one Python installation, you might have to specify the full path to your python installation. 
 
-Other clients (such as Windsurf) have similar configuration files. Please follow their specific installation instructions.
+For example, if you're using pyenv on OSX, you might need to use `/Users/<your user>/.pyenv/versions/3.11.10/bin/python` instead of `python` on the `command` field above.
+
+Other clients have similar configuration files and the installation processs may vary. Please follow their specific installation instructions:
+
+- [Windsurf](https://docs.windsurf.com/windsurf/mcp#adding-a-new-server)
+- [Cursor](https://docs.cursor.com/context/model-context-protocol#configuring-mcp-servers)
+- [VSCode](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
+
