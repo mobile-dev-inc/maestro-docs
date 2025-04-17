@@ -55,7 +55,7 @@ When an upload event occurs, a POST request will be sent to your configured URL 
       "id": "run_789012",
       "name": "Login Flow Test",
       "url": "https://app.maestro.dev/project/project-abc123/maestro-test/flow/run-789012",
-      "status": "SUCESS",
+      "status": "SUCCESS",
       "failureReason": null,
       "startTime": 1659312000000,
       "endTime": 1659312300000
@@ -73,7 +73,7 @@ When an upload event occurs, a POST request will be sent to your configured URL 
       "id": "run_789014",
       "name": "User Profile Flow",
       "url": "https://app.maestro.dev/project/project-abc123/maestro-test/flow/run-789014",
-      "status": "SUCESS",
+      "status": "SUCCESS",
       "failureReason": null,
       "startTime": 1659313200000,
       "endTime": 1659313500000
