@@ -66,7 +66,7 @@ You can configure your Flows to run on a specific iOS runtime and device using t
 
 The following values are supported:
 
-* --device-model - `iPhone-11`, `iPhone-16-Pro`, `iPhione-16`, `iPad-10th-generation`, `Apple-TV-4K-3rd-generation-4K`, `Apple-Watch-Series-10-46mm`
+* --device-model - `iPhone-11`, `iPhone-16-Pro`, `iPhone-16`, `iPad-10th-generation`, `Apple-TV-4K-3rd-generation-4K`, `Apple-Watch-Series-10-46mm`
 * --device-os - `iOS-16-2`, `iOS-16-4`, `iOS-17-5`, `iOS-18-2`, `watchOS-11-2`, `tvOS-18-2`
 
 For example, to run your Flows on iOS 18.2 with an iPhone 16 Pro, you would use:
