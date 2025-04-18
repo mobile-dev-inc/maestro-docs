@@ -39,7 +39,9 @@ notifications:
       - john@example.com
 ```
 
+### Multiple Configs
 
+It's possible to have multiple config files in a repository and specify them at execution time. For example, the default `config.yaml` could cover the tests typically run on the main branch, but an additional `pr-config.yaml` might cover the flows and tags used when running tests on each Pull Request.
 
 ## Environment variables
 
