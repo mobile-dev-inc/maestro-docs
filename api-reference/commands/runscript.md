@@ -1,12 +1,12 @@
 # runScript
 
-For more information regarding JavaScript, please refer to the Javascript section:
+For more information regarding JavaScript, please refer to the JavaScript section:
 
 {% content-ref url="../../advanced/javascript/" %}
 [javascript](../../advanced/javascript/)
 {% endcontent-ref %}
 
-`runScript` command runs a provided JavaScript file.
+The `runScript` command runs a provided JavaScript file.
 
 ```yaml
 appId: com.example
@@ -30,6 +30,30 @@ output.myFlow = uppercaseName   // returns 'JOHN'
 You can directly access `env` parameters from within JavaScript. See [parameters-and-constants.md](../../advanced/parameters-and-constants.md "mention") for more information.
 {% endhint %}
 
+#### File Paths
+
+Paths can be relative or absolute. Relative paths are required for cloud running. Relative paths are relative to the calling flow, not to the directory running the command.
+
+In a directory structure like this:
+
+```
+├── flows
+│   └── test.yaml
+└── scripts
+    └── uppercase.js
+```
+
+The flow `test.yaml` would look like this:
+
+```yaml
+appId: com.example
+env:
+    MY_NAME: John
+---
+- launchApp
+- runScript: ../scripts/uppercase.js
+```
+
 #### Passing parameters
 
 `runScript` accepts `env` parameters, in the same way as `runFlow` does (see [nested-flows.md](../../advanced/nested-flows.md "mention")).
@@ -47,7 +71,7 @@ You can use conditionals to run a JavaScript file when some condition is true. F
 
 #### Console logging&#x20;
 
-Console logging is supported from the javascript files provided in `runScript` command. Logs from javascript are redirected to the console when using Maestro CLI.&#x20;
+Console logging is supported from the JavaScript files provided in `runScript` command. Logs from JavaScript are redirected to the console when using Maestro CLI.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
