@@ -60,7 +60,7 @@ Maestro will automatically select an appropriate minor version, meaning that if 
 Notice this mode is deprecated and will be removed in a future release. Current supported values are `16`, `17` and `18`. If you use this flag, your tests will always run with an iPhone 11 simulator.
 
 
-#### Using a specific iOS minor version & device (recommended)
+### Using a specific iOS minor version & device (recommended)
 
 You can configure your Flows to run on a specific iOS runtime and device using the `--device-os` and `--device-model` flags when running the `maestro cloud` command. 
 
