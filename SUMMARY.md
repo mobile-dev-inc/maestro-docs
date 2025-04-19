@@ -160,6 +160,7 @@
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)
 * [Debug Output](troubleshooting/debug-output.md)
 * [HOWTOs](troubleshooting/howtos/README.md)
+  * [Arrange your repository for Maestro tests](troubleshooting/howtos/arrange-your-repository-for-maestro-tests.md)
   * [scrollUntilVisible for fragments](troubleshooting/howtos/scrolluntilvisible-for-fragments.md)
 
 ## Community
