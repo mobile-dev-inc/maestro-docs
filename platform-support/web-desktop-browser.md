@@ -10,7 +10,7 @@ Maestro can test Web apps / web pages running on a desktop browser.
 
 ### Example Usage
 
-The syntax is exactly the same as for any other Maestro test, except that you need to specify `url` instead of an `appId` in your test file
+The syntax is exactly the same as for any other Maestro test. For readability, you should specify `url` instead of an `appId` in your test file (but they're synonyms behind the scenes).
 
 ```yaml
 # example.yaml
@@ -57,3 +57,4 @@ These features are not supported yet but should be feasible to implement if ther
 * Different browsers support (current default is Chromium)
 * Different locales support (current default is en-US)
 * Screen size configuration
+* Flutter Web is different, in the same way Flutter Mobile is different. See the [Flutter](flutter.md) docs for how to use Semantics to make elements addressable.
