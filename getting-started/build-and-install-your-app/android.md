@@ -11,7 +11,7 @@ Maestro works with most apps, but there are a few requirements:
 * APK (AAB not supported)
 * Compatible with x86\_64 architecture
 * Requires Android API level 26 or newer
-* Release and Debug builds both supported
+* Release and Debug builds both supported (although Release builds are often better)
 
 ## Building with Gradle
 
@@ -27,7 +27,7 @@ Build your app using one of the commands below. Then find the appropriate APK fi
 
 ## Building with Flutter
 
-If you use Flutter to build your app you can create a debug build using the following command:
+If you use Flutter to build your app you can create a build using the following command:
 
 ```bash
 # Release build
