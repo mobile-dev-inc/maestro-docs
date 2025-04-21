@@ -32,9 +32,12 @@ Yes - `maestro record` generates [a signed url](https://cloud.google.com/storage
 
 ### Why doesn't rendering happen locally?
 
-We'd also prefer to render videos locally, but the rendering logic today requires dependencies that we'd rather not force our users to install in their environment. Remote rendering allows `maestro record` to work out of the box without any additional setup steps.
-
-We may implement local rendering in the future.
+- Remote rendering allows `maestro record` to work out of the box without any additional setup steps.
+- Local rendering is possible though. You can do that by executing:
+  ```sh
+  maestro record --local
+  ```
+  It does the same thing, but without contacting the mobile.dev servers.
 
 ### How long are videos stored?
 
