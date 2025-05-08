@@ -69,6 +69,16 @@ The following values are supported:
 * --device-model - `iPhone-11`, `iPhone-16-Pro`, `iPhone-16`, `iPad-10th-generation`
 * --device-os - `iOS-16-2`, `iOS-17-5`, `iOS-18-2`
 
+Please note that not all runtimes are available for all devices. This table covers the available combinations:
+
+| Device Model | iOS Version | 
+| ------------ | ----------- | 
+| iPhone-11 | iOS-16-2, iOS-17-5, iOS-18-2 |
+| iPhone-16-Pro | iOS-18-2 |
+| iPhone-16 | iOS-18-2 |
+| iPad-10th-generation | iOS-16-2, iOS-17-5, iOS-18-2 |
+
+
 For example, to run your Flows on iOS 18.2 with an iPhone 16 Pro, you would use:
 
 ```
