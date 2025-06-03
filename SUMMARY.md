@@ -143,14 +143,14 @@
   * [Access element text](advanced/javascript/access-element-text.md)
   * [Make HTTP requests](advanced/javascript/make-http-s-requests.md)
   * [GraalJS support](advanced/javascript/graaljs-support.md)
-  * [JavaScript announcement blog](https://blog.mobile.dev/maestro-announcing-javascript-http-request-support-b2db06e1db00)
+  * [JavaScript announcement blog](https://maestro.dev/blog/maestro-announcing-javascript-http-request-support)
 * [Specify a Device](advanced/specify-a-device.md)
 * [Configure Permissions](advanced/configuring-permissions.md)
 * [Detect Maestro in your app](advanced/detect-maestro-in-your-app.md)
 * [Configure Maestro driver timeout](advanced/configuring-maestro-driver-timeout.md)
 * [onFlowStart / onFlowComplete hooks](advanced/onflowstart-onflowcomplete-hooks.md)
 * [Test in different locales](advanced/testing-in-different-locales.md)
-* [Structuring your test suite](https://blog.mobile.dev/maestro-best-practices-structuring-your-test-suite-54ec390c5c82)
+* [Structuring your test suite](https://maestro.dev/blog/maestro-best-practices-structuring-your-test-suite)
 
 ## Troubleshooting
 

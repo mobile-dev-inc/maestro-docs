@@ -7,7 +7,7 @@ icon: rocket-launch
 
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 Ship your apps with confidence by running your tests on Maestro's hosted enterprise-grade cloud infrastructure.
@@ -24,7 +24,7 @@ You can integrate Maestro into any CI platform via the Maestro CLI, and we're in
 
 ## Getting Started
 
-* If you don't already a Maestro account you can [create your Maestro account here](https://maestro.dev/)
+* If you don't already a Maestro account you can [create your Maestro account here](https://signin.maestro.dev/sign-up)
 * Maestro cloud testing requires a Cloud Plan, so make sure to start a Cloud Plan Trial before proceeding
 * Check out the [Quickstart](cloud-quickstart.md) guide to get started with running your Maestro Flows in the cloud within minutes
 * Public Slack Channel: [**Join the workspace**](https://docsend.com/view/3r2sf8fvvcjxvbtk) then head to the `#cloud` channel to discuss anything related to Maestro cloud testing

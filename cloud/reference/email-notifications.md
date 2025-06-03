@@ -1,7 +1,7 @@
 # Email Notifications
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 You can set up Maestro to notify you and your team when a Flow in the cloud. That's useful to easily keep track if your app is working as expected.&#x20;
