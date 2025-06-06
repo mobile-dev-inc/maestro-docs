@@ -1,7 +1,7 @@
 # CI Integration
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 There are two main ways to integrate Maestro cloud testing into your CI workflow:

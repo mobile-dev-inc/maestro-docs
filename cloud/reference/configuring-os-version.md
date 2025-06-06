@@ -1,7 +1,7 @@
 # Configuring OS Version
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 ### Android
@@ -22,8 +22,7 @@ If you're using one of the CI integrations, please refer to the CI documentation
 
 * x86\_64 architecture
 * Android API 33 (Google APIs) **(Default)**
-* 606x1280, 244 dpi\
-
+* 606x1280, 244 dpi\\
 
 **Supported API levels:**
 
@@ -37,7 +36,7 @@ If you're using one of the CI integrations, please refer to the CI documentation
 
 ### iOS
 
-Flows will be run on iOS simulators&#x20;
+Flows will be run on iOS simulators
 
 #### Simulator Specs
 
@@ -45,7 +44,6 @@ Flows will be run on iOS simulators&#x20;
 * iOS version 16 (default)
 * iPhone 11 (default)
 * 828x1792, 326 ppi (iPhone 11)
-
 
 ### Using the `ios-version` parameter (deprecated)
 
@@ -59,19 +57,26 @@ Maestro will automatically select an appropriate minor version, meaning that if 
 
 Notice this mode is deprecated and will be removed in a future release. Current supported values are `16`, `17` and `18`. If you use this flag, your tests will always run with an iPhone 11 simulator.
 
-
 ### Using a specific iOS minor version & device (recommended)
 
-You can configure your Flows to run on a specific iOS runtime and device using the `--device-os` and `--device-model` flags when running the `maestro cloud` command. 
+You can configure your Flows to run on a specific iOS runtime and device using the `--device-os` and `--device-model` flags when running the `maestro cloud` command.
 
 The following values are supported:
 
-* --device-model - `iPhone-11`, `iPhone-16-Pro`, `iPhone-16`, `iPad-10th-generation`
-* --device-os - `iOS-16-2`, `iOS-16-4`, `iOS-17-5`, `iOS-18-2`
+* \--device-model - `iPhone-11`, `iPhone-16-Pro`, `iPhone-16`, `iPad-10th-generation`
+* \--device-os - `iOS-16-2`, `iOS-17-5`, `iOS-18-2`
+
+Please note that not all runtimes are available for all devices. This table covers the available combinations:
+
+| Device Model         | iOS Version                  |
+| -------------------- | ---------------------------- |
+| iPhone-11            | iOS-16-2, iOS-17-5, iOS-18-2 |
+| iPhone-16-Pro        | iOS-18-2                     |
+| iPhone-16            | iOS-18-2                     |
+| iPad-10th-generation | iOS-16-2, iOS-17-5, iOS-18-2 |
 
 For example, to run your Flows on iOS 18.2 with an iPhone 16 Pro, you would use:
 
 ```
 maestro cloud --device-os iOS-18-2 --device-model iPhone-16-Pro myapp.app myflows/
 ```
-

@@ -1,7 +1,7 @@
 # IP Allowlist
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 If your network requires external services to be on an allowlist (formerly called a whitelist) to allow access, you can use the following lists to update your ACLs.

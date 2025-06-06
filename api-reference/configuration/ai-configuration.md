@@ -1,7 +1,7 @@
 # AI configuration
 
 {% hint style="info" %}
-👤  **Maestro Account** required - create your account for free at [**maestro.dev**](https://www.maestro.dev/)
+👤  **Maestro Account** required - create your account for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 Some commands, such as `assertWithAI` and `assertNoDiffWithAI`, use custom AI models, which are not built directly in Maestro CLI. Therefore, to use such commands, additional configuration is required.
