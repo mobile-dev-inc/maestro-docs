@@ -24,25 +24,27 @@ Here's an example of the final output:
 
 ### How does this work?
 
-The `maestro record` command captures the raw Flow output and app screen recording, and then programmatically stitches them together into an mp4 file. Today, the rendering is done on mobile.dev servers so the command sends the screen recording and Flow output securely over the internet to our API.
+The `maestro record` command captures the raw Flow output and app screen recording, and then programmatically stitches them together into an mp4 file. 
 
-### Are video URLs private?
+Rendering is possible 
+1. **Remotely** on mobile.dev servers so the command sends the screen recording and Flow output securely over the internet to our API.
+2. **Locally** so the command uses Skiko to create the screen recording and Flow output video without contacting the mobile.dev servers.
+
+   To do this, you need to pass `--local` flag right after `record` command to `maestro`, like shown below:
+
+    ```sh
+    maestro record --local YourFlow.yaml
+    ```
+
+### When using Remote rendering option
+**Are video URLs private?**
 
 Yes - `maestro record` generates [a signed url](https://cloud.google.com/storage/docs/access-control/signed-urls) that is valid for 60 minutes. This means that no one can guess your video url and you are the only one who can download your video (unless you share the signed url). After 60 minutes, the url will be invalidated.
 
-### Why doesn't rendering happen locally?
-
-- Remote rendering allows `maestro record` to work out of the box without any additional setup steps.
-- Local rendering is possible though. You can do that by executing:
-  ```sh
-  maestro record --local
-  ```
-  It does the same thing, but without contacting the mobile.dev servers.
-
-### How long are videos stored?
+**How long are videos stored?**
 
 Videos are deleted from our servers after 24 hours.
 
-### what is the maximum duration for a Flow recording?
+### What is the maximum duration for a Flow recording?
 
 The maximum duration is two minutes.
