@@ -1,7 +1,7 @@
 # Slack Notifications
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 You can set up Maestro to notify you and your team about results from **a specific project when** [running in the cloud](../run-maestro-tests-in-the-cloud.md). That's useful to easily keep track if your app is working as expected.

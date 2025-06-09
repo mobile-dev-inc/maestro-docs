@@ -1,7 +1,7 @@
 # Pull Request Integration
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 Maestro also provides support for native pull request integration. This is useful if you'd like to run your Flows asynchronously but still block pull requests from landing if flow failures are detected.
