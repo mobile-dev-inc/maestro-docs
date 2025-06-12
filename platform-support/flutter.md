@@ -204,7 +204,7 @@ Semantics(
 )
 ```
 
-Of course, there's always danger of a developer accidentally not using the `FancyButton` widget and defering to the built-in `ElevatedButton`. To combat that, we recommend setting up lint rules that forbid using `ElevatedButton` and enforce replacing it with a `FancyButton` instead. For example you can use [the leancode_lint package](https://pub.dev/packages/leancode_lint) with the following configuration in `analysis_options.yaml`:
+Of course, there's always danger of a developer accidentally not using the `FancyButton` widget and defering to the built-in `ElevatedButton`. To combat that, we recommend setting up lint rules that forbid using `ElevatedButton` and enforce replacing it with a `FancyButton` instead. For example you can use [the leancode\_lint package](https://pub.dev/packages/leancode_lint) with the following configuration in `analysis_options.yaml`:
 
 ```yaml
 include: package:leancode_lint/analysis_options.yaml
@@ -273,4 +273,6 @@ And you can easily interact with the widget using Maestro:
 
 ## Known Limitations
 
-Maestro cannot be used to test Flutter Desktop or Flutter Web apps (yet).
+Maestro cannot be used to test Flutter Desktop apps yet.&#x20;
+
+But if you've got a Flutter Web app, it'll work exactly the same as [Web](web-desktop-browser.md). Annotate with Semantics where you need to, and test as you would any other webpage.
