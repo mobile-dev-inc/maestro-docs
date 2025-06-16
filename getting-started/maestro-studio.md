@@ -1,43 +1,38 @@
 ---
-description: Your personal assistant to help write your Maestro Flows
+description: Simple automated testing for Mobile & Web
+icon: desktop-arrow-down
 ---
 
-# Maestro Studio
+# Maestro Studio Desktop - Beta
 
-{% embed url="https://youtu.be/g6HaT6CzUrk" %}
+{% include "../.gitbook/includes/untitled.md" %}
 
-Use Maestro Studio to instantly discover the exact commands needed to interact with your app.
+Maestro Studio is all-in-one **desktop app** for end-to-end automated testing on Mobile and Web.
 
-Here’s how it works:
+<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.0/Maestro-Studio-mac-universal-0.4.0.dmg" class="button primary">Download for Mac</a>
 
-### Launch Maestro Studio <a href="#b415" id="b415"></a>
+<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.0/win-Maestro-Studio-x64-0.4.0-setup.exe" class="button primary">Download for Windows</a>
 
-Maestro Studio is built right into the Maestro CLI. Upgrade your CLI to the latest version, and run the command below to launch Maestro Studio in your browser:
+<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.0/linux-Maestro-Studio-x86_64-0.4.0.AppImage" class="button primary">Download for Linux</a>
 
-```bash
-maestro studio
-```
+### No CLI needed <a href="#b415" id="b415"></a>
 
-Here’s what you’ll see:
+Skip the terminal 🙅‍♂️
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-07-13 at 18.54.53.png" alt=""><figcaption></figcaption></figure>
+* **Zero CLI** - Launch Maestro tests with a click
+* **No IDE setup** - Forget VS Code extensions, Android Studio, or Xcode boot-ups.
+* **Instant device connect** - Connect a device (Android, iOS, or Web).
+* **Runs on every OS** - Native installers for macOS (Apple Silicon & Intel), Windows, and Linux.&#x20;
 
-You can either visually select UI elements in order to receive suggestions on how to interact with the element in your Flow, or enter Maestro commands in the REPL and run them by pressing `Run`.
+### Quick Start <a href="#id-2508" id="id-2508"></a>
 
-### Visually Select a UI Element <a href="#2508" id="2508"></a>
+1. **Download & install** for your OS (⬆ buttons above).
+2. **Connect a device**&#x20;
+3. **Create a new test**
+4. **Click\_Run flow**
 
-Click on the device screenshot to select a UI element, e.g. Settings icon on the iOS simulator.&#x20;
+### _Trusted by the worlds best teams:_
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-07-13 at 18.58.06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-06-16 at 12.18.54 - Editado.png" alt=""><figcaption></figcaption></figure>
 
-#### Automatically Generated Examples <a href="#725d" id="725d"></a>
-
-Maestro Studio automatically generates examples of how you can interact with the selected element in your Flows. You can double click on the example to execute it directly, or use the hotkeys to copy it to the clipboard or open the relevant documentation.
-
-### Executing commands in the REPL
-
-You can execute Maestro commands inline in Studio in the REPL view. The commands are written in YAML in the same way as you would write any normal Flow.
-
-
-
-<figure><img src="../.gitbook/assets/Screenshot 2023-07-17 at 19.12.37.png" alt=""><figcaption></figcaption></figure>
+<a href="https://mobile-dev-inc.slack.com/archives/C08M8B56HR8" class="button primary">Join our Slack for support &#x26; feedback →</a>

@@ -15,7 +15,8 @@
   * [iOS](getting-started/build-and-install-your-app/ios.md)
 * [Run a Sample Flow](getting-started/run-a-sample-flow.md)
 * [Writing Your First Flow](getting-started/writing-your-first-flow.md)
-* [Maestro Studio](getting-started/maestro-studio.md)
+* [Maestro Studio Desktop - Beta](getting-started/maestro-studio.md)
+* [Maestro Studio (CLI)](getting-started/maestro-studio-1.md)
 * [Running Flows on CI](getting-started/running-flows-on-ci.md)
 
 ## Cloud
