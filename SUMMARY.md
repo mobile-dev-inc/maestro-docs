@@ -18,6 +18,7 @@
 * [Maestro Studio Desktop - Beta](getting-started/maestro-studio-desktop.md)
 * [Maestro Studio (CLI)](getting-started/maestro-studio-cli.md)
 * [Running Flows on CI](getting-started/running-flows-on-ci.md)
+* [Maestro MCP](getting-started/maestro-mcp.md)
 
 ## Cloud
 
