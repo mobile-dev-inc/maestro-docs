@@ -27,30 +27,7 @@ MCP uses a simple but powerful architecture:
 
 ## Installing Maestro MCP
 
-### Make sure Python 3.11 is in use
-
-[Maestro MCP](https://github.com/mobile-dev-inc/maestro-mcp) is distributed in the form of a [Python package](https://github.com/mobile-dev-inc/maestro-mcp). It requires the latest Maestro cli and Python 3.11+ to function correctly. Verify the python version you have with:
-
-```
-python --version
-```
-
-If you don't have Python 3.11 or higher, you can install it with tools such as Anaconda, Pyenv or downloading Python directly.
-
-### Install the latest Maestro CLI
-
-Follow the [Maestro CLI](../getting-started/installing-maestro) installation instructions as usual. Maestro MCP requires the latest Maestro cli to function correctly.
-
-
-### Installing Maestro MCP
-
-Install Maestro MCP with:
-
-```bash
-pip install maestro-mcp
-```
-
-You can now use it on any MCP Client of your choice.
+The MCP command comes pre-installed as part of the Maestro CLI - you can run it with `maestro mcp`
 
 
 ## Configuring your MCP Client
@@ -67,19 +44,16 @@ The configuration file is typically located at `~/Library/Application Support/Cl
 {
   "mcpServers": {
     "maestro": {
-      "command": "python",
+      "command": "maestro",
       "args": [
-        "-m",
-        "maestro_mcp.cli"
+        "mcp"
       ]
     }
   }
 }
 ```
 
-If you have more than one Python installation, you might have to specify the full path to your python installation. 
-
-For example, if you're using pyenv on OSX, you might need to use `/Users/<your user>/.pyenv/versions/3.11.10/bin/python` instead of `python` on the `command` field above.
+Replace `maestro` with the full path of your maestro cli, if not on path.
 
 Other clients have similar configuration files and the installation processs may vary. Please follow their specific installation instructions:
 
