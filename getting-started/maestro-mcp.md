@@ -60,3 +60,4 @@ Other clients have similar configuration files and the installation processs may
 * [Windsurf](https://docs.windsurf.com/windsurf/mcp#adding-a-new-server)
 * [Cursor](https://docs.cursor.com/context/model-context-protocol#configuring-mcp-servers)
 * [VSCode](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
+* [JetBrains IDEs](https://www.jetbrains.com/help/ai-assistant/configure-an-mcp-server.html)
