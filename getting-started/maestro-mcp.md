@@ -61,3 +61,7 @@ Other clients have similar configuration files and the installation processs may
 * [Cursor](https://docs.cursor.com/context/model-context-protocol#configuring-mcp-servers)
 * [VSCode](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
 * [JetBrains IDEs](https://www.jetbrains.com/help/ai-assistant/configure-an-mcp-server.html)
+
+## What does this look like?
+
+{% embed url="https://www.youtube.com/watch?t=1s&v=7K1s_kt8w4s" %}
