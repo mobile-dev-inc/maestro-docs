@@ -9,11 +9,11 @@ icon: desktop-arrow-down
 
 Maestro Studio is all-in-one **desktop app** for end-to-end automated testing on Mobile and Web.
 
-<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.1/Maestro-Studio-mac-universal-0.4.1.dmg" class="button primary">Download for Mac</a>
+<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.2/Maestro-Studio-mac-universal-0.4.2.dmg" class="button primary">Download for Mac</a>
 
-<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.1/win-Maestro-Studio-x64-0.4.1-setup.exe" class="button primary">Download for Windows</a>
+<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.2/win-Maestro-Studio-x64-0.4.2-setup.exe" class="button primary">Download for Windows</a>
 
-<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.1/linux-Maestro-Studio-x86_64-0.4.1.AppImage" class="button primary">Download for Linux</a>
+<a href="https://github.com/mobile-dev-inc/maestro-studio/releases/download/v0.4.2/linux-Maestro-Studio-x86_64-0.4.2.AppImage" class="button primary">Download for Linux</a>
 
 ### No CLI needed <a href="#b415" id="b415"></a>
 
