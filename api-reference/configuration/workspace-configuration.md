@@ -13,6 +13,28 @@ The following properties can be configured on the workspace as a whole as part o
 * `baselineBranch`: Which branch is your baseline. Useful when integrating with Pull Requests ([docs](https://docs.maestro.dev/cloud/pull-request-integration)). Cloud only.
 * `notifications`: Who to notify after an Upload finishes processing ([docs](../../cloud/reference/email-notifications.md)). Cloud only. You might prefer the [Slack integration](../../cloud/reference/slack-notifications.md).
 
+## Platform Configuration
+
+### iOS
+
+Following properties can be configured as platform configuration for iOS:
+
+* `disableAnimations`: Disables system animations on iOS simulator by enabling [**Reduce Motion**](https://support.apple.com/en-gb/111781)**.** Use this to avoid flakiness due to animations.&#x20;
+
+⚠️ _Note: This only affects system-level animations. Custom animations like those powered by Lottie won't be disabled._
+
+* `snapshotKeyHonorModalViews` : By default, Maestro shows elements visible **within** the current modal view context. However, in some apps, especially those using custom presentation styles or certain UI frameworks, elements may appear on modal but still hidden in hierarchy. \
+  \
+  Try setting this flag to `false` . It allows Maestro to include those background elements as well, depending on how they’re rendered by the app.
+
+### Android
+
+Following properties can be configured as platform configuration for Android:
+
+* `disableAnimations`: Disables system animations on android emulator by disabling animations from animators, window animations and transition&#x73;**.** Use this to avoid flakiness due to animations.
+
+⚠️ _Note: This won't disable custom animations like those from Lottie or other animation libraries._&#x20;
+
 ### Example
 
 Below is an example Maestro workspace configuration file. Typically it's named `config.yaml` and placed in the `.maestro` directory in your project's root:
@@ -37,6 +59,14 @@ notifications:
     enabled: true
     recipients:
       - john@example.com
+      
+# Platform Configuration
+platform:
+  ios:
+    snapshotKeyHonorModalViews: false
+    disableAnimations: true
+  android:
+    disableAnimations: true
 ```
 
 ### Multiple Configs

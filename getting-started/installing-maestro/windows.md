@@ -186,12 +186,12 @@ TROUBLESHOOTING:
 
 Yes, at this point, you are free to start your automation.
 
-* [Write your first flow](https://maestro.mobile.dev/getting-started/writing-your-first-flow)
+* [Write your first flow](https://docs.maestro.dev/getting-started/writing-your-first-flow)
 * How to run **Maestro commands**?
   * You can run Maestro commands in WSL2 terminal with `--host` flag. eg.
     * _**maestro --host \<WINDOWS\_IPV4\_ADDR> test flow.yaml**_
     * _**maestro --host \<WINDOWS\_IPV4\_ADDR> studio**_
-* Check out the [full documentation](https://maestro.mobile.dev/)
+* Check out the [full documentation](https://docs.maestro.dev/)
 
 ### Known Issues
 

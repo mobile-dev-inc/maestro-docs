@@ -1,7 +1,7 @@
 # Device timezones
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 Android emulator instances and macOS instances (iOS flows are executed on iOS simulators) are located in following regions and timezones.
