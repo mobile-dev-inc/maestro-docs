@@ -35,4 +35,4 @@ Skip the terminal 🙅‍♂️
 
 <figure><picture><source srcset="../.gitbook/assets/Untitled design (1).png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/Screenshot 2025-06-16 at 12.18.54 - Editado.png" alt=""></picture><figcaption></figcaption></figure>
 
-<a href="https://mobile-dev-inc.slack.com/archives/C08M8B56HR8" class="button primary">Join our Slack for support &#x26; feedback →</a>
+<a href="https://mobiledev.typeform.com/to/FelIEe8A?typeform-source=maestro.dev" class="button primary">Join our Slack for support &#x26; feedback →</a>
