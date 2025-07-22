@@ -13,7 +13,7 @@ First, you'll need to add the API key and Project DI as a secret ENV in your Pro
 1. Go to your Project -> Project Settings -> Environment Variables
 2. Save your API Key and Project ID
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Commit your Maestro Flows to your repository
 

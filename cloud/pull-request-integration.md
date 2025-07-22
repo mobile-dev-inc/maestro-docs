@@ -75,6 +75,6 @@ Lastly, open a pull request and ensure that the Maestro Cloud check shows up on 
 
 {% tabs %}
 {% tab title="GitHub / GitHub Enterprise" %}
-<figure><img src="../.gitbook/assets/image (2).png" alt="Successful check on Github PR page"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt="Successful check on Github PR page"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}

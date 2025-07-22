@@ -18,7 +18,7 @@ Maestro cloud testing is compatible with all CI systems and provides native inte
        \
 
 
-       <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 4. Lastly, fill out the following information in the step configuration:
    1. API Key
    2. Path to your built binary
