@@ -31,3 +31,23 @@ You can pass length as argument for `Number` and `Text`
 - inputRandomText:
     length: 10  #(default: 8)
 ```
+
+#### Re-using random input
+
+To access and re-use your random input, you can use the [copyTextFrom](copytextfrom.md) function, as shown in the example below.
+
+```yaml
+- tapOn:
+    id: MyTextInput
+- inputRandomText
+- copyTextFrom:
+    id: MyTextInput
+
+- tapOn: 'Submit' # Assumes a form where the input will be displayed on the next screen
+
+- assertVisible: ${maestro.copiedText}
+# or with regex
+- assertVisible: ${'.*' + maestro.copiedText + '$'}
+# or tapOn
+- tapOn: ${maestro.copiedText}
+```
