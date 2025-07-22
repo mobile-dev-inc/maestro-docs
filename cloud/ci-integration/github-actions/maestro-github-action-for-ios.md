@@ -1,7 +1,7 @@
 # Maestro GitHub Action for iOS
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 ## Full Example
@@ -29,7 +29,6 @@ jobs:
           app-file: build/MyApp.app
 ```
 
-
 `app-file` should point to an .app build (x86 or ARM), either directly to the file or a glob pattern matching the file name. When using a pattern, the first matched file will be used.
 
 ### .dSYM file
@@ -44,7 +43,6 @@ jobs:
 ```
 
 `mapping-file` should point to generated .dSYM file (unique per build). more info [here](https://developer.apple.com/documentation/xcode/building-your-app-to-include-debugging-information).
-
 
 ## Specifying iOS version and device
 

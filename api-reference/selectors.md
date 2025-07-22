@@ -78,7 +78,7 @@ Because it's a regular expression, it needs to match the text of the entire elem
 
 #### Patterns
 
-Regular Expressions are powerful. Imagine a screen that generates a random 6-digit number. Assuming you don't want to imbue your test with all of the material to generate an identical random number, you could assert that you're getting a number of the correct format like this:
+Regular Expressions are powerful. Imagine a screen that generates a random 6-digit number (like an OTP). Assuming you don't want to imbue your test with all of the code to generate an identical random number, you could assert that you're getting a number of the correct format like this:
 
 ```yaml
 - assertVisible: '[0-9]{6}'

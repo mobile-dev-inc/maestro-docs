@@ -7,7 +7,7 @@ description: Maestro is the simplest and most effective UI testing framework.
 {% hint style="success" %}
 🚀  **Running in the Cloud**
 
-Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade cloud infrastructure: [**Run Maestro tests in the cloud**](cloud/run-maestro-tests-in-the-cloud.md)
+Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade cloud infrastructure: [**Run Maestro tests in the cloud**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 {% embed url="https://vimeo.com/767721667/d972c5f08e" %}
@@ -83,7 +83,7 @@ url: https://example.com
 
 ## Resources
 
-* Blog Post: [**Introducing: Maestro — Painless Mobile UI Automation**](https://blog.mobile.dev/introducing-maestro-painless-mobile-ui-automation-bee4992d13c1)
+* Blog Post: [**Introducing: Maestro — Painless Mobile UI Automation**](https://maestro.dev/blog/introducing-maestro-painless-mobile-ui-automation)
 * GitHub Repository: [**https://github.com/mobile-dev-inc/maestro**](https://github.com/mobile-dev-inc/maestro)
 * Public Slack Channel: [**Join the workspace**](https://docsend.com/view/3r2sf8fvvcjxvbtk), then head to the `#maestro` channel
 

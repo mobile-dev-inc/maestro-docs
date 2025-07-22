@@ -1,7 +1,7 @@
 # Integration with any CI platform
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 You can use the Maestro CLI to run your Flows in the cloud from any CI platform.

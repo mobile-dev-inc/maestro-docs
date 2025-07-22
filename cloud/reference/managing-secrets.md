@@ -1,7 +1,7 @@
 # Managing Secrets
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 There might be cases where you don't want to store certain values in a flow file itself (i.e. user name, password, etc.). Maestro solves that by taking such parameters as [variables](managing-secrets.md#using-variables-in-your-flows).

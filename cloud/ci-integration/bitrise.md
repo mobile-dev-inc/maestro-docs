@@ -1,7 +1,7 @@
 # Bitrise
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 Maestro cloud testing is compatible with all CI systems and provides native integrations with a number of common providers including Bitrise. You can start running your Flows in CI with just a few clicks using the Maestro Cloud Bitrise Step.
@@ -18,7 +18,7 @@ Maestro cloud testing is compatible with all CI systems and provides native inte
        \
 
 
-       <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 4. Lastly, fill out the following information in the step configuration:
    1. API Key
    2. Path to your built binary

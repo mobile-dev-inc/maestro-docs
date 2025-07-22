@@ -1,7 +1,7 @@
 # Pull Request Integration
 
 {% hint style="info" %}
-🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://www.maestro.dev/)
+🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
 Maestro also provides support for native pull request integration. This is useful if you'd like to run your Flows asynchronously but still block pull requests from landing if flow failures are detected.
@@ -75,6 +75,6 @@ Lastly, open a pull request and ensure that the Maestro Cloud check shows up on 
 
 {% tabs %}
 {% tab title="GitHub / GitHub Enterprise" %}
-<figure><img src="../.gitbook/assets/image (2).png" alt="Successful check on Github PR page"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt="Successful check on Github PR page"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}

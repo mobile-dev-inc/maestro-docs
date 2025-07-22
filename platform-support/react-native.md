@@ -69,7 +69,7 @@ The following commands will enter "Hello, Maestro!" in the TextInput component:
 
 ### Install Maestro
 
-[Maestro install instructions](https://maestro.mobile.dev/getting-started/installing-maestro)
+[Maestro install instructions](https://docs.maestro.dev/getting-started/installing-maestro)
 
 ### Create a sample app
 
@@ -169,7 +169,7 @@ In some cases, you may run into issues with nested tappable / accessible element
 </TouchableOpacity>
 ```
 
-&#x20;The following command will tap on the nested Text Component:
+The following command will tap on the nested Text Component:
 
 ```yaml
 - tapOn: "I'm a small button"
@@ -179,4 +179,3 @@ In some cases, you may run into issues with nested tappable / accessible element
 
 * [A great introduction to Maestro with React Native](https://dev.to/b42/test-your-react-native-app-with-maestro-5bfj) by Alexander Hodes
 * [E2E testing of React Native apps using EAS and Maestro (Expo documentation)](https://docs.expo.dev/build-reference/e2e-tests/)
-
