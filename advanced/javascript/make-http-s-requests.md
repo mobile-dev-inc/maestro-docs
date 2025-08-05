@@ -1,3 +1,9 @@
+---
+description: >-
+  Make HTTP GET, POST, PUT and DELETE requests in scripts, with headers, body
+  and response handling in Maestro.
+---
+
 # Make HTTP requests
 
 Maestro comes with its own JavaScript HTTP API

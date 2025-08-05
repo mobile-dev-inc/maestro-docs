@@ -1,3 +1,9 @@
+---
+description: >-
+  Execute JavaScript scripts in flows with runScript or evalScript, passing
+  parameters and returning values.
+---
+
 # Run JavaScript
 
 Maestro is not a JavaScript testing framework, but we recognize not everything can (or should) be written in YAML. That's why we have JavaScript support.

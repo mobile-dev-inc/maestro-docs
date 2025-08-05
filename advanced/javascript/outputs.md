@@ -1,3 +1,9 @@
+---
+description: >-
+  Store script results in the output object and use namespaces to avoid
+  conflicts when sharing data in flows.
+---
+
 # Outputs
 
 Though entirely optional, normally one would run a JavaScript code in order to produce a result to be used with other commands.
