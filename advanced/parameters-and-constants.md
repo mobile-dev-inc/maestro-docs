@@ -1,3 +1,9 @@
+---
+description: >-
+  Pass external parameters and set environment variables in flows with env,
+  reusing values via ${}.
+---
+
 # Parameters & Constants
 
 ### External parameters

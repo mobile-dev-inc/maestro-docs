@@ -1,3 +1,9 @@
+---
+description: >-
+  Configure hooks onFlowStart and onFlowComplete to run scripts or flows before
+  and after the main flow.
+---
+
 # onFlowStart / onFlowComplete hooks
 
 ### General

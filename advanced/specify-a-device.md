@@ -1,3 +1,9 @@
+---
+description: >-
+  Select specific devices for testing with --device, list simulators or
+  emulators and use sharding to run flows in parallel.
+---
+
 # Specify a Device
 
 If you have multiple devices open, you can specify which device to run Maestro on. To do this, you must first obtain the device identifier and then pass it to Maestro.
