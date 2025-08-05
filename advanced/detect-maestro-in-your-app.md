@@ -1,3 +1,9 @@
+---
+description: >-
+  Discover if your app is running under Maestro by checking launch arguments,
+  open ports and the window.maestro property.
+---
+
 # Detect Maestro in your app
 
 {% tabs %}
