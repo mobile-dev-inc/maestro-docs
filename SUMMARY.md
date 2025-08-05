@@ -138,7 +138,7 @@
 * [Loops](advanced/loops.md)
 * [Conditions](advanced/conditions.md)
 * [Parameters & Constants](advanced/parameters-and-constants.md)
-* [JavaScript](advanced/javascript/README.md)
+* [Using JavaScript in Maestro](advanced/javascript/README.md)
   * [Run JavaScript](advanced/javascript/run-javascript.md)
   * [Outputs](advanced/javascript/outputs.md)
   * [Logging](advanced/javascript/logging.md)
