@@ -1,3 +1,7 @@
+---
+description: Paste copied text into focused fields in Maestro from copyTextFrom.
+---
+
 # pasteText
 
 Paste any text copied with [copyTextFrom](copytextfrom.md) into the currently focused field.
