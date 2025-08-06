@@ -149,7 +149,7 @@
 * [Specify a Device](advanced/specify-a-device.md)
 * [Configure Permissions](advanced/configuring-permissions.md)
 * [Detect Maestro in your app](advanced/detect-maestro-in-your-app.md)
-* [Configure Maestro driver timeout](advanced/configuring-maestro-driver-timeout.md)
+* [Configure Maestro Driver Timeout for Reliable Tests](advanced/configuring-maestro-driver-timeout.md)
 * [onFlowStart / onFlowComplete hooks](advanced/onflowstart-onflowcomplete-hooks.md)
 * [Test in different locales](advanced/testing-in-different-locales.md)
 * [Structuring your test suite](https://maestro.dev/blog/maestro-best-practices-structuring-your-test-suite)

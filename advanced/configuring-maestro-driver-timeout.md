@@ -1,10 +1,11 @@
 ---
 description: >-
-  Increase the driver startup timeout by setting maestro_driver_startup_timeout
-  to avoid failures in slow pipelines.
+  Set maestro_driver_startup_timeout to extend driver startup time and prevent
+  failures in slow environments. Ideal for end-to-end mobile testing and no-code
+  test automation.
 ---
 
-# Configure Maestro driver timeout
+# Configure Maestro Driver Timeout for Reliable Tests
 
 In some environments with limited performance, such as CI/CD, it may be necessary to increase the maestro driver's default timeout. For this, you can set the environment `MAESTRO_DRIVER_STARTUP_TIMEOUT`, setting how many milliseconds you want.
 
