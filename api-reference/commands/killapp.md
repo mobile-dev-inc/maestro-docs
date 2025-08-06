@@ -1,3 +1,9 @@
+---
+description: >-
+  Terminate app on Android with killApp (stopApp on iOS and Web) to test
+  restarts. This is part of the Maestro end-to-end testing tutorial.
+---
+
 # killApp
 
 The `killApp` command kills the app on Android. On iOS and Web, it's just an alias for `stopApp`.
