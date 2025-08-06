@@ -1,3 +1,9 @@
+---
+description: >-
+  Double tap elements or points in Maestro with configurable delay and
+  selectors. Part of Maestro testing tutorial.
+---
+
 # doubleTapOn
 
 It will double tap on a selected element or point.&#x20;
