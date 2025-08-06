@@ -1,7 +1,7 @@
 ---
 description: >-
-  Execute JavaScript scripts in flows with runScript or evalScript, passing
-  parameters and returning values.
+  Run JavaScript in flows with runScript or evalScript, passing parameters and
+  returning values. Part of Maestro testing tutorial.
 ---
 
 # Run JavaScript
