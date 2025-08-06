@@ -1,7 +1,7 @@
 ---
 description: >-
   Remove characters from text fields with eraseText in Maestro by specifying
-  count. Supports open source testing tool.
+  count.
 ---
 
 # eraseText
