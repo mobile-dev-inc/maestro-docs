@@ -1,7 +1,7 @@
 ---
 description: >-
-  Wait for elements to appear or disappear with timeout in Maestro. Fits
-  end-to-end mobile and web testing.
+  Extract text from images or elements without ID using AI in Maestro and store
+  in variables. For mobile and web testing automation.
 ---
 
 # extractTextWithAI
