@@ -134,7 +134,7 @@
 ## Advanced
 
 * [Nested Flows](advanced/nested-flows.md)
-* [Wait](advanced/wait.md)
+* [Wait Commands in Maestro for Reliable Tests](advanced/wait.md)
 * [Loops](advanced/loops.md)
 * [Conditions](advanced/conditions.md)
 * [Parameters & Constants](advanced/parameters-and-constants.md)

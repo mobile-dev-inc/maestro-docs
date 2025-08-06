@@ -1,4 +1,12 @@
-# Wait
+---
+description: >-
+  Avoid fixed waits; use assertions and extendedWaitUntil in Maestro. Reserve
+  waitForAnimationToEnd for specific cases. Aligns with real device testing.
+---
+
+# Wait Commands in Maestro for Reliable Tests
+
+
 
 {% hint style="warning" %}
 By design, Maestro highly discourages a pattern of introducing artificial wait blocks as we believe that Maestro is already handling that reasonably well. Commands listed below should be used as a last resort in exceptional cases where a longer wait period is required (i.e. waiting for a video to finish)
