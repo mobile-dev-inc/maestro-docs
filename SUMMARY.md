@@ -142,7 +142,7 @@
   * [Run JavaScript](advanced/javascript/run-javascript.md)
   * [Outputs](advanced/javascript/outputs.md)
   * [Logging](advanced/javascript/logging.md)
-  * [Access element text](advanced/javascript/access-element-text.md)
+  * [Access Element Text in Maestro JavaScript](advanced/javascript/access-element-text.md)
   * [Make HTTP requests](advanced/javascript/make-http-s-requests.md)
   * [GraalJS support](advanced/javascript/graaljs-support.md)
   * [JavaScript announcement blog](https://maestro.dev/blog/maestro-announcing-javascript-http-request-support)
