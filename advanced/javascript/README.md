@@ -1,7 +1,8 @@
 ---
 description: >-
-  Use JavaScript in flows for custom logic, environment variables, HTTP
-  functions and Rhino/GraalJS support.
+  Integrate JavaScript in Maestro flows for custom logic, environment variables,
+  HTTP requests, and Rhino/GraalJS support. Fits test automation best practices
+  and Maestro testing tutorial.
 ---
 
 # Using JavaScript in Maestro
