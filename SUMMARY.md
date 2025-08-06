@@ -144,7 +144,7 @@
   * [Logging](advanced/javascript/logging.md)
   * [Access Element Text in Maestro JavaScript](advanced/javascript/access-element-text.md)
   * [Make HTTP requests](advanced/javascript/make-http-s-requests.md)
-  * [GraalJS support](advanced/javascript/graaljs-support.md)
+  * [GraalJS Support in Maestro Scripts](advanced/javascript/graaljs-support.md)
   * [JavaScript announcement blog](https://maestro.dev/blog/maestro-announcing-javascript-http-request-support)
 * [Specify a Device](advanced/specify-a-device.md)
 * [Permissions Setup for iOS and Android Apps](advanced/configuring-permissions.md)
