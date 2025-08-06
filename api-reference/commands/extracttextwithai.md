@@ -1,3 +1,9 @@
+---
+description: >-
+  Wait for elements to appear or disappear with timeout in Maestro. Fits
+  end-to-end mobile and web testing.
+---
+
 # extractTextWithAI
 
 {% hint style="warning" %}
