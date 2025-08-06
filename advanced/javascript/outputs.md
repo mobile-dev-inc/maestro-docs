@@ -1,7 +1,7 @@
 ---
 description: >-
-  Store script results in the output object and use namespaces to avoid
-  conflicts when sharing data in flows.
+  Store results in output object and use namespaces to share data in Maestro
+  flows without conflicts. Follows test automation best practices.
 ---
 
 # Outputs
