@@ -1,7 +1,7 @@
 ---
 description: >-
   Set onFlowStart and onFlowComplete hooks to run scripts or flows before and
-  after main flow. Ideal for no-code test automation.
+  after main flow.
 ---
 
 # Maestro Hooks: onFlowStart and onFlowComplete

@@ -1,8 +1,7 @@
 ---
 description: >-
   Create loops in Maestro flows with repeat command for actions or while
-  conditions are true. Supports open source testing tool and mobile UI
-  automation.
+  conditions are true.
 ---
 
 # Loops

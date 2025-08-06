@@ -1,7 +1,7 @@
 ---
 description: >-
   Extract text from images or elements without ID using AI in Maestro and store
-  in variables. For mobile and web testing automation.
+  in variables.
 ---
 
 # extractTextWithAI

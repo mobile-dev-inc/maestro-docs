@@ -1,10 +1,10 @@
 ---
 description: >-
   Run JavaScript in flows with runScript or evalScript, passing parameters and
-  returning values. Part of Maestro testing tutorial.
+  returning values.
 ---
 
-# Run JavaScript
+# Run JavaScript in Maestro Flows
 
 Maestro is not a JavaScript testing framework, but we recognize not everything can (or should) be written in YAML. That's why we have JavaScript support.
 

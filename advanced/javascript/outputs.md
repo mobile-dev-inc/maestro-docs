@@ -1,7 +1,7 @@
 ---
 description: >-
   Store results in output object and use namespaces to share data in Maestro
-  flows without conflicts. Follows test automation best practices.
+  flows without conflicts.
 ---
 
 # Outputs

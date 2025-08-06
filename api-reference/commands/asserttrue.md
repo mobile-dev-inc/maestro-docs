@@ -1,7 +1,5 @@
 ---
-description: >-
-  Assert JavaScript expressions are true in Maestro flows. Fits end-to-end
-  mobile and web testing.
+description: Assert JavaScript expressions are true in Maestro flows.
 ---
 
 # assertTrue

@@ -1,7 +1,7 @@
 ---
 description: >-
   Verify element disappearance with assertNotVisible using text, ID, or
-  properties. Supports mobile and web UI automation.
+  properties.
 ---
 
 # assertNotVisible

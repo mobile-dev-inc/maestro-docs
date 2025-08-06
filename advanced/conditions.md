@@ -1,8 +1,7 @@
 ---
 description: >-
   Use conditions in Maestro flows to run commands based on visibility, platform,
-  or JavaScript expressions. Supports open source testing tool and mobile UI
-  automation.
+  or JavaScript expressions.
 ---
 
 # Conditions

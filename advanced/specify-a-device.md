@@ -1,7 +1,7 @@
 ---
 description: >-
   Choose devices for testing with --device, list simulators/emulators, and use
-  sharding for parallel runs. Supports iOS and Android test runner.
+  sharding for parallel runs.
 ---
 
 # Specify a Device

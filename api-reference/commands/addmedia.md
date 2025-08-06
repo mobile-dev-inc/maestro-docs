@@ -1,7 +1,5 @@
 ---
-description: >-
-  Add PNG, JPEG, GIF, or MP4 media to device gallery in Maestro tests. Part of
-  Maestro testing tutorial.
+description: Add PNG, JPEG, GIF, or MP4 media to device gallery in Maestro tests.
 ---
 
 # addMedia

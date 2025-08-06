@@ -1,7 +1,7 @@
 ---
 description: >-
   Copy text from elements and store in maestro.copiedText for reuse in tests or
-  scripts. Follows test automation best practices.
+  scripts.
 ---
 
 # copyTextFrom

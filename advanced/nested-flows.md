@@ -1,7 +1,7 @@
 ---
 description: >-
   Call reusable subflows in Maestro with runFlow, including parameters and
-  conditions to reduce duplication. For end-to-end mobile testing.
+  conditions to reduce duplication.
 ---
 
 # Nested Flows

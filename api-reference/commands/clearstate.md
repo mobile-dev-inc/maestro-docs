@@ -1,7 +1,5 @@
 ---
-description: >-
-  Remove all app data with clearState in Maestro for fresh test starts. For real
-  device testing.
+description: Remove all app data with clearState in Maestro for fresh test starts.
 ---
 
 # clearState

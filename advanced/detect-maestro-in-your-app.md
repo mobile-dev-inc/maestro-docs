@@ -1,8 +1,7 @@
 ---
 description: >-
   Check if your app runs under Maestro by inspecting launch arguments, open
-  ports, and window.maestro property. Useful for web, cloud-based mobile CI and
-  real device testing.
+  ports, and window.maestro property.
 ---
 
 # Detect Maestro in your app

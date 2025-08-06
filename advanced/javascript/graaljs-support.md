@@ -1,8 +1,7 @@
 ---
 description: >-
   Activate GraalJS engine for improved scope and ES6 support in Maestro scripts
-  via config or environment variable. For end-to-end mobile and web testing
-  automation.
+  via config or environment variable.
 ---
 
 # GraalJS Support in Maestro Scripts

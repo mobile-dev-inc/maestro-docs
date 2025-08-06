@@ -1,8 +1,7 @@
 ---
 description: >-
   Configure iOS and Android app permissions in Maestro tests, including camera,
-  location, and other services. Works with iOS app testing framework and Android
-  test runner.
+  location, and other services.
 ---
 
 # Permissions Setup for iOS and Android Apps

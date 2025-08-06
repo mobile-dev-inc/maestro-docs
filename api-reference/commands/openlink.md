@@ -1,7 +1,7 @@
 ---
 description: >-
   Open links or deep links in apps or browser with Maestro, bypassing iOS
-  security. Part of Maestro testing tutorial.
+  security.
 ---
 
 # openLink

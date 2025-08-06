@@ -1,7 +1,7 @@
 ---
 description: >-
   Terminate app on Android with killApp (stopApp on iOS and Web) to test
-  restarts. This is part of the Maestro end-to-end testing tutorial.
+  restarts.
 ---
 
 # killApp

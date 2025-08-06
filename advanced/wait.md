@@ -1,7 +1,7 @@
 ---
 description: >-
   Avoid fixed waits; use assertions and extendedWaitUntil in Maestro. Reserve
-  waitForAnimationToEnd for specific cases. Aligns with real device testing.
+  waitForAnimationToEnd for specific cases.
 ---
 
 # Wait Commands in Maestro for Reliable Tests

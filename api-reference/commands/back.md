@@ -1,7 +1,5 @@
 ---
-description: >-
-  Navigate back on Android with back command in Maestro UI tests. Supports
-  Android test runner.
+description: Navigate back on Android with back command in Maestro UI tests.
 ---
 
 # back
