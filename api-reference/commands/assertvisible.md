@@ -1,3 +1,9 @@
+---
+description: >-
+  Confirm element visibility with assertVisible, waiting for appearance and
+  state checks.
+---
+
 # assertVisible
 
 To assert whether an element is **visible**, use the following command that takes the same parameters as `tapOn`
