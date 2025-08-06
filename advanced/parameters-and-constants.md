@@ -1,7 +1,7 @@
 ---
 description: >-
-  Pass external parameters and set environment variables in flows with env,
-  reusing values via ${}.
+  Pass parameters and set environment variables in Maestro flows with env and
+  reuse via ${}.
 ---
 
 # Parameters & Constants
