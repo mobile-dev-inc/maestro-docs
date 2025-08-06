@@ -1,7 +1,7 @@
 ---
 description: >-
-  Create devices with specific language and country using maestro start-device
-  --device-locale to test in different locales.
+  Create devices with specific locales using maestro start-device
+  --device-locale for localized testing.
 ---
 
 # Test in different locales
