@@ -1,7 +1,8 @@
 ---
 description: >-
-  Copy text from UI elements with copyTextFrom and access it via
-  maestro.copiedText in JavaScript scripts.
+  Copy text from UI elements using copyTextFrom and access via
+  maestro.copiedText in JavaScript. Supports open source testing tool, web and
+  mobile UI automation.
 ---
 
 # Access element text
