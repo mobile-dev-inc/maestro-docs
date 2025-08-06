@@ -1,3 +1,9 @@
+---
+description: >-
+  Verify element disappearance with assertNotVisible using text, ID, or
+  properties. Supports mobile and web UI automation.
+---
+
 # assertNotVisible
 
 To assert whether an element is **not visible**, use the following command that takes the same parameters as `tapOn`
