@@ -1,10 +1,10 @@
 ---
 description: >-
-  Configure hooks onFlowStart and onFlowComplete to run scripts or flows before
-  and after the main flow.
+  Set onFlowStart and onFlowComplete hooks to run scripts or flows before and
+  after main flow. Ideal for no-code test automation.
 ---
 
-# onFlowStart / onFlowComplete hooks
+# Maestro Hooks: onFlowStart and onFlowComplete
 
 ### General
 
