@@ -1,3 +1,9 @@
+---
+description: >-
+  Copy text from elements and store in maestro.copiedText for reuse in tests or
+  scripts. Follows test automation best practices.
+---
+
 # copyTextFrom
 
 You can copy text from an element and save it in-memory, to paste later. To find the element you wish to copy text from you can use Selectors. For a full list of what selectors are available, please refer to the [Selectors](../selectors.md) page.
