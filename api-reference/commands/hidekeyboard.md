@@ -1,3 +1,7 @@
+---
+description: Hide virtual keyboard in Maestro tests; note potential instability on iOS.
+---
+
 # hideKeyboard
 
 ### hideKeyboard
