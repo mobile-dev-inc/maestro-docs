@@ -139,7 +139,7 @@
 * [Conditions](advanced/conditions.md)
 * [Parameters & Constants](advanced/parameters-and-constants.md)
 * [Using JavaScript in Maestro](advanced/javascript/README.md)
-  * [Run JavaScript](advanced/javascript/run-javascript.md)
+  * [Run JavaScript in Maestro Flows](advanced/javascript/run-javascript.md)
   * [Outputs](advanced/javascript/outputs.md)
   * [Logging](advanced/javascript/logging.md)
   * [Access Element Text in Maestro JavaScript](advanced/javascript/access-element-text.md)
