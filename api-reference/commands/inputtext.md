@@ -1,3 +1,9 @@
+---
+description: >-
+  Enter text into fields in Maestro, including random emails, names, or numbers
+  with length.
+---
+
 # inputText
 
 Inputs text (regardless of whether any text field is currently focused or not)
