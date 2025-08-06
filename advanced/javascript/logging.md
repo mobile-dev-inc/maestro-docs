@@ -1,7 +1,7 @@
 ---
 description: >-
-  Debug JavaScript scripts in Maestro using console.log and evalScript to log
-  values during tests.
+  Log values in Maestro JavaScript scripts with console.log and evalScript for
+  debugging. Aligns with iOS app testing framework and Android test runner.
 ---
 
 # Logging
