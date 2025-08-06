@@ -1,3 +1,9 @@
+---
+description: >-
+  Remove characters from text fields with eraseText in Maestro by specifying
+  count. Supports open source testing tool.
+---
+
 # eraseText
 
 The  `eraseText` command removes characters from the currently selected text field (if any) and can be used as such:
