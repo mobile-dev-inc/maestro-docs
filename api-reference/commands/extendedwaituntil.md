@@ -1,6 +1,12 @@
+---
+description: >-
+  Wait for elements to appear or disappear with timeout in Maestro. Fits
+  end-to-end mobile and web testing.
+---
+
 # extendedWaitUntil
 
-Waits until an element becomes visible. Fails if the element is not visible after the timeout expires. This command will complete as soon as element becomes visible and is not going to wait for timeout to expire.&#x20;
+Waits until an element becomes visible. Fails if the element is not visible after the timeout expires. This command will complete as soon as element becomes visible and is not going to wait for timeout to expire.
 
 For an exhaustive list of selectors that can be used, please refer to the [Selectors](../selectors.md) page.
 
