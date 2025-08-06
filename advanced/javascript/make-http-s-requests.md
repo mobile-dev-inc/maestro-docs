@@ -1,7 +1,7 @@
 ---
 description: >-
-  Make HTTP GET, POST, PUT and DELETE requests in scripts, with headers, body
-  and response handling in Maestro.
+  Perform HTTP GET, POST, PUT, DELETE requests in Maestro scripts with headers,
+  body, and response handling.
 ---
 
 # Make HTTP requests
