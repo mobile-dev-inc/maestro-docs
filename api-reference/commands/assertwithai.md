@@ -1,3 +1,7 @@
+---
+description: Verify complex UI with AI descriptions in Maestro and generate reports.
+---
+
 # assertWithAI
 
 {% hint style="warning" %}
