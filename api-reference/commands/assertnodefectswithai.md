@@ -1,3 +1,9 @@
+---
+description: >-
+  Detect UI defects like clipped text or overlaps using experimental AI in
+  Maestro and generate reports.
+---
+
 # assertNoDefectsWithAi
 
 {% hint style="warning" %}

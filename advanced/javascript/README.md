@@ -1,4 +1,10 @@
-# JavaScript
+---
+description: >-
+  Integrate JavaScript in Maestro flows for custom logic, environment variables,
+  HTTP requests, and Rhino/GraalJS support.
+---
+
+# Using JavaScript in Maestro
 
 Maestro supports a minimal subset of vanilla JavaScript APIs with some purpose-built Maestro extensions. Though none of the functions that allow interaction with the OS are available (i.e. there is no access to the filesystem, no ability to require or import libraries), those scripts offer just enough functionality to write more sophisticated conditions, perform calculations or constructions, and to make HTTP requests.
 

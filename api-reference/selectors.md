@@ -97,3 +97,11 @@ That's because square brackets have meaning in regular expressions. Instead, you
 ```yaml
 - assertVisible: 'Movies \[NEW\]'
 ```
+
+
+
+### Should I use text or IDs?
+
+Text selectors are good when text is static. They improve the readability and intent of your tests. Anyone can come along and read what you're tapping / inputting / asserting without referring to other files. This is a massive benefit when it comes to maintenance, or to new people joining your project.
+
+ID selectors are great when you just want to target something consistently, regardless of content. They're stable, great for more dynamic content, good for icons without text (like back buttons), and applications with internationalization.

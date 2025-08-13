@@ -1,3 +1,9 @@
+---
+description: >-
+  Log values in Maestro JavaScript scripts with console.log and evalScript for
+  debugging.
+---
+
 # Logging
 
 Maestro supports logging to the console via `console.log`.

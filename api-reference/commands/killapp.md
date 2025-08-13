@@ -1,3 +1,9 @@
+---
+description: >-
+  Terminate app on Android with killApp (stopApp on iOS and Web) to test
+  restarts.
+---
+
 # killApp
 
 The `killApp` command kills the app on Android. On iOS and Web, it's just an alias for `stopApp`.

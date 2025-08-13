@@ -1,3 +1,9 @@
+---
+description: >-
+  Store results in output object and use namespaces to share data in Maestro
+  flows without conflicts.
+---
+
 # Outputs
 
 Though entirely optional, normally one would run a JavaScript code in order to produce a result to be used with other commands.

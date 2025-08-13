@@ -1,4 +1,10 @@
-# onFlowStart / onFlowComplete hooks
+---
+description: >-
+  Set onFlowStart and onFlowComplete hooks to run scripts or flows before and
+  after main flow.
+---
+
+# Maestro Hooks: onFlowStart and onFlowComplete
 
 ### General
 

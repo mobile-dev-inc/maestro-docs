@@ -1,3 +1,7 @@
+---
+description: Assert JavaScript expressions are true in Maestro flows.
+---
+
 # assertTrue
 
 Asserts whether given value is either true, non-empty, or _truthy_ ([in JavaScript terms](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)):

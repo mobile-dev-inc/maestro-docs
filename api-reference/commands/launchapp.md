@@ -1,6 +1,8 @@
+---
+description: Launch app in Maestro with appId, clear state/keychain, and launch arguments.
+---
+
 # launchApp
-
-
 
 To launch the app under test, simply write:
 
@@ -37,7 +39,7 @@ If you want to test with a permission with a specific value, specify a permissio
 
 ### Launch Arguments
 
-You can send launch arguments while launching the app for both iOS and Android.&#x20;
+You can send launch arguments while launching the app for both iOS and Android.
 
 #### Sending launch arguments
 

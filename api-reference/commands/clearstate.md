@@ -1,3 +1,7 @@
+---
+description: Remove all app data with clearState in Maestro for fresh test starts.
+---
+
 # clearState
 
 Clears the application state:

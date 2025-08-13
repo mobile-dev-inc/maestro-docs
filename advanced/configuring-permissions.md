@@ -1,4 +1,10 @@
-# Configure Permissions
+---
+description: >-
+  Configure iOS and Android app permissions in Maestro tests, including camera,
+  location, and other services.
+---
+
+# Permissions Setup for iOS and Android Apps
 
 By default, all permissions are set to `allow` by the launchApp command. It is possible to launch an app with custom permissions behaviour by passing the `permissions` argument to `launchApp`:
 

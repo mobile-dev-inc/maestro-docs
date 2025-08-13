@@ -1,3 +1,9 @@
+---
+description: >-
+  Use conditions in Maestro flows to run commands based on visibility, platform,
+  or JavaScript expressions.
+---
+
 # Conditions
 
 {% hint style="warning" %}

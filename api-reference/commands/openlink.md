@@ -1,3 +1,9 @@
+---
+description: >-
+  Open links or deep links in apps or browser with Maestro, bypassing iOS
+  security.
+---
+
 # openLink
 
 To open a link on a device (i.e. a deep link):

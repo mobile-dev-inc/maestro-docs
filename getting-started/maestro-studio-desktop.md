@@ -27,9 +27,9 @@ Skip the terminal 🙅‍♂️
 ### Quick Start <a href="#id-2508" id="id-2508"></a>
 
 1. **Download & install** for your OS (⬆ buttons above).
-2. **Connect a device**&#x20;
+2. **Connect a device**
 3. **Create a new test**
-4. **Click\_Run flow**
+4. **Click [▶︎ Run Locally]** (or [☁️ Run on Cloud])
 
 ### _Trusted by the worlds best teams:_
 

@@ -1,3 +1,7 @@
+---
+description: Run inline JavaScript snippets in Maestro YAML for quick tasks.
+---
+
 # evalScript
 
 For more information regarding JavaScript, please refer to the Javascript section:

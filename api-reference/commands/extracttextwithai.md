@@ -1,3 +1,9 @@
+---
+description: >-
+  Extract text from images or elements without ID using AI in Maestro and store
+  in variables.
+---
+
 # extractTextWithAI
 
 {% hint style="warning" %}

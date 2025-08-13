@@ -1,4 +1,10 @@
-# GraalJS support
+---
+description: >-
+  Activate GraalJS engine for improved scope and ES6 support in Maestro scripts
+  via config or environment variable.
+---
+
+# GraalJS Support in Maestro Scripts
 
 It is possible to use the [GraalJS](https://github.com/oracle/graaljs) runtime instead of [Rhino](https://github.com/mozilla/rhino) for JavaScript evaluation. GraalJS is fully ECMAScript 2022 compliant while Rhino only supports ECMAScript 5.
 
