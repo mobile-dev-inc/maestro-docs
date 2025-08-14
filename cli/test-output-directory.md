@@ -47,8 +47,3 @@ The configured directory will contain:
 {% hint style="info" %}
 The directory will be created automatically if it doesn't exist.
 {% endhint %}
-
-## Related
-
-- [Tags](tags.md) - Filtering tests with tags
-- [Debug Output](../troubleshooting/debug-output.md) - Troubleshooting test artifacts
