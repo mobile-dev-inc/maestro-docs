@@ -75,6 +75,7 @@
 
 * [Cloud](cli/cloud.md)
 * [Test Suites & Reports](cli/test-suites-and-reports.md)
+* [Test Output Directory](cli/test-output-directory.md)
 * [Tags](cli/tags.md)
 * [Record Your Flow](cli/recording-your-flow.md)
 * [Continuous Mode](cli/continuous-mode.md)

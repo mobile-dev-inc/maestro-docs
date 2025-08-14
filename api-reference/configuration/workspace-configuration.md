@@ -12,6 +12,7 @@ The following properties can be configured on the workspace as a whole as part o
 * `executionOrder`: the order to run sequential tests before running remaining tests ([docs](../../cli/test-suites-and-reports.md#sequential-execution)).
 * `baselineBranch`: Which branch is your baseline. Useful when integrating with Pull Requests ([docs](https://docs.maestro.dev/cloud/pull-request-integration)). Cloud only.
 * `notifications`: Who to notify after an Upload finishes processing ([docs](../../cloud/reference/email-notifications.md)). Cloud only. You might prefer the [Slack integration](../../cloud/reference/slack-notifications.md).
+* `testOutputDir`: directory where test artifacts (screenshots, logs, AI reports) are stored ([docs](../../cli/test-output-directory.md)).
 
 ## Platform Configuration
 
@@ -41,17 +42,20 @@ Below is an example Maestro workspace configuration file. Typically it's named `
 
 ```yaml
 flows:
-  - "subFolder/*"
+  - 'subFolder/*'
 includeTags:
   - tagNameToInclude
 excludeTags:
   - tagNameToExclude
 executionOrder:
-    continueOnFailure: false # default is true
-    flowsOrder:
-        - flowA
-        - flowB
-  
+  continueOnFailure: false # default is true
+  flowsOrder:
+    - flowA
+    - flowB
+
+# Customised test output directory
+testOutputDir: ~/maestro-artifacts
+
 # Cloud only config options
 baselineBranch: main
 notifications:
@@ -59,7 +63,7 @@ notifications:
     enabled: true
     recipients:
       - john@example.com
-      
+
 # Platform Configuration
 platform:
   ios:

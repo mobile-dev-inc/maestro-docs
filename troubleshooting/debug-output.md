@@ -31,11 +31,18 @@ maestro test --debug-output /path/to/debug/logs
 
 ### Configurable Test Output Directory
 
-You can also configure where Maestro stores test artifacts (screenshots, logs, and AI reports) by using the `--test-output-dir` option. Example usage:
+You can configure where Maestro stores test artifacts (screenshots, logs, and AI reports) using either:
+
+1. **Command line option**: `--test-output-dir`
+2. **Workspace configuration**: `testOutputDir` in `config.yaml`
 
 ```bash
 maestro test workspace --test-output-dir=~/User/your_maestro_output_directory
 ```
+
+Command line flag takes priority over workspace config, with fallback to default behavior.
+
+For detailed configuration options, see the [Test Output Directory documentation](../cli/test-output-directory.md).
 
 {% hint style="info" %}
 Device logs are not supported but it's something we plan to add
