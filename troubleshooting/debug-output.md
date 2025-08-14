@@ -29,6 +29,14 @@ You can also configure the default path for debug output by using the `--debug-o
 maestro test --debug-output /path/to/debug/logs
 ```
 
+### Configurable Test Output Directory
+
+You can also configure where Maestro stores test artifacts (screenshots, logs, and AI reports) by using the `--test-output-dir` option. Example usage:
+
+```bash
+maestro test workspace --test-output-dir=~/User/your_maestro_output_directory
+```
+
 {% hint style="info" %}
 Device logs are not supported but it's something we plan to add
 {% endhint %}
