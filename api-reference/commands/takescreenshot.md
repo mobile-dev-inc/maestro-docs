@@ -15,6 +15,6 @@ It can also be written in the short form:
 
 ### Path
 
-The path is relative to the Maestro workspace directory, not to the flow file.
+Screenshots are saved to a `.maestro` folder inside your workspace by default. You can override that location by using the `--test-output-dir` flag when running `maestro test`. For more details, see [Test Output Directory](../../cli/test-output-directory.md).
 
-Screenshots are saved to a `.maestro` folder inside your workspace by default. You can override that location by using the `--test-output-dir` flag when running `maestro test`.
+The path is relative to the Maestro workspace directory, not to the flow file.
