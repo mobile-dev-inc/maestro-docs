@@ -50,6 +50,5 @@ The directory will be created automatically if it doesn't exist.
 
 ## Related
 
-- [Test Suites & Reports](test-suites-and-reports.md) - Running multiple tests and generating reports
 - [Tags](tags.md) - Filtering tests with tags
 - [Debug Output](../troubleshooting/debug-output.md) - Troubleshooting test artifacts
