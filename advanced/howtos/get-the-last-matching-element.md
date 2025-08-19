@@ -109,4 +109,3 @@ This helper, probably used as a subflow, loops through visible elements for a gi
           throw new Error("No elements found matching selector: " + SELECTOR_TYPE + '="' + SELECTOR_VALUE + '"');>
 ```
 
-It's a little long, given the repetition to support matching either a text or an id selector.
