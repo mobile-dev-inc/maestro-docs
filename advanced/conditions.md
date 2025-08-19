@@ -104,6 +104,27 @@ Usage of JavaScript conditions is possible via `true` condition:
     file: subflow.yaml
 ```
 
+It's also possible to do platform detection in JavaScript:
+
+```yaml
+- runFlow:
+    when:
+      true: ${maestro.platform == 'android'}
+    file: subflow.yaml
+```
+
+```javascript
+if (maestro.platform == 'android'){
+    output.searchTerm = 'robots'
+}
+if (maestro.platform == 'ios'){
+    output.searchTerm = 'apples'
+}
+if (maestro.platform == 'web'){
+    output.searchTerm = 'spiders'
+}
+```
+
 {% content-ref url="javascript/" %}
 [javascript](javascript/)
 {% endcontent-ref %}

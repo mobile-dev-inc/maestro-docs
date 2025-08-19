@@ -155,17 +155,20 @@
 * [Maestro Hooks: onFlowStart and onFlowComplete](advanced/onflowstart-onflowcomplete-hooks.md)
 * [Test in different locales](advanced/testing-in-different-locales.md)
 * [Structuring your test suite](https://maestro.dev/blog/maestro-best-practices-structuring-your-test-suite)
+* [Recipes](advanced/howtos/README.md)
+  * [scrollUntilVisible for fragments](advanced/howtos/scrolluntilvisible-for-fragments.md)
+  * [Choosing images from the gallery](advanced/howtos/choosing-images-from-the-gallery.md)
+  * [Get the last matching element](advanced/howtos/get-the-last-matching-element.md)
+  * [Downloading and opening a file](advanced/howtos/downloading-and-opening-a-file.md)
 
 ## Troubleshooting
 
 * [Known Issues](troubleshooting/known-issues.md)
-* [Frequently Asked Questions](troubleshooting/frequently-asked-questions.md)
+* [Frequently Asked Questions](troubleshooting/frequently-asked-questions/README.md)
+  * [Arranging your repository for Maestro tests](troubleshooting/frequently-asked-questions/arrange-your-repository-for-maestro-tests.md)
 * [Bug Report](troubleshooting/bug-report.md)
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)
 * [Debug Output](troubleshooting/debug-output.md)
-* [HOWTOs](troubleshooting/howtos/README.md)
-  * [Arrange your repository for Maestro tests](troubleshooting/howtos/arrange-your-repository-for-maestro-tests.md)
-  * [scrollUntilVisible for fragments](troubleshooting/howtos/scrolluntilvisible-for-fragments.md)
 
 ## Community
 

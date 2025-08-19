@@ -154,7 +154,28 @@ appId: com.appID
 // Test Steps
 ```
 
-## Cross-platform example
+### Using Regular Expressions
+
+Just because you're using a Page Object Model, doesn't mean that you can't take advantage of Maestro's ability to default all text and id selectors as regular expressions. This becomes super-handy for dynamic values or cross-platform rendering differences.
+
+Without POM:
+
+```yaml
+- assertVisible:   # Check that the personalised welcome banner is displayed
+    text: 'Welcome back, .*'
+```
+
+With POM:
+
+<pre class="language-javascript"><code class="lang-javascript"><strong>output.welcomeBanner = 'Welcome back, (.*)'
+</strong></code></pre>
+
+```yaml
+- assertVisible:   # Check that the personalised welcome banner is displayed
+    text: ${output.welcomeBanner}
+```
+
+Cross-platform example
 
 If you have the same app across both Android and iOS but the elements have different IDs, you can employ `runFlow` with a platform conditional to load in the correct elements.
 
