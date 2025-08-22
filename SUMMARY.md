@@ -155,11 +155,11 @@
 * [Maestro Hooks: onFlowStart and onFlowComplete](advanced/onflowstart-onflowcomplete-hooks.md)
 * [Test in different locales](advanced/testing-in-different-locales.md)
 * [Structuring your test suite](https://maestro.dev/blog/maestro-best-practices-structuring-your-test-suite)
-* [Recipes](advanced/howtos/README.md)
-  * [scrollUntilVisible for fragments](advanced/howtos/scrolluntilvisible-for-fragments.md)
-  * [Choosing images from the gallery](advanced/howtos/choosing-images-from-the-gallery.md)
-  * [Get the last matching element](advanced/howtos/get-the-last-matching-element.md)
-  * [Downloading and opening a file](advanced/howtos/downloading-and-opening-a-file.md)
+* [Recipes](advanced/recipes/README.md)
+  * [scrollUntilVisible for fragments](advanced/recipes/scrolluntilvisible-for-fragments.md)
+  * [Choosing images from the gallery](advanced/recipes/choosing-images-from-the-gallery.md)
+  * [Get the last matching element](advanced/recipes/get-the-last-matching-element.md)
+  * [Downloading and opening a file](advanced/recipes/downloading-and-opening-a-file.md)
 
 ## Troubleshooting
 
