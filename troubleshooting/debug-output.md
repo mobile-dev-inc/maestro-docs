@@ -37,7 +37,7 @@ You can configure where Maestro stores test artifacts (screenshots, logs, and AI
 2. **Workspace configuration**: `testOutputDir` in `config.yaml`
 
 ```bash
-maestro test workspace --test-output-dir=~/User/your_maestro_output_directory
+maestro test workspace --test-output-dir=test_output_directory
 ```
 
 Command line flag takes priority over workspace config, with fallback to default behavior.
