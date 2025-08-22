@@ -54,7 +54,7 @@ executionOrder:
     - flowB
 
 # Customised test output directory
-testOutputDir: ~/maestro-artifacts
+testOutputDir: debug_output_directory
 
 # Cloud only config options
 baselineBranch: main
