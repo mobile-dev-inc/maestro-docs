@@ -14,7 +14,7 @@ In Maestro you can choose to target the n<sup>th</sup> element matching a select
 
 What if you want the last item on the screen, but don't know how many there are? That's harder, and requires an algorithmic approach.
 
-This helper, probably used as a subflow, loops through visible elements for a given selector, and returns the index of the last matching element.&#x20;
+This helper comes courtesy of [Ben Sussman](https://github.com/bensussman) from Pomelo Care, probably best used as a subflow, loops through visible elements for a given selector, and returns the index of the last matching element.&#x20;
 
 ```
 # A reusable helper to find the last element matching a given selector.
@@ -108,4 +108,3 @@ This helper, probably used as a subflow, loops through visible elements for a gi
       - evalScript: |
           throw new Error("No elements found matching selector: " + SELECTOR_TYPE + '="' + SELECTOR_VALUE + '"');>
 ```
-
