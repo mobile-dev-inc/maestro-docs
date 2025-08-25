@@ -21,11 +21,16 @@ Unfortunately unicode characters are not supported yet in Android platform. Foll
 There are several convenience methods for entering a random text input:
 
 ```yaml
-- inputRandomEmail       # Enters a random Email address
-- inputRandomPersonName  # Enters a random person name
-- inputRandomNumber      # Enters a random integer number
-- inputRandomText        # Enters random unstructured text
+- inputRandomEmail         # Enters a random Email address
+- inputRandomPersonName    # Enters a random person name
+- inputRandomNumber        # Enters a random integer number
+- inputRandomText          # Enters random unstructured text
+- inputRandomCityName      # Enters a random city name, worldwide
+- inputRandomCountryName   # Enters the name of a random country
+- inputRandomColorName     # Enters a random colour. Might be multiple words.
 ```
+
+Note: Since Maestro v2.0, the implementation behind the random commands was changed to use [DataFaker](https://www.datafaker.net/), which gives a much wider spread of random data than was available in Maestro v1.x.
 
 #### Length
 
