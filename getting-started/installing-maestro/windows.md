@@ -5,7 +5,7 @@ description: A step by step guide to installing Maestro on Windows
 # Windows
 
 {% hint style="info" %}
-**Prerequisites:** Maestro requires **Java 17 or higher**. You can verify your Java version with `java --version`.
+**Prerequisites:** Maestro requires **Java 17 or higher**. You can verify your Java version with `java -version`.
 {% endhint %}
 
 ## Option 1: Installation on Windows
@@ -64,7 +64,7 @@ Note: It's more involved than installing Maestro on Windows directly, and requir
    1. To check if your ANDROID_HOME setup is correctly done, open a PowerShell terminal and run this command `adb --version.`
    2. Note down the ADB version.
 4. Install Java JDK 17 or higher and set JAVA_HOME
-   1. Run `java --version` to check if Java 17+ is installed correctly.
+   1. Run `java -version` to check if Java 17+ is installed correctly.
 
 ### Steps
 

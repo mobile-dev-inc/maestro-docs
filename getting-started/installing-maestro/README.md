@@ -5,7 +5,7 @@
 Maestro requires **Java 17 or higher** to be installed on your system. You can verify your Java version by running:
 
 ```bash
-java --version
+java -version
 ```
 
 If you don't have Java 17 or higher installed, you can download it from:
