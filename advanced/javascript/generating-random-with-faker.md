@@ -25,4 +25,4 @@ jsEngine: graaljs
 - evalScript: ${console.log('Random number between 1 and 10 = ' + output.thisNumber)}
 ```
 
-Note: This works in the default engine, GraalJS. It will not work in the Rhino engine.
+**Note**: This works in the default engine, GraalJS. It will not work in the Rhino engine.
