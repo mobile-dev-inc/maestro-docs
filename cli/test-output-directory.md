@@ -7,7 +7,7 @@ Maestro stores test artifacts such as screenshots, logs, and AI reports during t
 Use the `--test-output-dir` option to specify the output directory for a specific test run:
 
 ```bash
-maestro test workspace --test-output-dir=/your_maestro_output_directory
+maestro test workspace --test-output-dir=test_output_directory
 ```
 
 {% hint style="info" %}
@@ -20,7 +20,7 @@ Add the `testOutputDir` field to your `config.yaml` file for persistent configur
 
 ```yaml
 # .maestro/config.yaml
-testOutputDir: /your_maestro_output_directory
+testOutputDir: test_output_directory
 ```
 
 {% hint style="info" %}

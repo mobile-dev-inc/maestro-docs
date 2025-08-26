@@ -28,7 +28,7 @@ appId: your.app.id
 In a similar fashion, parameters can be passed to `maestro cloud` command:
 
 ```
-maestro cloud -e USERNAME=user@example.com PASSWORD=123 app.apk file.yaml
+maestro cloud -e USERNAME=user@example.com -e PASSWORD=123 app.apk file.yaml
 ```
 
 ### Inline parameters
