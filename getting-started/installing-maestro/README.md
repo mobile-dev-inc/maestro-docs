@@ -1,5 +1,19 @@
 # Installing Maestro
 
+## Prerequisites
+
+Maestro requires **Java 17 or higher** to be installed on your system. You can verify your Java version by running:
+
+```bash
+java -version
+```
+
+If you don't have Java 17 or higher installed, you can download it from:
+
+- [Oracle JDK](https://www.oracle.com/java/technologies/downloads/)
+- [OpenJDK](https://openjdk.org/install/)
+- Or use a version manager like [SDKMAN!](https://sdkman.io/)
+
 ## Installing the CLI
 
 {% hint style="info" %}
