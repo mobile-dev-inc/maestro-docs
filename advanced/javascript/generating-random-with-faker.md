@@ -9,7 +9,7 @@ From Maestro 2.0, you can use DataFaker in JavaScript to generate all kinds of r
 
 As well as the other well known objects in Maestro's JavaScript engine, such as `output` and `maestro`, there's now also a `faker`. This is based on DataFaker, and works the same way as it would in Java ([see their docs](https://www.datafaker.net/documentation/getting-started/#usage)), including all of their [Providers](https://www.datafaker.net/documentation/providers/).
 
-Thses are available in JavaScript files called via [runScript](../../api-reference/commands/runscript.md), or any JavaScript expression. The examples below use [evalScript](../../api-reference/commands/evalscript.md), but commands like [inputText](../../api-reference/commands/inputtext.md) also accept JavaScript expressions.
+These are available in JavaScript files called via [runScript](../../api-reference/commands/runscript.md), or any JavaScript expression. The examples below use [evalScript](../../api-reference/commands/evalscript.md), but commands like [inputText](../../api-reference/commands/inputtext.md) also accept JavaScript expressions.
 
 ```yaml
 appId: com.example.app
