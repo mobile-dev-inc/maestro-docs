@@ -145,6 +145,7 @@
   * [Outputs](advanced/javascript/outputs.md)
   * [Logging](advanced/javascript/logging.md)
   * [Access Element Text in Maestro JavaScript](advanced/javascript/access-element-text.md)
+  * [Generating Random Data](advanced/javascript/generating-random-with-faker.md)
   * [Make HTTP requests](advanced/javascript/make-http-s-requests.md)
   * [GraalJS Support in Maestro Scripts](advanced/javascript/graaljs-support.md)
   * [JavaScript announcement blog](https://maestro.dev/blog/maestro-announcing-javascript-http-request-support)
