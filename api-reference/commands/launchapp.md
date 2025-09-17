@@ -37,6 +37,8 @@ If you want to test with a permission with a specific value, specify a permissio
         android.permission.ACCESS_FINE_LOCATION: deny # Android fine location permission is denied
 ```
 
+You can read more about configuring permissions [here](../../advanced/configuring-permissions.md).&#x20;
+
 ### Launch Arguments
 
 You can send launch arguments while launching the app for both iOS and Android.
