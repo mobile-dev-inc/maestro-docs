@@ -2,7 +2,7 @@
 
 To have control over the swipe gesture, you have the following choices:
 
-#### **Relative Swipe Using Percentages**
+### Relative Swipe Using Percentages
 
 You can specify start and end coordinates in percentages to make the swipe gesture consistent across different screen dimensions:
 
@@ -12,7 +12,7 @@ You can specify start and end coordinates in percentages to make the swipe gestu
     end: 10%, 50% # To (10% of width, 50% of height)
 ```
 
-#### **Swiping Directions**&#x20;
+### Swiping Directions
 
 Swiping in RIGHT, LEFT, UP, or DOWN directions:
 
@@ -34,7 +34,7 @@ Relative start and end coordinates for directional swipe are configured as follo
 
 A common use case for this is to swipe the onboarding pages.
 
-#### **Swiping elements**
+### Swiping elements
 
 You can also specify elements as a starting point for swipe commands. It will swipe from the middle of the element in the direction you specify. Example:
 
@@ -48,7 +48,7 @@ You can also specify elements as a starting point for swipe commands. It will sw
 
 Note that you can use any selector here to target an element to swipe from. Please refer to the [Selectors](../selectors.md) page for a full list of available selectors.
 
-#### **Swiping Coordinates**
+### Swiping Coordinates
 
 You can also specify start and end points for the swipe to have more control:
 
@@ -62,7 +62,7 @@ You can also specify start and end points for the swipe to have more control:
 It is not recommended to use absolute coordinates when swiping as this might mean that your test won't work on a device with a different screen configuration.
 {% endhint %}
 
-#### Swiping speed
+### Swiping speed
 
 To control swiping speed you can use duration in the swipe command. The more the duration slower the swipe. By default, the swipe command uses 400 milliseconds. To configure speed you can use:
 
@@ -72,3 +72,21 @@ To control swiping speed you can use duration in the swipe command. The more the
     duration: 2000      # Values are in ms.
 ```
 
+### Control wait time
+
+Maestro usually waits for the screen to settle before moving to the next command, however that is not always desirable.
+
+If your app or screen has the following:
+
+* Moving elements like a countdown timer
+* Non-blocking animations that are part of the UI
+
+Then, you can use `waitToSettleTimeoutMs` to limit the time Maestro waits for things to settle
+
+```yaml
+- swipe:
+    direction: UP
+    waitToSettleTimeoutMs: 500 # ms
+```
+
+**Note:** This will be a best effort timeout. Maestro will not interrupt core operations to honor the timeout.
