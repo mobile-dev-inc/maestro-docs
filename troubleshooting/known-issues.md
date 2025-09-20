@@ -55,6 +55,20 @@ or:
 
 This error is common on physical devices by Oppo. The workaround is to return to the Developer Settings where ADB Debugging was enabled, and disable 'Verify apps over USB'. Some users have reported needing to enable "Disable permission monitoring" too.
 
+### WebView elements can't be seen by Maestro
+
+Occasionally, web technology renders a page that present a challenge to the OS-native accessibility APIs that Maestro uses. In these cases, you can add `androidWebViewHierarchy: devtools` to the top of your flow so that Maestro can get help from Chrome's DevTools to understand what's on the screen.
+
+```yaml
+appId: com.example
+androidWebViewHierarchy: devtools
+---
+- tapOn: Open WebView
+- assertVisible: My button
+```
+
+Note: support for this in Maestro Studio Desktop is still to come!
+
 ## iOS
 
 ### `hideKeyboard` command is flaky
