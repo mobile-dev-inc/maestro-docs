@@ -39,6 +39,48 @@ If you want to test with a permission with a specific value, specify a permissio
 
 You can read more about configuring permissions [here](../../advanced/configuring-permissions.md).&#x20;
 
+### Examples
+
+To launch the app
+
+```yaml
+- launchApp
+```
+
+To launch the app in a clean state
+
+
+```yaml
+- launchApp
+    clearState: true
+```
+
+To stop the app
+
+```yaml
+- stopApp
+```
+
+To launch or stop a different app
+
+```yaml
+- launchApp: com.example
+- stopApp: com.other
+```
+
+To bring a backgrounded app to the foreground without restarting it
+
+```yaml
+- launchApp
+    stopApp: false
+```
+
+To restart an already running app
+
+```yaml
+- launchApp  # No additional parameters needed, since stopApp: true is the default
+```
+
 ### Launch Arguments
 
 You can send launch arguments while launching the app for both iOS and Android.
