@@ -1,3 +1,9 @@
+---
+description: >-
+  Use the tapOn command in Maestro to tap by text or ID, repeat taps, adjust
+  wait times, and handle retries for reliable UI test interactions.
+---
+
 # tapOn
 
 In order to tap on a view with the text "My text" you can use the shorthand selector for text like this:
@@ -30,7 +36,6 @@ In some cases it is desirable to repeat taps. To achieve that, the following is 
     repeat: 3
 ```
 
-
 ### retryTapIfNoChange
 
 Sometimes, tapOn will try to tap again if it doesn't detect a hierarchy change. To fix such cases, use retryTapIfNoChange. For example:
@@ -42,8 +47,6 @@ Sometimes, tapOn will try to tap again if it doesn't detect a hierarchy change. 
 ```
 
 In this example, the tapOn will never try to tap again.
-
-
 
 ### Control wait time
 

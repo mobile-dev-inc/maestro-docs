@@ -166,7 +166,7 @@
 ## Troubleshooting
 
 * [Known Issues](troubleshooting/known-issues.md)
-* [Maestro FAQ](troubleshooting/frequently-asked-questions/README.md)
+* [FAQ](troubleshooting/frequently-asked-questions/README.md)
   * [Arranging your repository for Maestro tests](troubleshooting/frequently-asked-questions/arrange-your-repository-for-maestro-tests.md)
 * [Bug Report](troubleshooting/bug-report.md)
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)

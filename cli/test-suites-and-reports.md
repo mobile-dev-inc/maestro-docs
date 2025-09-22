@@ -1,3 +1,9 @@
+---
+description: >-
+  Run Maestro test suites and generate reports in JUnit or HTML. Learn how to
+  organize flows, run multiple tests, and control execution options.
+---
+
 # Test Suites & Reports
 
 ### Running multiple tests

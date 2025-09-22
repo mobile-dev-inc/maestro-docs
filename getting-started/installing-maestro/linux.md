@@ -1,3 +1,9 @@
+---
+description: >-
+  Install the framework and start running mobile and web UI tests from your
+  Linux environment.
+---
+
 # Linux
 
 ## Prerequisites
