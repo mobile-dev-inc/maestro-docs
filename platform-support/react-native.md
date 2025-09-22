@@ -1,4 +1,11 @@
-# React Native
+---
+description: >-
+  Maestro supports testing React Native apps on Android and iOS. Learn how to
+  interact with components by text or testID, input text, and run sample UI
+  tests.
+---
+
+# React Native Support
 
 <figure><img src="../.gitbook/assets/reactnative.png" alt=""><figcaption></figcaption></figure>
 

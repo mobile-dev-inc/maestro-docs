@@ -59,7 +59,7 @@
 * [Android - Jetpack Compose](platform-support/android-jetpack-compose.md)
 * [iOS - UIKit](platform-support/ios-uikit.md)
 * [iOS - SwiftUI](platform-support/ios-swiftui.md)
-* [React Native](platform-support/react-native.md)
+* [React Native Support](platform-support/react-native.md)
 * [Flutter](platform-support/flutter.md)
 * [Web Views](platform-support/web-views.md)
 * [Web (Desktop Browser)](platform-support/web-desktop-browser.md)
@@ -166,7 +166,7 @@
 ## Troubleshooting
 
 * [Known Issues](troubleshooting/known-issues.md)
-* [Frequently Asked Questions](troubleshooting/frequently-asked-questions/README.md)
+* [Maestro FAQ](troubleshooting/frequently-asked-questions/README.md)
   * [Arranging your repository for Maestro tests](troubleshooting/frequently-asked-questions/arrange-your-repository-for-maestro-tests.md)
 * [Bug Report](troubleshooting/bug-report.md)
 * [Rollback Maestro](troubleshooting/rollback-maestro.md)

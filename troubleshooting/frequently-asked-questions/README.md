@@ -1,4 +1,11 @@
-# Frequently Asked Questions
+---
+description: >-
+  Find answers to common Maestro questions. This FAQ covers troubleshooting
+  tips, installation issues, and guidance for running reliable mobile and web
+  tests.
+---
+
+# Maestro FAQ
 
 ### How can I use the same flow when my apps have different app IDs?
 
@@ -47,8 +54,6 @@ To assert on values that exist on different screens, store them in variables.
       - evalScript: ${console.log('Prices match! Both are ' + output.secondPrice)}
 ```
 
-
-
 ### How do I generate a random number?
 
 Whilst there are commands for random strings and names, there's no function for generating random numbers. Users can use JavaScript to generate a number in the range they need.
@@ -66,8 +71,6 @@ flow.yaml:
 - runScript: ../scripts/randomNumber.js
 - evalScript: ${EMAIL = "maestro+" + output.randomNumber + "@domain.com"}
 ```
-
-
 
 ### Why does YES get translated to true, and NO to false?
 
@@ -104,8 +107,6 @@ appId: com.example
 - tapOn: "YES"
 - tapOn: ^No    # Text that begins with "No"
 ```
-
-
 
 ### Why are my tests slower in Maestro's cloud environment?
 
