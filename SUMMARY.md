@@ -5,7 +5,7 @@
 
 ## Getting Started
 
-* [What is Maestro?](README.md)
+* [Maestro Documentation](README.md)
 * [Installing Maestro](getting-started/installing-maestro/README.md)
   * [macOS](getting-started/installing-maestro/macos.md)
   * [Windows](getting-started/installing-maestro/windows.md)
