@@ -39,16 +39,12 @@ FloatingActionButton(onClick = onClick,
 }
 ```
 
-You can tap on this using `testTag`:&#x20;
+You can tap on this using `testTag`:
 
 ```yaml
 - tapOn: 
     id: "Add"
 ```
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
 
 ## Resources
 
