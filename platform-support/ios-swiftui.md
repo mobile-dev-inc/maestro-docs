@@ -101,6 +101,6 @@ button on the screenshot below, which was also found with a help of `maestro stu
 * Sometimes only one of accessibilityLabel / accessibilityIdentifier (i.e. **Link**)
 * Sometimes List / Group elements are not assigning accessibility ids / labels correctly (i.e `SectionView { Group { Menu } }`)
 
-{% content-ref url="broken-reference/" %}
-[broken-reference](broken-reference/)
+{% content-ref url="ios-swiftui.md" %}
+[ios-swiftui.md](ios-swiftui.md)
 {% endcontent-ref %}
