@@ -1,3 +1,9 @@
+---
+description: >-
+  Configure Maestro flows with appId, tags, env variables, and hooks like
+  onFlowStart/onFlowComplete.
+---
+
 # Flow configuration
 
 The following properties can be configured on a given Flow:
