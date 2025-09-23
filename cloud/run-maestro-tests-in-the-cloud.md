@@ -1,4 +1,7 @@
 ---
+description: >-
+  Execute tests with parallelism, reliable scaling, and seamless CI integration,
+  covering mobile and web apps with Maestro.
 icon: rocket-launch
 ---
 

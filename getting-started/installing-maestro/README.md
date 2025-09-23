@@ -1,8 +1,7 @@
 ---
 description: >-
-  Learn how to install Maestro, the open-source UI testing framework for mobile
-  and web. Follow simple setup steps to get started quickly on macOS, Linux, or
-  Windows.
+  Learn how to install the Maestro framework by following these simple setup
+  steps to get started quickly on macOS, Linux or Windows.
 ---
 
 # Installing Maestro
