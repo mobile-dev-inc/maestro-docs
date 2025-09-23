@@ -1,5 +1,7 @@
 ---
-description: Simple automated testing for Mobile & Web
+description: >-
+  A free IDE for testers to create and run automated mobile and web UI tests.
+  Works on macOS, Windows, and Linux with quick device setup.
 icon: desktop-arrow-down
 ---
 
@@ -22,14 +24,14 @@ Skip the terminal 🙅‍♂️
 * **Zero CLI** - Launch Maestro tests with a click
 * **No IDE setup** - Forget VS Code extensions, Android Studio, or Xcode boot-ups.
 * **Instant device connect** - Connect a device (Android, iOS, or Web).
-* **Runs on every OS** - Native installers for macOS (Apple Silicon & Intel), Windows, and Linux.&#x20;
+* **Runs on every OS** - Native installers for macOS (Apple Silicon & Intel), Windows, and Linux.
 
 ### Quick Start <a href="#id-2508" id="id-2508"></a>
 
 1. **Download & install** for your OS (⬆ buttons above).
 2. **Connect a device**
 3. **Create a new test**
-4. **Click [▶︎ Run Locally]** (or [☁️ Run on Cloud])
+4. **Click \[▶︎ Run Locally]** (or \[☁️ Run on Cloud])
 
 ### _Trusted by the worlds best teams:_
 

@@ -1,3 +1,9 @@
+---
+description: >-
+  Use the runFlow command to reuse flows in Maestro. Run steps from another
+  file, pass env arguments, or define inline commands for modular tests.
+---
+
 # runFlow
 
 If you'd like to avoid duplication of code or otherwise modularize your Flow files, you can use the `runFlow` command to run commands from another file.

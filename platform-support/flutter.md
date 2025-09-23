@@ -1,3 +1,9 @@
+---
+description: >-
+  Use Maestro with Flutter apps, pure or hybrid. Interact with widgets via
+  semantics labels or identifiers, with examples for tap, input, and asserts.
+---
+
 # Flutter
 
 <figure><img src="../.gitbook/assets/flutter.png" alt=""><figcaption></figcaption></figure>

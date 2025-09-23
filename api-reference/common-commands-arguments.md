@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn common Maestro command arguments. Use labels to clarify steps or mask
+  data, and optional to continue flows even if commands fail.
+---
+
 # Common command arguments
 
 Some arguments are common to all commands.

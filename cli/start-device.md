@@ -1,5 +1,7 @@
 ---
-description: Maestro offers a few convenience methods to start or create a device
+description: >-
+  Start or create a device with Maestro CLI. Launch Android emulators or iOS
+  simulators quickly for local testing, aligned with cloud configs.
 ---
 
 # Start Device
