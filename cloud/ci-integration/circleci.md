@@ -1,3 +1,9 @@
+---
+description: >-
+  Set up Maestro Cloud tests on CircleCI. Store API keys, commit flows in
+  .maestro/, and add a maestro-upload job to run Android and iOS tests.
+---
+
 # CircleCI
 
 {% hint style="info" %}

@@ -1,3 +1,9 @@
+---
+description: >-
+  Test iOS UIKit apps with Maestro. Interact via text, accessibility labels or
+  ids.
+---
+
 # iOS - UIKit
 
 <figure><img src="../.gitbook/assets/ios.png" alt=""><figcaption></figcaption></figure>

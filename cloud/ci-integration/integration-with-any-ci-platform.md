@@ -1,3 +1,9 @@
+---
+description: >-
+  Integrate Maestro Cloud with any CI. Use API key and project ID, organize
+  flows in .maestro/, and run Android or iOS builds with reports.
+---
+
 # Integration with any CI platform
 
 {% hint style="info" %}
