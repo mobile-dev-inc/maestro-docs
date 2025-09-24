@@ -9,7 +9,7 @@ description: >-
 {% hint style="success" %}
 🚀  **Running in the Cloud**
 
-Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade cloud infrastructure: [**Run Maestro tests in the cloud**](https://signin.maestro.dev/sign-up)
+Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade cloud infrastructure: [**Run Maestro tests in the cloud**](https://maestro.dev/cloud)
 {% endhint %}
 
 {% embed url="https://vimeo.com/767721667/d972c5f08e" %}
