@@ -177,4 +177,3 @@
 * [Contributions](community/contributions.md)
 * [Articles & Tutorials](community/articles-and-tutorials.md)
 * [Case Studies](community/case-studies.md)
-* [Resources](community/resources.md)
