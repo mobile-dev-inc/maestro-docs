@@ -130,3 +130,9 @@ Of course, since all env declarations are also JavaScript expressions, you can a
       USERNAME: ${MAESTRO_ENV_USER}
       PASSWORD: ${MAESTRO_ENV_PASSWORD}
 ```
+
+### Built-in parameters
+
+The following parameters are built-in and available in all flows without needing to be defined:
+
+* `MAESTRO_FILENAME`: The filename of the current flow (e.g. `flow.yaml`)
