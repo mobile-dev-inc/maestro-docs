@@ -38,15 +38,15 @@ In some cases it is desirable to repeat taps. To achieve that, the following is 
 
 ### retryTapIfNoChange
 
-Sometimes, tapOn will try to tap again if it doesn't detect a hierarchy change. To fix such cases, use retryTapIfNoChange. For example:
+Sometimes, a tap will occur too early because an API request is happening and the app isn't ready for the tap. To fix such cases, use retryTapIfNoChange. For example:
 
 ```yaml
 - tapOn:
     id: "someId"
-    retryTapIfNoChange: false
+    retryTapIfNoChange: true
 ```
 
-In this example, the tapOn will never try to tap again.
+In this example, the tapOn will try to tap again if the screen hierarchy doesn't change after the first tap.
 
 ### Control wait time
 
