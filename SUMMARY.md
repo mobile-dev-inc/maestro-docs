@@ -48,10 +48,6 @@
   * [IP Allowlist](cloud/reference/ip-allowlist.md)
   * [System Status](https://status.mobile.dev/)
 
-***
-
-* [Migrating from Maestro Cloud](migrating-from-maestro-cloud.md)
-
 ## Platform Support
 
 * [Supported Platforms](platform-support/supported-platforms.md)
