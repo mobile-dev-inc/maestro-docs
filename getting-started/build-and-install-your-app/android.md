@@ -1,3 +1,9 @@
+---
+description: >-
+  Build and install your Android app for Maestro. Generate APKs with Gradle or
+  Flutter, ensure API 26+, and install on an emulator or device.
+---
+
 # Android
 
 This assumes you've got the Android SDK bits already installed.&#x20;

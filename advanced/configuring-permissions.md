@@ -71,6 +71,10 @@ Every permission can be set to: `allow`, `deny` or `unset`
 | deny             | Permission denied                        | Permission will be asked during flow run |
 | unset            | Permission will be asked during flow run | Permission will be asked during flow run |
 
+{% hint style="info" %}
+The `allow` behavior for push notifications on iOS differs from other permissions. On iOS, the permission will _not_ be granted by default. Instead, when the permission is requested, an OS prompt will be shown, and Maestro will dismiss that prompt automatically by allowing the permission. On Android, the permission _will_ be granted by default, no OS prompt will appear.
+{% endhint %}
+
 Some iOS permissions can have other values:
 
 | Permission | Value   | Description                              |

@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how to install the Maestro framework by following these simple setup
+  steps to get started quickly on macOS, Linux or Windows.
+---
+
 # Installing Maestro
 
 ## Prerequisites
@@ -10,9 +16,9 @@ java -version
 
 If you don't have Java 17 or higher installed, you can download it from:
 
-- [Oracle JDK](https://www.oracle.com/java/technologies/downloads/)
-- [OpenJDK](https://openjdk.org/install/)
-- Or use a version manager like [SDKMAN!](https://sdkman.io/)
+* [Oracle JDK](https://www.oracle.com/java/technologies/downloads/)
+* [OpenJDK](https://openjdk.org/install/)
+* Or use a version manager like [SDKMAN!](https://sdkman.io/)
 
 ## Installing the CLI
 

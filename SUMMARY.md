@@ -5,7 +5,7 @@
 
 ## Getting Started
 
-* [What is Maestro?](README.md)
+* [Maestro Documentation](README.md)
 * [Installing Maestro](getting-started/installing-maestro/README.md)
   * [macOS](getting-started/installing-maestro/macos.md)
   * [Windows](getting-started/installing-maestro/windows.md)
@@ -48,10 +48,6 @@
   * [IP Allowlist](cloud/reference/ip-allowlist.md)
   * [System Status](https://status.mobile.dev/)
 
-***
-
-* [Migrating from Maestro Cloud](migrating-from-maestro-cloud.md)
-
 ## Platform Support
 
 * [Supported Platforms](platform-support/supported-platforms.md)
@@ -59,7 +55,7 @@
 * [Android - Jetpack Compose](platform-support/android-jetpack-compose.md)
 * [iOS - UIKit](platform-support/ios-uikit.md)
 * [iOS - SwiftUI](platform-support/ios-swiftui.md)
-* [React Native](platform-support/react-native.md)
+* [React Native Support](platform-support/react-native.md)
 * [Flutter](platform-support/flutter.md)
 * [Web Views](platform-support/web-views.md)
 * [Web (Desktop Browser)](platform-support/web-desktop-browser.md)
@@ -177,4 +173,3 @@
 * [Contributions](community/contributions.md)
 * [Articles & Tutorials](community/articles-and-tutorials.md)
 * [Case Studies](community/case-studies.md)
-* [Resources](community/resources.md)

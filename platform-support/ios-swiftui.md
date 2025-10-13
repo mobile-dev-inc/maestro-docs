@@ -1,3 +1,9 @@
+---
+description: >-
+  Test SwiftUI apps with Maestro. Generate flows via Studio, interact with text
+  fields and accessibility labels, and validate real-world scenarios.
+---
+
 # iOS - SwiftUI
 
 <figure><img src="../.gitbook/assets/swiftui.png" alt=""><figcaption></figcaption></figure>
@@ -8,7 +14,7 @@ In addition to iOS UIKit apps it is possible to write maestro flows for the apps
 
 ### Basic flow
 
-First lets start with some basic flow for FoodTruck app. Almost every SwiftUI native element is identifiable with maestro studio. For instance here is how the first step of [first\_flow.yaml](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/first\_flow.yaml) was generated:
+First lets start with some basic flow for FoodTruck app. Almost every SwiftUI native element is identifiable with maestro studio. For instance here is how the first step of [first\_flow.yaml](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/first_flow.yaml) was generated:
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-01-12 at 21.48.45.png" alt=""><figcaption></figcaption></figure>
 
@@ -19,13 +25,13 @@ First lets start with some basic flow for FoodTruck app. Almost every SwiftUI na
     text: "New Orders"
 ```
 
-All the other steps in this flow were generated the same way, following examples provided by `maestro studio`. \
+All the other steps in this flow were generated the same way, following examples provided by `maestro studio`.\
 \
-The [flow](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/text\_input.yaml) itself navigates to order details screen, marks that an order is completed and finally asserts that the order is not in the list anymore, which can be considered as real-world use-case scenario.
+The [flow](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/text_input.yaml) itself navigates to order details screen, marks that an order is completed and finally asserts that the order is not in the list anymore, which can be considered as real-world use-case scenario.
 
 ### Text Input
 
-[Here is an example](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/text\_input.yaml) of a flow that relies on the text input.
+[Here is an example](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/text_input.yaml) of a flow that relies on the text input.
 
 ```yaml
 // First typing on the element that has a prewritten placeholder text:
@@ -61,7 +67,7 @@ Corresponding tap command on maestro side would now look like that:
     id: "donut_editor"
 ```
 
-Full flow can be found [here](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/accessibility\_label.yaml).\
+Full flow can be found [here](https://github.com/artem888/sample-food-truck/blob/main/.mobiledev/accessibility_label.yaml).\
 \
 maestro translates `accessibilityIdentifier` to `id` while `accessibilityLabel` is translated to `text`. When an element has both some text content and `accessibilityLabel` assigned the latter will be picked as a value for `text` by maestro framework.
 
@@ -82,14 +88,10 @@ Switching between different apps during the same flow is also supported by maest
     id: "breadcrumb"
 ```
 
-<div align="left">
+<div align="left"><figure><img src="../.gitbook/assets/Simulator Screen Shot - iPhone 14 - 2023-01-12 at 22.31.14 (2) (1).png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../.gitbook/assets/Simulator Screen Shot - iPhone 14 - 2023-01-12 at 22.31.14 (2) (1).png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-breadcrumb is an accessibility id \
-of the “Back to SwiftUI app” \
+breadcrumb is an accessibility id\
+of the “Back to SwiftUI app”\
 button on the screenshot below, which was also found with a help of `maestro studio`
 
 ### Known issues:
@@ -98,7 +100,3 @@ button on the screenshot below, which was also found with a help of `maestro stu
 * When **Toggle** is initialized with text, its accessibility element is a union of a text and toggle
 * Sometimes only one of accessibilityLabel / accessibilityIdentifier (i.e. **Link**)
 * Sometimes List / Group elements are not assigning accessibility ids / labels correctly (i.e `SectionView { Group { Menu } }`)
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}

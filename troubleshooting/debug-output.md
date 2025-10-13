@@ -1,3 +1,9 @@
+---
+description: >-
+  View command failure reasons, automatic screenshots, and logs in Maestro.
+  Configure debug output paths for test artifacts and reports.
+---
+
 # Debug Output
 
 ### Command Failure Reason
@@ -21,7 +27,7 @@ Each flow run will generate:
 * A `maestro.log` file that contains Maestro related logs
 * A `commands-*.json` file that contains command metadata
 
-Located under the Maestro directory by default: `~/.maestro/tests/<datetime>/` .&#x20;
+Located under the Maestro directory by default: `~/.maestro/tests/<datetime>/` .
 
 You can also configure the default path for debug output by using the `--debug-output <path>` option. Example usage:
 

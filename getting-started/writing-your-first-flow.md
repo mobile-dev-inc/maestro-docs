@@ -1,3 +1,9 @@
+---
+description: >-
+  Write your first flow with the Maestro framework for mobile and web UI
+  testing. Start simple in YAML and run it on an emulator or simulator.
+---
+
 # Writing Your First Flow
 
 Write a test in a YAML file

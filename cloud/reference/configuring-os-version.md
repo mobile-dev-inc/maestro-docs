@@ -1,3 +1,9 @@
+---
+description: >-
+  Set Android API levels or iOS simulator versions when running Maestro Cloud
+  tests. Configure device specs for consistent mobile UI testing.
+---
+
 # Configuring OS Version
 
 {% hint style="info" %}

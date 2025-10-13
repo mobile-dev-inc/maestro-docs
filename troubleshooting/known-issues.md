@@ -1,3 +1,9 @@
+---
+description: >-
+  Troubleshooting Maestro errors: fix Java setup, app launch failures, Android
+  input, WebView rendering, and iOS keyboard problems.
+---
+
 # Known Issues
 
 ## Cross-platform
@@ -16,7 +22,7 @@ On Android:
 On iOS
 
 1. Execute `xcrun simctl listapps booted | grep CFBundleIdentifier` to get a list of all installed packages
-2. Search for the appID manually or use `grep` in the above command to search for part of the name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`&#x20;
+2. Search for the appID manually or use `grep` in the above command to search for part of the name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`
 
 ### Maestro isn't compatible with all versions of Java
 
@@ -54,6 +60,20 @@ or:
 ```
 
 This error is common on physical devices by Oppo. The workaround is to return to the Developer Settings where ADB Debugging was enabled, and disable 'Verify apps over USB'. Some users have reported needing to enable "Disable permission monitoring" too.
+
+### WebView elements can't be seen by Maestro
+
+Occasionally, web technology renders a page that present a challenge to the OS-native accessibility APIs that Maestro uses. In these cases, you can add `androidWebViewHierarchy: devtools` to the top of your flow so that Maestro can get help from Chrome's DevTools to understand what's on the screen.
+
+```yaml
+appId: com.example
+androidWebViewHierarchy: devtools
+---
+- tapOn: Open WebView
+- assertVisible: My button
+```
+
+Note: support for this in Maestro Studio Desktop is still to come!
 
 ## iOS
 

@@ -1,13 +1,15 @@
 ---
-description: Maestro is the simplest and most effective UI testing framework.
+description: >-
+  Maestro is an open-source framework for mobile and web UI testing. Docs
+  include setup guides, examples, and steps to run automated tests.
 ---
 
-# What is Maestro?
+# Maestro Documentation
 
 {% hint style="success" %}
 🚀  **Running in the Cloud**
 
-Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade cloud infrastructure: [**Run Maestro tests in the cloud**](https://signin.maestro.dev/sign-up)
+Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade cloud infrastructure: [Run Maestro tests in the Cloud](https://maestro.dev/cloud) and follow the [Quickstart Guide](cloud/cloud-quickstart.md) to quickly experience the power of Cloud.
 {% endhint %}
 
 {% embed url="https://vimeo.com/767721667/d972c5f08e" %}

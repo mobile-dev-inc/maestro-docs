@@ -75,7 +75,7 @@ export MAESTRO_FOO=bar
 
 If you define the variable `MAESTRO_FOO` as above, you can simply refer to it in your Flows when running `maestro test` or `maestro cloud` like a normal environment variable:
 
-```
+```yaml
 - tapOn: ${MAESTRO_FOO}
 ```
 
@@ -86,3 +86,53 @@ All `env` parameters are defined as JavaScript variables under the hood and can 
 {% content-ref url="javascript/" %}
 [javascript](javascript/)
 {% endcontent-ref %}
+
+### Setting defaults for parameters in subflows
+
+All env declarations are also JavaScript expressions, which you can use to set a default value. This is especially useful for subflows.
+
+Here's an example login subflow.
+
+```yaml
+appId: com.example
+env:
+  USERNAME: ${USERNAME || "my-test-user@example.com"}
+  PASSWORD: ${PASSWORD || "hunter2"}
+---
+- tapOn: Your Username
+- inputText: ${USERNAME}
+- tapOn: Your Password
+- inputText: ${PASSWORD}
+- tapOn: Log In
+```
+
+When you call this with no env vars, you'll get the default USERNAME and PASSWORD, but these can be provided and overridden. This is useful for keeping your tests concise in places where you'd provide the same thing again and again.
+
+```yaml
+# Log in as my-test-user
+- runFlow: login.yaml 
+
+# Log in as superuser
+- runFlow:
+    file: login.yaml
+    env:
+      USERNAME: superuser@example.com
+      PASSWORD: sup3r_s3cr3t
+```
+
+Of course, since all env declarations are also JavaScript expressions, you can also specify those parameters at call time too, and call your subflow with parameters that were passed into Maestro as environment variables.
+
+```yaml
+# Log in as the provided user
+- runFlow:
+    file: login.yaml
+    env:
+      USERNAME: ${MAESTRO_ENV_USER}
+      PASSWORD: ${MAESTRO_ENV_PASSWORD}
+```
+
+### Built-in parameters
+
+The following parameters are built-in and available in all flows without needing to be defined:
+
+* `MAESTRO_FILENAME`: The filename of the current flow (e.g. `flow.yaml`)
