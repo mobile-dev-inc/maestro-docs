@@ -12,7 +12,7 @@ Maestro comes with its own JavaScript HTTP API
 // script.js
 const response = http.get('https://example.com')
 
-output.script.result = response.body
+output.script = response.body
 ```
 
 ### JSON
@@ -35,7 +35,7 @@ For example, assume that `https://example.com/jsonEndpoint` returns the followin
 // script.js
 const response = http.get('https://example.com/jsonEndpoint')
 
-output.script.result = json(response.body).myField.mySubField
+output.script = json(response.body).myField.mySubField
 ```
 
 ### POST request
