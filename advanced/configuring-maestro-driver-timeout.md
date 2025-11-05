@@ -4,9 +4,9 @@ description: >-
   failures in slow environments.
 ---
 
-# Configure Maestro Driver Timeout for Reliable Tests
+# Configure Maestro Driver Startup Timeout for Reliable Tests
 
-In some environments with limited performance, such as CI/CD, it may be necessary to increase the maestro driver's default timeout. For this, you can set the environment `MAESTRO_DRIVER_STARTUP_TIMEOUT`, setting how many milliseconds you want.
+In some environments with limited performance, such as CI/CD, it may be necessary to increase the maestro driver's default startup timeout. For this, you can set the environment `MAESTRO_DRIVER_STARTUP_TIMEOUT`, setting how many milliseconds you want.
 
 The default value is `15000` (15 seconds)
 
