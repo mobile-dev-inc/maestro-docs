@@ -58,6 +58,12 @@ If you have multiple views matching the same selector (i.e. many views with text
     index: 2
 ```
 
+{% hint style="info" %}
+Good tests are often expressed the same way you'd express them in a manual test case, which is similar to how you'd explain how to use the app if you were describing it in a phone call.
+
+Indexes are useful for being able to identify "the 3rd button with the text Hello" but consider when writing your tests if that's what you actually mean. Maybe what you would write/say to another person is "the Hello button below the Friendly Greeting banner". Writing your tests like this takes a little more time, but makes them more readable and maintainable.
+{% endhint %}
+
 ### Using Regular Expressions
 
 All text fields in Maestro element selectors are regular expressions. Whilst this document isn't intending to replace documentation on regular expressions (use your favourite search engine), here are a few examples of how it operates. In these examples, we've used `assertVisible`, but it's applicable to any text or id field.
@@ -97,8 +103,6 @@ That's because square brackets have meaning in regular expressions. Instead, you
 ```yaml
 - assertVisible: 'Movies \[NEW\]'
 ```
-
-
 
 ### Should I use text or IDs?
 
