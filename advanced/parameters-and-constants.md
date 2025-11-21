@@ -31,6 +31,10 @@ In a similar fashion, parameters can be passed to `maestro cloud` command:
 maestro cloud -e USERNAME=user@example.com -e PASSWORD=123 app.apk file.yaml
 ```
 
+{% hint style="info" %}
+Note that all variables are _case-sensitive_ - you can't define `APP_ID` and use it as `App_ID`
+{% endhint %}
+
 ### Inline parameters
 
 Constants can be declared at the flow file level, above the `---` marker:
@@ -67,7 +71,7 @@ Constants defined in a nested flow override parameters with the same name in the
 
 ### Accessing variables from the shell
 
-Maestro will automatically read environment variables from the shell prefixed by `MAESTRO_` and make them available in your Flows, assuming the environment variable is not manually defined in the Flow or passed as an env parameter.&#x20;
+Maestro will automatically read environment variables from the shell prefixed by `MAESTRO_` and make them available in your Flows, assuming the environment variable is not manually defined in the Flow or passed as an env parameter.
 
 ```
 export MAESTRO_FOO=bar
@@ -78,6 +82,8 @@ If you define the variable `MAESTRO_FOO` as above, you can simply refer to it in
 ```yaml
 - tapOn: ${MAESTRO_FOO}
 ```
+
+Note: This only works for executions of the CLI, not Maestro Studio Desktop.
 
 ### Parameters and JavaScript
 
@@ -136,3 +142,4 @@ Of course, since all env declarations are also JavaScript expressions, you can a
 The following parameters are built-in and available in all flows without needing to be defined:
 
 * `MAESTRO_FILENAME`: The filename of the current flow (e.g. `flow.yaml`)
+
