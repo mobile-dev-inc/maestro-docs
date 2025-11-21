@@ -48,6 +48,21 @@ Apart from the selectors mentioned above, Maestro is also able to select views u
         - Another descendant view has this text
 ```
 
+### Element Traits
+
+You can select elements based on some high-level descriptive aspects of the element.
+
+```yaml
+- tapOn: # or any other command that works with selectors
+    traits: text       # An element that contains some text
+    
+- tapOn:
+    traits: long-text  # An element that contains at least 200 characters of text
+    
+- tapOn:
+    traits: square     # A square element (or close - width and height differ by less than 3%)
+```
+
 ### Selecting one view among many similar
 
 If you have multiple views matching the same selector (i.e. many views with text `Hello`), use `index` parameter to specify which one to select exactly. For example, the following command will pick the **3rd view** that has text `Hello`:
