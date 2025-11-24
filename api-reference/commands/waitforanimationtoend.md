@@ -12,3 +12,5 @@ Can have an optional timeout (in milliseconds) after which, if the animation is 
 - waitForAnimationToEnd:
     timeout: 5000
 ```
+
+If you want to add a fixed delay, see [sleep](./sleep.md).
