@@ -6,7 +6,7 @@ description: >-
 
 # Clean a device
 
-Successive runs of flows that either use addMedia to import images, or that download files, can leave your device in an inconsistent state for the next run.
+Successive runs of flows that either use [addMedia](../../api-reference/commands/addmedia.md) to import images, or that download files, can leave your device in an inconsistent state for the next run.
 
 A member of the Maestro Slack community, [AJ Owens](https://www.linkedin.com/in/owensaj/), came up with a recipe for cleaning up thier Android emulator of leftover files by driving the Files app that's installed on every emulator.
 
