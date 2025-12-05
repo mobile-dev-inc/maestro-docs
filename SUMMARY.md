@@ -155,6 +155,7 @@
 * [Recipes](advanced/recipes/README.md)
   * [Checking clipboard contents](advanced/recipes/checking-clipboard-contents.md)
   * [Choosing images from the gallery](advanced/recipes/choosing-images-from-the-gallery.md)
+  * [Clean a device](advanced/recipes/clean-a-device.md)
   * [Downloading and opening a file](advanced/recipes/downloading-and-opening-a-file.md)
   * [Get the last matching element](advanced/recipes/get-the-last-matching-element.md)
   * [scrollUntilVisible for fragments](advanced/recipes/scrolluntilvisible-for-fragments.md)
