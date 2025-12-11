@@ -4,6 +4,12 @@
 🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://signin.maestro.dev/sign-up)
 {% endhint %}
 
+Before running your flows on Maestro Cloud, you'll need an app binary to upload along with your tests. We've included build instructions for some of the most common platforms below. After building your app, run on Maestro Cloud using the following command:
+
+```bash
+maestro cloud [your-app-binary] [your-flow-directory]
+```
+
 ## iOS
 
 ### Building with Xcode command line tools
