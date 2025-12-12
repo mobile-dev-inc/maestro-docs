@@ -10,8 +10,8 @@ After building your app, run on Maestro Cloud:
 
 {% tabs %}
 {% tab title="Maestro Studio" %}
-* **Run all flows on Maestro Cloud -** Click on the `Run on Cloud` button in the sidebar.
-* **Run a single flow on Maestro Cloud - O**pen the flow file and click on the `Run on Cloud` button on at the top of the file.
+* **Run all flows on Maestro Cloud -** Click on the `Run on Cloud` button in the sidebar and then select your app binary.
+* **Run a single flow on Maestro Cloud -** Open the flow file and click on the `Run on Cloud` button on at the top of the file and then select your app binary.
 {% endtab %}
 
 {% tab title="Maestro CLI" %}
