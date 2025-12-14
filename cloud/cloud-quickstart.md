@@ -31,7 +31,7 @@ cd ./samples
 maestro cloud sample.apk android-flow.yaml
 ```
 
-If you're a member of multiple organisation, or have multiple projects, you can optionally add `--api-key`  and/or `--project-id` respectively to avoid being prompted for selection.
+If you're a member of multiple organisation, or have multiple projects, you can optionally add `--api-key` and/or `--project-id` respectively to avoid being prompted for selection.
 
 ```bash
 cd ./samples
@@ -42,10 +42,10 @@ maestro cloud sample.apk android-flow.yaml
 
 ```bash
 cd ./samples
-maestro cloud sample.apk android-flow.yaml
+maestro cloud sample.app ios-flow.yaml
 ```
 
-If you're a member of multiple organisation, or have multiple projects, you can optionally add `--api-key`  and/or `--project-id` respectively to avoid being prompted for selection.
+If you're a member of multiple organisation, or have multiple projects, you can optionally add `--api-key` and/or `--project-id` respectively to avoid being prompted for selection.
 
 ```bash
 cd ./samples
