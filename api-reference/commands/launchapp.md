@@ -71,7 +71,7 @@ To launch or stop a different app
 To bring a backgrounded app to the foreground without restarting it
 
 ```yaml
-- launchApp
+- launchApp:
     stopApp: false
 ```
 
