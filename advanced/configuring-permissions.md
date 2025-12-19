@@ -4,7 +4,11 @@ description: >-
   location, and other services.
 ---
 
-# Permissions Setup for iOS and Android Apps
+# Configuring Permissions
+
+Not all applications require permissions to operate, but modern mobile operating systems have a system of permissions to prevent downloaded apps from unauthorised access to system resources. This can prove challenging for test automation, since apps will prompt on the first use of that permissions, but not on subsequent uses, making the user journey inconsistent between runs of the test flow. To tackle this, Maestro allows for configuring permissions explicitly ahead of execution, making those prompts expected or avoidable.
+
+## Permissions Setup on launch
 
 By default, all permissions are set to `allow` by the launchApp command. It is possible to launch an app with custom permissions behaviour by passing the `permissions` argument to `launchApp`:
 
@@ -15,6 +19,24 @@ By default, all permissions are set to `allow` by the launchApp command. It is p
       camera: allow
       location: allow
 ```
+
+{% content-ref url="../api-reference/commands/launchapp.md" %}
+[launchapp.md](../api-reference/commands/launchapp.md)
+{% endcontent-ref %}
+
+## Setting permissions any other time
+
+It can be useful to allow permission configuration outside of launch time, e.g. in advance of testing a deeplink or universal link, where `launchApp` isn't invoked. For this, there's `setPermissions`.
+
+```yaml
+- setPermissions:
+    permissions:
+      all: allow
+```
+
+{% content-ref url="../api-reference/commands/setPermissions.md" %}
+[setPermissions.md](../api-reference/commands/setPermissions.md)
+{% endcontent-ref %}
 
 ## Available permissions
 
