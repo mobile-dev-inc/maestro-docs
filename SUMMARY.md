@@ -110,6 +110,7 @@
   * [scrollUntilVisible](api-reference/commands/scrolluntilvisible.md)
   * [setAirplaneMode](api-reference/commands/setairplanemode.md)
   * [setLocation](api-reference/commands/setlocation.md)
+  * [setClipboard](api-reference/commands/setclipboard.md)
   * [setOrientation](api-reference/commands/setorientation.md)
   * [startRecording](api-reference/commands/startrecording.md)
   * [stopApp](api-reference/commands/stopapp.md)
