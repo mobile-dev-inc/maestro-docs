@@ -21,6 +21,27 @@ appId: com.example.app
 - pasteText
 ```
 
+You can also use JavaScript expressions in the text value:
+
+```yaml
+appId: com.example.app
+---
+- launchApp
+- setClipboard: ${'user' + Math.floor(Math.random() * 1000) + '@example.com'}
+- tapOn:
+    id: "emailField"
+- pasteText
+```
+
+The clipboard contents can be accessed in JavaScript using the `maestro.copiedText` property:
+
+```yaml
+appId: com.example.app
+---
+- setClipboard: "test@example.com"
+- inputText: ${'Email: ' + maestro.copiedText}
+```
+
 ### Related Commands
 
 - [`pasteText`](./pastetext.md) - Paste the clipboard contents
