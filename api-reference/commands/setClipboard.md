@@ -1,7 +1,6 @@
 ---
 description: >-
-  Set text directly to Maestro's clipboard (maestro.copiedText) for reuse in tests or
-  scripts. This complements copyTextFrom which copies text from UI elements.
+  Set text directly to Maestro's internal clipboard for re-use in tests or scripts. This complements copyTextFrom which copies text from UI elements.
 ---
 
 # setClipboard
