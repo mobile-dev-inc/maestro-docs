@@ -77,16 +77,21 @@ url: https://example.com
 
 ## Platform Support
 
-<table><thead><tr><th width="572">Platform</th><th align="center">Supported</th></tr></thead><tbody><tr><td><a href="platform-support/android-views.md">Android - Views</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/android-jetpack-compose.md">Android - Jetpack Compose</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/ios-uikit.md">iOS - UIKit</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/ios-swiftui.md">iOS - SwiftUI</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/react-native.md">React Native</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/flutter.md">Flutter</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/web-views.md">Web Views</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/web-desktop-browser.md">Web (Desktop Browser)</a></td><td align="center">✅</td></tr><tr><td>.NET MAUI iOS</td><td align="center">✅</td></tr><tr><td>.NET MAUI Android</td><td align="center">✅</td></tr></tbody></table>
+| Platform                                                                 | Supported |
+|--------------------------------------------------------------------------|:---------:|
+| [Android - Views](platform-support/android-views.md)                     |    ✅     |
+| [Android - Jetpack Compose](platform-support/android-jetpack-compose.md) |    ✅     |
+| [iOS - UIKit](platform-support/ios-uikit.md)                             |    ✅     |
+| [iOS - SwiftUI](platform-support/ios-swiftui.md)                         |    ✅     |
+| [React Native](platform-support/react-native.md)                         |    ✅     |
+| [Flutter](platform-support/flutter.md)                                   |    ✅     |
+| [Web Views](platform-support/web-views.md)                               |    ✅     |
+| [Web (Desktop Browser)](platform-support/web-desktop-browser.md)         |    ✅     |
+| .NET MAUI iOS                                                            |    ✅     |
+| .NET MAUI Android                                                        |    ✅     |
 
 ## Resources
 
 * Blog Post: [**Introducing: Maestro — Painless Mobile UI Automation**](https://maestro.dev/blog/introducing-maestro-painless-mobile-ui-automation)
 * GitHub Repository: [**https://github.com/mobile-dev-inc/maestro**](https://github.com/mobile-dev-inc/maestro)
 * Public Slack Channel: [**Join the workspace**](https://slack.maestro.dev/)
-
-
-
-## Get Started
-
-Get started by installing the Maestro CLI:
