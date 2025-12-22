@@ -11,7 +11,7 @@ The Maestro command-line tool serves three primary roles in the test automation 
 ### The execution engine
 The command-line tool is the component responsible for reading test files (`.yaml`), connecting to the device (physical or emulator), and translating instructions into real actions, such as taps and swipes.
 *   **Independence:** It runs directly in your machine's terminal and doesn't require a graphical interface to function, making it extremely lightweight and fast.
-*   **Compatibility:** Works for both running local tests and as a gateway to send tests for execution in Maestro cloud.
+*   **Compatibility:** Works for both running local tests and as a gateway to send tests for execution in Maestro Cloud.
 
 ### Automation and CI/CD (continuous integration)
 The most critical use case for the command-line tool is automation. While Maestro Studio is ideal for *creating* tests, the command-line tool is the standard tool for *running* those tests recurrently and autonomously.
@@ -29,7 +29,7 @@ It's important to understand that Studio acts as a *wrapper* (a layer) over the 
 
 | Feature | Maestro command-line tool | Maestro Studio |
 | :--- | :--- | :--- |
-| **Focus** | Execution, Automation, and CI/CD | Test Creation and Visual Exploration |
+| **Focus** | Execution, Automation, and CI/CD | Test Creation and Maintenance |
 | **Interface** | Terminal (Command Line) | GUI (Graphical Interface in Browser) |
 | **Workflow** | Text Editor + Terminal | Interactive (Point-and-click) |
 | **Audience** | DevOps Engineers, Developers | Manual QAs, Beginners, Test Creators |
