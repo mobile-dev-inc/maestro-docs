@@ -29,7 +29,7 @@ It's important to understand that Studio acts as a *wrapper* (a layer) over the 
 
 | Feature | Maestro command-line tool | Maestro Studio |
 | :--- | :--- | :--- |
-| **Focus** | Execution, Automation, and CI/CD | Test Creation and Visual Exploration |
+| **Focus** | Execution, Automation, and CI/CD | Test Creation and Maintenance |
 | **Interface** | Terminal (Command Line) | GUI (Graphical Interface in Browser) |
 | **Workflow** | Text Editor + Terminal | Interactive (Point-and-click) |
 | **Audience** | DevOps Engineers, Developers | Manual QAs, Beginners, Test Creators |
