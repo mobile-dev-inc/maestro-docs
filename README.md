@@ -1,34 +1,36 @@
-# Maestro Documentation
+# Maestro documentation
+
+Maestro is an open source framework for mobile and web UI testing. Docs include setup guides, examples, and steps to run automated tests.
 
 {% hint style="success" %}
-🚀  **Running in the Cloud**
+🚀  **Running in the cloud**
 
-Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade cloud infrastructure: [Run Maestro tests in the Cloud](https://maestro.dev/cloud) and follow the [Quickstart Guide](cloud/cloud-quickstart.md) to quickly experience the power of Cloud.
+Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade Google Cloud Platform (GCP) infrastructure: [Run Maestro tests in the cloud](https://maestro.dev/cloud) and follow the [Quickstart Guide](cloud/cloud-quickstart.md) to quickly experience the power of GCP.
 {% endhint %}
 
 {% embed url="https://vimeo.com/767721667/d972c5f08e" %}
 
 ## Why Maestro?
 
-Maestro is built on learnings from its predecessors (Appium, Espresso, UIAutomator, XCTest, Selenium, Playwright) and allows you to easily define and test your Flows.
+Maestro builds on learnings from its predecessors—Appium, Espresso, UIAutomator, XCTest, Selenium, and Playwright—and allows you to easily define and test your flows.
 
 {% hint style="info" %}
-**What are Flows?** Think of Flows as parts of the user journey in your app. Login, Checkout and Add to Cart are three examples of possible Flows that can be defined and tested using Maestro.
+**What are flows?** Think of flows as parts of the user journey in your app. Login, Checkout, and Add to Cart are three examples of possible flows that you can define and test using Maestro.
 {% endhint %}
 
-* Built-in tolerance to flakiness. UI elements will not always be where you expect them, screen tap will not always go through, etc. Maestro embraces the instability of mobile applications and devices and tries to counter it.
-* Built-in tolerance to delays. No need to pepper your tests with `sleep()` calls. Maestro knows that it might take time to load the content (i.e. over the network) and automatically waits for it (but no longer than required).
-* Blazingly fast iteration. Tests are interpreted, no need to compile anything. Maestro is able to continuously monitor your test files and rerun them as they change.
-* Declarative yet powerful syntax. Define your tests in a `yaml` file.
+* Built-in tolerance to flakiness. UI elements are not always where you expect them, and screen taps do not always go through. Maestro embraces the instability of mobile applications and devices and tries to counter it.
+* Built-in tolerance to delays. No need to pepper your tests with `sleep()` calls. Maestro knows that it might take time to load the content (that is, over the network) and automatically waits for it, but no longer than required.
+* Blazingly fast iteration. Tests run without compilation. Maestro continuously monitors your test files and reruns them as they change.
+* Declarative yet powerful syntax. Define your tests in a YAML file.
 * Simple setup. Maestro is a single binary that works anywhere.
 
 ## Examples
 
-#### Twitter (Mobile)
+#### Twitter (mobile)
 
 <figure><img src=".gitbook/assets/twitter_continuous_v3_fast.gif" alt=""><figcaption></figcaption></figure>
 
-#### Simple Examples
+#### Simple examples
 
 {% tabs %}
 {% tab title="Android" %}
