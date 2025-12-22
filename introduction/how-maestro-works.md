@@ -2,12 +2,14 @@
 
 Maestro operates as a black-box testing framework that simulates user interactions at the device level rather than through app APIs or source code instrumentation. This architecture-agnostic approach enables consistent automation across heterogeneous app stacks (native iOS, Android, React Native, Flutter, etc.) by leveraging the device's input/output interfaces.
 
-**Core technical principle:** instead of introspecting app internals, Maestro sends low-level device commands (tap events, swipe gestures, text input via the input method framework) and validates behavior through accessibility APIs and visual element detection, mimicking physical user interaction.
+{% hint style="success" %}
+Instead of introspecting app internals, Maestro sends low-level device commands (tap events, swipe gestures, text input via the input method framework) and validates behavior through accessibility APIs and visual element detection, mimicking physical user interaction.
+{% endhint %}
 
 Maestro differentiates itself through:
-- **Accessibility-First Element Location**: Leveraging platform accessibility trees and optical character recognition (OCR) for deterministic element identification without brittle coordinate-based selectors
-- **Declarative Test Definition (YAML)**: Human-readable test specifications that abstract platform-specific implementation details
-- **Distributed Cloud Execution**: Parallel test orchestration across multiple emulator/device instances with centralized result aggregation
+- **Accessibility-First Element Location**: Leveraging platform accessibility for deterministic element identification without brittle coordinate-based selectors.
+- **Declarative Test Definition (YAML)**: Human-readable test specifications that abstract platform-specific implementation details.
+- **Distributed Cloud Execution**: Parallel test orchestration across multiple emulator/device instances with centralized result aggregation.
 
 ### "Arm's length" operation
 The central mechanic of Maestro uses "arm's length" operation. This means the framework doesn't interact with the app's source code (such as React Native or Flutter), but rather with the device itself.

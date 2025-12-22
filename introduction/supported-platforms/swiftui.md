@@ -8,7 +8,7 @@ Maestro interacts with SwiftUI components identically to UIKit, React Native, or
 
 When testing SwiftUI applications with Maestro, you eliminate the need for invasive test instrumentation or view hierarchy dependencies.
 
-* **Visual Recognition:** Maestro analyzes rendered screen content via the iOS accessibility APIs and optical character recognition (OCR). If your SwiftUI code renders a button labeled "Submit," Maestro identifies and interacts with it at the UI layer.
+* **Visual Recognition:** Maestro analyzes rendered screen content via the iOS accessibility layer. If your SwiftUI code renders a button labeled "Submit," Maestro identifies and interacts with it at the UI layer.
 * **Black-Box Testing:** Tests operate independent of implementation details. Maestro doesn't differentiate between `List`, `LazyVStack`, or custom `Button` components—it only interacts with the final rendered interface.
 
 ## Element selection strategies
