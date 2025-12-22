@@ -45,7 +45,7 @@ Maestro Studio is designed for technical users who want to streamline test autom
 
 For a comprehensive overview, watch the following walkthrough:
 
-[![Maestro Studio Walkthrough](https://img.youtube.com/vi/E7qwFwo_nu0/0.jpg)](https://www.youtube.com/embed/E7qwFwo_nu0?si=BvVoavYSDeNwaPwA)
+{% embed url="<https://www.youtube.com/watch?v=E7qwFwo_nu0&source_ve_path=MTc4NDI0>" %}
 
 ## Support & Community
 
