@@ -38,4 +38,6 @@ It's important to note that Maestro cloud isn't an isolated product requiring se
 | **Focus** | Creation, Debug, and Unit Tests | Complete Regression and CI/CD |
 | **Cost** | Free (Open Source) | Commercial Service (Revenue Driver) |
 
-> **Strategic Note:** Maestro's vision is that test creation should be accessible and simple (via Studio), but quality validation at scale occurs in the cloud, ensuring development teams have absolute confidence in end-user experience before each release.
+{% hint style="success" %}
+Maestro's vision is that test creation should be accessible and simple (via Studio), but quality validation at scale occurs in the cloud, ensuring development teams have absolute confidence in end-user experience before each release.
+{% endhint %}
