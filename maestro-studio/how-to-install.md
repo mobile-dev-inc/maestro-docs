@@ -16,7 +16,7 @@ If Java 17+ is not installed, download it from one of the following sources:
 - [OpenJDK](https://openjdk.org/install/)
 - [SDKMAN! (multi-version manager)](https://sdkman.io/)
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Ensure that the `JAVA_HOME` environment variable points to your Java 17+ installation.
 {% endhint %}
 

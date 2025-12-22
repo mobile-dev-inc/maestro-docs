@@ -19,6 +19,8 @@ Migrating from View-based (XML) to Compose-based UI reduces test maintenance ove
 
 ## Element interaction patterns
 
+The Maestro tests interacts witht the UI of your application according to the following patterns:
+
 ### Element selection strategy
 
 Maestro leverages stable, user-visible identifiers over Compose-specific constructs:

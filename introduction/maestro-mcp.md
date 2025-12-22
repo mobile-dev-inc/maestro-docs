@@ -19,7 +19,8 @@ To install and use the Maestro MCP server, you need the following:
 
 To install the Maestro MCP server, on your terminal, run `maestro mcp`
 
-> The Maestro command-line tool preinstalls the MCP server, so this is enough to install.
+{% hint style="warning" %}
+The Maestro command-line tool preinstalls the MCP server, so this is enough to install.
 
 ## Configure the MCP server on your IDE
 

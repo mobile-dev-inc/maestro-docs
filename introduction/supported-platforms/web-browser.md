@@ -2,7 +2,7 @@
 
 While Maestro is primarily known as a "mobile-first" testing framework, its long-term vision is to become "one framework to rule them all." This includes support for **automated testing of web applications in desktop browsers**, enabling unified test automation across platform boundaries.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Web support is currently in **Work in Progress** status. It's functional but at an earlier maturity stage compared to Android and iOS support.
 {% endhint %}
 
