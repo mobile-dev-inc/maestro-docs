@@ -16,7 +16,9 @@ If Java 17+ is not installed, download it from one of the following sources:
 - [OpenJDK](https://openjdk.org/install/)
 - [SDKMAN! (multi-version manager)](https://sdkman.io/)
 
-> **Note:** Ensure that the `JAVA_HOME` environment variable points to your Java 17+ installation.
+{% hint style="info" %}
+Ensure that the `JAVA_HOME` environment variable points to your Java 17+ installation.
+{% endhint %}
 
 ## Installation
 
@@ -45,7 +47,7 @@ Maestro Studio is designed for technical users who want to streamline test autom
 
 For a comprehensive overview, watch the following walkthrough:
 
-{% embed url="<https://www.youtube.com/watch?v=E7qwFwo_nu0&source_ve_path=MTc4NDI0>" %}
+{% embed url="[URL_HERE](https://www.youtube.com/watch?v=E7qwFwo_nu0&source_ve_path=MTc4NDI0)" %}
 
 ## Support & Community
 
