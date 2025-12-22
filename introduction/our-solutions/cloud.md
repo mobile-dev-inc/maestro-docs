@@ -29,7 +29,7 @@ While **Maestro Studio** is often used to *create* tests visually, it's the **Ma
 ### Studio as gateway
 It's important to note that Maestro cloud isn't an isolated product requiring separate installation. It integrates into the tools you already use. Maestro Studio acts as a "gateway" or entry point, facilitating upload and initial cloud execution without requiring complex terminal commands during the exploration phase.
 
-## Differentiation: local vs. cloud
+## Local vs. Cloud
 
 | Feature | Local Execution (command-line tool/Studio) | Maestro cloud |
 | :--- | :--- | :--- |

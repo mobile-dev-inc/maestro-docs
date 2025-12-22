@@ -1,6 +1,6 @@
 # Maestro MCP server
 
-Maestro implements the Model Context Protocol (MCP) at https://modelcontextprotocol.io/docs/getting-started/intro, enabling direct integration with MCP-compliant client apps such as Claude, Cursor, and Windsurf.
+Maestro implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), enabling direct integration with MCP-compliant client apps such as Claude, Cursor, and Windsurf.
 
 The Model Context Protocol is an open standard that provides a uniform interface for connecting Large Language Models to external data sources, tools, and services. MCP defines a client-server architecture where:
 

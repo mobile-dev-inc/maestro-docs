@@ -23,7 +23,7 @@ The command-line tool offers a level of granular control that sometimes exceeds 
 *   **Command Options:** There are "switches" (command-line parameters) and advanced configurations available in the command-line tool that Studio's graphical interface hasn't yet implemented.
 *   **Utility Commands:** The command-line tool includes helper tools, such as the `download-samples` command, which downloads project examples (like Wikipedia) for quick learning, and specific commands for managing *workspace* configurations.
 
-## Key difference: command-line tool vs. Studio
+## Command-line tool vs. Studio
 
 It's important to understand that Studio acts as a *wrapper* (a layer) over the command-line tool. Studio depends on the command-line tool to function.
 
