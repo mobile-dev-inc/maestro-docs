@@ -1,8 +1,2 @@
-.idea/
-
-# Vale linter
-.vale/
-.vale.ini
-
 # GitBook local development
 gitbook-manifest.yaml
