@@ -4,7 +4,7 @@ Maestro Studio is available for macOS, Windows, and Linux, providing a unified e
 
 ## Prerequisites
 
-Maestro Studio requires **Java 17 or higher**. To verify your Java installation, run:
+Maestro Studio requires Java 17 or higher. To verify your Java installation, run:
 
 ```sh
 java -version
@@ -33,15 +33,6 @@ Follow the platform-specific installation prompts:
 - **Windows:** Double-click the `.exe` and follow the setup wizard.
 - **macOS:** Open the `.dmg`, drag Maestro Studio to `Applications`.
 - **Linux:** Make the `.AppImage` executable (`chmod +x MaestroStudio.AppImage`) and run it witht the command `./MaestroStudio.AppImage`.
-
-## Key Features
-
-Maestro Studio is designed for technical users who want to streamline test automation workflows:
-
-- **No CLI Required:** Execute Maestro test suites directly from the GUI.
-- **Zero IDE Setup:** No need for VS Code, Android Studio, or Xcode configuration.
-- **Instant Device Connectivity:** Connect and manage Android, iOS, or web devices seamlessly.
-- **Cross-Platform:** Native installers for Apple Silicon & Intel Macs, Windows, and Linux.
 
 ## Video Walkthrough
 

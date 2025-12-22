@@ -1,27 +1,26 @@
 # Flutter on Maestro
 
-Maestro's support for Flutter exemplifies the framework's "Arm's Length" philosophy. Unlike Flutter-specific testing tools such as Flutter Driver and Integration Test requiring deep instrumentation, Maestro interacts with Flutter apps identically to native or React Native apps: through visual UI inspection.
+Maestro's approach to Flutter testing embodies an "Arm's Length" methodology, focusing exclusively on device-level automation. Unlike Flutter-specific tools such as Flutter Driver or Integration Test—which inject Dart code and require deep instrumentation within the app process—Maestro interacts with Flutter applications in the same manner as native or React Native apps: by simulating user input and inspecting the final rendered UI.
 
-Flutter Integration Test executes Dart code within the app process—crashes or native navigation breaks test control. Maestro executes external scripts simulating a technology-agnostic user, interacting purely with rendered UI elements. This validates actual UX rather than widget logic.
+Flutter Integration Test executes Dart code inside the app's runtime, making tests susceptible to crashes, navigation stack changes, or framework updates that can disrupt test execution. In contrast, Maestro runs externally, orchestrating input events (taps, swipes, text entry) and validating outcomes based on the actual pixels rendered on the device screen. This ensures that tests reflect the true end-user experience, independent of widget tree structure or internal logic.
 
-## Zero explicit framework support
+## Zero explicit framework dependencies
 
-> **Maestro's core technical principle**: "Maestro need not support Flutter explicitly because it only supports what renders on-screen."
+Maestro requires no explicit integration with Flutter or any other UI framework. Its operation is entirely decoupled from the app's internals, relying solely on the device's accessibility and visual output. By driving the device at the OS level, Maestro can automate interactions with any app—Flutter, native, React Native, or web—without knowledge of the underlying architecture or source code.
+
+This framework-agnostic design offers several technical advantages:
+
+- **No maintenance overhead:** Maestro tests remain stable across framework upgrades (e.g., new Flutter or JavaScript releases), as long as the UI layout and accessibility identifiers are consistent.
+- **Resilience to app changes:** Since Maestro does not depend on widget tree traversal or internal APIs, changes to app logic or navigation do not break test scripts unless the visual UI itself changes.
+- **Broad compatibility:** Maestro can automate system-level flows (notifications, permissions, network changes) that are inaccessible to in-app test frameworks.
+
+This device-centric paradigm delivers robust, future-proof test automation, ensuring that validation is always performed against the actual user-facing interface rather than internal implementation details.
 
 *   **Framework Agnosticism:** Maestro neither connects to Flutter's engine nor traverses the widget tree. It operates at device-level, simulating physical input events and analyzing final visual output.
 *   **No Dependencies:** No `pubspec.yaml` integration required. Maestro tests the compiled binary as Android Package (APK) or iOS App Store Package (IPA) directly, whether debug or release builds.
 
-## Visual and semantic interaction
-Flutter renders via Skia/Impeller rasterization. Maestro leverages optical character recognition (OCR) and native accessibility hierarchies for interaction.
-
-*   **Text Recognition:** Reference visible text for interaction.
-    *   Command: `tapOn: "Login"`
-    *   Mechanism: OCR locates rendered text coordinates and simulates tap input.
-*   **Accessibility Semantics:** For non-text elements, Maestro relies on Android and iOS native accessibility trees exposed by Flutter's `Semantics` widget.
-    *   **Implementation:** Apply `Semantics` wrappers or `semanticsLabel` properties to ensure elements are discoverable via Maestro Studio's accessibility inspector.
-
 ## Cross-platform test unification
-Single Flutter codebase for Android and iOS enables **single test suite** via Maestro.
+Single Flutter codebase for Android and iOS enables single test suite via Maestro.
 
 *   **Platform Abstraction:** Visual interaction commands work identically across platforms if UI layouts remain consistent.
 *   **Conditional Logic:** Use environment variables in YAML to handle platform-specific flows such as package IDs and permission dialogs without test duplication.
