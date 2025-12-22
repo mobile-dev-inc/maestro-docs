@@ -2,10 +2,10 @@
 
 * [Home](https://www.maestro.dev)
 * [Star us on GitHub](https://github.com/mobile-dev-inc/maestro)
-* [What is Maestro?](README.md)
 
 ## Introduction
 
+* [What is Maestro?](README.md)
 * [Core Concepts](/introduction/overview.md)
 * [How Maestro Works](/introduction/how-maestro-works.md)
 * [Repository Configuration](/introduction/repository-config.md)

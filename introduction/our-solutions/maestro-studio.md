@@ -10,14 +10,13 @@ Upon connecting to a device (either an emulator or a physical device), Studio mi
 
 The primary features of Maestro Studio include:
 
-* Visual inspection and command generation: Maestro Studio eliminates the guesswork associated with identifying element IDs within the Android or iOS view hierarchy:
+* **Visual inspection and command generation**: Maestro Studio eliminates the guesswork associated with identifying element IDs within the Android or iOS view hierarchy:
     *   **Point and Click:** Clicking on an element in the mirrored screen (for example, a button or text field) prompts Studio to automatically identify and display that element's properties (text, ID, etc.).
     *   **Automatic Generation:** Based on your selection, Studio intelligently suggests valid YAML commands (for example, `tapOn`, `inputText`, `assertVisible`) and integrates them into the test file.
-* Interactive execution (REPL): Maestro Studio functions similarly to an Integrated Development Environment (IDE), allowing you to construct your test incrementally in real-time:
+* **Interactive execution (REPL)**: Maestro Studio functions similarly to an Integrated Development Environment (IDE), allowing you to construct your test incrementally in real-time:
     *   **Execute and Insert:** You can execute isolated commands to verify their capability on the device, and upon success, permanently insert them into the test flow.
     *   **Instant Feedback:** This feature enables immediate validation of test logic, circumventing the traditional cycle of "write everything, run, fail, fix, and run again."
-
-* Intelligent element search: Leveraging Maestro's "Computer Vision" capabilities, Studio comprehends the screen hierarchy, simplifying the creation of assertions (validations) to ensure specific text or icons are visible post-action.
+* **Intelligent element search**: Leveraging Maestro's "Computer Vision" capabilities, Studio comprehends the screen hierarchy, simplifying the creation of assertions (validations) to ensure specific text or icons are visible post-action.
 
 ## Recommended workflow
 

@@ -8,16 +8,14 @@ Maestro adopts an "extreme arm's length" approach, simulating user interactions 
 *   **Zero Instrumentation:** No test libraries, delegates, or viewController exposure required. Maestro tests production binaries such as `.app` and `.ipa` files as distributed to end users.
 *   **Implementation Agnostic:** Refactoring UIKit to SwiftUI without visual/textual changes preserves test validity. Maestro validates user-facing features, not implementation.
 
-## Element Identification & Interaction
-
-### Text-based selection
+## Text-based selection
 Primary interaction method via visible UI text:
 
 ```yaml
 - tapOn: "Save"
 ```
 
-### Accessibility layer
+## Accessibility layer
 For non-textual elements such as icons and image buttons, or for disambiguation:
 *   Define `accessibilityIdentifier` on UIView instances
 *   Maestro Studio auto-inspects and reveals IDs for command generation
