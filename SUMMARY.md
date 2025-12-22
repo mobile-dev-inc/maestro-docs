@@ -2,6 +2,7 @@
 
 * [Home](https://www.maestro.dev)
 * [Star us on GitHub](https://github.com/mobile-dev-inc/maestro)
+* [Maestro documentation](README.md)
 
 ## Introduction
 
