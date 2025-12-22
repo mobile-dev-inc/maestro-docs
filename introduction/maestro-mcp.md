@@ -40,7 +40,9 @@ The `json` configuration file for Maestro MCP serve is:
     }
 }
 ```
-> Note: If you don't have the CLI on your PATH, you have to replace `maestro` with the path to your Maestro CLI installation path.
+{% hint style="info" %}
+If you don't have the CLI on your PATH, you have to replace `maestro` with the path to your Maestro CLI installation path.
+{% endhint %}
 
 **For other IDEs and more information, consult their documentation:**
 * [Windsurf](https://docs.windsurf.com/windsurf/mcp#adding-a-new-server)

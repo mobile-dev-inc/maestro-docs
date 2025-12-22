@@ -40,4 +40,6 @@ It's crucial to understand that both Studio and the command-line tool utilize th
 | **Learning Curve** | Low (Ideal for beginners) | Medium (Requires command knowledge) |
 | **Interactivity** | High (Point and click) | Low (Ready-made script execution) |
 
-> **Note:** Although Studio is the preferred tool for creation, certain advanced configuration features and specific execution switches may only be accessible via the command-line tool.
+{% hint style="info" %}
+Although Studio is the preferred tool for creation, certain advanced configuration features and specific execution switches may only be accessible via the command-line tool.
+{% endhint %}

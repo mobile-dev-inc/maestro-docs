@@ -49,7 +49,9 @@ As test coverage expands, you can refactor the flat structure into a hierarchica
         └── <code here>
 ```
 
-> **Technical Implementation Note**: This hierarchical structure requires explicit test discovery configuration. The `config.yaml` file must define inclusion patterns using glob syntax—for example, `includeTags: ["tests/**/*.yaml"]`—to scope test execution to the `tests/` subdirectory. This pattern-based filtering mechanism allows for granular control over test suite composition during CI/CD pipeline execution. Refer to [Controlling What Tests to Include](https://docs.maestro.dev/cli/test-suites-and-reports#controlling-what-tests-to-include) for glob pattern syntax and advanced filtering strategies.
+{% hint style="tip" %}
+**Technical Implementation Note**: This hierarchical structure requires explicit test discovery configuration. The `config.yaml` file must define inclusion patterns using glob syntax—for example, `includeTags: ["tests/**/*.yaml"]`—to scope test execution to the `tests/` subdirectory. This pattern-based filtering mechanism allows for granular control over test suite composition during CI/CD pipeline execution. Refer to [Controlling What Tests to Include](https://docs.maestro.dev/cli/test-suites-and-reports#controlling-what-tests-to-include) for glob pattern syntax and advanced filtering strategies.
+{% endhint %}
 
 ### Features
 
