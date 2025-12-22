@@ -19,7 +19,7 @@
   * [Android Native](/introduction/supported-platforms/android-native.md)
   * [iOS](/introduction/supported-platforms/ios.md)
   * [Flutter](/introduction/supported-platforms/flutter.md)
-  * [Web Browsers](/introduction/supported-platforms/web-browsers.md)
+  * [Web Browsers](/introduction/supported-platforms/web-browser.md)
   * [Jetpack](/introduction/supported-platforms/jetpack.md)
   * [SwiftUI](/introduction/supported-platforms/swiftui.md)
   * [UIKit](/introduction/supported-platforms/uikit.md)
