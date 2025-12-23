@@ -7,7 +7,6 @@
 
 * [How to Install Maestro Studio](/maestro-studio/how-to-install.md)
 * [How to run your first test](/maestro-studio/how-to-run-tests.md)
-* [Environment variables on Maestro Studio](/maestro-studio/add-env-var.md)
 
 ## Core concepts
 
