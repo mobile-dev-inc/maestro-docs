@@ -30,6 +30,10 @@
   * [SwiftUI](/introduction/supported-platforms/swiftui.md)
   * [UIKit](/introduction/supported-platforms/uikit.md)
 
+## Maestro Studio
+
+* [Environment variables](/maestro-studio/add-env-var.md)
+
 ## Maestro CLI
 
 * [How to Install Maestro CLI](/maestro-cli/how-to-install-cli.md)
