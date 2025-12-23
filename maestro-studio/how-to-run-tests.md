@@ -61,9 +61,7 @@ With your first YAML file created, you can start building the test itself. To do
 
 ### Add commands using the insert command option
 
-To add commands this way, click the **Insert Command** button in the IDE. This opens a dropdown menu with options to add. For example, add a `tapOn` command to simulate a tap on an element called `Login`:
-
-{% embed URL="/images/maestro-studio/add-command-button.mp4" %}
+To add commands this way, click the **Insert Command** button in the IDE. This opens a dropdown menu with options to add. For example, add a `tapOn` command to simulate a tap on an element called `Login`.
 
 The YAML file should look like this:
 
@@ -80,8 +78,6 @@ tags:
 ### Add commands using inspect screen option
 
 To add commands this way, click the **Inspect Screen** button. This takes you to the screen of the device you're testing, where you can select the coordinates of an element to test it.
-
-{% embed URL="/images/maestro-studio/add-inser-screen.mp4" %}
 
 The YAML file should look like this:
 
@@ -136,5 +132,4 @@ tags:
 - tapOn: Run a Sample Flow
 - takeScreenshot: MainScreen
 ```
-The screenshot is saved inside the `.maestro/screenshots` folder.
-You can copy and paste it to run as a simple example using a web browser (Chromium).
+The screenshot is saved inside the `.maestro/screenshots` folder. You can copy and paste it to run as a simple example using a web browser (Chromium).
