@@ -30,6 +30,8 @@
 
 ## Maestro CLI
 
+* [How to Install Maestro CLI](/maestro-cli/how-to-install-cli.md)
+
 ## Cloud
 
 ## Flows
