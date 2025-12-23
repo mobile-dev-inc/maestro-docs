@@ -28,6 +28,8 @@
 
 * [How to Install Maestro Studio](/maestro-studio/how-to-install.md)
 
+* [Environment variables on Maestro Studio](/maestro-studio/add-env-var.md)
+
 ## Maestro CLI
 
 ## Cloud
