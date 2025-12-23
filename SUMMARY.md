@@ -3,7 +3,13 @@
 * [Home](https://www.maestro.dev)
 * [Star us on GitHub](https://github.com/mobile-dev-inc/maestro)
 
-## Introduction
+## Start here with Maestro Studio
+
+* [How to Install Maestro Studio](/maestro-studio/how-to-install.md)
+* [How to run your first test](/maestro-studio/how-to-run-tests.md)
+* [Environment variables on Maestro Studio](/maestro-studio/add-env-var.md)
+
+## Core concepts
 
 * [What is Maestro?](README.md)
 * [Core Concepts](/introduction/overview.md)
@@ -23,13 +29,6 @@
   * [Jetpack](/introduction/supported-platforms/jetpack.md)
   * [SwiftUI](/introduction/supported-platforms/swiftui.md)
   * [UIKit](/introduction/supported-platforms/uikit.md)
-
-## Maestro Studio
-
-* [How to Install Maestro Studio](/maestro-studio/how-to-install.md)
-* [How to run your first test](/maestro-studio/how-to-run-tests.md)
-
-* [Environment variables on Maestro Studio](/maestro-studio/add-env-var.md)
 
 ## Maestro CLI
 
