@@ -58,6 +58,15 @@ Once execution completes, the report will be stored in a `report.xml` file in a 
 
 ![html](https://github.com/depapp/maestro-docs/assets/6134774/8fedda56-de5e-411d-8501-63bf3c581e90)
 
+* `composite` - Composite reporter generates both JUnit XML and HTML reports.<br />
+It is useful for CI, when JUnit XML is consumed by CI, and HTML for People to view.<br />
+To generate both JUnit and HTML reports use `--format composite` in test launch command:<br /><br />
+`maestro test --format composite --output "reports_dir/" myFolderWithTests/`<br /><br />
+Test reports will be generated in subfolders `JUnit` and `Html`:
+  - `reports_dir/JUnit/report.xml`
+  - `reports_dir/Html/report.html`
+<br /><br />
+
 #### Additional options
 
 * `--output {file}` allows to override the report filename
