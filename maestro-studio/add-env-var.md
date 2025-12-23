@@ -29,13 +29,12 @@ To add new variables to your workspace, follow these steps:
 ![Open the Environment options](/images/maestro-studio/environment.png)
 
 4. In the **Environment Manager**, click the **+ Add Variable** button.
-
-![Add an environment variable](/images/maestro-studio/add-var.png)
-
 5. Add the variables as key-value pairs. For example, you can add the following variables:
     - **email**: `test@test.com`.
-    - **password**: `12345678`.
+    - **password**: `test123`.
 6. Click the **Save** button.
+
+![Add an environment variable](/images/maestro-studio/add-var.png)
 
 Now you're ready to use your variables in your flows.
 

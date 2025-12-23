@@ -3,7 +3,7 @@
 * [Home](https://www.maestro.dev)
 * [Star us on GitHub](https://github.com/mobile-dev-inc/maestro)
 
-## Start here with Maestro Studio
+## Start here
 
 * [How to Install Maestro Studio](/maestro-studio/how-to-install.md)
 * [How to run your first test](/maestro-studio/how-to-run-tests.md)
