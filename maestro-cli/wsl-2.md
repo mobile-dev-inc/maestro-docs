@@ -19,17 +19,17 @@ In order to install the Windows Subsystem for Linux (WSL2) open a terminal on Wi
 wls --install
 ```
 
-{% hint title="warning" %}
+{% hint style="warning" %}
 This command will install Ubuntu by default.
 {% endhint %}
 
-{% hint title="success" %}
+{% hint style="success" %}
 For a better experience using the WSL2 on Windows 11, instal the new [Terminal](https://github.com/microsoft/terminal).
 {% endhint %}
 
 After the installation is completed, the terminl will open automatically. Enter your desired username and password for the new Ubuntu installation.
 
-{% hint title="success" %}
+{% hint style="success" %}
 After install Ubuntu with the command above, run:
 
 ```bash

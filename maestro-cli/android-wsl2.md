@@ -33,7 +33,7 @@ mv latest/ cmdline-tools/
 
 3. Add the Android command line tools to the `.bashrc`:
 
-{% hint title="sucess" %}
+{% hint style="sucess" %}
 To open your `.bashrc` file, use a text editor like VIM (Vi IMproved) or NANO (Nano's ANOther editor), for example: `nano .bashrc`.
 {% endhint %}
 
