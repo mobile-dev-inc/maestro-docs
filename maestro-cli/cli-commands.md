@@ -1,4 +1,4 @@
-# Subcommands and options for Maestro CLI
+# Reference for Maestro CLI
 
 This document lists all the options and subcommands you can pass to the Maestro CLI.
 
