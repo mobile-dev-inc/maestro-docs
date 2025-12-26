@@ -38,6 +38,7 @@
 * [How to Install Maestro CLI](/maestro-cli/how-to-install-cli.md)
 * [How to Setup Maestro with WSL2](/maestro-cli/wsl-2.md)
 * [Install Android on WSL2](/maestro-cli/android-wsl2.md)
+* [Flags and parameters for Maestro CLI](/maestro-cli/cli-commands.md)
 * [Troubleshooting](/maestro-cli/troubleshooting.md)
 
 ## Cloud
