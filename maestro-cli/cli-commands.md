@@ -1,33 +1,33 @@
-# Flags and parameters for Maestro CLI
+# Subcommands and options for Maestro CLI
 
-This document lists all the flags and parameters you can pass to the Maestro CLI.
+This document lists all the options and subcommands you can pass to the Maestro CLI.
 
 ## Usage
 
-To use the parameters and/or flags with the Maestro CLI, follow this pattern:
+To use the subcommands and/or options with the Maestro CLI, follow this pattern:
 
 ```bash
-maestro -<Flags> -<Parameters>
+maestro -option -subcommand
 ```
 
-## Flags
+## Options
 
-You can pass these flags with the Maestro CLI:
+You can pass these options with the Maestro CLI:
 
 | Flag | Description | 
 | --- | --- |
-| `-h`, `--help` | Disply de help message for the flag or parameter. |
+| `-h`, `--help` | Disply de help message for the flag or subcommand. |
 | `--[(no) ansi]`, `--[(no) color]` | Enable or disabe color and ansi output. |
 | `-p`, `--platform` | Select the platform to run the test on. Usage: `--platform=ios`. |
 | `--udid`, `--device` | Pass the device ID to run the test on. Usage: `--device=00008030-001C195E0E88002E`. |
 | `-v`, `--version` | Display the version of the Maestro CLI you have installed. |
 | `--verbose` | Enable verbose mode. |
 
-## Parameters
+## Subcommands
 
-You can pass these parameters with the Maestro CLI:
+You can pass these subcommands with the Maestro CLI:
 
-| Parameter | Description |
+| subcommand | Description |
 | --- | --- |
 | `test` | Test a flow or a selected set of flows on a local iOS Simulator or Android Emulator. | 
 | `cloud` | Upload your flows to Maestro Cloud. |
@@ -41,9 +41,9 @@ You can pass these parameters with the Maestro CLI:
 | `driver-setup` | Setup Maestro drivers for your device. By now, it supports iOS real devices. |
 | `mcp` | Start the Maestro Model Context Protocol, MCP. |
 
-## Parameters and flags for Maestro CLI options
+## Subcommands options
 
-Each paramter or flag of Maestro CLI will have a series of other paramters and flags. 
+Each subcommand of Maestro CLI will have a series of other options. 
 
 ### `test`
 
@@ -115,7 +115,7 @@ Each paramter or flag of Maestro CLI will have a series of other paramters and f
 
 | Option | Description |
 | :--- | :--- |
-| `<flowFile>` | **Required.** The Flow file to record. |
+| `<flowFile>` | The Flow file to record. |
 | `[<outputFile>]` | Output file for the rendered video. Only valid for local rendering using `--local`. |
 | `[<outputFile>]` | Save the rendered video to this output file. Only works with local rendering using `--local`. |
 | `--apple-team-id=<appleTeamId>` | The unique 10-character Apple Team ID assigned to your team's account. |
@@ -138,5 +138,9 @@ Each paramter or flag of Maestro CLI will have a series of other paramters and f
 | `--device-locale=<locale>` | Use a combination of lowercase ISO-639-1 code and uppercase ISO-3166-1 code, for example: "de_DE" for Germany. |
 | `--force-create` | Overrides the existing device if it already exists. |
 | `-h, --help` | Display the help message. |
-| `--os-version=<version>` | OS version to use. **iOS**: 16, 17, 18. **Android**: 28, 29, 30, 31, 33. |
-| `--platform=<platform>` | **Required.** Platforms: `android` or `ios`. |
+| `--os-version=<version>` | OS version to use. iOS: 16, 17, 18. Android: 28, 29, 30, 31, 33. |
+| `--platform=<platform>` | Platforms: `android` or `ios`. |
+
+{% hint style="warning"%}
+Some options will be required to run yout tests, like th `<FlowFile>` and the `--parameter` options.
+{% endhintß %}
