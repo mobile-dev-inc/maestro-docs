@@ -28,31 +28,3 @@
   * [Jetpack](/introduction/supported-platforms/jetpack.md)
   * [SwiftUI](/introduction/supported-platforms/swiftui.md)
   * [UIKit](/introduction/supported-platforms/uikit.md)
-
-## Maestro Studio
-
-* [Environment variables](/maestro-studio/add-env-var.md)
-
-## Maestro CLI
-
-* [How to Install Maestro CLI](/maestro-cli/how-to-install-cli.md)
-* [How to Setup Maestro with WSL2](/maestro-cli/wsl-2.md)
-* [Install Android on WSL2](/maestro-cli/android-wsl2.md)
-* [Reference for Maestro CLI](/maestro-cli/cli-commands.md)
-* [Troubleshooting](/maestro-cli/troubleshooting.md)
-
-## Cloud
-
-## Flows
-
-## Command Reference
-
-## Best Practices
-
-## Javascript With Maestro
-
-## Use Cases
-
-## Troubleshooting
-
-## Community
