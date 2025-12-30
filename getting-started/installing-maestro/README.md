@@ -35,9 +35,10 @@ curl -fsSL "https://get.maestro.mobile.dev" | bash
 If you're on macOS, you can use Homebrew instead of the install script above:
 
 ```bash
-brew tap mobile-dev-inc/tap
-brew install maestro
+brew install mobile-dev-inc/tap/maestro
 ```
+
+> **Note:** Do not use `brew install maestro` as this will install a different application. Always use the fully qualified formula name above.
 
 ## Upgrading the CLI
 
