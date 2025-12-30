@@ -6,7 +6,7 @@
 - toggleAirplaneMode
 ```
 
-If you want to explicitely enable or disable the airplane mode, see [setAirplaneMode](./setairplanemode.md).
+If you want to explicitly enable or disable the airplane mode, see [setAirplaneMode](./setairplanemode.md).
 
 {% hint style="info" %}
 iOS simulators don't have an airplane mode, this is only available on Android.
