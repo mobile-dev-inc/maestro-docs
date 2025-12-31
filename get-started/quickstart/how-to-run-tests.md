@@ -4,15 +4,17 @@ To run tests with Maestro Studio, you just need to create a YAML file with the t
 
 ## Prerequisites
 
-- [Maestro Studio installed](/maestro-studio/how-to-install.md)
+* [Maestro Studio installed](how-to-install.md)
 
 **For Android tests**
-- [Android Studio](https://developer.android.com/studio/install).
-- [Android Virtual Device (emulator) configured](https://developer.android.com/studio/run/emulator#avd).
+
+* [Android Studio](https://developer.android.com/studio/install).
+* [Android Virtual Device (emulator) configured](https://developer.android.com/studio/run/emulator#avd).
 
 **For iOS tests**
-- [XCode installed](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
-- [XCode command line tools installed](https://developer.apple.com/xcode/resources/).
+
+* [XCode installed](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
+* [XCode command line tools installed](https://developer.apple.com/xcode/resources/).
 
 {% hint style="success" %}
 The XCode already provides a simulator, if you need to install a differente one than the default, follow the instructions on the Apple Official documentation: [Adding additional simulators](https://developer.apple.com/documentation/safari-developer-tools/adding-additional-simulators).
@@ -25,24 +27,18 @@ Once you have installed and set up your development environment, you can proceed
 1. Open Maestro Studio.
 2. Click the **No device connected** button to open the panel.
 
-![Open the device selection panel](/images/maestro-studio/no-device.png)
+![Open the device selection panel](../../.gitbook/assets/no-device.png)
 
 3. On the panel, selecte the device you want to run your tests.
-
-![Select the device to run the test](/images/maestro-studio/select-device.png)
-
 4. On the Maestro Studio, click **New Test** option to open the **Add a new test to your workspace** window.
-
-![Open the Add new test to your workspace window](/images/maestro-studio/add-test.png)
-
 5. On the **Add a new test to your workspace** window, select the type of test (Mobile Test, Web Test, or JavaScript File), and fill in:
-    - **Name**: Name for your YAML file.
-    - **App Id**: From the dropdown menu, select the App Id for testing.
-        - You can also click the **Scan file for App Id** option. This allows you to indicate an app file to test (such as an `.apk` for Android or a `.zip` for iOS).
-    - **Tags**: Add tags to your tests to keep them organized.
+   * **Name**: Name for your YAML file.
+   * **App Id**: From the dropdown menu, select the App Id for testing.
+     * You can also click the **Scan file for App Id** option. This allows you to indicate an app file to test (such as an `.apk` for Android or a `.zip` for iOS).
+   * **Tags**: Add tags to your tests to keep them organized.
 6. Click **Create Test** to create the YAML file.
 
-![Create your first test](/images/maestro-studio/workspace-test.png)
+![Create your first test](../../.gitbook/assets/workspace-test.png)
 
 Maestro Studio creates a clean and minimal test file:
 
@@ -132,4 +128,5 @@ tags:
 - tapOn: Run a Sample Flow
 - takeScreenshot: MainScreen
 ```
+
 The screenshot is saved inside the `.maestro/screenshots` folder. You can copy and paste it to run as a simple example using a web browser (Chromium).
