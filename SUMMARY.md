@@ -6,13 +6,12 @@
 ## Get Started
 
 * [What is Maestro?](README.md)
+* [How Maestro works](get-started/how-maestro-works.md)
 * [Quickstart](get-started/quickstart/README.md)
   * [How to install Maestro Studio](get-started/quickstart/how-to-install.md)
   * [How to run your first test](get-started/quickstart/how-to-run-tests.md)
 * [Core concepts](get-started/overview.md)
-* [How Maestro works](get-started/how-maestro-works.md)
 * [Repository configuration](get-started/repository-config.md)
-* [Maestro MCP Server](get-started/maestro-mcp.md)
 * [Maestro solutions](get-started/our-products/README.md)
   * [Maestro CLI](get-started/our-products/cli.md)
   * [Maestro Studio](get-started/our-products/maestro-studio.md)
@@ -26,3 +25,4 @@
   * [Jetpack](get-started/supported-platform/jetpack.md)
   * [SwiftUI](get-started/supported-platform/swiftui.md)
   * [UIKit](get-started/supported-platform/uikit.md)
+* [Maestro MCP Server](get-started/maestro-mcp.md)
