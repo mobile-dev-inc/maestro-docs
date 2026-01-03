@@ -36,7 +36,7 @@ If you're on macOS, you can use Homebrew instead of the install script above:
 
 ```bash
 brew tap mobile-dev-inc/tap
-brew install maestro
+brew install mobile-dev-inc/tap/maestro
 ```
 
 ## Upgrading the CLI
