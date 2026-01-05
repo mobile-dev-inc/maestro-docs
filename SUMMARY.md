@@ -6,6 +6,7 @@
 ## Get Started
 
 * [What is Maestro?](README.md)
+* [Copy of What is Maestro?](get-started/readme-1.md)
 * [How Maestro works](get-started/how-maestro-works.md)
 * [Quickstart](get-started/quickstart/README.md)
   * [How to install Maestro Studio](get-started/quickstart/how-to-install.md)
