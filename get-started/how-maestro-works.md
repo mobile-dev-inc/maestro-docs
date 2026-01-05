@@ -1,46 +1,57 @@
 # How Maestro works
 
-Maestro operates as a black-box testing framework that simulates user interactions at the device level rather than through app APIs or source code instrumentation. This architecture-agnostic approach enables consistent automation across heterogeneous app stacks (native iOS, Android, React Native, Flutter, etc.) by leveraging the device's input/output interfaces.
+Maestro operates as a black-box testing framework that simulates user interactions at the device level. Unlike traditional tools that require access to an app's source code or internal APIs, Maestro leverages the operating system's built-in accessibility and input interfaces to treat the application as an opaque system.
 
-{% hint style="success" %}
-Instead of introspecting app internals, Maestro sends low-level device commands (tap events, swipe gestures, text input via the input method framework) and validates behavior through accessibility APIs and visual element detection, mimicking physical user interaction.
-{% endhint %}
+### The "arm's length" philosophy
 
-Maestro differentiates itself through:
-- **Accessibility-First Element Location**: Leveraging platform accessibility for deterministic element identification without brittle coordinate-based selectors.
-- **Declarative Test Definition (YAML)**: Human-readable test specifications that abstract platform-specific implementation details.
-- **Distributed Cloud Execution**: Parallel test orchestration across multiple emulator/device instances with centralized result aggregation.
+The central mechanic of Maestro is its "arm's length" operation, meaning the framework pilots the device itself rather than the internal app code.
 
-### "Arm's length" operation
-The central mechanic of Maestro uses "arm's length" operation. This means the framework doesn't interact with the app's source code (such as React Native or Flutter), but rather with the device itself.
+* **Platform Agnostic**: Because Maestro interacts with the Accessibility Tree (the data layer used by screen readers), it provides a consistent experience across heterogeneous stacks like Native iOS/Android, React Native, and Flutter.
+* **Human Simulation**: Maestro reproduces physical actions, like "thumbs on a screen", by sending low-level device commands for tap events, swipe gestures, and text input.
+* **System-Wide Control**: Since it controls the device, Maestro can interact with elements outside the app, such as system settings, permission dialogs, and notifications.
 
-*   **Human Simulation**: Maestro works by reproducing the physical actions of a user, like "thumbs on a screen." It sends commands to the device to tap, swipe, or type, ignoring what technology you used to build the app internally.
-*   **Device Control**: Because it pilots the device and not just the app, Maestro can interact with elements outside the app, such as system settings menus, permissions, and notifications.
+### Declarative test definition (YAML)
 
-### Test structure (YAML)
-Tests aren't written in complex programming languages, but in YAML files. The logic is that the test be readable as a simple English instruction.
+Tests are defined in simple YAML files, allowing user journeys, referred to as Flows, to be readable as English instructions.
 
-*   **Flows**: A test file represents a user scenario (for example, "Book a car").
-*   **Declarative Commands**: The user defines direct actions like `tapOn`, `inputText`, or `assertVisible`.
-*   **Built-in Intelligence**: Maestro has "idiomatic" commands that solve common automation problems. An example cited is `scrollUntilVisible`: instead of calculating exact coordinates, Maestro automatically scrolls the screen until it finds the desired element, mimicking human visual search behavior.
+* **Built-in Intelligence**: Maestro features "idiomatic" commands designed to solve common automation hurdles. For example, `scrollUntilVisible` mimics human visual search by automatically scrolling until it finds an element, rather than requiring brittle coordinate-based logic.
+* **Built-in Tolerance**: Maestro "embraces instability" by automatically waiting for the screen to "settle" or for content to load, removing the need for manual `sleep()` or artificial wait commands.
 
-### Workflow
-Practical operation occurs through two main interfaces that interact with the same execution engine:
+{% embed url="https://vimeo.com/744398229?fl=pl&fe=cm" %}
 
-**A. Via Maestro Studio**
-To create and run tests visually:
-1.  **Connection**: Studio connects to an emulator or physical device and mirrors the screen to the computer.
-2.  **Visual Interaction**: The user clicks on elements of the mirrored screen. Studio identifies the element and suggests commands (for example, tap, validate text).
-3.  **Real-time Execution**: When selecting a command, Maestro inserts it into the YAML file and simultaneously executes the action on the device. This allows building and testing the flow step by step instantly.
+### Maestro ecosystem and workflow
 
-**B. Via Maestro command-line tool**
-For automated execution:
-*   The Maestro command-line tool is the engine that interprets YAML files and sends instructions to the connected device. It's frequently used in Continuous Integration (CI) systems to run tests automatically whenever the app code changes.
+The Maestro suite provides different interfaces to interact with the same core execution engine.
 
-### Logic and reusability
-To function in complex scenarios without duplicating code, Maestro uses:
-*   Subflows: Maestro allows extracting code snippets (like a login process) and saving them in separate files. A main test can then execute this "subflow," facilitating maintenance.
-*   JavaScript Sandbox: Although the focus is YAML, Maestro allows injecting small JavaScript snippets in a restricted environment (sandbox) to generate random data (like fake emails) or control variables during the test.
+#### Maestro Studio (Visual IDE)
 
-### Maestro cloud execution
-To scale operation, Maestro cloud acts as an execution backend. The user uploads the app and test files, and the cloud executes these flows in parallel on multiple hosted virtual devices, returning results much faster than local sequential execution.
+Maestro Studio is the recommended entry point for new users to build tests visually:
+
+1. **Connection**: Studio connects to a device and mirrors the screen to your browser.
+2. **Visual Interaction**: You click on elements of the mirrored screen, and Studio identifies them and suggests commands.
+3. **Real-time Execution**: Commands are inserted into your YAML file and executed on the device instantly, allowing for step-by-step flow construction.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+#### Maestro CLI&#x20;
+
+The CLI is the open-source engine that interprets YAML files and sends instructions to the device. It is the primary tool for automated execution in Continuous Integration (CI) systems.
+
+#### Maestro Cloud&#x20;
+
+Maestro Cloud acts as the execution backend for large-scale testing. Teams upload their apps and Flows to run in parallel across multiple hosted virtual devices, ensuring deterministic results and faster feedback loops.
+
+### Advanced logic and modularity
+
+To handle complex scenarios without code duplication, Maestro utilizes modular logic and scripting:
+
+* **Subflows**: Common sequences, such as a "Login" process, can be saved in separate files and called by multiple main tests to facilitate maintenance.
+* **Hooks**: Commands like `onFlowStart` and `onFlowComplete` manage app state, such as clearing cache before a test or logging out after completion.
+* **JavaScript**: For dynamic data needs (e.g., generating random emails), you can inject small JavaScript snippets that run in a restricted environment without access to the local file system.
+
+### Next steps
+
+To continue your journey with Maestro, choose one of the following options::
+
+* Check the [quickstart](quickstart/ "mention") guide to learn how to install Maestro Studio and run your first test.
+* Explore each of the available [our-products](our-products/ "mention").
