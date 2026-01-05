@@ -2,9 +2,9 @@
 
 Maestro is the simplest and most effective open-source UI automation framework for mobile and web. It is designed to allow developers and testers to define and automate user journeys with a level of reliability and ease that traditional tools cannot match.
 
-Traditional testing tools often require deep instrumentation, access to app source code, and complex framework knowledge. Maestro changes this by operating at "[arm's length](get-started/how-maestro-works.md#the-arms-length-philosophy)," piloting the device through the same accessibility layer used by real users. This eliminates framework dependencies and allows you to test any app regardless of whether it was built with React Native, Flutter, or Native code.
-
 <figure><img src=".gitbook/assets/twitter_continuous_v3_fast.gif" alt=""><figcaption></figcaption></figure>
+
+Traditional testing tools often require deep instrumentation, access to app source code, and complex framework knowledge. Maestro changes this by operating at "[arm's length](get-started/how-maestro-works.md#the-arms-length-philosophy)," piloting the device through the same accessibility layer used by real users. This eliminates framework dependencies and allows you to test any app regardless of whether it was built with React Native, Flutter, or Native code.
 
 ### Why choose Maestro?
 
