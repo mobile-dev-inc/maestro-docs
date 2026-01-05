@@ -36,3 +36,7 @@ You can also use it to immediately fail the test:
 {% content-ref url="assertnotvisible.md" %}
 [assertnotvisible.md](assertnotvisible.md)
 {% endcontent-ref %}
+
+{% content-ref url="assertequal.md" %}
+[assertequal.md](assertequal.md)
+{% endcontent-ref %}
