@@ -70,6 +70,8 @@ Supported conditions include:
 </strong>notVisible: { Element matcher }     # True if matching element is not present
 true: { Value }                     # True if given value is true or not empty
 platform: { Platform }              # True if current platform is given platform (Android|iOS|Web)
+equal: { value1, value2 }           # True if value1 equals value2
+notEqual: { value1, value2 }        # True if value1 does not equal value2
 </code></pre>
 
 All of the normal element matchers are supported, e.g.
