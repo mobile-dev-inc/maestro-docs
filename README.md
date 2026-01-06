@@ -8,14 +8,14 @@ Traditional testing tools often require deep instrumentation, access to app sour
 
 ### Why choose Maestro?
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Built-in Tolerance</strong></td><td>Maestro embraces the instability of mobile devices by automatically handling flakiness and UI settling.</td></tr><tr><td><strong>Zero-Wait Intelligence</strong></td><td>No more manual <code>sleep()</code> calls. Maestro automatically waits for network content and animations to load.</td></tr><tr><td><strong>Declarative Syntax</strong></td><td>Tests are defined in human-readable YAML files, removing the need for deep programming knowledge.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><i class="fa-shield">:shield:</i> <strong>Built-in Tolerance</strong></td><td>Maestro embraces the instability of mobile devices by automatically handling flakiness and UI settling.</td></tr><tr><td><i class="fa-timer">:timer:</i> <strong>Zero-Wait Intelligence</strong></td><td>No more manual <code>sleep()</code> calls. Maestro automatically waits for network content and animations to load.</td></tr><tr><td><i class="fa-file">:file:</i> <strong>Declarative Syntax</strong></td><td>Tests are defined in human-readable YAML files, removing the need for deep programming knowledge.</td></tr></tbody></table>
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Blazingly Fast Iteration</strong></td><td>Tests run without compilation. Maestro monitors your files and reruns flows instantly upon saving.</td></tr><tr><td><strong>Single Binary Setup</strong></td><td>Maestro is a single tool that works anywhere, avoiding the "setup hell" associated with legacy drivers.</td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><i class="fa-rocket-launch">:rocket-launch:</i> <strong>Blazingly Fast Iteration</strong></td><td>Tests run without compilation. Maestro monitors your files and reruns flows instantly upon saving.</td></tr><tr><td><i class="fa-box">:box:</i> <strong>Single Binary Setup</strong></td><td>Maestro is a single tool that works anywhere, avoiding the "setup hell" associated with legacy drivers.</td></tr></tbody></table>
 
 {% hint style="success" %}
 🚀 **Running in the cloud**
 
-Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade Google Cloud Platform (GCP) infrastructure: [Run Maestro tests in the cloud](https://maestro.dev/cloud) and follow the [Quickstart Guide](cloud/cloud-quickstart.md) to quickly experience the power of GCP.
+Ready to wire into CI or scale up your testing? Start running your flows on [Maestro's enterprise-grade Google Cloud Platform (GCP)](https://maestro.dev/cloud) infrastructure. Check the [Cloud documentation](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/ky7LkNoLfvcORtXOzzBs/) to learn how to use the power of GCP.
 {% endhint %}
 
 ### Maestro vs competitors&#x20;
