@@ -74,6 +74,8 @@ equal: { value1, value2 }           # True if value1 equals value2
 notEqual: { value1, value2 }        # True if value1 does not equal value2
 </code></pre>
 
+Note: `equal` and `notEqual` compare scalar values (e.g. strings, numbers, booleans). Comparisons are performed in Kotlin after any JavaScript evaluation. Complex types such as objects, arrays or type mismatches or coersion may produce unexpected results.
+
 All of the normal element matchers are supported, e.g.
 
 ```yaml
