@@ -13,4 +13,4 @@ Can have an optional timeout (in milliseconds) after which, if the animation is 
     timeout: 5000
 ```
 
-If you want to add a fixed delay, see [sleep](./sleep.md).
+If you're looking to add a fixed delay, use [sleep](./sleep.md) instead.
