@@ -1,2 +1,6 @@
-# Quickstart
+---
+hidden: true
+---
+
+# Quickstart (old)
 
