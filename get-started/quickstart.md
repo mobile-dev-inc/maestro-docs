@@ -168,28 +168,23 @@ While this Quickstart focuses on writing commands manually in the YAML file, Mae
 
 
 
-<figure><img src="../.gitbook/assets/quickstart-explore-options.gif" alt=""><figcaption></figcaption></figure>
-
-*
+<img src="../.gitbook/assets/quickstart-explore-options.gif" alt="" data-size="original">
 
 
 {% endhint %}
 
-
-
 ### Video walkthrough
 
-You can also check the following video to have a second view of how you can perform your first test with Maestro.
+Watch this step-by-step video to see the first test creation process in detail:
 
 {% embed url="https://www.youtube.com/watch?v=E7qwFwo_nu0" %}
 
 ### Next steps
 
-Now that you have performed your first test, you can continue exploring the solutions provided by Maestro:
+Now that you’ve seen the power of "arm's length" automation, explore these resources to master the ecosystem:
 
-* Access the [Maestro Studio overview](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/ "mention") to learn how to use and the features available in the Maestro Studio.
-* If you prefer a more programmatic approach to create tests, access [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention") to learn how to run tests using Maestro CLI.
+* Visit the [Maestro Studio overview](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/ "mention") to learn how to use visual element inspection and the Live REPL to build tests without writing code from scratch.
+* If you prefer a programmatic approach or need to integrate tests into your CI/CD pipeline, head to the [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention").
+* To learn the best practices for logic, modularity, and nesting, check out the  [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
 
-In the case you are looking to learn on how to structure the Flows, access [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
-
-Maestro also provides an [MCP Server](maestro-mcp.md) to help your development and also provides guidelines on how to [organize your repository](repository-config.md) when creating tests.<br>
+You can also learn how to [organize your repository](https://www.google.com/search?q=https://docs.maestro.dev/get-started/repository-config) for scalable testing or use the [Maestro MCP Server](https://www.google.com/search?q=https://docs.maestro.dev/get-started/maestro-mcp) to enable AI tools like Claude or Cursor to help build your tests.
