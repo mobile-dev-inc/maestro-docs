@@ -22,7 +22,7 @@ Ensure that the `JAVA_HOME` environment variable points to your Java 17+ install
 
 {% stepper %}
 {% step %}
-### Platform-Specific Setup
+### Platform-specific setup
 
 Maestro requires a running target device to execute your tests, also referred as Flows. Use the following steps to configure your virtual devices.
 
@@ -96,23 +96,87 @@ You can also add tags to keep your tests organized.
 
 Maestro Studio creates a clean and minimal test file:
 
+{% tabs %}
+{% tab title="Android" %}
 ```yaml
 appId: com.android.chrome
 ---
 - launchApp:
     clearState: true
 ```
+{% endtab %}
+
+{% tab title="iOS" %}
+
+{% endtab %}
+{% endtabs %}
 {% endstep %}
 
 {% step %}
 ### Run your first test
 
-With your first YAML file created, you can start building the test itself. To do this, add actions to your file by clicking the **Insert Command** button in the IDE, typing the command in the YAML file, or clicking the **Inspect Screen** button.
+With your first YAML file created, you can start building the test itself. To do this, you can add actions to your file by:
 
-For the quickstart, let's use the inspect screen option. To add commands this way, click the **Inspect Screen** button. This takes you to the screen of the device you're testing, where you can select the elements to test it.
+* Clicking the **Insert Command** button in the IDE.
+* Typing the command in the YAML file.
+* Clicking the **Inspect Screen** button.
 
-#### &#x20; <a href="#add-commands-using-the-insert-command-option" id="add-commands-using-the-insert-command-option"></a>
+For the quickstart, let's write the commands in the YAML file. Use the following example to perform a search about "Maestro mobile test" and take a screenshot of the results.
+
+{% tabs %}
+{% tab title="Android" %}
+Copy and paste the following Flow to the YAML file you just created.
+
+```yaml
+appId: com.android.chrome         # Target the Chrome Android application
+---
+- launchApp:                       # Launch the application
+    clearState: true               # Start with a clean app state
+- tapOn: Use without an account    # Skip account sign-in
+- tapOn: Got it                    # Dismiss onboarding prompt
+- tapOn: Search or type URL        # Focus the address bar
+- inputText: "Maestro mobile test" # Enter search text
+- pressKey: Enter                  # Submit the search
+- takeScreenshot: Chrome           # Capture a screenshot
+```
+
+The test launches the Chrome Android app in a clean state, walks through the initial onboarding prompts, interacts with the address bar to perform a search, and captures a screenshot of the results.
+
+{% hint style="info" %}
+To learn more about the commands you can use to create tests, access the [Commands overview](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
+
+To learn about how you can structure tests, also reference in Maestro as Flows, access the [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+{% endhint %}
+
+After pasting, click on **Run Locally**. Maestro Studio will execute the test and you will be able to see the test execution in the virtual device. At the bottom of the screen, you will see the result for each of the test steps.
+
+You should see a behavior similar to the one presented in the following GIF. As the tests are executed, Maestro will let you know if the test step was successful or the reason behind the failure.
+
+<figure><img src="../../.gitbook/assets/first-test-quickstart-android.gif" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="iOS" %}
+
+{% endtab %}
+{% endtabs %}
+
+
 {% endstep %}
 {% endstepper %}
 
-<br>
+### Video walkthrough
+
+You can also check the following video to have a second view of how you can perform your first test with Maestro.
+
+{% embed url="https://www.youtube.com/watch?v=E7qwFwo_nu0" %}
+
+### Next steps
+
+Now that you have performed your first test, you can continue exploring the solutions provided by Maestro:
+
+* Access the [Maestro Studio overview](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/ "mention") to learn how to use and the features available in the Maestro Studio.
+* If you prefer a more programmatic approach to create tests, access [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention") to learn how to run tests using Maestro CLI.
+
+In the case you are looking to learn on how to structure the Flows, access [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+
+Maestro also provides an [MCP Server](../maestro-mcp.md) to help your development and also provides guidelines on how to [organize your repository](../repository-config.md) when creating tests.<br>
