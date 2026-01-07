@@ -157,21 +157,15 @@ After pasting, click **Run Locally**. Watch your virtual device execute the step
 {% endstep %}
 {% endstepper %}
 
-{% hint style="info" %}
 #### Interactive Flow  authoring
 
 While this Quickstart focuses on writing commands manually in the YAML file, Maestro Studio offers three ways to build your test:
 
 * **Insert Command**: Click the **Insert Command** button in the IDE to choose from a list of standard actions.
-* **Manual Entry**: Type commands directly into the YAML editor for precise control.
-* **Inspect Screen**: Click the Inspect Screen button to select elements visually on the device and receive recommended commands.
+* Manual Entry: Type commands directly into the YAML editor for precise control.
+* Inspect Screen: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands
 
-
-
-<img src="../.gitbook/assets/quickstart-explore-options.gif" alt="" data-size="original">
-
-
-{% endhint %}
+<figure><img src="../.gitbook/assets/quickstart-explore-options.gif" alt=""><figcaption></figcaption></figure>
 
 ### Video walkthrough
 
