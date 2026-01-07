@@ -166,8 +166,16 @@ While this Quickstart focuses on writing commands manually in the YAML file, Mae
 * **Manual Entry**: Type commands directly into the YAML editor for precise control.
 * **Inspect Screen**: Click the Inspect Screen button to select elements visually on the device and receive recommended commands.
 
-<img src="../.gitbook/assets/quickstart-explore-options.gif" alt="" data-size="original">
+
+
+<figure><img src="../.gitbook/assets/quickstart-explore-options.gif" alt=""><figcaption></figcaption></figure>
+
+*
+
+
 {% endhint %}
+
+
 
 ### Video walkthrough
 
