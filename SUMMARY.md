@@ -10,6 +10,7 @@
 * [Copy of What is Maestro?](get-started/readme-1.md)
 * [How Maestro works](get-started/how-maestro-works.md)
 * [Quickstart](get-started/quickstart/README.md)
+  * [temp](get-started/quickstart/temp.md)
   * [How to install Maestro Studio](get-started/quickstart/how-to-install.md)
   * [How to run your first test](get-started/quickstart/how-to-run-tests.md)
 * [Core concepts](get-started/overview.md)

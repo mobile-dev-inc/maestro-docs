@@ -31,7 +31,7 @@ Maestro Studio is the recommended entry point for new users to build tests visua
 2. **Visual Interaction**: You click on elements of the mirrored screen, and Studio identifies them and suggests commands.
 3. **Real-time Execution**: Commands are inserted into your YAML file and executed on the device instantly, allowing for step-by-step flow construction.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Maestro CLI&#x20;
 
