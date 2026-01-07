@@ -53,5 +53,5 @@ To handle complex scenarios without code duplication, Maestro utilizes modular l
 
 To continue your journey with Maestro, choose one of the following options::
 
-* Check the [quickstart](quickstart/ "mention") guide to learn how to install Maestro Studio and run your first test.
+* Check the [quickstart-1](quickstart-1/ "mention") guide to learn how to install Maestro Studio and run your first test.
 * Explore each of the available [our-products](our-products/ "mention").
