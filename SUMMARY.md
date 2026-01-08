@@ -6,7 +6,8 @@
 
 ## Get Started
 
-* [What is Maestro?](README.md)
+* [Maestro Documentation](README.md)
+* [What is Maestro?](<README (1).md>)
 * [Copy of What is Maestro?](get-started/readme-1.md)
 * [How Maestro works](get-started/how-maestro-works.md)
 * [QuickStart](get-started/quickstart.md)

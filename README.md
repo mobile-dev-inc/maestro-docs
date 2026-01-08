@@ -1,30 +1,54 @@
-# What is Maestro?
+# Maestro Documentation
 
-Maestro is the simplest and most effective open-source UI automation framework for mobile and web. It is designed to allow developers and testers to define and automate user journeys with a level of reliability and ease that traditional tools cannot match.
+<p align="center">Maestro is the simplest and most effective framework for painless mobile and web UI automation using intuitive YAML flows.</p>
 
-<figure><img src=".gitbook/assets/twitter_continuous_v3_fast.gif" alt=""><figcaption></figcaption></figure>
+<p align="center"><a href="README (1).md" class="button primary">What is Maestro?</a><a href="/broken/spaces/CbCMt5C3rawmE9oIus7f/pages/Gkh2PaXSFN0gAJQLxuIc" class="button secondary">Quickstart</a> </p>
 
-Traditional testing tools often require deep instrumentation, access to app source code, and complex framework knowledge. Maestro changes this by operating at "[arm's length](get-started/how-maestro-works.md#the-arms-length-philosophy)," piloting the device through the same accessibility layer used by real users. This eliminates framework dependencies and allows you to test any app regardless of whether it was built with React Native, Flutter, or Native code.
 
-### Why choose Maestro?
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><i class="fa-shield">:shield:</i> <strong>Built-in Tolerance</strong></td><td>Maestro embraces the instability of mobile devices by automatically handling flakiness and UI settling.</td></tr><tr><td><i class="fa-timer">:timer:</i> <strong>Zero-Wait Intelligence</strong></td><td>No more manual <code>sleep()</code> calls. Maestro automatically waits for network content and animations to load.</td></tr><tr><td><i class="fa-file">:file:</i> <strong>Declarative Syntax</strong></td><td>Tests are defined in human-readable YAML files, removing the need for deep programming knowledge.</td></tr></tbody></table>
+{% columns %}
+{% column width="58.33333333333333%" valign="middle" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE5sJUKRvmZoOHv4lyFfL%2Fuploads%2FUmq4OJanl5n3T7dJsDuL%2Fdemo-mobile-docs.mp4?alt=media&token=8e9608ad-034c-499a-802f-cd116b6f18df?autoplay=1&loop=1" %}
+{% endcolumn %}
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><i class="fa-rocket-launch">:rocket-launch:</i> <strong>Blazingly Fast Iteration</strong></td><td>Tests run without compilation. Maestro monitors your files and reruns flows instantly upon saving.</td></tr><tr><td><i class="fa-box">:box:</i> <strong>Single Binary Setup</strong></td><td>Maestro is a single tool that works anywhere, avoiding the "setup hell" associated with legacy drivers.</td></tr></tbody></table>
+{% column width="41.66666666666669%" %}
+#### Engineered for Modern Testing
 
-{% hint style="success" %}
-🚀 **Running in the cloud**
+* Build reliable UI tests quickly using a simple, human-readable YAML workflow.
+* Eliminate flaky tests by automatically handling animations issues.
+* Execute one test suite across Android, iOS, and Web with no code duplication.
+* Create tests visually without deep tooling or scripting.
+* Identify visual UI defects using AI analysis.
+* Integrate with any CI platform to run parallel tests.
+* Generate complex test data and handle dynamic logic with built-in JavaScript.
+{% endcolumn %}
+{% endcolumns %}
 
-Ready to wire into CI or scale up your testing? Start running your flows on [Maestro's enterprise-grade Google Cloud Platform (GCP)](https://maestro.dev/cloud) infrastructure. Check the [Cloud documentation](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/ky7LkNoLfvcORtXOzzBs/) to learn how to use the power of GCP.
-{% endhint %}
+<h3 align="center">Maestro Solutions</h3>
 
-### Maestro vs competitors&#x20;
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><h4><i class="fa-gears">:gears:</i></h4></td><td><strong>How Maestro wWorks</strong></td><td>Learn about Maestro’s architecture-agnostic approach,  device control, and how flows simulate real human interactions.</td><td><a href="get-started/how-maestro-works.md">how-maestro-works.md</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr><tr><td><h4><i class="fa-desktop">:desktop:</i></h4></td><td>Maestro Studio</td><td>Create tests visually  using the Desktop App for zero-IDE setup and instant device connection.</td><td><a href="https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/">Maestro Studio overview</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr><tr><td><h4><i class="fa-terminal">:terminal:</i></h4></td><td>Maestro CLI</td><td>Llearn to Install the CLI, manage devices, and run tests from your terminal.</td><td><a href="https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/">Maestro CLI overview</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr><tr><td><i class="fa-cloud">:cloud:</i></td><td><strong>Maestro Cloud</strong></td><td>Scale your testing by integrating with CI Platforms like GitHub Actions  to run parallel tests.</td><td><a href="https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/">Maestro Cloud overview</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr><tr><td><i class="fa-arrow-progress">:arrow-progress:</i></td><td><strong>Maestro Flows</strong></td><td>Master modular testing with Nested Flows, Loops, Conditions, and Hooks.</td><td><a href="https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/">Maestro Flows overview</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr><tr><td><i class="fa-square-js">:square-js:</i></td><td><strong>JavaScript</strong></td><td>Use JavaScript to handle complex conditions, data manipulation, and external API interactions.</td><td><a href="https://app.gitbook.com/s/ljg4krPNBd28DyJV3q1N/">JavaScript overview</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr></tbody></table>
 
-While tools like Appium or Selenium treat testing like unit tests inspecting internal APIs, Maestro treats your app as a black box. By simulating "human thumbs on a screen," Maestro validates the complete user experience stack, including interactions with the operating system, system settings, and notifications.
+<h3 align="center">Reference &#x26; Resources</h3>
 
-### Ready to start?
+<p align="center">Explore the technical specifications and community-proven strategies.</p>
 
-Explore the core components of the Maestro ecosystem and begin your journey:
+<p align="center"></p>
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>How Maestro Works</strong></td><td> Understand the "arm's length" philosophy and accessibility-first element detection.</td><td><a href="get-started/how-maestro-works.md">how-maestro-works.md</a></td></tr><tr><td><strong>Quickstart Guide</strong></td><td>Install Maestro Studio and run your first test in under five minutes.</td><td><a href="/broken/pages/NYRmrlMy9gNoZWjKSSqO">Broken link</a></td></tr><tr><td><strong>Maestro Solutions</strong></td><td>Compare the Maestro CLI, Maestro Studio (IDE), and Maestro Cloud to find the right tool for your workflow.</td><td><a href="get-started/our-products/">our-products</a></td></tr><tr><td><strong>Supported Platforms</strong></td><td>View the full list of supported frameworks, including Jetpack Compose, SwiftUI, and Web.</td><td><a href="get-started/supported-platform/">supported-platform</a></td></tr></tbody></table>
+{% columns %}
+{% column %}
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Command Reference</strong></td><td>A complete guide to every Maestro command.</td><td><a href="https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/">Commands overview</a></td></tr><tr><td><strong>Best Practices</strong></td><td>Proven recipes for you to explore and use in your tests.</td><td><a href="https://app.gitbook.com/s/BDAHIIDt0EHd58cwga7a/">Best practices overview</a></td></tr></tbody></table>
+{% endcolumn %}
+
+{% column %}
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Use Cases</strong></td><td>Real-world automation tutorials for you to explore. </td><td><a href="/broken/spaces/htfynyR39703f5pJOF1P/pages/FCvqHjD2QCw41NcMhyGw">Broken link</a></td></tr><tr><td><strong>Troubleshooting</strong></td><td>Find answers in the FAQ and review Known Issues.</td><td></td></tr></tbody></table>
+
+
+{% endcolumn %}
+{% endcolumns %}
+
+<h3 align="center">Join the Community</h3>
+
+<p align="center">Maestro is better together. Explore how others are scaling their quality engineering.</p>
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Community Projects</strong></td><td>Discover VSCode extensions, plugins, and wrappers built by the Maestro community.</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/community-projects">Community projects</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr><tr><td><strong>Articles</strong></td><td>Explore a list of blog posts, deep dives, and tutorials from industry experts.</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/articles">Articles</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr><tr><td><strong>Customer Showcase</strong></td><td>Check how teams like Doccla, Wahed, and Eneco revolutionized their mobile testing.</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/showcase">Showcase</a></td><td><a href="https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo">https://media.licdn.com/dms/image/sync/v2/D4E27AQEqoTdNKGmXkQ/articleshare-shrink_800/articleshare-shrink_800/0/1744543273455?e=2147483647&#x26;v=beta&#x26;t=G_GfT1SoQZerqnRJikuu7CPUxROip-PcQBC1zm6Gvzo</a></td></tr></tbody></table>
 
