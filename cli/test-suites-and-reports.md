@@ -58,6 +58,36 @@ Once execution completes, the report will be stored in a `report.xml` file in a 
 
 ![html](https://github.com/depapp/maestro-docs/assets/6134774/8fedda56-de5e-411d-8501-63bf3c581e90)
 
+
+#### Custom properties
+
+JUnit reports can have custom properties specified on a per-test basis. This can be useful for downstream consumers of the reports, such as Test Case Management systems, where a Maestro flow might relate to a specific test case.
+
+This is done via a `properties` field in the flow config section, with arbitrary name/value pairs.
+
+A test that begins:
+
+```yaml
+appId: com.example
+name: Example Flow
+properties:
+  thing: value
+---
+```
+
+will include this inside the report:
+
+```xml
+<testsuites>
+  <testsuite name="Test Suite" device="Maestro_Pixel_6_API_34" tests="2" failures="0" time="1.0">
+    <testcase id="Example Flow" name="Example Flow" classname="Example Flow" time="1.0" status="SUCCESS">
+      <properties>
+        <property name="thing" value="value"/>
+      </properties>
+    </testcase>
+    <testcase>...
+```
+
 #### Additional options
 
 * `--output {file}` allows to override the report filename
