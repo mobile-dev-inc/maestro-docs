@@ -1,35 +1,79 @@
-# iOS testing with Maestro
+# iOS
 
-Maestro provides robust automation support for iOS, maintaining the same "black-box" philosophy applied to Android. Whether the app is built natively (Swift/Objective-C) or via cross-platform frameworks (React Native, Flutter), Maestro interacts with the iOS Simulator or physical devices by simulating genuine user interactions through the Accessibility layer and computer vision.
+Maestro provides a high-level abstraction for iOS testing by simulating end-user interactions at the presentation layer. Unlike traditional testing tools that require deep instrumentation, Maestro interacts with the iOS Accessibility layer, allowing you to test your app exactly as a user would.
 
-## "Arm's length" architecture on iOS
+### Black-box approach
 
-Maestro operates on iOS following the *extreme arm's length* principle:
+Maestro analyzes the rendered frames of the iOS device, ensuring your tests are framework-agnostic. Whether your app is built with Swift, Objective-C, Flutter, React Native, or SwiftUI, Maestro interacts only with the visual output.
 
-* **Code Independence:** Maestro doesn't require access to iOS source code, bytecode inspection, or app instrumentation. It's agnostic to UI frameworks (UIKit, SwiftUI, or hybrid implementations).
-* **Computer Vision:** The framework analyzes rendered frames from the iOS Simulator via XCTest or physical devices via WebDriverAgent. If an element is visually detectable, Maestro can interact with it, ensuring tests validate actual user experience.
+* **Physical Input Simulation**: Declarative commands are translated into native touch events. When you use `tapOn`, Maestro triggers the same iOS input pipeline that a physical touch would.
+* [**Arm's Length**](../how-maestro-works.md): Maestro doesn't require access to your source code or bytecode. You test the same `.app` or `.ipa` bundle that your users install.
 
-## Unified YAML syntax
+### System-level control
 
-Maestro's test syntax is platform-agnostic. Commands like `tapOn: "Login"` execute identically across iOS and Android.
+Maestro’s architecture allows it to pilot the entire device hardware, not just your application process. This enables testing for complex real-world scenarios.
 
-* **Code Reuse:** Teams using React Native or Flutter can often reuse the **same test file** across both platforms, reducing maintenance overhead.
+iOS is known for its strict permission dialogs (Location, Camera, FaceID). However, Maestro can interact with these system prompts directly:
 
-## Bundle ID management with environment variables
+```yaml
+- launchApp:
+    appId: "com.example.app"
+    permissions:
+      location: allow
+      notifications: allow
+```
 
-Platform-specific app identifiers require careful handling:
+Maestro also allows you to create multi-app journeys. You can test flows that leave your app, such as opening a link in Safari or checking an email, and then return to your application:
 
-* **iOS vs. Android IDs:** Android uses *Package Name* (for example, `com.example.app`), while iOS uses *Bundle ID* (for example, `com.example.app.ios`).
-* **Solution:** Use **environment variables** in your test files: `${APP_ID}`. Set the appropriate identifier at runtime based on target platform and build variant.
+```yaml
+- tapOn: "Open Website"
+# Maestro follows the link into Safari
+- assertVisible: "Welcome to our site"
+- tapOn:
+    id: "breadcrumb" # Native iOS 'Back' button to return to your app
+```
 
-## System-level interaction
+### Execution and environment setup
 
-Maestro controls the **device**, not just the app process:
+Maestro connects to your target via native Apple development tools.
 
-* **System Dialogs:** Native iOS permission prompts (location, notifications, camera) are directly accessible and automatable.
-* **Settings Integration:** Tests can navigate to the iOS Settings app, modify configurations, and return to your app to verify behavioral changes.
+* **Simulators**: Run tests on any iOS Simulator managed by Xcode. Ensure you have the Xcode Command Line Tools installed (`xcode-select --install`).
+* **Physical Devices**: Supported through standard provisioning profiles and WebDriverAgent integration.
+* **App Identification**: iOS apps are targeted using the Bundle ID (e.g., `com.example.app`).
 
-## Execution: local and cloud
+### Platform-specific configuration
 
-* **Local:** Run tests via Maestro command-line tool or Studio connected to an iOS Simulator on macOS (or physical device with proper provisioning).
-* **Maestro cloud:** Leverage cloud infrastructure for parallel iOS test execution across multiple simulator instances, eliminating local device management complexity.
+Since Android and iOS use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environment-variables) in your `config.yaml` or [Flows ](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)to keep them cross-platform.
+
+For example, if you are executing a cross-platform testing that will use different App IDs you can prepare your Flows:
+
+```yaml
+# In your Flow
+appId: ${APP_ID}
+---
+- launchApp
+```
+
+To run it locally using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), just inform the App ID:
+
+```bash
+export APP_ID=com.example.app.ios && maestro test flow.yaml
+```
+
+### Parallelization for iOS
+
+Scaling iOS tests locally can be difficult due to macOS hardware requirements.[ Maestro Cloud ](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
+
+* **Speed**: Reduce test time drastically.
+* **Reliability**: Eliminate "flaky" results caused by local machine resource contention.
+* **CI/CD Integration**: Automatically trigger parallel iOS runs on every Pull Request.
+
+### Next steps
+
+Explore the dedicated [UIKit](uikit.md) or [SwiftUI](swiftui.md) documentation, or access the [Quickstart](../quickstart.md) guide to get up and running in minutes if you do not know how to create tests with Maestro.
+
+If you already know which Maestro solution you are going to use, access the relevant documentation:
+
+* [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
+* [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
