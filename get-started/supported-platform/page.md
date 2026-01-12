@@ -4,79 +4,87 @@ hidden: true
 
 # Page
 
-Maestro provides a high-level abstraction for iOS testing by simulating end-user interactions at the presentation layer. Unlike traditional testing tools that require deep instrumentation, Maestro interacts with the iOS Accessibility layer, allowing you to test your app exactly as a user would.
+Maestro offers transparent support for SwiftUI applications. Because SwiftUI is declarative and content-centric, Maestro’s architecture-agnostic approach is perfectly suited for it—treating components like `List`, `LazyVStack`, and `Picker` as interactive visual elements rather than complex code objects.
 
-### Black-box approach
+### The SwiftUI workflow
 
-Maestro analyzes the rendered frames of the iOS device, ensuring your tests are framework-agnostic. Whether your app is built with Swift, Objective-C, Flutter, React Native, or SwiftUI, Maestro interacts only with the visual output.
+While Maestro can find SwiftUI elements by their displayed text, using identifiers is the most resilient way to build your test suite.
 
-* **Physical Input Simulation**: Declarative commands are translated into native touch events. When you use `tapOn`, Maestro triggers the same iOS input pipeline that a physical touch would.
-* [**Arm's Length**](../how-maestro-works.md): Maestro doesn't require access to your source code or bytecode. You test the same `.app` or `.ipa` bundle that your users install.
+#### **Implementing accessibility identifiers**
 
-### System-level control
+For icons, custom controls, or to avoid breaking tests when text is translated, apply the `.accessibilityIdentifier()` modifier in your Swift code. By adding the `.accessibilityIdentifier` modifier, you are explicitly tagging a component in the underlying iOS Accessibility Tree.
 
-Maestro’s architecture allows it to pilot the entire device hardware, not just your application process. This enables testing for complex real-world scenarios.
-
-iOS is known for its strict permission dialogs (Location, Camera, FaceID). However, Maestro can interact with these system prompts directly:
-
-```yaml
-- launchApp:
-    appId: "com.example.app"
-    permissions:
-      location: allow
-      notifications: allow
+```swift
+// Step 1: In your SwiftUI View
+NavigationLink(value: Panel.donutEditor) {
+    Label("Donut Editor", systemImage: "slider.horizontal.3")
+}
+.accessibilityIdentifier("donut_editor")
 ```
 
-Maestro also allows you to create multi-app journeys. You can test flows that leave your app, such as opening a link in Safari or checking an email, and then return to your application:
+This ID is invisible to the end-user but is broadcast to any tool interacting with the system's accessibility layer. Thus, Maestro can interact with it using the `id` selector.
 
 ```yaml
-- tapOn: "Open Website"
-# Maestro follows the link into Safari
-- assertVisible: "Welcome to our site"
+# Step 2: In your Maestro Flow
 - tapOn:
-    id: "breadcrumb" # Native iOS 'Back' button to return to your app
+    id: "donut_editor"
 ```
 
-### Execution and environment setup
+### Examples
 
-Maestro connects to your target via native Apple development tools.
+These snippets demonstrate how Maestro handles common SwiftUI patterns and system behaviors.
 
-* **Simulators**: Run tests on any iOS Simulator managed by Xcode. Ensure you have the Xcode Command Line Tools installed (`xcode-select --install`).
-* **Physical Devices**: Supported through standard provisioning profiles and WebDriverAgent integration.
-* **App Identification**: iOS apps are targeted using the Bundle ID (e.g., `com.example.app`).
+#### **Native controls (pickers and toggles)**
 
-### Platform-specific configuration
-
-Since Android and iOS use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environment-variables) in your `config.yaml` or [Flows ](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)to keep them cross-platform.
-
-For example, if you are executing a cross-platform testing that will use different App IDs you can prepare your Flows:
+SwiftUI controls like `Picker` often require specific targeting, especially when multiple options are present.
 
 ```yaml
-# In your Flow
-appId: ${APP_ID}
+appId: com.swiftui.kit
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: "controls_item"
+- tapOn:
+    point: "84%,23%" # Precise coordinate tap for complex toggles
+- tapOn:
+    text: "Chocolate"
+    index: 0
+- tapOn:
+    id: "flavor_picker_segmented_Strawberry" # Target specific segments by ID
+```
+
+The examples above use a mix of IDs, Text, and Coordinates to navigate complex SwiftUI layouts. While the `id` selector is the most reliable way to target elements, you can also use `index` to handle duplicate text or `point` for precise taps on small system controls like Toggles.
+
+#### **System navigation and app switching**
+
+Maestro can handle "Inter-App" communication, such as following a link into Safari and using the system breadcrumb to return.
+
+```yaml
+appId: com.swiftui.kit
 ---
 - launchApp
+- tapOn: "link_item"
+# Maestro follows the link into the Browser...
+- tapOn:
+    id: "breadcrumb" # Returns to your app via the native iOS 'Back' link
 ```
 
-To run it locally using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), just inform the App ID:
+#### Refactoring resilience
 
-```bash
-export APP_ID=com.example.app.ios && maestro test flow.yaml
-```
+A major advantage of using Maestro with SwiftUI is migration safety. If you rewrite a legacy UIKit screen entirely in SwiftUI, as long as the visual output and accessibility identifiers remain the same, your Maestro tests will require zero changes.
 
-### Parallelization for iOS
+#### Tips and known issues
 
-Scaling iOS tests locally can be difficult due to macOS hardware requirements.[ Maestro Cloud ](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
-
-* **Speed**: Reduce test time drastically.
-* **Reliability**: Eliminate "flaky" results caused by local machine resource contention.
-* **CI/CD Integration**: Automatically trigger parallel iOS runs on every Pull Request.
+* **Hierarchy Quirks**: Some specific styles (like `WheelPickerStyle`) may not return a full hierarchy to the accessibility layer, making text-based selection preferred over ID selection in those cases.
+* **Merged Elements**: When a `Toggle` is initialized with text, iOS often merges the text and the switch into a single accessibility element.
+* **Maestro Studio**: Always use [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/) to inspect SwiftUI views. It helps you see exactly how the nested view composition is resolved by the accessibility tree before you write your YAML.
 
 ### Next steps
 
-Explore the dedicated [UIKit](uikit.md) or [SwiftUI](swiftui.md) documentation, or access the [Quickstart](../quickstart.md) guide to get up and running in minutes if you do not know how to create tests with Maestro.
+If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
 
-If you already know which Maestro solution you are going to use, access the relevant documentation:
+To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 
 * [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
