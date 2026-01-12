@@ -112,6 +112,7 @@
   * [setLocation](api-reference/commands/setlocation.md)
   * [setClipboard](api-reference/commands/setclipboard.md)
   * [setOrientation](api-reference/commands/setorientation.md)
+  * [setPermissions](api-reference/commands/setpermissions.md)
   * [startRecording](api-reference/commands/startrecording.md)
   * [stopApp](api-reference/commands/stopapp.md)
   * [stopRecording](api-reference/commands/stoprecording.md)
