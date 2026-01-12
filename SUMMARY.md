@@ -19,6 +19,7 @@
   * [Maestro Cloud](get-started/our-products/cloud.md)
 * [Supported platforms](get-started/supported-platform/README.md)
   * [Android](get-started/supported-platform/android.md)
+  * [Page](get-started/supported-platform/page.md)
   * [Android Native](get-started/supported-platform/android-native.md)
   * [iOS](get-started/supported-platform/ios.md)
   * [Flutter](get-started/supported-platform/flutter.md)

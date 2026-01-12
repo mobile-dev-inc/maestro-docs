@@ -46,7 +46,7 @@ Most teams follow a three-stage journey to automation success:
 
 ### Next steps
 
-If you already the Maestro solution you are going to use, access the desired solution documentation:
+If you already know the Maestro solution you are going to use, access the desired documentation:
 
 * [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)

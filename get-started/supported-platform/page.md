@@ -1,6 +1,8 @@
-# Android
+---
+hidden: true
+---
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+# Page
 
 Maestro provides a high-level abstraction for Android testing by simulating end-user interactions at the presentation layer. Unlike other frameworks, Maestro doesn't live inside your app, it pilots the device from the outside.
 
@@ -68,12 +70,4 @@ When your suite grows, local sequential execution becomes a bottleneck. [Maestro
 | Speed       | Slow (Sequential)  | Blazingly Fast (Parallel)         |
 | Cleanup     | Manual             | Automatic Infrastructure Teardown |
 
-### Next steps
-
-If you already know the Maestro solution you are going to use, access the desired documentation:
-
-* [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
-* [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
-
-If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
+###
