@@ -14,9 +14,6 @@ Many teams adopt a monorepo approach, co-locating Maestro test suites with app s
 
 A well-structured repository ensures that your test suite remains maintainable as your application grows. Most Maestro projects are organized around one of two core strategies:&#x20;
 
-* User journeys&#x20;
-* Feature tests
-
 | **Strategy**  | **Primary oObjective** | **Best for**      |
 | ------------- | ---------------------- | ----------------- |
 | User journeys | Funnel completion      | Goal-driven apps  |
@@ -31,7 +28,7 @@ This approach is best for E-commerce, food delivery, or fintech (e.g., DoorDash,
 * **The Goal**: Success is defined by the user reaching the end of a funnel (e.g., Order Confirmed).
 * **The Strategy**: Organize your repository by journeys. Focus on end-to-end flows that track variations of the main task (e.g., Delivery vs. Collection, applying coupons, or external payment processors).
 
-This approach typically begins with a flat directory structure containing workflow definitions. As test coverage expands, you can refactor the flat structure into a hierarchical taxonomy that partitions test suites by user segmentation and execution context.
+This pattern often partitions test suites by user segmentation (new vs. existing) and execution context.
 
 ```
 ├── flows
@@ -70,7 +67,7 @@ This approach is best for social media, content aggregators, or entertainment (e
   * Is commenting fast?&#x20;
   * Is the login experience slick?&#x20;
 
-Feature-based test organization establishes a structural isomorphism between test suites and app modules, enabling direct traceability between functional requirements and their validation logic. This architectural pattern optimizes for maintainability by collocating tests with their corresponding source code boundaries:
+Feature-based organization establishes a structural isomorphism (direct mapping) between test suites and app modules:
 
 ```
 ├── flows

@@ -6,26 +6,25 @@ Many teams adopt a monorepo approach, co-locating Maestro test suites with app s
 * **Atomic changes**: Feature branches can bundle app logic modifications with corresponding test updates in a single pull request
 * **Simplified CI/CD**: Build pipelines can reference tests directly from the same repository checkout without managing separate test artifact versions
 
-## Repository structure patterns
+### Repository structure patterns
 
-The optimal directory layout depends on your testing strategy and organizational requirements. Consider the following approaches:
+A well-structured repository ensures that your test suite remains maintainable as your application grows. Most Maestro projects are organized around one of two core strategies:&#x20;
 
-### Journeys
+| **Strategy**  | **Primary oObjective** | **Best for**      |
+| ------------- | ---------------------- | ----------------- |
+| User journeys | Funnel completion      | Goal-driven apps  |
+| Feature tests | Friction reduction     | Habit-driven apps |
 
-Journey-based test organization models end-to-end user workflows as sequential test scenarios. This approach typically begins with a flat directory structure containing workflow definitions, which you can refactor into a hierarchical taxonomy as test coverage scales:
+Choosing the right structure helps ensure your automation remains relevant as your app grows.
 
-```
-├── flows
-│   ├── config.yaml
-│   ├── login.yaml
-│   ├── register.yaml
-│   └── shopping.yaml
-└── src
-    └── app
-        └── <code here>
-```
+#### User journeys (Goal-driven Apps)
 
-As test coverage expands, you can refactor the flat structure into a hierarchical taxonomy that partitions test suites by user segmentation and execution context. The example below demonstrates a modular architecture that separates test scenarios by user lifecycle state, with shared utilities extracted for reusability:
+This approach is best for E-commerce, food delivery, or fintech (e.g., DoorDash, Uber, Banking) Apps. These apps exist to help users complete a specific task. When a user is hungry, they open the app to order food,  once they are fed, they stop using it.
+
+* **The Goal**: Success is defined by the user reaching the end of a funnel (e.g., Order Confirmed).
+* **The Strategy**: Organize your repository by journeys. Focus on end-to-end flows that track variations of the main task (e.g., Delivery vs. Collection, applying coupons, or external payment processors).
+
+This pattern often partitions test suites by user segmentation (new vs. existing) and execution context.
 
 ```
 ├── flows
@@ -49,14 +48,19 @@ As test coverage expands, you can refactor the flat structure into a hierarchica
 ```
 
 {% hint style="success" %}
-#### **Technical implementation note**
+#### Technical implementation note
 
 To organize your project into a hierarchical structure, you must define the search path in your `config.yaml` using the `flows` key. For example, setting `flows: tests/**` tells Maestro to discover all Flow files within that specific subdirectory using glob syntax. This provides granular control over which tests are executed during local runs or CI/CD pipelines.
 {% endhint %}
 
-### Features
+#### Feature tests (Habit-driven Apps)
 
-Feature-based test organization establishes a structural isomorphism between test suites and app modules, enabling direct traceability between functional requirements and their validation logic. This architectural pattern optimizes for maintainability by collocating tests with their corresponding source code boundaries:
+This approach is best for social media, content aggregators, or entertainment (e.g., Reddit, Instagram, Spotify) Apps. These apps succeed when they reduce friction and keep users engaged. Success is a cumulative experience of many small, slick interactions.
+
+* **The Goal**: Success is defined by high engagement and zero friction.
+* **The Strategy**: Organize your repository by individual features. You need deep coverage for components because one slow spinner or broken interaction can cause a user to drop off.
+
+Feature-based organization establishes a structural isomorphism (direct mapping) between test suites and app modules:
 
 ```
 ├── flows
