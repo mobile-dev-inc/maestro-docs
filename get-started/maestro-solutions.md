@@ -28,13 +28,13 @@ Explore how to scale your regression suites in the [Maestro Cloud](https://app.g
 
 Use the table below to determine which tool fits your current workflow:
 
-| **Feature**     | **Maestro Studio**      | **Maestro CLI**         | **Maestro Cloud**       |
-| --------------- | ----------------------- | ----------------------- | ----------------------- |
-| **Best For**    | Authoring & Debugging   | Automation & CI/CD      | Mass Regression & Speed |
-| **Interface**   | Visual (GUI)            | Terminal (Command Line) | Managed Infrastructure  |
-| **Execution**   | Real-time / Interactive | Sequential (Local)      | Parallel (Simultaneous) |
-| **Target User** | QA & Developers         | Engineers & DevOps      | Enterprise Teams        |
-| **Environment** | Local Device/Emulator   | Local Device/Emulator   | Hosted Virtual Devices  |
+| **Feature**     | **Maestro Studio**      | **Maestro CLI**         | **Maestro Cloud**           |
+| --------------- | ----------------------- | ----------------------- | --------------------------- |
+| **Best For**    | Authoring & Debugging   | Automation & CI/CD      | Mass Regression & Speed     |
+| **Interface**   | Visual (GUI)            | Terminal (Command Line) | Managed Infrastructure      |
+| **Execution**   | Real-time / Interactive | Sequential (Local)      | Parallel (Simultaneous)     |
+| **Target User** | QA & Developers         | Engineers & DevOps      | Growth & Professional Teams |
+| **Environment** | Local Device/Emulator   | Local Device/Emulator   | Hosted Virtual Devices      |
 
 ### The typical learning path
 
@@ -52,4 +52,4 @@ If you already know the Maestro solution you are going to use, access the desire
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
 * [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
 
-If you don't know how to create tests with Maestro, access the [Quickstart](quickstart.md) guide to get up and running in minutes.
+If you don't know how to create tests with Maestro, access the [QuickStart](quickstart.md) guide to get up and running in minutes.
