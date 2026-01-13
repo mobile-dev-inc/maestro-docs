@@ -6,7 +6,7 @@ description: Find and use the last matching index for a given selector in Maestr
 
 In Maestro you can choose to target the n<sup>th</sup> element matching a selector using [indexes](../../api-reference/selectors.md#selecting-one-view-among-many-similar), e.g.
 
-```
+```yaml
 - tapOn:
     text: Add to Basket
     index: 2   # 3rd item, indexes start at 0
@@ -14,9 +14,9 @@ In Maestro you can choose to target the n<sup>th</sup> element matching a select
 
 What if you want the last item on the screen, but don't know how many there are? That's harder, and requires an algorithmic approach.
 
-This helper comes courtesy of [Ben Sussman](https://github.com/bensussman) from Pomelo Care, probably best used as a subflow, loops through visible elements for a given selector, and returns the index of the last matching element.&#x20;
+This helper comes courtesy of [Ben Sussman](https://github.com/bensussman) from Pomelo Care, probably best used as a subflow, loops through visible elements for a given selector, and returns the index of the last matching element.
 
-```
+```yaml
 # A reusable helper to find the last element matching a given selector.
 # Usage:
 #   - runFlow:
