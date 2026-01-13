@@ -8,14 +8,14 @@ Maestro extends its one framework to rule them all philosophy to the desktop bro
 Web support is currently in Beta. It is functional for Chromium-based testing and is ideal for teams looking to consolidate their mobile and web automation into a single toolset.
 {% endhint %}
 
-#### Technical approach
+### Technical approach
 
 Maestro maintains its "Arm's Length" philosophy for web testing. Instead of directly manipulating the DOM or injecting JavaScript, Maestro interacts with the browser as a user would.
 
 * **Unified Syntax**: The same commands like `tapOn`, `inputText`, and `assertVisible` work identically on Web as they do on Android and iOS.
 * **Framework Agnostic**: Whether your site is built with React, Vue, Angular, or plain HTML, Maestro interacts with the rendered output.
 
-#### Execution Workflow
+### Execution Workflow
 
 For web tests, you replace the `appId` with a `url`. Behind the scenes, Maestro treats the URL as the unique identifier for the application session.
 
