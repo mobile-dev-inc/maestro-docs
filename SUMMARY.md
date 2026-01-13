@@ -19,7 +19,6 @@
   * [Maestro Cloud](get-started/our-products/cloud.md)
 * [Supported platforms](get-started/supported-platform/README.md)
   * [Android](get-started/supported-platform/android.md)
-  * [Page](get-started/supported-platform/page.md)
   * [Android Native](get-started/supported-platform/android-native.md)
   * [Jetpack](get-started/supported-platform/jetpack.md)
   * [iOS](get-started/supported-platform/ios.md)
@@ -29,4 +28,5 @@
   * [Flutter](get-started/supported-platform/flutter.md)
   * [Web Browsers](get-started/supported-platform/web-browser.md)
 * [Repository configuration](get-started/repository-config.md)
+* [Page](get-started/page.md)
 * [Maestro MCP Server](get-started/maestro-mcp.md)
