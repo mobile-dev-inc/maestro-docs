@@ -44,9 +44,10 @@ Explore the details on how to use Maestro in each one of the supported operating
 
 * [android.md](android.md "mention")
 * [android-native.md](android-native.md "mention")
-* [ios.md](ios.md "mention")
-* [flutter.md](flutter.md "mention")
-* [web-browser.md](web-browser.md "mention")
 * [jetpack.md](jetpack.md "mention")
+* [ios.md](ios.md "mention")
 * [swiftui.md](swiftui.md "mention")
 * [uikit.md](uikit.md "mention")
+* [react-native.md](react-native.md "mention")
+* [flutter.md](flutter.md "mention")
+* [web-browser.md](web-browser.md "mention")
