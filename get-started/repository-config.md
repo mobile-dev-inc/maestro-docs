@@ -1,10 +1,10 @@
-# How to configure your repository for Maestro tests
+# Repository configuration
 
 Many teams adopt a monorepo approach, co-locating Maestro test suites with app source code. This strategy offers several technical advantages:
 
-- **Version synchronization**: Tests remain coupled to the codebase version they validate, ensuring historical commits maintain test compatibility
-- **Atomic changes**: Feature branches can bundle app logic modifications with corresponding test updates in a single pull request
-- **Simplified CI/CD**: Build pipelines can reference tests directly from the same repository checkout without managing separate test artifact versions
+* **Version synchronization**: Tests remain coupled to the codebase version they validate, ensuring historical commits maintain test compatibility
+* **Atomic changes**: Feature branches can bundle app logic modifications with corresponding test updates in a single pull request
+* **Simplified CI/CD**: Build pipelines can reference tests directly from the same repository checkout without managing separate test artifact versions
 
 ## Repository structure patterns
 
@@ -13,7 +13,6 @@ The optimal directory layout depends on your testing strategy and organizational
 ### Journeys
 
 Journey-based test organization models end-to-end user workflows as sequential test scenarios. This approach typically begins with a flat directory structure containing workflow definitions, which you can refactor into a hierarchical taxonomy as test coverage scales:
-
 
 ```
 ├── flows
@@ -50,7 +49,9 @@ As test coverage expands, you can refactor the flat structure into a hierarchica
 ```
 
 {% hint style="success" %}
-**Technical Implementation Note**: This hierarchical structure requires explicit test discovery configuration. The `config.yaml` file must define inclusion patterns using glob syntax—for example, `includeTags: ["tests/**/*.yaml"]`—to scope test execution to the `tests/` subdirectory. This pattern-based filtering mechanism allows for granular control over test suite composition during CI/CD pipeline execution. Refer to [Controlling What Tests to Include](https://docs.maestro.dev/cli/test-suites-and-reports#controlling-what-tests-to-include) for glob pattern syntax and advanced filtering strategies.
+#### **Technical implementation note**
+
+To organize your project into a hierarchical structure, you must define the search path in your `config.yaml` using the `flows` key. For example, setting `flows: tests/**` tells Maestro to discover all Flow files within that specific subdirectory using glob syntax. This provides granular control over which tests are executed during local runs or CI/CD pipelines.
 {% endhint %}
 
 ### Features

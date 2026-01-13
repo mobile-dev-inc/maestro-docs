@@ -2,24 +2,6 @@
 
 You are starting your journey with Maestro. This guide will help you install Maestro, set up your environment, and execute your first automated test (called a **Flow**) in just five minutes.
 
-### Prerequisites
-
-Maestro requires **Java 17 or higher**. To verify your current Java version, run the following command in your terminal:
-
-```bash
-java -version
-```
-
-If Java 17+ is not installed, download it from one of the following sources:
-
-* [Oracle JDK](https://www.oracle.com/java/technologies/downloads/)
-* [OpenJDK](https://openjdk.org/install/)
-* [SDKMAN! (multi-version manager)](https://sdkman.io/)
-
-{% hint style="warning" %}
-Ensure that your `JAVA_HOME` environment variable points to your Java 17+ installation directory.
-{% endhint %}
-
 {% stepper %}
 {% step %}
 ### Platform-specific setup

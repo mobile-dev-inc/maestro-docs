@@ -2,9 +2,9 @@
 
 The Maestro ecosystem is a unified platform composed of three interconnected layers. Each tool is designed to solve a specific challenge in the mobile and web automation lifecycle:&#x20;
 
-* Creation (Maestro Studio)
-* Execution (Maestro CLI)
-* Scaling (Maestro Cloud)
+* **Maestro Studio**: Desktop IDE for writing and running Maestro flows
+* **Maestro CLI**: Command line tool for running Maestro flows
+* **Maestro Cloud**: Hosted platform for consistent, parallel Maestro execution
 
 ### **Maestro Studio (The IDE)**
 
