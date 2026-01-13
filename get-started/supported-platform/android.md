@@ -8,12 +8,12 @@ Maestro provides a high-level abstraction for Android testing by simulating end-
 
 Maestro operates through the Android display stack, ensuring your tests are framework-agnostic. Whether you use Kotlin, Java, Flutter, React Native, or Compose, Maestro interacts only with the rendered UI.
 
-* **Physical Input Simulation**: Every command is translated into a native `MotionEvent`. When you say `tapOn`, Maestro triggers the same input pipeline a human thumb would.
+* **Human-Like Simulation**: Maestro translates declarative commands into system-level inputs, mimicking genuine user behavior on the Android input pipeline.
 * **Zero Instrumentation**: You don't need to add test dependencies to your `build.gradle` or compile a special "test APK."
 
 ### System-level control
 
-Maestro’s [Arm's Length](../how-maestro-works.md) architecture means it can control the entire Android OS, allowing you to test scenarios that happen _outside_ your app boundaries.
+Maestro drives the entire device, not just your app. If you need to change Wi-Fi settings, read a notification, create system contacts, or manage anything else that depends on device state, you can do so in exactly the same way a real user would. Check the [how-maestro-works.md](../how-maestro-works.md "mention") for more information.&#x20;
 
 To toggle the system settings, for example, Maestro can navigate to the system drawer or settings to change the environment mid-test.
 
@@ -23,23 +23,23 @@ To toggle the system settings, for example, Maestro can navigate to the system d
 - tapOn: "Airplane mode"
 ```
 
-When testing, Android apps often cache data that makes tests flaky. The `clearState` command is your most powerful tool for reproducibility, since you will start with a clean launch.&#x20;
+Android apps often cache data that can lead to flaky tests. The `clearState` command ensures a reproducible environment by clearing app data (the equivalent of `adb shell pm clear`) before the app launches.
 
 ```yaml
 - launchApp:
     appId: "com.example.app"
-    clearState: true  # Uninstalls and reinstalls the APK automatically
+    clearState: true  # Resets app data for a clean launch
 ```
 
 ### Execution and environment setup
 
 Maestro connects to your target via ADB (Android Debug Bridge).
 
-* **Emulators**: Ensure your emulator is running. Maestro looks for the `ro.kernel.qemu` property to detect the virtual environment.
-* **Physical Devices**: Enable "USB Debugging" in Developer Options. Maestro handles the agent installation automatically.
-* **App Identification**: Use the Package Name found in your `AndroidManifest.xml`.
+* **Emulators & Physical Devices**: Maestro automatically detects and connects to running emulators or physical devices. For physical hardware, ensure "USB Debugging" is enabled in Developer Options.
+* **App Identification**: Maestro targets your application using the **Package Name** found in your `AndroidManifest.xml` (the `appId`).
+* **Installation**: Maestro assumes the application is already installed on the target device/emulator before the test begins.
 
-### Platform-specific configuration
+### Cross-platform configuration
 
 Since Android and iOS use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environment-variables) in your `config.yaml` or [Flows ](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)to keep them cross-platform.
 
@@ -60,13 +60,13 @@ export APP_ID=com.example.android && maestro test flow.yaml
 
 ### Maestro Cloud
 
-When your suite grows, local sequential execution becomes a bottleneck. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) spins up multiple Android virtual devices to run your tests in parallel.
+When your suite grows, local sequential execution becomes a bottleneck. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) spins up multiple virtual Android devices to run your tests in parallel.
 
-| **Feature** | **Local Android**  | **Maestro Cloud**                 |
-| ----------- | ------------------ | --------------------------------- |
-| Concurrency | 1 device at a time | 10+ devices simultaneously        |
-| Speed       | Slow (Sequential)  | Blazingly Fast (Parallel)         |
-| Cleanup     | Manual             | Automatic Infrastructure Teardown |
+| **Feature**         | **Local Android**  | **Maestro Cloud**                 |
+| ------------------- | ------------------ | --------------------------------- |
+| **Parallelization** | 1 device at a time | 10+ devices simultaneously        |
+| **Speed**           | Slow (Sequential)  | Blazingly Fast (Parallel)         |
+| **Cleanup**         | Manual             | Automatic Infrastructure Teardown |
 
 ### Next steps
 
@@ -76,4 +76,4 @@ If you already know the Maestro solution you are going to use, access the desire
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
 * [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
 
-If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
+If you are new to the platform, follow the [QuickStart](../quickstart.md) guide to get up and running in minutes.
