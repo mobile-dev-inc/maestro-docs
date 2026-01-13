@@ -4,81 +4,77 @@ hidden: true
 
 # Page
 
-Maestro offers transparent support for SwiftUI applications. Because SwiftUI is declarative and content-centric, Maestro’s architecture-agnostic approach is perfectly suited for it—treating components like `List`, `LazyVStack`, and `Picker` as interactive visual elements rather than complex code objects.
+Maestro provides native, transparent support for iOS applications built with UIKit. Operating at the visual interaction layer rather than the implementation layer, Maestro interacts with rendered UI components regardless of underlying class hierarchies such as `UIButton`, `UITableView`, and `UILabel`.
 
-### The SwiftUI workflow
+### Technical advantages
 
-While Maestro can find SwiftUI elements by their displayed text, using identifiers is the most resilient way to build your test suite.
+* **Zero Instrumentation**: Maestro does not require test libraries, delegates, or ViewController exposure. You test the exact production binaries (.app or .ipa) distributed to your users.
+* **Implementation Agnostic**: Because Maestro validates user-facing features rather than internal code, you can refactor UIKit components to SwiftUI without breaking your tests, provided the visual output remains consistent.
+* **Black-Box Model**: Maestro adopts an [arm's length](../how-maestro-works.md) approach, simulating authentic user interactions with the rendered UI without needing access to internal source code.
 
-#### **Implementing accessibility identifiers**
+### Element interaction strategies
 
-For icons, custom controls, or to avoid breaking tests when text is translated, apply the `.accessibilityIdentifier()` modifier in your Swift code. By adding the `.accessibilityIdentifier` modifier, you are explicitly tagging a component in the underlying iOS Accessibility Tree.
+Maestro interacts with UIKit components by simulating authentic user interactions through the accessibility layer and visual recognition.
+
+#### **Interacting with views by text**
+
+Primary interaction in UIKit is often done via visible UI text. Any view with text content (like a `UIButton` title) can be targeted directly.
 
 ```swift
-// Step 1: In your SwiftUI View
-NavigationLink(value: Panel.donutEditor) {
-    Label("Donut Editor", systemImage: "slider.horizontal.3")
-}
-.accessibilityIdentifier("donut_editor")
+// In your UIKit Swift code
+let button = UIButton()
+button.setTitle("Submit Order", for: .normal)
 ```
 
-This ID is invisible to the end-user but is broadcast to any tool interacting with the system's accessibility layer. Thus, Maestro can interact with it using the `id` selector.
+You can tap this button in your Flow using the visible text:
+
+```yml
+- tapOn: "Submit Order"
+```
+
+#### **Using accessibility labels and IDs**
+
+For non-textual elements like icons, or for disambiguating duplicate elements, leverage iOS accessibility metadata. Maestro translates these properties into specific selectors:
+
+* `accessibilityLabel`: Maestro translates this to the `text` selector.
+* `accessibilityIdentifier`: Maestro translates this to the `id` selector. This is the gold standard for reliable tests.
+
+```swift
+// In your UIKit Swift code
+let button = UIButton()
+button.accessibilityIdentifier = "login_button_id"
+```
+
+The corresponding tap command in your Flow would use the `id`:
 
 ```yaml
-# Step 2: In your Maestro Flow
 - tapOn:
-    id: "donut_editor"
+    id: "login_button_id"
 ```
 
-### Examples
+{% hint style="info" %}
+If an element has both text content and an `accessibilityLabel`, Maestro will prioritize the `accessibilityLabel` as the value for the `text` selector.
+{% endhint %}
 
-These snippets demonstrate how Maestro handles common SwiftUI patterns and system behaviors.
+### Handling lists and complex components
 
-#### **Native controls (pickers and toggles)**
+Maestro abstracts away the complexity of coordinate calculations and cell enumeration in `UITableView` and `UICollectionView`.
 
-SwiftUI controls like `Picker` often require specific targeting, especially when multiple options are present.
+#### **Intelligent scrolling**
+
+Instead of manual index or offset calculations, use `scrollUntilVisible`. Maestro combines visibility detection with continuous swiping to find elements that are currently off-screen.
 
 ```yaml
-appId: com.swiftui.kit
----
-- launchApp:
-    clearState: true
-- tapOn:
-    id: "controls_item"
-- tapOn:
-    point: "84%,23%" # Precise coordinate tap for complex toggles
-- tapOn:
-    text: "Chocolate"
-    index: 0
-- tapOn:
-    id: "flavor_picker_segmented_Strawberry" # Target specific segments by ID
+- scrollUntilVisible:
+    element:
+        text: "List Item 50"
+    direction: DOWN
 ```
 
-The examples above use a mix of IDs, Text, and Coordinates to navigate complex SwiftUI layouts. While the `id` selector is the most reliable way to target elements, you can also use `index` to handle duplicate text or `point` for precise taps on small system controls like Toggles.
+### Known limitations
 
-#### **System navigation and app switching**
-
-Maestro can handle "Inter-App" communication, such as following a link into Safari and using the system breadcrumb to return.
-
-```yaml
-appId: com.swiftui.kit
----
-- launchApp
-- tapOn: "link_item"
-# Maestro follows the link into the Browser...
-- tapOn:
-    id: "breadcrumb" # Returns to your app via the native iOS 'Back' link
-```
-
-#### Refactoring resilience
-
-A major advantage of using Maestro with SwiftUI is migration safety. If you rewrite a legacy UIKit screen entirely in SwiftUI, as long as the visual output and accessibility identifiers remain the same, your Maestro tests will require zero changes.
-
-#### Tips and known issues
-
-* **Hierarchy Quirks**: Some specific styles (like `WheelPickerStyle`) may not return a full hierarchy to the accessibility layer, making text-based selection preferred over ID selection in those cases.
-* **Merged Elements**: When a `Toggle` is initialized with text, iOS often merges the text and the switch into a single accessibility element.
-* **Maestro Studio**: Always use [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/) to inspect SwiftUI views. It helps you see exactly how the nested view composition is resolved by the accessibility tree before you write your YAML.
+* **Real Devices**: Full support for local execution is currently optimized for the iOS Simulator. Physical device support requires proper provisioning and WebDriverAgent setup.
+* **Unicode Input**: Similar to Android, direct inputting of Unicode text via `inputText` can be limited depending on the environment, though views containing Unicode are detectable.
 
 ### Next steps
 
