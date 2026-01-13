@@ -8,19 +8,19 @@ The Maestro ecosystem is a unified platform composed of three interconnected lay
 
 ### **Maestro Studio (The IDE)**
 
-Maestro Studio is a visual interface designed for rapid test creation and real-time element inspection. By mirroring your device screen and allowing you to build [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) through simple point-and-click interactions, it serves as the primary tool for zero-code authoring and interactive debugging.&#x20;
+Maestro Studio is a visual interface built on top of the CLI, designed for rapid test creation and real-time element inspection. By mirroring your device screen and allowing you to build [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) through simple point-and-click interactions, it serves as the primary tool for zero-code authoring and interactive debugging.&#x20;
 
-You can start building your first journeys today by visiting the [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/) documentation.
+You can start building your first Flows today by visiting the [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/) documentation.
 
 ### **Maestro CLI**&#x20;
 
-The CLI is the open-source heart of Maestro, serving as the core engine for developers and DevOps engineers. It interprets your YAML files to orchestrate local test execution on connected devices and acts as the foundational backbone for all automation and CI/CD integration.&#x20;
+The CLI is the open-source heart of Maestro and the core engine that powers both Maestro Studio and Maestro Cloud. It serves as the workhorse for developers and DevOps engineers, interpreting your YAML files to orchestrate test execution. Because everything else is built on top of the CLI, it acts as the foundational backbone for all local automation and CI/CD integration.
 
 To learn more about its technical capabilities and orchestration features, check out the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/) documentation.
 
 ### **Maestro Cloud**
 
-Maestro Cloud is an enterprise-grade execution solution designed to scale your testing infrastructure without the overhead of managing local device farms. By offloading test execution to a distributed cloud of virtual devices, it enables massive parallelization and provides faster feedback loops for production-ready reliability.&#x20;
+Maestro Cloud is a managed execution solution designed to scale your testing infrastructure without the overhead of managing local device farms. It leverages the Maestro CLI to run your tests on a distributed cloud of virtual devices, enabling massive parallelization and providing fast and reliable feedback loops for production-ready reliability.
 
 Explore how to scale your regression suites in the [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) documentation.&#x20;
 
@@ -28,13 +28,13 @@ Explore how to scale your regression suites in the [Maestro Cloud](https://app.g
 
 Use the table below to determine which tool fits your current workflow:
 
-| **Feature** | **Maestro Studio**      | **Maestro CLI**         | **Maestro Cloud**       |
-| ----------- | ----------------------- | ----------------------- | ----------------------- |
-| Best For    | Authoring & Debugging   | Automation & CI/CD      | Mass Regression & Speed |
-| Interface   | Visual (GUI)            | Terminal (Command Line) | Managed Infrastructure  |
-| Execution   | Real-time / Interactive | Sequential (Local)      | Parallel (Simultaneous) |
-| Target User | QA & Developers         | Engineers & DevOps      | Enterprise Teams        |
-| Environment | Local Device/Emulator   | Local Device/Emulator   | Hosted Virtual Devices  |
+| **Feature**     | **Maestro Studio**      | **Maestro CLI**         | **Maestro Cloud**       |
+| --------------- | ----------------------- | ----------------------- | ----------------------- |
+| **Best For**    | Authoring & Debugging   | Automation & CI/CD      | Mass Regression & Speed |
+| **Interface**   | Visual (GUI)            | Terminal (Command Line) | Managed Infrastructure  |
+| **Execution**   | Real-time / Interactive | Sequential (Local)      | Parallel (Simultaneous) |
+| **Target User** | QA & Developers         | Engineers & DevOps      | Enterprise Teams        |
+| **Environment** | Local Device/Emulator   | Local Device/Emulator   | Hosted Virtual Devices  |
 
 ### The typical learning path
 
