@@ -1,8 +1,4 @@
----
-hidden: true
----
-
-# Page
+# React Native
 
 Maestro provides full support for React Native applications on both Android and iOS. By operating at the accessibility layer, Maestro enables cross-platform testing with a single test suite, requiring zero instrumentation or modifications to your JavaScript/TypeScript source code.
 

@@ -23,6 +23,7 @@
   * [Android Native](get-started/supported-platform/android-native.md)
   * [Jetpack](get-started/supported-platform/jetpack.md)
   * [iOS](get-started/supported-platform/ios.md)
+  * [React Native](get-started/supported-platform/react-native.md)
   * [SwiftUI](get-started/supported-platform/swiftui.md)
   * [UIKit](get-started/supported-platform/uikit.md)
   * [Flutter](get-started/supported-platform/flutter.md)
