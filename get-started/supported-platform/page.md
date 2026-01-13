@@ -4,77 +4,56 @@ hidden: true
 
 # Page
 
-Maestro provides native, transparent support for iOS applications built with UIKit. Operating at the visual interaction layer rather than the implementation layer, Maestro interacts with rendered UI components regardless of underlying class hierarchies such as `UIButton`, `UITableView`, and `UILabel`.
-
-### Technical advantages
-
-* **Zero Instrumentation**: Maestro does not require test libraries, delegates, or ViewController exposure. You test the exact production binaries (.app or .ipa) distributed to your users.
-* **Implementation Agnostic**: Because Maestro validates user-facing features rather than internal code, you can refactor UIKit components to SwiftUI without breaking your tests, provided the visual output remains consistent.
-* **Black-Box Model**: Maestro adopts an [arm's length](../how-maestro-works.md) approach, simulating authentic user interactions with the rendered UI without needing access to internal source code.
-
-### Element interaction strategies
-
-Maestro interacts with UIKit components by simulating authentic user interactions through the accessibility layer and visual recognition.
-
-#### **Interacting with views by text**
-
-Primary interaction in UIKit is often done via visible UI text. Any view with text content (like a `UIButton` title) can be targeted directly.
-
-```swift
-// In your UIKit Swift code
-let button = UIButton()
-button.setTitle("Submit Order", for: .normal)
-```
-
-You can tap this button in your Flow using the visible text:
-
-```yml
-- tapOn: "Submit Order"
-```
-
-#### **Using accessibility labels and IDs**
-
-For non-textual elements like icons, or for disambiguating duplicate elements, leverage iOS accessibility metadata. Maestro translates these properties into specific selectors:
-
-* `accessibilityLabel`: Maestro translates this to the `text` selector.
-* `accessibilityIdentifier`: Maestro translates this to the `id` selector. This is the gold standard for reliable tests.
-
-```swift
-// In your UIKit Swift code
-let button = UIButton()
-button.accessibilityIdentifier = "login_button_id"
-```
-
-The corresponding tap command in your Flow would use the `id`:
-
-```yaml
-- tapOn:
-    id: "login_button_id"
-```
+Maestro extends its one framework to rule them all philosophy to the desktop browser. By using the same declarative YAML syntax you use for mobile, you can automate web applications, enabling unified end-to-end testing across your entire product surface.
 
 {% hint style="info" %}
-If an element has both text content and an `accessibilityLabel`, Maestro will prioritize the `accessibilityLabel` as the value for the `text` selector.
+#### Beta Status
+
+Web support is currently in Beta. It is functional for Chromium-based testing and is ideal for teams looking to consolidate their mobile and web automation into a single toolset.
 {% endhint %}
 
-### Handling lists and complex components
+#### Technical approach
 
-Maestro abstracts away the complexity of coordinate calculations and cell enumeration in `UITableView` and `UICollectionView`.
+Maestro maintains its "Arm's Length" philosophy for web testing. Instead of directly manipulating the DOM or injecting JavaScript, Maestro interacts with the browser as a user would.
 
-#### **Intelligent scrolling**
+* **Unified Syntax**: The same commands like `tapOn`, `inputText`, and `assertVisible` work identically on Web as they do on Android and iOS.
+* **Framework Agnostic**: Whether your site is built with React, Vue, Angular, or plain HTML, Maestro interacts with the rendered output.
 
-Instead of manual index or offset calculations, use `scrollUntilVisible`. Maestro combines visibility detection with continuous swiping to find elements that are currently off-screen.
+#### Execution Workflow
+
+For web tests, you replace the `appId` with a `url`. Behind the scenes, Maestro treats the URL as the unique identifier for the application session.
 
 ```yaml
-- scrollUntilVisible:
-    element:
-        text: "List Item 50"
-    direction: DOWN
+# example.yaml
+url: https://maestro.mobile.dev
+---
+- launchApp
+- tapOn: "Installing Maestro"
+- assertVisible: "Installing the CLI"
 ```
+
+On the first run, Maestro will automatically download a managed version of Chromium. Subsequent runs will launch instantly. To run the test with [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), just run:
+
+```bash
+maestro test example.yaml
+```
+
+### Maestro Studio for Web
+
+[Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/) is fully compatible with web testing. It allows you to visually inspect web elements and generate YAML commands through a point-and-click interface.&#x20;
+
+### Platform specifics and tips
+
+* **Flutter Web**: Just like Flutter Mobile, Flutter Web renders elements differently. You should use Semantics to make elements addressable. Refer to the [Flutter](https://docs.maestro.dev/platform-support/flutter) documentation for best practices.
+* [**Selectors**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/how-to-use-selectors): Maestro prioritizes user-visible text. For complex web apps, using unique text labels or stable accessibility attributes is recommended to ensure your tests remain "refactoring resilient."
 
 ### Known limitations
 
-* **Real Devices**: Full support for local execution is currently optimized for the iOS Simulator. Physical device support requires proper provisioning and WebDriverAgent setup.
-* **Unicode Input**: Similar to Android, direct inputting of Unicode text via `inputText` can be limited depending on the environment, though views containing Unicode are detectable.
+As this feature is in Beta, certain advanced browser configurations are not yet supported:
+
+* **Browser Engines**: The current default and only supported browser is Chromium.
+* **Localization**: The default locale is set to `en-US`.
+* **Screen Dimensions**: Custom screen size and viewport configuration are currently preset.
 
 ### Next steps
 
