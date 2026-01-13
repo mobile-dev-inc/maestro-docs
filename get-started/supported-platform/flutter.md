@@ -1,31 +1,100 @@
-# Flutter on Maestro
+# Flutter
 
-Maestro's approach to Flutter testing embodies an "Arm's Length" methodology, focusing exclusively on device-level automation. Unlike Flutter-specific tools such as Flutter Driver or Integration Test—which inject Dart code and require deep instrumentation within the app process—Maestro interacts with Flutter applications in the same manner as native or React Native apps: by simulating user input and inspecting the final rendered UI.
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-Flutter Integration Test executes Dart code inside the app's runtime, making tests susceptible to crashes, navigation stack changes, or framework updates that can disrupt test execution. In contrast, Maestro runs externally, orchestrating input events (taps, swipes, text entry) and validating outcomes based on the actual pixels rendered on the device screen. This ensures that tests reflect the true end-user experience, independent of widget tree structure or internal logic.
+Maestro treats Flutter as a first-class citizen, supporting both pure and hybrid ([add-to-app](https://docs.flutter.dev/add-to-app)) mobile applications. Unlike internal tools that inject Dart code, Maestro interacts with Flutter through the device's Semantics Tree, ensuring your tests reflect the actual experience of an end-user.
 
-## Zero explicit framework dependencies
+### Black-box approach
 
-Maestro requires no explicit integration with Flutter or any other UI framework. Its operation is entirely decoupled from the app's internals, relying solely on the device's accessibility and visual output. By driving the device at the OS level, Maestro can automate interactions with any app—Flutter, native, React Native, or web—without knowledge of the underlying architecture or source code.
+Maestro operates externally, orchestrating input events and validating outcomes based on the actual pixels and accessibility labels rendered on the device.
 
-This framework-agnostic design offers several technical advantages:
+* **Zero Framework Dependencies**: No `pubspec.yaml` integration is required. Maestro tests the compiled APK or IPA directly.
+* **Stability Across Upgrades**: Your tests remain stable across Flutter version updates because Maestro does not depend on internal widget tree.
+* **System-Level Automation**: Since Maestro lives at the OS level, it can handle system-level flows, like push notifications or permission dialogs, that in-app Dart frameworks cannot reach.
 
-- **No maintenance overhead:** Maestro tests remain stable across framework upgrades (e.g., new Flutter or JavaScript releases), as long as the UI layout and accessibility identifiers are consistent.
-- **Resilience to app changes:** Since Maestro does not depend on widget tree traversal or internal APIs, changes to app logic or navigation do not break test scripts unless the visual UI itself changes.
-- **Broad compatibility:** Maestro can automate system-level flows (notifications, permissions, network changes) that are inaccessible to in-app test frameworks.
+### Element interaction strategies
 
-This device-centric paradigm delivers robust, future-proof test automation, ensuring that validation is always performed against the actual user-facing interface rather than internal implementation details.
+To interact with a widget, Maestro needs it to have semantic information. By default, widgets that display text (like `Text` or `TextField`) provide this implicitly.
 
-*   **Framework Agnosticism:** Maestro neither connects to Flutter's engine nor traverses the widget tree. It operates at device-level, simulating physical input events and analyzing final visual output.
-*   **No Dependencies:** No `pubspec.yaml` integration required. Maestro tests the compiled binary as Android Package (APK) or iOS App Store Package (IPA) directly, whether debug or release builds.
+#### **Interacting by semantics label (text)**
 
-## Cross-platform test unification
-Single Flutter codebase for Android and iOS enables single test suite via Maestro.
+Maestro can target any widget that displays text content. For widgets without implicit text, such as an `Icon`, you can manually provide a `semanticLabel`.
 
-*   **Platform Abstraction:** Visual interaction commands work identically across platforms if UI layouts remain consistent.
-*   **Conditional Logic:** Use environment variables in YAML to handle platform-specific flows such as package IDs and permission dialogs without test duplication.
+To target Icon, for example, in this Dart code, you need to add a label to an Icon so Maestro can "see" it. For more details, see the official [Flutter Icon documentation](https://api.flutter.dev/flutter/widgets/Icon-class.html). In the following example, `semanticLabel` is beeing used to add a label.
 
-## Out-of-app interaction
-Instrumental Flutter testing can't interact with system-level elements. Maestro operates at OS-level.
+```dart
+FloatingActionButton(
+  onPressed: _incrementCounter,
+  child: Icon(Icons.add, semanticLabel: 'fabAddIcon'),
+)
+```
 
-*   **Device-Level Automation:** Maestro orchestrates device behavior independent of app process—test push notifications, system settings, network state changes, and verify Flutter's response handling.
+This way, you can easily identify the element when creating a flow:
+
+```yaml
+- tapOn: "fabAddIcon"
+```
+
+#### **The semantics widget**
+
+You can wrap any layout component, such as a `Container` or `SizedBox`, with a [Semantics widget](https://api.flutter.dev/flutter/widgets/Semantics-class.html) to make it interactable.
+
+When you add semantics to a layout, it allows you to perform actions such as tapping on a visual area that does not inherently contain text. The following example adds a label using semantics, allowing Maestro to interact with the element during testing.
+
+```dart
+Semantics(
+  label: 'yellow_box',
+  child: Container(color: Colors.yellow, width: 100, height: 100),
+)
+```
+
+This way, you can easily interact with the element by referring to the label:
+
+```
+- tapOn: "yellow_box"
+```
+
+### Semantics identifiers
+
+As your app adds multi-language support or A/B tests, text-based labels can become brittle. The best practice is to use Semantic Identifiers.
+
+{% hint style="info" %}
+This feature was [contributed by the Maestro team to Flutter](https://github.com/flutter/engine/pull/47961) and is available in Flutter 3.19+.
+{% endhint %}
+
+This pattern creates a permanent link between your Dart code and your YAML [Flow ](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)that never changes, even if you translate your app into 20 languages.
+
+To use the pattern, the developer need to assign a unique `identifier` that is invisible to the user but exposed to Maestro.
+
+```dart
+Semantics(
+  identifier: 'login_button',
+  child: ElevatedButton(onPressed: _login, child: Text('Sign In')),
+)
+```
+
+This way, the the test can target that identifier using the `id` [selector](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/how-to-use-selectors).
+
+```yaml
+- tapOn:
+    id: "login_button"
+```
+
+### Why not use Flutter Keys?
+
+Flutter [Keys](https://api.flutter.dev/flutter/foundation/Key-class.html) are designed for the Flutter engine to manage widget identity during state changes (like reordering a list). They are not exposed to the system's accessibility layer. Because Maestro lives outside the Flutter runtime, it cannot "see" Keys. Always use Semantics for automation.
+
+### Known limitations
+
+* **Flutter Desktop**: Maestro does not yet support Flutter for Desktop.
+* **Flutter Web**: It is fully supported by Maestro. It works identically to standard [Web Testing](https://www.google.com/search?q=web-browsers). Simply use Semantics to make your web elements addressable.
+
+### Next steps
+
+If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
+
+To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
+
+* [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
+* [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
