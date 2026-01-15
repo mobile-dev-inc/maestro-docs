@@ -8,22 +8,20 @@ Maestro operates on the principle of UI-layer automation rather than code instru
 
 Maestro provides comprehensive automation support for major mobile platforms:
 
-* **Android:** Full support for emulators and physical devices (API level 21+).
-* **iOS:** Full support for simulators and physical devices (iOS 11.0+).
+* **Android:** Full support for emulators and physical devices.
+* **iOS:** Full support for simulators and physical devices.
 
 Both platforms pass validation at scale by enterprise teams at Microsoft, DoorDash, and others for complex automation scenarios.
 
 ### Framework agnosticism
 
-Maestro decouples test automation from framework implementation through UI-layer interaction, eliminating dependency on framework-specific instrumentation (unlike Detox or Appium with native drivers).
+Maestro decouples test automation from framework implementation by interacting directly at the UI layer. This removes the need for framework-specific instrumentation, which is a departure from tools like Detox or Appium, which depend on complex native drivers and in-app code injection.
 
 Supported technology stacks include:
 
 * **Native:** Swift, Kotlin, Java, Objective-C.
 * **Cross-platform:** React Native, Flutter.
 * **Other hybrid frameworks.**
-
-**Technical Implementation:** Maestro synthesizes tap events and leverages the accessibility hierarchy (UIAccessibility/AccessibilityNodeProvider) for element detection, making framework choice irrelevant to test execution.
 
 ### Web automation
 
