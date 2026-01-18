@@ -17,30 +17,43 @@ Working with their test developers and other folks in the community, we develope
 
 
 ```yaml
-- evalScript: ${output.foundElement = 0}
+# Initialize state
+- evalScript: ${output.foundElement = false}
+- evalScript: ${output.retries = 0}
 
-# Check if it's already visible
+# Check if element is already visible
 - runFlow:
     when:
       visible:
         id: "the_thing_we_want"
     commands:
-      - evalScript: ${output.foundElement = 1}
+      - evalScript: ${output.foundElement = true}
 
-# Loop until found
+# Loop until element is found or retries exhausted
 - repeat:
     while:
-      true: ${output.foundElement == 0}
+      true: ${!output.foundElement && output.retries < 10}
     commands:
-      # Swipe up, from 90% down the screen to 75% down the screen
+      # Swipe vertically in the bottom portion of the screen (fragment-safe)
       - swipe:
           start: 50%, 90%
           end: 50%, 75%
-      # Check if it's visible yet
+      
+      # Wait for UI / animation to settle
+      - waitForAnimationToEnd
+
+      # Check visibility again
       - runFlow:
           when:
             visible:
               id: "the_thing_we_want"
           commands:
-            - evalScript: ${output.foundElement = 1}
+            - evalScript: ${output.foundElement = true}
+
+      # Increment retry counter
+      - evalScript: ${output.retries += 1}
+
+# Final assertion to ensure the element is visible
+- assertVisible:
+    id: "the_thing_we_want"
 ```
