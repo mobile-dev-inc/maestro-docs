@@ -65,6 +65,23 @@ The following example taps a button while an element is not visible, but stops a
       - tapOn: Button
 ```
 
+Here's another example that logs **"Hello World"** four times. If the counter does not work as expected, it will repeat the process while the counter is less than 10:
+
+```yaml
+- evalScript: ${output.counter = 1}
+- repeat:
+    times: 4
+    while:
+      true: ${output.counter < 10}
+    commands:
+      - evalScript: ${console.log("Hello World")}
+      - evalScript: ${output.counter++}
+```
+
+{% hint style="success" %}
+Use the `--verbose` flag to see the effect of the `repeat` command more effectively when using [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention").
+{% endhint %}
+
 ### Related content
 
 Learn how to use [conditions](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions) in your Flows.
