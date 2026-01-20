@@ -32,6 +32,7 @@
   * [scroll](commands-available/scroll.md)
   * [scrollUntilVisible](commands-available/scrolluntilvisible.md)
   * [setAirplaneMode](commands-available/setairplanemode.md)
+  * [setClipboard](commands-available/setclipboard.md)
   * [setLocation](commands-available/setlocation.md)
   * [setOrientation](commands-available/setorientation.md)
   * [startRecording](commands-available/startrecording.md)

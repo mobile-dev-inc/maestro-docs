@@ -6,7 +6,7 @@ The `runFlow` command executes a sequence of commands from another Flow file or 
 
 The `runFlow` command accepts the following parameters.
 
-<table><thead><tr><th width="115.33331298828125">Parameter</th><th width="95.4444580078125">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>file</code></td><td><code>string</code></td><td>The relative path to the Flow file to execute.</td></tr><tr><td><code>env</code></td><td><code>map</code></td><td>A map of key-value pairs to pass as environment variables to the subflow.</td></tr><tr><td><code>commands</code></td><td><code>list</code></td><td>A list of commands to execute inline. Use this instead of the <code>file</code> parameter for self-contained flows.</td></tr></tbody></table>
+<table><thead><tr><th width="115.33331298828125">Parameter</th><th width="95.4444580078125">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>file</code></td><td><code>string</code></td><td>The relative path to the Flow file to execute.</td></tr><tr><td><code>env</code></td><td><code>map</code></td><td>A map of key-value pairs to pass as environment variables to the subflow.</td></tr><tr><td><code>commands</code></td><td><code>list</code></td><td>A list of commands to execute inline. Use this instead of the <code>file</code> parameter for self-contained Flows.</td></tr></tbody></table>
 
 ### Usage examples
 
@@ -51,6 +51,10 @@ appId: com.example.app
 {% endtab %}
 {% endtabs %}
 
+{% hint style="success" %}
+Prefer using Flow files if the same flow will be reused across multiple tests. Otherwise, defining Flows files can make it harder to quickly understand what’s happening in your test.
+{% endhint %}
+
 #### Pass environment variables to a subflow
 
 You can pass variables to the subflow using the `env` parameter. These variables are accessible within the subflow.
@@ -62,7 +66,7 @@ You can pass variables to the subflow using the `env` parameter. These variables
       MY_PARAMETER: "123"
 ```
 
-#### Run an inline flow
+#### Run an inline Flow
 
 To define a subflow directly within the `runFlow` command, use the `commands` parameter instead of `file`.
 
@@ -73,6 +77,10 @@ To define a subflow directly within the `runFlow` command, use the `commands` pa
     commands:
       - inputText: ${INNER_ENV}
 ```
+
+{% hint style="success" %}
+Inline subflows are primarily useful for [conditional](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions) logic or small flows that don’t need a separate file.
+{% endhint %}
 
 ### Cloud execution
 
