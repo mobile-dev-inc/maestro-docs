@@ -1,0 +1,2 @@
+# Generic CI platform
+
