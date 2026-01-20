@@ -1,0 +1,2 @@
+# Locales supported by Maestro
+
