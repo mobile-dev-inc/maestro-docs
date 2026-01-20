@@ -2,7 +2,7 @@
 
 The `repeat` command executes a sequence of commands multiple times, either for a fixed number of iterations or until a specific condition is met.
 
-### Arguments
+### Parameters
 
 To customize sequence execution when using the `repeat` command, you can use the following parameters:
 

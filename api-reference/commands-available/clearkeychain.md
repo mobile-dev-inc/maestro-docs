@@ -6,9 +6,9 @@ The `clearKeychain` command clears all data from the iOS keychain.&#x20;
 This command only applies to iOS and has no effect on Android or Web.
 {% endhint %}
 
-### Usage examples
+### Syntax
 
-The following example shows how to use the `clearKeychain` command.
+The command takes no arguments.
 
 ```yaml
 - clearKeychain
