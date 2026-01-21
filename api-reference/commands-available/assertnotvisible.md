@@ -2,6 +2,14 @@
 
 The `assertNotVisible` command asserts that a UI element is not visible on the screen. If the element is currently visible, this command waits for it to disappear before proceeding.
 
+{% hint style="info" %}
+#### Maestro's fluent assertion
+
+If the element is visible when the command is first called, Maestro will not immediately fail the test. Instead, it will automatically wait and retry for up to 7 seconds, giving the UI time to update or for animations to complete.
+
+If you expect an element to take longer than 7 seconds to disappear, use the [`extendedWaitUntil`](extendedwaituntil.md) command.
+{% endhint %}
+
 ### Parameters
 
 This command accepts the same selectors as `tapOn`. The following table lists commonly used parameters.
