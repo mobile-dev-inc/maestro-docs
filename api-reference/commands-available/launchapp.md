@@ -24,6 +24,20 @@ To launch a different app by its ID:
 - launchApp: com.example.app
 ```
 
+When testing web applications, using `launchApp` redirects the test to the website defined at the top of the Flow. In the following example, after navigating through the Maestro documentation, `launchApp` is used to return to the documentation homepage:
+
+```yaml
+url: https://docs.maestro.dev/
+---
+- launchApp
+- openLink:
+    link: https://maestro.dev/cloud
+- tapOn:
+    text: Start Your Free Trial
+    index: 2
+- launchApp
+```
+
 #### Launch with a clean state
 
 To clear all app data before launch use `clearState: true`:

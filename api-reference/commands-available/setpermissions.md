@@ -2,9 +2,15 @@
 
 The `setPermissions` command configures permissions for an application. While the `launchApp` command performs this action by default, you can use `setPermissions` at other points in a flow, such as before a deeplink.
 
+{% hint style="info" %}
+`setPermissions` is available on Android and iOS.
+
+Maestro has no control over Chrome’s permissions.
+{% endhint %}
+
 ### Parameters
 
-<table><thead><tr><th width="149">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>appId</code></td><td><strong>(Optional)</strong> The ID of the app to target. Defaults to the app under test.</td></tr><tr><td><code>permissions</code></td><td><strong>(Required)</strong> A map of permissions to set. The key is the permission name, and the value is either <code>allow</code> or <code>deny</code>. Use the <code>all</code> key to apply a state to all permissions.</td></tr></tbody></table>
+<table><thead><tr><th width="149">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>permissions</code></td><td> A map of permissions to set. The key is the permission name, and the value is either <code>allow</code> or <code>deny</code>. Use the <code>all</code> key to apply a state to all permissions.</td></tr><tr><td><code>appId</code></td><td><strong>(Optional)</strong> The ID of the app to target. Defaults to the app under test.</td></tr></tbody></table>
 
 ### Usage examples
 

@@ -2,6 +2,10 @@
 
 Sets the orientation of the virtual device.
 
+{% hint style="info" %}
+If you use this command to test web applications, the command will pass, but nothing will happen.
+{% endhint %}
+
 ### Arguments
 
 The command accepts one of the following string arguments.

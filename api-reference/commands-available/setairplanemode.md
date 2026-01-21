@@ -5,7 +5,9 @@ The `setAirplaneMode` command enables or disables airplane mode on the device.&#
 {% hint style="info" %}
 This command is only available on Android.
 
-iOS simulators don't have an airplane mode.
+iOS simulators do not have an airplane mode.
+
+If you use this command to test web applications, the command will pass, but nothing will happen.
 {% endhint %}
 
 ### Syntax
