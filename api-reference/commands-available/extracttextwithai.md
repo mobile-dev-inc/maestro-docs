@@ -10,7 +10,11 @@ The `extractTextWithAI` command takes a screenshot of the current view and uses 
 
 You can specify parameters as a simple string query or as a map for more configuration options.
 
-<table><thead><tr><th width="154.5555419921875">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>query</code></td><td><strong>Required.</strong> A natural language prompt describing the text to extract from the screen.</td></tr><tr><td><code>outputVariable</code></td><td>The variable name to store the extracted text. Defaults to <code>aiOutput</code>.</td></tr></tbody></table>
+<table><thead><tr><th width="154.5555419921875">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>query</code></td><td><strong>Required.</strong> A natural language prompt describing the text to extract from the screen.</td></tr><tr><td><code>outputVariable</code></td><td><strong>Optional.</strong> The variable name to store the extracted text. Defaults to <code>aiOutput</code>.</td></tr><tr><td><code>optional</code></td><td><strong>Optional.</strong>  Determines if the Flow should continue if the assertion fails. Default is <code>true</code>.</td></tr></tbody></table>
+
+{% hint style="info" %}
+Since `extractTextWithAI` is an experimental feature, `optional` is set to `true` by default to prevent unstable AI responses from breaking your CI/CD pipelines. If you want a failed text extraction to stop the test, you must set `optional: false`.
+{% endhint %}
 
 ### Usage examples
 
@@ -37,14 +41,15 @@ This example extracts text and stores it in a custom variable named `theCaptchaV
 
 #### Dynamic content interaction
 
-This example uses `extractTextWithAI` to identify the title of the first search result on a page and then uses the output variable to tap on that item.
+This example uses `extractTextWithAI` to identify the title of the first search result on a page and tap on that item using the output variable. The test will fail if the AI cannot detect an item title, since `optional: false` is set.
 
 ```yaml
 - extractTextWithAI: Title of the first item on this page
+    optional: false
 - tapOn: ${aiOutput}
 ```
 
-![A screenshot of the Amazon app showing search results for a laptop.](https://2384395183-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fn5KVIOjVkVjYRyVWZ0yT%2Fuploads%2Fgit-blob-5347cddd83e822e6416371f9120e4209d16eaced%2Fimage.png?alt=media)
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Best practices
 

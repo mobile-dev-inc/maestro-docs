@@ -41,7 +41,7 @@ When using `openLink` for testing on Android or iOS, you need to pay attention t
 
 When you open a web link that your app can handle, Android may show a disambiguation dialog asking the user which app to use.
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 To bypass this dialog, set the `autoVerify` argument to `true` :&#x20;
 
@@ -57,7 +57,7 @@ On Android 12 and higher, web links open in a web browser by default. The `autoV
 
 On some iOS versions, the operating system shows a security confirmation dialog the first time an app is launched from a deep link.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="232"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="232"><figcaption></figcaption></figure>
 
 Accepting this prompt is a permanent choice for that Simulator and is not affected by clearing app state.&#x20;
 
