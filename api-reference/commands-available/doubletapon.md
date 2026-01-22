@@ -13,10 +13,19 @@ The `doubleTapOn` command accepts a [Selector](../selectors/) and a `delay` :
 
 ### Usage examples
 
-You can use the shorthand approach by providing the visible text of the element. This example double-taps an element with the visible text **Button**:
+You can use the shorthand approach by providing the visible text of the element. This example double-taps an element with the visible text `My Button`:
 
 ```yaml
-- doubleTapOn: "Button"
+- doubleTapOn: My Button
+```
+
+The implementation above produces the same result as using [`tapOn`](tapon.md) with the `repeat` configuration.
+
+```yaml
+- tapOn:
+    text: My Button
+    repeat: 2
+    delay: 100
 ```
 
 If you need to use a different selector, or if you need to change the delay between the first and second tap, use this approach. This example uses an `id` selector to find the element and specifies a custom delay between taps:
@@ -24,5 +33,9 @@ If you need to use a different selector, or if you need to change the delay betw
 ```yaml
 - doubleTapOn:
     id: "someId"
-    delay: 100
+    delay: 200
 ```
+
+### Related commands
+
+* [tapon.md](tapon.md "mention")
