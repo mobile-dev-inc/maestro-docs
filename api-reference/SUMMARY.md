@@ -3,7 +3,7 @@
 * [Commands overview](README.md)
 * [Commands available](commands-available/README.md)
   * [addMedia](commands-available/addmedia.md)
-  * [assertNoDefectsWithAi](commands-available/assertnodefectswithai.md)
+  * [assertNoDefectsWithAI](commands-available/assertnodefectswithai.md)
   * [assertNotVisible](commands-available/assertnotvisible.md)
   * [assertTrue](commands-available/asserttrue.md)
   * [assertVisible](commands-available/assertvisible.md)
