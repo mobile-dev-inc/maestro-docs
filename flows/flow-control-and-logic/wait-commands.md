@@ -8,7 +8,7 @@ Maestro provides several ways to handle these timing issues. This guide helps yo
 
 Before using a dedicated wait command, remember the golden rule of Maestro timing:
 
-> If you expect an element to appear or disappear within a short period (e.g., 5 seconds), use an assertion.
+> If you expect an element to appear or disappear within a short period, use an assertion.
 
 Maestro’s assertions are smart. They don't just check once and fail, they poll the UI continuously until the element appears or the timer expires. This makes them the most efficient way to wait because the test continues immediately after the condition is met.
 
