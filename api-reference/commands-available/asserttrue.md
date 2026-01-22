@@ -11,7 +11,7 @@ You can use the shorthand approach, providing only the expression, or you can us
 # or
 - assertTrue:
     condition: ${value}
-    label: Description
+    label: Variable 'value' is set
 ```
 
 ### Parameters
@@ -34,8 +34,11 @@ This example uses `assertTrue` to verify that the text content of two separate v
 ```yaml
 - copyTextFrom: View A
 - evalScript: ${output.viewA = maestro.copiedText}
+
 - copyTextFrom: View B
-- assertTrue: ${output.viewA == maestro.copiedText}
+- evalScript: ${output.viewB = maestro.copiedText}
+
+- assertTrue: ${output.viewA == output.viewB}
 ```
 
 #### Fail a test with a custom message
