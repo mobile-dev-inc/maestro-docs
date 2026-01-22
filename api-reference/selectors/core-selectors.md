@@ -88,7 +88,7 @@ The `point` selector allows you to interact with specific screen coordinates. Th
 
 ```yaml
 - tapOn:
-    point: "50%, 50%"   # Taps the dead center of the screen
+    point: "50%, 50%"   # Taps the center of the screen
 - tapOn:
     point: "100, 250"   # Taps 100 pixels from left, 250 from top
 ```

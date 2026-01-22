@@ -22,7 +22,7 @@ This trait is a broad filter that matches any element that contains some text. Y
 
 ### `traits: long-text`
 
-Maestro specifically identifies blocks of text that are larger than 200 characters. This is useful for identifying article bodies, terms and conditions screens, or long descriptions without needing to match the specific content.
+Maestro specifically identifies blocks of text that are longer than 200 characters. This is useful for identifying article bodies, terms and conditions screens, or long descriptions without needing to match the specific content.
 
 ```yaml
 # Asserts that a long description block is visible on the page

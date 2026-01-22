@@ -12,7 +12,7 @@ Relational Selectors allow you to identify UI elements based on their relationsh
 | `rightOf`             | Matches a view located to the right of a specified anchor element.           |
 | `containsChild`       | Matches a parent element that has a direct child matching specific criteria. |
 | `childOf`             | Matches an element that is a child of a specified parent element.            |
-| `containsDescendants` | Matches a view that contains a specific set of descendant views.             |
+| `containsDescendants` | Matches a view that contains a specific set of descendant elements.          |
 
 {% hint style="success" %}
 #### Usage tips
@@ -21,9 +21,9 @@ Relational Selectors allow you to identify UI elements based on their relationsh
 * **Anchor Reliability**:  Always use the most stable element (typically static text or a unique ID) as the anchor for `above`, `below`, `leftOf`, or `rightOf`.
 {% endhint %}
 
-### Vertical Alignment: `above` and `below`
+### Alignment selectors
 
-These selectors identify views located above or below a reference element.
+The vertical alignment selectors `above` and `below`  identify views located above or below a reference element.
 
 ```yaml
 # Tap a view located below the "Email" label
@@ -35,9 +35,7 @@ These selectors identify views located above or below a reference element.
     above: Checkout
 ```
 
-### Horizontal Alignment: `leftOf` and `rightOf`
-
-Use these selectors for elements positioned side-by-side, such as icons next to labels.
+Similarly, horizontal alignment selectors `leftOf` and `rightOf`  are used to identify  elements positioned side-by-side, such as icons next to labels.
 
 ```yaml
 # Tap the view to the right of an input field
@@ -48,6 +46,17 @@ Use these selectors for elements positioned side-by-side, such as icons next to 
 # Tap the view to the left of a specific phrase
 - tapOn:
     leftOf: I agree to the terms
+```
+
+However, it is important to notice that these selectors selectors determine relationships based on screen bounds. For instance, `leftOf` matches elements whose left bound is smaller than the anchor's left bound. It does not strictly enforce that the element is directly next to the anchor or vertically aligned with it. You may need to combine this with other selectors for precision, as done in the following example to assert vertical hierarchy:
+
+```yaml
+- assertVisible:
+    text: Top Thing
+    above:
+      text: Middle Thing
+      above:
+        text: Bottom Thing
 ```
 
 ### Parent-Child Relationships
