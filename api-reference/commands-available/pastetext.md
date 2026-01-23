@@ -4,7 +4,20 @@ The `pasteText` command pastes text from the clipboard into the currently focuse
 
 This command requires that a text field is in focus before execution. Text must first be copied to the clipboard using the [`copyTextFrom` ](copytextfrom.md)command.
 
-### Sintax
+{% hint style="info" %}
+#### System vs. internal clipboard
+
+Maestro distinguishes between two types of clipboards:
+
+* **Internal clipboard**: Stores text captured by Maestro commands, such as `copyTextFrom`, or values manually assigned to `maestro.copiedText`.
+* **System clipboard**: The native operating system clipboard used when interacting with in-app actions like a **Copy to Clipboard** button.
+
+The `pasteText` command interacts **exclusively** with Maestro’s internal clipboard. It does not read from or write to the system clipboard.
+
+As a result, if you tap a button in your app that copies content to the system clipboard, `pasteText` will not paste that content. It will only paste text that was previously captured using `copyTextFrom` or explicitly assigned to `maestro.copiedText`.
+{% endhint %}
+
+### Syntax
 
 This command takes no arguments.
 
