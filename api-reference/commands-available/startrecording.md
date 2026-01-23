@@ -1,6 +1,13 @@
 # startRecording
 
-The `startRecording` command begins a screen recording of the test Flow. The resulting video file is saved in the same directory as the Flow file using `.mp4` format.
+The `startRecording` command begins a screen recording of the test Flow. Use this command to collect visual evidence of your test runs, especially when debugging complex UI transitions or intermittently failing tests. The resulting video file is saved in `.mp4` format.
+
+{% hint style="info" %}
+#### Important considerations
+
+* You must use the [`stopRecording`](stoprecording.md) command to finalize the video file.&#x20;
+* The behavior and file location of recordings may differ slightly when running tests via Maestro Studio compared to the CLI.
+{% endhint %}
 
 ### Parameters
 
@@ -24,14 +31,14 @@ appId: yourAppId
 
 You need to use the [`stopRecording`](stoprecording.md) command to instruct Maestro to stop recording the device screen.
 
-#### With parameters
+#### Custom path and labels
 
-This example uses the long-form syntax to specify a path, a label, and mark the command as optional.
+This example uses the expanded syntax to specify a directory, a descriptive label for the reports, and marks the command as optional to ensure the test continues even if the video engine fails to start.
 
 ```yaml
 - startRecording:
-    path: '/recordings/logging_in'
-    label: 'Begin collecting test evidence'
+    path: "recordings/user_onboarding"
+    label: "Capture onboarding sequence for evidence"
     optional: true
 ```
 
