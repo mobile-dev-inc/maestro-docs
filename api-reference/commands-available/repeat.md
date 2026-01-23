@@ -65,7 +65,7 @@ The following example taps a button while an element is not visible, but stops a
       - tapOn: Button
 ```
 
-Here's another example that logs **"Hello World"** four times. If the counter does not work as expected, it will repeat the process while the counter is less than 10:
+Here’s another example that logs `"Hello World"` four times. The `output.counter < 10` condition acts as an escape hatch, ensuring the loop exits safely if the JavaScript counter logic behaves unexpectedly.
 
 ```yaml
 - evalScript: ${output.counter = 1}

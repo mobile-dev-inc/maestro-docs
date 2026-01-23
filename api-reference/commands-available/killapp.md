@@ -2,7 +2,15 @@
 
 The `killApp` command terminates the running application.
 
-On Android, this command triggers a system-initiated process death, which is equivalent to running `adb shell am kill {package name}`. On iOS and Web, this command is an alias for `stopApp`.
+{% hint style="info" %}
+The `killApp` has no effect over Web tests.
+{% endhint %}
+
+{% hint style="info" %}
+#### Android&#x20;
+
+On Android, this command triggers a system-initiated process death, which is equivalent to running `adb shell am kill {package name}`.&#x20;
+{% endhint %}
 
 ### Syntax
 
