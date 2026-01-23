@@ -75,6 +75,11 @@ androidWebViewHierarchy: devtools
 
 Note: support for this in Maestro Studio Desktop is still to come!
 
+
+### Maestro studio http error 400
+
+When opening Maestro Studio you might get a Http 400 error. Troubleshoot the issue by opening Maestro Studio in another browser. If the link works then the issue is a configuration error in the original browser. Clearing browser data might fix this
+
 ## iOS
 
 ### `hideKeyboard` command is flaky
