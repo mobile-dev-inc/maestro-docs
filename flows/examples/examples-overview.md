@@ -12,7 +12,7 @@ These guides provide targeted solutions for specific technical requirements:
 * [choose-images-from-the-gallery.md](choose-images-from-the-gallery.md "mention"): Learn the specific sequence needed to navigate out of your app, interact with the system photo picker, and return to your Flow.
 * [check-the-clipboard-content.md](check-the-clipboard-content.md "mention"): See how to verify that your app correctly copied text or links to the device clipboard using JavaScript assertions.
 * [download-and-open-a-file.md](download-and-open-a-file.md "mention"): A guide on handling "Save to Device" flows and verifying that files (like PDFs or images) are accessible.
-* [use-scrolluntilvisible-for-fragments.md](use-scrolluntilvisible-for-fragments.md "mention"): Master scrolling in complex layouts where elements are hidden inside sub-containers or fragments.
+* [custom-scrolling-for-screen-fragments.md](custom-scrolling-for-screen-fragments.md "mention"): Master scrolling in complex layouts where elements are hidden inside sub-containers or fragments.
 * [get-the-last-matching-element.md](get-the-last-matching-element.md "mention"): Learn how to target a specific instance of an element when multiple identical items (like "Delete" buttons) appear in a list.
 
 #### Full-flow blueprints

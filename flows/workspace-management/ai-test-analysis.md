@@ -73,7 +73,7 @@ file:///path/to/your/insights-report.html
 Analyze support is in Beta. We would appreciate your feedback in our Slack channel: #community-chat
 ```
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 If your app is in great shape, you'll see a success message:
 
