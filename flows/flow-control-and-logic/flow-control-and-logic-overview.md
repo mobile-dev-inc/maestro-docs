@@ -20,7 +20,7 @@ Handle dynamic lists or "polling" scenarios with [Loops ](loops.md)to repeat act
 
 #### **4. Environment and life-cycle**
 
-Manage test data externally using [Parameters ](parameters.md)and [Constants](constants.md), allowing the same Flow to run in Staging, QA, or Production. Use [Hooks ](hooks.md)(`onFlowStart`, `onFlowComplete`) to automate setup and teardown tasks, such as clearing app state or granting [Permissions](permissions.md).
+Manage test data externally using [Parameters ](parameters-and-constants.md)and [Constants](/broken/pages/DLtBiFLCJpsE4uxGnPNx), allowing the same Flow to run in Staging, QA, or Production. Use [Hooks ](hooks.md)(`onFlowStart`, `onFlowComplete`) to automate setup and teardown tasks, such as clearing app state or granting [Permissions](permissions.md).
 
 ### How to Explore This Section
 
@@ -28,6 +28,6 @@ We recommend exploring these features in the following order:
 
 1. Start with [Nested Flows](nested-flows.md): Learn how to break your tests into manageable parts.
 2. Add [Conditions](conditions.md): Make your modular tests smarter by handling "if-then" scenarios.
-3. Optimize with [Parameters](parameters.md): Replace hardcoded data with dynamic variables to support multiple environments.
+3. Optimize with [Parameters](parameters-and-constants.md): Replace hardcoded data with dynamic variables to support multiple environments.
 4. Finalize with [Hooks](hooks.md): Ensure every test run starts from a clean, reliable state.
 

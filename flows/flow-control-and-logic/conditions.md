@@ -16,8 +16,6 @@ The following table lists the available conditions you can use to define the con
 
 <table><thead><tr><th width="129">Condition</th><th>Description</th></tr></thead><tbody><tr><td><code>visible</code></td><td>Executed if the element matching the selector is visible. The element must be defined using one or more <a data-mention href="https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors">Selectors</a>.</td></tr><tr><td><code>notVisible</code></td><td>Executed if the element matching the selector is <strong>not</strong> visible. The element must be defined using one or more <a data-mention href="https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors">Selectors</a>.</td></tr><tr><td><code>platform</code></td><td>Executed if the current platform matches (<code>Android</code>, <code>iOS</code>, or <code>Web</code>).</td></tr><tr><td><code>true</code></td><td>Executed if the JavaScript expression evaluates to <code>true</code>.</td></tr></tbody></table>
 
-When using a `visible` or `notVisible` condition, you need to define the element to be considered using [Selectors](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors "mention").
-
 ### Common use cases
 
 #### Handling platform differences
@@ -132,4 +130,4 @@ If your JavaScript condition is longer than one line, move the logic into a sepa
 
 #### Next steps
 
-Now that you understand how to use conditions in your Flows, learn how to use [parameters](parameters.md) and [constants](constants.md) or explore all the possibilities of using [JavaScript](../javascript/javascript-overview.md) to create tests.
+Now that you understand how to use conditions in your Flows, learn how to use [parameters](parameters-and-constants.md) and [constants](/broken/pages/DLtBiFLCJpsE4uxGnPNx) or explore all the possibilities of using [JavaScript](../javascript/javascript-overview.md) to create tests.
