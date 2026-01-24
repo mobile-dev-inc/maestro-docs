@@ -1,33 +1,32 @@
 # eraseText
 
-The `eraseText` command deletes characters from the currently focused text field. It behaves like pressing the Backspace key, removing characters, up to 50 characters by default.
+The `eraseText` command deletes characters from the currently focused text field by simulating backspace key presses. By default, it removes up to 50 characters, making it an efficient way to clear input fields.
 
 ### Syntax
 
-You can use the command with no arguments. In this case, it will remove up to 50 characters from the text field.
+You can use the command without arguments to perform a standard clear, or specify a precise number of characters to delete (up to a maximum of 100).
 
 ```yaml
-- eraseText # Removes up to 50 characters (default)
+# Removes up to 50 characters (Default)
+- eraseText 
+
+# Removes a specific number of characters (Up to 100)
+- eraseText: 10
 ```
 
-You also have the option to specify the number of characters to remove, up to a maximum of 100 characters:
+### Clearing large text blocks
+
+While `eraseText` works well for short inputs, clearing long paragraphs or very large fields by hitting backspace 50 times can be slow. To optimize your Flow, especially on iOS, you can use the following sequence to select and delete everything at once:
 
 ```yaml
-- eraseText: 100    # Removes up to 100 characters
+# 1. Select the entire text block
+- longPressOn: "<your_input_id>"
+- tapOn: "Select All"
+
+# 2. Perform a single backspace to clear the selection
+- eraseText: 1
 ```
 
-### Known issues
-
-The `eraseText` command can be unreliable on iOS. To ensure that text is cleared consistently, use the following sequence of commands as a workaround:
-
-```yaml
-- longPressOn: "<input text id>"
-- tapOn: 'Select All'
-- eraseText
-```
-
-This approach ensures that all text in the input field is selected before executing the erase action.
-
-{% hint style="info" %}
-Maestro team is working to fix this issue.
+{% hint style="success" %}
+When text is already selected (e.g., after **Select All**), using `- eraseText: 1` is faster than the default `- eraseText`, as it only needs to trigger a single backspace to delete the entire highlighted selection.
 {% endhint %}
