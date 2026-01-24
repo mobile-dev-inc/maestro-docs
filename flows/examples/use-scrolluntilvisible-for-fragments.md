@@ -99,7 +99,7 @@ To use this helper in your main Flow, call it with `runFlow` and pass the `TARGE
     id: "logout_button"
 ```
 
-#### Related content
+### Related content
 
 Explore the following documentation pages if some of the concepts used in this example are not clear for you:
 
