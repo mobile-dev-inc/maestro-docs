@@ -50,4 +50,4 @@
 * [Android contacts flow automation with Maestro](examples/android-contacts-flow-automation-with-maestro.md)
 * [Facebook signup flow automation with Maestro](examples/facebook-signup-flow-automation-with-maestro.md)
 * [Wikipedia on Android with Maestro](examples/wikipedia-on-android-with-maestro.md)
-* [Page Object Model with Maestro](examples/page-object-model-with-maestro.md)
+* [Implementing the Page Object Model (POM)](examples/implementing-the-page-object-model-pom.md)

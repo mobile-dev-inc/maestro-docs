@@ -26,5 +26,5 @@ See how Maestro handles real-world complexity in popular applications.
 
 For teams building large-scale test suites, these architectural guides are essential.
 
-* [Page Object Model (POM) with Maestro](page-object-model-with-maestro.md): Learn how to separate your element selectors from your test logic. This is the industry-standard approach for reducing maintenance and making tests readable for the whole team.
+* [Page Object Model (POM) with Maestro](implementing-the-page-object-model-pom.md): Learn how to separate your element selectors from your test logic. This is the industry-standard approach for reducing maintenance and making tests readable for the whole team.
 
