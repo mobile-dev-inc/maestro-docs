@@ -44,6 +44,7 @@
 * [Check the clipboard content](examples/check-the-clipboard-content.md)
 * [Choose images from the gallery](examples/choose-images-from-the-gallery.md)
 * [Download and open a file](examples/download-and-open-a-file.md)
+* [Reset device state (Android)](examples/reset-device-state-android.md)
 * [Get the last matching element](examples/get-the-last-matching-element.md)
 * [Custom scrolling for screen fragments](examples/use-scrolluntilvisible-for-fragments.md)
 * [Android contacts flow automation with Maestro](examples/android-contacts-flow-automation-with-maestro.md)
