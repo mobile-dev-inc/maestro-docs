@@ -10,11 +10,20 @@ Maestro supports two primary hooks defined in your `config.yaml`. These hooks ar
 
 <table data-header-hidden><thead><tr><th width="152.33334350585938"></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Hook</strong></td><td><strong>When it runs</strong></td><td><strong>Ideal Use Case</strong></td></tr><tr><td><code>onFlowStart</code></td><td>Before every individual Flow begins.</td><td>Resetting app state, logging in, or handling dynamic permissions.</td></tr><tr><td><code>onFlowComplete</code></td><td>After every individual Flow finishes (Pass or Fail).</td><td>Clearing cookies, logging out, or reporting custom metrics.</td></tr></tbody></table>
 
-#### Usage example
+{% hint style="success" %}
+#### Best practices
+
+* Since hooks run for every single Flow, a slow hook will significantly increase your total suite execution time.
+* Be careful not to call a Flow that itself triggers the same hook, causing an infinite loop.
+* Use the `when` block within your hook sub-flow to perform actions only on specific platforms (e.g., clearing the iOS Keychain).
+* Use `onFlowComplete` hook to ensure your app is in a "neutral" state for the next test, such as navigating back to the home screen or logging out.
+{% endhint %}
+
+### Usage example
 
 Let's walk through how to set up a global login hook so that every test in your workspace starts with an authenticated user.
 
-**Step 1: Create your login subflow**
+#### **Step 1: Create your login subflow**
 
 Create a reusable file at `subflows/login.yaml`. This is a standard Flow file.
 
@@ -28,7 +37,7 @@ appId: com.example.app
 - tapOn: "Login"
 ```
 
-**Step 2: Register the hook in `config.yaml`**
+#### **Step 2: Register the hook in `config.yaml`**
 
 Open the `config.yaml` file in your workspace root. Use the `hooks` block to point to your login subflow.
 
@@ -41,11 +50,11 @@ hooks:
     runFlow: subflows/login.yaml
 ```
 
-**Step 3: Run your tests**
+#### **Step 3: Run your tests**
 
-Now, when you run any test in your folder using `maestro test .`, Maestro will execute the `login.yaml` sequence before starting the logic in your specific test file.
+Now, when you run any test in your folder using `maestro test .` using [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/), it will execute the `login.yaml` sequence before starting the logic in your specific test file.
 
-#### Advanced: Dynamic Hooks
+### Dynamic hooks
 
 You can pass environment variables into your hooks just like a standard `runFlow`. This is useful for switching roles (e.g., User vs. Admin) across your entire suite.
 
@@ -59,17 +68,16 @@ hooks:
         ROLE: "admin"
 ```
 
-#### Best Practices & Tips
+### **Handling hook failures**
 
-* Keep Hooks Lean: Since hooks run for every single Flow, a slow hook will significantly increase your total suite execution time.
-* Avoid Infinite Loops: Be careful not to call a Flow that itself triggers the same hook.
-* Conditional Hooks: Use the `when` block within your hook sub-flow to perform actions only on specific platforms (e.g., clearing the iOS Keychain).
-* Cleanup with `onFlowComplete`: Use this hook to ensure your app is in a "neutral" state for the next test, such as navigating back to the home screen or logging out.
+It is important to understand how Maestro behaves when a hook encounters an error. Maestro’s logic remains consistent with industry-standard testing frameworks like **JUnit** (`@Before`/`@After`) and **XCTest** (`setUp`/`tearDown`).
 
-#### Related Documentation
+If a hook fails, Maestro prioritizes test integrity and environment cleanup.
 
-* [Nested Flows](https://www.google.com/search?q=nested-flows): Understand the underlying `runFlow` command used by hooks.
-* [Sequential Execution](https://www.google.com/search?q=sequential-execution): Learn how hooks interact when running tests in a specific order.
-* [Parameters and Constants](https://www.google.com/search?q=parameters-and-constants): See how to manage variables within your hooks.
+<table><thead><tr><th width="186.33331298828125">Scenario</th><th>Result / Behavior</th></tr></thead><tbody><tr><td><strong><code>onFlowStart</code> fails</strong></td><td>The entire Flow is immediately marked as <strong>Failed</strong> (🔴).</td></tr><tr><td><strong><code>onFlowStart</code> fails</strong></td><td>The main body of the Flow execution is <strong>skipped</strong> to prevent testing in an unstable state.</td></tr><tr><td><strong><code>onFlowStart</code> fails</strong></td><td>The <strong><code>onFlowComplete</code></strong> hook is <strong>still executed</strong> to ensure any necessary cleanup occurs.</td></tr><tr><td><strong><code>onFlowComplete</code> fails</strong></td><td>The Flow is marked as <strong>Failed</strong> (🔴), even if the main body of the test passed.</td></tr></tbody></table>
 
-Would you like me to create the "JavaScript Overview" page next to show how you can use logic to make your hooks even more powerful?
+#### Related content
+
+* [nested-flows.md](nested-flows.md "mention"): Understand the underlying `runFlow` command used by hooks.
+* [sequential-execution.md](../workspace-management/sequential-execution.md "mention"): Learn how hooks interact when running tests in a specific order.
+* [parameters-and-constants.md](parameters-and-constants.md "mention"): See how to manage variables within your hooks.
