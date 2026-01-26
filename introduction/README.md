@@ -6,24 +6,6 @@ Maestro is the simplest and most effective framework for painless mobile and web
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FCbCMt5C3rawmE9oIus7f%2Fuploads%2F7kWqvBIcSqYfGW86X7cZ%2FGoogle%20Maps%20UI%20Test%20Automation%20with%20Maestro%20%E2%80%94%20Full%20YAML%20Tutorial.mp4?alt=media&token=1fbdc79b-cc4f-4603-a0d5-1035d9dc2bc1" %}
 
-{% columns %}
-{% column width="58.33333333333333%" valign="middle" %}
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FE5sJUKRvmZoOHv4lyFfL%2Fuploads%2FUmq4OJanl5n3T7dJsDuL%2Fdemo-mobile-docs.mp4?alt=media&token=8e9608ad-034c-499a-802f-cd116b6f18df?autoplay=1&loop=1" %}
-{% endcolumn %}
-
-{% column width="41.66666666666669%" %}
-#### Engineered for Modern Testing
-
-* Build reliable UI tests quickly using a simple, human-readable YAML workflow.
-* Eliminate flaky tests by automatically handling animations issues.
-* Execute one test suite across Android, iOS, and Web with no code duplication.
-* Create tests visually without deep tooling or scripting.
-* Identify visual UI defects using AI analysis.
-* Integrate with any CI platform to run parallel tests.
-* Generate complex test data and handle dynamic logic with built-in JavaScript.
-{% endcolumn %}
-{% endcolumns %}
-
 ### Maestro Solutions
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>How Maestro works</strong></td><td>Learn about Maestro’s architecture-agnostic approach,  device control, and how flows simulate real human interactions</td><td><a href="get-started/how-maestro-works.md">how-maestro-works.md</a></td><td><a href=".gitbook/assets/core-concepts-option2 (2).png">core-concepts-option2 (2).png</a></td></tr><tr><td><strong>Maestro Studio</strong></td><td>Create tests visually  using the Desktop App for zero-IDE setup and instant device connection</td><td><a href="https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/">Maestro Studio overview</a></td><td><a href=".gitbook/assets/maestro-studio-option2.png">maestro-studio-option2.png</a></td></tr><tr><td><strong>Maestro CLI</strong></td><td>Learn to Install the CLI, manage devices, and run tests from your terminal</td><td><a href="https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/">Maestro CLI overview</a></td><td><a href=".gitbook/assets/maestro-cli-option2.png">maestro-cli-option2.png</a></td></tr><tr><td><strong>Maestro Cloud</strong></td><td>Scale your testing by integrating with CI Platforms like GitHub Actions  to run parallel tests</td><td><a href="https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/">Maestro Cloud overview</a></td><td><a href=".gitbook/assets/maestro-cloud-option2.png">maestro-cloud-option2.png</a></td></tr><tr><td><strong>Maestro Flows</strong></td><td>Master modular testing with Nested Flows, Loops, Conditions, and Hooks</td><td><a href="https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/">Maestro Flows overview</a></td><td><a href=".gitbook/assets/maestro-flows-option2.png">maestro-flows-option2.png</a></td></tr><tr><td><strong>JavaScript</strong></td><td>Use JavaScript to handle complex conditions, data manipulation, and external API interactions</td><td><a href="https://app.gitbook.com/s/ljg4krPNBd28DyJV3q1N/">JavaScript overview</a></td><td><a href=".gitbook/assets/maestro-javascript-option2.png">maestro-javascript-option2.png</a></td></tr></tbody></table>
