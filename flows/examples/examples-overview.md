@@ -19,7 +19,7 @@ These guides provide targeted solutions for specific technical requirements:
 
 See how Maestro handles real-world complexity in popular applications.
 
-* [Facebook Signup Flow](facebook-signup-flow-automation-with-maestro.md): Covers complex form filling, handling multiple screens, and navigating onboarding.
+* [Facebook Signup Flow](automating-facebook-sign-up-android.md): Covers complex form filling, handling multiple screens, and navigating onboarding.
 * [Wikipedia on Android](https://www.google.com/search?q=wikipedia-on-android-with-maestro): Demonstrates deep navigation, search interactions, and content verification.
 
 #### Enterprise Design Patterns
