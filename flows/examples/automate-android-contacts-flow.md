@@ -2,6 +2,8 @@
 
 Testing how your app interacts with system contacts, or simply testing the native Contacts app itself, is a great way to explore Maestro's ability to handle system-level applications. This example demonstrates how to create a new contact from scratch, utilizing Maestro's built-in data generation to ensure every test run is unique.
 
+{% embed url="https://player.vimeo.com/video/779079600?h=0b1fec8f26" %}
+
 ### The Workflow
 
 Since you will be interacting with a system app, the Flow focuses on navigating on the standard Android UI patterns and handling keyboard states.
