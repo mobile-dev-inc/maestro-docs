@@ -8,7 +8,7 @@ While the core documentation explains how commands work, this section focuses on
 
 These guides provide targeted solutions for specific technical requirements:
 
-* [android-contacts-flow-automation-with-maestro.md](android-contacts-flow-automation-with-maestro.md "mention"): A perfect starting point to see how Maestro interacts with native Android system apps using text and ID selectors.
+* [automate-android-contacts-flow.md](automate-android-contacts-flow.md "mention"): A perfect starting point to see how Maestro interacts with native Android system apps using text and ID selectors.
 * [choose-images-from-the-gallery.md](choose-images-from-the-gallery.md "mention"): Learn the specific sequence needed to navigate out of your app, interact with the system photo picker, and return to your Flow.
 * [check-the-clipboard-content.md](check-the-clipboard-content.md "mention"): See how to verify that your app correctly copied text or links to the device clipboard using JavaScript assertions.
 * [download-and-open-a-file.md](download-and-open-a-file.md "mention"): A guide on handling "Save to Device" flows and verifying that files (like PDFs or images) are accessible.

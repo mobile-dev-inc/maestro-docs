@@ -47,7 +47,7 @@
 * [Reset device state (Android)](examples/reset-device-state-android.md)
 * [Get the last matching element](examples/get-the-last-matching-element.md)
 * [Custom scrolling for screen fragments](examples/use-scrolluntilvisible-for-fragments.md)
-* [Android contacts flow automation with Maestro](examples/android-contacts-flow-automation-with-maestro.md)
+* [Automate Android Contacts Flow](examples/automate-android-contacts-flow.md)
 * [Facebook signup flow automation with Maestro](examples/facebook-signup-flow-automation-with-maestro.md)
 * [Wikipedia on Android with Maestro](examples/wikipedia-on-android-with-maestro.md)
 * [Implementing the Page Object Model (POM)](examples/implementing-the-page-object-model-pom.md)
