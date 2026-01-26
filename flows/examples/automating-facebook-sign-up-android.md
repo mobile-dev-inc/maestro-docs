@@ -88,6 +88,8 @@ This flow utilizes several advanced Maestro features to handle out-of-app or non
 * On modern Android versions, permission requests are blocking system dialogs. We handle these by asserting their visibility and tapping the **Allow** button immediately before moving to the next app screen.
 * By adding the `clearState: true` command, it wipes the app's cache and local storage, ensuring you aren't accidentally logged into a previous account when the test starts.
 
+{% embed url="https://player.vimeo.com/video/765491505?h=21d7adf282" %}
+
 #### **2. Implementation**
 
 You can run this Flow directly to test the onboarding experience on an Android emulator. If you have the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/) installed, you can run the following command in your terminal to execute the test:
