@@ -4,7 +4,7 @@ Maestro is the simplest and most effective framework for painless mobile and web
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>What is Maestro?</td><td>Learn what Maestro can do for you when testing applications</td><td><a href="get-started/">get-started</a></td><td><a href=".gitbook/assets/what-is-maestro.png">what-is-maestro.png</a></td></tr><tr><td>QuickStart</td><td>Get up and running with Maestro in just a few minutes</td><td></td><td><a href=".gitbook/assets/quick-start.png">quick-start.png</a></td></tr></tbody></table>
 
-
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FCbCMt5C3rawmE9oIus7f%2Fuploads%2F7kWqvBIcSqYfGW86X7cZ%2FGoogle%20Maps%20UI%20Test%20Automation%20with%20Maestro%20%E2%80%94%20Full%20YAML%20Tutorial.mp4?alt=media&token=1fbdc79b-cc4f-4603-a0d5-1035d9dc2bc1" %}
 
 {% columns %}
 {% column width="58.33333333333333%" valign="middle" %}
