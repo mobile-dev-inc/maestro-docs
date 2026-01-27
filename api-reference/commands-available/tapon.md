@@ -48,7 +48,7 @@ If you need to wait for the animation to finish before executing the next tap, u
 
 #### Retry a tap if the UI is unresponsive
 
-If you find that a tap is being ignored because an animation is still playing, use `retryTapIfNoChange`. This example retries the tap if the UI does not change after the first attempt.
+If a tap is ignored because the target was not ready yet or an animation is still playing, use `retryTapIfNoChange`. This example retries the tap if the UI does not change after the first attempt.
 
 ```yaml
 - tapOn:
@@ -107,6 +107,6 @@ appId: com.android.contacts
 Check the related commands:
 
 * [longpresson.md](longpresson.md "mention")
-* [longpresson.md](longpresson.md "mention")
+* [doubletapon.md](doubletapon.md "mention")
 
 Or, learn about the different ways to identify elements using [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/how-to-use-selectors).
