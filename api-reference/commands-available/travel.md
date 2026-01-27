@@ -2,10 +2,6 @@
 
 The `travel` command mocks the motion of a user along a specified path at a given speed.
 
-{% hint style="info" %}
-The `travel` command works normally for Web tests.
-{% endhint %}
-
 ### Parameters
 
 When using the `travel` command, you need to inform the following parameter:
@@ -17,14 +13,15 @@ When using the `travel` command, you need to inform the following parameter:
 
 ### Usage examples
 
-This example simulates a user traveling along a square path at orbital velocity (7.9 km/s).
+This example simulates a user traveling along a route from Paris to Rome at 150 km/s (about 10 seconds).
 
 ```yaml
 - travel:
     points:
-      - "0.0,0.0"
-      - "0.1,0.0"
-      - "0.1,0.1"
-      - "0.0,0.1"
+      - "48.8578065, 2.295188"
+      - "46.2276, 5.9900"
+      - "43.7230, 10.3966"
+      - "41.8902, 12.4922"
+    speed: 150000
     speed: 7900
 ```
