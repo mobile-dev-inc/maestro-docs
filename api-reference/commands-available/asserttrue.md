@@ -18,10 +18,7 @@ You can use the shorthand approach, providing only the expression, or you can us
 
 You can provide the expression directly or use the `condition` and `label` parameters for more complex assertions.
 
-| Parameter   | Type       | Description                                                              |
-| ----------- | ---------- | ------------------------------------------------------------------------ |
-| `condition` | Expression | The expression to evaluate. The test passes if the expression is truthy. |
-| `label`     | String     | An optional message to display when executing the evaluation.            |
+<table><thead><tr><th width="134">Parameter</th><th width="142">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>condition</code></td><td>Expression</td><td>The expression to evaluate. The test passes if the expression is truthy.</td></tr><tr><td><code>label</code></td><td>String</td><td>An optional message to display when executing the evaluation.</td></tr></tbody></table>
 
 ### Usage examples
 
@@ -29,7 +26,7 @@ The following examples show how to use the `assertTrue` command.
 
 #### Assert a JavaScript expression
 
-This example uses `assertTrue` to verify that the text content of two separate views is identical.
+This example uses `assertTrue` to verify that the text content of two separate views is identical. The `label` states the purpose of the assertion.
 
 ```yaml
 - copyTextFrom: View A
@@ -38,7 +35,9 @@ This example uses `assertTrue` to verify that the text content of two separate v
 - copyTextFrom: View B
 - evalScript: ${output.viewB = maestro.copiedText}
 
-- assertTrue: ${output.viewA == output.viewB}
+- assertTrue:
+    condition: ${output.viewA == output.viewB}
+    label: View A and View B show the same text
 ```
 
 #### Fail a test with a custom message
