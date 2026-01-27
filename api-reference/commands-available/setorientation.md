@@ -3,7 +3,7 @@
 Sets the orientation of the virtual device.
 
 {% hint style="info" %}
-If you use this command to test web applications, the command will pass, but nothing will happen.
+Not supported on web. This command is supported on Android only. On iOS, it will pass but has no effect.
 {% endhint %}
 
 ### Arguments
