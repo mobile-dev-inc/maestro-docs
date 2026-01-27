@@ -14,7 +14,7 @@ To use the `evalScript` command, you need to provide the single-line JavaScript 
 
 ### Usage examples
 
-The following example uses `evalScript` to convert an environment variable to uppercase and stores the result in `output.myFlow`.
+The following example uses `evalScript` to convert an environment variable to uppercase and stores the result in `output.uppercaseName`.
 
 ```yaml
 appId: com.example
@@ -22,8 +22,8 @@ env:
     MY_NAME: John
 ---
 - launchApp
-- evalScript: ${output.myFlow = MY_NAME.toUpperCase()}
-- inputText: ${output.myFlow}
+- evalScript: ${output.uppercaseName = MY_NAME.toUpperCase()}
+- inputText: ${output.uppercaseName}
 ```
 
 ### Related content

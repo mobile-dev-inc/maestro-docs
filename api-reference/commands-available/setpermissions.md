@@ -40,4 +40,4 @@ This example sets the `camera` permission to `allow` and the `notifications` per
 
 ### Related content
 
-Learn how to configure the permissions by accessing the [guide](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/permissions).
+Learn how to use [permissions](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/permissions) on iOS and Android apps on flows.
