@@ -30,8 +30,10 @@ env:                           # Optional: Map of environment variables
 
 ### Explore Flows capabilities
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-gear">:gear:</i></td><td><strong>Flow control and logic</strong></td><td>Build resilient, intelligent journeys. Master the architectural tools used to scale your tests, including modular subflows, conditional branching, repetitive loops, and lifecycle hooks.</td><td><a href="flow-control-and-logic/flow-control-and-logic-overview.md">flow-control-and-logic-overview.md</a></td></tr><tr><td><i class="fa-node-js">:node-js:</i></td><td><strong>JavaScript</strong></td><td>Extend YAML with custom scripting. Use the integrated JavaScript sandbox to handle complex data, generate random test variables, capture script outputs, and interact with external APIs via HTTP requests.</td><td><a href="javascript/javascript-overview.md">javascript-overview.md</a></td></tr><tr><td><i class="fa-lightbulb">:lightbulb:</i></td><td><strong>Examples</strong></td><td>Accelerate development with proven patterns. Explore a library of real-world recipes, from handling system galleries and clipboards to implementing enterprise-grade patterns</td><td><a href="examples/examples-overview.md">examples-overview.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-gear">:gear:</i></td><td><strong>Flow control and logic</strong></td><td>Build resilient, intelligent journeys. Master the architectural tools used to scale your tests, including modular subflows, conditional branching, repetitive loops, and lifecycle hooks.</td><td><a href="flow-control-and-logic/flow-control-and-logic-overview.md">flow-control-and-logic-overview.md</a></td></tr><tr><td><i class="fa-node-js">:node-js:</i></td><td><strong>JavaScript</strong></td><td>Extend YAML with custom scripting. Use the integrated JavaScript sandbox to handle complex data, generate random test variables, capture script outputs, and interact with external APIs via HTTP requests.</td><td><a href="javascript/javascript-overview.md">javascript-overview.md</a></td></tr></tbody></table>
 
-### Next Step
+
+
+### Next step
 
 Learn the best practices for organizing your Flows into a scalable [Test Suite](how-to-structure-your-test-suite.md) that can handle enterprise-level app complexity.
