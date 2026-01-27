@@ -6,7 +6,7 @@ The `runFlow` command executes a sequence of commands from another Flow file or 
 
 The `runFlow` command accepts the following parameters.
 
-<table><thead><tr><th width="115.33331298828125">Parameter</th><th width="95.4444580078125">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>file</code></td><td><code>string</code></td><td>The relative path to the Flow file to execute.</td></tr><tr><td><code>label</code></td><td><code>string</code></td><td>A short description of what the subflow does. Shown in reports and helps with readability and maintenance.</td></tr><tr><td><code>env</code></td><td><code>map</code></td><td>A map of key-value pairs to pass as environment variables to the subflow.</td></tr><tr><td><code>commands</code></td><td><code>list</code></td><td>A list of commands to execute inline. Use this instead of the <code>file</code> parameter for self-contained Flows.</td></tr></tbody></table>
+<table><thead><tr><th width="126">Parameter</th><th width="89">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>file</code></td><td><code>string</code></td><td>The relative path to the Flow file to execute.</td></tr><tr><td><code>label</code></td><td><code>string</code></td><td>A short description of what the subflow does. Shown in reports and helps with readability and maintenance.</td></tr><tr><td><code>env</code></td><td><code>map</code></td><td>A map of key-value pairs to pass as environment variables to the subflow.</td></tr><tr><td><code>commands</code></td><td><code>list</code></td><td>A list of commands to execute inline. Use this instead of the <code>file</code> parameter for self-contained Flows.</td></tr></tbody></table>
 
 ### Usage examples
 

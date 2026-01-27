@@ -12,7 +12,7 @@ This command is intended for scenarios where standard element-based assertions a
 
 The following table describes the fields available for the `assertWithAI` command.
 
-<table><thead><tr><th width="119.77777099609375">Field</th><th width="92.33331298828125">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>assertion</code></td><td><code>string</code></td><td>The natural language description of the expected UI state to be evaluated by the LLM.</td></tr><tr><td><code>optional</code></td><td>boolean</td><td><strong>Optional.</strong>  Determines if the Flow should continue if the assertion fails. Default is <code>true</code>.</td></tr></tbody></table>
+<table><thead><tr><th width="114">Field</th><th width="92">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>assertion</code></td><td><code>string</code></td><td>The natural language description of the expected UI state to be evaluated by the LLM.</td></tr><tr><td><code>optional</code></td><td>boolean</td><td><strong>Optional.</strong> Determines if the Flow should continue if the assertion fails. Default is <code>true</code>.</td></tr></tbody></table>
 
 {% hint style="info" %}
 Since `assertWithAI` is an experimental feature, `optional` is set to `true` by default to prevent unstable AI responses from breaking your CI/CD pipelines. If you want a failed AI assertion to stop the test, you must explicitly set `optional: false`.

@@ -12,7 +12,7 @@ Use this command as a general smoke test to verify that UI elements in your appl
 
 The `assertNoDefectsWithAI` accepts only one parameter:
 
-<table><thead><tr><th width="119.77777099609375">Parameter</th><th width="92.33331298828125">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>optional</code></td><td>boolean</td><td><strong>Optional.</strong>  Determines if the Flow should continue if the assertion fails. Default is <code>true</code>.</td></tr></tbody></table>
+<table><thead><tr><th width="126">Parameter</th><th width="96">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>optional</code></td><td>boolean</td><td><strong>Optional.</strong> Determines if the Flow should continue if the assertion fails. Default is <code>true</code>.</td></tr></tbody></table>
 
 {% hint style="info" %}
 Since `assertNoDefectsWithAI` is an experimental feature, `optional` is set to `true` by default to prevent unstable AI responses from breaking your CI/CD pipelines. If you want a failed AI assertion to stop the test, you must explicitly set `optional: false`.

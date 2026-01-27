@@ -10,7 +10,7 @@ The `extractTextWithAI` command takes a screenshot of the current view and uses 
 
 You can specify parameters as a simple string query or as a map for more configuration options.
 
-<table><thead><tr><th width="154.5555419921875">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>query</code></td><td><strong>Required.</strong> A natural language prompt describing the text to extract from the screen.</td></tr><tr><td><code>outputVariable</code></td><td><strong>Optional.</strong> The variable name to store the extracted text. Defaults to <code>aiOutput</code>.</td></tr><tr><td><code>optional</code></td><td><strong>Optional.</strong>  Determines if the Flow should continue if the assertion fails. Default is <code>true</code>.</td></tr></tbody></table>
+<table><thead><tr><th width="158">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>query</code></td><td><strong>Required.</strong> A natural language prompt describing the text to extract from the screen.</td></tr><tr><td><code>outputVariable</code></td><td><strong>Optional.</strong> The variable name to store the extracted text. Defaults to <code>aiOutput</code>.</td></tr><tr><td><code>optional</code></td><td><strong>Optional.</strong> Determines if the Flow should continue if the assertion fails. Default is <code>true</code>.</td></tr></tbody></table>
 
 {% hint style="info" %}
 Since `extractTextWithAI` is an experimental feature, `optional` is set to `true` by default to prevent unstable AI responses from breaking your CI/CD pipelines. If you want a failed text extraction to stop the test, you must set `optional: false`.

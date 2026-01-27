@@ -8,7 +8,7 @@ Use `extendedWaitUntil` before `assertVisible` or `assertNotVisible` when your a
 
 ### Arguments
 
-<table><thead><tr><th width="120.11114501953125">Argument</th><th>Description</th></tr></thead><tbody><tr><td><code>visible</code></td><td>The selector for the element to wait for. The command proceeds when the element is visible.</td></tr><tr><td><code>notVisible</code></td><td>The selector for the element to wait for. The command proceeds when the element is no longer visible.</td></tr><tr><td><code>timeout</code></td><td>The maximum time to wait, in milliseconds.</td></tr></tbody></table>
+<table><thead><tr><th width="118">Argument</th><th>Description</th></tr></thead><tbody><tr><td><code>visible</code></td><td>The selector for the element to wait for. The command proceeds when the element is visible.</td></tr><tr><td><code>notVisible</code></td><td>The selector for the element to wait for. The command proceeds when the element is no longer visible.</td></tr><tr><td><code>timeout</code></td><td>The maximum time to wait, in milliseconds.</td></tr></tbody></table>
 
 For a complete list of available selectors, see the [Selectors](../selectors/) reference.
 

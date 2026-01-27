@@ -6,7 +6,7 @@ Opens a URL or deep link on the target device.
 
 The `openLink` command accepts either a single string value for the link or the following key-value pairs:
 
-<table><thead><tr><th width="136.77777099609375">Key</th><th>Description</th></tr></thead><tbody><tr><td><code>link</code></td><td><strong>Required.</strong> The URL or custom protocol link to open, such as <code>https://example.com</code> or <code>awesomeapp://settings</code>.</td></tr><tr><td><code>autoVerify</code></td><td><strong>Android only.</strong> If <code>true</code>, attempts to auto-verify your app to handle the web link, bypassing the app disambiguation dialog. On Android 12 and higher, this flag also auto-accepts Google Chrome agreements if they appear.</td></tr><tr><td><code>browser</code></td><td><strong>Android only.</strong> If <code>true</code>, forces the web link to open in Google Chrome.</td></tr></tbody></table>
+<table><thead><tr><th width="125">Key</th><th>Description</th></tr></thead><tbody><tr><td><code>link</code></td><td><strong>Required.</strong> The URL or custom protocol link to open, such as <code>https://example.com</code> or <code>awesomeapp://settings</code>.</td></tr><tr><td><code>autoVerify</code></td><td><strong>Android only.</strong> If <code>true</code>, attempts to auto-verify your app to handle the web link, bypassing the app disambiguation dialog. On Android 12 and higher, this flag also auto-accepts Google Chrome agreements if they appear.</td></tr><tr><td><code>browser</code></td><td><strong>Android only.</strong> If <code>true</code>, forces the web link to open in Google Chrome.</td></tr></tbody></table>
 
 ### Usage examples
 

@@ -6,7 +6,7 @@ The `setLocation` command applies a mock geolocation to the device.
 
 The following arguments are available for the `setLocation` command.
 
-<table><thead><tr><th width="149">Argument</th><th>Description</th></tr></thead><tbody><tr><td><code>latitude</code></td><td>The latitude coordinate.</td></tr><tr><td><code>longitude</code></td><td>The longitude coordinate.</td></tr></tbody></table>
+<table><thead><tr><th width="121">Argument</th><th>Description</th></tr></thead><tbody><tr><td><code>latitude</code></td><td>The latitude coordinate.</td></tr><tr><td><code>longitude</code></td><td>The longitude coordinate.</td></tr></tbody></table>
 
 ### Usage examples
 

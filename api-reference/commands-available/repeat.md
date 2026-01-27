@@ -6,7 +6,7 @@ The `repeat` command executes a sequence of commands multiple times, either for 
 
 To customize sequence execution when using the `repeat` command, you can use the following parameters:
 
-<table><thead><tr><th width="122">Parameter</th><th width="122">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>times</code></td><td><code>integer</code></td><td>The number of times to repeat the <code>commands</code>.</td></tr><tr><td><code>while</code></td><td><code>condition</code></td><td>A condition that must evaluate to <code>true</code> for the loop to continue. The loop terminates when the condition becomes <code>false</code>.</td></tr><tr><td><code>commands</code></td><td><code>list</code></td><td>The list of commands to execute during each iteration.</td></tr></tbody></table>
+<table><thead><tr><th width="121">Parameter</th><th width="113">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>times</code></td><td><code>integer</code></td><td>The number of times to repeat the <code>commands</code>.</td></tr><tr><td><code>while</code></td><td><code>condition</code></td><td>A condition that must evaluate to <code>true</code> for the loop to continue. The loop terminates when the condition becomes <code>false</code>.</td></tr><tr><td><code>commands</code></td><td><code>list</code></td><td>The list of commands to execute during each iteration.</td></tr></tbody></table>
 
 ### Usage examples
 

@@ -6,7 +6,7 @@ The `runScript` command executes a specified JavaScript file. The script can acc
 
 The `runScript` command accepts either a string that specifies the file path or a map that contains the file path and environment variables.
 
-<table><thead><tr><th width="124.5555419921875">Key</th><th>Description</th></tr></thead><tbody><tr><td><code>file</code></td><td>The path to the JavaScript file to execute. Paths can be absolute or relative to the flow file.</td></tr><tr><td><code>env</code></td><td><strong>(Optional)</strong> A map of key-value pairs to pass as environment variables to the script.</td></tr></tbody></table>
+<table><thead><tr><th width="84">Key</th><th>Description</th></tr></thead><tbody><tr><td><code>file</code></td><td>The path to the JavaScript file to execute. Paths can be absolute or relative to the flow file.</td></tr><tr><td><code>env</code></td><td><strong>(Optional)</strong> A map of key-value pairs to pass as environment variables to the script.</td></tr></tbody></table>
 
 ### Usage examples
 

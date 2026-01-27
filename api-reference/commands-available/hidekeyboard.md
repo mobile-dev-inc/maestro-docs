@@ -10,6 +10,10 @@ The following example hides the keyboard.
 - hideKeyboard
 ```
 
+{% hint style="info" %}
+This command is a no-op on web. It has no effect when running web tests.
+{% endhint %}
+
 ### Implementation details
 
 Unlike other UI actions, mobile operating systems do not provide a native way for closing the keyboard. To achieve this, Maestro simulates the specific gestures or actions a user would perform on each platform:
@@ -24,6 +28,6 @@ Because the Maestro implementation methods rely on system behaviors rather than 
 If the keyboard doesn't hide, a reliable workaround is to use the `tapOn` command to click a non-tappable element on the screen (such as a header, a title bar, or an empty background area). This mimics how a user might dismiss the keyboard.
 
 ```yaml
-tapOn:
+- tapOn:
     id: "header_title" # Tap on a safe area to force the keyboard down
 ```
