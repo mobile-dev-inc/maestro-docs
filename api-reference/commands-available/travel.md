@@ -6,10 +6,7 @@ The `travel` command mocks the motion of a user along a specified path at a give
 
 When using the `travel` command, you need to inform the following parameter:
 
-| Parameter | Type               | Description                                                                                                                        |
-| --------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `points`  | `list` of `string` | A set of latitude and longitude coordinates that define the path for the mocked user motion. Each coordinate is a `lat,long` pair. |
-| `speed`   | `integer`          | The speed of travel in meters per second.                                                                                          |
+<table><thead><tr><th width="116">Parameter</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>timeout</code></td><td><code>integer</code></td><td>The maximum time to wait, in milliseconds. Defaults to 15000 (15 seconds). If the animation is still running when the timeout is reached, the command succeeds and execution continues. If the animation finishes before the timeout, execution continues immediately.</td></tr></tbody></table>
 
 ### Usage examples
 
