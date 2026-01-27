@@ -20,7 +20,7 @@
 * [Loops](flow-control-and-logic/loops.md)
 * [Conditions](flow-control-and-logic/conditions.md)
 * [Parameters and constants](flow-control-and-logic/parameters-and-constants.md)
-* [Device](flow-control-and-logic/device.md)
+* [Specify a device](flow-control-and-logic/specify-a-device.md)
 * [Hooks](flow-control-and-logic/hooks.md)
 * [Locales](flow-control-and-logic/locales/README.md)
   * [Locales supported by Maestro](flow-control-and-logic/locales/locales-supported-by-maestro.md)
