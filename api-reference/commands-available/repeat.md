@@ -65,7 +65,7 @@ The following example taps a button while an element is not visible, but stops a
       - tapOn: Button
 ```
 
-Here’s another example that logs `"Hello World"` four times. The `times: 4` limit acts as an escape hatch, ensuring the loop exits safely if the JavaScript expression doesn't work as expected (for example, if the counter were never incremented).
+Here’s another example that logs `"Hello World"` four times. The `times: 4` limit ensures the loop stops even if the condition never becomes false. For example, if the counter were never incremented.
 
 ```yaml
 - evalScript: ${output.counter = 1}

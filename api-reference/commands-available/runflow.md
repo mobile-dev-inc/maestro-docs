@@ -97,7 +97,7 @@ You can also pass environment variables into an inline subflow:
 
 ### Cloud execution
 
-Pass a **workspace folder** (not a single Flow file) so Maestro can upload dependent flows and a root `config.yaml` if present. Passing only a file relies on best-effort dependency collection and can result in `Failed to parse file`. Use named parameters—for example, if your flows and app are under `myTestsFolder`:
+Pass a **workspace folder** (not a single Flow file) so Maestro can upload dependent flows and a root `config.yaml` if present. Passing only a file relies on best-effort dependency collection and can result in `Failed to parse file`. Use named parameters. For example, if your flows and app are under `myTestsFolder`:
 
 ```bash
 maestro cloud --app-file myApp.apk --flows ./myTestsFolder
