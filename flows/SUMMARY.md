@@ -22,8 +22,8 @@
 * [Parameters and constants](flow-control-and-logic/parameters-and-constants.md)
 * [Specify a device](flow-control-and-logic/specify-a-device.md)
 * [Hooks](flow-control-and-logic/hooks.md)
-* [Locales](flow-control-and-logic/locales/README.md)
-  * [Locales supported by Maestro](flow-control-and-logic/locales/locales-supported-by-maestro.md)
+* [Test in different locales](flow-control-and-logic/test-in-different-locales/README.md)
+  * [Locales supported by Maestro](flow-control-and-logic/test-in-different-locales/locales-supported-by-maestro.md)
 * [Permissions](flow-control-and-logic/permissions.md)
 * [Detect Maestro](flow-control-and-logic/detect-maestro.md)
 
