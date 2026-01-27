@@ -17,7 +17,7 @@ Relational Selectors allow you to identify UI elements based on their relationsh
 {% hint style="success" %}
 #### Usage tips
 
-* **Compound Selectors**: Positional selectors (`above`, `below`, `leftOf`, `rightOf`) use screen bounds—for example, `leftOf` means "left of" by coordinate only, not necessarily next to or vertically aligned with the anchor. Combining them with other attributes (`id`, `text`, `enabled`, etc.) improves precision: `tapOn: { id: "icon", rightOf: "Settings", enabled: true }`.
+* **Compound Selectors**: Positional selectors (`above`, `below`, `leftOf`, `rightOf`) use screen bounds; for example, `leftOf` means "left of" by coordinate only, not necessarily next to or vertically aligned with the anchor. Combining them with other attributes (`id`, `text`, `enabled`, etc.) improves precision: `tapOn: { id: "icon", rightOf: "Settings", enabled: true }`.
 * **Anchor Reliability**:  Always use the most stable element (typically static text or a unique ID) as the anchor for `above`, `below`, `leftOf`, or `rightOf`.
 {% endhint %}
 
