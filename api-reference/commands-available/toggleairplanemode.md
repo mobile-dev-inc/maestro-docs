@@ -3,11 +3,7 @@
 Toggles the device's airplane mode on or off.
 
 {% hint style="info" %}
-This command is supported on Android only.
-
-iOS simulators do not have an airplane mode.
-
-On web or iOS, the command will pass but has no effect.
+This command is only useful on Android. iOS simulators do not have an airplane mode. On iOS or web, the command will pass but has no effect.
 {% endhint %}
 
 ### Syntax
