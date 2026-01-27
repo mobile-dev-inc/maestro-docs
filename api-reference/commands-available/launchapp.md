@@ -66,11 +66,12 @@ To restart an already running app, run `launchApp` without parameters, as `stopA
 
 #### Set permissions on launch
 
-To deny all permissions use `permissions: { all: deny }`:
+To deny all permissions:
 
 ```yaml
 - launchApp:
-    permissions: { all: deny }
+    permissions: 
+      all: deny
 ```
 
 To set specific permissions, add each one independently:

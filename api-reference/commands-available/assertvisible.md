@@ -7,7 +7,7 @@ The `assertVisible` command asserts that a UI element is visible on the screen. 
 
 If the element is not visible when the command is first called, Maestro will not immediately fail the test. Instead, it will automatically wait and retry for up to 7 seconds, giving the UI time to update or for animations to complete.
 
-If you expect an element to take longer than 7 seconds to disappear, use the [`extendedWaitUntil`](extendedwaituntil.md) command.
+If you expect an element to take longer than 7 seconds to appear, use the [`extendedWaitUntil`](extendedwaituntil.md) command.
 {% endhint %}
 
 ### Parameters

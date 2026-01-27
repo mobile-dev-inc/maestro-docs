@@ -19,13 +19,13 @@ By default, Maestro uses the accessibility tree to find these elements, ensuring
 
 You can handle dynamic values easily because `text` and `id` are regex-based.&#x20;
 
-Remember to escape special characters like `$` or `[` with a double backslash (`\\`).
+Remember to escape special characters like `$` or `[` with a double backslash (`\`).
 {% endhint %}
 
 {% hint style="info" %}
 #### **Platform specifics**
 
-* **Flutter**: Use Semantics Labels (for `text`) or Accessibility Identifiers (for `id`). Internal Flutter "Keys" are not supported.
+* **Flutter**: Use visible text or Semantics Labels (for text), or Semantics Identifiers (for id). Internal Flutter "Keys" are not supported.
 * **Android Compose**: Use `Modifier.semantics { testTagsAsResourceId = true }` to ensure your test tags are discoverable as IDs.
 {% endhint %}
 
@@ -39,7 +39,7 @@ The `text` selector finds elements based on the string displayed on the screen. 
 ```yaml
 - tapOn: Login              # Shorthand (matches exactly "Login")
 - tapOn: 
-    text: ".*Continue.*"      # Regex for partial match
+    text: ".*Continue.*"    # Regex for partial match
 - assertVisible: Submit     # Shorthand for visibility check
 ```
 

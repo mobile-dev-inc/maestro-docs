@@ -21,7 +21,7 @@ You can provide the expression directly or use the `condition` and `label` param
 | Parameter   | Type       | Description                                                              |
 | ----------- | ---------- | ------------------------------------------------------------------------ |
 | `condition` | Expression | The expression to evaluate. The test passes if the expression is truthy. |
-| `label`     | String     | An optional message to display when executint the evaluation.            |
+| `label`     | String     | An optional message to display when executing the evaluation.            |
 
 ### Usage examples
 

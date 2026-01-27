@@ -25,7 +25,7 @@ env:
 ---
 - launchApp
 - runScript: myScript.js
-- inputText: ${output.myFlow}
+- inputText: ${output.uppercaseName}
 ```
 {% endtab %}
 
@@ -33,12 +33,12 @@ env:
 ```javascript
 var uppercaseName = MY_NAME.toUpperCase()
 
-output.myFlow = uppercaseName   // returns 'JOHN'
+output.uppercaseName = uppercaseName   // returns 'JOHN'
 ```
 {% endtab %}
 {% endtabs %}
 
-In this example, the flow launches the app and then executes an external JavaScript file using `runScript`. The script reads the `MY_NAME` environment variable defined in the flow, converts it to uppercase, and stores the result in `output.myFlow`. That output value is then used in the next step to input the text `"JOHN"` into the app.
+In this example, the flow launches the app and then executes an external JavaScript file using `runScript`. The script reads the `MY_NAME` environment variable defined in the flow, converts it to uppercase, and stores the result in `output.uppercaseName`. That output value is then used in the next step to input the text `"JOHN"` into the app.
 
 #### File paths
 
@@ -85,7 +85,7 @@ To pass parameters directly to a script, use the expanded map syntax with the `e
 
 ### Cloud execution
 
-When you run flows in Maestro Cloud, you must upload the directory that contains your flows and scripts, not just a single flow file. For example, use `maestro cloud myApp.apk ./myTestsFolder`.
+When you run flows in Maestro Cloud, you must upload the directory that contains your flows and scripts, not just a single flow file. For example, use `maestro cloud --app-file myApp.apk --flows ./myTestsFolder`.
 
 If you do not include the script files in the upload, the execution fails with a `Failed to parse file` error.
 
@@ -93,7 +93,7 @@ If you do not include the script files in the upload, the execution fails with a
 
 * [JavaScript overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview): Start exploring how to use JavaScript in your tests.
 * [JavaScript outputs](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-outputs): Learn how to store and consume JavaScript outputs in Maestro flows.
-* [Parameters](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters): Learn how to define and use parameters in flows to make them reusable.
-* [Constants](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/constants): Learn how to define constant values and reuse them across your flows.
+* [Parameters](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants): Learn how to define and use parameters in flows to make them reusable.
+* [Constants](/broken/spaces/mS3lsb9jRwfRHqddeRXG/pages/DLtBiFLCJpsE4uxGnPNx): Learn how to define constant values and reuse them across your flows.
 * [Nested flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/nested-flows): Learn how to compose flows by calling one flow from another.
 * [Conditional execution](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions): Learn how to control flow execution using conditions and branching logic.

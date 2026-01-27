@@ -3,7 +3,7 @@
 The `extendedWaitUntil` command pauses the test flow until a specified element becomes visible or not visible on the screen. The command completes as soon as the condition is met. If the condition is not met before the timeout expires, the command fails.
 
 {% hint style="success" %}
-Use `extendedWaitUntil` before [`assertVisible`](assertvisible.md) or [`assertNotVisible`](assertnotvisible.md) when your app needs longer timeouts than the default 7 seconds. This guarantees that the required wait time is applied before performing the assertion.
+Use `extendedWaitUntil` before [`assertVisible`](assertvisible.md) or [`assertNotVisible`](assertnotvisible.md) when your app needs longer Use `extendedWaitUntil` before `assertVisible` or `assertNotVisible` when your app needs longer timeouts than the default 7 seconds. This guarantees that the command won't time out if more than 7 seconds pass; it continues performing the assertion until the condition is met or the extended timeout is reached.
 {% endhint %}
 
 ### Arguments

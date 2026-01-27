@@ -17,7 +17,7 @@ Relational Selectors allow you to identify UI elements based on their relationsh
 {% hint style="success" %}
 #### Usage tips
 
-* **Compound Selectors**:  Positional selectors can be combined with other selector attributes (`id`, `text`, `enabled`, etc.) for higher precision. For example, `tapOn: { id: "icon", rightOf: "Settings", enabled: true }`.
+* **Compound Selectors**: Positional selectors (`above`, `below`, `leftOf`, `rightOf`) use screen bounds—for example, `leftOf` means "left of" by coordinate only, not necessarily next to or vertically aligned with the anchor. Combining them with other attributes (`id`, `text`, `enabled`, etc.) improves precision: `tapOn: { id: "icon", rightOf: "Settings", enabled: true }`.
 * **Anchor Reliability**:  Always use the most stable element (typically static text or a unique ID) as the anchor for `above`, `below`, `leftOf`, or `rightOf`.
 {% endhint %}
 
@@ -48,7 +48,11 @@ Similarly, horizontal alignment selectors `leftOf` and `rightOf`  are used to id
     leftOf: I agree to the terms
 ```
 
-However, it is important to notice that these selectors selectors determine relationships based on screen bounds. For instance, `leftOf` matches elements whose left bound is smaller than the anchor's left bound. It does not strictly enforce that the element is directly next to the anchor or vertically aligned with it. You may need to combine this with other selectors for precision, as done in the following example to assert vertical hierarchy:
+These alignment selectors use screen bounds; for precision when multiple elements match, combine them with other selectors (see **Compound Selectors** in the tip above).
+
+**To assert vertical hierarchy**
+
+You can stack `above` or `below` to assert the vertical order of elements:
 
 ```yaml
 - assertVisible:
