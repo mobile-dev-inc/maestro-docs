@@ -2,7 +2,7 @@
 
 Maestro Flows are the fundamental building blocks of UI automation, representing specific segments of a user journey, such as Login, Checkout, or Search for an item, within an application. By modeling real-world user interactions, Flows provide a reliable, repeatable way to verify app behavior across Android, iOS, and Web platforms from a single suite.
 
-#### The Anatomy of a Flow
+#### The anatomy of a Flow
 
 Flows are written in a human-readable YAML format, designed to be understood and maintained by both developers and manual testers without heavy programming knowledge.
 
