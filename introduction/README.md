@@ -2,7 +2,7 @@
 
 Maestro is the simplest and most effective framework for painless mobile and web UI automation using intuitive YAML flows.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>What is Maestro?</td><td>Learn what Maestro can do for you when testing applications</td><td><a href="get-started/">get-started</a></td><td><a href=".gitbook/assets/what-is-maestro.png">what-is-maestro.png</a></td></tr><tr><td>QuickStart</td><td>Get up and running with Maestro in just a few minutes</td><td></td><td><a href=".gitbook/assets/quick-start.png">quick-start.png</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>What is Maestro?</td><td>Learn what Maestro can do for you when testing applications</td><td><a href="get-started/">get-started</a></td><td><a href=".gitbook/assets/what-is-maestro.png">what-is-maestro.png</a></td></tr><tr><td>QuickStart</td><td>Get up and running with Maestro in just a few minutes</td><td><a href="get-started/quickstart.md">quickstart.md</a></td><td><a href=".gitbook/assets/quick-start.png">quick-start.png</a></td></tr></tbody></table>
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FCbCMt5C3rawmE9oIus7f%2Fuploads%2F7kWqvBIcSqYfGW86X7cZ%2FGoogle%20Maps%20UI%20Test%20Automation%20with%20Maestro%20%E2%80%94%20Full%20YAML%20Tutorial.mp4?alt=media&token=1fbdc79b-cc4f-4603-a0d5-1035d9dc2bc1" %}
 
@@ -14,7 +14,7 @@ Maestro is the simplest and most effective framework for painless mobile and web
 
 Explore the technical specifications and community-proven strategies.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>API Reference</strong></td><td>A complete guide to every Maestro command</td><td><a href="https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/">Commands overview</a></td></tr><tr><td><strong>Examples</strong></td><td>Proven recipes and real-world examples for you to explore</td><td><a href="https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/examples/examples-overview">Examples overview</a></td></tr><tr><td><strong>Troubleshooting</strong></td><td>Find answers in the FAQ and review Known Issues</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/troubleshooting">Troubleshooting</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>API Reference</strong></td><td>A complete guide to every Maestro command</td><td><a href="https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/">Commands overview</a></td></tr><tr><td><strong>Examples</strong></td><td>Proven recipes and real-world examples for you to explore</td><td><a href="https://app.gitbook.com/s/JjfcEdmJ9ojsT3Jtpsi8/">Examples overview</a></td></tr><tr><td><strong>Troubleshooting</strong></td><td>Find answers in the FAQ and review Known Issues</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/troubleshooting">Troubleshooting</a></td></tr></tbody></table>
 
 ### Join the Community
 
