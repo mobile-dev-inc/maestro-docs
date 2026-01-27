@@ -4,14 +4,14 @@ Stops a running application. The `stopApp` command can stop either the currently
 
 ### Syntax
 
-To stop the current application, you need to use the `stopApp` with no arguments:
+To stop the current application, use `stopApp` with no arguments:
 
 ```yaml
 - stopApp
 ```
 
-If you need to stop a specific application, you need to inform the `appId`:&#x20;
+If you need to stop a different application, pass an `appId`:
 
 ```yaml
-- stopApp: my-app-id
+-- stopApp: com.mycompany.example
 ```
