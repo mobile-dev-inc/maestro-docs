@@ -52,7 +52,7 @@ appId: com.example.app
 {% endtabs %}
 
 {% hint style="success" %}
-Flow files are a great way to abstract steps or create a reusable component. Be mindful during test creation that you don't make your tests more difficult to understand, or else it'll affect your ability to maintain them in the future.
+Flow files are a great way to abstract steps or create a reusable component. Be mindful during test Flow files help you reuse and abstract steps. Keep tests easy to follow so they stay maintainable.
 {% endhint %}
 
 #### Pass environment variables to a subflow
@@ -68,13 +68,11 @@ You can pass variables to the subflow using the `env` parameter. These variables
 
 #### When to use inline subflows
 
-Inline subflows are primarily useful for [conditional](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions) logic or for small flows that don't need a separate file. Use a `label` to give the group a clear intent—that helps with readability and maintenance. Without a label, there is little benefit to wrapping commands in `runFlow` instead of listing them directly.
+Inline subflows fit [conditional](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions) logic or small groups of steps that don't need a separate file. Use a `label` so the step has a clear intent; otherwise, listing the commands directly is simpler.
 
 #### Run an inline Flow
 
-To define a subflow directly within the `runFlow` command, use the `commands` parameter instead of `file`. Use the `label` parameter to give the group a clear, real-world name—that makes the Flow easier to read and maintain.
-
-This example groups a few commands and labels them so that later you can see at a glance what the step does:
+To define a subflow in place, use the `commands` parameter instead of `file`. A `label` gives the step a clear name so you can see at a glance what it does. For example:
 
 ```yaml
 - runFlow:
@@ -99,9 +97,7 @@ You can also pass environment variables into an inline subflow:
 
 ### Cloud execution
 
-When you run a test in Maestro Cloud that uses `runFlow` to call another file, pass a **workspace folder** (not just the main Flow file) so Maestro can upload all dependent flows and, if present, a root `config.yaml`. If you pass only a single file, Maestro will try to collect dependent files, but using a workspace folder is recommended and avoids `Failed to parse file` errors.
-
-Use named parameters in the command. For example, if your flows and app are under `myTestsFolder`:
+Pass a **workspace folder** (not a single Flow file) so Maestro can upload dependent flows and a root `config.yaml` if present. Passing only a file relies on best-effort dependency collection and can result in `Failed to parse file`. Use named parameters—for example, if your flows and app are under `myTestsFolder`:
 
 ```bash
 maestro cloud --app-file myApp.apk --flows ./myTestsFolder
