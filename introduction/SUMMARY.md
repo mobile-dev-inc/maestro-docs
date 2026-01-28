@@ -11,6 +11,7 @@
 * [Copy of What is Maestro?](get-started/readme-1.md)
 * [How Maestro works](get-started/how-maestro-works.md)
 * [QuickStart](get-started/quickstart.md)
+* [QuickStart v2](get-started/quickstart-v2.md)
 * [Core concepts](get-started/overview.md)
 * [Maestro solutions](get-started/maestro-solutions.md)
 * [Maestro solutions (old Version)](get-started/our-products/README.md)
