@@ -106,7 +106,7 @@ With your first YAML file created, let's add a few commands to perform a search.
 1. In the Maestro Studio editor, copy and paste the example below for your platform.
 
 {% tabs %}
-{% tab title="Android (Chrome)" %}
+{% tab title="Android (Contacts)" %}
 ```yaml
 appId: com.google.android.contacts    # Target the Contacts app
 ---
