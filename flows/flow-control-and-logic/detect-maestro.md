@@ -2,6 +2,15 @@
 
 There are times when your application needs to behave differently during a test. Whether you want to bypass a 2FA screen, disable analytics to avoid polluting production data, or point to a mock server, detecting Maestro within your app's code is a common requirement.
 
+### **Why detect Maestro?**
+
+Detecting when your app is under test is a way to handle scenarios that are otherwise difficult to automate:
+
+* **Bypassing 2FA:** Modify authentication flows to use fixed codes, avoiding the need for a physical SIM card or email inbox.
+* **Controlling Content Persistence:** Keep short-lived messages (like temporary banners) on the screen longer so Maestro has enough time to detect and interact with them.
+* **Environment Switching:** Automatically point your app to a mock server or a staging database to keep production data clean.
+* **Disabling Custom Animations:** If your app uses specialized animations that aren't caught by the [`waitForAnimationToEnd`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/waitforanimationtoend), you can turn them off manually to prevent "ghost taps."
+
 ### Mobile (iOS and Android)
 
 The gold standard for detecting Maestro on mobile is using [`launchApp arguments`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp#pass-launch-arguments). This approach is reliable, explicit, and works seamlessly in both local environments and [Maestro Cloud](https://docs.maestro.dev/cloud/run-maestro-tests-in-the-cloud).
@@ -49,7 +58,7 @@ if ProcessInfo.processInfo.arguments.contains("isMaestro") {
 
 In the past, developers checked if ports `7001` (Android) or `22087` (iOS) were open. These were Maestro-specific ports that were used to detect Maestro.
 
-This method is now deprecated. It is unsupported in Maestro Cloud and may be removed in future updates. Maestro strongly recommends using the [`launchApp arguments`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp#pass-launch-arguments) approach.
+**This method is now deprecated**. It is unsupported in Maestro Cloud and may be removed in future updates. Maestro strongly recommends using the [`launchApp arguments`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp#pass-launch-arguments) approach.
 {% endhint %}
 {% endstep %}
 {% endstepper %}
