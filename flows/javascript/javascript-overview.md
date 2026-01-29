@@ -15,6 +15,14 @@ The goal of the JavaScript feature is to provide flexibility without sacrificing
 
 To ensure that tests remain portable and secure, Maestro executes JavaScript in a restricted sandbox. This means the scripts run in a "clean" environment without direct access to your local file system or external Node.js libraries. This architecture ensures that a Flow written on one machine will behave identically on a teammate's computer or in Maestro Cloud.
 
+{% hint style="info" %}
+#### JavaScript engine support
+
+In Maestro, the GraalJS engine is enabled by default, allowing you to use modern ECMAScript (ES6+) features.
+
+Rhino is also supported, but it must be explicitly enabled.
+{% endhint %}
+
 ### Explore JavaScript capabilities
 
 Navigate through these guides to master scripting within your automation suite:

@@ -86,7 +86,7 @@ The `runScript` accepts `env` parameters, in the same way as `runFlow` does (see
 
 Console logging is supported from the JavaScript files provided in `runScript` command. Logs from JavaScript are redirected to the console when using Maestro CLI.
 
-![Console log](https://2384395183-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fn5KVIOjVkVjYRyVWZ0yT%2Fuploads%2Fgit-blob-d27f45fb129d9b9c99ce59bff140c60aac3fc89d%2Fimage.png?alt=media)
+![](https://2384395183-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fn5KVIOjVkVjYRyVWZ0yT%2Fuploads%2Fgit-blob-d27f45fb129d9b9c99ce59bff140c60aac3fc89d%2Fimage.png?alt=media)
 
 {% hint style="warning" %}
 Remember that when running in the cloud and requiring another file, you must specify a folder on the command line, not just the flow file. For example, use `maestro cloud myApp.apk ./myTestsFolder` so Maestro has the files required to run your tests. Otherwise, you'll receive a 'Failed to parse file' error.
