@@ -25,7 +25,7 @@ For higher precision, you can combine multiple attributes into a single Selector
 
 To ensure your test suite remains maintainable and flake-free as your app evolves, follow these strategic principles:
 
-* **Prioritize User-Visible Text**: Whenever possible, use `text` selectors. This ensures your tests validate what the user actually sees. If the text changes and breaks the test, it usually means the user experience has changed as well.
+* **Prioritize User-Visible Text**: Whenever possible, use `text` selectors. This ensures your tests validate what the user actually sees and improves test readability by making selectors self-documenting. If the text changes and breaks the test, it usually means the user experience has changed as well.
 * **Use IDs for Stability**: For icons, images, or apps supporting multiple languages (localization), use `id` (Accessibility Identifiers). These are hidden from the user but remain constant across different languages.
 * **Anchor with Relational Logic**: If an element is dynamic or lacks a unique ID, find a stable "anchor" (like a section header) and use relational selectors (e.g., `below: "Personal Information"`) to pinpoint the target.
 * **Handle Dynamic Values with Regex**: Since `text` and `id` are regex-based by default, use patterns like `.*` to handle strings that varies.
