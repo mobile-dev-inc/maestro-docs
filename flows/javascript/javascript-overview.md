@@ -1,6 +1,6 @@
 # JavaScript overview
 
-While Maestro’s YAML syntax is designed to handle the majority of UI interactions declaratively, certain testing scenarios require complex logic that goes beyond simple linear steps. The JavaScript integration allows you to embed a full-scale scripting engine directly into your Flows, enabling you to handle dynamic data, complex assertions, and external integrations.
+While Maestro’s YAML syntax is designed to handle the majority of UI interactions declaratively, certain testing scenarios require complex logic that goes beyond simple linear steps. The JavaScript integration allows you to make use of a full-scale scripting engine directly from your Flows, enabling you to handle dynamic data, complex assertions, and external integrations.
 
 ### Why use JavaScript in your Flows?
 
@@ -13,13 +13,13 @@ The goal of the JavaScript feature is to provide flexibility without sacrificing
 
 ### How it Works
 
-To ensure that tests remain portable and secure, Maestro executes JavaScript in a restricted sandbox. This means the scripts run in a "clean" environment without direct access to your local file system or external Node.js libraries. This architecture ensures that a Flow written on one machine will behave identically in Maestro Cloud or on a teammate's computer.
+To ensure that tests remain portable and secure, Maestro executes JavaScript in a restricted sandbox. This means the scripts run in a "clean" environment without direct access to your local file system or external Node.js libraries. This architecture ensures that a Flow written on one machine will behave identically on a teammate's computer or in Maestro Cloud.
 
 ### Explore JavaScript capabilities
 
 Navigate through these guides to master scripting within your automation suite:
 
-* [javascript-on-maestro-flows.md](javascript-on-maestro-flows.md "mention"): Learn the different ways to inject JS: using inline expressions `${...}` or executing external `.js` files via the `runScript` command.
+* [javascript-on-maestro-flows.md](javascript-on-maestro-flows.md "mention"): Learn the different ways to use JavaScript using inline expressions `${...}` or executing external `.js` files via the `runScript` command.
 * [javascript-outputs.md](javascript-outputs.md "mention"): Understand how to store values from your scripts into a global `output` object so they can be reused by subsequent YAML commands.
 * [maestro-support-for-graaljs.md](maestro-support-for-graaljs.md "mention"): Learn how to enable the GraalJS engine to use modern ECMAScript features (ES6+) for cleaner and more powerful script logic.
 * [how-to-use-logging.md](how-to-use-logging.md "mention"): Master the use of `console.log()` to output data to the Maestro console, helping you debug complex scripts and variable states during execution.
