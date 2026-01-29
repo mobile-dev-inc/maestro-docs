@@ -3,10 +3,10 @@
 This reference page provides a list of the Language and Country codes supported by Maestro when using the `--device-locale` flag.
 
 {% hint style="info" %}
-Access the [.](./ "mention")guide for more information.
+Access the [.](./ "mention") guide for more information.
 {% endhint %}
 
-### Android llocales
+### Android locales
 
 On Android, Maestro combines language and country codes to set the device environment. You can typically use just the language code, or a combination for regional specificity (e.g., `pt-BR`).
 
