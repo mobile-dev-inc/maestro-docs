@@ -10,10 +10,10 @@ Many teams adopt a monorepo approach, co-locating Maestro test suites with app s
 
 A well-structured repository ensures that your test suite remains maintainable as your application grows. Most Maestro projects are organized around one of two core strategies:&#x20;
 
-| **Strategy**  | **Primary oObjective** | **Best for**      |
-| ------------- | ---------------------- | ----------------- |
-| User journeys | Funnel completion      | Goal-driven apps  |
-| Feature tests | Friction reduction     | Habit-driven apps |
+| **Strategy**  | **Primary objective** | **Best for**      |
+| ------------- | --------------------- | ----------------- |
+| User journeys | Funnel completion     | Goal-driven apps  |
+| Feature tests | Friction reduction    | Habit-driven apps |
 
 Choosing the right structure helps ensure your automation remains relevant as your app grows.
 
@@ -55,7 +55,7 @@ To organize your project into a hierarchical structure, you must define the sear
 
 #### Feature tests (Habit-driven Apps)
 
-This approach is best for social media, content aggregators, or entertainment (e.g., Reddit, Instagram, Spotify) Apps. These apps succeed when they reduce friction and keep users engaged. Success is a cumulative experience of many small, slick interactions.
+This approach is best for social media, content aggregators, or entertainment (e.g., Reddit, Instagram, Spotify) apps. These apps succeed when they reduce friction and keep users engaged. Success is a cumulative experience of many small, slick interactions.
 
 * **The Goal**: Success is defined by high engagement and zero friction.
 * **The Strategy**: Organize your repository by individual features. You need deep coverage for components because one slow spinner or broken interaction can cause a user to drop off.
@@ -88,3 +88,10 @@ Feature-based organization establishes a structural isomorphism (direct mapping)
         └── checkout
             └── <code here>
 ```
+
+### Nest steps
+
+Learn the "Maestro Way" of writing modular, tagged, and parallel-ready tests exploring the [Maestro Best Practices: Structuring your Test Suite](https://maestro.dev/blog/maestro-best-practices-structuring-your-test-suite) article.
+
+
+

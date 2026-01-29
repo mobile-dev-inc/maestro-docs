@@ -91,4 +91,4 @@ includeTags:
 
 ### Next Steps
 
-Now that you've discovered your tests, learn how to manage their Sequential Execution.
+Now that you've discovered your tests, learn how to manage their [sequential execution](sequential-execution.md).
