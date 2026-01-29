@@ -32,6 +32,10 @@
 ## JavaScript
 
 * [JavaScript overview](javascript/javascript-overview.md)
+* [Run and debug JavaScript](javascript/run-and-debug-javascript.md)
+* [Manage data and states](javascript/manage-data-and-states.md)
+* [Make HTTP requests](javascript/make-http-requests.md)
+* [Generate synthetic data](javascript/generate-synthetic-data.md)
 * [JavaScript on Maestro flows](javascript/javascript-on-maestro-flows.md)
 * [JavaScript outputs](javascript/javascript-outputs.md)
 * [Maestro support for GraalJS](javascript/maestro-support-for-graaljs.md)
