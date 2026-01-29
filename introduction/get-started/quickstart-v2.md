@@ -4,7 +4,7 @@ hidden: true
 
 # QuickStart v2
 
-You are starting your journey with Maestro. This guide will help you install Maestro, set up your environment, and execute your first automated test (called a **Flow**) in just five minutes.
+You are starting your journey with Maestro Studio. This guide will help you install Maestro, set up your environment, and execute your first automated test (called a **Flow**) in just five minutes.
 
 {% stepper %}
 {% step %}
@@ -16,7 +16,7 @@ Maestro requires a running target device to execute your tests. Use the tabs bel
 {% tab title="Android" %}
 1. Download the latest version of Android Studio from the [official site](https://developer.android.com/studio) and install it.
 2. Open Android Studio, click **More Actions**, and select **Virtual Device Manager**.
-3. Click **Create Virtual Device (+)**, select a modern device (e.g., Pixel 8), and download a system image (API 31 or higher is recommended).
+3. Click **Create Virtual Device (+)**, select a modern device (e.g., Pixel 8), and download a system image. Maestro supports Android API levels 29, 30, 31, 33, and 34. API 31 or higher is recommended.
 4. Finish the wizard and click the **Play** button to start the emulator.
 {% endtab %}
 
@@ -24,7 +24,7 @@ Maestro requires a running target device to execute your tests. Use the tabs bel
 1. Download Xcode from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and install it.
 2. Open Xcode, go to `Settings > Locations`, and ensure the **Command Line Tools** are selected.
 3. Open Xcode and go to `Xcode > Open Developer Tool > Simulator` to launch the simulator.
-4. If no device is available, go to `Xcode > Settings > Platforms` and ensure an iOS runtime (e.g., iOS 17 or 18) is installed.
+4. If no device is available, go to `Xcode > Settings > Platforms` and ensure an iOS runtime is installed. Maestro supports iOS 16, 17, and 18.
 {% endtab %}
 {% endtabs %}
 {% endstep %}
@@ -42,7 +42,7 @@ Follow the platform-specific installation prompts:
 
 * **Windows:** Double-click the `.exe` and follow the setup wizard.
 * **macOS:** Open the `.dmg and` drag Maestro Studio to your `Applications` folder.
-* **Linux:** Make the `.AppImage` executable (`chmod +x MaestroStudio.AppImage`) and run it with  `./MaestroStudio.AppImage`.
+* **Linux:** Make the `.AppImage` executable (`chmod +x MaestroStudio.AppImage`) and run it with `./MaestroStudio.AppImage --no-sandbox`.
 {% endstep %}
 
 {% step %}
