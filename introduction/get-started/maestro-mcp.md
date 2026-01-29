@@ -14,8 +14,8 @@ This architectural pattern decouples LLMs from specific integrations, allowing M
 
 To install and use the Maestro MCP server, you need the following:
 
-* Maestro command-line tool installed.
-* An IDE compatible with MCP servers.
+* Maestro command-line tool installed
+* An IDE compatible with MCP servers
 
 ## Install the Maestro MCP server
 
@@ -43,7 +43,7 @@ The `json` configuration file for Maestro MCP serve is:
 ```
 
 {% hint style="info" %}
-If you don't have the CLI on your PATH, you have to replace `maestro` with the path to your Maestro CLI installation path.
+Assumes Maestro CLI is installed and available on your PATH. If it's not on your PATH, use the full path to the Maestro CLI executable instead of `maestro`.
 {% endhint %}
 
 **For other IDEs and more information, consult their documentation:**
