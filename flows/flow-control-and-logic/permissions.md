@@ -1,6 +1,6 @@
 # Permissions
 
-Managing system permissions is a common challenges in mobile test automation. Since OS prompts (like "Allow Camera Access") typically only appear once, your test journey can become inconsistent if the app state isn't reset.
+Managing system permissions is a common challenge in mobile test automation. Since OS prompts (like "Allow Camera Access") typically only appear once, your test journey can become inconsistent if the app state isn't reset.
 
 Maestro solves this by allowing you to explicitly configure permissions either at launch or during the Flow, ensuring a predictable environment every time.
 
@@ -76,6 +76,10 @@ If a specific Android permission isn't listed above, you can use the full Androi
       com.android.voicemail.permission.ADD_VOICEMAIL: allow
 ```
 
+{% hint style="info" %}
+Note that \`all: allow\` also covers custom permissions, so you don't need to specify them individually unless you want to deny everything else.
+{% endhint %}
+
 ### Permission values
 
 You can set permissions to one of the following states:
@@ -100,7 +104,7 @@ iOS supports additional granular values for certain permissions.
 
 #### Deny all permissions
 
-To ensure your app handles permission denied states, start your Flow by denying everything. This forces you to handle the edge cases where a user says No when the system ask their permission.
+To ensure your app handles permission denied states, start your Flow by denying everything. This forces you to handle the edge cases where a user declines a system permission prompt.
 
 ```yaml
 - launchApp:
@@ -117,17 +121,6 @@ This is a common pattern for testing specific features in isolation.
     permissions:
         all: deny
         medialibrary: allow
-```
-
-#### Allow specific Android custom permission
-
-This example enables voicemail permissions using the specific Android package name.
-
-```yaml
-- launchApp:
-    permissions:
-        all: deny
-        com.android.voicemail.permission.ADD_VOICEMAIL: allow
 ```
 
 ### Related resources&#xD;
