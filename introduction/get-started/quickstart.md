@@ -37,7 +37,7 @@ Download the appropriate installer for your operating system:
 Follow the platform-specific installation prompts:
 
 * **Windows:** Double-click the `.exe` and follow the setup wizard.
-* **macOS:** Open the `.dmg and` drag Maestro Studio to your `Applications` folder.
+* **macOS:** Open the `.dmg` and drag Maestro Studio to your `Applications` folder.
 * **Linux:** Make the `.AppImage` executable (`chmod +x MaestroStudio.AppImage`) and run it with  `./MaestroStudio.AppImage`.
 {% endstep %}
 
@@ -66,7 +66,8 @@ Once your device is running and Maestro Studio is open, you can create your firs
 {% endtab %}
 
 {% tab title="iOS" %}
-
+* **Name**: Name for your YAML file.
+* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.apple.mobilesafari** from the dropdown menu.
 {% endtab %}
 {% endtabs %}
 
@@ -89,7 +90,12 @@ appId: com.android.chrome
 {% endtab %}
 
 {% tab title="iOS" %}
-
+```yaml
+appId: com.apple.mobilesafari
+---
+- launchApp:
+    clearState: true
+```
 {% endtab %}
 {% endtabs %}
 {% endstep %}
@@ -121,7 +127,7 @@ The test launches the Chrome Android app in a clean state, walks through the ini
 {% hint style="info" %}
 To learn more about the commands you can use to create tests, access the [Commands overview](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
 
-To learn about how you can structure tests, also reference in Maestro as Flows, access the [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
 {% endhint %}
 
 After pasting, click **Run Locally**. Watch your virtual device execute the steps automatically. Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
@@ -130,16 +136,24 @@ After pasting, click **Run Locally**. Watch your virtual device execute the step
 {% endtab %}
 
 {% tab title="iOS (Safari)" %}
-```
+```yaml
+appId: com.apple.mobilesafari
+---
+- launchApp:
+    clearState: true
+- tapOn: "Search or enter website name"
+- inputText: "Maestro mobile test"
+- pressKey: Enter
+- takeScreenshot: Safari
 ```
 {% endtab %}
 {% endtabs %}
 
-
+The test launches the Safari iOS app in a clean state, interacts with the address bar to perform a search, and captures a screenshot of the results.
 {% endstep %}
 {% endstepper %}
 
-#### Interactive Flow  authoring
+#### Interactive Flow authoring
 
 While this Quickstart focuses on writing commands manually in the YAML file, Maestro Studio offers three ways to build your test:
 
