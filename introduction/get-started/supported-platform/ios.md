@@ -38,7 +38,6 @@ Maestro also allows you to create multi-app journeys. You can test flows that le
 Maestro connects to your target via native Apple development tools.
 
 * **Simulators**: Run tests on any iOS Simulator managed by Xcode. Ensure you have the Xcode Command Line Tools installed (`xcode-select --install`).
-* **Physical Devices**: Supported through standard provisioning profiles and WebDriverAgent integration.
 * **App Identification**: iOS apps are targeted using the Bundle ID (e.g., `com.example.app`).
 
 ### Platform-specific configuration

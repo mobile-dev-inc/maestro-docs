@@ -8,8 +8,8 @@ Maestro operates on the principle of UI-layer automation rather than code instru
 
 Maestro provides comprehensive automation support for major mobile platforms:
 
-* **Android:** Full support for emulators and physical devices.
-* **iOS:** Full support for simulators and physical devices.
+* **Android:** Full support for emulators and physical devices
+* **iOS:** Full support for simulators
 
 Both platforms pass validation at scale by enterprise teams at Microsoft, DoorDash, and others for complex automation scenarios.
 

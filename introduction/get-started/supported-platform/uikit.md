@@ -69,7 +69,7 @@ Instead of manual index or offset calculations, use `scrollUntilVisible`. Maestr
 
 ### Known limitations
 
-* **Real Devices**: Full support for local execution is currently optimized for the iOS Simulator. Physical device support requires proper provisioning and WebDriverAgent setup.
+* **Simulators**: Full support for local execution on iOS Simulators.
 * **Unicode Input**: Similar to Android, direct inputting of Unicode text via `inputText` can be limited depending on the environment, though views containing Unicode are detectable.
 
 ### Next steps
