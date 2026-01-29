@@ -32,7 +32,7 @@ Follow the platform-specific installation prompts:
 
 * **Windows:** Double-click the `.exe` and follow the setup wizard.
 * **macOS:** Open the `.dmg`, drag Maestro Studio to `Applications`.
-* **Linux:** Make the `.AppImage` executable (`chmod +x MaestroStudio.AppImage`) and run it witht the command `./MaestroStudio.AppImage`.
+* **Linux:** Make the `.AppImage` executable (`chmod +x MaestroStudio.AppImage`) and run it with `./MaestroStudio.AppImage --no-sandbox`. The `--no-sandbox` flag is required because Maestro Studio uses Electron, which requires this flag to launch on Linux systems.
 
 ## Video Walkthrough
 
