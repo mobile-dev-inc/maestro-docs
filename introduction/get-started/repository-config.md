@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Repository configuration
 
 Many teams adopt a monorepo approach, co-locating Maestro test suites with app source code. This strategy offers several technical advantages:
