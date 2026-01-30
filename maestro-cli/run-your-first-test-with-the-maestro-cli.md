@@ -1,29 +1,35 @@
 # Run your first test with the Maestro CLI
 
-## Run your first test with the Maestro CLI
-
-In this tutorial, you will write and run your first Maestro flow. We will automate a common user journey: creating a new contact on an Android device.
+In this tutorial, you will write and run your first Maestro Flow using Maestro CLI. This tutorial creates a test to validate the contact creation in a Android device using the Contacts app
 
 ### Prerequisites
 
 Before starting, ensure you have the following:
 
-* **Maestro CLI**: Installed on your machine.
-* **Android Studio**: Installed to manage emulators.
+* **Maestro CLI**: Installed on your machine. Access [how-to-install-maestro-cli.md](how-to-install-maestro-cli.md "mention")if it's not installed in your machine yet.&#x20;
+* **Android Studio**: Installed to manage emulators. Check the [QuickStart](https://mobile-dev-1.gitbook.io/docs-vnext/get-started/quickstart).
 
-### Step 1: Start the Android Emulator
+{% stepper %}
+{% step %}
+### Start the Android emulator
 
-Maestro needs a running device to interact with. We'll use an Android Emulator for this tutorial.
+Maestro needs a running device to interact with. This example uses an Android Emulator for this tutorial.
 
 1. Open **Android Studio**.
-2. Go to the **Device Manager** (usually found in the `Tools` menu or on the welcome screen).
-3. Launch a virtual device (e.g., Pixel 4 or similar).
+2. Go to the **Virtual Device Manager**.
+3. Launch a virtual device (e.g., Pixel 8 or similar).
 
-> \[!NOTE] We will use the system's default Contacts app (`com.android.contacts`), which comes pre-installed on standard Android emulators. You don't need to install any external app for this tutorial.
+<figure><img src=".gitbook/assets/run-maestro-cli-1.gif" alt=""><figcaption></figcaption></figure>
+{% endstep %}
 
-### Step 2: Create the Flow
+{% step %}
+### Create the Flow
 
-A "Flow" in Maestro is a YAML file that tells Maestro what to do.
+{% hint style="info" %}
+This tutorial uses the system's default Contacts app (`appId: com.google.android.contacts`), which comes pre-installed on standard Android emulators. You don't need to install any external app for this tutorial.
+{% endhint %}
+
+A Flow in Maestro is a YAML file that contains all the instruction Maestro must execute to complete the test. For more information about how to create Flows, access the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/ "mention")documentation. For this example, follow the steps:
 
 1. Create a new file named `contacts.yaml` in your working directory.
 2. Copy and paste the following content into the file:
@@ -46,15 +52,11 @@ appId: com.android.contacts
 - tapOn: "Save"
 ```
 
-#### Understanding the Flow
+The Flow starts the Contacts app, start recording the screen, creates the contact, return to the contact list and stop the recording.&#x20;
+{% endstep %}
 
-* `appId`: Tells Maestro which app to test. `com.android.contacts` is the package name for the Android Contacts app.
-* `launchApp`: Launches the app specified by `appId`.
-* `tapOn`: Simulates a tap on the screen. Maestro finds the text (e.g., "Create new contact") and taps it.
-* `inputRandomPersonName` / `inputRandomEmail`: Generates random data for realistic testing.
-* `back`: Simulates pressing the system Back button (typically needed to close the keyboard or go back).
-
-### Step 3: Run the Flow
+{% step %}
+### Run the Flow
 
 Now, let's see Maestro in action.
 
@@ -65,6 +67,14 @@ Now, let's see Maestro in action.
 ```bash
 maestro test contacts.yaml
 ```
+
+Maestro will start running the test. At the end your terminal should show that all steps were executed sucessufully.
+
+<figure><img src=".gitbook/assets/cli.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+{% endstepper %}
+
+
 
 ### Outcome
 
