@@ -8,14 +8,7 @@ Case studies and examples of teams and apps using Maestro.&#x20;
 
 Video case studies from teams using Maestro:
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>:tv:</td><td><strong>Doccla</strong></td><td>How Maestro helped Doccla scale mobile testing and ship faster.</td><td><a href="https://www.youtube.com/watch?v=3yfenuhs-go">https://www.youtube.com/watch?v=3yfenuhs-go</a></td></tr><tr><td>:tv:</td><td><strong>Wahed</strong></td><td>From hours to minutes: how Wahed revolutionized mobile app testing with Maestro.</td><td><a href="https://youtu.be/iKGonWztNqY">https://youtu.be/iKGonWztNqY</a></td></tr><tr><td>:tv:</td><td><strong>Eneco</strong></td><td>How Eneco scaled mobile test automation with Maestro.</td><td><a href="https://www.youtube.com/watch?v=A-1novVverI">https://www.youtube.com/watch?v=A-1novVverI</a></td></tr><tr><td>:tv:</td><td><strong>Phantom</strong></td><td>Zero regressions with Maestro Cloud featuring Phantom.</td><td><a href="https://www.youtube.com/watch?v=ohD_FY82YwM">https://www.youtube.com/watch?v=ohD_FY82YwM</a></td></tr></tbody></table>
-
-{% embed url="https://www.youtube.com/watch?v=3yfenuhs-go" %}
-
-* [How Maestro Helped Doccla Scale Mobile Testing and Ship Faster](https://www.youtube.com/watch?v=3yfenuhs-go)
-* [From Hours to Minutes: How Wahed Revolutionized Mobile App Testing with Maestro](https://youtu.be/iKGonWztNqY)
-* [How Eneco Scaled Mobile Test Automation with Maestro](https://www.youtube.com/watch?v=A-1novVverI)
-* [Zero Regressions with Maestro Cloud featuring Phantom](https://www.youtube.com/watch?v=ohD_FY82YwM)
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Doccla</strong></td><td><a href="https://www.youtube.com/watch?v=3yfenuhs-go">How Maestro helped Doccla scale mobile testing and ship faster.</a></td><td><a href="../.gitbook/assets/Screenshot 2026-01-30 151226.png">Screenshot 2026-01-30 151226.png</a></td></tr><tr><td><strong>Wahed</strong></td><td><a href="https://youtu.be/iKGonWztNqY">From hours to minutes:<br>How Wahed revolutionized mobile app testing with Maestro.</a></td><td><a href="../.gitbook/assets/Screenshot 2026-01-30 151300.png">Screenshot 2026-01-30 151300.png</a></td></tr><tr><td><strong>Eneco</strong></td><td><a href="https://www.youtube.com/watch?v=A-1novVverI">How Eneco scaled mobile test automation with Maestro.</a></td><td><a href="../.gitbook/assets/Screenshot 2026-01-30 151427.png">Screenshot 2026-01-30 151427.png</a></td></tr><tr><td><strong>Phantom</strong></td><td><a href="https://www.youtube.com/watch?v=ohD_FY82YwM">Zero regressions with Maestro Cloud featuring Phantom.</a></td><td><a href="../.gitbook/assets/Screenshot 2026-01-30 151508.png">Screenshot 2026-01-30 151508.png</a></td></tr></tbody></table>
 
 ***
 
