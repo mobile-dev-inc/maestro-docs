@@ -200,5 +200,5 @@ Choose the structure that fits how you think about and run your tests.
 
 ### Related content
 
-* Known issues: Known limitations and workarounds.
-* Bug report: How to report a new issue.
+* [Known issues](known-issues.md): Known limitations and workarounds.
+* [Bug report](bug-report.md): How to report a new issue.

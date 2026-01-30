@@ -25,5 +25,5 @@ Repository, community channels, curated lists, and community-built projects and 
 
 ### Related content
 
-* Articles: Articles, blog posts, and tutorials.
-* Showcase: Apps and teams using Maestro.
+* [Articles](articles.md): Articles, blog posts, and tutorials.
+* [Showcase](showcase.md): Apps and teams using Maestro.

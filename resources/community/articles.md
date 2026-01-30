@@ -20,5 +20,5 @@ description: >-
 
 ### Related content
 
-* Community projects: Repository, Slack, awesome list, and community-built tools.
-* Showcase: Apps and teams using Maestro.
+* [Community projects](community-projects.md): Repository, Slack, awesome list, and community-built tools.
+* [Showcase](showcase.md): Apps and teams using Maestro.

@@ -41,5 +41,5 @@ When you create a new issue or bug report, attach the `.zip` files generated in 
 
 ### Related content
 
-* Known issues: Known limitations and workarounds.
-* FAQ: Common questions and answers.
+* [Known issues](known-issues.md): Known limitations and workarounds.
+* [FAQ](faq.md): Common questions and answers.

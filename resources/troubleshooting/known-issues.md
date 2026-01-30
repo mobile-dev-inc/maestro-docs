@@ -141,5 +141,5 @@ func tableView(_ tableView: UITableView,
 
 ### Related Content
 
-* FAQ: Common questions and answers.
-* Bug report: How to report a new issue.
+* [FAQ](faq.md): Common questions and answers.
+* [Bug report](bug-report.md): How to report a new issue.
