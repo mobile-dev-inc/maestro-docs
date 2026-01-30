@@ -84,5 +84,5 @@ To use this logic in your test, you can incorporate it directly into your main F
 
 Explore these pages to learn more about the logic used to navigate system boundaries:
 
-* [Selectors](../how-to-use-selectors.md): Learn how to use selectors to make your text assertions more flexible.
+* [Selectors](../flow-control-and-logic/how-to-use-selectors.md): Learn how to use selectors to make your text assertions more flexible.
 * [Conditions](../flow-control-and-logic/conditions.md): See how to use `visible` and `notVisible` to handle branching UI logic.

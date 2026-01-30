@@ -1,23 +1,11 @@
 # Table of contents
 
 * [Maestro Flows overview](README.md)
-* [How to structure your Test Suite](how-to-structure-your-test-suite.md)
-* [How to use Selectors](how-to-use-selectors.md)
-
-## Workspace Management
-
-* [Workspace management overview](workspace-management/workspace-management-overview.md)
-* [Project configuration](workspace-management/project-configuration.md)
-* [Design your test architecture](workspace-management/design-your-test-architecture/README.md)
-  * [Repository configuration](workspace-management/design-your-test-architecture/repository-configuration.md)
-* [Test discovery and tags](workspace-management/test-discovery-and-tags.md)
-* [Sequential execution](workspace-management/sequential-execution.md)
-* [Test reports and artifacts](workspace-management/test-reports-and-artifacts.md)
-* [AI test analysis](workspace-management/ai-test-analysis.md)
 
 ## Flow Control and Logic
 
 * [Flow control and logic overview](flow-control-and-logic/flow-control-and-logic-overview.md)
+* [How to use Selectors](flow-control-and-logic/how-to-use-selectors.md)
 * [Nested flows](flow-control-and-logic/nested-flows.md)
 * [Wait commands](flow-control-and-logic/wait-commands.md)
 * [Loops](flow-control-and-logic/loops.md)
@@ -44,6 +32,17 @@
 * [How to generate random data](javascript/how-to-generate-random-data.md)
 * [How to make HTTP requests](javascript/how-to-make-http-requests.md)
 * [How to access text elements](javascript/how-to-access-text-elements.md)
+
+## Workspace Management
+
+* [Workspace management overview](workspace-management/workspace-management-overview.md)
+* [Project configuration](workspace-management/project-configuration.md)
+* [Design your test architecture](workspace-management/design-your-test-architecture/README.md)
+  * [Repository configuration](workspace-management/design-your-test-architecture/repository-configuration.md)
+* [Test discovery and tags](workspace-management/test-discovery-and-tags.md)
+* [Sequential execution](workspace-management/sequential-execution.md)
+* [Test reports and artifacts](workspace-management/test-reports-and-artifacts.md)
+* [AI test analysis](workspace-management/ai-test-analysis.md)
 
 ## Examples
 

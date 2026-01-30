@@ -36,4 +36,4 @@ env:                           # Optional: Map of environment variables
 
 ### Next step
 
-Learn the best practices for organizing your Flows into a scalable [Test Suite](how-to-structure-your-test-suite.md) that can handle enterprise-level app complexity.
+Learn the best practices for organizing your Flows into a scalable [Test Suite](/broken/pages/vZGTdeIkgB9xlHb7SZq0) that can handle enterprise-level app complexity.
