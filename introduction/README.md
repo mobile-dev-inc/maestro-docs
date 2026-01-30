@@ -2,9 +2,9 @@
 
 Maestro is the simplest and most effective framework for painless mobile and web UI automation using intuitive YAML flows.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>What is Maestro?</td><td>Learn what Maestro can do for you when testing applications</td><td><a href="get-started/">get-started</a></td><td><a href=".gitbook/assets/what-is-maestro.png">what-is-maestro.png</a></td></tr><tr><td>QuickStart</td><td>Get up and running with Maestro in just a few minutes</td><td><a href="get-started/quickstart.md">quickstart.md</a></td><td><a href=".gitbook/assets/quick-start.png">quick-start.png</a></td></tr></tbody></table>
-
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FCbCMt5C3rawmE9oIus7f%2Fuploads%2F7kWqvBIcSqYfGW86X7cZ%2FGoogle%20Maps%20UI%20Test%20Automation%20with%20Maestro%20%E2%80%94%20Full%20YAML%20Tutorial.mp4?alt=media&token=1fbdc79b-cc4f-4603-a0d5-1035d9dc2bc1" %}
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>What is Maestro?</td><td>Learn what Maestro can do for you when testing applications</td><td><a href="get-started/">get-started</a></td><td><a href=".gitbook/assets/what-is-maestro.png">what-is-maestro.png</a></td></tr><tr><td>QuickStart</td><td>Get up and running with Maestro in just a few minutes</td><td><a href="get-started/quickstart.md">quickstart.md</a></td><td><a href=".gitbook/assets/quick-start.png">quick-start.png</a></td></tr></tbody></table>
 
 ### Maestro Solutions
 
@@ -18,7 +18,7 @@ Explore the technical specifications and community-proven strategies.
 
 ### Join the Community
 
-Maestro is better together. Explore how others are scaling their quality engineering.
+See real workflows from other teams, and join the[ Maestro Slack community](https://maestrodev.typeform.com/to/FelIEe8A?typeform-source=maestro.dev) to share and learn best practices.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Community Projects</strong></td><td>Discover VSCode extensions, plugins, and wrappers built by the Maestro community</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/community-projects">Community projects</a></td><td><a href=".gitbook/assets/community-projects-option2.png">community-projects-option2.png</a></td></tr><tr><td><strong>Articles</strong></td><td>Explore a list of blog posts, deep dives, and tutorials from industry experts</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/articles">Articles</a></td><td><a href=".gitbook/assets/articles-option2 (1).png">articles-option2 (1).png</a></td></tr><tr><td><strong>Customer Showcase</strong></td><td>Check how teams like Doccla, Wahed, and Eneco revolutionized their mobile testing</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/showcase">Showcase</a></td><td><a href=".gitbook/assets/customer-showcase-option2 (1).png">customer-showcase-option2 (1).png</a></td></tr></tbody></table>
 
