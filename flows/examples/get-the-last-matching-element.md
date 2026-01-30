@@ -136,4 +136,4 @@ If you want to explore the building blocks of this algorithmic approach, check o
 
 * [loops.md](../flow-control-and-logic/loops.md "mention"): Learn the different ways to iterate in Maestro, including `while` loops and count-based loops.
 * [javascript-overview.md](../javascript/javascript-overview.md "mention"): Discover how to use JavaScript to manage complex state and logic within your YAML files.
-* [how-to-use-selectors.md](../flow-control-and-logic/how-to-use-selectors.md "mention"): Review the fundamentals of how Maestro identifies and differentiates between similar UI elements.
+* [how-to-use-selectors.md](../how-to-use-selectors.md "mention"): Review the fundamentals of how Maestro identifies and differentiates between similar UI elements.

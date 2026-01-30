@@ -5,7 +5,7 @@
 ## Flow Control and Logic
 
 * [Flow control and logic overview](flow-control-and-logic/flow-control-and-logic-overview.md)
-* [How to use Selectors](flow-control-and-logic/how-to-use-selectors.md)
+* [How to use Selectors](how-to-use-selectors.md)
 * [Nested flows](flow-control-and-logic/nested-flows.md)
 * [Wait commands](flow-control-and-logic/wait-commands.md)
 * [Loops](flow-control-and-logic/loops.md)

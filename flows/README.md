@@ -4,12 +4,12 @@ Maestro Flows are the fundamental building blocks of UI automation, representing
 
 #### The anatomy of a Flow
 
-Flows are written in a human-readable YAML format, designed to be understood and maintained by both developers and manual testers without heavy programming knowledge.
+Flows use a human-readable YAML format designed to be maintained by both developers and manual testers without heavy programming knowledge.
 
-A standard Flow consists of two main parts:
+A standard Flow consists of two distinct parts separated by three dashes (`---`):
 
 * **Configuration Section**: Defined at the top (above the `---` marker), this includes the `appId` of the app under test, along with optional metadata like `name`, `tags`, and environment variables.
-* **Workflow Section**: A sequence of declarative commands, such as `tapOn` and `inputText`, that simulate user actions and validate the UI state.
+* **Commands Section**: A sequence of declarative commands, such as `tapOn` and `inputText`, that simulate user actions and validate the UI state.
 
 ```yaml
 # --- Configuration Section ---
@@ -20,7 +20,8 @@ tags:                          # Optional: Filter which tests to run
 env:                           # Optional: Map of environment variables
   USERNAME: "user@example.com"
 
-# --- Workflow Section ---
+---
+# --- Commands Section ---
 - launchApp                    # Launches the application
 - tapOn: "Username"            # Interacts with the username field
 - inputText: ${USERNAME}       # Inputs the environment variable
@@ -30,10 +31,11 @@ env:                           # Optional: Map of environment variables
 
 ### Explore Flows capabilities
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-gear">:gear:</i></td><td><strong>Flow control and logic</strong></td><td>Build resilient, intelligent journeys. Master the architectural tools used to scale your tests, including modular subflows, conditional branching, repetitive loops, and lifecycle hooks.</td><td><a href="flow-control-and-logic/flow-control-and-logic-overview.md">flow-control-and-logic-overview.md</a></td></tr><tr><td><i class="fa-node-js">:node-js:</i></td><td><strong>JavaScript</strong></td><td>Extend YAML with custom scripting. Use the integrated JavaScript sandbox to handle complex data, generate random test variables, capture script outputs, and interact with external APIs via HTTP requests.</td><td><a href="javascript/javascript-overview.md">javascript-overview.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-arrow-progress">:arrow-progress:</i></td><td><strong>Flow control and logic</strong></td><td>Build resilient, intelligent journeys. Master the architectural tools used to scale your tests, including modular subflows, conditional branching, repetitive loops, and lifecycle hooks.</td><td><a href="flow-control-and-logic/flow-control-and-logic-overview.md">flow-control-and-logic-overview.md</a></td></tr><tr><td><i class="fa-node-js">:node-js:</i></td><td><strong>JavaScript</strong></td><td>Extend YAML with custom scripting. Use the integrated JavaScript sandbox to handle complex data, generate random test variables, capture script outputs, and interact with external APIs via HTTP requests.</td><td><a href="javascript/javascript-overview.md">javascript-overview.md</a></td></tr><tr><td><i class="fa-gears">:gears:</i></td><td><strong>Workspace management</strong></td><td>Transition from writing commands to designing a testing system. Learn to configure global behaviors with <code>config.yaml</code>, organize repository architectures, and manage test execution and analysis at scale.</td><td></td></tr></tbody></table>
 
 
 
 ### Next step
 
-Learn the best practices for organizing your Flows into a scalable [Test Suite](/broken/pages/vZGTdeIkgB9xlHb7SZq0) that can handle enterprise-level app complexity.
+Learn how to build resilient, intelligent journeys by mastering [Flow control and logic](flow-control-and-logic/flow-control-and-logic-overview.md).
+

@@ -1,33 +1,38 @@
 # Flow control and logic overview
 
-While standard Flows represent linear user journeys, real-world testing often requires dynamic behavior. The documentation from this section covers the tools that allow your tests to adapt to different application states, platform requirements, and data environments.
+While standard Flows represent linear user journeys, real-world testing often requires dynamic behavior. This section covers the tools that allow your tests to adapt to different application states, platform requirements, and data environments.
 
-### Core Pillars of Flow Architecture
+### Core pillars of Flow architecture
 
-To build scalable tests, you will utilize four primary logical patterns:
+To build scalable tests, you will utilize five pillars:
 
-#### **1. Modularity**
+#### **Selection**
+
+Identify UI elements with precision. Before building the test logic, you must master [how to use Selectors](../how-to-use-selectors.md) to ensure Maestro can reliably find and interact with the correct parts of your application screen.
+
+#### **Modularity**
 
 Avoid repeating yourself, you can use [Nested Flows](nested-flows.md) to extract common journeys, like Login or Onboarding, into separate files. You can then call these "subflows" across your entire suite using the `runFlow` command.
 
-#### **2. Conditional execution**
+#### **Conditional execution**
 
 Not every test step should run every time. [Conditions](conditions.md) allow you to execute actions based on element visibility, platform (iOS vs. Android), or custom JavaScript expressions.
 
-#### **3. Repetition**&#x20;
+#### **Repetition**&#x20;
 
 Handle dynamic lists or "polling" scenarios with [Loops ](loops.md)to repeat actions until a goal is met. Complement this with [Wait Commands](wait-commands.md) to ensure your tests only proceed when the UI is stable, eliminating flakiness from slow network loads.
 
-#### **4. Environment and life-cycle**
+#### **Environment and life-cycle**
 
 Manage test data externally using [Parameters ](parameters-and-constants.md)and [Constants](/broken/pages/DLtBiFLCJpsE4uxGnPNx), allowing the same Flow to run in Staging, QA, or Production. Use [Hooks ](hooks.md)(`onFlowStart`, `onFlowComplete`) to automate setup and teardown tasks, such as clearing app state or granting [Permissions](permissions.md).
 
-### How to Explore This Section
+### Next steps
 
-We recommend exploring these features in the following order:
+We recommend exploring these features in the following order to build your expertise:
 
-1. Start with [Nested Flows](nested-flows.md): Learn how to break your tests into manageable parts.
-2. Add [Conditions](conditions.md): Make your modular tests smarter by handling "if-then" scenarios.
-3. Optimize with [Parameters](parameters-and-constants.md): Replace hardcoded data with dynamic variables to support multiple environments.
-4. Finalize with [Hooks](hooks.md): Ensure every test run starts from a clean, reliable state.
+1. Start with [How to use Selectors](../how-to-use-selectors.md) to learn the foundational logic for identifying UI elements in your tests.
+2. Learn how to break your tests into manageable parts exploring [Nested Flows](nested-flows.md).
+3. Add [Conditions](conditions.md): Make your modular tests smarter by handling "if-then" scenarios.
+4. Optimize with [Parameters](parameters-and-constants.md): Replace hardcoded data with dynamic variables to support multiple environments.
+5. Finalize with [Hooks](hooks.md): Ensure every test run starts from a clean, reliable state.
 
