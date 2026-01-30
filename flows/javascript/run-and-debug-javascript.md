@@ -17,16 +17,14 @@ For simple logic or dynamic values, use the `${}` syntax directly inside existin
 ```
 
 {% hint style="info" %}
-Learn how to[ generate synthetic data](generate-synthetic-data.md) using JavaScript.
+Learn how to [generate synthetic data](generate-synthetic-data.md) using JavaScript.
 {% endhint %}
 
 #### 2. The `evalScript` Command
 
-Use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) for logic-only steps that don't directly interact with a UI element, such as setting a variable or performing a calculation.
+Use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) for logic-only steps that do not directly interact with a UI element, such as setting a variable or performing a calculation.
 
-YAML
-
-```
+```yaml
 - evalScript: ${output.timestamp = new Date().getTime()} # Store data for later use
 - evalScript: ${console.log('Test execution started')} # Inline logging
 ```
@@ -35,7 +33,7 @@ YAML
 
 For complex logic, reusable functions, or long scripts, use [`runScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runscript) to execute an external `.js` file.
 
-You can pass environment variables to your script using the `env` attribute, similar to how you pass parameters to subflows. First, you use `runScript` to define the JavaScript file and the variables that will be shared with it:
+You can pass environment variables to your script using the `env` attribute, in the same way you pass parameters to subflows. First, use `runScript` to define the JavaScript file and the variables to be shared with it:
 
 ```yaml
 - runScript:
@@ -44,7 +42,7 @@ You can pass environment variables to your script using the `env` attribute, sim
        userRole: 'admin' # Pass a parameter to the script
 ```
 
-The JavaScript file can read the environment variable and use to perform the necessary actions.
+The JavaScript file can then read the environment variable directly to perform necessary actions:
 
 ```javascript
 // Access the passed parameter directly by its name
@@ -56,12 +54,12 @@ console.log(`Setting up user with role: ${role}`);
 
 Maestro supports standard `console.log` statements to help you debug your scripts and track Flow execution.
 
-When logging with JavaScript in Maestro you have two main points:
+When logging with JavaScript in Maestro, keep these two points in mind:
 
-* Maestro's `console.log` does not support multiple arguments. Running `console.log('My variable is', variable)` will only output `My variable is`.
-* To log variables alongside text, use template literals or string concatenation.
+* **Multiple arguments are not supported:** Running `console.log('My variable is', variable)` will only output `My variable is`.
+* **Use template literals or concatenation:** To log variables alongside text, use template literals or string concatenation.
 
-The following code snippt shows examples of concatenation and template literals:
+The following code snippet shows examples of both methods:
 
 ```javascript
 console.log('Value: ' + myVar)   // concatenation
@@ -70,7 +68,7 @@ console.log(`Value is ${myVar}`) // template literals
 
 #### Logging with `evalScript` command <a href="#logging-with-evalscript-command" id="logging-with-evalscript-command"></a>
 
-If you want to log something inline you can use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) to output it to the console without having to create a separate file:
+If you want to log something inline, you can use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) to output it to the console without creating a separate file:
 
 ```yaml
 - evalScript: ${console.log('Hello from Javascript')}
@@ -80,7 +78,7 @@ If you want to log something inline you can use [`evalScript`](https://app.gitbo
 
 When using `runScript`, you can organize your logs within your JavaScript files just as you would in a standard development environment.
 
-The following Flow runs the script, which will log the message.
+The following Flow runs a script which will log a status message:
 
 {% tabs %}
 {% tab title="Flow" %}
@@ -103,7 +101,7 @@ console.log(`Operation status: ${status}`); // Outputs 'Operation status: Succes
 
 Now that you already knows how to run and debug JavaScript code in Maestro Flows, access the following guides:
 
-* [manage-data-and-states.md](manage-data-and-states.md "mention"):
-* [generate-synthetic-data.md](generate-synthetic-data.md "mention"):&#x20;
-* [make-http-requests.md](make-http-requests.md "mention"):
+* [manage-data-and-states.md](manage-data-and-states.md "mention"): Learn how to use the `output` object.
+* [generate-synthetic-data.md](generate-synthetic-data.md "mention"): Use `faker` to create dynamic test data.
+* [make-http-requests.md](make-http-requests.md "mention"): Use the built-in HTTP client for API interactions.
 
