@@ -4,19 +4,19 @@ Moving from your first test to a full-scale automation suite requires shifting y
 
 ### The anatomy of a workspace
 
-&#x20;When organizing your workspace, consider the following points:
+When organizing your workspace, consider the following four pillars:
 
 {% stepper %}
 {% step %}
 #### **Configuration**
 
-A Maestro workspace is centered around the [`config.yaml`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/workspace-configuration) file, which defines global rules like your `appId`, environment variables, and platform-specific behaviors. Access the [Project configuration](project-configuration.md) guide to learn how to create and configure `config.yaml` files for your test suite.&#x20;
+A Maestro workspace is centered around the [`config.yaml`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/workspace-configuration) file, which defines global rules like your `appId`, environment variables, and platform-specific behaviors. Access the [Project configuration](project-configuration.md) guide to learn how to create and manage configuration files for your suite.&#x20;
 {% endstep %}
 
 {% step %}
 #### **Architecture**
 
-Before writing dozens of tests, you must choose a repository structure that matches your app's business logic. Learn how to [organize your test architecture](design-your-test-architecture/) to ensure your tests are scalable and easy to maintain.
+Before writing dozens of tests, you must choose a repository structure that matches your app's business logic. Whether you choose a **User Journey** or **Feature Test** model, learning how to [organize your test architecture](design-your-test-architecture/) ensures your tests remain scalable and maintainable.
 {% endstep %}
 
 {% step %}
@@ -39,13 +39,15 @@ Maestro doesn't just tell you if a test passed, it provides the why:
 {% endstepper %}
 
 {% hint style="success" %}
-A good rule of thumb is that each Flow should be able to run on a completely reset device, even if you are using sequential execution.
+#### Best practice
+
+Each Flow should be able to run on a completely reset device, even if you are using sequential execution.
 {% endhint %}
 
 ### Next steps
 
 If you are setting up a new repository, Maestro recommends following this path:
 
-1. Configure your  `config.yaml` following the instructions available in the  [Project configuration](project-configuration.md).
-2. Define your folder structure based on the instructions available in [design-your-test-architecture](design-your-test-architecture/ "mention").
-3. Tag your critical tests for your organize which tests to run based on the [test-discovery-and-tags.md](test-discovery-and-tags.md "mention").
+1. Configure your  `config.yaml` using the instructions in [Project configuration](project-configuration.md).
+2. Define your folder structure based on the strategies in [design-your-test-architecture](design-your-test-architecture/ "mention").
+3. Tag your critical tests to organize and filter execution as described in [test-discovery-and-tags.md](test-discovery-and-tags.md "mention").
