@@ -20,7 +20,7 @@ If no `--config` flag is provided, Maestro will look for a file named `config.ya
 
 {% stepper %}
 {% step %}
-### Create the configuration file
+#### Create the configuration file
 
 You can place your configuration file anywhere in your repository. While some teams prefer a `.maestro/` folder, you can simply place `config.yaml` at the root of your project for easier access.
 
@@ -47,7 +47,7 @@ The `appId` targets different identifiers based on the platform:
 {% endstep %}
 
 {% step %}
-### Set the global environment variables
+#### Set the global environment variables
 
 Use the `env` block to define data that changes across environments (staging vs. production, for example). This allows you to reference them in any Flow using the `${VARIABLE_NAME}` syntax without hardcoding secrets.
 
@@ -65,7 +65,7 @@ If you are using Maestro Studio, it provides an interface for managing [environm
 {% endstep %}
 
 {% step %}
-### Configure the platform behavior
+#### Configure the platform behavior
 
 To ensure your tests are stable and flake-free, you can configure platform-specific behaviors. A common best practice is to disable system animations to prevent timing issues.
 

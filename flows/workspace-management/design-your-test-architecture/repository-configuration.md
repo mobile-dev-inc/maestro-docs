@@ -10,10 +10,12 @@ Many teams adopt a monorepo approach, co-locating Maestro test suites with app s
 
 A well-structured repository ensures that your test suite remains maintainable as your application grows. Most Maestro projects are organized around one of two core strategies:&#x20;
 
-| **Strategy**  | **Primary objective** | **Best for**      |
-| ------------- | --------------------- | ----------------- |
-| User journeys | Funnel completion     | Goal-driven apps  |
-| Feature tests | Friction reduction    | Habit-driven apps |
+| **Strategy**      | **User Journeys (Goal-Driven)**             | **Feature Tests (Habit-Driven)**     |
+| ----------------- | ------------------------------------------- | ------------------------------------ |
+| Primary Objective | Funnel completion                           | Friction reduction                   |
+| Best For          | E-commerce, Fintech, Food Delivery          | Social Media, Content, Entertainment |
+| User Motivation   | Complete a specific task (e.g., Order food) | Continuous engagement and discovery  |
+| Success Metric    | Reaching the end of a funnel                | Zero-friction interactions           |
 
 Choosing the right structure helps ensure your automation remains relevant as your app grows.
 

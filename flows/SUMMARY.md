@@ -6,9 +6,10 @@
 
 ## Workspace Management
 
+* [Workspace management overview](workspace-management/workspace-management-overview.md)
 * [Project configuration](workspace-management/project-configuration.md)
-* [Designe your test architecture](workspace-management/designe-your-test-architecture/README.md)
-  * [Repository configuration](workspace-management/designe-your-test-architecture/repository-configuration.md)
+* [Design your test architecture](workspace-management/design-your-test-architecture/README.md)
+  * [Repository configuration](workspace-management/design-your-test-architecture/repository-configuration.md)
 * [Test discovery and tags](workspace-management/test-discovery-and-tags.md)
 * [Sequential execution](workspace-management/sequential-execution.md)
 * [Test reports and artifacts](workspace-management/test-reports-and-artifacts.md)
