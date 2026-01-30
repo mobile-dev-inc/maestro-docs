@@ -112,9 +112,17 @@ Every HTTP call returns a `response` object containing the following fields:
 
 <table data-header-hidden><thead><tr><th width="114.22222900390625"></th><th width="93.111083984375"></th><th></th></tr></thead><tbody><tr><td><strong>Field Name</strong></td><td><strong>Type</strong></td><td><strong>Description</strong></td></tr><tr><td><code>ok</code></td><td>Boolean</td><td><code>true</code> if the request was successful (status 200-299).</td></tr><tr><td><code>status</code></td><td>Number</td><td>The HTTP status code (e.g., <code>200</code>, <code>404</code>).</td></tr><tr><td><code>body</code></td><td>String</td><td>The raw string body of the response.</td></tr><tr><td><code>headers</code></td><td>Object</td><td>HTTP response headers (multiple values are comma-separated).</td></tr></tbody></table>
 
-### Example: Authenticated API Setup
+### Usage example
 
-A common pattern is to authenticate via API and store the token in the `output` object for subsequent UI steps.
+A common pattern when testing is to perform a pre-flight authentication step via an API before executing UI interactions. This approach allows you to:
+
+* Bypass login or onboarding screens.
+* Start tests in a known, authenticated state.
+* Reduce test execution time and flakiness caused by UI-based login flows.
+
+In this pattern, authentication is performed in a JavaScript script, and the resulting data (such as an access token or user ID) is stored in the global [`output`](manage-data-and-states.md) object.
+
+The following script logs in via an API, parses the JSON response, and stores the authentication token and user ID globally:
 
 ```javascript
 // setup.js
@@ -125,22 +133,28 @@ const loginResponse = http.post('https://my-api.com/login', {
 
 const data = json(loginResponse.body);
 
-// Store the token globally for use in the Flow
+// Store the token and ID globally for use in the Flow
 output.api = {
     token: data.token,
     userId: data.userId
 };
 ```
 
-
+Once the script has run, the stored values can be accessed from any subsequent step in the Flow:
 
 ```yaml
 # flow.yaml
 appId: com.example.app
 ---
 - runScript: setup.js
+
 - evalScript: ${console.log('Logged in user: ' + output.api.userId)}
+
 - tapOn: "Profile"
+
 ## Use the captured token in a later UI-based network call if needed
 ```
 
+### Next step
+
+Learn how to [generate synthetic test](generate-synthetic-data.md) data to create dynamic, realistic data at runtime, making your tests more flexible, reusable, and less dependent on hard-coded values.
