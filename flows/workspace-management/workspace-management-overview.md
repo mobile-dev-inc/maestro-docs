@@ -46,6 +46,6 @@ A good rule of thumb is that each Flow should be able to run on a completely res
 
 If you are setting up a new repository, Maestro recommends following this path:
 
-1. Configure your  `config.yaml` following the instructions available in the  [Project configuration](https://www.google.com/search?q=Project-configuration.md).
+1. Configure your  `config.yaml` following the instructions available in the  [Project configuration](project-configuration.md).
 2. Define your folder structure based on the instructions available in [design-your-test-architecture](design-your-test-architecture/ "mention").
 3. Tag your critical tests for your organize which tests to run based on the [test-discovery-and-tags.md](test-discovery-and-tags.md "mention").
