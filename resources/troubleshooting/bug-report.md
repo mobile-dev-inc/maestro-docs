@@ -4,7 +4,9 @@ This page explains how to report a bug in Maestro and how to attach context so t
 
 ***
 
-### How to report an issue
+<details>
+
+<summary>How to report an issue</summary>
 
 If you encounter an issue or bug while using Maestro, report it by opening a GitHub issue.
 
@@ -12,9 +14,11 @@ If you encounter an issue or bug while using Maestro, report it by opening a Git
 2. Choose the issue type that best matches your report.
 3. Follow the instructions in the issue template. Filling out the template helps the team triage your report faster.
 
-***
+</details>
 
-### Collecting context with `maestro bugreport`
+<details>
+
+<summary>Collecting context with <code>maestro bugreport</code></summary>
 
 To give the Maestro team more context about your environment, run the `bugreport` subcommand before creating the issue. It collects data from your machine and writes it to a folder; you then attach the generated `.zip` files to your GitHub issue.
 
@@ -36,6 +40,8 @@ After the command finishes, it prints the path to the folder where the data was 
 #### Attach the output to your issue
 
 When you create a new issue or bug report, attach the `.zip` files generated in that folder. This helps the team reproduce and diagnose the problem.
+
+</details>
 
 ***
 
