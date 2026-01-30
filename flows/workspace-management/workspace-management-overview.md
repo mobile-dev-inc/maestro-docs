@@ -2,7 +2,7 @@
 
 Moving from your first test to a full-scale automation suite requires shifting your focus from "how to write a command" to "how to design a system". A well-architected Maestro workspace ensures your tests stay fast, reliable, and easy to maintain as your application evolves.
 
-#### The anatomy of a workspace
+### The anatomy of a workspace
 
 &#x20;When organizing your workspace, consider the following points:
 
