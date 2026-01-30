@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Overview](README.md)
+* [Resources overview](README.md)
 
 ## Troubleshooting
 
