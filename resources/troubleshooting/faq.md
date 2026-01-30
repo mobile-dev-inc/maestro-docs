@@ -20,8 +20,6 @@ appId: ${APP_ID}
 - launchApp
 ```
 
-For more on parameters, see Parameters and constants.
-
 </details>
 
 <details>
@@ -67,7 +65,7 @@ To assert on values that appear on different screens, store each value in a vari
 
 <summary>How do I generate a random number?</summary>
 
-Maestro has commands for random strings and names but not for random numbers. Use JavaScript (for example with `runScript`) to generate a number in the range you need.
+Maestro has commands for random strings and names, but not for random numbers. Use JavaScript (for example with `runScript`) to generate a number in the range you need.
 
 **Script (e.g. `randomNumber.js`):**
 
@@ -134,7 +132,7 @@ To reduce total run time:
 
 Many teams keep Maestro tests next to their app code so that a given build has the right tests and branches can evolve flows and features together. Two common ways to lay out flows:
 
-**Journeys** — Group flows by user journey (e.g. new vs existing users). Start with a single `flows` folder and add subfolders when needed:
+**Journeys:** Group flows by user journey (e.g. new vs existing users). Start with a single `flows` folder and add subfolders when needed:
 
 ```
 ├── flows
@@ -169,7 +167,7 @@ As the suite grows, you can split by journey and add shared utils:
 
 You can set inclusion patterns in `config.yaml` so only the tests you want are run (see Test discovery and tags).
 
-**Features** — Mirror your app’s feature structure so flows are easy to find and maintain:
+**Features:** Mirror your app’s feature structure so flows are easy to find and maintain:
 
 ```
 ├── flows
