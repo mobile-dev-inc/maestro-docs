@@ -8,19 +8,19 @@ Moving from your first test to a full-scale automation suite requires shifting y
 
 {% stepper %}
 {% step %}
-**Configuration**
+#### **Configuration**
 
 A Maestro workspace is centered around the [`config.yaml`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/workspace-configuration) file, which defines global rules like your `appId`, environment variables, and platform-specific behaviors. Access the [Project configuration](project-configuration.md) guide to learn how to create and configure `config.yaml` files for your test suite.&#x20;
 {% endstep %}
 
 {% step %}
-**Architecture**
+#### **Architecture**
 
 Before writing dozens of tests, you must choose a repository structure that matches your app's business logic. Learn how to [organize your test architecture](design-your-test-architecture/) to ensure your tests are scalable and easy to maintain.
 {% endstep %}
 
 {% step %}
-**Advanced execution**
+#### **Advanced execution**
 
 As your suite grows, you need control over how tests are discovered and executed:
 
@@ -29,7 +29,7 @@ As your suite grows, you need control over how tests are discovered and executed
 {% endstep %}
 
 {% step %}
-**Analysis**
+#### **Analysis**
 
 Maestro doesn't just tell you if a test passed, it provides the why:
 
@@ -42,7 +42,7 @@ Maestro doesn't just tell you if a test passed, it provides the why:
 A good rule of thumb is that each Flow should be able to run on a completely reset device, even if you are using sequential execution.
 {% endhint %}
 
-#### Next steps
+### Next steps
 
 If you are setting up a new repository, Maestro recommends following this path:
 
