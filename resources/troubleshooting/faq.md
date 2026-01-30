@@ -1,6 +1,6 @@
 # FAQ
 
-Find answers to common Maestro questions: parameters, assertions, YAML gotchas, cloud behavior, and how to organize your tests. If you don't find your issue here, check Known issues or Bug report.
+Find answers to common Maestro questions: parameters, assertions, YAML gotchas, cloud behavior, and how to organize your tests.
 
 <details>
 
