@@ -77,4 +77,3 @@ Maestro will connect to your running emulator and execute the steps one by one. 
 5. An email is added.
 6. The contact is saved.
 
-Congratulations! You've just automated your first mobile flow with Maestro.
