@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Maestro support for GraalJS
 
 Inside Maestro test flows, you can use the GraalJS runtime to enhance interactivity with your flows and Maestro CLI, Studio, or Cloud. This document explains Maestro's support for GraalJS.

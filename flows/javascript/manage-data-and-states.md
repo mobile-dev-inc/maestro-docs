@@ -105,3 +105,9 @@ The following example copies content from a `userName` element and uses it to se
 - inputText: ${'Hello ' + maestro.copiedText} # Greets the user using the captured name
 ```
 
+### Next steps
+
+Now that you already knows how to manage data when using JavaScript in Maestro Flows, access the following guides:
+
+* [generate-synthetic-data.md](generate-synthetic-data.md "mention"): Use `faker` to create dynamic test data.
+* [make-http-requests.md](make-http-requests.md "mention"): Use the built-in HTTP client for API interactions.

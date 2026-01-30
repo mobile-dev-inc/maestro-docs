@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # JavaScript outputs
 
 While optional, it's common practice to execute JavaScript code within a flow to generate dynamic results that you can use in subsequent commands. By leveraging script execution, you can compute values, transform inputs, or perform logic, then expose the results via the shared `output` object for use elsewhere in the workflow.
