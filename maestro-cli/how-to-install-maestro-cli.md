@@ -18,8 +18,8 @@ To install the Maestro CLI, you need the following:
 
 You can install the Maestro CLI on Windows, macOS and Linux.
 
-### macOS
-
+{% tabs %}
+{% tab title="macOS" %}
 To install on macOS, you can either run:
 
 ```bash
@@ -36,34 +36,36 @@ brew install maestro
 {% hint style="warning" %}
 For macOS, ensure that your have also the last version os [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [XCode Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/) installed.
 {% endhint %}
+{% endtab %}
 
-### Windows
-
+{% tab title="Windows" %}
 To install on Windows, you can either run:
 
 ```bash
 curl -fsSL "https://get.maestro.mobile.dev" | bash
 ```
 
-Or you can install using the [releases page on GitHub](https://github.com/mobile-dev-inc/Maestro/releases). To install using the release package, follow this steps:
+Or you can install using the [releases page on GitHub](https://github.com/mobile-dev-inc/Maestro/releases). To install using the release package, follow these steps:
 
 1. [Download](https://github.com/mobile-dev-inc/maestro/releases/latest/download/maestro.zip) the latest release package.
 2. Extract the `.zip` file.
 3. Access the folder where you extracted the `.zip` file, for example `C:\Users\User\maestro`.
-4. Update your `PATH` to add the Maestro CLI environment variable. You perform this action on Powershell with the comman `setx PATH "%PATH%;C:\Users\jake\maestro\bin"` for the example folder.
+4. Update your `PATH` to add the Maestro CLI environment variable. You perform this action on Powershell with the command `setx PATH "%PATH%;C:\Users\jake\maestro\bin"` for the example folder.
 5. Run `maestro test` to connect to automatically to any USB device or local emulator.
+{% endtab %}
 
-### Linux
-
+{% tab title="Linux" %}
 To install on Linux, you can use the `cURL` command on any distribution:
 
 ```bash
 curl -fsSL "https://get.maestro.mobile.dev" | bash
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Install a specific version of Maestro CLI
 
-You can install a specific version of Maestro CLI to perform your tests. This is usefull to keep the compatibility. To install a specific version of Maestro CLI run:
+You can install a specific version of Maestro CLI to perform your tests. This is useful to keep the compatibility. To install a specific version of Maestro CLI run:
 
 ```bash
 export MAESTRO_VERSION={version}; curl -Ls "https://get.maestro.mobile.dev" | bash
@@ -78,12 +80,12 @@ export MAESTRO_VERSION=2.0.4; curl -Ls "https://get.maestro.mobile.dev" | bash
 ```
 
 {% hint style="info" %}
-To se a list of all the available version, access the [releases page on GitHub](https://github.com/mobile-dev-inc/maestro/releases).
+To see a list of all the available version, access the [releases page on GitHub](https://github.com/mobile-dev-inc/maestro/releases).
 {% endhint %}
 
 ## Upgrade the Maestro CLI
 
-To upgrade the Maestro CLI, you can run the follwing command:
+To upgrade the Maestro CLI, you can run the following command:
 
 ```bash
 curl -fsSL "https://get.maestro.mobile.dev" | bash
