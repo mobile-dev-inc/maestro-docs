@@ -73,7 +73,7 @@ maestro test contacts.yaml
 {% hint style="info" %}
 ### CLI options and commands
 
-To see all the options and commands available when using the Maestro CLI, access the [reference-for-maestro-cli.md](reference-for-maestro-cli.md "mention") documentation.
+To see all the options and commands available when using the Maestro CLI, access the [maestro-cli-commands-and-options.md](maestro-cli-commands-and-options.md "mention") documentation.
 {% endhint %}
 
 Maestro will connect to the emulator and execute the steps sequentially. You will see a live progress report in your terminal.
