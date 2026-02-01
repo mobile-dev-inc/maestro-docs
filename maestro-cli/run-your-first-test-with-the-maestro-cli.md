@@ -1,92 +1,110 @@
 # Run your first test with the Maestro CLI
 
-In this tutorial, you will write and run your first Maestro Flow using Maestro CLI. This tutorial creates a test to validate the contact creation in a Android device using the Contacts app
+In this tutorial, you will write and execute your first Maestro Flow using the CLI. You will create a test that automates the process of adding a new contact to an Android device using the native Contacts app.
 
 ### Prerequisites
 
-Before starting, ensure you have the following:
+Ensure you have the following ready before starting:
 
-* **Maestro CLI**: Installed on your machine. Access [how-to-install-maestro-cli.md](how-to-install-maestro-cli.md "mention")if it's not installed in your machine yet.&#x20;
-* **Android Studio**: Installed to manage emulators. Check the [QuickStart](https://mobile-dev-1.gitbook.io/docs-vnext/get-started/quickstart).
+* **Maestro CLI**: Installed and configured on your local machine. If not yet installed, follow the [how-to-install-maestro-cli.md](how-to-install-maestro-cli.md "mention")guide.
+* **Android Studio**: Used to manage and launch virtual devices. See the [QuickStart](https://mobile-dev-1.gitbook.io/docs-vnext/get-started/quickstart) guide.
 
 {% stepper %}
 {% step %}
 ### Start the Android emulator
 
-Maestro needs a running device to interact with. This example uses an Android Emulator for this tutorial.
+Maestro requires an active device or emulator to interact with the application UI. This example uses Android Emulator to run an emulated Android device:
 
 1. Open **Android Studio**.
-2. Go to the **Virtual Device Manager**.
+2. Navigate to the **Virtual Device Manager**.
 3. Launch a virtual device (e.g., Pixel 8 or similar).
+4. Wait for the device to appear in your home screen.
 
 <figure><img src=".gitbook/assets/run-maestro-cli-1.gif" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Create the Flow
+### Create the Flow file
 
-{% hint style="info" %}
-This tutorial uses the system's default Contacts app (`appId: com.google.android.contacts`), which comes pre-installed on standard Android emulators. You don't need to install any external app for this tutorial.
-{% endhint %}
+A Flow is a YAML file containing the commands Maestro executes. For this tutorial, we will use the system's default Contacts app (`com.google.android.contacts`), which is pre-installed on standard Android emulators:
 
-A Flow in Maestro is a YAML file that contains all the instruction Maestro must execute to complete the test. For more information about how to create Flows, access the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/ "mention")documentation. For this example, follow the steps:
-
-1. Create a new file named `contacts.yaml` in your working directory.
-2. Copy and paste the following content into the file:
+1. Create a new directory for your test and navigate into it.
+2. Create a file named `contacts.yaml`.
+3. Copy and paste the following content:
 
 ```yaml
 appId: com.google.android.contacts
 ---
 - launchApp:
-    clearState: true
-- startRecording: recording   
-- tapOn: Allow
+    clearState: true              # Resets the app to a fresh state before starting
+- startRecording: recording       # Starts capturing a video of the execution
+- tapOn: "Allow"                  # Handles system permission dialog if it appears
 - tapOn: Create contact
 - tapOn: First name
-- inputRandomPersonName
+- inputRandomPersonName           # Generates and types a realistic first name
 - tapOn: Last name
-- inputRandomPersonName
+- inputRandomPersonName           # Generates and types a realistic last name
 - tapOn: Company
 - inputText: Maestro
 - tapOn: "+1"
 - inputText: 111-111-1111
 - tapOn: Save
-- back
-- stopRecording
+- back                            # Returns to the main contact list
+- stopRecording                   # Saves the video file
 ```
+
+{% hint style="info" %}
+If you don't know to create and structure Flows, access the [specific documentation](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/).
+{% endhint %}
 {% endstep %}
 
 {% step %}
 ### Run the Flow
 
-Now, let's see Maestro in action.
+With the emulator running and your YAML file ready, you can now execute the test:
 
 1. Open your terminal.
-2. Navigate to the directory where you saved `contacts.yaml`.
-3. Run the following command:
+2. Run the following command:
 
 ```bash
 maestro test contacts.yaml
 ```
 
-Maestro will start running the test. At the end your terminal should show that all steps were executed sucessufully.
+{% hint style="info" %}
+### CLI options and commands
+
+To see all the options and commands available when using the Maestro CLI, access the [reference-for-maestro-cli.md](reference-for-maestro-cli.md "mention") documentation.
+{% endhint %}
+
+Maestro will connect to the emulator and execute the steps sequentially. You will see a live progress report in your terminal.
 
 <figure><img src=".gitbook/assets/cli-running-test.png" alt=""><figcaption></figcaption></figure>
 
-Maestro will connect to your running emulator and execute the steps one by one. You should see:
+{% hint style="info" %}
+#### What happens during execution:
 
-1. Maestro start recording the scrren and the Contacts app opens.
-2. A new contact form is opened.
-3. Random names and a phone number are typed in.
-4. The contact is saved.
-5. After displaying the saved contact info, the `back` command is used to return to the full contact list
-6. to finish, maestro stop recording the screen and a file `recording.mp4` is saved in the same directory as the `contacts.yaml` file.
+1. Maestro begins capturing the screen.
+2. The Contacts app opens and resets any existing state.
+3. Maestro identifies fields by their text or accessibility labels and inputs names and phone numbers.
+4. The contact is saved, and the app navigates back to the list view.
+5. The recording stops, and a file named `recording.mp4` is saved to your directory.
+{% endhint %}
 {% endstep %}
 {% endstepper %}
 
-### Outcome
+### Final Outcome
 
-After following the above steps, you should have a file`recording.mp4` is saved displaying the complete process, as the one below:
+Once the test completes, check your folder for the `recording.mp4` file. It should display the automated process exactly as seen in the example below:
 
 <figure><img src=".gitbook/assets/running-cli-example-maestro.gif" alt="" width="270"><figcaption></figcaption></figure>
 
+### Next steps
+
+Now that you have executed your first Flow, you are ready to explore the deeper capabilities of Maestro:
+
+* [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/flow-control-and-logic-overview): Learn how to build resilient, intelligent journeys by utilizing modular subflows, conditional execution, and repetitive loops to handle complex app states.
+* [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors): Learn how Maestro identify UI elements when testing your app.
+* [JavaScript](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview): Learn how to use JavaScript to extend your YAML logic.
+* [Workspace management](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/workspace-management-overview): Learn how to organize your test suite for larger projects.
+
+\-
