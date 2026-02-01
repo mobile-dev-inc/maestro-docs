@@ -1,50 +1,66 @@
 # Known issues
 
-Use this page to quickly find known limitations and their workarounds when debugging Maestro tests. Issues are grouped by **cross-platform**, **Android**, and **iOS**. To report something not listed here, see [Bug report](bug-report.md).
+Use this page to quickly find known limitations and their workarounds when debugging Maestro tests. Issues are grouped by cross-platform, Android, and iOS.&#x20;
+
+{% hint style="info" %}
+#### Report a new bug
+
+If you found a bug not listed in this page, [report it here](bug-report.md).
+{% endhint %}
 
 ### Cross-platform
 
-#### App does not launch
+<details>
 
-* **What you see:** The app does not start; Maestro may report that the app is not installed or the `appId` is wrong. The correct identifier depends on the app type.
+<summary>App does not launch</summary>
 
+#### What is happening
 
+The app does not start. Maestro may report that the app is not installed or the `appId` is wrong. The correct identifier depends on the app type.
 
-* **How to find the app ID:**
+#### How to find the `appId`
 
-{% tabs %}
-{% tab title="Android" %}
-1. Run `adb shell pm list packages` to list installed packages.
-2. Search for the app ID or filter by name: `adb shell pm list packages | grep <name>`
-{% endtab %}
+To find the `appId` on Android, do the following:
 
-{% tab title="iOS" %}
-1. Run `xcrun simctl listapps booted | grep CFBundleIdentifier` to list installed apps.
-2. Search for the app ID or filter by name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`
-{% endtab %}
-{% endtabs %}
+* Run `adb shell pm list packages` to list installed packages.
+* Search for the `appId` or filter by name using `adb shell pm list packages | grep <name>`, replacing `<name>` with the desired app name.
 
-#### Maestro is not compatible with all Java versions
+On iOS, do the following:
 
-* **What you see:** Maestro may fail or behave unexpectedly with very old or very new Java versions.
+* Run `xcrun simctl listapps booted | grep CFBundleIdentifier` to list installed apps.
+* Search for the app ID or filter by name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`, replacing `<name>` with the desired app name.
 
+</details>
 
+<details>
 
-* **What to do:** Use **jenv** or **sdkman** to manage multiple Java versions. See the [Maestro guide on installing and using sdkman](https://www.youtube.com/watch?v=yR7BGMjK0vM).
+<summary>Maestro is not compatible with all Java versions</summary>
+
+#### What is happening
+
+Maestro may fail or behave unexpectedly with very old or very new Java versions.
+
+#### **Workaround**
+
+Use **jenv** or **sdkman** to manage multiple Java versions. See the [Maestro guide on installing and using sdkman](https://www.youtube.com/watch?v=yR7BGMjK0vM).
+
+</details>
 
 ### Android
 
-Issues that affect Maestro when testing Android apps.
+Below you find all the known issues that affect Maestro when testing Android apps.
 
 <details>
 
 <summary>Text input is not supported for Unicode</summary>
 
-* **What you see:** `inputText` does not work as expected when the text contains non-ASCII characters.
+#### What is happening
 
+When testing Android apps, the [`inputText`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext) does not work as expected when the text contains non-ASCII characters.
 
+#### **Limitation**
 
-* **Limitation:** On Android, only ASCII characters are supported. Follow [this GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/146) for updates.
+On Android, only ASCII characters are supported. Follow [this GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/146) for updates.
 
 </details>
 
@@ -52,11 +68,13 @@ Issues that affect Maestro when testing Android apps.
 
 <summary>Accidental double-tap</summary>
 
-* **What you see:** `tapOn` sometimes triggers a second tap when the UI hierarchy does not change after the first tap.
+#### What is happening
 
+When testing Android apps, [`tapOn`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/tapon) sometimes triggers a second tap when the UI hierarchy does not change after the first tap.
 
+#### **Workaround**
 
-* **Workaround:** Disable retry by setting `retryTapIfNoChange: false`:
+Disable the retry by setting `retryTapIfNoChange: false`:
 
 ```yaml
 - tapOn:
@@ -70,11 +88,24 @@ Issues that affect Maestro when testing Android apps.
 
 <summary>Unable to clear state</summary>
 
-* **What you see:** On a real device, you get `(Unable to clear state for app <package>)` when using `clearState` or `launchApp` with `clearState: true`.
+#### What is happening
 
+When testing on a real Android device, you get `(Unable to clear state for app <package>)` when running:
 
+```yaml
+- clearState
+```
 
-* **Workaround:** This is common on some physical devices (for example, Oppo).
+or
+
+```yaml
+- launchApp
+   clearState: true
+```
+
+#### **Workaround**
+
+This is common on some physical devices from Oppo. The workaround is to return to the Developer Settings where ADB Debugging was enabled:
 
 1. Open **Developer Settings** (where you enabled ADB debugging).
 2. Disable **Verify apps over USB**.
@@ -86,14 +117,15 @@ Issues that affect Maestro when testing Android apps.
 
 <summary>WebView elements cannot be seen by Maestro</summary>
 
-* **What you see:** Maestro does not find elements inside a WebView; assertions or taps on web content fail.
+#### What is happening
 
+In some cases, web content rendered inside a WebView may not be fully accessible through the OS-native accessibility APIs that Maestro relies on. When this happens, Maestro may have difficulty accurately detecting or interacting with elements on the page.
 
+#### **Workaround**
 
-* **Workaround:** Add `androidWebViewHierarchy: devtools` at the top of your flow so Maestro can use Chrome DevTools to understand the WebView:
+Enable WebView hierarchy inspection via Chrome DevTools. Add `androidWebViewHierarchy: devtools` at the top of your flow file to allow Maestro to use Chrome’s DevTools to better understand and interact with the on-screen web content.
 
 ```yaml
-appId: com.example
 androidWebViewHierarchy: devtools
 ---
 - tapOn: "Open WebView"
@@ -101,27 +133,28 @@ androidWebViewHierarchy: devtools
 ```
 
 {% hint style="info" %}
-Support for \`androidWebViewHierarchy: devtools\` in Maestro Studio Desktop is still to come.
+Support for `androidWebViewHierarchy` in Maestro Studio Desktop is not yet available
 {% endhint %}
 
 </details>
 
-***
-
 ### iOS
 
-Issues that affect Maestro when testing iOS apps.
+Below you find all the known issues that affect Maestro when testing iOS apps.
 
 <details>
 
 <summary><code>hideKeyboard</code> command is flaky</summary>
 
-* **What you see:** The `hideKeyboard` command does not always dismiss the keyboard.
-  * **Why:** iOS has no native API to hide the keyboard. Maestro tries to dismiss it by scrolling from the center of the screen, which is not always reliable.
+#### What is happening
 
+The `hideKeyboard` command does not always dismiss the keyboard.
 
+iOS has no native API to hide the keyboard. Maestro tries to dismiss it by scrolling from the center of the screen, which is not always reliable.
 
-* **Workaround:** Use `tapOn` with the `point` parameter on a non-tappable area of the screen (for example, above or beside the keyboard), the same way a user would tap to dismiss it.
+#### **Workaround**
+
+Use `tapOn` with the `point` parameter on a non-tappable area of the screen (for example, above or beside the keyboard), the same way a user would tap to dismiss it.
 
 </details>
 
@@ -129,31 +162,33 @@ Issues that affect Maestro when testing iOS apps.
 
 <summary>Lists that fetch data on scroll ( <code>UITableView / UICollectionView</code> )</summary>
 
-* **What you see:** Lists with pagination load data at the wrong time, hang, or break the flow when tested with Maestro.
-  * **Why:** A bug in XCTest causes `willDisplayCell` to be called when UI test APIs are used. Maestro uses XCTest, so it can trigger this and break your pagination logic.
+#### What is happening
 
+Apps that implement pagination (i.e., fetching data as the user scrolls) inside `UITableView` or `UICollectionView` can exhibit unexpected behavior when tested with Maestro. This may include data being fetched at unintended times, lists appearing to hang, or user flows breaking during test execution.
 
+This issue is caused by a bug in the XCTest framework where the `UITableView` / `UICollectionView` `willDisplayCell` method is triggered whenever UI test APIs are invoked. Because Maestro relies on XCTest APIs under the hood, these unintended `willDisplayCell` calls can interfere with pagination logic and lead to flaky or incorrect behavior in affected apps.
 
-* **Workaround:** In `willDisplayCell`, only run your load logic when the cell is actually visible. Use `UITableView.indexPathsForVisibleRows` or `UICollectionView.indexPathsForVisibleItems` and confirm the current `indexPath` is in that set before fetching:
+#### **Workaround**
+
+In `willDisplayCell`, only run your load logic when the cell is actually visible. Use `UITableView.indexPathsForVisibleRows` or `UICollectionView.indexPathsForVisibleItems` and confirm the current `indexPath` is in that set before fetching:
 
 ```swift
-// Implement in a class conforming to UITableViewDelegate.
-// For UICollectionView, use collectionView(_:willDisplay:forItemAt:) from UICollectionViewDelegate.
+// This function should be implemented in a class conforming to UITableViewDelegate
+// in case of UICollectionView `collectionView(_:willDisplay:forItemAt:)` from
+// UICollectionViewDelegate should be used
 func tableView(_ tableView: UITableView,
-               willDisplay cell: UITableViewCell,
-               forRowAt indexPath: IndexPath) {
+                   willDisplay cell: UITableViewCell,
+                   forRowAt indexPath: IndexPath) {
+  // additional check whether the cell is currently visible or not is needed
+  // to make sure calls caused by XCTest or other random tableView reloads
+  // do not unintentional data fetch request
   guard let visibleIndexPaths = tableView.indexPathsForVisibleRows,
-        visibleIndexPaths.contains(indexPath) else { return }
-  // Add your existing visibility or load conditions here, then fetch data.
+            visibleIndexPaths.contains(indexPath),
+            <additional checks that were previosly there> else { return }
+        
   print("load new data..")
 }
 ```
 
 </details>
 
-***
-
-### Related Content
-
-* [FAQ](faq.md): Common questions and answers.
-* [Bug report](bug-report.md): How to report a new issue.
