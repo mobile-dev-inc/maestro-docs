@@ -5,7 +5,7 @@ Use this page to quickly find known limitations and their workarounds when debug
 {% hint style="info" %}
 #### Report a new bug
 
-If you found a bug not listed in this page, [report it here](bug-report.md).
+If you find a bug that is not listed on this page, [report it here](bug-report.md).
 {% endhint %}
 
 ### Cross-platform
@@ -16,19 +16,19 @@ If you found a bug not listed in this page, [report it here](bug-report.md).
 
 #### What is happening
 
-The app does not start. Maestro may report that the app is not installed or the `appId` is wrong. The correct identifier depends on the app type.
+The app does not start. Maestro may report that the app is not installed or that the `appId` is incorrect. The correct identifier depends on the app type.
 
 #### How to find the `appId`
 
-To find the `appId` on Android, do the following:
+To find the `appId` on Android:
 
 * Run `adb shell pm list packages` to list installed packages.
 * Search for the `appId` or filter by name using `adb shell pm list packages | grep <name>`, replacing `<name>` with the desired app name.
 
-On iOS, do the following:
+On iOS:
 
 * Run `xcrun simctl listapps booted | grep CFBundleIdentifier` to list installed apps.
-* Search for the app ID or filter by name: `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`, replacing `<name>` with the desired app name.
+* Search for the app ID or filter by name using `xcrun simctl listapps booted | grep CFBundleIdentifier | grep <name>`, replacing `<name>` with the desired app name.
 
 </details>
 
@@ -38,7 +38,7 @@ On iOS, do the following:
 
 #### What is happening
 
-Maestro may fail or behave unexpectedly with very old or very new Java versions.
+Maestro may fail or behave unexpectedly when used with very old or very new Java versions.
 
 #### **Workaround**
 
@@ -48,7 +48,7 @@ Use **jenv** or **sdkman** to manage multiple Java versions. See the [Maestro gu
 
 ### Android
 
-Below you find all the known issues that affect Maestro when testing Android apps.
+Below are the known issues that affect Maestro when testing Android apps.
 
 <details>
 
@@ -56,7 +56,7 @@ Below you find all the known issues that affect Maestro when testing Android app
 
 #### What is happening
 
-When testing Android apps, the [`inputText`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext) does not work as expected when the text contains non-ASCII characters.
+When testing Android apps, the [`inputText`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext) command does not work as expected when the input contains non-ASCII characters.
 
 #### **Limitation**
 
@@ -70,11 +70,11 @@ On Android, only ASCII characters are supported. Follow [this GitHub issue](http
 
 #### What is happening
 
-When testing Android apps, [`tapOn`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/tapon) sometimes triggers a second tap when the UI hierarchy does not change after the first tap.
+When testing Android apps, [`tapOn`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/tapon) may trigger a second tap if the UI hierarchy does not change after the first tap.
 
 #### **Workaround**
 
-Disable the retry by setting `retryTapIfNoChange: false`:
+Disable the retry behavior by setting `retryTapIfNoChange: false`:
 
 ```yaml
 - tapOn:
@@ -90,7 +90,7 @@ Disable the retry by setting `retryTapIfNoChange: false`:
 
 #### What is happening
 
-When testing on a real Android device, you get `(Unable to clear state for app <package>)` when running:
+When testing on a physical Android device, you may see the error `(Unable to clear state for app <package>)` when running:
 
 ```yaml
 - clearState
@@ -105,7 +105,7 @@ or
 
 #### **Workaround**
 
-This is common on some physical devices from Oppo. The workaround is to return to the Developer Settings where ADB Debugging was enabled:
+This issue is common on some physical devices from Oppo. To resolve it, return to the Developer Settings where ADB debugging was enabled:
 
 1. Open **Developer Settings** (where you enabled ADB debugging).
 2. Disable **Verify apps over USB**.
@@ -119,7 +119,7 @@ This is common on some physical devices from Oppo. The workaround is to return t
 
 #### What is happening
 
-In some cases, web content rendered inside a WebView may not be fully accessible through the OS-native accessibility APIs that Maestro relies on. When this happens, Maestro may have difficulty accurately detecting or interacting with elements on the page.
+In some cases, web content rendered inside a WebView may not be fully accessible through the OS-native accessibility APIs that Maestro relies on. As a result, Maestro may have difficulty detecting or interacting with elements on the page.
 
 #### **Workaround**
 
@@ -140,7 +140,7 @@ Support for `androidWebViewHierarchy` in Maestro Studio Desktop is not yet avail
 
 ### iOS
 
-Below you find all the known issues that affect Maestro when testing iOS apps.
+Below are the known issues that affect Maestro when testing iOS apps.
 
 <details>
 
@@ -150,11 +150,11 @@ Below you find all the known issues that affect Maestro when testing iOS apps.
 
 The `hideKeyboard` command does not always dismiss the keyboard.
 
-iOS has no native API to hide the keyboard. Maestro tries to dismiss it by scrolling from the center of the screen, which is not always reliable.
+iOS does not provide a native API to hide the keyboard. Maestro attempts to dismiss it by scrolling from the center of the screen, which is not always reliable.
 
 #### **Workaround**
 
-Use `tapOn` with the `point` parameter on a non-tappable area of the screen (for example, above or beside the keyboard), the same way a user would tap to dismiss it.
+Use `tapOn` with the `point` parameter to tap on a non-tappable area of the screen (for example, above or beside the keyboard), mimicking how a user would dismiss it.
 
 </details>
 
@@ -164,13 +164,13 @@ Use `tapOn` with the `point` parameter on a non-tappable area of the screen (for
 
 #### What is happening
 
-Apps that implement pagination (i.e., fetching data as the user scrolls) inside `UITableView` or `UICollectionView` can exhibit unexpected behavior when tested with Maestro. This may include data being fetched at unintended times, lists appearing to hang, or user flows breaking during test execution.
+Apps that implement pagination (that is, fetching data as the user scrolls) inside `UITableView` or `UICollectionView` may exhibit unexpected behavior when tested with Maestro. This can include data being fetched at unintended times, lists appearing to hang, or user flows breaking during test execution.
 
-This issue is caused by a bug in the XCTest framework where the `UITableView` / `UICollectionView` `willDisplayCell` method is triggered whenever UI test APIs are invoked. Because Maestro relies on XCTest APIs under the hood, these unintended `willDisplayCell` calls can interfere with pagination logic and lead to flaky or incorrect behavior in affected apps.
+This behavior is caused by a bug in the XCTest framework where the `willDisplayCell` method of `UITableView` / `UICollectionView` is triggered whenever UI test APIs are invoked. Because Maestro relies on XCTest under the hood, these unintended calls can interfere with pagination logic and lead to flaky or incorrect behavior.
 
 #### **Workaround**
 
-In `willDisplayCell`, only run your load logic when the cell is actually visible. Use `UITableView.indexPathsForVisibleRows` or `UICollectionView.indexPathsForVisibleItems` and confirm the current `indexPath` is in that set before fetching:
+In `willDisplayCell`, ensure that data-loading logic runs only when the cell is actually visible. Use `UITableView.indexPathsForVisibleRows` or `UICollectionView.indexPathsForVisibleItems` and verify that the current `indexPath` is included before fetching data:
 
 ```swift
 // This function should be implemented in a class conforming to UITableViewDelegate

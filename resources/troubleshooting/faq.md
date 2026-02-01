@@ -6,13 +6,13 @@ Find answers to common Maestro questions: parameters, assertions, YAML gotchas, 
 
 <summary>How can I use the same flow when my apps have different app IDs?</summary>
 
-Use an external parameter for `appId` and pass it when you run Maestro. For example, pass `APP_ID`:
+Use an [external parameter](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) for `appId` and pass it when you run Maestro. For example, pass `APP_ID` when testing with the Maestro CLI:
 
 ```bash
 maestro test -e APP_ID=your.app.id file.yaml
 ```
 
-In your flow, refer to it with `${APP_ID}`:
+In your Flow, refer to it with `${APP_ID}`:
 
 ```yaml
 appId: ${APP_ID}
@@ -38,7 +38,7 @@ Maestro treats `$` as the start of a variable. Escape the dollar so it is treate
 
 <summary>How do I compare two values?</summary>
 
-To assert on values that appear on different screens, store each value in a variable with `copyTextFrom` and `evalScript`, then compare in a `runFlow` with a `when` condition:
+To assert on values that appear on different screens, store each value in a variable with [`copyTextFrom`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/copytextfrom) and [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript), then compare in a `runFlow` with a `when` condition:
 
 ```yaml
 # Navigate to first value, then:
@@ -65,21 +65,23 @@ To assert on values that appear on different screens, store each value in a vari
 
 <summary>How do I generate a random number?</summary>
 
-Maestro has commands for random strings and names, but not for random numbers. Use JavaScript (for example with `runScript`) to generate a number in the range you need.
+Maestro provides commands for generating random strings and names, but it does not include a built-in command for generating random numbers. To generate a random number, you can use JavaScript via [`runScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runscript).
 
-**Script (e.g. `randomNumber.js`):**
+The following example shows how to create a script (`randomNumber.js`) that generates an 8-digit random number:
 
 ```javascript
 // Generate an 8-digit random number
 output.randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
 ```
 
-**Flow:**
+To use this value in your flow, run the script to populate the [`output`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/manage-data-and-states) object, then reference it in a JavaScript expression using [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript):
 
 ```yaml
 - runScript: ../scripts/randomNumber.js
 - evalScript: ${EMAIL = "maestro+" + output.randomNumber + "@domain.com"}
 ```
+
+This assigns the generated value to the Maestro variable `EMAIL`, which can be reused later in the flow.
 
 </details>
 
@@ -87,7 +89,7 @@ output.randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
 
 <summary>Why does YES get translated to true, and NO to false?</summary>
 
-If you use `tapOn: YES` or `tapOn: NO`, Maestro may treat them as booleans and look for the text `"true"` or `"false"`:
+If you use `tapOn: YES` or `tapOn: NO`, Maestro may interpret them as booleans and attempt to find the text `"true"` or `"false"` instead:
 
 ```yaml
 appId: com.example
@@ -96,15 +98,22 @@ appId: com.example
 - tapOn: YES
 ```
 
-You can get an error like:
+You may see an error like:
 
-```plaintext
+```bash
+ ║  > Flow: flow                         
+ ║                                       
+ ║    ❌   Tap on "true"                 
+ ║                                       
+                                         
 Element not found: Text matching regex: true
+
+Element with Text matching regex: true not found. Check the UI hierarchy in debug artifacts to verify if the element exists.
 ```
 
-This comes from YAML: the [YAML specification](https://yaml.org/type/bool.html) allows booleans to be written as `true`/`false`, `yes`/`no`, `on`/`off`, or `Y`/`N` (and various casings). So unquoted `YES` and `NO` are parsed as booleans.
+This behavior comes from YAML itself. The [YAML specification](https://yaml.org/type/bool.html) allows booleans to be written as `true`/`false`, `yes`/`no`, `on`/`off`, or `Y`/`N` (in various casings). As a result, unquoted `YES` and `NO` are parsed as booleans.
 
-**Fix:** Force the literal text by quoting, or use a regex:
+To work around this, force the value to be treated as literal text by quoting it, or use a regular expression:
 
 ```yaml
 - tapOn: "YES"
@@ -122,81 +131,7 @@ The cloud environment prioritizes reliability and repeatability: each device is 
 To reduce total run time:
 
 * Add more parallel runners.
-* Restructure tests into fewer, longer flows—without sacrificing reliability or useful failure information.
+* Restructure tests into fewer, longer flows, without sacrificing reliability or useful failure information.
 
 </details>
 
-<details>
-
-<summary>How do I organize my repository for Maestro tests?</summary>
-
-Many teams keep Maestro tests next to their app code so that a given build has the right tests and branches can evolve flows and features together. Two common ways to lay out flows:
-
-**Journeys:** Group flows by user journey (e.g. new vs existing users). Start with a single `flows` folder and add subfolders when needed:
-
-```
-├── flows
-│   ├── config.yaml
-│   ├── login.yaml
-│   ├── register.yaml
-│   └── shopping.yaml
-└── src
-    └── app
-        └── <app code>
-```
-
-As the suite grows, you can split by journey and add shared utils:
-
-```
-├── flows
-│   ├── config.yaml
-│   ├── tests
-│   │   ├── new_users
-│   │   │   ├── register.yaml
-│   │   │   └── shopping_first_time_discount.yaml
-│   │   └── existing_users
-│   │       ├── login.yaml
-│   │       ├── shopping.yaml
-│   │       └── ...
-│   └── utils
-│       └── set_discount_code.js
-└── src
-    └── app
-        └── <app code>
-```
-
-You can set inclusion patterns in `config.yaml` so only the tests you want are run (see Test discovery and tags).
-
-**Features:** Mirror your app’s feature structure so flows are easy to find and maintain:
-
-```
-├── flows
-│   ├── config.yaml
-│   ├── account
-│   │   └── set_display_name.yaml
-│   ├── auth
-│   │   ├── login.yaml
-│   │   ├── login_invalid.yaml
-│   │   └── login_locked_account.yaml
-│   ├── basket
-│   │   ├── add_to_cart.yaml
-│   │   └── update_cart.yaml
-│   └── checkout
-│       ├── complete_purchase.yaml
-│       └── save_for_later.yaml
-└── src
-    └── app
-        ├── account
-        ├── auth
-        ├── basket
-        └── checkout
-```
-
-Choose the structure that fits how you think about and run your tests.
-
-</details>
-
-### Related content
-
-* [Known issues](known-issues.md): Known limitations and workarounds.
-* [Bug report](bug-report.md): How to report a new issue.
