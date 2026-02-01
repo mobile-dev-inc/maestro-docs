@@ -35,24 +35,25 @@ A Flow in Maestro is a YAML file that contains all the instruction Maestro must 
 2. Copy and paste the following content into the file:
 
 ```yaml
-appId: com.android.contacts
+appId: com.google.android.contacts
 ---
-- launchApp
-- tapOn: "Create new contact"
-- tapOn: "First name"
+- launchApp:
+    clearState: true
+- startRecording: recording   
+- tapOn: Allow
+- tapOn: Create contact
+- tapOn: First name
 - inputRandomPersonName
-- tapOn: "Last name"
+- tapOn: Last name
 - inputRandomPersonName
-- tapOn: "Phone"
-- inputRandomNumber:
-    length: 10
+- tapOn: Company
+- inputText: Maestro
+- tapOn: "+1"
+- inputText: 111-111-1111
+- tapOn: Save
 - back
-- tapOn: "Email"
-- inputRandomEmail
-- tapOn: "Save"
+- stopRecording
 ```
-
-The Flow starts the Contacts app, start recording the screen, creates the contact, return to the contact list and stop the recording.&#x20;
 {% endstep %}
 
 {% step %}
@@ -70,20 +71,22 @@ maestro test contacts.yaml
 
 Maestro will start running the test. At the end your terminal should show that all steps were executed sucessufully.
 
-<figure><img src=".gitbook/assets/cli.png" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-{% endstepper %}
-
-
-
-### Outcome
+<figure><img src=".gitbook/assets/cli-running-test.png" alt=""><figcaption></figcaption></figure>
 
 Maestro will connect to your running emulator and execute the steps one by one. You should see:
 
-1. The Contacts app opens.
+1. Maestro start recording the scrren and the Contacts app opens.
 2. A new contact form is opened.
 3. Random names and a phone number are typed in.
-4. The keyboard is dismissed (via the `back` command).
-5. An email is added.
-6. The contact is saved.
+4. The contact is saved.
+5. After displaying the saved contact info, the `back` command is used to return to the full contact list
+6. to finish, maestro stop recording the screen and a file `recording.mp4` is saved in the same directory as the `contacts.yaml` file.
+{% endstep %}
+{% endstepper %}
+
+### Outcome
+
+After following the above steps, you should have a file`recording.mp4` is saved displaying the complete process, as the one below:
+
+<figure><img src=".gitbook/assets/running-cli-example-maestro.gif" alt="" width="270"><figcaption></figcaption></figure>
 
