@@ -230,5 +230,5 @@ Run `maestro --help` to verify that the Maestro CLI is working properly.
 
 Now that the Maestro CLI is installed on your system, it’s time to run your first app test. Follow the [run-your-first-test-with-the-maestro-cli.md](../run-your-first-test-with-the-maestro-cli.md "mention") guide to get started.
 
-If you need to update the CLI or install a specific Maestro CLI version, see the [update-the-maestro-cli.md](update-the-maestro-cli.md "mention") and [install-a-specific-maestro-cli-version.md](install-a-specific-maestro-cli-version.md "mention") guides.
+If you need to update the CLI or install a specific Maestro CLI version, check the [update-the-maestro-cli.md](update-the-maestro-cli.md "mention") guide.
 
