@@ -8,4 +8,4 @@
 * [Maestro CLI commands and options](maestro-cli-commands-and-options.md)
 * [How to Setup Maestro with WSL2](how-to-setup-maestro-with-wsl2.md)
 * [Install Android on WSL2](install-android-on-wsl2.md)
-* [Troubleshooting](troubleshooting.md)
+* [Troubleshooting: WSL2 and Android Connections](troubleshooting-wsl2-and-android-connections.md)
