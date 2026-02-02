@@ -56,6 +56,14 @@ appId: com.google.android.contacts
 {% hint style="info" %}
 If you don't know to create and structure Flows, access the [specific documentation](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/).
 {% endhint %}
+
+{% hint style="info" %}
+#### Download and use Maestro samples
+
+The Maestro CLI provides the `download-samples` command, which lets you download a curated collection of Flow files to help you learn Maestro. Use these samples to explore examples and understand how different Maestro features work in practice.
+
+To use this command, run `maestro doenload-samples`.
+{% endhint %}
 {% endstep %}
 
 {% step %}
