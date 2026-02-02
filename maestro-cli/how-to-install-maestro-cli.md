@@ -33,6 +33,8 @@ brew tap mobile-dev-inc/tap
 brew install maestro
 ```
 
+Run `maestro --help` to verify that the Maestro CLI is working properly.
+
 {% hint style="warning" %}
 For macOS, ensure that your have also the last version os [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [XCode Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/) installed.
 {% endhint %}
@@ -47,11 +49,20 @@ curl -fsSL "https://get.maestro.mobile.dev" | bash
 
 Or you can install using the [releases page on GitHub](https://github.com/mobile-dev-inc/Maestro/releases). To install using the release package, follow these steps:
 
-1. [Download](https://github.com/mobile-dev-inc/maestro/releases/latest/download/maestro.zip) the latest release package.
-2. Extract the `.zip` file.
-3. Access the folder where you extracted the `.zip` file, for example `C:\Users\User\maestro`.
-4. Update your `PATH` to add the Maestro CLI environment variable. You perform this action on Powershell with the command `setx PATH "%PATH%;C:\Users\jake\maestro\bin"` for the example folder.
-5. Run `maestro test` to connect to automatically to any USB device or local emulator.
+1. Download the latest [maestro.zip](https://github.com/mobile-dev-inc/maestro/releases/latest/download/maestro.zip).
+2. Extract the content to a stable location (e.g., `C:maestro`).
+3.  Update your `PATH` to add the Maestro CLI environment variable. Run the following in PowerShell to add the Maestro `bin` folder to your environment variables:<br>
+
+    ```powershell
+    setx PATH "%PATH%;C:\maestro\bin"
+    ```
+4. Restart your terminal to apply changes.
+
+Run `maestro --help` to verify that the Maestro CLI is working properly.
+{% endtab %}
+
+{% tab title="Windows (WSL)" %}
+
 {% endtab %}
 
 {% tab title="Linux" %}
@@ -60,6 +71,8 @@ To install on Linux, you can use the `cURL` command on any distribution:
 ```bash
 curl -fsSL "https://get.maestro.mobile.dev" | bash
 ```
+
+Run `maestro --help` to verify that the Maestro CLI is working properly.
 {% endtab %}
 {% endtabs %}
 
