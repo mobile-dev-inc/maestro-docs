@@ -2,7 +2,7 @@
 
 Maestro also provides you with the option to use the CLI by terminal. This document will cover the installation of Maestro CLI on the three operational system supported: macOS, Windows and Linux.
 
-## Prerequisites
+### Prerequisites
 
 To install the Maestro CLI, you need the following:
 
@@ -14,7 +14,7 @@ To install the Maestro CLI, you need the following:
 - To verify the version os your Java installation, run `java --version`.
 {% endhint %}
 
-## Installation
+### Installation
 
 You can install the Maestro CLI on Windows, macOS and Linux.
 
@@ -226,7 +226,7 @@ Run `maestro --help` to verify that the Maestro CLI is working properly.
 {% endtab %}
 {% endtabs %}
 
-## Install a specific version of Maestro CLI
+### Install a specific version of Maestro CLI
 
 You can install a specific version of Maestro CLI to perform your tests. This is useful to keep the compatibility. To install a specific version of Maestro CLI run:
 
@@ -246,7 +246,7 @@ export MAESTRO_VERSION=2.0.4; curl -Ls "https://get.maestro.mobile.dev" | bash
 To see a list of all the available version, access the [releases page on GitHub](https://github.com/mobile-dev-inc/maestro/releases).
 {% endhint %}
 
-## Upgrade the Maestro CLI
+### Upgrade the Maestro CLI
 
 To upgrade the Maestro CLI, you can run the following command:
 
@@ -255,3 +255,8 @@ curl -fsSL "https://get.maestro.mobile.dev" | bash
 ```
 
 This will upgrade the Maestro CLI to latest version available.
+
+### Next steps
+
+Now that you Maestro CLI is installed in your system, it's time to test your first APP. Check the [run-your-first-test-with-the-maestro-cli.md](run-your-first-test-with-the-maestro-cli.md "mention") guide to take the next step.
+
