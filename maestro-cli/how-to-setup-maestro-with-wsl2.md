@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # How to Setup Maestro with WSL2
 
 Maestro studio allows your to use WSL2 when using Windows.

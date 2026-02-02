@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Install Android on WSL2
 
 You can use the Android development kit with WSL2 and Mestro.

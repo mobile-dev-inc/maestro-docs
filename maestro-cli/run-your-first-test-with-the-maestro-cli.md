@@ -6,7 +6,7 @@ In this tutorial, you will write and execute your first Maestro Flow using the C
 
 Ensure you have the following ready before starting:
 
-* **Maestro CLI**: Installed and configured on your local machine. If not yet installed, follow the [how-to-install-maestro-cli.md](how-to-install-maestro-cli.md "mention")guide.
+* **Maestro CLI**: Installed and configured on your local machine. If not yet installed, follow the [how-to-install-maestro-cli](how-to-install-maestro-cli/ "mention")guide.
 * **Android Studio**: Used to manage and launch virtual devices. See the [QuickStart](https://mobile-dev-1.gitbook.io/docs-vnext/get-started/quickstart) guide.
 
 {% stepper %}

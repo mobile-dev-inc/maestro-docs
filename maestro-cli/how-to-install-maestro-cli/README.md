@@ -11,7 +11,7 @@ To install the Maestro CLI, you need the following:
 {% hint style="warning" %}
 - Ensure that the `JAVA_HOME` environment variable points to your Java 17+ installation.
 - You can install Java using [Oracle JDk](https://www.oracle.com/java/technologies/downloads/), [OpenJDK](https://openjdk.org/install/) or [SDKMAN](https://sdkman.io/).
-- To verify the version os your Java installation, run `java --version`.
+- To verify the version of your Java installation, run `java --version`.
 {% endhint %}
 
 ### Installation
@@ -226,37 +226,9 @@ Run `maestro --help` to verify that the Maestro CLI is working properly.
 {% endtab %}
 {% endtabs %}
 
-### Install a specific version of Maestro CLI
-
-You can install a specific version of Maestro CLI to perform your tests. This is useful to keep the compatibility. To install a specific version of Maestro CLI run:
-
-```bash
-export MAESTRO_VERSION={version}; curl -Ls "https://get.maestro.mobile.dev" | bash
-```
-
-You have to pass the version of Maestro CLI you want to install. To do this, replace the `{version}` parameter for your desired Maestro version.
-
-For example, to install the version 2.0.4 opf Maestro CLI:
-
-```bash
-export MAESTRO_VERSION=2.0.4; curl -Ls "https://get.maestro.mobile.dev" | bash
-```
-
-{% hint style="info" %}
-To see a list of all the available version, access the [releases page on GitHub](https://github.com/mobile-dev-inc/maestro/releases).
-{% endhint %}
-
-### Upgrade the Maestro CLI
-
-To upgrade the Maestro CLI, you can run the following command:
-
-```bash
-curl -fsSL "https://get.maestro.mobile.dev" | bash
-```
-
-This will upgrade the Maestro CLI to latest version available.
-
 ### Next steps
 
-Now that you Maestro CLI is installed in your system, it's time to test your first APP. Check the [run-your-first-test-with-the-maestro-cli.md](run-your-first-test-with-the-maestro-cli.md "mention") guide to take the next step.
+Now that the Maestro CLI is installed on your system, it’s time to run your first app test. Follow the [run-your-first-test-with-the-maestro-cli.md](../run-your-first-test-with-the-maestro-cli.md "mention") guide to get started.
+
+If you need to update the CLI or install a specific Maestro CLI version, see the [update-the-maestro-cli.md](update-the-maestro-cli.md "mention") and [install-a-specific-maestro-cli-version.md](install-a-specific-maestro-cli-version.md "mention") guides.
 

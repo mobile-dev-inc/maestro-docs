@@ -6,7 +6,7 @@ The Maestro CLI is an open-source, single-binary framework designed for end-to-e
 
 To master the Maestro CLI, we suggest you explore the following path:
 
-1. [How to Install Maestro CLI](how-to-install-maestro-cli.md): Step-by-step instructions for macOS, Linux, and Windows.
+1. [How to Install Maestro CLI](how-to-install-maestro-cli/): Step-by-step instructions for macOS, Linux, and Windows.
 2. [Run your first test using the Maestro CLI](run-your-first-test-with-the-maestro-cli.md): Learn how to execute your first test using the CLI.
 3. [Reference for Maestro CLI](https://www.google.com/search?q=https://docs.maestro.dev/maestro-cli/reference): Explore all CLI commands available and their arguments.
 4. [How to Setup Maestro with WSL2](how-to-setup-maestro-with-wsl2.md): Check how to run Maestro in a Windows Subsystem for Linux environment.
@@ -27,4 +27,4 @@ Maestro is built on the philosophy of "embracing instability," providing a suite
 
 ### Next Step
 
-Learn how to get started with our [How to Install Maestro CLI](how-to-install-maestro-cli.md) guide.
+Learn how to get started with our [How to Install Maestro CLI](how-to-install-maestro-cli/) guide.
