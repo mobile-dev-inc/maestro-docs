@@ -2,7 +2,7 @@
 
 * [Maestro Cloud overview](README.md)
 * [How to run your tests on Maestro Cloud](how-to-run-your-tests-on-maestro-cloud.md)
-* [Build your app](build-your-app.md)
+* [Build your app for the cloud](build-your-app-for-the-cloud.md)
 * [CI/CD integration](ci-cd-integration/README.md)
   * [GitHub Actions](ci-cd-integration/github-actions.md)
   * [Bitrise](ci-cd-integration/bitrise.md)
