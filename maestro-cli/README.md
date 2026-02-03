@@ -1,3 +1,9 @@
+---
+description: >-
+  Maestro CLI overview: install, configure, and run mobile UI tests from your
+  terminal.
+---
+
 # Maestro CLI overview
 
 The Maestro CLI is an open-source, single-binary framework designed for end-to-end mobile and web UI testing. It allows developers and testers to define user journeys, referred to as [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/), using a simple, declarative YAML syntax.
