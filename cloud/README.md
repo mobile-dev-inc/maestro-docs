@@ -16,13 +16,22 @@ Follow these guides to set up your cloud testing environment:
 
 Maestro Cloud provides a purpose-built environment that ensures deterministic results by addressing the common causes of flakiness in mobile testing.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Device Isolation</strong></td><td>Every virtual device is wiped and recreated between tests to ensure complete isolation and repeatability.</td></tr><tr><td><strong>Flexible Configuration</strong></td><td>Customize exact environments, such as Android API levels  or specific iOS models.</td></tr><tr><td><strong>Global Testing</strong></td><td>Test localized app behavior using the <code>--device-locale</code> parameter and fixed regional timezones.</td></tr><tr><td><strong>Cross-Platform</strong></td><td>Native support for Android (Views/Compose), iOS (UIKit/SwiftUI), React Native, Flutter, and Web.</td></tr></tbody></table>
+| Capability                 | Description                                                                                               |
+| -------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Device Isolation**       | Every virtual device is wiped and recreated between tests to ensure complete isolation and repeatability. |
+| **Flexible Configuration** | Customize exact environments, such as Android API levels or specific iOS models.                          |
+| **Global Testing**         | Test localized app behavior using the `--device-locale` parameter and fixed regional timezones.           |
+| **Cross-Platform**         | Native support for Android (Views/Compose), iOS (UIKit/SwiftUI), React Native, Flutter, and Web.          |
 
 ### CI/CD and workflow integration
 
 You can integrate Maestro into your existing development lifecycle. Maestro Cloud offers native integrations with popular CI providers to automate your testing pipeline.
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Native CI Support</strong></td><td>Ready-made integrations for GitHub Actions, Bitrise, Bitbucket Pipelines, and CircleCI.</td></tr><tr><td><strong>Pull Request Integration</strong></td><td>Specifically for GitHub and GitHub Enterprise, Maestro can block merging if test failures are detected in a PR.</td></tr><tr><td><strong>Performance Optimization</strong></td><td>Reuse cached app binaries via the <code>app-binary-id</code> to skip re-uploading the application for every individual test run.</td></tr></tbody></table>
+| Feature                      | Description                                                                                                           |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Native CI Support**        | Ready-made integrations for GitHub Actions, Bitrise, Bitbucket Pipelines, and CircleCI.                               |
+| **Pull Request Integration** | Specifically for GitHub and GitHub Enterprise, Maestro can block merging if test failures are detected in a PR.       |
+| **Performance Optimization** | Reuse cached app binaries via the `app-binary-id` to skip re-uploading the application for every individual test run. |
 
 ### Next step
 
