@@ -42,7 +42,7 @@ notifications:
 
 When a Flow fails, recipients receive an email containing a summary of the test run and a link to the detailed report in the Maestro Dashboard.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Related content
 

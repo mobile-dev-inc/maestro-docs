@@ -1,2 +1,0 @@
-# Detect Maestro
-

@@ -15,7 +15,7 @@ Follow these steps to configure a webhook in the Maestro:
 3. Select the project for which you want to configure webhooks.
 4. Under **Webhook Management**, enter your webhook URL. You must provide the full URL where Maestro should send POST requests.
 
-<figure><img src="../../.gitbook/assets/set-webhook-configuration.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/set-webhook-configuration.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Ensure that your webhook endpoint can handle POST requests and is publicly accessible.
@@ -23,7 +23,7 @@ Ensure that your webhook endpoint can handle POST requests and is publicly acces
 
 If you need to authenticate webhook requests from Maestro Cloud, you can use the **Webhook Token** generated after you add the webhook URL. Use this token in your webhook endpoint as a **Bearer token** to authenticate requests from Maestro.
 
-<figure><img src="../../.gitbook/assets/webhook-token.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/webhook-token.png" alt=""><figcaption></figcaption></figure>
 
 You can update URLs or tokens, or disable an integration at any time from the settings page.
 

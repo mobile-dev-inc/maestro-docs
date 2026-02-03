@@ -1,2 +1,0 @@
-# Reuse app binary
-

@@ -8,9 +8,9 @@ By offloading device management to the cloud, teams can reduce test execution ti
 
 Follow these guides to set up your cloud testing environment:
 
-1. [How to run your tests on Maestro Cloud](maestro-cloud-documentation/run-tests-on-maestro-cloud.md): A step-by-step tutorial on prerequisites and your first cloud upload.
-2. [CI Integration](maestro-cloud-documentation/ci-cd-integration/): Detailed guides for connecting to GitHub, Bitrise, Bitbucket, CircleCI, or any generic CI platform.
-3. [Cloud Command Reference](maestro-cloud-documentation/cloud-commands.md): A technical reference for all cloud-specific CLI arguments and parameters.
+1. [How to run your tests on Maestro Cloud](run-tests-on-maestro-cloud.md): A step-by-step tutorial on prerequisites and your first cloud upload.
+2. [CI Integration](ci-cd-integration/): Detailed guides for connecting to GitHub, Bitrise, Bitbucket, CircleCI, or any generic CI platform.
+3. [Cloud Command Reference](cloud-commands.md): A technical reference for all cloud-specific CLI arguments and parameters.
 
 ### Core capabilities
 
@@ -26,4 +26,4 @@ You can integrate Maestro into your existing development lifecycle. Maestro Clou
 
 ### Next step
 
-Learn [How to run your tests on Maestro Cloud](maestro-cloud-documentation/run-tests-on-maestro-cloud.md) using the tutorial to launch your first parallel test run.
+Learn [How to run your tests on Maestro Cloud](run-tests-on-maestro-cloud.md) using the tutorial to launch your first parallel test run.

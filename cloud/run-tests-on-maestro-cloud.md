@@ -67,7 +67,7 @@ After a successful upload, the CLI prints a link to the Maestro Console.
 2. Wait a moment for the cloud environment to initialize and execute your tests.
 3. Review the test results, including videos, logs, and hierarchy data.
 
-<figure><img src="../.gitbook/assets/cloud-successful-run.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/cloud-successful-run.png" alt=""><figcaption></figcaption></figure>
 
 ### Authentication and project selection
 
