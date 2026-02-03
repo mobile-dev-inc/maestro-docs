@@ -6,10 +6,10 @@ description: >-
 
 # Configure the OS
 
-Maestro Cloud allows you to test your application across various Android and iOS versions. This ensures your app remains compatible and performs reliably across different mobile environments.
+Maestro Cloud allows you to test your application across multiple Android and iOS versions. This ensures your app remains compatible and performs reliably across different mobile environments.
 
 {% hint style="info" %}
-**Maestro Cloud Plan required.** Slack notifications are available on the [Maestro Cloud Plan](https://maestro.dev/cloud).
+**Maestro Cloud Plan required.** OS configuration options are available on the [Maestro Cloud Plan](https://maestro.dev/cloud).
 {% endhint %}
 
 ### Android
@@ -34,13 +34,13 @@ The following table lists the supported Android versions:
 
 For iOS, you can configure both the runtime version and the device model.
 
-Maestro recommends you to specify minor version and device. Use the `--device-os` and `--device-model` flags to select a specific combination:
+Maestro recommends specifying both the minor OS version and the device model. Use the `--device-os` and `--device-model` flags to select a specific combination:
 
 ```bash
 maestro cloud --device-os <DEVICE_OS> --device-model <DEVICE_MODEL> <APP_FILE> <FLOWS>
 ```
 
-The following table lists all the devices model supported and the respective iOS versions available:
+The following table lists the supported device models and their available iOS versions:
 
 | Device Model             | Supported iOS Versions       |
 | ------------------------ | ---------------------------- |
@@ -51,7 +51,7 @@ The following table lists all the devices model supported and the respective iOS
 | **iPhone-16-Pro-Max**    | iOS-18-2                     |
 | **iPad-10th-generation** | iOS-16-2, iOS-17-5, iOS-18-2 |
 
-Therefore, to run your Flows on iOS 18.2 with an iPhone 16 Pro, you would use the following commandd:
+For example, to run your flows on iOS 18.2 using an iPhone 16 Pro, use the following command:
 
 ```bash
 maestro cloud --device-os iOS-18-2 --device-model iPhone-16-Pro myapp.app myflows/
@@ -60,7 +60,9 @@ maestro cloud --device-os iOS-18-2 --device-model iPhone-16-Pro myapp.app myflow
 {% hint style="info" %}
 #### Deprecated: `--ios-version` &#x20;
 
-The `--ios-version` option will not be available anymore. Prefer to use the `--device-os` and `--device-model` flags instead.
+The `--ios-version` option is deprecated and will no longer be available. Use the `--device-os` and `--device-model` flags instead.
 
-With the `--ios-version` flag, it was possible to to specify a major version (e.g., `16`, `17`, or `18`). However, if you use this flag, Maestro Cloud will automatically run your Flow using an **iPhone 11** simulator.
+
+
+Previously, the `--ios-version` flag allowed you to specify only a major version (for example, `16`, `17`, or `18`). When using this flag, Maestro Cloud automatically runs your flows on an **iPhone 11** simulator.
 {% endhint %}
