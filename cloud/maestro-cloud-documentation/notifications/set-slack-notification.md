@@ -15,21 +15,21 @@ Follow these steps to integrate Slack with your Maestro project:
 3. Select the project for which you want to receive Slack notifications.
 4. Click **Connect Slack**.
 
-<figure><img src="../.gitbook/assets/connect-slack.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/connect-slack.png" alt=""><figcaption></figcaption></figure>
 
 5. You are redirected to Slack. Select the workspace and channel where you want to receive notifications, then click **Allow**.&#x20;
 
-<figure><img src="../.gitbook/assets/allow-access-to-slack (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/allow-access-to-slack (1).png" alt=""><figcaption></figcaption></figure>
 
 6. After authorization, you are redirected back to the Maestro Console. The integration is now enabled, and you will start receiving Slack notifications.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Receive notifications
 
 Once the integration is active, Maestro posts a message to your selected Slack channel after each upload finishes, regardless of whether the test succeeds or fails.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 You have the option to configure Maestro to share updates only from failed tests. To enable this configuration:
 
@@ -38,7 +38,7 @@ You have the option to configure Maestro to share updates only from failed tests
 3. Select the project you want to configure.
 4. Enable **Send notifications for failed flows only**.
 
-<figure><img src="../.gitbook/assets/slack-failed-tests-only.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slack-failed-tests-only.png" alt=""><figcaption></figcaption></figure>
 
 ### Manage the integration
 
