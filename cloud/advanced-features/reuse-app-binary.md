@@ -34,9 +34,9 @@ This tells Maestro to skip the binary re-upload and go straight to execution.
 
 #### Named parameters
 
-While Maestro supports positional parameters for quick commands, using named parameters is highly recommended for clarity and reliability, especially in CI/CD scripts.
+While Maestro supports positional parameters for quick commands, using named parameters is strongly recommended for clarity and reliability, especially in CI/CD pipelines.
 
-Named parameters like `--app-file` and `--flows` can be provided in any order, making your scripts less prone to errors.
+Named parameters such as `--app-file` and `--flows` can be provided in any order, making scripts easier to read and less error-prone.
 
 <table><thead><tr><th width="259">Parameter</th><th>Purpose</th></tr></thead><tbody><tr><td><code>--app-file</code></td><td>Specifies the local app file path you are uploading.</td></tr><tr><td><code>--flows</code></td><td>Specifies the local directory or specific file of flows to test.</td></tr></tbody></table>
 
@@ -52,7 +52,7 @@ maestro cloud \
   --flows flow.yaml
 ```
 
-When using named parameters, the order does not matter. The following examples work the same:
+Because named parameters are explicit, their order does not matter:
 
 ```bash
 # Order A
@@ -62,7 +62,7 @@ maestro cloud --app-file example.apk --flows ./myTests
 maestro cloud --flows ./myTests --app-file example.apk
 ```
 
-If you relay on positional parameters, the command may fail:
+If you rely on positional parameters, the order must be correct or the command will fail:
 
 ```bash
 # This works
@@ -71,6 +71,8 @@ maestro cloud example.apk ./myTests
 # This will FAIL
 maestro cloud ./myTests example.apk
 ```
+
+For CI environments and long-lived scripts, prefer named parameters to avoid subtle errors.
 
 ### Security
 
