@@ -23,8 +23,6 @@ You can provide the expression directly or use the `condition` and `label` param
 | `condition` | Expression | The expression to evaluate. The test passes if the expression is truthy. |
 | `label`     | String     | An optional message to display when executing the evaluation.            |
 
-<table><thead><tr><th width="134">Parameter</th><th width="142">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>condition</code></td><td>Expression</td><td>The expression to evaluate. The test passes if the expression is truthy.</td></tr><tr><td><code>label</code></td><td>String</td><td>An optional message to display when executing the evaluation.</td></tr></tbody></table>
-
 ### Usage examples
 
 The following examples show how to use the `assertTrue` command.
