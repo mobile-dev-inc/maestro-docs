@@ -2,23 +2,23 @@
 
 Before you can execute tests on Maestro Cloud, you must provide a mobile application binary (APK or `.app` directory). This page provides the specific technical requirements and build instructions for the most common development environments to ensure your app is compatible with Maestro's cloud infrastructure.
 
-#### General binary requirements
+{% hint style="success" %}
+This feature requires a Cloud plan. Start for free at [**maestro.dev**](https://signin.maestro.dev/sign-up).
+{% endhint %}
 
-Regardless of your framework, your application must meet these core specifications for cloud compatibility:
+### Android build instructions
 
-* **Architecture**:&#x20;
-  * Android builds must be compatible with x86\_64 architecture.
-  * iOS builds must be compatible with x86 or ARM (via Rosetta).
-* **File Formats**:
-  * Android: APK files are required; AAB (Android App Bundle) is currently not supported.
-  * iOS: You must provide a path to an `*.app` simulator build directory or a zipped file containing that directory.
-* **Build Types**: Both Release and Debug builds are supported for both iOS and Android.
+Maestro Cloud uses x86\_64 and x86 architectures for Android. Ensure your app binary meets the following requirements:
 
-#### Android build instructions
+* **Format:** APK only. Android App Bundles (.aab) are not currently supported.
+* **Architecture:** Must be compatible with x86\_64 or x86. ARM-only APKs will fail to launch in the cloud environment.
+* **Build Type:** Both Release and Debug builds are supported.
+
+To build your app, use one of the following approaches:&#x20;
 
 {% tabs %}
 {% tab title="Build with Gradle" %}
-Run the following commands from your project root to generate the APK. Once finished, find the file in the `app/build/outputs/apk/` directory.
+Run the following commands from your project root to generate the APK.&#x20;
 
 ```bash
 # To generate a Debug build
@@ -27,10 +27,12 @@ Run the following commands from your project root to generate the APK. Once fini
 # To generate a Release build
 ./gradlew assembleRelease
 ```
+
+Once finished, find the file in the `app/build/outputs/apk/` directory.
 {% endtab %}
 
 {% tab title="Build with Flutter" %}
-Use the Flutter CLI to create a compatible APK. The result will be located in the `build/app/outputs/flutter-apk/` folder. You can use anyone of the following commads:
+Use the Flutter CLI to create a compatible APK. You can use anyone of the following commands:
 
 ```bash
 # Debug build (Recommended for initial testing)
@@ -39,10 +41,19 @@ flutter build apk --debug
 # Release build
 flutter build apk
 ```
+
+The result will be located in the `build/app/outputs/flutter-apk/` folder.&#x20;
 {% endtab %}
 {% endtabs %}
 
-#### iOS Build Instructions
+### iOS build instructions
+
+Maestro Cloud runs iOS tests on Simulators. Do not upload binaries built for physical iOS devices.
+
+* **Format:** `.app` bundle.
+* **Target:** Must be built for the iOS Simulator.
+
+To build your app, use one of the following options:&#x20;
 
 {% tabs %}
 {% tab title="Build with Xcode CLI" %}
@@ -84,17 +95,34 @@ The app bundle is located in the `build/ios/iphonesimulator/` directory.
 {% endtab %}
 {% endtabs %}
 
-#### Next Steps: Running the Build
+### Run the build
 
-Once your binary is ready, you can upload it to Maestro Cloud using the CLI or Maestro Studio:
+Once your binary is ready, you can upload it to Maestro Cloud using the Maestro CLI or Maestro Studio:
 
-* Maestro CLI: Use the command `maestro cloud [your-app-binary] [your-flow-directory]`.
-* Maestro Studio: Click "Run on Cloud" in the sidebar and select your newly built binary.
+{% tabs %}
+{% tab title="Maestro CLI" %}
+Use the command:
 
-#### Related Documentation
+```bash
+maestro cloud [your-app-binary] [your-flow-directory]
+```
+{% endtab %}
 
-* [Cloud Quickstart](https://www.google.com/search?q=quickstart): Run your first test using sample apps.
-* [GitHub Actions](https://www.google.com/search?q=github-actions): Automate these build steps directly in your CI pipeline.
-* [CLI Reference](https://www.google.com/search?q=cloud-cli-reference): Explore advanced flags for your cloud uploads.
+{% tab title="Maestro Studio" %}
+You can choose to run all or a single Flow on Maestro Cloud:
 
-Next Step: Would you like me to draft the [GitHub Actions](https://www.google.com/search?q=github-actions) page next to show you how to automate these build commands in your repository?
+* **Run all Flows:** Click on the **Run on Cloud** button in the sidebar and then select your app binary.
+* **Run a single Flow**: Open the Flow file,click on the **Run on Cloud** button on at the top of the file, and then select your app binary.
+{% endtab %}
+{% endtabs %}
+
+#### Next steps
+
+Now that you know how to build you app, you can explore one of the following categories of guides to improve your process of using Maestro Cloud:
+
+* [ci-cd-integration](ci-cd-integration/ "mention")
+* [environment-configuration](environment-configuration/ "mention")
+* [notifications](notifications/ "mention")
+* [advanced-features](advanced-features/ "mention")
+
+If you didn't test Maestro CLI yet, check the [how-to-run-your-tests-on-maestro-cloud.md](how-to-run-your-tests-on-maestro-cloud.md "mention") guide.
