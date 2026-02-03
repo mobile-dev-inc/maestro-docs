@@ -125,4 +125,4 @@ Now that you know how to build your app, you can explore one of the following gu
 * [notifications](notifications/ "mention"): Set up Slack, Email, or Webhooks to keep your team informed of every pass or failure.
 * [advanced-features](advanced-features/ "mention"): Use binary reuse to speed up iterations and manage secrets via environment variables.
 
-If you haven’t tested the Maestro CLI yet, check the [how-to-run-your-tests-on-maestro-cloud.md](how-to-run-your-tests-on-maestro-cloud.md "mention") guide.
+If you haven’t tested the Maestro CLI yet, check the [run-tests-on-maestro-cloud.md](run-tests-on-maestro-cloud.md "mention") guide.
