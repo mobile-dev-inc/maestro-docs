@@ -7,7 +7,7 @@ description: >-
 # Maestro Documentation
 
 {% hint style="success" %}
-🚀  **Running in the Cloud**
+🚀 **Running in the Cloud**
 
 Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade cloud infrastructure: [Run Maestro tests in the Cloud](https://maestro.dev/cloud) and follow the [Quickstart Guide](cloud/cloud-quickstart.md) to quickly experience the power of Cloud.
 {% endhint %}
@@ -81,15 +81,24 @@ url: https://example.com
 
 ## Platform Support
 
-<table><thead><tr><th width="572">Platform</th><th align="center">Supported</th></tr></thead><tbody><tr><td><a href="platform-support/android-views.md">Android - Views</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/android-jetpack-compose.md">Android - Jetpack Compose</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/ios-uikit.md">iOS - UIKit</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/ios-swiftui.md">iOS - SwiftUI</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/react-native.md">React Native</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/flutter.md">Flutter</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/web-views.md">Web Views</a></td><td align="center">✅</td></tr><tr><td><a href="platform-support/web-desktop-browser.md">Web (Desktop Browser)</a></td><td align="center">✅</td></tr><tr><td>.NET MAUI iOS</td><td align="center">✅</td></tr><tr><td>.NET MAUI Android</td><td align="center">✅</td></tr></tbody></table>
+| Platform                  | Supported |
+| ------------------------- | :-------: |
+| Android - Views           |     ✅     |
+| Android - Jetpack Compose |     ✅     |
+| iOS - UIKit               |     ✅     |
+| iOS - SwiftUI             |     ✅     |
+| React Native              |     ✅     |
+| Flutter                   |     ✅     |
+| Web Views                 |     ✅     |
+| Web (Desktop Browser)     |     ✅     |
+| .NET MAUI iOS             |     ✅     |
+| .NET MAUI Android         |     ✅     |
 
 ## Resources
 
 * Blog Post: [**Introducing: Maestro — Painless Mobile UI Automation**](https://maestro.dev/blog/introducing-maestro-painless-mobile-ui-automation)
 * GitHub Repository: [**https://github.com/mobile-dev-inc/maestro**](https://github.com/mobile-dev-inc/maestro)
 * Public Slack Channel: [**Join the workspace**](https://slack.maestro.dev/)
-
-
 
 ## Get Started
 
