@@ -10,7 +10,7 @@ To run multiple test scenarios on the same build, you can reuse a previously upl
 
 When you upload an app to Maestro Cloud, a unique app binary ID is generated. You can find this ID in two locations:
 
-* **CLI output**: The ID is returned in the terminal response after a successful upload.
+* **CLI output**: The ID is returned in the terminal response immediately after a successful upload.
 
 <figure><img src="../.gitbook/assets/cli-app-binary-id.png" alt=""><figcaption></figcaption></figure>
 
@@ -27,14 +27,18 @@ maestro cloud \
   --api-key <YOUR_API_KEY> \
   --project-id <YOUR_PROJECT_ID> \
   --app-binary-id <BINARY_ID> \
-  <FLOW_OR_FOLDER>
+  .maestro/
 ```
 
-By providing the `--app-binary-id`, Maestro will skip the binary upload. &#x20;
+This tells Maestro to skip the binary re-upload and go straight to execution.
 
-#### Optimize with `--app-file` and `--flows`
+#### Named parameters
 
-You can also explicitly specify the app file and flows via arguments for better clarity using `--app-file` and `--flows`
+While Maestro supports positional parameters for quick commands, using named parameters is highly recommended for clarity and reliability, especially in CI/CD scripts.
+
+Named parameters like `--app-file` and `--flows` can be provided in any order, making your scripts less prone to errors.
+
+<table><thead><tr><th width="259">Parameter</th><th>Purpose</th></tr></thead><tbody><tr><td><code>--app-file</code></td><td>Specifies the local app file path you are uploading.</td></tr><tr><td><code>--flows</code></td><td>Specifies the local directory or specific file of flows to test.</td></tr></tbody></table>
 
 ```bash
 # Using a folder of flows
@@ -48,9 +52,33 @@ maestro cloud \
   --flows flow.yaml
 ```
 
+When using named parameters, the order does not matter. The following examples work the same:
+
+```bash
+# Order A
+maestro cloud --app-file example.apk --flows ./myTests
+
+# Order B
+maestro cloud --flows ./myTests --app-file example.apk
+```
+
+If you relay on positional parameters, the command may fail:
+
+```bash
+# This works
+maestro cloud example.apk ./myTests
+
+# This will FAIL
+maestro cloud ./myTests example.apk
+```
+
 ### Security
 
 Reusing an app binary is a performance optimization and does not compromise security.
 
 * **Access**: Only you or authorized members of your project can access the binary from your previous uploads.
 * **Privacy**: All cloud devices are wiped after every test execution. Even after the test completes, no one, including the Maestro team, has access to the running application data.
+
+### Related content
+
+* [Maestro CLI reference](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options): Full list of all available parameters.
