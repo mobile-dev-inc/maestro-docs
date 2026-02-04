@@ -23,7 +23,7 @@ By default, Maestro uses the accessibility tree to find these elements, ensuring
 
 You can handle dynamic values easily because `text` and `id` are regex-based.&#x20;
 
-Remember to escape special characters like `$` or `[` with a double backslash (`\`).
+Remember to escape special characters like `$` or `[` with a backslash (`\`).
 {% endhint %}
 
 {% hint style="info" %}
