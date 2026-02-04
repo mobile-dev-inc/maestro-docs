@@ -1,3 +1,7 @@
+---
+description: Customer success stories from teams using Maestro for mobile testing.
+---
+
 # Showcase
 
 Discover how engineering teams across the globe use Maestro to eliminate regressions, accelerate release cycles, and achieve stable mobile automation.

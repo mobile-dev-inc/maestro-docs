@@ -1,3 +1,7 @@
+---
+description: VSCode extensions, plugins, and tools built by the Maestro community.
+---
+
 # Community projects
 
 The Maestro ecosystem is built on a foundation of collaboration. Beyond the core CLI, our community has developed a wide range of extensions, integrations, and resources to help you scale your mobile automation.
