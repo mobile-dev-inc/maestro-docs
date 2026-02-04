@@ -1,3 +1,7 @@
+---
+description: Known limitations and workarounds for Maestro on different platforms.
+---
+
 # Known issues
 
 Use this page to quickly find known limitations and their workarounds when debugging Maestro tests. Issues are grouped by cross-platform, Android, and iOS.&#x20;

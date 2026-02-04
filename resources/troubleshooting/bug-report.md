@@ -1,3 +1,7 @@
+---
+description: How to report bugs and contribute to Maestro's open-source development.
+---
+
 # Bug report
 
 This page explains how to report a bug in Maestro and how to attach context so the team can triage your issue quickly. Use it when you hit a problem that is not covered in Known issues.

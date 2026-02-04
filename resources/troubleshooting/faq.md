@@ -1,3 +1,7 @@
+---
+description: Frequently asked questions about Maestro installation and usage.
+---
+
 # FAQ
 
 Find answers to common Maestro questions: parameters, assertions, YAML gotchas, cloud behavior, and how to organize your tests.

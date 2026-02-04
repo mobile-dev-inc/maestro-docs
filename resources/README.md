@@ -1,3 +1,9 @@
+---
+description: >-
+  Additional resources: community projects, articles, and troubleshooting
+  guides.
+---
+
 # Resources overview
 
 The Resources section contains troubleshooting guides, community links, and reference materials for Maestro. Use it when you need to debug issues, report bugs, or find articles, projects, and case studies from the community.
