@@ -1,3 +1,7 @@
+---
+description: Upload and execute your Maestro tests on Cloud infrastructure using the CLI.
+---
+
 # Run tests on Maestro Cloud
 
 Running your tests on Maestro Cloud provides reliable scaling, guaranteed parallelism, and seamless CI integration for your mobile and web applications.

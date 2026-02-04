@@ -1,3 +1,9 @@
+---
+description: >-
+  Maestro Cloud provides enterprise-grade infrastructure for parallel mobile
+  test execution.
+---
+
 # Maestro Cloud overview
 
 Maestro Cloud is a hosted, enterprise-grade infrastructure designed to execute automated tests with high parallelism and reliable scaling. It allows teams to run their "Flows" in a stable, managed environment, eliminating the need to configure or maintain local emulators and simulators.
