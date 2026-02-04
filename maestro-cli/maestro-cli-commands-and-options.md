@@ -1,3 +1,9 @@
+---
+description: >-
+  Complete reference for all Maestro CLI commands, subcommands, and options
+  including test, cloud, record, and start-device.
+---
+
 # Maestro CLI commands and options
 
 This document lists all the options and subcommands you can pass to the Maestro CLI.
