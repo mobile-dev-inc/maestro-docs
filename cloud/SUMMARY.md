@@ -6,7 +6,7 @@
 * [CI/CD integration](ci-cd-integration/README.md)
   * [GitHub Actions](ci-cd-integration/github-actions.md)
   * [Bitrise](ci-cd-integration/bitrise.md)
-  * [Bitbucket](ci-cd-integration/bitbucket.md)
+  * [Bitbucket Pipelines](ci-cd-integration/bitbucket-pipelines.md)
   * [CircleCI](ci-cd-integration/circleci.md)
   * [Generic CI platform](ci-cd-integration/generic-ci-platform.md)
   * [Pull request integration](ci-cd-integration/pull-request-integration.md)
