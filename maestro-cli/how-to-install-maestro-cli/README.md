@@ -1,3 +1,7 @@
+---
+description: Step-by-step installation guide for Maestro CLI on macOS, Windows, and Linux.
+---
+
 # How to install Maestro CLI
 
 Maestro also provides you with the option to use the CLI by terminal. This document will cover the installation of Maestro CLI on the three operational system supported: macOS, Windows and Linux.

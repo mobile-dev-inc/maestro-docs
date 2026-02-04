@@ -1,3 +1,7 @@
+---
+description: Common issues and solutions when running Maestro CLI.
+---
+
 # Troubleshooting: WSL2 and Android Connections
 
 This page addresses connectivity issues specifically encountered when running Maestro within Windows Subsystem for Linux (WSL2) while using an Android Emulator hosted on Windows.

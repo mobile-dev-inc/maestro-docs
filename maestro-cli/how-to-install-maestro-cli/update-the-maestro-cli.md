@@ -1,3 +1,7 @@
+---
+description: Step-by-step update guide for Maestro CLI.
+---
+
 # Update the Maestro CLI
 
 Keeping your Maestro CLI up to date ensures you have access to the latest features, command improvements, and security patches. Depending on your original installation method, follow the appropriate steps below.

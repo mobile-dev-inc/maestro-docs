@@ -1,4 +1,5 @@
 ---
+description: Configure Maestro CLI on Windows using WSL2 for Android and iOS testing.
 hidden: true
 ---
 

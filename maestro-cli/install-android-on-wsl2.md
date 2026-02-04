@@ -1,4 +1,5 @@
 ---
+description: Set up Android emulators in WSL2 for running Maestro tests on Windows.
 hidden: true
 ---
 

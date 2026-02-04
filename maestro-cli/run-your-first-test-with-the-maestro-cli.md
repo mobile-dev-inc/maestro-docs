@@ -1,3 +1,7 @@
+---
+description: Execute your first Maestro test using the CLI with sample flows and apps.
+---
+
 # Run your first test with the Maestro CLI
 
 In this tutorial, you will write and execute your first Maestro Flow using the CLI. You will create a test that automates the process of adding a new contact to an Android device using the native Contacts app.
