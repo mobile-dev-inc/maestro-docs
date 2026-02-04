@@ -10,7 +10,7 @@ Maestro solves this by allowing you to explicitly configure permissions either a
 
 ### Configure permissions on launch
 
-The easiest way to manage permissions is during the [`launchApp`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp) command.By default, Maestro grants all permissions, but you can override this behavior to test specific scenarios.
+The easiest way to manage permissions is during the [`launchApp`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp) command. By default, Maestro grants all permissions, but you can override this behavior to test specific scenarios.
 
 To customize launch permissions, you need to specify them when calling `launchApp`. The following example denies all permissions but explicitly allows the camera and location:
 
@@ -81,7 +81,7 @@ If a specific Android permission isn't listed above, you can use the full Androi
 ```
 
 {% hint style="info" %}
-Note that \`all: allow\` also covers custom permissions, so you don't need to specify them individually unless you want to deny everything else.
+Note that `all: allow` also covers custom permissions, so you don't need to specify them individually unless you want to deny everything else.
 {% endhint %}
 
 ### Permission values
