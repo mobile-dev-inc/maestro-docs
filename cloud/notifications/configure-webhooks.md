@@ -1,3 +1,9 @@
+---
+description: >-
+  Set up webhooks to receive real-time POST notifications about Maestro Cloud
+  upload results to external services.
+---
+
 # Configure webhooks
 
 Enable webhooks to send real-time notifications about upload results from a specific Maestro project to your custom workflows, monitoring systems, or external services.

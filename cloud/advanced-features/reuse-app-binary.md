@@ -1,3 +1,9 @@
+---
+description: >-
+  Skip re-uploading your app by reusing a previously uploaded binary ID to save
+  time and bandwidth.
+---
+
 # Reuse app binary
 
 To run multiple test scenarios on the same build, you can reuse a previously uploaded binary instead of re-uploading the same file. This optimization saves time and bandwidth.

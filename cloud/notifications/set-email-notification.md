@@ -1,3 +1,9 @@
+---
+description: >-
+  Configure email notifications in config.yaml to receive Maestro Cloud test
+  results on failure or success.
+---
+
 # Set email notification
 
 Configure Maestro Cloud to send email summaries for your Flow results.
