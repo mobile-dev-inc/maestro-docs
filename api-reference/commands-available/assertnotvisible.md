@@ -1,3 +1,7 @@
+---
+description: Assert that a UI element is not present or visible on the screen.
+---
+
 # assertNotVisible
 
 The `assertNotVisible` command asserts that a UI element is not visible on the screen. If the element is currently visible, this command waits for it to disappear before proceeding.

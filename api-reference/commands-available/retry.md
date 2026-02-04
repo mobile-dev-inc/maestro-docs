@@ -1,3 +1,7 @@
+---
+description: Retry a block of commands on failure with configurable attempts.
+---
+
 # retry
 
 The `retry` command executes a set of commands repeatedly until they succeed or the maximum number of retries is reached. Use this command to handle intermittent or unpredictable behavior in your application.

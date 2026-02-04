@@ -1,3 +1,7 @@
+---
+description: Execute a subflow file with optional environment variables.
+---
+
 # runFlow
 
 The `runFlow` command executes a sequence of commands from another Flow file or from an inline definition. This command helps you modularize tests and reuse common sequences, such as a login process. Inline subflows (using the `commands` parameter) are especially useful for [conditional](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions) logic or for grouping a few steps under a clear `label`.

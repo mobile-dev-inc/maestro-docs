@@ -1,3 +1,7 @@
+---
+description: Launch an app with optional permission configuration and clear state.
+---
+
 # launchApp
 
 Launches an application on the target device (Android, iOS, or Web). By default, this command stops the running app before launching it again.

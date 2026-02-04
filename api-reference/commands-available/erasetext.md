@@ -1,3 +1,7 @@
+---
+description: Delete text from input fields by character count or clear entirely.
+---
+
 # eraseText
 
 The `eraseText` command deletes characters from the currently focused text field by simulating backspace key presses. By default, it removes up to 50 characters, making it an efficient way to clear input fields.

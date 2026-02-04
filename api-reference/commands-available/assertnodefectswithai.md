@@ -1,3 +1,7 @@
+---
+description: AI-powered visual testing to detect UI defects and anomalies.
+---
+
 # assertNoDefectsWithAI
 
 {% hint style="warning" %}

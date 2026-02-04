@@ -1,3 +1,7 @@
+---
+description: Repeat a block of commands a specified number of times.
+---
+
 # repeat
 
 The `repeat` command executes a sequence of commands multiple times, either for a fixed number of iterations or until a specific condition is met.

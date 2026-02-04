@@ -1,3 +1,7 @@
+---
+description: Force stop an app and optionally clear all its data and cache.
+---
+
 # killApp
 
 The `killApp` command terminates the running application. It is designed specifically for mobile environments to simulate the application being closed.

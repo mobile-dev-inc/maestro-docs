@@ -1,3 +1,7 @@
+---
+description: Assert that a UI element is visible on screen with automatic retry.
+---
+
 # assertVisible
 
 The `assertVisible` command asserts that a UI element is visible on the screen. If the element is not immediately visible, this command waits for it to appear before timing out.

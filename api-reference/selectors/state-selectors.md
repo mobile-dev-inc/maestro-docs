@@ -1,3 +1,7 @@
+---
+description: 'Select elements by state: enabled, checked, focused, or selected properties.'
+---
+
 # State Selectors
 
 State Selectors allow you to filter UI elements based on their current functional or interactive status. These are primarily used to verify that an element is ready for interaction, has been correctly updated by a previous action, or to find a specific element among several identical ones (e.g., finding the selected tab in a navigation bar).

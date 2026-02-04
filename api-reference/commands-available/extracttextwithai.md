@@ -1,3 +1,7 @@
+---
+description: Extract structured data from the screen using AI vision capabilities.
+---
+
 # extractTextWithAI
 
 {% hint style="warning" %}

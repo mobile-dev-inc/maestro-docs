@@ -1,3 +1,7 @@
+---
+description: Stop a running app without clearing its data or state.
+---
+
 # stopApp
 
 Stops a running application. The `stopApp` command can stop either the currently running application or a specific application identified by its `appId`.

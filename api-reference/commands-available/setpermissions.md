@@ -1,3 +1,7 @@
+---
+description: Grant or deny app permissions during flow execution.
+---
+
 # setPermissions
 
 The `setPermissions` command configures permissions for an application. While the `launchApp` command performs this action by default, you can use `setPermissions` at other points in a flow, such as before a deeplink.

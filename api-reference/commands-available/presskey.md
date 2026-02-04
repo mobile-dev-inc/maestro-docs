@@ -1,3 +1,7 @@
+---
+description: Press hardware keys like home, back, enter, or volume buttons.
+---
+
 # pressKey
 
 The `pressKey` command simulates pressing a physical or virtual key on a device.

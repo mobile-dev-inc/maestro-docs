@@ -1,3 +1,7 @@
+---
+description: Swipe gestures in any direction with customizable speed and distance.
+---
+
 # swipe
 
 The `swipe` command simulates a swipe gesture on the device screen. You can define a swipe by direction, by coordinates, or by starting from a specific UI element.

@@ -1,3 +1,7 @@
+---
+description: Clear app data, cache, and preferences to reset to fresh install state.
+---
+
 # clearState
 
 Clears all data for a specified mobile application.

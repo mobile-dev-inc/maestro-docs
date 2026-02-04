@@ -1,3 +1,7 @@
+---
+description: Copy text content from a UI element to clipboard or variable.
+---
+
 # copyTextFrom
 
 The `copyTextFrom` command copies text from a UI element and stores it in memory. This command requires a [Selector](../selectors/) to identify the target element.
@@ -63,4 +67,4 @@ This example demonstrates how to copy text from a UI element, store the copied v
 
 ### Related content
 
-Explore how the [`pasteText`](pastetext.md) command works, or learn how to use the available [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/how-to-use-selectors) to define the desired element when copying content.
+Explore how the [`pasteText`](pastetext.md) command works, or learn how to use the available [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors) to define the desired element when copying content.

@@ -1,3 +1,7 @@
+---
+description: Paste text from clipboard into the currently focused input field.
+---
+
 # pasteText
 
 The `pasteText` command pastes text from the clipboard into the currently focused UI element.

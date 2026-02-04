@@ -1,3 +1,9 @@
+---
+description: >-
+  Filter elements by traits like square, long-text, and other physical
+  characteristics.
+---
+
 # Element Traits
 
 Element traits allow you to identify or filter UI components based on their inherent characteristics, physical properties, or functional roles. These are especially useful when text or IDs are absent, or when you need to target generic elements like icons or containers based on their shape.

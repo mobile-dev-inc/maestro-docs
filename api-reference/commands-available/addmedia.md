@@ -1,3 +1,7 @@
+---
+description: Add images or videos to the device gallery for media picker testing.
+---
+
 # addMedia
 
 The `addMedia` command adds one or more media files from your workspace to the device's gallery on both Android and iOS. This makes the files accessible to your application during a test flow.

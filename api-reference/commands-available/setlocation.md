@@ -1,3 +1,7 @@
+---
+description: Set device GPS location to specific coordinates for location testing.
+---
+
 # setLocation
 
 The `setLocation` command applies a mock geolocation to the device.

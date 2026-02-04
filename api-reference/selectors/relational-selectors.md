@@ -1,3 +1,9 @@
+---
+description: >-
+  Position elements using above, below, leftOf, rightOf, and containedIn
+  selectors.
+---
+
 # Relational Selectors
 
 Relational Selectors allow you to identify UI elements based on their relationship to other views on the screen. This is extremely useful when elements have generic names (like multiple "Buy" buttons) or when you want to target a view that lacks a stable `text` or `id` but is always located near a known anchor.

@@ -1,3 +1,7 @@
+---
+description: Run an external JavaScript file and capture its output.
+---
+
 # runScript
 
 The `runScript` command executes a specified JavaScript file. The script can access environment variables and set [output](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-outputs) values for subsequent commands in the flow.

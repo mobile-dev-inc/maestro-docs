@@ -1,3 +1,7 @@
+---
+description: Complete API reference for all Maestro commands and selectors.
+---
+
 # Commands overview
 
 The API Reference provides detailed documentation on the core components of Maestro, including commands, selectors, and workspace configuration.

@@ -1,3 +1,7 @@
+---
+description: Match elements by width and height with optional tolerance values.
+---
+
 # Dimension matchers
 
 Dimension Selectors allow you to identify and filter UI elements based on their physical size on the screen.&#x20;

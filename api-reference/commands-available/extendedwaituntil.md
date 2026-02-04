@@ -1,3 +1,7 @@
+---
+description: Wait for an element with a custom timeout longer than the default.
+---
+
 # extendedWaitUntil
 
 The `extendedWaitUntil` command pauses the test flow until a specified element becomes visible or not visible on the screen. The command completes as soon as the condition is met. If the condition is not met before the timeout expires, the command fails.

@@ -1,3 +1,7 @@
+---
+description: Dismiss the on-screen keyboard if currently visible.
+---
+
 # hideKeyboard
 
 The `hideKeyboard` command hides the software keyboard if it is visible.

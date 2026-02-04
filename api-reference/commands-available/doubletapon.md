@@ -1,3 +1,7 @@
+---
+description: Perform a double-tap gesture on a UI element or screen coordinates.
+---
+
 # doubleTapOn
 
 Double-taps a UI element or a specific point on the screen.

@@ -1,3 +1,7 @@
+---
+description: Set the device clipboard content to a specified text value.
+---
+
 # setClipboard
 
 The `setClipboard` command sets a specified text string to Maestro's in-memory clipboard. It allows you to define the clipboard content directly, unlike `copyTextFrom` which copies text from a UI element.

@@ -1,3 +1,7 @@
+---
+description: Assert that a JavaScript expression evaluates to true.
+---
+
 # assertTrue
 
 Asserts that a given expression evaluates to a truthy value. A value is [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) (in JavaScript terms) if it is not `false`, `0`, an empty string (`""`), `null`, `undefined`, or `NaN`.

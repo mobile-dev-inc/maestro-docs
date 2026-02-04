@@ -1,3 +1,7 @@
+---
+description: Enable airplane mode to test offline behavior.
+---
+
 # setAirplaneMode
 
 The `setAirplaneMode` command enables or disables airplane mode on the device.&#x20;

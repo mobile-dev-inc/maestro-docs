@@ -1,3 +1,7 @@
+---
+description: Use AI to verify complex UI states with natural language assertions.
+---
+
 # assertWithAI
 
 {% hint style="warning" %}

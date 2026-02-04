@@ -1,3 +1,7 @@
+---
+description: Evaluate inline JavaScript expressions within the flow context.
+---
+
 # evalScript
 
 The `evalScript` command executes a single line of JavaScript directly within a Maestro flow. This is useful for performing simple computations or data manipulations without creating a separate JavaScript file.

@@ -1,3 +1,7 @@
+---
+description: Start recording the screen for video documentation of test runs.
+---
+
 # startRecording
 
 The `startRecording` command begins a screen recording of the test Flow. Use this command to collect visual evidence of your test runs, especially when debugging complex UI transitions or intermittently failing tests. The resulting video file is saved in `.mp4` format.

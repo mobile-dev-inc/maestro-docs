@@ -1,3 +1,7 @@
+---
+description: Long press on elements for context menus or drag-and-drop operations.
+---
+
 # longPressOn
 
 The `longPressOn` command performs a long press (3 seconds) gesture on a UI element. It is the long-press equivalent of the [`tapOn` ](tapon.md)command.

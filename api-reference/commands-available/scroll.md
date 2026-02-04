@@ -1,3 +1,7 @@
+---
+description: Scroll the screen up, down, left, or right by a specified amount.
+---
+
 # scroll
 
 The `scroll` command performs a vertical scroll of the current view.

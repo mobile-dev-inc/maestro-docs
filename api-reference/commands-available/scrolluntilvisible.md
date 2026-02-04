@@ -1,3 +1,7 @@
+---
+description: Automatically scroll until a target element becomes visible on screen.
+---
+
 # scrollUntilVisible
 
 Scrolls the screen in a specified direction until a target element is visible.

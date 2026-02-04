@@ -1,3 +1,7 @@
+---
+description: Tap on UI elements by text, ID, or coordinates with optional repeat and delay.
+---
+
 # tapOn
 
 The `tapOn` command performs a tap gesture on a UI element or a specific coordinate on the screen. It is the most common interaction command in Maestro.
@@ -109,4 +113,4 @@ Check the related commands:
 * [longpresson.md](longpresson.md "mention")
 * [doubletapon.md](doubletapon.md "mention")
 
-Or, learn about the different ways to identify elements using [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/how-to-use-selectors).
+Or, learn about the different ways to identify elements using [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors).

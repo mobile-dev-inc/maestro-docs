@@ -1,3 +1,7 @@
+---
+description: Type text into focused input fields with optional keyboard handling.
+---
+
 # inputText
 
 the `inputText` command inputs a specified text string. This command works even if no text field is focused.

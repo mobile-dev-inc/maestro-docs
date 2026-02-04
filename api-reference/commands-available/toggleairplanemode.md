@@ -1,3 +1,7 @@
+---
+description: Toggle airplane mode on or off during test execution.
+---
+
 # toggleAirplaneMode
 
 Toggles the device's airplane mode on or off.

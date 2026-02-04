@@ -1,3 +1,7 @@
+---
+description: Simulate time travel by adjusting the device system clock.
+---
+
 # travel
 
 The `travel` command mocks the motion of a user along a specified path at a given speed.

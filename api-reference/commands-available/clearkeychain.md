@@ -1,3 +1,7 @@
+---
+description: Clear iOS keychain data for the app under test.
+---
+
 # clearKeychain
 
 The `clearKeychain` command clears all data from the iOS Keychain.&#x20;

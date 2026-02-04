@@ -1,3 +1,7 @@
+---
+description: Capture a screenshot and save it to the test output directory.
+---
+
 # takeScreenshot
 
 The `takeScreenshot` command saves a screenshot of the current screen as a PNG file.

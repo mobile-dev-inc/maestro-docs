@@ -1,3 +1,7 @@
+---
+description: Open a URL or deep link in the app or system browser.
+---
+
 # openLink
 
 Opens a URL or deep link on the target device.

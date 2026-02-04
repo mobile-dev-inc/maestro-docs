@@ -1,3 +1,7 @@
+---
+description: 'Core selectors: text, id, index, point, and css for identifying UI elements.'
+---
+
 # Core Selectors
 
 Basic selectors are the most common way to identify elements in Maestro. They allow you to target views using their visible text, accessibility identifiers, or specific screen coordinates.

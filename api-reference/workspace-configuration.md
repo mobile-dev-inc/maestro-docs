@@ -1,3 +1,9 @@
+---
+description: >-
+  Reference for all config.yaml properties: appId, flows, env, and platform
+  settings.
+---
+
 # Workspace configuration
 
 This page provides a technical reference for all properties you can set in the `config.yaml` file. The configuration is structured into Global, Execution, Platform-specific, and Cloud sections.

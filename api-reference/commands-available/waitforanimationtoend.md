@@ -1,3 +1,7 @@
+---
+description: Wait for UI animations to complete before proceeding.
+---
+
 # waitForAnimationToEnd
 
 The `waitForAnimationToEnd` command pauses command execution until on-screen animations or videos complete and the UI becomes static.

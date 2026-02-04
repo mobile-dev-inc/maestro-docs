@@ -1,3 +1,7 @@
+---
+description: Change device orientation between portrait and landscape modes.
+---
+
 # setOrientation
 
 Sets the orientation of the virtual device.

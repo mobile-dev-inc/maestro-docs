@@ -1,3 +1,7 @@
+---
+description: Stop the current screen recording and save the video file.
+---
+
 # stopRecording
 
 Stops an in-progress screen recording that was previously initiated by the `startRecording` command. This command takes no arguments.
