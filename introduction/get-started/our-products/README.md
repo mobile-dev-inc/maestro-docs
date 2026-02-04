@@ -1,4 +1,7 @@
 ---
+description: >-
+  Explore Maestro's ecosystem: Studio, CLI, Cloud, Flows, and JavaScript
+  integration.
 hidden: true
 ---
 
