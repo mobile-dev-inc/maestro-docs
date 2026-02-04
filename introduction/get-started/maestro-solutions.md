@@ -1,3 +1,9 @@
+---
+description: >-
+  Explore Maestro's ecosystem: Studio, CLI, Cloud, Flows, and JavaScript
+  integration.
+---
+
 # Maestro solutions
 
 The Maestro ecosystem is a unified platform composed of three interconnected layers. Each tool is designed to solve a specific challenge in the mobile and web automation lifecycle:&#x20;

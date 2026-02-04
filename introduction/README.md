@@ -1,3 +1,9 @@
+---
+description: >-
+  Overview of Maestro documentation with links to guides, tutorials, and
+  community resources.
+---
+
 # Maestro documentation
 
 Maestro is the simplest and most effective framework for painless mobile and web UI automation using intuitive YAML flows.

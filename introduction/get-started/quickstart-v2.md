@@ -1,4 +1,7 @@
 ---
+description: >-
+  Install Maestro Studio, set up your environment, and run your first automated
+  test in five minutes.
 hidden: true
 ---
 

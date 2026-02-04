@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how Maestro simulates user interactions using the accessibility tree and
+  device-level commands.
+---
+
 # How Maestro works
 
 Maestro operates as a black-box testing framework that simulates user interactions at the device level. Unlike traditional tools that require access to an app's source code or internal APIs, Maestro leverages the operating system's built-in accessibility and input interfaces to treat the application as an opaque system.

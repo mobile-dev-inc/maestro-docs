@@ -1,3 +1,9 @@
+---
+description: >-
+  Use Maestro's Model Context Protocol (MCP) to integrate AI assistants with
+  mobile testing.
+---
+
 # Maestro MCP Server
 
 Maestro implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), enabling direct integration with MCP-compliant client apps such as Claude, Cursor, and Windsurf.

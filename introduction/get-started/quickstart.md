@@ -1,3 +1,9 @@
+---
+description: >-
+  Install Maestro Studio, set up your environment, and run your first automated
+  test in five minutes.
+---
+
 # QuickStart
 
 You are starting your journey with Maestro. This guide will help you install Maestro, set up your environment, and execute your first automated test (called a **Flow**) in just five minutes.
