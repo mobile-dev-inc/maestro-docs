@@ -1,3 +1,9 @@
+---
+description: >-
+  Run flows in a specific order using executionOrder for dependent test
+  scenarios.
+---
+
 # Sequential execution
 
 By default, Maestro executes Flows in a non-deterministic order. This is intentional because testing Flows in isolation ensures they are robust and not dependent on side effects from previous tests.

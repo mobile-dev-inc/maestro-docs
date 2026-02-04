@@ -1,3 +1,9 @@
+---
+description: >-
+  Execute JavaScript in Flows using inline expressions, evalScript, or runScript
+  with console.log debugging.
+---
+
 # Run and debug JavaScript
 
 This guide explains how to execute JavaScript within your Maestro Flows and how to use logging to debug your scripts.

@@ -1,3 +1,7 @@
+---
+description: Configure app permissions on launch or mid-flow for iOS and Android testing.
+---
+
 # Permissions
 
 Managing system permissions is a common challenge in mobile test automation. Since OS prompts (like "Allow Camera Access") typically only appear once, your test journey can become inconsistent if the app state isn't reset.

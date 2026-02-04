@@ -1,3 +1,9 @@
+---
+description: >-
+  Maestro Flows are YAML-based test scripts that define user journeys for UI
+  automation.
+---
+
 # Maestro Flows overview
 
 Maestro Flows are the fundamental building blocks of UI automation, representing specific segments of a user journey, such as Login, Checkout, or Search for an item, within an application. Flows can represent complete user journeys or discrete functional components that can be composed into larger test scenarios. By modeling real-world user interactions, Flows provide a reliable, repeatable way to verify app behavior across Android, iOS, and Web platforms from a single suite.

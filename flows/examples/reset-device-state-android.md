@@ -1,3 +1,7 @@
+---
+description: Clear app data and reset device state between test runs on Android.
+---
+
 # Reset device state (Android)
 
 Successive test runs that use `addMedia` to import photos or download files can leave your Android emulator in an inconsistent state. Stale files from a previous execution can lead to false positives results, where a test succeeds only because data from a prior run was still present.

@@ -1,3 +1,7 @@
+---
+description: Automate Facebook sign-up flow on Android using Maestro selectors and inputs.
+---
+
 # Automating Facebook Sign-Up (Android)
 
 Automating high-security applications like Facebook provides an excellent case study for handling complex form navigation, system-level permission dialogs, and native OS components like date pickers. This example walks through the sign-up process, demonstrating how to use random data generation and precise element targeting to navigate a multi-step onboarding flow.

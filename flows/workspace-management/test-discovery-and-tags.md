@@ -1,3 +1,9 @@
+---
+description: >-
+  Organize tests with tags and control which flows run using include/exclude
+  filters.
+---
+
 # Test discovery and tags
 
 As your test suite grows from a few files to hundreds of Flows, managing which tests to run and where they are located becomes critical. Maestro uses a combination of Inclusion patterns and metadata tagging to give you precise control over your execution.

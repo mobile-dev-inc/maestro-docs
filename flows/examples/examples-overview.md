@@ -1,3 +1,7 @@
+---
+description: Real-world examples and recipes for common Maestro automation scenarios.
+---
+
 # Examples overview
 
 This section of the documentation is a curated library of real-world scenarios designed to bridge the gap between basic commands and complex, production-ready automation.

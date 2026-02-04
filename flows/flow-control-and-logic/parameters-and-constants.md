@@ -1,3 +1,7 @@
+---
+description: Pass dynamic values to flows using CLI parameters and inline constants.
+---
+
 # Parameters and constants
 
 Maestro allows you to inject data into your Flows to make them dynamic and reusable. Instead of hardcoding values like usernames, passwords, or product IDs, you can use variables that are populated at runtime.

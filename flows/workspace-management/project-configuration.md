@@ -1,3 +1,7 @@
+---
+description: Configure your Maestro workspace with config.yaml for test suite settings.
+---
+
 # Project configuration
 
 The `config.yaml` file acts as the central "brain" of your Maestro workspace. While it is optional, it becomes essential when your project grows, allowing you to define global rules for your test suite, manage environment variables, and configure platform-specific behaviors.

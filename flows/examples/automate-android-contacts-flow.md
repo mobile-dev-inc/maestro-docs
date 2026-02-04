@@ -1,3 +1,7 @@
+---
+description: Automate the Android Contacts app to create and edit contacts with Maestro.
+---
+
 # Automate Android Contacts Flow
 
 Testing how your app interacts with system contacts, or simply testing the native Contacts app itself, is a great way to explore Maestro's ability to handle system-level applications. This example demonstrates how to create a new contact from scratch, utilizing Maestro's built-in data generation to ensure every test run is unique.

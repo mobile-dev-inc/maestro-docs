@@ -1,3 +1,9 @@
+---
+description: >-
+  Complete list of locale codes supported by Maestro for internationalization
+  testing.
+---
+
 # Locales supported by Maestro
 
 This reference page provides a list of the Language and Country codes supported by Maestro when using the `--device-locale` flag.

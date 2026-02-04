@@ -1,3 +1,7 @@
+---
+description: Test your app in multiple languages and regions using locale configuration.
+---
+
 # Test in different locales
 
 Testing how your app handles different languages and regional formats is critical for a global user base. In Maestro, the locale is a global device setting. Because changing the system language requires a device-level configuration change, it is handled via the CLI only at runtime.&#x20;

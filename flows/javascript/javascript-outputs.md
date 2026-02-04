@@ -1,4 +1,7 @@
 ---
+description: >-
+  Store JavaScript results in the global output object and use them in
+  subsequent Flow commands.
 hidden: true
 ---
 

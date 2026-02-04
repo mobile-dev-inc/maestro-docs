@@ -1,3 +1,9 @@
+---
+description: >-
+  Control timing with wait commands for animations, network calls, and UI
+  updates.
+---
+
 # Wait commands
 
 In a perfect world, apps respond instantly. In reality, network latency, slow animations, and background processing can cause tests to fail because Maestro tries to interact with an element that isn't ready yet.

@@ -1,3 +1,7 @@
+---
+description: Generate test reports, screenshots, and logs for debugging and CI integration.
+---
+
 # Test reports and artifacts
 
 Once your tests have finished executing, Maestro provides structured feedback through reports and visual artifacts, like screenshots and screen recordings. These files are essential for debugging failures locally and integrating test results into your CI/CD pipelines.

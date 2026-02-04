@@ -1,3 +1,7 @@
+---
+description: 'Overview of flow control: conditions, loops, nested flows, and hooks.'
+---
+
 # Flow control and logic overview
 
 While standard Flows represent linear user journeys, real-world testing often requires dynamic behavior. This section covers the tools that allow your tests to adapt to different application states, platform requirements, and data environments.

@@ -1,3 +1,9 @@
+---
+description: >-
+  Generate random test data with the built-in faker object for names, emails,
+  numbers, and more.
+---
+
 # Generate synthetic data
 
 in Maestro, you can use the built-in DataFaker integration to generate dynamic, randomized data for your test. This is useful for bypassing unique-field constraints (like sign-up forms) and creating realistic testing environments without manual data entry.

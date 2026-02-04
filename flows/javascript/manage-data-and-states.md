@@ -1,3 +1,9 @@
+---
+description: >-
+  Share data between scripts using the global output object, namespaces, and the
+  maestro.copiedText property.
+---
+
 # Manage data and states
 
 Sharing data between UI elements and JavaScript scripts is essential for creating dynamic, resilient tests. This guide covers how to use the global `output` object, manage namespaces, and capture UI text for use in your logic.

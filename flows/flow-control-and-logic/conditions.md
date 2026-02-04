@@ -1,3 +1,9 @@
+---
+description: >-
+  Execute commands conditionally based on visibility, platform, or custom
+  expressions.
+---
+
 # Conditions
 
 Conditions allow you to execute commands or entire Flows only when specific criteria are met. This is useful for handling platform-specific logic (Android vs. iOS vs. Web), managing A/B tests, or dealing with dynamic UI elements like onboarding screens or permission dialogs.

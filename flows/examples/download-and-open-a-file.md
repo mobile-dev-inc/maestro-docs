@@ -1,3 +1,7 @@
+---
+description: Automate file download and open workflows on mobile devices with Maestro
+---
+
 # Download and open a file
 
 Automating file downloads is a common requirement, but it can be a headache to test across different platforms. Between varying system dialogs, download confirmations, and the way different OS versions handle file associations, a simple tap and open often requires more nuance than it seems.

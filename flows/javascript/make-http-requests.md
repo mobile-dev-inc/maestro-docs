@@ -1,3 +1,9 @@
+---
+description: >-
+  Make HTTP API calls from your flows to set up test data or verify backend
+  state.
+---
+
 # Make HTTP requests
 
 Maestro includes a built-in JavaScript HTTP client that allows you to interact with external APIs directly from your test flows. This is particularly useful for setting up test data, authenticating users, or verifying backend state without navigating through the UI.

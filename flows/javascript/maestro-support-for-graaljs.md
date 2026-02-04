@@ -1,4 +1,7 @@
 ---
+description: >-
+  Enable GraalJS for ECMAScript 2022 support in Maestro Flows. Compare
+  differences with Rhino engine.
 hidden: true
 ---
 

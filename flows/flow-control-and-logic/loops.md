@@ -1,3 +1,7 @@
+---
+description: Repeat actions using the repeat command for iterative test scenarios.
+---
+
 # Loops
 
 Automating repetitive tasks is one of the primary benefits of end-to-end testing. Whether you are adding multiple items to a cart, deleting a list of messages, or performing bulk data entry, loops allow you to execute sequences of commands efficiently without duplicating code.

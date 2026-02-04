@@ -1,3 +1,7 @@
+---
+description: Verify clipboard content in your tests using JavaScript and system commands.
+---
+
 # Check the clipboard content
 
 One of the trickiest things to test in mobile automation is the system clipboard. While Maestro provides built-in `copyTextFrom` and `pasteText` commands, these use a shim, a simulated clipboard designed for speed.

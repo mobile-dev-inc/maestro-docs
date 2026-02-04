@@ -1,4 +1,5 @@
 ---
+description: Embed JavaScript directly in YAML flows using evalScript and runScript.
 hidden: true
 ---
 

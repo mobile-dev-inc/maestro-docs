@@ -1,3 +1,7 @@
+---
+description: Extend Maestro flows with JavaScript for complex logic and data manipulation.
+---
+
 # JavaScript overview
 
 While Maestro’s YAML syntax is designed to handle the majority of UI interactions declaratively, certain testing scenarios require complex logic that goes beyond simple linear steps. The JavaScript integration allows you to make use of a full-scale scripting engine directly from your Flows, enabling you to handle dynamic data, complex assertions, and external integrations.

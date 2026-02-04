@@ -1,3 +1,9 @@
+---
+description: >-
+  Detect when your app is running under Maestro automation for test-specific
+  behavior.
+---
+
 # Detect Maestro
 
 There are times when your application needs to behave differently during a test. Whether you want to bypass a 2FA screen, disable analytics to avoid polluting production data, or point to a mock server, detecting Maestro within your app's code is a common requirement.

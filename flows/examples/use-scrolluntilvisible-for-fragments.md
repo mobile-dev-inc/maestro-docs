@@ -1,3 +1,7 @@
+---
+description: Scroll to elements inside fragments using scrollUntilVisible with containers.
+---
+
 # Custom scrolling for screen fragments
 
 Maestro’s native [`scrollUntilVisible`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/scrolluntilvisible) is a powerful tool, but it works in a specific way:

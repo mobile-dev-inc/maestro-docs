@@ -1,3 +1,7 @@
+---
+description: Learn to identify UI elements using text, ID, position, and state selectors.
+---
+
 # How to use Selectors
 
 Selectors are the foundational logic Maestro uses to identify UI elements. By default, Maestro interacts with the Accessibility Tree, meaning it sees the application much like an end-user or an assistive device would.&#x20;

@@ -1,3 +1,7 @@
+---
+description: Target specific devices or emulators for flow execution by device ID or model.
+---
+
 # Specify a device
 
 When you have multiple simulators, emulators, or physical devices connected to your machine, Maestro needs to know which one to target. This tutorial covers how to identify device IDs, target specific devices via the CLI specify the `--device` flag, and use advanced sharding strategies to run tests in parallel.
@@ -88,6 +92,6 @@ To use these flags, you must have the required number of devices already booted 
 
 #### Related content
 
-* [Reference for Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/reference-for-maestro-cli "mention"): Full list of available flags and commands.
+* [Maestro CLI commands and options](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options "mention"): Full list of available flags and commands.
 * [test-reports-and-artifacts.md](../workspace-management/test-reports-and-artifacts.md "mention"): Learn how reports are generated when running in parallel.
 * [Maestro Cloud](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/ky7LkNoLfvcORtXOzzBs/): Scale your tests to dozens of devices without managing hardware.

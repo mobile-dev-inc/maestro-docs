@@ -1,3 +1,7 @@
+---
+description: Select the last element in a list using index selectors and JavaScript.
+---
+
 # Get the last matching element
 
 In Maestro, targeting a specific view is usually straightforward using [indexes](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors/core-selectors). For example, if you want the third **Add to Basket** button, you simply use `index: 2` :&#x20;

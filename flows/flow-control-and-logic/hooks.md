@@ -1,3 +1,7 @@
+---
+description: Define onFlowStart and onFlowComplete hooks for setup and cleanup automation.
+---
+
 # Hooks
 
 In automated testing, you often need to perform specific setup or cleanup tasks for every test. Instead of manually adding a `runFlow` to the start or end of every file, Maestro provides Hooks.

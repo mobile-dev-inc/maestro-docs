@@ -1,3 +1,7 @@
+---
+description: Implement the Page Object Model pattern for maintainable Maestro test suites.
+---
+
 # Implementing the Page Object Model (POM)
 
 As the number of test grows, one problem shows up quickly, you will use selectors in every Flow file.

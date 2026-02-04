@@ -1,3 +1,9 @@
+---
+description: >-
+  Organize your Maestro workspace with config.yaml, test architecture, tags, and
+  reporting for scalable automation.
+---
+
 # Workspace management overview
 
 Moving from your first test to a full-scale automation suite requires shifting your focus from "how to write a command" to "how to design a system". A well-architected Maestro workspace ensures your tests stay fast, reliable, and easy to maintain as your application evolves.

@@ -1,3 +1,7 @@
+---
+description: Select images from the device gallery in automated tests using addMedia.
+---
+
 # Choose images from the gallery
 
 Uploading an image or updating a profile picture is a staple feature in modern mobile apps. However, automating this process is difficult because the "Media Picker" isn't actually part of your app, it’s a system-level component that looks and behaves differently depending on the OS and the specific version of Android or iOS.
