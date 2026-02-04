@@ -1,4 +1,7 @@
 ---
+description: >-
+  Maestro Studio is a visual IDE for creating and debugging tests without
+  writing code.
 hidden: true
 ---
 

@@ -1,4 +1,5 @@
 ---
+description: Configure your Maestro workspace repository with config.yaml settings.
 hidden: true
 ---
 

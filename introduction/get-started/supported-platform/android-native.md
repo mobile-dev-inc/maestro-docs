@@ -1,3 +1,9 @@
+---
+description: >-
+  Test native Android Views with Maestro using accessibility identifiers and
+  text selectors.
+---
+
 # Android Native
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>

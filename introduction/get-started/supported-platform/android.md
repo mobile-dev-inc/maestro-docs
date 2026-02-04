@@ -1,3 +1,7 @@
+---
+description: Configure Maestro for Android app testing with emulators or physical devices.
+---
+
 # Android
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>

@@ -1,3 +1,9 @@
+---
+description: >-
+  Platforms supported by Maestro: Android, iOS, React Native, Flutter, and Web
+  browsers.
+---
+
 # Supported platforms
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>

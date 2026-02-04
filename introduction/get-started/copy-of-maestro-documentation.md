@@ -1,4 +1,7 @@
 ---
+description: >-
+  Overview of Maestro documentation with links to guides, tutorials, and
+  community resources.
 hidden: true
 ---
 

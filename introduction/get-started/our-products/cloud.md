@@ -1,4 +1,7 @@
 ---
+description: >-
+  Maestro Cloud provides enterprise-grade infrastructure for parallel test
+  execution at scale.
 hidden: true
 ---
 

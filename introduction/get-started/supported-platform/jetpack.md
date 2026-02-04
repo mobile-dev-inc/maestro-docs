@@ -1,3 +1,7 @@
+---
+description: Test Android Jetpack Compose apps with Maestro using testTag and semantics.
+---
+
 # Jetpack
 
 Maestro operates on a fundamental principle: **UI-level automation without framework intrusion**. Unlike instrumentation-based tools (for example, Espresso, Robolectric) that execute within the app process and require deep coupling to view hierarchies, Maestro performs black-box testing through accessibility layer integration and visual element detection.

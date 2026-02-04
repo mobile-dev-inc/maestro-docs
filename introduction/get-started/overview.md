@@ -1,4 +1,7 @@
 ---
+description: >-
+  High-level introduction to Maestro's architecture and core concepts for UI
+  automation.
 hidden: true
 ---
 

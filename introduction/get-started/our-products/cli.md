@@ -1,4 +1,7 @@
 ---
+description: >-
+  Maestro CLI is a single-binary tool for running mobile and web UI tests from
+  the terminal.
 hidden: true
 ---
 

@@ -1,3 +1,9 @@
+---
+description: >-
+  Configure SwiftUI apps for Maestro testing with proper accessibility
+  identifiers.
+---
+
 # SwiftUI
 
 Maestro offers transparent support for SwiftUI applications. Because SwiftUI is declarative and content-centric, Maestro’s architecture-agnostic approach is perfectly suited for it—treating components like `List`, `LazyVStack`, and `Picker` as interactive visual elements rather than complex code objects.

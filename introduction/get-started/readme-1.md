@@ -1,4 +1,5 @@
 ---
+description: Getting started guide for new Maestro users with installation and first steps.
 hidden: true
 ---
 

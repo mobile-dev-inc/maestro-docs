@@ -1,3 +1,7 @@
+---
+description: Set up Flutter apps for Maestro testing with semantic labels and keys.
+---
+
 # Flutter
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
@@ -73,7 +77,7 @@ Semantics(
 )
 ```
 
-This way, the the test can target that identifier using the `id` [selector](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/how-to-use-selectors).
+This way, the the test can target that identifier using the `id` [selector](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors).
 
 ```yaml
 - tapOn:

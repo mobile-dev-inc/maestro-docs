@@ -1,3 +1,7 @@
+---
+description: Set up Maestro for iOS testing with Xcode simulators or physical devices.
+---
+
 # iOS
 
 Maestro provides a high-level abstraction for iOS testing by simulating end-user interactions at the presentation layer. Unlike traditional testing tools that require deep instrumentation, Maestro interacts with the iOS Accessibility layer, allowing you to test your app exactly as a user would.

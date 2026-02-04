@@ -1,3 +1,7 @@
+---
+description: Getting started guide for new Maestro users with installation and first steps.
+---
+
 # What is Maestro?
 
 Maestro is the simplest and most effective open-source UI automation framework for mobile and web. It is designed to allow developers and testers to define and automate user journeys with a level of reliability and ease that traditional tools cannot match.

@@ -1,3 +1,9 @@
+---
+description: >-
+  Test web applications in desktop browsers using Maestro's web automation
+  capabilities.
+---
+
 # Web Browsers
 
 Maestro extends its one framework to rule them all philosophy to the desktop browser. By using the same declarative YAML syntax you use for mobile, you can automate web applications, enabling unified end-to-end testing across your entire product surface.
@@ -41,7 +47,7 @@ maestro test example.yaml
 ### Platform specifics and tips
 
 * **Flutter Web**: Just like Flutter Mobile, Flutter Web renders elements differently. You should use Semantics to make elements addressable. Refer to the [Flutter](https://docs.maestro.dev/platform-support/flutter) documentation for best practices.
-* [**Selectors**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/how-to-use-selectors): Maestro prioritizes user-visible text. For complex web apps, using unique text labels or stable accessibility attributes is recommended to ensure your tests remain "refactoring resilient."
+* [**Selectors**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors): Maestro prioritizes user-visible text. For complex web apps, using unique text labels or stable accessibility attributes is recommended to ensure your tests remain "refactoring resilient."
 
 ### Known limitations
 

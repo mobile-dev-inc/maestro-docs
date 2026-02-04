@@ -1,3 +1,9 @@
+---
+description: >-
+  Test iOS UIKit apps with Maestro using accessibility labels and element
+  hierarchy.
+---
+
 # UIKit
 
 Maestro provides native, transparent support for iOS applications built with UIKit. Operating at the visual interaction layer rather than the implementation layer, Maestro interacts with rendered UI components regardless of underlying class hierarchies such as `UIButton`, `UITableView`, and `UILabel`.
