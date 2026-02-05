@@ -1,5 +1,7 @@
 ---
-description: Getting started guide for new Maestro users with installation and first steps.
+description: >-
+  Maestro is an open-source UI automation framework for mobile and web with
+  built-in tolerance, zero-wait intelligence, and declarative YAML syntax.
 ---
 
 # What is Maestro?

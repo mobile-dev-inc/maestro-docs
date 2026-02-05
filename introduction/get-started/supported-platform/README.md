@@ -1,7 +1,7 @@
 ---
 description: >-
-  Platforms supported by Maestro: Android, iOS, React Native, Flutter, and Web
-  browsers.
+  Platforms supported by Maestro: Android, iOS, React Native, Flutter, and web
+  applications via UI-layer automation.
 ---
 
 # Supported platforms

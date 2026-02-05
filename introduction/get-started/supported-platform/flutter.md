@@ -1,5 +1,7 @@
 ---
-description: Set up Flutter apps for Maestro testing with semantic labels and keys.
+description: >-
+  Test Flutter apps via the Semantics Tree. Use semanticLabel, Semantics widget,
+  or identifier (Flutter 3.19+) instead of Keys for stable automation.
 ---
 
 # Flutter

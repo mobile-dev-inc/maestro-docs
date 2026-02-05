@@ -1,7 +1,8 @@
 ---
 description: >-
-  Test iOS UIKit apps with Maestro using accessibility labels and element
-  hierarchy.
+  Black-box testing for UIKit via the accessibility layer. Use
+  accessibilityLabel for text and accessibilityIdentifier (gold standard) for id
+  selectors.
 ---
 
 # UIKit

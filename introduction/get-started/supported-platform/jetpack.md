@@ -1,5 +1,7 @@
 ---
-description: Test Android Jetpack Compose apps with Maestro using testTag and semantics.
+description: >-
+  Black-box testing for Jetpack Compose via AccessibilityService. Prioritizes
+  text-based matching and semantics over testTag for refactoring resilience.
 ---
 
 # Jetpack

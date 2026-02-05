@@ -1,5 +1,7 @@
 ---
-description: Set up Maestro for iOS testing with Xcode simulators or physical devices.
+description: >-
+  Black-box iOS testing via the Accessibility layer. Run on Xcode Simulators,
+  handle permissions, test multi-app journeys, and parallelize with Cloud.
 ---
 
 # iOS

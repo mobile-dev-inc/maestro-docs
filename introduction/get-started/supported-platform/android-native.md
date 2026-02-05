@@ -1,7 +1,7 @@
 ---
 description: >-
-  Test native Android Views with Maestro using accessibility identifiers and
-  text selectors.
+  Black-box testing for Android Views and Jetpack Compose via the Accessibility
+  layer. Target elements by text, Resource ID, Content Description, or testTag.
 ---
 
 # Android Native
