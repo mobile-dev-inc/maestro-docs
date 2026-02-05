@@ -6,7 +6,13 @@ description: >-
 
 # Test in different locales
 
-It is possible to use `maestro start-device` command to create a new device with a custom locale. This functionality enables an option to write and test Maestro flows for different languages. The parameter `--device-locale` is a combination of [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) + [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1), separated by an underscore `_` symbol in between them.
+It is possible to use `maestro start-device` command to create a new device with a custom locale and OS version. This functionality enables an option to write and test Maestro flows for different languages and operating system versions. 
+
+The parameter `--device-locale` is a combination of [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) + [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1), separated by an underscore `_` symbol in between them.
+
+The parameter `--os-version` allows you to specify the operating system version for the device:
+- **iOS**: 16, 17, 18
+- **Android**: 28, 29, 30, 31, 33
 
 Let's see some examples:
 
@@ -26,7 +32,39 @@ maestro start-device \
 ```
 {% endcode %}
 
+{% code title="Create a new iOS simulator with specific OS version and locale" %}
+```console
+maestro start-device \
+  --platform ios \
+  --os-version 17 \
+  --device-locale it_IT
+```
+{% endcode %}
+
+{% code title="Create a new Android emulator with specific API level and locale" %}
+```console
+maestro start-device \
+  --platform android \
+  --os-version 33 \
+  --device-locale fr_FR
+```
+{% endcode %}
+
 Below you can find a full list of supported device locales per platform.
+
+## Supported OS Versions
+
+### iOS
+- **16**: iOS 16.x
+- **17**: iOS 17.x  
+- **18**: iOS 18.x
+
+### Android (API Level)
+- **28**: Android 9 (API level 28)
+- **29**: Android 10 (API level 29)
+- **30**: Android 11 (API level 30)
+- **31**: Android 12 (API level 31)
+- **33**: Android 13 (API level 33)
 
 ### Supported device locales on Android
 
