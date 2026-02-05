@@ -16,4 +16,4 @@ The command takes no arguments.
 
 #### How it works
 
-`scroll` runs an upward swipe from the center of the screen (`start: 50%, 50%`; `end: 50%, 10%`). It is equivalent to `swipe: direction: UP`. The swipe uses a per-platform duration: 333 ms on iOS and 400 ms on Android.
+`scroll` runs an upward [swipe](swipe.md) from the center of the screen (`start: 50%, 50%`; `end: 50%, 10%`). It is equivalent to `swipe: direction: UP`. The swipe uses a per-platform duration: 333 ms on iOS and 400 ms on Android.
