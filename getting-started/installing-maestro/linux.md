@@ -1,7 +1,7 @@
 ---
 description: >-
-  Install the framework and start running mobile and web UI tests from your
-  Linux environment.
+  Install Maestro on Linux with Java 17+ and run mobile and web UI tests from
+  your Linux environment.
 ---
 
 # Linux
