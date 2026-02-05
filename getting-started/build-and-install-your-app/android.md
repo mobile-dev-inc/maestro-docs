@@ -1,7 +1,7 @@
 ---
 description: >-
-  Build and install Android APKs for Maestro using Gradle or Flutter. Requires
-  API 26+, x86_64, and runs on emulators or devices via adb.
+  Build and install your Android app for Maestro. Generate APKs with Gradle or  
+  Flutter, ensure API 26+, and install on an emulator or device.
 ---
 
 # Android
