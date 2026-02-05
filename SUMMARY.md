@@ -87,6 +87,8 @@
   * [assertTrue](api-reference/commands/asserttrue.md)
   * [assertWithAI](api-reference/commands/assertwithai.md)
   * [assertNoDefectsWithAi](api-reference/commands/assertnodefectswithai.md)
+  * [assertEqual](api-reference/commands/assertequal.md)
+  * [assertNotEqual](api-reference/commands/assertnotequal.md)
   * [back](api-reference/commands/back.md)
   * [clearKeychain](api-reference/commands/clearkeychain.md)
   * [clearState](api-reference/commands/clearstate.md)
