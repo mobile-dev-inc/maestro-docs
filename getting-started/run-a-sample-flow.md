@@ -1,9 +1,3 @@
----
-description: >-
-  Download sample Flows and app with maestro download-samples, then install and
-  run them on iOS or Android using maestro test.
----
-
 # Run a Sample Flow
 
 {% hint style="info" %}
