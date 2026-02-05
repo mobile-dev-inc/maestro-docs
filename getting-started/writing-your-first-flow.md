@@ -1,7 +1,7 @@
 ---
 description: >-
-  Write a test in a YAML file with appId and commands like launchApp and tapOn,
-  then run it with maestro test on an emulator or simulator.
+  Write your first flow with the Maestro framework for mobile and web UI  
+  testing. Start simple in YAML and run it on an emulator or simulator.
 ---
 
 # Writing Your First Flow
