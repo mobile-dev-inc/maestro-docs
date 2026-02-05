@@ -1,7 +1,7 @@
 ---
 description: >-
-  Build and install your Android app for Maestro. Generate APKs with Gradle or
-  Flutter, ensure API 26+, and install on an emulator or device.
+  Build and install Android APKs for Maestro using Gradle or Flutter. Requires
+  API 26+, x86_64, and runs on emulators or devices via adb.
 ---
 
 # Android
@@ -15,7 +15,7 @@ If you haven't, and especially if you happen to be using a Mac, this video will 
 Maestro works with most apps, but there are a few requirements:
 
 * APK (AAB not supported)
-* Compatible with x86_64 architecture
+* Compatible with x86\_64 architecture
 * Requires Android API level 26 or newer
 * Release and Debug builds both supported (although Release builds are often better)
 
@@ -45,13 +45,9 @@ flutter build apk --debug
 
 You can then find the built APK in the build/app/outputs/ folder.
 
-
-
 ## Building with Other Frameworks
 
 We're not going to attempt to cover all the possible ways you could build an app. React Native and Expo both have their standard ways (and, like Gradle, can be customized by the developers to follow any pattern that suits the team). Some rather refined developers might even provide a makefile.
-
-
 
 ## Running on an Emulator
 
@@ -62,4 +58,3 @@ Once that's done, you can either drag and drop the APK onto the running emulator
 ```
 adb install /path/to/app.apk
 ```
-
