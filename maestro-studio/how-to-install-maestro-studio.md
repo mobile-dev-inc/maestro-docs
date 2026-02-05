@@ -1,3 +1,9 @@
+---
+description: >-
+  Download Maestro Studio for macOS, Windows, or Linux. Requires Java 17+ and
+  JAVA_HOME configured.
+---
+
 # How to install Maestro Studio
 
 Maestro Studio is available for macOS, Windows, and Linux, providing a unified environment for end-to-end mobile and web testing.

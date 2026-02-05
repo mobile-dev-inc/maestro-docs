@@ -1,3 +1,9 @@
+---
+description: >-
+  Create YAML test flows in Maestro Studio. Select a device, add commands via
+  Insert Command, Inspect Screen, or write YAML directly, then Run Locally.
+---
+
 # How to create tests with Maestro Studio
 
 To run tests with Maestro Studio, you just need to create a YAML file with the test flow. But first, you need to set up your environment for the platform you are developing for (Android, iOS, or Web).

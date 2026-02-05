@@ -1,3 +1,9 @@
+---
+description: >-
+  Set environment variables in Maestro Studio to store emails, passwords, and
+  sensitive data. Reference them in YAML flows with ${variable} syntax.
+---
+
 # Environment variables
 
 As part of the workspace for tests, you can set environment variables to work with. This is useful to save time when typing your email address or your password for a test. It also helps to avoid errors due to typos and helps you keep your data safe by not adding sensitive information to tests. This way, you can share the YAML file with other people.
