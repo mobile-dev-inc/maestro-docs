@@ -1,5 +1,7 @@
 ---
-description: Information about test execution limits and soft limits in Maestro Cloud.
+description: >-
+  Maestro Cloud applies a 15-minute soft limit per test execution. Break longer
+  suites into smaller, parallelizable Flows.
 ---
 
 # Limits

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Specify Android API levels or iOS runtime versions and device models for your
-  cloud tests.
+  Set Android API levels or iOS runtime versions and device models for Maestro
+  Cloud tests. Supports Android 10-14 and iOS 16-18.
 ---
 
 # Configure the OS

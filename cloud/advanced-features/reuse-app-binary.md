@@ -1,7 +1,7 @@
 ---
 description: >-
-  Skip re-uploading your app by reusing a previously uploaded binary ID to save
-  time and bandwidth.
+  Use --app-binary-id to skip re-uploading your app and save time. Find the
+  binary ID in CLI output or Maestro dashboard.
 ---
 
 # Reuse app binary

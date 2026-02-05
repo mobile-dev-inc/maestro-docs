@@ -1,5 +1,7 @@
 ---
-description: Integrate Maestro Cloud with any CI/CD provider using the Maestro CLI.
+description: >-
+  Integrate Maestro Cloud with any CI/CD provider using the CLI. Works with
+  Jenkins, GitLab CI, Azure DevOps, and more.
 ---
 
 # Generic CI platform

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Learn how to build Android APKs and iOS .app bundles compatible with Maestro
-  Cloud's simulator infrastructure.
+  Build Android APKs (x86_64/x86) and iOS .app bundles for Simulator to run on
+  Maestro Cloud. Includes Gradle, Xcode, Fastlane, and Flutter instructions.
 ---
 
 # Build your app for the cloud

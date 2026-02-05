@@ -1,7 +1,7 @@
 ---
 description: >-
-  Connect Slack to Maestro Cloud and get project test result notifications in a
-  channel after each upload, optionally for failed flows only.
+  Connect Slack to Maestro Cloud for test result notifications after each
+  upload. Option to notify on failed flows only.
 ---
 
 # Set Slack notification

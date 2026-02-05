@@ -1,7 +1,7 @@
 ---
 description: >-
-  Securely pass sensitive parameters like usernames and passwords to your
-  Maestro Cloud tests.
+  Pass sensitive parameters like usernames and passwords to Maestro Cloud tests
+  via environment variables using the -e CLI option.
 ---
 
 # Manage secrets

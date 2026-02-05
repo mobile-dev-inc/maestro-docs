@@ -1,7 +1,7 @@
 ---
 description: >-
-  Run Maestro tests in the cloud using Bitbucket Pipelines and the Maestro Cloud
-  Pipe.
+  Native Bitbucket Pipe for Maestro Cloud. Set API key and Project ID to upload
+  app binary and run Flows on cloud infrastructure.
 ---
 
 # Bitbucket Pipelines

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Static IP addresses for Maestro Cloud to allow access through your firewall or
-  ACLs.
+  Static IP addresses used by Maestro Cloud to connect to your services. Add to
+  your firewall or ACLs for access.
 ---
 
 # IP allowlist

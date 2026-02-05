@@ -1,5 +1,7 @@
 ---
-description: Configure the native Maestro Cloud step in your Bitrise pipeline.
+description: >-
+  Native Bitrise integration for Maestro Cloud. Set API Key, Project ID, and app
+  binary path to trigger tests automatically.
 ---
 
 # Bitrise

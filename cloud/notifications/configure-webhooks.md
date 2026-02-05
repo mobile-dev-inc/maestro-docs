@@ -1,7 +1,7 @@
 ---
 description: >-
-  Set up webhooks to receive real-time POST notifications about Maestro Cloud
-  upload results to external services.
+  Enable webhooks for real-time POST notifications of Maestro Cloud upload
+  results to external services. Supports multiple webhooks and token auth.
 ---
 
 # Configure webhooks

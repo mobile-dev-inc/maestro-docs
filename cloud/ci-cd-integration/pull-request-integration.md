@@ -1,7 +1,7 @@
 ---
 description: >-
-  Integrate Maestro Cloud with your pull request workflow to run tests
-  asynchronously and block failing changes.
+  Native pull request integration runs Maestro tests asynchronously and blocks
+  merges on failures. Supports GitHub Enterprise.
 ---
 
 # Pull request integration

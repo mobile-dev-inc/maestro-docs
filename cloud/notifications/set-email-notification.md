@@ -1,7 +1,7 @@
 ---
 description: >-
-  Configure email notifications in config.yaml to receive Maestro Cloud test
-  results on failure or success.
+  Configure email notifications in config.yaml for Maestro Cloud. Default sends
+  on failure only; add onSuccess for successful runs.
 ---
 
 # Set email notification

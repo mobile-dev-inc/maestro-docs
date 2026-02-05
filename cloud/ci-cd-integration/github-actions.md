@@ -1,3 +1,9 @@
+---
+description: >-
+  Official GitHub Action for Maestro Cloud. Run mobile tests on push or PR, pass
+  env variables, and access outputs like console URL.
+---
+
 # GitHub Actions
 
 Maestro Cloud provides a native [GitHub Action](https://github.com/marketplace/actions/maestro-cloud-upload-action) that allows you to easily integrate mobile UI testing into your GitHub workflows.
