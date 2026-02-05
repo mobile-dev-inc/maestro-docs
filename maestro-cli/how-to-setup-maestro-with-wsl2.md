@@ -1,5 +1,7 @@
 ---
-description: Configure Maestro CLI on Windows using WSL2 for Android and iOS testing.
+description: >-
+  Set up Maestro CLI on Windows using WSL2 with Java 17+, Android Studio/SDK,
+  ANDROID_HOME, and ADB prerequisites.
 hidden: true
 ---
 
