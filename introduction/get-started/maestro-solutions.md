@@ -1,7 +1,7 @@
 ---
 description: >-
-  Explore Maestro's ecosystem: Studio, CLI, Cloud, Flows, and JavaScript
-  integration.
+  Explore Maestro's ecosystem: Studio, CLI, Cloud, and Flows, plus how they fit
+  into local automation and CI/CD workflows.
 ---
 
 # Maestro solutions
