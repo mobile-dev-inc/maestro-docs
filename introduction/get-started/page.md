@@ -1,5 +1,7 @@
 ---
-description: Supplementary introduction page for Maestro documentation.
+description: >-
+  Structure Maestro tests in a monorepo with journey- vs feature-based layouts
+  and config.yaml flow discovery tips.
 hidden: true
 ---
 
