@@ -1,5 +1,7 @@
 ---
-description: Step-by-step update guide for Maestro CLI.
+description: >-
+  Update Maestro CLI via curl, Homebrew, or manual download. Set MAESTRO_VERSION
+  to install a specific version for team or CI/CD compatibility.
 ---
 
 # Update the Maestro CLI

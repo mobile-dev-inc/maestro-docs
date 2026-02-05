@@ -1,7 +1,7 @@
 ---
 description: >-
-  Maestro CLI overview: install, configure, and run mobile UI tests from your
-  terminal.
+  Open-source CLI for mobile and web UI testing. Run tests, manage devices, use
+  Continuous Mode, and scale to Maestro Cloud from your terminal.
 ---
 
 # Maestro CLI overview

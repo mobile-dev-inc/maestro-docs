@@ -1,5 +1,7 @@
 ---
-description: Common issues and solutions when running Maestro CLI.
+description: >-
+  Fix WSL2 and Android Emulator connectivity issues. Resolve ADB port 5037
+  conflicts, configure firewall, and set ADB_SERVER_SOCKET for Windows.
 ---
 
 # Troubleshooting: WSL2 and Android Connections

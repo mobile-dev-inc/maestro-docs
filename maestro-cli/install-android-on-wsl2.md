@@ -1,5 +1,7 @@
 ---
-description: Set up Android emulators in WSL2 for running Maestro tests on Windows.
+description: >-
+  Install Android command line tools on WSL2. Set up ANDROID_HOME,
+  platform-tools via sdkmanager, and start the ADB server for Windows.
 hidden: true
 ---
 

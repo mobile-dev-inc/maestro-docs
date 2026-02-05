@@ -1,5 +1,7 @@
 ---
-description: Execute your first Maestro test using the CLI with sample flows and apps.
+description: >-
+  Write and execute your first Maestro Flow using the CLI. Automate the Contacts
+  app on an Android emulator with YAML commands and recording.
 ---
 
 # Run your first test with the Maestro CLI
