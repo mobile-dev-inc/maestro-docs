@@ -1,7 +1,7 @@
 ---
 description: >-
-  Install Maestro on Windows with Java, PowerShell, and Android Studio. Includes
-  WSL2 setup steps and common issues.
+  Install Maestro on Windows directly or via WSL2. Covers Java 17, Android
+  Studio, ADB setup between host and WSL2, and known issues.
 ---
 
 # Windows
