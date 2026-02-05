@@ -18,10 +18,6 @@ This command takes no arguments.
 - toggleAirplaneMode
 ```
 
-### Platform availability
-
-This command is supported on Android only. iOS simulators do not have an airplane mode.
-
 ### Related commands
 
 * [setairplanemode.md](setairplanemode.md "mention")

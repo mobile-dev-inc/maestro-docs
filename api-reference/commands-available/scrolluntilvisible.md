@@ -20,7 +20,7 @@ By default, an element is considered visible if it is fully displayed in the vie
 
 The command checks whether the target element is visible. If not, it swipes from the center of the screen toward the edge (to 10% from the edge in the chosen direction), checks again, and repeats until the element is found or the timeout is reached.
 
-This behavior works well when the whole screen scrolls (e.g. a full-screen list). When only part of the screen is scrollable (such as a bottom sheet, a fragment, or a small widget), the swipe may miss the scrollable region. For those layouts, use a custom scroll loop; see Custom scrolling for screen fragments.
+This behavior works well when the whole screen scrolls (e.g. a full-screen list). When only part of the screen is scrollable (such as a bottom sheet, a fragment, or a small widget), the swipe may miss the scrollable region. For those layouts, use a custom scroll loop; see [Custom scrolling for screen fragments](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/examples/custom-scrolling-for-screen-fragments).
 
 ### Usage examples
 
