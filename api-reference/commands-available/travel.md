@@ -24,5 +24,4 @@ This example simulates a user traveling along a route from Paris to Rome at 150 
       - "43.7230, 10.3966"
       - "41.8902, 12.4922"
     speed: 150000
-    speed: 7900
 ```
