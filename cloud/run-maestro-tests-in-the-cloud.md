@@ -7,8 +7,6 @@ icon: rocket-launch
 
 # Run Maestro tests in the cloud
 
-
-
 {% hint style="info" %}
 🚀 **Cloud Plan** required - get started for free at [**maestro.dev**](https://maestro.dev/cloud)
 {% endhint %}
@@ -42,7 +40,6 @@ You can integrate Maestro into any CI platform via the Maestro CLI, and we're in
 
 ## We take security seriously
 
-We are SOC 2 compliant meaning that the security and privacy of your data is our top priority\
-
+We are SOC 2 compliant meaning that the security and privacy of your data is our top priority.
 
 <figure><img src="../.gitbook/assets/21972-312_SOC_NonCPA.png" alt="" width="180"><figcaption></figcaption></figure>
