@@ -1,7 +1,7 @@
 ---
 description: >-
-  Maestro is an open-source framework for mobile and web UI testing. Docs
-  include setup guides, examples, and steps to run automated tests.
+  Maestro is an open-source framework for mobile and web UI testing. Learn why
+  Maestro, see examples, check platform support, and get started.
 ---
 
 # Maestro Documentation
