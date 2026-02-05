@@ -1,9 +1,3 @@
----
-description: >-
-  Maestro supports Android .apk and iOS Simulator .app. Test production-like
-  apps and avoid debug builds for better performance.
----
-
 # Build and Install your App
 
 Currently maestro supports emulator and device builds for Android (**.apk**) and iOS Simulator (**.app**).
