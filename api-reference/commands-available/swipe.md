@@ -48,8 +48,7 @@ This example performs a horizontal swipe from the right edge to the left edge of
 
 ```yaml
 - swipe:
-    from:
-     start: 90%, 50%
+    start: 90%, 50%
     end: 10%, 50%
 ```
 
