@@ -1,7 +1,7 @@
 ---
 description: >-
   Install Maestro on Windows directly or via WSL2. Covers Java 17, Android
-  Studio, ADB setup between host and WSL2, and known issues.
+  Studio, ADB setup between host and WSL2, and known issues
 ---
 
 # Windows
