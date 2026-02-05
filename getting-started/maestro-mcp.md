@@ -1,7 +1,7 @@
 ---
 description: >-
-  Use Maestro with the Model Context Protocol (MCP) to connect LLMs like Claude
-  or Cursor to apps and data, with secure, vendor-independent access.
+  Connect LLMs like Claude, Cursor, or Windsurf to Maestro via MCP for secure,
+  vendor-independent access. Run maestro mcp to start.
 ---
 
 # Maestro MCP
