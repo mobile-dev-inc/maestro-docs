@@ -1,9 +1,3 @@
----
-description: >-
-  Run flows in CI using Maestro Cloud with no simulator setup, or use Maestro
-  CLI with any Android ADB device or iOS simulator via IDB.
----
-
 # Running Flows on CI
 
 ### Running in the Cloud
