@@ -1,7 +1,7 @@
 ---
 description: >-
-  Install Maestro on macOS with Java 17 and Xcode. Follow setup steps to get
-  started with reliable mobile UI testing.
+  Install Maestro on macOS with Java 17+ and Xcode 14+. Includes Homebrew,
+  Oracle JDK, OpenJDK, and SDKMAN setup options.
 ---
 
 # macOS
