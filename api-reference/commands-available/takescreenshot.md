@@ -10,7 +10,7 @@ The `takeScreenshot` command saves a screenshot of the current screen as a PNG f
 
 The `takeScreenshot` command accepts the `path` parameter:
 
-<table><thead><tr><th width="120">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>path</code></td><td>The file name for the screenshot, without the extension. Maestro saves the screenshot as a <code>.png</code> file. The path is relative to the Maestro workspace directory, not the flow file. By default, Maestro saves screenshots to a <code>.maestro</code> folder in your workspace. If you are using <a href="https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/">Maestro Studio overview</a>, the files are saved in the <code>.maestro/screenshots</code> folder.</td></tr></tbody></table>
+<table><thead><tr><th width="120">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>path</code></td><td>The file name for the screenshot, without the extension. Maestro saves the screenshot as a <code>.png</code> file. The path is relative to the Maestro workspace directory, not the flow file. By default, Maestro saves screenshots to a <code>.maestro</code> folder in your workspace. If you are using <a href="https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/">Maestro Studio</a>, the files are saved in the <code>.maestro/screenshots</code> folder.</td></tr></tbody></table>
 
 ### Usage examples
 
