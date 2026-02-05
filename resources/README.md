@@ -15,5 +15,3 @@ The Resources section contains troubleshooting guides, community links, and refe
 ### Community
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Community projects</strong></td><td>Maestro repository, Slack, awesome list, and community-built projects and integrations.</td><td><a href="community/community-projects.md">community-projects.md</a></td></tr><tr><td><strong>Articles</strong></td><td>Articles, blog posts, and tutorials about Maestro from the community and the Maestro team.</td><td><a href="community/articles.md">articles.md</a></td></tr><tr><td><strong>Showcase</strong></td><td>Case studies and examples of teams and apps using Maestro.</td><td><a href="community/showcase.md">showcase.md</a></td></tr></tbody></table>
-
-###
