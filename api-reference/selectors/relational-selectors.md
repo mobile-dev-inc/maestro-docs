@@ -1,7 +1,7 @@
 ---
 description: >-
-  Position elements using above, below, leftOf, rightOf, and containedIn
-  selectors.
+  Identify elements by position (above, below, leftOf, rightOf) or parent-child
+  relationships (containsChild, childOf, containsDescendants).
 ---
 
 # Relational Selectors

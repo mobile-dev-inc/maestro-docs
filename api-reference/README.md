@@ -1,5 +1,7 @@
 ---
-description: Commands overview.
+description: >-
+  API Reference covering Maestro commands, selectors for UI elements, and
+  workspace configuration for global settings.
 ---
 
 # Commands overview
