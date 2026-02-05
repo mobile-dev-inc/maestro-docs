@@ -1,7 +1,7 @@
 ---
 description: >-
-  Run maestro studio in the CLI to visually select UI elements, get
-  auto-generated YAML examples, and execute commands inline via REPL.
+  Write Maestro flows faster with Studio in the CLI. Visually pick UI
+  elements,   get auto-generated YAML examples, and run commands inline.
 ---
 
 # Maestro Studio (CLI)
