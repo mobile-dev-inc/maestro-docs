@@ -7,7 +7,7 @@ description: Change device orientation between portrait and landscape modes.
 Sets the orientation of the virtual device.
 
 {% hint style="info" %}
-Not supported on web. This command is supported on Android only. On iOS, it will pass but has no effect.
+This command is not supported on Web.
 {% endhint %}
 
 ### Arguments
