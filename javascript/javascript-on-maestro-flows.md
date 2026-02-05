@@ -1,3 +1,9 @@
+---
+description: >-
+  Use JavaScript in flows with ${} injection, runScript files, env/output
+  variables, cloud-friendly paths, and console logging.
+---
+
 # JavaScript on Maestro flows
 
 When using Javascript wtht Maestro, you can perform a series of commands and subcommands inside your flows. The main ones are listed below.
