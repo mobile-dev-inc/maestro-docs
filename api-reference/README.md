@@ -1,5 +1,5 @@
 ---
-description: Complete API reference for all Maestro commands and selectors.
+description: Commands overview.
 ---
 
 # Commands overview
