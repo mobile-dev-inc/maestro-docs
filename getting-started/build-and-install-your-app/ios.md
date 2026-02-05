@@ -1,9 +1,3 @@
----
-description: >-
-  Build iOS Simulator .app files with Xcode, Xcode command line tools, Fastlane,
-  or Flutter, then install and run them on the Simulator.
----
-
 # iOS
 
 This all assumes you've got Xcode plus Simulator runtimes installed. If you haven't, and want to know how, we've made a video walkthrough:
