@@ -1,5 +1,7 @@
 ---
-description: Scroll to elements inside fragments using scrollUntilVisible with containers.
+description: >-
+  Scroll to elements inside fragments using custom swipe logic when
+  scrollUntilVisible fails on partial screens.
 ---
 
 # Custom scrolling for screen fragments

@@ -1,5 +1,7 @@
 ---
-description: Automate the Android Contacts app to create and edit contacts with Maestro.
+description: >-
+  Automate the Android Contacts app to create contacts with random data using
+  Maestro commands.
 ---
 
 # Automate Android Contacts Flow

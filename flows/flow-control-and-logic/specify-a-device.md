@@ -1,5 +1,7 @@
 ---
-description: Target specific devices or emulators for flow execution by device ID or model.
+description: >-
+  Target specific devices or emulators using the --device flag. Supports
+  sharding for parallel test execution.
 ---
 
 # Specify a device
