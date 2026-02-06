@@ -46,7 +46,7 @@ Maestro may fail or behave unexpectedly when used with very old or very new Java
 
 #### **Workaround**
 
-Use **jenv** or **sdkman** to manage multiple Java versions. See the [Maestro guide on installing and using sdkman](https://www.youtube.com/watch?v=yR7BGMjK0vM).
+We recommend Java 17 or 21. If you require different versions to run other applications, use jenv or sdkman to manage multiple Java versions. See the [Maestro guide on installing and using sdkman](https://www.youtube.com/watch?v=yR7BGMjK0vM).
 
 </details>
 
@@ -65,26 +65,6 @@ When testing Android apps, the [`inputText`](https://app.gitbook.com/s/HqSeOOzxP
 #### **Limitation**
 
 On Android, only ASCII characters are supported. Follow [this GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/146) for updates.
-
-</details>
-
-<details>
-
-<summary>Accidental double-tap</summary>
-
-#### What is happening
-
-When testing Android apps, [`tapOn`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/tapon) may trigger a second tap if the UI hierarchy does not change after the first tap.
-
-#### **Workaround**
-
-Disable the retry behavior by setting `retryTapIfNoChange: false`:
-
-```yaml
-- tapOn:
-    text: "Some Button"
-    retryTapIfNoChange: false
-```
 
 </details>
 
