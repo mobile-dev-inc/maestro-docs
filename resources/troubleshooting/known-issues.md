@@ -46,7 +46,7 @@ Maestro may fail or behave unexpectedly when used with very old or very new Java
 
 #### **Workaround**
 
-We recommend Java 17 or 21. If you require different versions to run other applications, use jenv or sdkman to manage multiple Java versions. See the [Maestro guide on installing and using sdkman](https://www.youtube.com/watch?v=yR7BGMjK0vM).
+We recommend Java 17 or 21. If you require different versions to run other applications, use **jenv** or **sdkman** to manage multiple Java versions. See the [Maestro guide on installing and using sdkman](https://www.youtube.com/watch?v=yR7BGMjK0vM).
 
 </details>
 
