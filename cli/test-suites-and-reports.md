@@ -144,6 +144,9 @@ To run your Flows in a given order, you can add the following configuration to y
 
 ```yaml
 # config.yaml
+flows:
+  - "**" 
+
 executionOrder:
   continueOnFailure: false # default is true
   flowsOrder:
