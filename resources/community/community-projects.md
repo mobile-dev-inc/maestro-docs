@@ -10,7 +10,7 @@ The Maestro ecosystem is built on a foundation of collaboration. Beyond the core
 
 Connect with the team and other developers to ask questions, share your projects, and contribute to the source code.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-github">:github:</i></td><td><strong>GitHub</strong></td><td>Maestro source code, issue tracking, and technical contributions.</td><td></td><td><a href="https://github.com/mobile-dev-inc/maestro">https://github.com/mobile-dev-inc/maestro</a></td></tr><tr><td><i class="fa-slack">:slack:</i></td><td><strong>Slack</strong></td><td>Join the <code>#maestro-questions</code> channel for  support.</td><td></td><td><a href="https://docsend.com/view/3r2sf8fvvcjxvbtk">https://docsend.com/view/3r2sf8fvvcjxvbtk</a></td></tr><tr><td><i class="fa-web-awesome">:web-awesome:</i></td><td><strong>Awesome list</strong></td><td>A curated list of community resources, tutorials, and scripts.</td><td></td><td><a href="https://github.com/ludovicobesana/awesome-maestro">https://github.com/ludovicobesana/awesome-maestro</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-github">:github:</i></td><td><strong>GitHub</strong></td><td>Maestro source code, issue tracking, and technical contributions.</td><td></td><td><a href="https://github.com/mobile-dev-inc/maestro">https://github.com/mobile-dev-inc/maestro</a></td></tr><tr><td><i class="fa-slack">:slack:</i></td><td><strong>Slack</strong></td><td>Join the <code>#maestro-questions</code> channel for  support.</td><td></td><td><a href="https://slack.maestro.dev/">https://slack.maestro.dev/</a></td></tr><tr><td><i class="fa-web-awesome">:web-awesome:</i></td><td><strong>Awesome list</strong></td><td>A curated list of community resources, tutorials, and scripts.</td><td></td><td><a href="https://github.com/ludovicobesana/awesome-maestro">https://github.com/ludovicobesana/awesome-maestro</a></td></tr></tbody></table>
 
 ### Extensions and integrations
 
@@ -30,7 +30,6 @@ Supercharge your local development and CI/CD pipelines with these community-buil
 
 * [Codemagic Integration](https://docs.codemagic.io/integrations/maestro-integration/): Documentation for running Maestro tests within Codemagic pipelines.
 * [Fastlane Plugin](https://github.com/inf2381/fastlane-plugin-maestro): Automate flow execution directly from your Fastlane lanes.
-* [ASDF Plugin](https://github.com/dotanuki-labs/asdf-maestro): Manage and switch between Maestro CLI versions using the ASDF version manager.
 * [Slack Test Results](https://github.com/brett-james-rocketlab/maestro-test-results-to-slack): Automatically parse results and post status updates to your Slack channels.
 
 ### Explore more
