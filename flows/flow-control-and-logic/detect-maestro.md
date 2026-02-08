@@ -57,6 +57,32 @@ if ProcessInfo.processInfo.arguments.contains("isMaestro") {
 }
 ```
 {% endtab %}
+
+{% tab title="React Native" %}
+For React Native, you can use a library like `react-native-launch-arguments` to retrieve the parameters passed during startup.
+
+```javascript
+import { LaunchArguments } from 'react-native-launch-arguments';
+
+if (LaunchArguments.value().isMaestro === "true") {
+    // Apply test-only configurations
+}
+```
+{% endtab %}
+
+{% tab title="Flutter" %}
+In Flutter, you can use the `args` package or access environment variables if passed as `--dart-define`. However, for native launch arguments, you typically need a platform channel or a package like `receive_intent` (Android) to read the intent extras.
+
+```dart
+// Example using a platform channel to check Android Intent extras
+const platform = MethodChannel('com.example.app/test_detection');
+
+final String? isMaestro = await platform.invokeMethod('getLaunchArgument', {'key': 'isMaestro'});
+if (isMaestro == "true") {
+  // Apply test-only configurations
+}
+```
+{% endtab %}
 {% endtabs %}
 
 {% hint style="danger" %}
