@@ -133,7 +133,9 @@ env:
 
 Maestro provides a set of built-in parameters that are available in all flows.
 
-<table><thead><tr><th width="201.75">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>MAESTRO_FILENAME</code></td><td>The filename of the current flow (e.g., <code>login.yaml</code>).</td></tr></tbody></table>
+| Parameter          | Description                                            |
+| ------------------ | ------------------------------------------------------ |
+| `MAESTRO_FILENAME` | The filename of the current flow (e.g., `login.yaml`). |
 
 ### Next steps
 
