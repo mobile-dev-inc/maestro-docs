@@ -94,9 +94,10 @@ tags:
 | Command                                          | Result         | Why?                                                      |
 | ------------------------------------------------ | -------------- | --------------------------------------------------------- |
 | `--include-tags=dev`                             | **Flow A & B** | Both contain the `dev` tag.                               |
-| `--include-tags=dev,pull-request`                | **Flow A & B** | Uses **OR** logic; both contain at least one of the tags. |
+| `--include-tags=dev,pull-request`                | **Flow A & B** | Uses **OR** logic, both contain at least one of the tags. |
 | `--exclude-tags=pull-request`                    | **Flow B**     | Flow A is removed due to the `pull-request` tag.          |
 | `--include-tags=dev --exclude-tags=pull-request` | **Flow B**     | Both are included via `dev`, then Flow A is excluded.     |
+| `--exclude-tags=dev`                             | **none Flow**  | Remove both Flows.                                        |
 
 ### Global tag configuration
 
