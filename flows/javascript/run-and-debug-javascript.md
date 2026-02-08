@@ -60,10 +60,11 @@ console.log(`Setting up user with role: ${role}`);
 
 Maestro supports standard `console.log` statements to help you debug your scripts and track Flow execution.
 
-When logging with JavaScript in Maestro, keep these two points in mind:
+When logging with JavaScript in Maestro, keep these points in mind:
 
 * **Multiple arguments are not supported:** Running `console.log('My variable is', variable)` will only output `My variable is`.
-* **Use template literals or concatenation:** To log variables alongside text, use template literals or string concatenation.
+* **Use template literals or concatenation:** To log variables alongside text, use template literals (in external files) or string concatenation.
+* **Log Destination:** Anything output via `console.log` is captured in the `maestro.log` file, prefaced with `JsConsole`.
 
 The following code snippet shows examples of both methods:
 
@@ -74,15 +75,28 @@ console.log(`Value is ${myVar}`) // template literals
 
 #### Logging with `evalScript` command <a href="#logging-with-evalscript-command" id="logging-with-evalscript-command"></a>
 
-If you want to log something inline, you can use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) to output it to the console without creating a separate file:
+If you want to log something inline, you can use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) to output it to the console without creating a separate file.
 
 ```yaml
-- evalScript: ${console.log('Hello from Javascript')}
+- evalScript: ${console.log('Value: ' + myVar)}
 ```
+
+{% hint style="info" %}
+#### Template literals in `evalScript`
+
+Standard JavaScript template literals (using backticks \`\`\` and `${}`) will **not** work inside `evalScript` because the command itself is already wrapped in a `${...}` block.&#x20;
+
+```yaml
+# Example of incorect use
+- evalScript: console.log(`Value is ${myVar}`)
+```
+
+Use string concatenation instead.
+{% endhint %}
 
 #### Logging in external files
 
-When using `runScript`, you can organize your logs within your JavaScript files just as you would in a standard development environment.
+When using `runScript`, you can organize your logs within your JavaScript files just as you would in a standard development environment. Here, template literals are fully supported.
 
 The following Flow runs a script which will log a status message:
 
@@ -105,9 +119,9 @@ console.log(`Operation status: ${status}`); // Outputs 'Operation status: Succes
 
 ### Next steps
 
-Now that you already knows how to run and debug JavaScript code in Maestro Flows, access the following guides:
+Now that you already know how to run and debug JavaScript code in Maestro Flows, access the following guides:
 
 * [manage-data-and-states.md](manage-data-and-states.md "mention"): Learn how to use the `output` object.
 * [generate-synthetic-data.md](generate-synthetic-data.md "mention"): Use `faker` to create dynamic test data.
-* [make-http-requests.md](make-http-requests.md "mention"): Use the built-in HTTP client for API interactions.
+* [test-reports-and-artifacts.md](../workspace-management/test-reports-and-artifacts.md "mention"): Learn how to access the `maestro.log` using the `--debug-output` flag to see your console logs.
 
