@@ -8,55 +8,34 @@ description: Use AI-powered analysis to understand test failures and improve tes
 This is an experimental feature powered by LLM technology. We appreciate your feedback as we continue improving it.
 {% endhint %}
 
-Maestro now provides  an AI-powered analysis layer that goes beyond simple "pass/fail" results. By using the `--analyze` flag and custom AI commands, Maestro examines your test logs, command metadata, and screenshots to provide actionable insights into your app's functionality, UI polish, and internationalization.
+Maestro provides an AI-powered analysis layer that goes beyond simple "pass/fail" results. By using the `--analyze` flag and custom AI commands, Maestro examines your test logs, command metadata, and screenshots to provide actionable insights into your app's functionality, UI polish, and internationalization.
 
 ### Authentication&#x20;
 
-Because AI commands are processed through the Maestro infrastructure, you must authenticate with the Maestro Cloud backend, even if you are using your own external AI service keys.&#x20;
+Because AI commands are processed through the Maestro infrastructure, you must authenticate with the Maestro Cloud backend.
 
-{% hint style="success" %}
-This does not require a Maestro Cloud paid plan.
-{% endhint %}
+* **Account Requirement**: Users need a Maestro Cloud account to use AI features.
+* **Plan Support**: A free account is sufficient to enable AI commands; it does not require a paid Maestro Cloud plan. Note that while AI commands are enabled on a free account, running tests on Maestro Cloud itself still requires a Cloud Plan.
+* **Login Methods**:
+  * **CLI/Studio**: Running `maestro login` establishes an authentication session shared between the Maestro CLI and Maestro Studio. Logging into one automatically authenticates you for both.
+  *   **Environment Variable**: Alternatively, you can export your Maestro Cloud API key as an environment variable:<br>
 
-To authenticate, you have two options. You can use the Maestro CLI and run `maestro login` to establish a long-lived authentication session. Alternatively, you can export your Maestro Cloud API key as an environment variable:
-
-```bash
-export MAESTRO_CLOUD_API_KEY=<your_maestro_key>
-```
-
-### External AI service configuration
-
-Since Maestro's AI models are not built directly into the Maestro CLI, you need to configure environment variables to connect with external services like OpenAI or Anthropic.
-
-To configure these environment variables, you must run the following commands in your terminal session before executing your tests. First, provide the API key required to use the external LLM service (OpenAI or Anthropic). To set the API key, run:
-
-```bash
-export MAESTRO_CLI_AI_KEY=your_external_service_key
-```
-
-Next, set the AI model to use:
-
-```bash
-export MAESTRO_CLI_AI_MODEL=your_chosen_model
-```
+      ```shellscript
+      export MAESTRO_CLOUD_API_KEY=<your_maestro_key>
+      ```
 
 {% hint style="info" %}
-#### **Model logic**
+#### AI usage in Maestro
 
-Maestro looks at the first few characters of the `MAESTRO_CLI_AI_MODEL` variable to define the AI solution to be used.&#x20;
+Maestro has updated how AI features are provided. Users no longer need to "bring their own AI" by providing external service keys or selecting specific models.
 
-* **No prefix (OpenAI)**: If you don't add a specific brand name at the start, Maestro assumes you are using OpenAI. The default model is `gpt-4o`.
-* **Claude prefix (Anthropic)**: If the model name starts with `claude`, Maestro switches its logic to talk to Anthropic's servers. The default is `claude-3-5-sonnet-20240620`.
+* **Managed Model**: All AI commands are now routed directly through Maestro Cloud.
+* **Automatic Configuration**: Environment variables like `MAESTRO_CLI_AI_KEY` and `MAESTRO_CLI_AI_MODEL` are no longer used. Maestro automatically manages the underlying third-party AI providers (such as OpenAI or Anthropic) to ensure the best performance.
 {% endhint %}
-
-Maestro uses the model name prefix to determine which service to utilize:
-
-* OpenAI (Default): If no prefix is specified, Maestro defaults to OpenAI. The default model is `gpt-4o`.
-* Anthropic (Claude): To use Anthropic's service, specify a Claude model name. The default is `claude-3-5-sonnet-20240620`.
 
 ### Ways to use AI
 
-Maestro provides two mains way to use ai to evaluate your app.
+Maestro provides two main ways to use AI to evaluate your app.
 
 #### Automated analysis
 
@@ -92,7 +71,7 @@ You can integrate AI directly into your YAML Flow logic using specialized comman
 * [`assertWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertwithai): Verify complex UI states using natural language (e.g., "Verify the user is shown a success message in Spanish").
 * [`assertNoDefectsWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertnodefectswithai): Perform a visual audit of the current screen to find common UI issues.
 
-### **Disabe analysis otifications**
+#### Disable analysis notifications
 
 If you want to prevent the `Analyzing Flow...` notification from appearing in your terminal output (e.g., in a clean CI log), you can set an environment variable:
 
