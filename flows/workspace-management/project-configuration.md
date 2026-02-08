@@ -6,48 +6,37 @@ description: Configure your Maestro workspace with config.yaml for test suite se
 
 The `config.yaml` file acts as the central "brain" of your Maestro workspace. While it is optional, it becomes essential when your project grows, allowing you to define global rules for your test suite, manage environment variables, and configure platform-specific behaviors.
 
+{% hint style="info" %}
+**Maestro Studio**
+
+Unlike the Maestro CLI, Maestro Studio does not currently support `config.yaml`. However, Studio will include your configuration file in uploads to Maestro Cloud when you run an entire workspace.
+{% endhint %}
+
 ### When do I need a config file?
 
 If you are just running a single Flow file locally, you don't need a configuration. You should create a `config.yaml` if:
 
 * You have a deep directory structure and need to define test discovery.
 * You need to handle environment variables across multiple Flows.
-* You want to disable system animations to reduce flakiness.
+* You want to configure cloud-specific behaviors like disabling system animations.
 
 ### Setting up your configuration
 
 {% hint style="info" %}
-#### Default Behavior & Hierarchy
+#### Default behavior and hierarchy
 
-If no `--config` flag is provided, Maestro will look for a file named `config.yaml` in the directory where you execute the command. If it doesn't find one, it will run with default settings.
+When you point Maestro at a directory, it looks for a file named `config.yaml` in the root of that directory. If no `--config` flag is provided and the file is missing, Maestro runs with default settings.
 {% endhint %}
 
 {% stepper %}
 {% step %}
 #### Create the configuration file
 
-You can place your configuration file anywhere in your repository. While some teams prefer a `.maestro/` folder, you can simply place `config.yaml` at the root of your project for easier access.
+You can place your configuration file anywhere in your repository, but for simplicity, it should be at the root of the Maestro workspace (commonly within a `.maestro/` folder).
 
 {% hint style="info" %}
 Ensure the file is named exactly `config.yaml`.
 {% endhint %}
-{% endstep %}
-
-{% step %}
-#### Define the application ID
-
-The `appId` tells the Maestro engine which process to pilot. This is the only mandatory field for suite-wide testing.
-
-```yaml
-# config.yaml
-appId: com.example.app
-```
-
-The `appId` targets different identifiers based on the platform:
-
-* **iOS**: The Bundle ID (e.g., `com.company.appname`).
-* **Android**: The Package Name (e.g., `com.company.appname`).
-* **Web**: The base URL (e.g., `https://maestro.mobile.dev/`).
 {% endstep %}
 
 {% step %}
@@ -57,7 +46,6 @@ Use the `env` block to define data that changes across environments (staging vs.
 
 ```yaml
 # config.yaml
-appId: com.example.app
 env:
     USERNAME: "test_user_01"
     API_URL: "https://staging.api.com"
@@ -66,22 +54,31 @@ env:
 {% hint style="info" %}
 If you are using Maestro Studio, it provides an interface for managing [environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environment-variables).
 {% endhint %}
+
+{% hint style="warning" %}
+**`appId` in configuration**
+
+The `appId` is defined at the **top of individual Flow files**, not within the `config.yaml`. While Maestro Studio may prompt for an ID, it does not currently read this value from configuration files.
+{% endhint %}
 {% endstep %}
 
 {% step %}
 #### Configure the platform behavior
 
-To ensure your tests are stable and flake-free, you can configure platform-specific behaviors. A common best practice is to disable system animations to prevent timing issues.
+To ensure your tests are stable and flake-free, you can configure platform-specific behaviors.
 
 ```yaml
-# .maestro/config.yaml
+# config.yaml
 platform:
   ios:
-    disableAnimations: true           # Enables "Reduce Motion" on the simulator
-    snapshotKeyHonorModalViews: false # Includes background elements in the hierarchy
-  android:
-    disableAnimations: true           # Disables system window and transition animations
+    snapshotKeyHonorModalViews: false # iOS: Includes background elements in the hierarchy
 ```
+
+{% hint style="info" %}
+#### **Cloud-only flags**
+
+Some flags, like `disableAnimations`, are a cloud-only feature and does not affect local emulators or simulators.
+{% endhint %}
 {% endstep %}
 {% endstepper %}
 
