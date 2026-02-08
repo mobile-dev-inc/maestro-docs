@@ -20,7 +20,12 @@ In Maestro, conditions are primarily handled using the `when` argument. It can b
 
 The following table lists the available conditions you can use to define the conditional execution of your Flow.
 
-<table><thead><tr><th width="129">Condition</th><th>Description</th></tr></thead><tbody><tr><td><code>visible</code></td><td>Executed if the element matching the selector is visible. The element must be defined using one or more <a data-mention href="https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors">Selectors</a>.</td></tr><tr><td><code>notVisible</code></td><td>Executed if the element matching the selector is <strong>not</strong> visible. The element must be defined using one or more <a data-mention href="https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors">Selectors</a>.</td></tr><tr><td><code>platform</code></td><td>Executed if the current platform matches (<code>Android</code>, <code>iOS</code>, or <code>Web</code>).</td></tr><tr><td><code>true</code></td><td>Executed if the JavaScript expression evaluates to <code>true</code>.</td></tr></tbody></table>
+| Condition    | Description                                                                                                                                                                                       |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `visible`    | Executed if the element matching the selector is visible. The element must be defined using one or more [Selectors](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors "mention").          |
+| `notVisible` | Executed if the element matching the selector is **not** visible. The element must be defined using one or more  [Selectors](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/selectors "mention"). |
+| `platform`   | Executed if the current platform matches (`Android`, `iOS`, or `Web`).                                                                                                                            |
+| `true`       | Executed if the JavaScript expression evaluates to `true`.                                                                                                                                        |
 
 ### Common use cases
 
@@ -61,12 +66,12 @@ In this example, the **Dismiss** button is tapped only if it is currently visibl
       - tapOn: "Dismiss"
 ```
 
-The same result can be achieved by using the condition directly with the `tapOn` command:
+Commands like `tapOn` do not support the `when` argument directly. If you want to interact with an element that might not be there without failing the test, use the `optional: true` property instead:
 
 ```yaml
-- tapOn: "Dismiss"
-  when:
-    visible: "Dismiss"
+- tapOn:
+    text: "Dismiss"
+    optional: true
 ```
 
 {% hint style="success" %}
@@ -75,14 +80,16 @@ Relying on unstable UI states for conditions can lead to flaky tests. Ensure you
 
 #### Using `notVisible` for negative conditions
 
-You can use the `notVisible` condition to handle inverse or “else” scenarios, cases where an action should occur only when a specific element is _not_ present on the screen.
+You can use the `notVisible` condition to handle inverse or “else” scenarios where an action should occur only when a specific element is _not_ present on the screen.
 
-For example, the following command taps **Standard Login** only if the **Biometric Login** option is not visible:
+For example, the following command taps **Standard Login** only if the **Biometric Login** option is not visible. The `runFlow` command is used here because the `tapOn` command itself does not support conditional logic:
 
 ```yaml
-- tapOn: "Standard Login"
-  when:
-    notVisible: "Biometric Login"
+- runFlow:
+    when:
+      notVisible: "Biometric Login"
+    commands:
+      - tapOn: "Standard Login"
 ```
 
 This approach allows your tests to adapt to different UI states.
@@ -130,10 +137,25 @@ In this example, the `new-feature-test.yaml` subflow is executed only if the `IS
     file: subflows/new-feature-test.yaml
 ```
 
-{% hint style="success" %}
-If your JavaScript condition is longer than one line, move the logic into a separate `.js` file and use the `output` variable to keep your YAML clean.
-{% endhint %}
+If your JavaScript condition is longer than one line, move the logic into a separate `.js` file and use the `output` variable to keep your YAML clean.&#x20;
+
+The following example shows how to move the logic to an external file. First, create your script logic:
+
+```javascript
+// checkFeature.js
+output.shouldRunTest = (MAESTRO_PLATFORM === 'Android' && someComplexCalculation() > 10);
+```
+
+Then, reference it in your Flow:
+
+```yaml
+- runScript: checkFeature.js
+- runFlow:
+    when:
+      true: ${output.shouldRunTest}
+    file: subflows/advanced-test.yaml
+```
 
 #### Next steps
 
-Now that you understand how to use conditions in your Flows, learn how to use [parameters](parameters-and-constants.md) and [constants](/broken/pages/DLtBiFLCJpsE4uxGnPNx) or explore all the possibilities of using [JavaScript](../javascript/javascript-overview.md) to create tests.
+Now that you understand how to use conditions in your Flows, learn how to use [parameters and constants](parameters-and-constants.md) or explore all the possibilities of using [JavaScript](../javascript/javascript-overview.md) to create tests.
