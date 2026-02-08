@@ -62,12 +62,10 @@ export MAESTRO_API_KEY="12345"
 maestro test flow.yaml
 ```
 
-In this example, the API key exported in the shell is captured by the JavaScript script within the Flow.
+In this example, the API key exported in the shell is captured by an inline evaluation within the Flow.
 
 ```yaml
-- runScript:
-    script: |
-       output.apiKey = "${MAESTRO_API_KEY}"
+- evalScript: ${output.apiKey = MAESTRO_API_KEY}
 ```
 
 ### Constants
