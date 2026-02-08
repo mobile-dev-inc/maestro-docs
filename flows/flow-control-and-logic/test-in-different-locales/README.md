@@ -7,7 +7,9 @@ description: Test your app in multiple languages and regions using locale config
 Testing how your app handles different languages and regional formats is critical for a global user base. In Maestro, the locale is a global device setting. Because changing the system language requires a device-level configuration change, it is handled via the CLI only at runtime.&#x20;
 
 {% hint style="info" %}
-There is no place in a Flow (such as `launchApp` or `config.yaml`) to define the locale. The locale must be provided at execution time using the CLI or a CI wrapper (for example, GitHub Actions).
+To define the locale, provide the `--device-locale` flag at execution time using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/). For automated workflows, you can use CI wrappers to configure the locale for [Maestro Cloud](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/ky7LkNoLfvcORtXOzzBs/) runs.&#x20;
+
+Note that there is no place within a Flow itself (such as `launchApp` or `config.yaml`) to define the locale.
 {% endhint %}
 
 {% hint style="info" %}
