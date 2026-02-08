@@ -6,9 +6,9 @@ description: >-
 
 # Specify a device
 
-When you have multiple simulators, emulators, or physical devices connected to your machine, Maestro needs to know which one to target. This tutorial covers how to identify device IDs, target specific devices via the CLI specify the `--device` flag, and use advanced sharding strategies to run tests in parallel.
+When you have multiple simulators, emulators, or physical devices connected to your machine, Maestro needs to know which one to target. This tutorial covers how to find device identifiers, target specific devices via the CLI's `--device` flag, and use sharding strategies to run local tests in parallel.
 
-### Identify the device identifier
+### Find the device identifier
 
 Before running a command, you need to obtain the unique identifier (ID) for your target device.
 
@@ -40,17 +40,7 @@ It is not possible to list web devices. Maestro always launches its own instance
 
 ### Target a specific device
 
-To run a test or open Maestro Studio on a specific device, use the `--device` flag. This flag must be provided before the command action (like `test` or `studio`).
-
-To run Maestro Studio on Android, you can run in your terminal, a command similar to the following one:
-
-```bash
-maestro --device emulator-5554 studio
-```
-
-However, when using Maestro Studio, you also have the option to select a device through the Maestro interface. At the top of Maestro Studio, click **No device connected** to see a list of all available devices.
-
-<figure><img src="../.gitbook/assets/2026-01-26_21-32-16.png" alt=""><figcaption></figcaption></figure>
+To run a test on a specific device, use the `--device` flag. This flag must be provided before the `test` command.&#x20;
 
 When running a Flow with the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/), you can explicitly define the target device. For example, to run `flow.yaml` on an iOS simulator with the identifier `5B6D77EF-2AE9-47D0-9A62-70A1ABBC5FA2`, use the following command:
 
@@ -58,9 +48,16 @@ When running a Flow with the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0
 maestro --device 5B6D77EF-2AE9-47D0-9A62-70A1ABBC5FA2 test flow.yaml
 ```
 
+If you are using Maestro Studio, you can select a device through the interface. At the top of Maestro Studio, click **No device connected** to see a list of all available devices.
+
+<figure><img src="../.gitbook/assets/2026-01-26_21-32-16.png" alt=""><figcaption></figcaption></figure>
+
 ### Run tests in parallel (Sharding)
 
-If you have multiple devices running, you can speed up your local execution by "sharding" your tests. This allows you to utilize all available hardware simultaneously. You have two options to use sharding **`--shard-all`** and **`--shard-split`.**
+If you have multiple devices running, you can speed up your local execution by "sharding" your tests. This allows you to utilize all available hardware simultaneously. You have two options to use sharding:
+
+* **`--shard-all`**&#x20;
+* **`--shard-split`**
 
 {% hint style="info" %}
 #### Maestro Cloud
@@ -77,13 +74,19 @@ Use this to run the exact same test collection across multiple devices. This is 
 maestro test --shard-all 3 .maestro
 ```
 
-**Strategy B: `--shard-split`**
+#### **Strategy B: `--shard-split`**
 
 Use this to divide your suite. If you have 9 tests and 3 devices, Maestro will run 3 unique tests on each device, finishing the run in roughly one-third of the time.
 
 ```bash
 # Splits the test suite into 3 chunks and distributes them
 maestro test --shard-split 3 .maestro
+```
+
+You can explicitly specify which devices to use for sharding by passing a comma-separated list to the `--device` flag. For example, if you have three devices running (`emulator-5554`, `emulator-5555`, `emulator-5556`) but only want to shard across two of them:
+
+```bash
+maestro test --device "emulator-5554,emulator-5556" --shard-split 2 ./myTests
 ```
 
 {% hint style="warning" %}
