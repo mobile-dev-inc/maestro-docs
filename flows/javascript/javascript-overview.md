@@ -31,7 +31,7 @@ Rhino is also supported, but it must be explicitly enabled. Maestro discourage t
 
 Navigate through these guides to master scripting within your automation suite:
 
-* [run-and-debug-javascript.md](run-and-debug-javascript.md "mention"): Maestro provides three ways to run JavaScrip. You can also use standard `console.log` statements to debug your logic during execution.
+* [run-and-debug-javascript.md](run-and-debug-javascript.md "mention"): Maestro provides three ways to run JavaScript. You can also use standard `console.log` statements to debug your logic during execution.
 * [manage-data-and-states.md](manage-data-and-states.md "mention"): The global `output` object allows you to share data across your entire Flow. This ensures that a value captured or generated in one script can be used by any subsequent YAML command or JavaScript expression.
 * [make-http-requests.md](make-http-requests.md "mention"): With the built-in HTTP client, you can perform `GET`, `POST`, `PUT`, and `DELETE` requests directly from your scripts.&#x20;
 * [generate-synthetic-data.md](generate-synthetic-data.md "mention"): The `faker` object integration enables the generation of randomized data to ensure every test run uses fresh data and avoids account collisions.
