@@ -42,10 +42,61 @@ tags:
 # ... rest of the flow
 ```
 
-When running your tests using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), you can use the `--include-tags` or `--exclude-tags` flags to filter the execution on the fly. Consider the example above, you can:
+When running your tests using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), you can use the `--include-tags` or `--exclude-tags` flags to filter the execution on the fly.
 
 * **Include**: `maestro test . --include-tags=smoke` (Runs only smoke tests).
 * **Exclude**: `maestro test . --exclude-tags=wip` (Runs everything _except_ work-in-progress tests).
+
+#### **Tag logic**
+
+When providing multiple tags in a comma-separated list, Maestro uses **OR** logic for filtering within a single flag.
+
+* **Multiple Includes**: `--include-tags "auth,checkout"` will run any test tagged `auth` **OR** any test tagged `checkout`.
+* **Multiple Excludes**: `--exclude-tags "experimental,stagingOnly"` will skip any test tagged `experimental` **OR** any test tagged `stagingOnly`.
+
+{% hint style="info" %}
+#### AND operator
+
+Currently, there is no option to run only tests that match a combination of multiple tags (AND logic) within a single flag (e.g., running only tests that are tagged both `smoke` and `auth`).
+{% endhint %}
+
+If you use both `--include-tags` and `--exclude-tags` together, they perform an **AND** operation between the two groups:
+
+1. Maestro identifies all Flows containing the included tags.
+2. It then removes any Flows that contain the excluded tags.
+
+Consider you have two Flows:
+
+* **Flow A**: tags: `[dev, pull-request]`
+* **Flow B**: tags: `[dev]`&#x20;
+
+{% tabs %}
+{% tab title="Flow A" %}
+```
+# flowA.yaml
+appId: com.example.app
+tags: 
+  - dev
+  - pull-request
+```
+{% endtab %}
+
+{% tab title="Flow B" %}
+```
+# flowB.yaml
+appId: com.example.app
+tags: 
+  - dev
+```
+{% endtab %}
+{% endtabs %}
+
+| Command                                          | Result         | Why?                                                      |
+| ------------------------------------------------ | -------------- | --------------------------------------------------------- |
+| `--include-tags=dev`                             | **Flow A & B** | Both contain the `dev` tag.                               |
+| `--include-tags=dev,pull-request`                | **Flow A & B** | Uses **OR** logic; both contain at least one of the tags. |
+| `--exclude-tags=pull-request`                    | **Flow B**     | Flow A is removed due to the `pull-request` tag.          |
+| `--include-tags=dev --exclude-tags=pull-request` | **Flow B**     | Both are included via `dev`, then Flow A is excluded.     |
 
 ### Global tag configuration
 
