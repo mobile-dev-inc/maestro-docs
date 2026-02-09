@@ -93,10 +93,6 @@ The contents of your artifact folders depend on which CLI flag you use:
 
 If both flags are specified, the `--test-output-dir` takes precedence. In this case the `--debug-output` directory will receive only the `maestro.log`.
 
-{% hint style="info" %}
-`report.xml` and `report.html` are only generated if you use the `--output` flag. They will not appear in the artifact folders automatically.
-{% endhint %}
-
 ### Next Steps
 
 Now that you can see your results, take your debugging to the next level. Learn how to generate an automated insights reports that identifies UI and spelling bugs using [AI test analysis](ai-test-analysis.md).
