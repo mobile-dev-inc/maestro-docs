@@ -78,16 +78,16 @@ console.log(`Value is ${myVar}`) // template literals
 If you want to log something inline, you can use [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript) to output it to the console without creating a separate file.
 
 ```yaml
-- evalScript: ${console.log('Value: ' + myVar)}
+- evalScript: '${console.log("Value: " + myVar)}'
 ```
 
 {% hint style="info" %}
-#### Template literals in `evalScript`
+#### Don't use template literals in `evalScript`
 
 Standard JavaScript template literals (using backticks \`\`\` and `${}`) will **not** work inside `evalScript` because the command itself is already wrapped in a `${...}` block.&#x20;
 
 ```yaml
-# Example of incorect use
+# Example of incorrect use
 - evalScript: console.log(`Value is ${myVar}`)
 ```
 
