@@ -69,23 +69,20 @@ To assert on values that appear on different screens, store each value in a vari
 
 <summary>How do I generate a random number?</summary>
 
-Maestro provides commands for generating random strings and names, but it does not include a built-in command for generating random numbers. To generate a random number, you can use JavaScript via [`runScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runscript).
+Maestro offers built-in support for random numbers, so you don't need to write external scripts.
 
-The following example shows how to create a script (`randomNumber.js`) that generates an 8-digit random number:
-
-```javascript
-// Generate an 8-digit random number
-output.randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
-```
-
-To use this value in your flow, run the script to populate the [`output`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/manage-data-and-states) object, then reference it in a JavaScript expression using [`evalScript`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/evalscript):
+You can use the [`inputRandomNumber`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext#random-text-input-commands) command if you need to type the number directly into a field:
 
 ```yaml
-- runScript: ../scripts/randomNumber.js
-- evalScript: ${EMAIL = "maestro+" + output.randomNumber + "@domain.com"}
+- inputRandomNumber:
+    length: 8
 ```
 
-This assigns the generated value to the Maestro variable `EMAIL`, which can be reused later in the flow.
+Another option is to use Faker. Use this option if you need to store the number in a variable or use it within a specific range, use the built-in [`faker`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/generate-synthetic-data) library via `evalScript`:&#x20;
+
+```yaml
+- evalScript: ${output.thisNumber = faker.expression("#{number.numberBetween '1' '10'}")}
+```
 
 </details>
 
@@ -130,7 +127,7 @@ To work around this, force the value to be treated as literal text by quoting it
 
 <summary>Why are my tests slower in Maestro's cloud environment?</summary>
 
-The cloud environment prioritizes reliability and repeatability: each device is wiped and recreated between tests so one run cannot affect another. That adds about 2–4 minutes between tests compared with running locally.
+The cloud environment prioritizes reliability and repeatability: each device is wiped and recreated between tests so one run cannot affect another. While this adds about 45 seconds between tests compared with running locally, it ensures a clean state for every execution.
 
 To reduce total run time:
 
