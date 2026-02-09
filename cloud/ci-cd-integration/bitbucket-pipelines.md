@@ -63,7 +63,7 @@ All file paths provided below are relative to the repository source root.
 {% tab title="Android" %}
 ```yaml
 script:
-  - pipe: mobiledevinc/maestro-cloud-upload:1.0.0
+  - pipe: mobiledevinc/maestro-cloud-upload:1.5.0
     variables:
       MDEV_API_KEY: $MDEV_API_KEY
       MDEV_PROJECT_ID: $MDEV_PROJECT_ID
@@ -74,7 +74,7 @@ script:
 {% tab title="iOS" %}
 ```yaml
 script:
-  - pipe: mobiledevinc/maestro-cloud-upload:1.0.0
+  - pipe: mobiledevinc/maestro-cloud-upload:1.5.0
     variables:
       MDEV_API_KEY: $MDEV_API_KEY
       MDEV_PROJECT_ID: $MDEV_PROJECT_ID

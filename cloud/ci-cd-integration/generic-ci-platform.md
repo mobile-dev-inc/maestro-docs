@@ -19,7 +19,7 @@ Cloud execution is available on the [Maestro Cloud Plan](https://signin.maestro.
 * **API Key**: Get your API Key in the [Maestro Dashboard](https://app.maestro.dev/).
 * **Project ID**: Obtain your Project ID from your project settings in the dashboard.
 * **Build Compatibility**:
-  * **Android**: APKs must be x86 compatible.
+  * **Android**: APKs must be ARMv8 compatible.
   * **iOS**: Simulator builds must be provided as a `*.app` directory or a zipped `*.app`.
 
 ### Integration steps
@@ -59,10 +59,11 @@ Execute the `maestro cloud` command as part of your pipeline.
 
 ```bash
 maestro cloud \
-  --api-key <YOUR_API_KEY> \
-  --project-id <YOUR_PROJECT_ID> \
-   --name <uploadName> \
-  <APP_FILE> .maestro/
+  --api-key "<YOUR_API_KEY>" \
+  --project-id "<YOUR_PROJECT_ID>" \
+  --name "<uploadName>" \
+  --app-file "<APP_FILE>" \
+  --flows "./e2e"
 ```
 
 The following table describes all the parameter you must pass:
