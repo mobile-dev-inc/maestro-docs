@@ -28,18 +28,18 @@ Cloud execution is available on the [Maestro Cloud Plan](https://signin.maestro.
 {% step %}
 #### Organize your Flows
 
-Add your Flow files to a single directory in your repository. We recommend using `.maestro/` at the root level.
+Add your Flow files to a single directory in your repository.&#x20;
 
 ```
 <root>
-├── .maestro/
+├── e2e/
 │   ├── subflows/
 │   │   └── LoginSubflow.yaml
 │   ├── Login.yaml
 │   └── Search.yaml
 ```
 
-Files in the root of `.maestro/` run as top-level Flows. Files in subdirectories can be used as subflows that are not executed, but can be used by other flows at the top level.
+In this configuration, files in the root of `e2e` run as top-level Flows. Files in subdirectories can be used as subflows that are not executed, but can be used by other flows at the top level.
 {% endstep %}
 
 {% step %}
@@ -68,13 +68,15 @@ maestro cloud \
 
 The following table describes all the parameter you must pass:
 
-| Parameter      | Description                                                                                                                                                                      |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--api-key`    | Your Maestro Cloud API Key.                                                                                                                                                      |
-| `--project-id` | Your Maestro Project ID.                                                                                                                                                         |
-| `--name`       | **(Optional)** Upload name.                                                                                                                                                      |
-| `<APP_FILE>`   | Path to your APK or `.app` binary. Check the [build-your-app-for-the-cloud.md](../build-your-app-for-the-cloud.md "mention") guide for more information on how to build the app. |
-| `.maestro/`    | The directory containing your Flows.                                                                                                                                             |
+| Parameter      | Description                                                                                                                                                                         |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--api-key`    | Your Maestro Cloud API Key.                                                                                                                                                         |
+| `--project-id` | Your Maestro Project ID.                                                                                                                                                            |
+| `--name`       | **(Optional)** Upload name.                                                                                                                                                         |
+| `--app-file`   | Path to your `.apk` or `.app` binary. Check the [build-your-app-for-the-cloud.md](../build-your-app-for-the-cloud.md "mention") guide for more information on how to build the app. |
+| `--flows`      | The directory containing your Flows.                                                                                                                                                |
+
+
 {% endstep %}
 
 {% step %}
