@@ -13,7 +13,7 @@ To ensure a truly clean slate, you can automate the system Files app to purge th
 {% hint style="info" %}
 #### **Credits**
 
-This recipe was shared by [AJ Owens](https://www.linkedin.com/in/owensaj/), a member of the [Maestro Slack community](https://maestrodev.typeform.com/to/FelIEe8A?typeform-source=maestro.dev), to solve the problem of persistent media on shared emulator instances.
+This recipe was shared by [AJ Owens](https://www.linkedin.com/in/owensaj/), a member of the [Maestro Slack community](https://slack.maestro.dev/), to solve the problem of persistent media on shared emulator instances.
 {% endhint %}
 
 ### The workflow
