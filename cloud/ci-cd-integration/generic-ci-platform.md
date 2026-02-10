@@ -14,6 +14,15 @@ You can run Maestro Flows in the cloud from any CI platform by using the Maestro
 Cloud execution is available on the [Maestro Cloud Plan](https://signin.maestro.dev/sign-up).
 {% endhint %}
 
+{% hint style="info" %}
+Refer to the appropriate guide if you are using one of the following CI/CD integration options:
+
+* [github-actions.md](github-actions.md "mention")
+* [bitrise.md](bitrise.md "mention")
+* [bitbucket-pipelines.md](bitbucket-pipelines.md "mention")
+* [circleci.md](circleci.md "mention")
+{% endhint %}
+
 ### Prerequisites
 
 * **API Key**: Get your API Key in the [Maestro Dashboard](https://app.maestro.dev/).
