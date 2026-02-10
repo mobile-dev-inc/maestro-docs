@@ -17,18 +17,24 @@ Maestro Cloud allows you to test your application across multiple Android and iO
 You can specify the Android OS version (API level) using the `--android-api-level` flag when using Maestro Cloud.
 
 ```bash
-maestro cloud --android-api-level <API_LEVEL> <APP_FILE> <FLOWS>
+maestro cloud --android-api-level <API_LEVEL> --app-file <APP_FILE> --flows <FLOWS>
 ```
 
 The following table lists the supported Android versions:
 
-| Android Version | API Level | Notes                     |
-| --------------- | --------- | ------------------------- |
-| Android 14      | 34        | Google APIs               |
-| **Android 13**  | **33**    | **Default (Google APIs)** |
-| Android 12      | 31        | Google APIs               |
-| Android 11      | 30        | Google APIs               |
-| Android 10      | 29        | Google APIs               |
+| Android Version          | API Level |
+| ------------------------ | --------- |
+| Android 14               | 34        |
+| **Android 13 (Default)** | **33**    |
+| Android 12               | 31        |
+| Android 11               | 30        |
+| Android 10               | 29        |
+
+{% hint style="info" %}
+#### Reproducing Cloud runs locally
+
+To closely reproduce Maestro Cloud runs for Android on your local machine, create an emulator of the same API version and use the Google APIs variant (not Google Play).
+{% endhint %}
 
 ### iOS
 
@@ -37,7 +43,7 @@ For iOS, you can configure both the runtime version and the device model.
 Maestro recommends specifying both the minor OS version and the device model. Use the `--device-os` and `--device-model` flags to select a specific combination:
 
 ```bash
-maestro cloud --device-os <DEVICE_OS> --device-model <DEVICE_MODEL> <APP_FILE> <FLOWS>
+maestro cloud --device-os <DEVICE_OS> --device-model <DEVICE_MODEL> --app-file <APP_FILE> --flows <FLOWS>
 ```
 
 The following table lists the supported device models and their available iOS versions:
@@ -54,7 +60,7 @@ The following table lists the supported device models and their available iOS ve
 For example, to run your flows on iOS 18.2 using an iPhone 16 Pro, use the following command:
 
 ```bash
-maestro cloud --device-os iOS-18-2 --device-model iPhone-16-Pro myapp.app myflows/
+maestro cloud --device-os iOS-18-2 --device-model iPhone-16-Pro --app-file myapp.app --flows myflows/
 ```
 
 {% hint style="info" %}
