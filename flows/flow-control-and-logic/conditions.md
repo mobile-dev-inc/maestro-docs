@@ -70,12 +70,13 @@ This is the most idiomatically expressive way to handle conditions. It clearly d
 {% endtab %}
 
 {% tab title="The optional property" %}
-Using the `optional` property is simpler for single-command interactions. It allows the step to fail without failing the entire test.&#x20;
+Using the `optional` property is simpler for single-command interactions. It allows the step to fail without failing the entire test. Adding a label helps maintain clarity on why the step is there.
 
 ```yaml
 - tapOn:
     text: "Dismiss"
     optional: true
+    label: "Dismiss popup if it exists"
 ```
 {% endtab %}
 {% endtabs %}
