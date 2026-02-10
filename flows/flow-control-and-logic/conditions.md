@@ -54,9 +54,11 @@ In this example, the test executes a specific subflow to handle permissions, dep
 
 #### Handling dynamic state
 
-Sometimes an element may or may not appear, such as a "Rate this App" popup or a newsletter signup. You can use `visible` to handle these dynamic states without failing the test if the element is missing.
+Sometimes an element may or may not appear, such as a "Rate this App" popup or a newsletter signup. You can handle these dynamic states using two different patterns:
 
-In this example, the **Dismiss** button is tapped only if it is currently visible on the screen.
+{% tabs %}
+{% tab title="The runFlow / when block" %}
+This is the most idiomatically expressive way to handle conditions. It clearly defines the intent "Only run these commands _when_ this condition is met." You combine [`runFlow`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runflow) and `when`:&#x20;
 
 ```yaml
 - runFlow:
@@ -65,14 +67,18 @@ In this example, the **Dismiss** button is tapped only if it is currently visibl
     commands:
       - tapOn: "Dismiss"
 ```
+{% endtab %}
 
-Commands like `tapOn` do not support the `when` argument directly. If you want to interact with an element that might not be there without failing the test, use the `optional: true` property instead:
+{% tab title="The optional property" %}
+Using the `optional` property is simpler for single-command interactions. It allows the step to fail without failing the entire test.&#x20;
 
 ```yaml
 - tapOn:
     text: "Dismiss"
     optional: true
 ```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="success" %}
 Relying on unstable UI states for conditions can lead to flaky tests. Ensure your `visible` selectors are unique and reliable.
