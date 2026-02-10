@@ -30,7 +30,7 @@ Because AI commands are processed through the Maestro infrastructure, you must a
 Maestro has updated how AI features are provided. Users no longer need to "bring their own AI" by providing external service keys or selecting specific models.
 
 * **Managed Model**: All AI commands are now routed directly through Maestro Cloud.
-* **Automatic Configuration**: Environment variables like `MAESTRO_CLI_AI_KEY` and `MAESTRO_CLI_AI_MODEL` are no longer used. Maestro automatically manages the underlying third-party AI providers (such as OpenAI or Anthropic) to ensure the best performance.
+* **Automatic Configuration**: Environment variables like `MAESTRO_CLI_AI_KEY` and `MAESTRO_CLI_AI_MODEL` are no longer used. Maestro automatically manages the underlying third-party AI providers to ensure the best performance.
 {% endhint %}
 
 ### Ways to use AI
