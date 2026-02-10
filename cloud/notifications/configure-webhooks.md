@@ -9,7 +9,7 @@ description: >-
 Enable webhooks to send real-time notifications about upload results from a specific Maestro project to your custom workflows, monitoring systems, or external services.
 
 {% hint style="info" %}
-**Maestro Cloud Plan required.** Slack notifications are available on the [Maestro Cloud Plan](https://maestro.dev/cloud).
+**Maestro Cloud Plan required.** Webhook notifications are available on the [Maestro Cloud Plan](https://maestro.dev/cloud).
 {% endhint %}
 
 ### Set up a webhook
@@ -43,7 +43,9 @@ You can update URLs or tokens, or disable an integration at any time from the se
 
 ### Webhook payload example
 
-When an upload event occurs, Maestro sends a POST request with a JSON payload. Below is an example of the data sent:
+When an upload event occurs, Maestro sends a POST request with a JSON payload. The payload also includes [tags](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags) and [custom properties](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts) defined in your flows, allowing you to filter and route events if necessary.
+
+Below is an example of the data sent:
 
 ```json
 {
@@ -66,7 +68,15 @@ When an upload event occurs, Maestro sends a POST request with a JSON payload. B
       "status": "SUCCESS",
       "failureReason": null,
       "startTime": 1770114514724,
-      "endTime": 1770114569337
+      "endTime": 1770114569337,
+      "tags": [
+        "release",
+        "critical-path"
+      ],
+      "properties": {
+        "jira_ticket": "ENG-402",
+        "deployment_env": "staging"
+      }
     }
   ]
 }
