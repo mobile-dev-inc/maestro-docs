@@ -22,11 +22,12 @@ Use the `-e` option to pass parameters as key-value pairs:
 
 ```bash
 maestro cloud \
-  --api-key <YOUR_API_KEY> \
-  --project-id <YOUR_PROJECT_ID> \
+  --api-key "<YOUR_API_KEY>" \
+  --project-id "<YOUR_PROJECT_ID>" \
   -e USERNAME=$TEST_USERNAME \
   -e PASSWORD=$TEST_PASSWORD \
-  --app-file <APP_FILE> --flows <FLOW_OR_FOLDER>
+  --app-file "<APP_FILE>" \
+  --flows "<FLOW_OR_FOLDER>"
 ```
 {% endtab %}
 
