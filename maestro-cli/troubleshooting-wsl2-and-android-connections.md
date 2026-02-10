@@ -2,6 +2,7 @@
 description: >-
   Fix WSL2 and Android Emulator connectivity issues. Resolve ADB port 5037
   conflicts, configure firewall, and set ADB_SERVER_SOCKET for Windows.
+hidden: true
 ---
 
 # Troubleshooting: WSL2 and Android Connections

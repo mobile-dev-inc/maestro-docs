@@ -68,6 +68,12 @@ Run `maestro --help` to verify that the Maestro CLI is working properly.
 {% tab title="Windows (WSL)" %}
 Installing Maestro in WSL2 allows you to use a Linux environment while using Android emulators running on your Windows host.
 
+{% hint style="warning" %}
+#### Use the Windows (WSL) option only if it is strictly necessary.
+
+Although it is possible to run the Maestro CLI on WSL, Maestro recommends using one of the other supported environments (macOS, Windows, or Linux). The WSL setup requires advanced port configuration, which can introduce issues when testing your app.
+{% endhint %}
+
 #### 1. Install Java and Maestro
 
 First, ensure you have Java 17+ installed.
