@@ -1,7 +1,5 @@
 ---
-description: >-
-  Build Android APKs (x86_64/x86) and iOS .app bundles for Simulator to run on
-  Maestro Cloud. Includes Gradle, Xcode, Fastlane, and Flutter instructions.
+description: Build Android APKs and iOS .app bundles for Simulator to run on Maestro Cloud.
 ---
 
 # Build your app for the cloud
@@ -14,10 +12,10 @@ This feature requires a Cloud plan. Start for free at [**maestro.dev**](https://
 
 ### Android build instructions
 
-Maestro Cloud uses x86\_64 and x86 architectures for Android. Ensure your app binary meets the following requirements:
+Maestro Cloud now uses ARM architectures for Android. Ensure your app binary meets the following requirements:
 
 * **Format:** APK only. Android App Bundles (.aab) are not currently supported.
-* **Architecture:** Must be compatible with x86\_64 or x86. ARM-only APKs will fail to launch in the cloud environment.
+* **Architecture:** Must be compatible with ARM or be a multi-architecture build. x86-only APKs will fail to launch in the cloud environment.
 * **Build Type:** Both Release and Debug builds are supported.
 
 To build your app, use one of the following approaches:&#x20;
@@ -110,7 +108,7 @@ Once your binary is ready, you can upload it to Maestro Cloud using the Maestro 
 Use the command:
 
 ```bash
-maestro cloud [your-app-binary] [your-flow-directory]
+maestro cloud --app-binary [your-app-binary] --flows [your-flow-directory]
 ```
 {% endtab %}
 
@@ -118,7 +116,7 @@ maestro cloud [your-app-binary] [your-flow-directory]
 You can choose to run all or a single Flow on Maestro Cloud:
 
 * **Run all Flows:** Click on the **Run on Cloud** button in the sidebar and then select your app binary.
-* **Run a single Flow**: Open the Flow file,click on the **Run on Cloud** button on at the top of the file, and then select your app binary.
+* **Run a single Flow**: Open the Flow file, click on the **Run on Cloud** button at the top of the file, and then select your app binary.
 {% endtab %}
 {% endtabs %}
 
