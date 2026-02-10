@@ -19,7 +19,7 @@ Before running tests on Maestro Cloud, ensure you have the following:
 {% hint style="info" %}
 #### Test your app
 
-When testing your app, you also need the app binary for Android (x86\_64 APK) or iOS (simulator .app bundle). If you don’t know how to build your app, check the [build-your-app-for-the-cloud.md](build-your-app-for-the-cloud.md "mention") guide.
+When testing your app, you also need the app binary for Android (ARM APK) or iOS (simulator .app bundle). If you don’t know how to build your app, check the [build-your-app-for-the-cloud.md](build-your-app-for-the-cloud.md "mention") guide.
 {% endhint %}
 
 ### Command syntax
@@ -27,14 +27,12 @@ When testing your app, you also need the app binary for Android (x86\_64 APK) or
 Use the `maestro cloud` command to upload your app and execute your flows. This command can be used both for local testing and within CI pipelines.
 
 ```bash
-maestro cloud [options] <app-file> <flow-file-or-directory>
+maestro cloud [options] --app-file <app-file> --flows <flow-file-or-directory>
 ```
 
 ### Run Flows on the Cloud
 
-The Maestro CLI provides sample files to help you get started quickly.
-
-Use the `download-samples` command to download a sample app and Flow file:
+The Maestro CLI provides sample files to help you get started quickly. Use the `download-samples` command to download a sample app and Flow file:
 
 ```bash
 maestro download-samples
@@ -44,23 +42,23 @@ maestro download-samples
 You can upload your own app and Flow files, but we recommend using the samples first to understand how it works.
 {% endhint %}
 
-After running the command, the Maestro CLI downloads a folder containing a set of flows into your current directory. You can use the included app builds to test both Android and iOS apps:
+After running the command, the Maestro CLI downloads a folder containing a set of Flows into your current directory. You can use the included app builds to test both Android and iOS apps:
 
 {% tabs %}
 {% tab title="Android" %}
-To run an Android test using the sample app and flow from `maestro download-samples`, run the following command:
+To run an Android test using the sample app and Flow, run the following command:
 
 ```bash
-maestro cloud sample.apk android-flow.yaml
+maestro cloud --app-file sample.apk --flows android-flow.yaml
 ```
 {% endtab %}
 
 {% tab title="iOS" %}
-To run an iOS test using the sample app and flow from `maestro download-samples`, run the following command:
+To run an iOS test using the sample app and Flow, run the following command:
 
 ```bash
 cd samples
-maestro cloud sample.app ios-flow.yaml
+maestro cloud --app-file sample.app --flows ios-flow.yaml
 ```
 {% endtab %}
 {% endtabs %}
@@ -68,7 +66,7 @@ maestro cloud sample.app ios-flow.yaml
 After a successful upload, the CLI prints a link to the Maestro Console.
 
 1. Click the provided link to open the console.
-2. Wait a moment for the cloud environment to initialize and execute your tests.
+2. Test processing may take a few minutes depending on your other uploads and how many runners are configured on your account.
 3. Review the test results, including videos, logs, and hierarchy data.
 
 <figure><img src=".gitbook/assets/cloud-successful-run.png" alt=""><figcaption></figcaption></figure>
@@ -83,7 +81,7 @@ If you belong to multiple organizations or projects, use the following flags to 
 The following example demonstrates how to use these flags:
 
 ```bash
-maestro cloud --api-key <YOUR_API_KEY> --project-id <YOUR_PROJECT_ID> sample.apk flow.yaml
+maestro cloud --api-key <YOUR_API_KEY> --project-id <YOUR_PROJECT_ID> --app-file sample.apk --flows flow.yaml
 ```
 
 For a complete list of cloud command options, see the [Maestro CLI reference](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options).
