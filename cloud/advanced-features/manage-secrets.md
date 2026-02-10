@@ -26,7 +26,7 @@ maestro cloud \
   --project-id <YOUR_PROJECT_ID> \
   -e USERNAME=$TEST_USERNAME \
   -e PASSWORD=$TEST_PASSWORD \
-  <APP_FILE> <FLOW_OR_FOLDER>
+  --app-file <APP_FILE> --flows <FLOW_OR_FOLDER>
 ```
 {% endtab %}
 
