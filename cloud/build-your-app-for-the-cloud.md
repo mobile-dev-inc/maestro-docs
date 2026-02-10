@@ -7,7 +7,7 @@ description: Build Android APKs and iOS .app bundles for Simulator to run on Mae
 Before you can execute tests on Maestro Cloud, you must provide a mobile application binary (APK or `.app` directory). This page provides the specific technical requirements and build instructions for the most common development environments to ensure your app is compatible with Maestro's cloud infrastructure.
 
 {% hint style="info" %}
-#### Project-Specific Build Requirements
+#### Project-specific build requirements
 
 The instructions on this page cover typical ways to build mobile applications. However, your project may have unique pipelines, specific command-line switches, or environment configurations (e.g., specialized Expo or React Native build scripts).
 
