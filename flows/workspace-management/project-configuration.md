@@ -91,7 +91,7 @@ Some flags, like `disableAnimations`, are a cloud-only feature and does not affe
 While `config.yaml` is the default, you can create multiple configuration files for different scenarios (e.g., `smoke-config.yaml` or `ci-config.yaml`). To run a test suite with a specific configuration, use the `--config` flag when running the tests with the Maestro CLI:
 
 ```bash
-maestro test --config .maestro/ci-config.yaml tests/
+maestro test --config ci-config.yaml tests/
 ```
 
 ### Next steps
