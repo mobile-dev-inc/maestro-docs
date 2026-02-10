@@ -49,6 +49,7 @@ After running the command, the Maestro CLI downloads a folder containing a set o
 To run an Android test using the sample app and Flow, run the following command:
 
 ```bash
+cd samples
 maestro cloud --app-file sample.apk --flows android-flow.yaml
 ```
 {% endtab %}
