@@ -14,10 +14,10 @@ Hooks provide a configuration section to place setup and teardown logic, separat
 
 Maestro supports two primary hooks defined in the configuration section (above the `---` marker in your Flow file). These hooks apply every time you run the Flow:
 
-| Hook             | When it runs                                         | Ideal Use Case                                                    |
-| ---------------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
-| `onFlowStart`    | Before every individual Flow begins.                 | Resetting app state, logging in, or handling dynamic permissions. |
-| `onFlowComplete` | After every individual Flow finishes (Pass or Fail). | Clearing cookies, logging out, or reporting custom metrics.       |
+| Hook             | When it runs                                         | Ideal Use Case                                                                  |
+| ---------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `onFlowStart`    | Before every individual Flow begins.                 | Resetting app state, logging in, or handling dynamic permissions.               |
+| `onFlowComplete` | After every individual Flow finishes (Pass or Fail). | Clearing cookies, logging out, reporting custom metrics, or deleting test data. |
 
 Here's how you could use these hooks in your `flow.yaml`:
 
@@ -42,7 +42,7 @@ onFlowComplete:
 * Since hooks run for every single Flow, a slow hook will significantly increase your total suite execution time.
 * Be careful not to call a Flow that itself triggers the same hook, causing an infinite loop.
 * Use the `when` block within your hook sub-flow to perform actions only on specific platforms (e.g., clearing the iOS Keychain).
-* Use `onFlowComplete` hook to ensure your app is in a "neutral" state for the next test, such as navigating back to the home screen or logging out.
+* Use `onFlowComplete` hook to ensure your app is in a "neutral" state for the next test, such as navigating back to the home screen, logging out, or deleting test data from your environment.
 {% endhint %}
 
 ### Usage example
@@ -60,9 +60,9 @@ Create a reusable file at `subflows/login.yaml`:
 - tapOn: "Login"
 ```
 
-#### **Step 2: Register the hook in `config.yaml`**
+#### **Step 2: Register the hook**
 
-Open your `flow.yaml` file and the hooks to the configuration section:&#x20;
+Open your `flow.yaml` file and add the hooks to the configuration section:
 
 ```yaml
 # flow.yaml
@@ -97,12 +97,10 @@ It is important to understand how Maestro behaves when a hook encounters an erro
 
 If a hook fails, Maestro prioritizes test integrity and environment cleanup.
 
-| Scenario                   | Result / Behavior                                                                           |
-| -------------------------- | ------------------------------------------------------------------------------------------- |
-| **`onFlowStart` fails**    | The entire Flow is immediately marked as **Failed** (🔴).                                   |
-| **`onFlowStart` fails**    | The main body of the Flow execution is **skipped** to prevent testing in an unstable state. |
-| **`onFlowStart` fails**    | The **`onFlowComplete`** hook is **still executed** to ensure any necessary cleanup occurs. |
-| **`onFlowComplete` fails** | The Flow is marked as **Failed** (🔴), even if the main body of the test passed.            |
+| Scenario                   | Result / Behavior                                                                                                                                                                                                                                                                             |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`onFlowStart` fails**    | <ol><li>The entire Flow is immediately marked as <strong>Failed</strong> (🔴).</li><li>The main body of the Flow execution is <strong>skipped</strong>.</li><li> The <strong><code>onFlowComplete</code></strong> hook is <strong>still executed</strong> to ensure cleanup occurs.</li></ol> |
+| **`onFlowComplete` fails** | The Flow is marked as **Failed** (🔴), even if the main body of the test passed.                                                                                                                                                                                                              |
 
 #### Related content
 
