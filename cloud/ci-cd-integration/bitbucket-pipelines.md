@@ -53,7 +53,7 @@ Maestro expects your Flow files to be located in a specific directory (`.maestro
 {% step %}
 ### Add the Maestro Cloud Pipe
 
-Update your `bitbucket-pipelines.yml` file to include the [Maestro Cloud Upload Pipe](https://bitbucket.org/product/features/pipelines/integrations?search=maestro\&p=mobiledevinc/maestro-cloud-upload). This step should occur immediately after your app has successfully built.
+Update your `bitbucket-pipelines.yml` file to include the [Maestro Cloud Upload Pipe](https://bitbucket.org/mobiledevinc/maestro-cloud-upload/src/master/README.md). This step should occur immediately after your app has successfully built.
 
 {% hint style="warning" %}
 All file paths provided below are relative to the repository source root.
