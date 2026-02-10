@@ -8,7 +8,7 @@ As your test suite grows, you'll find that certain sequences of commands are rep
 
 Instead of duplicating these commands in every file, you can define them once in a separate flow and run them using the [`runFlow` ](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/runflow)command. This approach, known as nesting flows, helps you adhere to the DRY (Don't Repeat Yourself) principle, making your tests easier to read, maintain, and optimize.
 
-### Basic Usage
+### Basic usage
 
 To run a subflow, use the `runFlow` command followed by the path to the flow file.
 
@@ -41,7 +41,7 @@ appId: org.wikipedia
 {% endtab %}
 {% endtabs %}
 
-### Passing Arguments
+### Passing arguments
 
 You can make your nested flows dynamic by passing arguments. This allows you to reuse the same logic with different data, such as logging in with different user roles.
 
@@ -86,7 +86,7 @@ You can optimize your test execution by running nested flows only when specific 
 To learn more about conditional execution, access the [Conditions ](conditions.md)page.
 {% endhint %}
 
-### Best Practices for Optimization
+### Best practices for optimization
 
 Adopting a nested flow strategy directly contributes to an optimized testing process.
 
