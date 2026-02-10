@@ -65,6 +65,7 @@ The following example shows a typical Maestro workspace configuration file. This
 # config.yaml
 flows:
   - 'subFolder/*'
+  - 'anotherSubfolder/**'
 includeTags:
   - tagNameToInclude
 excludeTags:
