@@ -82,16 +82,19 @@ properties:
 
 #### What's inside the Artifact Folder?
 
-The contents of your artifact folders depend on which CLI flag you use:
+The contents of your artifact folders depend on which CLI flag you use. Note that `--test-output-dir` and `--debug-output` capture different sets of data:
 
-| **Feature**         | **`--test-output-dir`**                   | **`--debug-output`** |
-| ------------------- | ----------------------------------------- | -------------------- |
-| Screenshots & Video | Yes                                       | No                   |
-| `maestro.log`       | Yes (unless `--debug-output` is also set) | Yes                  |
-| `commands-*.json`   | Yes                                       | Yes                  |
-| AI Reports          | Yes                                       | Yes                  |
+| **Feature**         | **`--test-output-dir`** | **`--debug-output`** |
+| ------------------- | ----------------------- | -------------------- |
+| Screenshots & Video | Yes                     | No                   |
+| `maestro.log`       | No                      | Yes                  |
+| `commands-*.json`   | Yes                     | Yes                  |
+| AI Reports          | Yes                     | Yes                  |
 
-If both flags are specified, the `--test-output-dir` takes precedence. In this case the `--debug-output` directory will receive only the `maestro.log`.
+When using both flags, you must consider the following behaviour:
+
+* **Same directory**: If both flags point to the same location, all artifacts are consolidated into that single folder.
+* **Different directories**: If the flags point to different directories, the `--debug-output` directory will receive **only** the `maestro.log`, while the `--test-output-dir` will receive everything else (Screenshots, Videos, Commands JSON, and AI Reports).
 
 ### Next Steps
 
