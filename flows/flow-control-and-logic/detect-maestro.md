@@ -71,15 +71,18 @@ if (LaunchArguments.value().isMaestro === "true") {
 {% endtab %}
 
 {% tab title="Flutter" %}
-In Flutter, you can use the `args` package or access environment variables if passed as `--dart-define`. However, for native launch arguments, you typically need a platform channel or a package like `receive_intent` (Android) to read the intent extras.
+For Flutter, the most straightforward approach is to use a package like `flutter_launch_arguments` to retrieve the parameters passed from Maestro without having to manually set up platform channels:
 
 ```dart
-// Example using a platform channel to check Android Intent extras
-const platform = MethodChannel('com.example.app/test_detection');
+import 'package:flutter_launch_arguments/flutter_launch_arguments.dart';
 
-final String? isMaestro = await platform.invokeMethod('getLaunchArgument', {'key': 'isMaestro'});
-if (isMaestro == "true") {
-  // Apply test-only configurations
+Future<void> getArguments() async {
+  final fla = FlutterLaunchArguments();
+
+  final foo = await fla.getString('foo');
+  final isFooEnabled = await fla.getBool('isFooEnabled');
+  final fooValue = await fla.getDouble('fooValue');
+  final fooInt = await fla.getInt('fooInt');
 }
 ```
 {% endtab %}
