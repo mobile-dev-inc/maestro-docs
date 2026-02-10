@@ -35,7 +35,12 @@ Any variable prefixed with `MAESTRO_` will be [added as environment variable](ht
    * **API Key**: Enter your secret variable (e.g., `CLOUD_API_KEY`).
    * **Project ID**: Enter your Maestro Project ID.
    * **Build Path**: Provide the path to your built `.apk` or `.app` binary.
-5. **Workspace Validation**: Ensure the **Flow Workspace** path matches your repository's directory structure.
+
+{% hint style="info" %}
+Visit the [Maestro Step in the Bitrise catalog](https://bitrise.io/integrations/steps/maestro-cloud-upload) to see the full list of available step options.
+{% endhint %}
+
+5. **Workspace Validation**: Ensure that the **Flow Workspace** path matches your repository’s directory structure.
 
 Once configured, Bitrise automatically triggers your Maestro tests in the cloud as part of your pipeline.
 
