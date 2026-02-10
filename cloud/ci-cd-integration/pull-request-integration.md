@@ -52,7 +52,7 @@ maestro cloud \
   --repo-name <REPO_NAME> \
   --pull-request-id <PR_ID> \
   --commit-sha <COMMIT_SHA> \
-  <APP_FILE> .maestro/
+  --app-file <APP_FILE> --flows .maestro/
 ```
 
 The following table describes each one of the required flags you must inform.
