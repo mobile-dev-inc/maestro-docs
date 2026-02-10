@@ -116,34 +116,36 @@ If both `body` and `multipartForm` are provided in one request, the `body` param
 
 Every HTTP call returns a `response` object containing the following fields:
 
-<table data-header-hidden><thead><tr><th width="114.22222900390625"></th><th width="93.111083984375"></th><th></th></tr></thead><tbody><tr><td><strong>Field Name</strong></td><td><strong>Type</strong></td><td><strong>Description</strong></td></tr><tr><td><code>ok</code></td><td>Boolean</td><td><code>true</code> if the request was successful (status 200-299).</td></tr><tr><td><code>status</code></td><td>Number</td><td>The HTTP status code (e.g., <code>200</code>, <code>404</code>).</td></tr><tr><td><code>body</code></td><td>String</td><td>The raw string body of the response.</td></tr><tr><td><code>headers</code></td><td>Object</td><td>HTTP response headers (multiple values are comma-separated).</td></tr></tbody></table>
+| Field Name | Type    | Description                                                  |
+| ---------- | ------- | ------------------------------------------------------------ |
+| `ok`       | Boolean | `true` if the request was successful (status 200-299).       |
+| `status`   | Number  | The HTTP status code (e.g., `200`, `404`).                   |
+| `body`     | String  | The raw string body of the response.                         |
+| `headers`  | Object  | HTTP response headers (multiple values are comma-separated). |
 
 ### Usage example
 
-A common pattern when testing is to perform a pre-flight authentication step via an API before executing UI interactions. This approach allows you to:
+A common pattern is to use the API to seed test data before executing UI interactions. This ensures that the specific data you need is present in the environment without relying on manual UI setup steps, which are often slow and flaky.
 
-* Bypass login or onboarding screens.
-* Start tests in a known, authenticated state.
-* Reduce test execution time and flakiness caused by UI-based login flows.
+In this example, we create a new appointment via a `POST` request and then verify that it appears in the app.
 
-In this pattern, authentication is performed in a JavaScript script, and the resulting data (such as an access token or user ID) is stored in the global [`output`](manage-data-and-states.md) object.
-
-The following script logs in via an API, parses the JSON response, and stores the authentication token and user ID globally:
+The following script sends a request to an appointments API and stores the `appointmentTitle` in the [`output` object](manage-data-and-states.md#the-output-object) to be used by the main flow.
 
 ```javascript
-// setup.js
-const loginResponse = http.post('https://my-api.com/login', {
-    body: JSON.stringify({ user: "admin", pass: "secret" }),
+// create_appointment.js
+const response = http.post('https://my-api.com/v1/appointments', {
+    body: JSON.stringify({ 
+        title: "Maestro Health Check",
+        date: "2026-02-10"
+    }),
     headers: { 'Content-Type': 'application/json' }
 });
 
-const data = json(loginResponse.body);
+const data = json(response.body);
 
-// Store the token and ID globally for use in the Flow
-output.api = {
-    token: data.token,
-    userId: data.userId
-};
+// Store the title globally so the Flow can assert on it
+output.appointmentTitle = data.title;
+
 ```
 
 Once the script has run, the stored values can be accessed from any subsequent step in the Flow:
@@ -152,13 +154,11 @@ Once the script has run, the stored values can be accessed from any subsequent s
 # flow.yaml
 appId: com.example.app
 ---
-- runScript: setup.js
-
-- evalScript: ${console.log('Logged in user: ' + output.api.userId)}
-
-- tapOn: "Profile"
-
-## Use the captured token in a later UI-based network call if needed
+- launchApp
+- runScript: create_appointment.js
+- tapOn: "My Appointments"
+# Assert that the data we just created via API is now visible in the UI
+- assertVisible: ${output.appointmentTitle}
 ```
 
 ### Next step
