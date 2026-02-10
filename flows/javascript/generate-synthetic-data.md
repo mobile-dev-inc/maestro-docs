@@ -6,7 +6,7 @@ description: >-
 
 # Generate synthetic data
 
-in Maestro, you can use the built-in DataFaker integration to generate dynamic, randomized data for your test. This is useful for bypassing unique-field constraints (like sign-up forms) and creating realistic testing environments without manual data entry.
+In Maestro, you can use the built-in DataFaker integration to generate dynamic, randomized data for your test. This is useful for bypassing unique-field constraints (like sign-up forms) and creating realistic testing environments without manual data entry.
 
 ### The `faker` Object
 
@@ -45,7 +45,7 @@ Generate random ranges or specific number patterns:
 
 #### Placeholder&#x20;
 
-Maestro also supports "fun" providers for non-critical placeholder text:
+DataFaker also supports "fun" providers for non-critical placeholder text:
 
 * Lord of the Rings: `faker.lordOfTheRings().character()` or `faker.lordOfTheRings().location()`
 
@@ -68,7 +68,7 @@ You can use `faker` within `evalScript` to store values in the `output` object, 
 Using expressions allows you to combine multiple faker providers into a single string:
 
 ```yaml
-- evalScript: ${output.bio = faker.expression("#{name.fullName} lives in #{address.city}")}
+- evalScript: '${output.bio = faker.expression("#{name.fullName} lives in #{address.city}")}'
 - console.log: ${output.bio}
 ```
 {% endtab %}

@@ -12,8 +12,6 @@ Sharing data between UI elements and JavaScript scripts is essential for creatin
 
 Maestro provides a single, global JavaScript object called `output` that persists throughout the entire execution of a Flow. Any data assigned to this object in one script or expression is immediately accessible to all subsequent scripts and Maestro commands.
 
-You can store strings, numbers, booleans, or complex objects within `output`.
-
 You can store strings, numbers, booleans, or complex objects within `output`. You can access or add information to the `output` object using standard JavaScript notation. In the following example, the value `'Hello World'` is assigned to `result` (an arbitrary key name):
 
 ```javascript
@@ -83,7 +81,7 @@ output.utils = {
 By loading the script in `onFlowStart`, the `generateToken` function becomes a reusable utility for the rest of the test execution:
 
 ```yaml
-- onFlowStart:
+onFlowStart:
     - runScript: apiUtils.js
 ---
 # Call the shared function to generate a new session token
