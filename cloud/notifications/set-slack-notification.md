@@ -46,6 +46,12 @@ You have the option to configure Maestro to share updates only from failed tests
 
 <figure><img src="../.gitbook/assets/slack-failed-tests-only.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+#### Multi-project routing
+
+You can connect different projects to different Slack channels. This allows you to route notifications to the specific teams responsible for each project (e.g., `#android-alerts` for your Android project and `#ios-alerts` for your iOS project).
+{% endhint %}
+
 ### Manage the integration
 
 You can disable the integration or change the notification channel at any time from the **Settings** page in the Maestro Console.&#x20;
