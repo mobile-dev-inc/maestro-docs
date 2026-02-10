@@ -28,7 +28,7 @@ Explore the technical specifications and community-proven strategies.
 
 ### Join the Community
 
-See real workflows from other teams, and join the [Maestro Slack community](https://maestrodev.typeform.com/to/FelIEe8A?typeform-source=maestro.dev) to share and learn best practices.
+See real workflows from other teams, and join the [Maestro Slack community](https://slack.maestro.dev/) to share and learn best practices.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Community Projects</strong></td><td>Discover VSCode extensions, plugins, and wrappers built by the Maestro community</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/community-projects">Community projects</a></td><td><a href=".gitbook/assets/community-projects-option2.png">community-projects-option2.png</a></td></tr><tr><td><strong>Articles</strong></td><td>Explore a list of blog posts, deep dives, and tutorials from industry experts</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/articles">Articles</a></td><td><a href=".gitbook/assets/articles-option2 (1).png">articles-option2 (1).png</a></td></tr><tr><td><strong>Customer Showcase</strong></td><td>Check how teams like Doccla, Wahed, and Eneco revolutionized their mobile testing</td><td><a href="https://app.gitbook.com/s/htfynyR39703f5pJOF1P/community/showcase">Showcase</a></td><td><a href=".gitbook/assets/customer-showcase-option2 (1).png">customer-showcase-option2 (1).png</a></td></tr></tbody></table>
 
