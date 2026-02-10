@@ -17,7 +17,7 @@ Maestro Cloud allows you to test your application across multiple Android and iO
 You can specify the Android OS version (API level) using the `--android-api-level` flag when using Maestro Cloud.
 
 ```bash
-maestro cloud --android-api-level <API_LEVEL> --app-file <APP_FILE> --flows <FLOWS>
+maestro cloud --android-api-level "<API_LEVEL>" --app-file "<APP_FILE>" --flows "<FLOWS>"
 ```
 
 The following table lists the supported Android versions:
@@ -43,7 +43,7 @@ For iOS, you can configure both the runtime version and the device model.
 Maestro recommends specifying both the minor OS version and the device model. Use the `--device-os` and `--device-model` flags to select a specific combination:
 
 ```bash
-maestro cloud --device-os <DEVICE_OS> --device-model <DEVICE_MODEL> --app-file <APP_FILE> --flows <FLOWS>
+maestro cloud --device-os "<DEVICE_OS>" --device-model "<DEVICE_MODEL>" --app-file "<APP_FILE>" --flows "<FLOWS>"
 ```
 
 The following table lists the supported device models and their available iOS versions:
@@ -60,7 +60,7 @@ The following table lists the supported device models and their available iOS ve
 For example, to run your flows on iOS 18.2 using an iPhone 16 Pro, use the following command:
 
 ```bash
-maestro cloud --device-os iOS-18-2 --device-model iPhone-16-Pro --app-file myapp.app --flows myflows/
+maestro cloud --device-os "iOS-18-2" --device-model "iPhone-16-Pro" --app-file myapp.app --flows myflows/
 ```
 
 {% hint style="info" %}
