@@ -72,3 +72,10 @@ The `--ios-version` option is deprecated and will no longer be available. Use th
 
 Previously, the `--ios-version` flag allowed you to specify only a major version (for example, `16`, `17`, or `18`). When using this flag, Maestro Cloud automatically runs your flows on an **iPhone 11** simulator.
 {% endhint %}
+
+### Related content
+
+Now that you understand how configure the OS, explore other ways to customize your test environment:
+
+* [app-locales-and-device-timezones.md](app-locales-and-device-timezones.md "mention"): Select the device locale for Maestro Cloud tests.
+* Set up notifications via [Slack](../notifications/set-slack-notification.md), [email](../notifications/set-email-notification.md), or [webhooks](../notifications/configure-webhooks.md) to stay informed about build and test results.

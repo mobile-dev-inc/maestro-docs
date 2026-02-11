@@ -1,7 +1,7 @@
 ---
 description: >-
-  Set device locale for Maestro Cloud tests using ISO language and country
-  codes. Default timezones: Android UTC, iOS GMT-7.
+  Configure app locales and understand default device timezones in Maestro Cloud
+  to test internationalization and time-dependent features.
 ---
 
 # App locales and device timezones
