@@ -13,7 +13,13 @@ This document lists all the options and subcommands you can pass to the Maestro 
 To use the subcommands and/or options with the Maestro CLI, follow this pattern:
 
 ```bash
-maestro [options] [subcommand]
+maestro [options] [subcommand] [subcommand options]
+```
+
+For example, to run a test with verbose logging and a specific tag:
+
+```bash
+ maestro --verbose test my-flow.yaml --include-tags=smoke
 ```
 
 ### Options
@@ -22,12 +28,12 @@ You can pass these global options with the Maestro CLI:
 
 | Flag                          | Description                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------------------- |
-| `-h`, `--help`                | Display the help message for the flag or subcommand.                                |
 | `--[no-]ansi`, `--[no-]color` | Enable or disable color and ANSI output.                                            |
-| `-p`, `--platform`            | Select the platform to run the test on. Usage: `--platform=ios`.                    |
 | `--udid`, `--device`          | Pass the device ID to run the test on. Usage: `--device=00008030-001C195E0E88002E`. |
-| `-v`, `--version`             | Display the version of the Maestro CLI you have installed.                          |
+| `-h`, `--help`                | Display the help message for the flag or subcommand.                                |
+| `-p`, `--platform`            | Select the platform to run the test on. Usage: `--platform=ios`.                    |
 | `--verbose`                   | Enable verbose mode.                                                                |
+| `-v`, `--version`             | Display the version of the Maestro CLI you have installed.                          |
 
 ### Subcommands
 
@@ -35,17 +41,17 @@ You can pass these subcommands with the Maestro CLI:
 
 | Subcommand         | Description                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------ |
-| `test`             | Test a flow or a selected set of flows on a local iOS Simulator or Android Emulator. |
-| `cloud`            | Upload your flows to Maestro Cloud.                                                  |
-| `record`           | Record your flows.                                                                   |
-| `download-samples` | Download sample flows and sample apps for running with the Maestro CLI.              |
+| `bugreport`        | Send a bug report.                                                                   |
+| `chat`             | Use Maestro GPT to help you with the apps and tests.                                 |
+| `cloud`            | Upload your Fflows to Maestro Cloud.                                                 |
+| `download-samples` | Download sample Fflows and sample apps for running with the Maestro CLI.             |
+| `driver-setup`     | Setup Maestro drivers for your device.                                               |
 | `login`            | Login into Maestro Cloud.                                                            |
 | `logout`           | Logout from Maestro Cloud.                                                           |
-| `bugreport`        | Send a bug report.                                                                   |
-| `start-device`     | Start an iOS Simulator or an Android Emulator.                                       |
-| `chat`             | Use Maestro GPT to help you with the apps and tests.                                 |
-| `driver-setup`     | Setup Maestro drivers for your device.                                               |
 | `mcp`              | Start the Maestro Model Context Protocol (MCP).                                      |
+| `record`           | Record your Flows.                                                                   |
+| `start-device`     | Start an iOS Simulator or an Android Emulator.                                       |
+| `test`             | Test a Flow or a selected set of Flows on a local iOS Simulator or Android Emulator. |
 
 ### Subcommand Options
 
@@ -57,12 +63,12 @@ Run tests on your local device or emulator.
 
 | Option                              | Description                                                                                                  |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `<flowFiles>...`                    | One or more flow files or folders containing flow files.                                                     |
 | `--analyze`                         | \[Beta] Enhance the test output analysis with AI Insights.                                                   |
 | `--api-key=<apiKey>`                | \[Beta] API key.                                                                                             |
 | `--api-url=<apiUrl>`                | \[Beta] API base URL.                                                                                        |
-| `-c`, `--continuous`                | Run tests in continuous mode.                                                                                |
+| `--[no-]ansi`, `--[no-]color`       | Enable / disable colors and ANSI output.                                                                     |
 | `--config=<configFile>`             | Optional YAML configuration file for the workspace.                                                          |
+| `-c`, `--continuous`                | Run tests in continuous mode.                                                                                |
 | `--debug-output=<debugOutput>`      | Configures the debug output in this path, instead of default.                                                |
 | `-e`, `--env=<String=String>`       | Set environment variables.                                                                                   |
 | `--exclude-tags=<excludeTags>`      | List of tags that will remove the Flows containing the provided tags.                                        |
@@ -71,13 +77,13 @@ Run tests on your local device or emulator.
 | `-h`, `--help`                      | Display help message.                                                                                        |
 | `--headless`                        | (Web only) Run the tests in headless mode.                                                                   |
 | `--include-tags=<includeTags>`      | List of tags. Only flows containing these tags will be run.                                                  |
-| `--[no-]ansi`, `--[no-]color`       | Enable / disable colors and ANSI output.                                                                     |
 | `--output=<output>`                 | Specify the output destination.                                                                              |
 | `-s`, `--shards=<count>`            | Number of parallel shards to distribute tests across.                                                        |
 | `--shard-all=<shardAll>`            | Run all the tests across N connected devices.                                                                |
 | `--shard-split=<shardSplit>`        | Run the tests across N connected devices, splitting the tests evenly across them.                            |
 | `--test-output-dir=<testOutputDir>` | Configures the test output directory for screenshots and other test artifacts.                               |
 | `--test-suite-name=<testSuiteName>` | Test suite name.                                                                                             |
+| `<flowFiles>...`                    | One or more flow files or folders containing flow files.                                                     |
 
 #### `cloud`
 
@@ -88,8 +94,8 @@ Upload and run your flows on Maestro Cloud.
 | `--android-api-level=<level>`               | Android API level to run your flow against.                           |
 | `--apiKey`, `--api-key=<key>`               | API key for Maestro Cloud.                                            |
 | `--apiUrl`, `--api-url=<url>`               | API base URL.                                                         |
-| `--app-file=<path>`                         | App binary to run your Flows against.                                 |
 | `--appBinaryId`, `--app-binary-id=<id>`     | The ID of an app binary previously uploaded to Maestro Cloud.         |
+| `--app-file=<path>`                         | App binary to run your Flows against.                                 |
 | `--async`                                   | Run the upload asynchronously and exit immediately.                   |
 | `--branch=<name>`                           | The branch this upload originated from.                               |
 | `--commitSha`, `--commit-sha=<sha>`         | The commit SHA of this upload.                                        |
@@ -123,6 +129,7 @@ Record your flow execution.
 | `<flowFile>`                          | The Flow file to record.                                                            |
 | `[<outputFile>]`                      | Output file for the rendered video. Only valid for local rendering using `--local`. |
 | `--apple-team-id=<appleTeamId>`       | The unique 10-character Apple Team ID assigned to your team's account.              |
+| `--[no-]ansi`, `--[no-]color`         | Enable or turn off colors and ANSI output.                                          |
 | `--config=<configFile>`               | Optional .yaml configuration file. Defaults to `config.yaml` in the root directory. |
 | `--debug-output=<debugOutput>`        | Configures a custom path for debug output.                                          |
 | `-e`, `--env=<String=String>`         | Environment variables to inject into the Flow.                                      |
@@ -131,7 +138,6 @@ Record your flow execution.
 | `--output=<path>`                     | Write the report to this file. The default is report.xml.                           |
 | `--repoName`, `--repo-name=<name>`    | Set the repository name.                                                            |
 | `--repoOwner`, `--repo-owner=<owner>` | Set the repository owner.                                                           |
-| `--[no-]ansi`, `--[no-]color`         | Enable or turn off colors and ANSI output.                                          |
 
 #### `start-device`
 
@@ -151,7 +157,10 @@ While Maestro supports positional parameters for quick commands, using named par
 
 Named parameters such as `--app-file` and `--flows` can be provided in any order, making scripts easier to read and less error-prone.
 
-<table><thead><tr><th width="259">Parameter</th><th>Purpose</th></tr></thead><tbody><tr><td><code>--app-file</code></td><td>Specifies the local app file path you are uploading.</td></tr><tr><td><code>--flows</code></td><td>Specifies the local directory or specific file of flows to test.</td></tr></tbody></table>
+| Parameter    | Purpose                                                          |
+| ------------ | ---------------------------------------------------------------- |
+| `--app-file` | Specifies the local app file path you are uploading.             |
+| `--flows`    | Specifies the local directory or specific file of flows to test. |
 
 ```bash
 # Using a folder of flows
