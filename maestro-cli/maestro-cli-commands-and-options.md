@@ -144,3 +144,45 @@ Launch an emulator or simulator.
 | `-h`, `--help`             | Display the help message.                                                               |
 | `--os-version=<version>`   | OS version to use. iOS: 16, 17, 18. Android: 28, 29, 30, 31, 33.                        |
 | `--platform=<platform>`    | Platforms: `android`, `ios`, or `web`                                                   |
+
+### Named parameters
+
+While Maestro supports positional parameters for quick commands, using named parameters is strongly recommended for clarity and reliability, especially in CI/CD pipelines.
+
+Named parameters such as `--app-file` and `--flows` can be provided in any order, making scripts easier to read and less error-prone.
+
+<table><thead><tr><th width="259">Parameter</th><th>Purpose</th></tr></thead><tbody><tr><td><code>--app-file</code></td><td>Specifies the local app file path you are uploading.</td></tr><tr><td><code>--flows</code></td><td>Specifies the local directory or specific file of flows to test.</td></tr></tbody></table>
+
+```bash
+# Using a folder of flows
+maestro cloud \
+  --app-file app.apk \
+  --flows myFlows/
+
+# Using a single flow file
+maestro cloud \
+  --app-file app.apk \
+  --flows flow.yaml
+```
+
+Because named parameters are explicit, their order does not matter:
+
+```bash
+# Order A
+maestro cloud --app-file example.apk --flows ./myTests
+
+# Order B
+maestro cloud --flows ./myTests --app-file example.apk
+```
+
+If you rely on positional parameters, the order must be correct or the command will fail:
+
+```bash
+# This works
+maestro cloud example.apk ./myTests
+
+# This will FAIL
+maestro cloud ./myTests example.apk
+```
+
+For CI environments and long-lived scripts, prefer named parameters to avoid subtle errors.
