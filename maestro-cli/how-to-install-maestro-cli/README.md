@@ -14,8 +14,8 @@ To install the Maestro CLI, you need the following:
 
 {% hint style="warning" %}
 - Ensure that the `JAVA_HOME` environment variable points to your Java 17+ installation.
-- You can install Java using [Oracle JDk](https://www.oracle.com/java/technologies/downloads/), [OpenJDK](https://openjdk.org/install/) or [SDKMAN](https://sdkman.io/).
-- To verify the version of your Java installation, run `java --version`.
+- You can install Java using [Oracle JDK](https://www.oracle.com/java/technologies/downloads/), [Temurin JDK](https://adoptium.net/en-GB/temurin/releases) or [SDKMAN](https://sdkman.io/).
+- To verify the version of your Java installation, run `java -version`.
 {% endhint %}
 
 ### Installation

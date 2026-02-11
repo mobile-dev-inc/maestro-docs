@@ -8,9 +8,9 @@ description: >-
 
 Keeping your Maestro CLI up to date ensures you have access to the latest features, command improvements, and security patches. Depending on your original installation method, follow the appropriate steps below.
 
-### Standard update (All platforms)
+### Standard update
 
-To upgrade the Maestro CLI to the latest available version on macOS, Linux, or WSL2, run the standard installation script in your terminal:
+If you originally used the installation script to set up Maestro on macOS, Linux, or WSL2, you can upgrade to the latest version by running the script again:
 
 ```bash
 curl -fsSL "https://get.maestro.mobile.dev" | bash
@@ -59,10 +59,10 @@ export MAESTRO_VERSION={version}; curl -Ls "https://get.maestro.mobile.dev" | ba
 You can find a full list of valid versions on the [GitHub releases page](https://github.com/mobile-dev-inc/maestro/releases).
 {% endhint %}
 
-You have to pass the version of Maestro CLI you want to install. To do this, replace the `{version}` parameter for your desired Maestro version.
+You have to pass the version of Maestro CLI you want to install. To do this, replace the `{version}` parameter with your desired Maestro version.
 
-For example, to install the version 2.0.4 opf Maestro CLI:
+For example, to install version 1.39.0 of Maestro CLI:
 
 ```bash
-export MAESTRO_VERSION=2.0.4; curl -Ls "https://get.maestro.mobile.dev" | bash
+export MAESTRO_VERSION=1.39.0; curl -Ls "https://get.maestro.mobile.dev" | bash
 ```
