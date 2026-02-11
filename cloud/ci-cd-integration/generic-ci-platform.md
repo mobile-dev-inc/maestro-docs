@@ -81,11 +81,13 @@ The following table describes all the parameter you must pass:
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `--api-key`    | Your Maestro Cloud API Key.                                                                                                                                                         |
 | `--project-id` | Your Maestro Project ID.                                                                                                                                                            |
-| `--name`       | **(Optional)** Upload name.                                                                                                                                                         |
+| `--name`       | **(Optional)** A custom name for this specific upload.                                                                                                                              |
 | `--app-file`   | Path to your `.apk` or `.app` binary. Check the [build-your-app-for-the-cloud.md](../build-your-app-for-the-cloud.md "mention") guide for more information on how to build the app. |
 | `--flows`      | The directory containing your Flows.                                                                                                                                                |
 
-
+{% hint style="info" %}
+For a complete list of advanced flags, refer to the [Maestro CLI commands and options](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options "mention") reference.
+{% endhint %}
 {% endstep %}
 
 {% step %}
@@ -97,3 +99,11 @@ Once your tests finish running, Maestro follows standard CI practices to let you
 * **Reports**: A link to the upload details in the Maestro Console is printed in the terminal logs for every run.
 {% endstep %}
 {% endstepper %}
+
+#### Next steps
+
+Now that your CI pipeline is connected, consider optimizing your cloud runs:
+
+* Set up notifications via [Slack](../notifications/set-slack-notification.md), [email](../notifications/set-email-notification.md), or [webhooks](../notifications/configure-webhooks.md) to stay informed about build and test results.
+* [Configure the operating system](../environment-configuration/configure-the-os.md) for your runs to match your application and dependency requirements.
+* Define [locales and time zones](../environment-configuration/configure-locales-and-timezones.md) to ensure consistent behavior across environments and regions.
