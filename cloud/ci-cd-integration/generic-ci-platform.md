@@ -106,4 +106,4 @@ Now that your CI pipeline is connected, consider optimizing your cloud runs:
 
 * Set up notifications via [Slack](../notifications/set-slack-notification.md), [email](../notifications/set-email-notification.md), or [webhooks](../notifications/configure-webhooks.md) to stay informed about build and test results.
 * [Configure the operating system](../environment-configuration/configure-the-os.md) for your runs to match your application and dependency requirements.
-* Define [locales and time zones](../environment-configuration/configure-locales-and-timezones.md) to ensure consistent behavior across environments and regions.
+* Define [locales and time zones](../environment-configuration/app-locales-and-device-timezones.md) to ensure consistent behavior across environments and regions.

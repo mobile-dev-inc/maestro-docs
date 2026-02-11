@@ -12,7 +12,7 @@
   * [Pull request integration](ci-cd-integration/pull-request-integration.md)
 * [Environment configuration](environment-configuration/README.md)
   * [Configure the OS](environment-configuration/configure-the-os.md)
-  * [Configure locales and timezones](environment-configuration/configure-locales-and-timezones.md)
+  * [App locales and device timezones](environment-configuration/app-locales-and-device-timezones.md)
 * [Notifications](notifications/README.md)
   * [Set Slack notification](notifications/set-slack-notification.md)
   * [Set email notification](notifications/set-email-notification.md)
