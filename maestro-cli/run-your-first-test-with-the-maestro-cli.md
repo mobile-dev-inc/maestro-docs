@@ -87,7 +87,7 @@ maestro test contacts.yaml
 {% hint style="info" %}
 ### CLI options and commands
 
-To see all the options and commands available when using the Maestro CLI, access the Maestro CLI documentation.
+To see all the options and commands available when using the Maestro CLI, [access the Maestro CLI documentation](maestro-cli-commands-and-options.md).
 {% endhint %}
 
 Maestro will connect to the emulator and execute the steps sequentially. You will see a live progress report in your terminal.
@@ -120,5 +120,3 @@ Now that you have executed your first Flow, you are ready to explore the deeper 
 * [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors): Learn how Maestro identify UI elements when testing your app.
 * [JavaScript](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview): Learn how to use JavaScript to extend your YAML logic.
 * [Workspace management](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/workspace-management-overview): Learn how to organize your test suite for larger projects.
-
-\-
