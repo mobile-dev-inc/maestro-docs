@@ -12,7 +12,7 @@ In this tutorial, you will write and execute your first Maestro Flow using the C
 
 Ensure you have the following ready before starting:
 
-* **Maestro CLI**: Installed and configured on your local machine. If not yet installed, follow the [how-to-install-maestro-cli](how-to-install-maestro-cli/ "mention")guide.
+* **Maestro CLI**: Installed and configured on your local machine. If not yet installed, follow the [how-to-install-maestro-cli](how-to-install-maestro-cli/ "mention") guide.
 * **Android Studio**: Used to manage and launch virtual devices. See the [QuickStart](https://mobile-dev-1.gitbook.io/docs-vnext/get-started/quickstart) guide.
 
 {% stepper %}
@@ -47,9 +47,9 @@ appId: com.google.android.contacts
 - tapOn: "Allow"                  # Handles system permission dialog if it appears
 - tapOn: Create contact
 - tapOn: First name
-- inputRandomPersonName           # Generates and types a realistic first name
+- inputText: John
 - tapOn: Last name
-- inputRandomPersonName           # Generates and types a realistic last name
+- inputText: Doe
 - tapOn: Company
 - inputText: Maestro
 - tapOn: "+1"
@@ -92,7 +92,7 @@ To see all the options and commands available when using the Maestro CLI, access
 
 Maestro will connect to the emulator and execute the steps sequentially. You will see a live progress report in your terminal.
 
-<figure><img src=".gitbook/assets/cli-running-test.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 #### What happens during execution:
@@ -110,7 +110,7 @@ Maestro will connect to the emulator and execute the steps sequentially. You wil
 
 Once the test completes, check your folder for the `recording.mp4` file. It should display the automated process exactly as seen in the example below:
 
-<figure><img src=".gitbook/assets/running-cli-example-maestro.gif" alt="" width="270"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/demo-contacts-cli-maestro.gif" alt=""><figcaption></figcaption></figure>
 
 ### Next steps
 
