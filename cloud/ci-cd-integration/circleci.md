@@ -20,8 +20,6 @@ First, add your credentials as secret environment variables in your CircleCI Pro
 You can find your API key and Project ID accessing [Maestro Dashboard](https://app.maestro.dev/).
 
 You can find your Project ID in the Dashboard **Settings**. Open the **Settings** menu and select the desired project to have access to the ID.
-
-<img src="../.gitbook/assets/image (1).png" alt="" data-size="original">
 {% endhint %}
 
 1. Navigate to your **Project -> Project Settings -> Environment Variables**.
