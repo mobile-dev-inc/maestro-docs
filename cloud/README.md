@@ -11,7 +11,7 @@ Maestro Cloud is a hosted, enterprise-grade infrastructure designed to execute a
 By offloading device management to the cloud, teams can reduce test execution time by up to 90% through asynchronous parallel runs, enabling faster shipping cycles with increased confidence.
 
 {% hint style="info" %}
-Maestro does not provide a separate "Cloud CLI." To take advantage of Maestro Cloud features, you use the `cloud` subcommand within the standard [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/). This subcommand bridges your local environment with our cloud infrastructure and enables CI operations.
+Maestro does not provide a separate "Cloud CLI." To take advantage of Maestro Cloud features, you use the `cloud` subcommand within the standard [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/). This subcommand uploads your app and tests to our cloud infrastructure and enables hosted test execution.
 {% endhint %}
 
 ### Learn how to use Maestro Cloud

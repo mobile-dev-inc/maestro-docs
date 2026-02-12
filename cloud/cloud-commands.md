@@ -6,7 +6,7 @@ description: >-
 
 # Cloud commands
 
-Maestro does not provide a separate "Cloud CLI." To take advantage of Maestro Cloud features, you use the `cloud` subcommand within the standard [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/). This subcommand bridges your local environment with our cloud infrastructure and enables CI operations.
+Maestro does not provide a separate "Cloud CLI." To take advantage of Maestro Cloud features, you use the `cloud` subcommand within the standard [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/). This subcommand uploads your app and tests to our cloud infrastructure and enables hosted test execution
 
 #### Maestro CLI Reference
 
