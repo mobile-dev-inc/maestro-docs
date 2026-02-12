@@ -87,7 +87,7 @@ jobs:
           java-version: 11
           distribution: 'temurin'
       - run: ./gradlew assembleDebug
-      - uses: mobile-dev-inc/action-maestro-cloud@v1
+      - uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
         with:
           api-key: ${{ secrets.MAESTRO_API_KEY }}
           # note that you can supply the project id any way you like, it is not secret
@@ -119,7 +119,7 @@ You must specify `-destination 'generic/platform=iOS Simulator'` to ensure the b
 Point the `app-file` to the `.app` bundle generated in your build directory.
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
   with:
     api-key: ${{ secrets.MAESTRO_API_KEY }}
     project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
@@ -131,7 +131,7 @@ Point the `app-file` to the `.app` bundle generated in your build directory.
 To get symbolicated stack traces, include the generated `.dSYM` file.
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
   with:
     api-key: ${{ secrets.MAESTRO_API_KEY }}
     project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
@@ -169,7 +169,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: xcodebuild build -scheme 'MyApp' -configuration Debug -project 'MyApp.xcodeproj' -destination 'generic/platform=iOS Simulator' CONFIGURATION_BUILD_DIR=$PWD/build
-      - uses: mobile-dev-inc/action-maestro-cloud@v1
+      - uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
         with:
           api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
           # note that you can supply the project id any way you like, it is not secret
@@ -178,11 +178,7 @@ jobs:
 ```
 {% endtab %}
 
-{% tab title="Untitled" %}
-
-
-### Flutter
-
+{% tab title="Flutter" %}
 Flutter requires specific build flags to generate binaries compatible with Maestro Cloud.
 
 #### Flutter Android
