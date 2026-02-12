@@ -17,7 +17,7 @@ Cloud execution is available on the [Maestro Cloud Plan](https://signin.maestro.
 {% hint style="info" %}
 Refer to the appropriate guide if you are using one of the following CI/CD integration options:
 
-* [github-actions.md](github-actions.md "mention")
+* [github-actions](github-actions/ "mention")
 * [bitrise.md](bitrise.md "mention")
 * [bitbucket-pipelines.md](bitbucket-pipelines.md "mention")
 * [circleci.md](circleci.md "mention")
