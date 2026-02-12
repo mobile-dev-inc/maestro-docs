@@ -4,7 +4,7 @@ description: >-
   apps, pick device models, and monitor live results from the editor.
 ---
 
-# Run Cloud tests from Maestro Studio
+# Run cloud tests from Maestro Studio
 
 Maestro Studio provides a seamless way to execute your mobile tests on cloud infrastructure without leaving your development environment. This allows you to test on various device models and OS versions while keeping your local machine free for other tasks.
 
@@ -60,12 +60,12 @@ After defining your settings, click **Run Flow on Cloud**. Maestro Studio will p
 
 You can monitor the execution directly within the Maestro Studio output terminal:
 
-* **Real-time Updates**: The terminal displays the upload status and the live progress of each flow.
-* **Success and Failure**: A summary shows how many tests passed or failed. If a flow fails, the specific error or failed assertion is displayed directly in the terminal.
+* **Real-time Updates**: The output terminal displays the upload status and the live progress of each flow.
+* **Success and Failure**: A summary shows how many tests passed or failed. If a flow fails, the specific error or failed assertion is displayed directly in the output terminal.
 
 <figure><img src=".gitbook/assets/run-on-cloud-sucess.png" alt=""><figcaption></figcaption></figure>
 
-To deep-dive into a specific run, click the **View on Maestro Cloud** button in the terminal. This opens the Maestro Cloud Console, where you can:
+To deep-dive into a specific run, click the **View on Maestro Cloud** button in the output terminal. This opens the Maestro Cloud Console, where you can:
 
 * Inspect every individual step of the test.
 * Review the screen recording of the execution.

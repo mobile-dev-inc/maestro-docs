@@ -13,7 +13,7 @@ Maestro Studio is a visual development environment designed to accelerate the cr
 To start using the Maestro Studio, we suggest you to explore the following path:
 
 1. Visit [How to install Maestro Studio](/broken/spaces/CbCMt5C3rawmE9oIus7f/pages/Gkh2PaXSFN0gAJQLxuIc) and [How to run your first test](/broken/spaces/CbCMt5C3rawmE9oIus7f/pages/kmqn1gss5nFaFJkY1CCh) to set up your environment in under a minute.
-2. Explore [Environment variables](environment-variables.md) to learn how to handle dynamic data and secrets directly within the visual editor.
+2. Explore [Environment variables](environments-and-variables.md) to learn how to handle dynamic data and secrets directly within the visual editor.
 3. Use the [Run Cloud tests from Maestro Studio](run-cloud-tests-from-maestro-studio.md) guide to learn how to trigger enterprise-grade cloud runs with a single click.
 
 ### Maestro Studio capabilities
