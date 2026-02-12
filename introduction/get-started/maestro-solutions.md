@@ -34,13 +34,13 @@ Explore how to scale your regression suites in the [Maestro Cloud](https://app.g
 
 Use the table below to determine which tool fits your current workflow:
 
-| **Feature**     | **Maestro Studio**      | **Maestro CLI**         | **Maestro Cloud**           |
-| --------------- | ----------------------- | ----------------------- | --------------------------- |
-| **Best For**    | Authoring & Debugging   | Automation & CI/CD      | Mass Regression & Speed     |
-| **Interface**   | Visual (GUI)            | Terminal (Command Line) | Managed Infrastructure      |
-| **Execution**   | Real-time / Interactive | Sequential (Local)      | Parallel (Simultaneous)     |
-| **Target User** | QA & Developers         | Engineers & DevOps      | Growth & Professional Teams |
-| **Environment** | Local Device/Emulator   | Local Device/Emulator   | Hosted Virtual Devices      |
+| **Feature**     | **Maestro Studio**      | **Maestro CLI**         | **Maestro Cloud**                                                    |
+| --------------- | ----------------------- | ----------------------- | -------------------------------------------------------------------- |
+| **Best For**    | Authoring & Debugging   | Local execution & CI/CD | Reliable & scalable parallel test execution                          |
+| **Interface**   | Visual (GUI)            | Terminal (Command Line) | Upload via CLI, see runs via web,  notifications via Slack + Webhook |
+| **Execution**   | Real-time / Interactive | Sequential (Local)      | Parallel (Simultaneous)                                              |
+| **Target User** | Testers & Developers    | Engineers & DevOps      | Growth & Professional Teams                                          |
+| **Environment** | Local Device/Emulator   | Local Device/Emulator   | Hosted Virtual Devices                                               |
 
 ### The typical learning path
 
