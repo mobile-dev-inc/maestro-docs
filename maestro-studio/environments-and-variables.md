@@ -12,10 +12,10 @@ To keep your tests maintainable, it is recommended to separate your environment 
 
 ### Add environments
 
-Environments in Maestro enables you to define two key types of configurations:
+Environments in Maestro enable you to define two key types of configurations:
 
 * **Environment Variables**: Key-value pairs used to inject dynamic data into your tests (e.g., `BASE_URL`, `USER_EMAIL`).
-* **Configure Tags**: Specify the tags to be included and excluded when running the tests. This enables you to create specific Labels used to filter which Flows are executed during a run (e.g., `smoke`, `regression`).
+* **Configure Tags**: Specify the tags to be included and excluded when running the tests. This allows you to create specific labels used to filter which Flows are executed during a run (e.g., `smoke`, `regression`).
 
 When you start using Maestro Studio, you have the default environment, called `None`. But, to better organize your tests, it's recommended to have environments and environment variables separated.
 
@@ -27,11 +27,11 @@ To add a new environment, follow these steps:
 
 <figure><img src=".gitbook/assets/set-environment.png" alt=""><figcaption></figcaption></figure>
 
-5. In the **Environment Manager**, click the **+ Add** environment button.
-6. Specify the tags to be included and excluded when running tests in this environment.&#x20;
-7. Add the variables as key-value pairs to be used inside the Flows.&#x20;
+5. In the **Environment Manager**, click the **+ Add** button.
+6. Specify the **Included** and **Excluded** tags for this environment.
+7. Add your variables as **Key-Value** pairs.
 
-{% hint style="info" %}
+{% hint style="success" %}
 #### Example
 
 Imagine you have created a set of generic Flows to be used across all available operating systems. To ensure the correct tests run for a specific platform, you can create a dedicated Android Environment:
@@ -41,10 +41,6 @@ Imagine you have created a set of generic Flows to be used across all available 
 {% endhint %}
 
 <figure><img src=".gitbook/assets/set-variables.png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-You can have as many environments as you want, with as many environment variables as you want.
-{% endhint %}
 
 ### Using variables in your Flows
 
@@ -68,10 +64,10 @@ You can also use the variables to control Flow execution based on the environmen
 
 ### Next steps
 
-Learn how to run your tests using the Maestro Cloud solution.
+To take the next step with Maestro Studio, learn how to run your tests using the Maestro Cloud solution.
 
-If you want to learn more about how maestro works, access the related documentation:
+If you want to deepen your understanding of how Maestro works, explore the related documentation:
 
-* Parameters and constants: Pass dynamic values to flows using parameters and inline constants.
-* [Test discovery and tags](https://mobile-dev-1.gitbook.io/docs-vnext/maestro-flows/workspace-management/test-discovery-and-tags): Organize tests with tags and control which flows run using include/exclude filters.
-* [Conditions](https://mobile-dev-1.gitbook.io/docs-vnext/maestro-flows/flow-control-and-logic/conditions): Execute commands conditionally based on visibility, platform, or custom expressions.
+* [**Parameters and constants**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants)**:** Pass dynamic values to flows using parameters and inline constants.
+* [**Test discovery and tags**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags)**:** Organize tests with tags and control which flows run using include/exclude filters.
+* [**Conditions**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions): Execute commands conditionally based on visibility, platform, or custom expressions.
