@@ -1,3 +1,9 @@
+---
+description: >-
+  Manage dynamic test configurations in Maestro Studio. Use Environment
+  Variables and Tags to run Flows across different platforms and environments.
+---
+
 # Environments and variables
 
 Maestro Studio allows you to manage dynamic configurations through Environments. This is essential for running the same tests across different app variants, server environments, or localized settings without hardcoding values into your Flows.
