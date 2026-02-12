@@ -1,3 +1,9 @@
+---
+description: >-
+  Configure GitHub Action triggers and use output variables to integrate Maestro
+  Cloud into your CI/CD pipeline.
+---
+
 # Outputs and triggers
 
 To integrate Maestro Cloud seamlessly into your CI/CD pipeline, you need to configure when the action runs and how to use its results (e.g., posting a comment on a PR or failing a build).

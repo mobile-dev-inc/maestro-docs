@@ -1,3 +1,7 @@
+---
+description: Set up Maestro Cloud GitHub Actions for Android, iOS, and Flutter.
+---
+
 # Platform guides
 
 This guide covers platform-specific configurations for setting up Maestro Cloud GitHub Actions.

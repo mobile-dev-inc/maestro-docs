@@ -1,3 +1,9 @@
+---
+description: >-
+  Integrate Maestro Cloud into CircleCI pipelines to automate mobile testing.
+  Set up API keys, organize flows, and configure your .circleci/config.yml.
+---
+
 # CircleCI
 
 Integrate Maestro Cloud into your CircleCI pipelines to automate your mobile testing. This guide walks you through setting up environment variables, organizing your flows, and configuring your `.circleci/config.yml`.
