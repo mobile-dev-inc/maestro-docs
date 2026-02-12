@@ -1,7 +1,7 @@
 ---
 description: >-
-  Use the cloud subcommand in the standard Maestro CLI to bridge local tests
-  with cloud infrastructure and CI.
+  Upload and execute your mobile tests on hosted cloud infrastructure using the
+  Maestro CLI cloud subcommand.
 ---
 
 # Cloud commands
