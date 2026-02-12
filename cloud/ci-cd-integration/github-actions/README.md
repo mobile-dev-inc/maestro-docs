@@ -6,8 +6,6 @@ description: >-
 
 # GitHub Actions
 
-Maestro Cloud provides a native [GitHub Action](https://github.com/marketplace/actions/maestro-cloud-upload-action) that allows you to easily integrate mobile UI testing into your GitHub workflows.
-
 Maestro Cloud has a integration with GitHub Actions that allows you to automate your mobile and web testing pipelines. By using the official [Maestro Cloud GitHub Action](https://github.com/marketplace/actions/maestro-cloud-upload-action), you can trigger tests on every push or pull request and view results directly in the Maestro Console.
 
 {% hint style="info" %}
@@ -29,32 +27,16 @@ The GitHub Action requires an API key to authenticate with Maestro Cloud. You mu
 1. Navigate to your GitHub repository and click **Settings**.
 2. In the sidebar, click **Secrets and variables** > **Actions**.
 3. Click **New repository secret**.
-4. Name the secret `MAESTRO_API_KEY` and paste your API key from the [Maestro Dashboard](https://console.maestro.dev/) into the **Secret** field.
+4. Name the secret `MAESTRO_API_KEY` and paste your API key from the [Maestro Dashboard](https://app.maestro.dev/) into the **Secret** field.
 5. Click **Add secret**.
 {% endstep %}
 
 {% step %}
 #### Add your Project ID
 
-You can find your Project ID in the **Settings** section of the [Maestro Dashboard](https://console.maestro.dev/). Open the **Settings** menu and select the desired project to have access to the ID. While not a secret, you can also store it as a Repository Secret (e.g., `MAESTRO_PROJECT_ID`) for convenience.
+You can find your Project ID in the **Settings** section of the [Maestro Dashboard](https://app.maestro.dev/). Open the **Settings** menu and select the desired project to have access to the ID. While not a secret, you can also store it as a Repository Secret (e.g., `MAESTRO_PROJECT_ID`) for convenience.
 
 <figure><img src="../../.gitbook/assets/github-project-id.png" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-### Organize your Flows&#xD;
-
-Ensure your repository has a `.maestro/` directory at the root containing your Flows.
-
-```
-<root>
-├── .maestro/
-│   ├── Login.yaml
-│   ├── subflows/
-│   │   └── MySubflow.yaml
-│   └── ...
-
-```
 {% endstep %}
 
 {% step %}
@@ -130,13 +112,17 @@ Below are all available inputs for the `mobile-dev-inc/action-maestro-cloud` act
 
 #### Device configuration
 
-| Input               | Description                                   | Example     |
-| ------------------- | --------------------------------------------- | ----------- |
-| `android-api-level` | Android API level to use.                     | `30`        |
-| `device-model`      | Specific iOS device model.                    | `iPhone-15` |
-| `device-os`         | Specific iOS OS version.                      | `iOS-17`    |
-| `device-locale`     | Device locale (ISO-639-1 + ISO-3166-1).       | `de_DE`     |
-| `mapping-file`      | Path to ProGuard map (Android) or dSYM (iOS). | `null`      |
+| Input               | Description                                   | Example        |
+| ------------------- | --------------------------------------------- | -------------- |
+| `android-api-level` | Android API level to use.                     | `30`           |
+| `device-model`      | Specific iOS device model.                    | `iPhone-16`    |
+| `device-os`         | Specific iOS OS version.                      | `iOS-18-2`     |
+| `device-locale`     | Device locale (ISO-639-1 + ISO-3166-1).       | `de_DE`        |
+| `mapping-file`      | Path to ProGuard map (Android) or dSYM (iOS). | `./MyApp.dSYM` |
+
+{% hint style="info" %}
+Access the [configure-the-os.md](../../environment-configuration/configure-the-os.md "mention") page for more information.
+{% endhint %}
 
 ### Next steps
 
