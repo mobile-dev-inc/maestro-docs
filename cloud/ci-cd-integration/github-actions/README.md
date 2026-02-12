@@ -29,14 +29,14 @@ The GitHub Action requires an API key to authenticate with Maestro Cloud. You mu
 1. Navigate to your GitHub repository and click **Settings**.
 2. In the sidebar, click **Secrets and variables** > **Actions**.
 3. Click **New repository secret**.
-4. Name the secret `MAESTRO_API_KEY` and paste your API key from the [Maestro Console](https://console.maestro.dev/) into the **Secret** field.
+4. Name the secret `MAESTRO_API_KEY` and paste your API key from the [Maestro Dashboard](https://console.maestro.dev/) into the **Secret** field.
 5. Click **Add secret**.
 {% endstep %}
 
 {% step %}
 #### Add your Project ID
 
-You can find your Project ID in the **Settings** section of the [Maestro Console](https://console.maestro.dev/). Open the **Settings** menu and select the desired project to have access to the ID. While not a secret, you can also store it as a Repository Secret (e.g., `MAESTRO_PROJECT_ID`) for convenience.
+You can find your Project ID in the **Settings** section of the [Maestro Dashboard](https://console.maestro.dev/). Open the **Settings** menu and select the desired project to have access to the ID. While not a secret, you can also store it as a Repository Secret (e.g., `MAESTRO_PROJECT_ID`) for convenience.
 
 <figure><img src="../../.gitbook/assets/github-project-id.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -146,3 +146,4 @@ Explore the complementary content to improve your GitHub Action to run Maestro t
 * [Platform guides](platform-guides.md): Explore the guides to use the official GitHub Action for Android, iOS, and Flutter.
 * [Advanced configurations](advanced-configuration.md): Learn how to configure async mode, environment variables, and custom workspaces.
 * [Outputs and triggers](outputs-and-triggers.md): Learn how to use action outputs and configure CI triggers.
+* Explore all the [subcommand options for `claud`.](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud)
