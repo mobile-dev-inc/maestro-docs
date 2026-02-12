@@ -1,3 +1,9 @@
+---
+description: >-
+  Execute mobile tests on cloud devices directly from Maestro Studio. Select
+  apps, pick device models, and monitor live results from the editor.
+---
+
 # Run Cloud tests from Maestro Studio
 
 Maestro Studio provides a seamless way to execute your mobile tests on cloud infrastructure without leaving your development environment. This allows you to test on various device models and OS versions while keeping your local machine free for other tasks.
@@ -10,9 +16,7 @@ You need an account to take advantage of Maestro Cloud solution. Access [Maestro
 {% step %}
 ### Trigger a cloud runs
 
-After creating your Flows, you have the option to run them using [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/).
-
-When working in Maestro Studio, you have two ways to initiate a cloud execution depending on your needs:
+After creating your Flows, you can initiate a [cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) execution directly from the Studio interface in two ways:
 
 1. **Run All Tests**: Click the **Run on Cloud** button in the sidebar to execute all root-level Flows in your workspace.
 2. **Run a Single Flow**: Open a specific test file in the editor and click **Run on Cloud** at the top of the file to execute only that specific test.
@@ -23,7 +27,7 @@ When working in Maestro Studio, you have two ways to initiate a cloud execution 
 {% step %}
 ### Configure the run
 
-Once you click Run on Cloud, a configuration modal will appear. You must complete the following required settings before launching the run:
+Clicking **Run on Cloud** opens a configuration modal. You must complete the following required settings before launching the run:
 
 * **Device**: Select the specific device model and API level for your test (e.g., Pixel 6 - API 34).
 * **App Selection**: Select your application. If this is your first time testing the app, click the app selector and choose **Upload App File** to pick your APK or `.app` bundle.
