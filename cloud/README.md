@@ -6,9 +6,13 @@ description: >-
 
 # Maestro Cloud overview
 
-Maestro Cloud is a hosted, enterprise-grade infrastructure designed to execute automated tests with high parallelism and reliable scaling. It allows teams to run their "Flows" in a stable, managed environment, eliminating the need to configure or maintain local emulators and simulators.
+Maestro Cloud is a hosted, enterprise-grade infrastructure designed to execute automated tests with high parallelism and reliable scaling. It allows teams to run their Flows in a stable, managed environment, eliminating the need to configure or maintain local emulators and simulators.
 
 By offloading device management to the cloud, teams can reduce test execution time by up to 90% through asynchronous parallel runs, enabling faster shipping cycles with increased confidence.
+
+{% hint style="info" %}
+Maestro does not provide a separate "Cloud CLI." To take advantage of Maestro Cloud features, you use the `cloud` subcommand within the standard [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/). This subcommand bridges your local environment with our cloud infrastructure and enables CI operations.
+{% endhint %}
 
 ### Learn how to use Maestro Cloud
 
