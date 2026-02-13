@@ -23,7 +23,7 @@ First, add your credentials as secret environment variables in your CircleCI Pro
 {% hint style="info" %}
 #### API key and Project ID
 
-You can find your API key and Project ID accessing [Maestro Dashboard](https://app.maestro.dev/).
+You can find your API key and Project ID by accessing the [Maestro Dashboard](https://app.maestro.dev/).
 
 You can find your Project ID in the Dashboard **Settings**. Open the **Settings** menu and select the desired project to have access to the ID.
 {% endhint %}
@@ -37,11 +37,10 @@ You can find your Project ID in the Dashboard **Settings**. Open the **Settings*
 {% step %}
 ### Organize your Flows
 
-Create a `.maestro/` directory at the root of your repository. While you can use any folder name, using `.maestro/` is a standard convention.
+Organize your test files in a dedicated directory within your repository. While you can use any folder name, it is important to point Maestro to this location during the upload step.
 
 ```
-<root>
-├── .maestro/
+├── e2e-tests/
 │   ├── subflows/
 │   │   └── LoginSubflow.yaml
 │   ├── Login.yaml
@@ -50,14 +49,16 @@ Create a `.maestro/` directory at the root of your repository. While you can use
 ```
 
 {% hint style="success" %}
-Subflows: Files in subdirectories (like `subflows/`) will not be executed as top-level tests, but can be called by other Flows using the `runFlow` command.
+#### Subflows
+
+Files in subdirectories (like `subflows/`) will not be executed as top-level tests, but can be called by other Flows using the `runFlow` command.
 {% endhint %}
 {% endstep %}
 
 {% step %}
 ### Add the Maestro upload job
 
-Integrate Maestro by adding a specific job to your `.circleci/config.yml`. This job installs the CLI and uploads your binary and Flows.
+Integrate Maestro by adding a specific job to your `.circleci/config.yml`. This job installs the CLI and uploads your binary and Flows using the `--app-file` and `--flows` parameters for better reliability.
 
 ```yaml
 maestro-upload:
@@ -77,7 +78,7 @@ maestro-upload:
               --apiKey $MDEV_API_KEY \
               --projectId $MDEV_PROJECT_ID \
               --app-file path_to_my_app.apk \
-              --flows .maestro
+              --flows e2e-tests
 ```
 {% endstep %}
 {% endstepper %}
@@ -122,7 +123,8 @@ jobs:
             maestro cloud \
             --apiKey $MDEV_API_KEY \
             --projectId $MDEV_PROJECT_ID \
-            app/build/outputs/apk/debug/app-debug.apk .maestro
+            --app-file app/build/outputs/apk/debug/app-debug.apk \
+            --flows e2e-tests
 workflows:
   build-and-upload:
     jobs:
@@ -180,7 +182,8 @@ jobs:
             maestro cloud \
             --apiKey $MDEV_API_KEY \
             --projectId $MDEV_PROJECT_ID \
-            build/MyApp.app .maestro
+            --app-file build/MyApp.app \
+            --flows e2e-tests
 workflows:
   build-and-upload:
     jobs:
@@ -209,5 +212,5 @@ Now that your CI pipeline is connected, consider optimizing your cloud runs:
 * Set up notifications via [Slack](../notifications/set-slack-notification.md), [email](../notifications/set-email-notification.md), or [webhooks](../notifications/configure-webhooks.md) to stay informed about build and test results.
 * [Configure the operating system](../environment-configuration/configure-the-os.md) for your runs to match your application and dependency requirements.
 * Define [locales and time zones](../environment-configuration/app-locales-and-device-timezones.md) to ensure consistent behavior across environments and regions.
-* Explore all the [subcommand options for `claud`.](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud)
+* Explore all the [subcommand options for `cloud`.](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud)
 
