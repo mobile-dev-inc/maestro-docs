@@ -8,8 +8,8 @@
 
 * [Maestro documentation](README.md)
 * [Copy of Maestro documentation](get-started/copy-of-maestro-documentation.md)
-* [What is Maestro?](get-started/readme.md)
-* [Copy of What is Maestro?](get-started/readme-1.md)
+* [What is Maestro?](get-started/what-is-maestro.md)
+* [Copy of What is Maestro?](get-started/readme.md)
 * [How Maestro works](get-started/how-maestro-works.md)
 * [QuickStart](get-started/quickstart.md)
 * [QuickStart v2](get-started/quickstart-v2.md)

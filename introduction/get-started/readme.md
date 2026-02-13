@@ -2,37 +2,103 @@
 description: >-
   Maestro is an open-source UI automation framework for mobile and web with
   built-in tolerance, zero-wait intelligence, and declarative YAML syntax.
+hidden: true
 ---
 
-# What is Maestro?
+# Copy of What is Maestro?
 
-Maestro is the simplest and most effective open-source UI automation framework for mobile and web. It is designed to allow developers and testers to define and automate user journeys with a level of reliability and ease that traditional tools cannot match.
-
-<figure><img src="../.gitbook/assets/twitter_continuous_v3_fast.gif" alt=""><figcaption></figcaption></figure>
-
-Traditional testing tools often require deep instrumentation, access to the app's source code, and a strong coding ability. Maestro changes this by operating at "[arm's length](how-maestro-works.md#the-arms-length-philosophy)," piloting the device, not the app, scrolling and tapping like a real user would through the same accessibility layer that real users rely on. This eliminates framework dependencies, allowing you to test any app, regardless of whether it was built with React Native, Flutter, or Native code.
-
-### Why choose Maestro?
-
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><i class="fa-shield">:shield:</i> <strong>Built-in Tolerance</strong></td><td>Maestro embraces the instability of mobile devices by automatically handling flakiness and UI settling.</td></tr><tr><td><i class="fa-timer">:timer:</i> <strong>Zero-Wait Intelligence</strong></td><td>No more manual <code>sleep()</code> calls. Maestro automatically waits for network content and animations to load.</td></tr><tr><td><i class="fa-file">:file:</i> <strong>Declarative Syntax</strong></td><td>Tests are defined in human-readable YAML files, removing the need for deep programming knowledge.</td></tr></tbody></table>
-
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><i class="fa-rocket-launch">:rocket-launch:</i> <strong>Blazingly Fast Iteration</strong></td><td>Tests run without compilation. Maestro can monitor your files and rerun flows instantly upon saving.</td></tr><tr><td><i class="fa-box">:box:</i> <strong>Single Binary Setup</strong></td><td>Maestro is a single tool that works anywhere, avoiding the "setup hell" associated with legacy drivers.</td></tr></tbody></table>
-
-
+Maestro is an open source framework for mobile and web UI testing. Docs include setup guides, examples, and steps to run automated tests.
 
 {% hint style="success" %}
 🚀 **Running in the cloud**
 
-Ready to wire into CI or scale up your testing? Start running your flows on [Maestro Cloud](https://maestro.dev/cloud). Check the Cloud documentation to run tests in the cloud and integrate with your CI pipeline.
+Ready to wire into CI or scale up your testing? Start running your flows on Maestro's enterprise-grade Google Cloud Platform (GCP) infrastructure: [Run Maestro tests in the cloud](https://maestro.dev/cloud) and follow the [Quickstart Guide](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/cloud/cloud-quickstart.md) to quickly experience the power of GCP.
 {% endhint %}
 
-### Maestro vs competitors
+{% embed url="https://vimeo.com/767721667/d972c5f08e" %}
 
-While tools like Appium or Selenium treat testing like unit tests inspecting internal APIs, Maestro treats your app as a black box. By simulating "human thumbs on a screen," Maestro validates the complete user experience stack, including interactions with system settings and notifications.
+## Why Maestro?
 
-### Ready to start?
+Maestro builds on learnings from its predecessors—Appium, Espresso, UIAutomator, XCTest, Selenium, and Playwright—and allows you to easily define and test your flows.
 
-Explore the core components of the Maestro ecosystem and begin your journey:
+{% hint style="info" %}
+**What are flows?** Think of flows as parts of the user journey in your app. Login, Checkout, and Add to Cart are three examples of possible flows that you can define and test using Maestro.
+{% endhint %}
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="how-maestro-works.md"><strong>How Maestro Works</strong></a></td><td>Understand the "arm's length" philosophy and accessibility-first element detection.</td><td><a href="how-maestro-works.md">how-maestro-works.md</a></td></tr><tr><td><a href="quickstart-v2.md"><strong>QuickStart Guide</strong></a></td><td>Install Maestro Studio and run your first test in under five minutes.</td><td><a href="quickstart.md">quickstart.md</a></td></tr><tr><td><a href="maestro-solutions.md"><strong>Maestro Solutions</strong></a></td><td>Compare the Maestro CLI, Maestro Studio (IDE), and Maestro Cloud to find the right tool for your workflow.</td><td><a href="our-products/">our-products</a></td></tr><tr><td><a href="supported-platform/"><strong>Supported Platforms</strong></a></td><td>View the full list of supported frameworks, including Jetpack Compose, SwiftUI, and Web.</td><td><a href="supported-platform/">supported-platform</a></td></tr></tbody></table>
+* Built-in tolerance to flakiness. UI elements are not always where you expect them, and screen taps do not always go through. Maestro embraces the instability of mobile applications and devices and tries to counter it.
+* Built-in tolerance to delays. No need to pepper your tests with `sleep()` calls. Maestro knows that it might take time to load the content (that is, over the network) and automatically waits for it, but no longer than required.
+* Blazingly fast iteration. Tests run without compilation. Maestro continuously monitors your test files and reruns them as they change.
+* Declarative yet powerful syntax. Define your tests in a YAML file.
+* Simple setup. Maestro is a single binary that works anywhere.
 
+## Examples
+
+#### Twitter (mobile)
+
+<figure><img src="../.gitbook/assets/twitter_continuous_v3_fast.gif" alt=""><figcaption></figcaption></figure>
+
+#### Simple examples
+
+{% tabs %}
+{% tab title="Android" %}
+```yaml
+# flow_contacts_android.yaml
+
+appId: com.android.contacts
+---
+- launchApp
+- tapOn: "Create new contact"
+- tapOn: "First Name"
+- inputText: "John"
+- tapOn: "Last Name"
+- inputText: "Snow"
+- tapOn: "Save"
+```
+{% endtab %}
+
+{% tab title="iOS" %}
+```yaml
+# flow_contacts_ios.yaml
+
+appId: com.apple.MobileAddressBook
+---
+- launchApp
+- tapOn: "John Appleseed"
+- tapOn: "Edit"
+- tapOn: "Add phone"
+- inputText: "123123"
+- tapOn: "Done"
+```
+{% endtab %}
+
+{% tab title="Web" %}
+```yaml
+url: https://example.com
+---
+- launchApp
+- tapOn: More information...
+- assertVisible: Further Reading
+```
+{% endtab %}
+{% endtabs %}
+
+## Platform Support
+
+| Platform                                                                                                                             | Supported |
+| ------------------------------------------------------------------------------------------------------------------------------------ | :-------: |
+| [Android - Views](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/platform-support/android-views.md)                     |     ✅     |
+| [Android - Jetpack Compose](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/platform-support/android-jetpack-compose.md) |     ✅     |
+| [iOS - UIKit](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/platform-support/ios-uikit.md)                             |     ✅     |
+| [iOS - SwiftUI](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/platform-support/ios-swiftui.md)                         |     ✅     |
+| [React Native](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/platform-support/react-native.md)                         |     ✅     |
+| [Flutter](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/platform-support/flutter.md)                                   |     ✅     |
+| [Web Views](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/platform-support/web-views.md)                               |     ✅     |
+| [Web (Desktop Browser)](https://github.com/mobile-dev-inc/maestro-docs/blob/staging/platform-support/web-desktop-browser.md)         |     ✅     |
+| .NET MAUI iOS                                                                                                                        |     ✅     |
+| .NET MAUI Android                                                                                                                    |     ✅     |
+
+## Resources
+
+* Blog Post: [**Introducing: Maestro — Painless Mobile UI Automation**](https://maestro.dev/blog/introducing-maestro-painless-mobile-ui-automation)
+* GitHub Repository: [**https://github.com/mobile-dev-inc/maestro**](https://github.com/mobile-dev-inc/maestro)
+* Public Slack Channel: [**Join the workspace**](https://slack.maestro.dev/)
