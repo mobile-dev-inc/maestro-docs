@@ -45,9 +45,15 @@ Maestro connects to your target via ADB (Android Debug Bridge).
 
 ### Cross-platform configuration
 
-If your Android and iOS applications use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) in your `config.yaml` or [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) to keep your Flows cross-platform..
+If your Android and iOS applications use different identifiers, we recommend using [environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) to keep your [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) cross-platform.
 
-For example, if you are executing a cross-platform test that uses different App IDs, you can prepare your Flows like this:
+You can manage these variables in three primary ways:
+
+1. **Maestro Studio**: Configured via the [Environment Manager](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environments-and-variables).
+2. [**Maestro CLI**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#passing-parameters-via-cli): Passed as arguments during execution.
+3. **Flow Configuration**: Defined directly in the [config matter](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#constants) at the top of an individual Flow file.
+
+To run a single test suite against different platforms where the App ID varies, structure your Flow to use a variable:
 
 ```yaml
 # In your Flow
@@ -56,7 +62,7 @@ appId: ${APP_ID}
 - launchApp
 ```
 
-To run it locally using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), use the subcommand option `-e` or `--env` to inform the `APP_ID` as an environment variable:
+When executing locally with the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), use the `-e` or `--env` flag to inject the correct identifier for that specific run:
 
 ```bash
 maestro test -e APP_ID=com.example.android flow.yaml

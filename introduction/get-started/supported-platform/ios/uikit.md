@@ -13,7 +13,7 @@ Maestro provides native, transparent support for iOS applications built with UIK
 
 * **Zero Instrumentation**: Maestro does not require test libraries, delegates, or ViewController exposure. You test the exact production binaries (.app or .ipa) distributed to your users.
 * **Implementation Agnostic**: Because Maestro validates user-facing features rather than internal code, you can refactor UIKit components to SwiftUI without breaking your tests, provided the visual output remains consistent.
-* **Black-Box Model**: Maestro adopts an [arm's length](../how-maestro-works.md) approach, simulating authentic user interactions with the rendered UI without needing access to internal source code.
+* **Black-Box Model**: Maestro adopts an [arm's length](../../how-maestro-works.md) approach, simulating authentic user interactions with the rendered UI without needing access to internal source code.
 
 ### Element interaction strategies
 
@@ -77,7 +77,7 @@ Instead of manual index or offset calculations, use `scrollUntilVisible`. Maestr
 
 ### Next steps
 
-If you don't know how to create tests with Maestro, access the [QuickStart](../quickstart.md) guide to get up and running in minutes.
+If you don't know how to create tests with Maestro, access the [QuickStart](../../quickstart.md) guide to get up and running in minutes.
 
 To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 

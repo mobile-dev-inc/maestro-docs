@@ -84,7 +84,7 @@ A major advantage of using Maestro with SwiftUI is migration safety. If you rewr
 
 ### Next steps
 
-If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
+If you don't know how to create tests with Maestro, access the [Quickstart](../../quickstart.md) guide to get up and running in minutes.
 
 To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 

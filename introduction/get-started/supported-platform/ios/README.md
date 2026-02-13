@@ -13,7 +13,7 @@ Maestro provides a high-level abstraction for iOS testing by simulating end-user
 Maestro analyzes the rendered frames of the iOS device, ensuring your tests are framework-agnostic. Whether your app is built with Swift, Objective-C, Flutter, React Native, or SwiftUI, Maestro interacts only with the visual output.
 
 * **Physical Input Simulation**: Declarative commands are translated into native touch events. When you use `tapOn`, Maestro triggers the same iOS input pipeline that a physical touch would.
-* [**Arm's Length**](../how-maestro-works.md): Maestro doesn't require access to your source code or bytecode. You test the same `.app` bundle (the Simulator version) that runs on your virtual testing environment.
+* [**Arm's Length**](../../how-maestro-works.md): Maestro doesn't require access to your source code or bytecode. You test the same `.app` bundle (the Simulator version) that runs on your virtual testing environment.
 
 ### System-level control
 
@@ -46,11 +46,17 @@ Maestro connects to your target via native Apple development tools.
 * **Simulators**: Run tests on any iOS Simulator managed by Xcode. Ensure you have the Xcode Command Line Tools installed (`xcode-select --install`).
 * **App Identification**: iOS apps are targeted using the Bundle ID (e.g., `com.example.app`).
 
-### Platform-specific configuration
+### Cross-platform configuration
 
-If your Android and iOS applications use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) in your `config.yaml` or [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) to keep them cross-platform.
+If your Android and iOS applications use different identifiers, we recommend using [environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) to keep your [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) cross-platform.
 
-For example, if you are executing a cross-platform test that uses different App IDs, you can prepare your Flows like this:
+You can manage these variables in three primary ways:
+
+1. **Maestro Studio**: Configured via the [Environment Manager](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environments-and-variables).
+2. [**Maestro CLI**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#passing-parameters-via-cli): Passed as arguments during execution.
+3. **Flow Configuration**: Defined directly in the [config matter](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#constants) at the top of an individual Flow file.
+
+To run a single test suite against different platforms where the App ID varies, structure your Flow to use a variable:
 
 ```yaml
 # In your Flow
@@ -59,7 +65,7 @@ appId: ${APP_ID}
 - launchApp
 ```
 
-To run it locally using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), use the subcommand option `-e` or `--env` to inform the `APP_ID` as an environment variable:
+When executing locally with the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), use the `-e` or `--env` flag to inject the correct identifier for that specific run:
 
 ```bash
 maestro test -e APP_ID=com.example.app.ios flow.yaml
@@ -77,7 +83,7 @@ Scaling iOS tests locally can be difficult due to macOS hardware requirements. [
 
 ### Next steps
 
-Explore the dedicated [UIKit](uikit.md) or [SwiftUI](swiftui.md) documentation, or access the [QuickStart](../quickstart.md) guide to get up and running in minutes if you do not know how to create tests with Maestro.
+Explore the dedicated [UIKit](uikit.md) or [SwiftUI](swiftui.md) documentation, or access the [QuickStart](../../quickstart.md) guide to get up and running in minutes if you do not know how to create tests with Maestro.
 
 If you already know which Maestro solution you are going to use, access the relevant documentation:
 
