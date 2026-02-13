@@ -45,9 +45,9 @@ Maestro connects to your target via ADB (Android Debug Bridge).
 
 ### Cross-platform configuration
 
-Since Android and iOS use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environments-and-variables) in your `config.yaml` or [Flows ](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)to keep them cross-platform.
+If your Android and iOS applications use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) in your `config.yaml` or [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) to keep them cross-platform.
 
-For example, if you are executing a cross-platform testing that will use different App IDs you can prepare your Flows:
+For example, if you are executing a cross-platform test that uses different App IDs, you can prepare your Flows like this:
 
 ```yaml
 # In your Flow
@@ -56,10 +56,12 @@ appId: ${APP_ID}
 - launchApp
 ```
 
-To run it locally using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), just inform the App ID:
+To run it locally using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), use the subcommand option `-e` or `--env` to inform the `APP_ID` as an environment variable:
 
 ```bash
-export APP_ID=com.example.android && maestro test flow.yaml
+maestro test -e APP_ID=com.example.android flow.yaml
+## or
+maestro test --env APP_ID=com.example.android flow.yaml
 ```
 
 ### Maestro Cloud
