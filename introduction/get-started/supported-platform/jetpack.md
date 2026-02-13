@@ -87,3 +87,13 @@ This enables reliable interaction without requiring Compose-specific test APIs o
 | Accessibility usage        | Recommended for reliability         | Optional               |
 
 Maestro eliminates the need for app-side test infrastructure code, lowering barriers for QA practitioners lacking native Android development expertise.
+
+### Next steps
+
+If you don't know how to create tests with Maestro, access the [QuickStart](../quickstart.md) guide to get up and running in minutes.
+
+To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
+
+* [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
+* [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
