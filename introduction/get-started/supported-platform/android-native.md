@@ -18,22 +18,14 @@ Maestro provides a black-box testing approach for native Android applications. B
 
 ### Element interaction strategies
 
-In Android development, there are two ways to build UIs, XML Views (Classic) and Jetpack Compose (Modern). Maestro supports both.
-
-**XML views (standard layouts)**
-
-For traditional View-based layouts, Maestro leverages the `AccessibilityService` to identify and interact with elements via three primary methods:
+In Android development, Maestro leverages the accessibility layer of the device to identify and interact with elements via primary methods:
 
 *   **Text Selection**: Target any view with a `text` property (e.g., `Button`, `TextView`).
-
-    YAML
 
     ```yaml
     - tapOn: "Login"
     ```
 *   **Resource ID**: Access views by their `android:id`. This is ideal for disambiguating identical text elements.
-
-    YAML
 
     ```yaml
     - tapOn:
@@ -41,11 +33,10 @@ For traditional View-based layouts, Maestro leverages the `AccessibilityService`
     ```
 *   **Content Description**: The `android:contentDescription` attribute is surfaced as a text property, making it the "gold standard" for automating icons and image-based buttons.
 
-    YAML
-
     ```yaml
     - tapOn: "Settings Icon"
     ```
+* **Hints**: For input fields that have not yet been filled, the `android:hint` attribute is also exposed to the text selector.
 
 **Jetpack Compose**
 
@@ -54,7 +45,7 @@ Maestro supports Jetpack Compose by traversing the semantic tree. While Compose 
 * **Text Composables**: Target `Text` elements directly by their displayed string content.
 * **Semantics and TestTags**: For elements without text (like FABs or custom graphics), use the `semantics` modifier. By enabling `testTagsAsResourceId`, you can target these using the `id` selector.
 
-You can add a  `testTag` to tell Compose to treat it like a standard Android ID:
+You can add a `testTag` to tell Compose to treat it like a standard Android ID:
 
 ```kotlin
 Button(
@@ -92,11 +83,11 @@ Maestro will automatically swipe down, wait for the next items to load, and stop
 
 ### Known limitations
 
-While Maestro can detect and tap on views containing Unicode characters, direct inputting (typing) of Unicode text via the `inputText` command is currently limited on some Android versions.
+While Maestro can detect and tap on views containing Unicode characters, direct inputting (typing) of Unicode text via the `inputText` command is currently not possible.
 
 ### Next steps
 
-If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
+If you don't know how to create tests with Maestro, access the [QuickStart](../quickstart.md) guide to get up and running in minutes.
 
 To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 
