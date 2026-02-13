@@ -55,7 +55,7 @@ Assumes Maestro CLI is installed and available on your PATH. If it's not on your
 **For other IDEs and more information, consult their documentation:**
 
 * [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp)
-* [Cursor](https://cursor.com/pt-BR/docs/context/mcp#installing-mcp-servers)
+* [Cursor](https://cursor.com/docs/context/mcp#installing-mcp-servers)
 * [VSCode](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
 * [JetBrains IDEs](https://www.jetbrains.com/help/ai-assistant/configure-an-mcp-server.html)
 
