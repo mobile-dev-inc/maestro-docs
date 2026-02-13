@@ -1,7 +1,7 @@
 ---
 description: >-
-  Visual development environment to build tests by clicking on elements,
-  auto-generating YAML, and running commands interactively on your device.
+  Maestro Studio is a visual development environment to build tests  based on
+  YAML files by interacting with your application.
 ---
 
 # Maestro Studio overview
