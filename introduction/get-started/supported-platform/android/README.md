@@ -17,17 +17,19 @@ Maestro operates through the Android display stack, ensuring your tests are fram
 
 ### System-level control
 
-Maestro drives the entire device, not just your app. If you need to change Wi-Fi settings, read a notification, create system contacts, or manage anything else that depends on device state, you can do so in exactly the same way a real user would. Check the [how-maestro-works.md](../../how-maestro-works.md "mention") for more information.&#x20;
+Maestro drives the entire device, not just your app. If you need to change WIFI settings, read a notification, create contacts, or manage anything else that depends on device state or data, you can do so in exactly the same way a real user would, using "real human thumbs."
 
-To toggle the system settings, for example, Maestro can navigate to the system drawer or settings to change the environment mid-test.
+To manage system settings mid-test, you can interact with the OS directly or use built-in commands:
 
 ```yaml
-- runScript: "scripts/toggleWifi.js" # Use JS to trigger system intents
-- openNotifications
+- toggleAirplaneMode
+# or
+- runFlow: toggle_wifi.yaml # Use a subflow for complex system interactions
+# or
 - tapOn: "Airplane mode"
 ```
 
-Android apps often cache data that can lead to flaky tests. The `clearState` command ensures a reproducible environment by clearing app data (the equivalent of `adb shell pm clear`) before the app launches.
+Android apps often cache data that can lead to flaky tests. The `clearState` command ensures a reproducible environment by clearing app data (the equivalent of`adb shell pm clear <package-name>`) before the app launches, giving the app a "just installed" state.
 
 ```yaml
 - launchApp:
@@ -45,7 +47,7 @@ Maestro connects to your target via ADB (Android Debug Bridge).
 
 ### Cross-platform configuration
 
-If your Android and iOS applications use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) in your `config.yaml` or [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) to keep them cross-platform.
+If your Android and iOS applications use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) in your `config.yaml` or [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) to keep your Flows cross-platform..
 
 For example, if you are executing a cross-platform test that uses different App IDs, you can prepare your Flows like this:
 
@@ -68,13 +70,15 @@ maestro test --env APP_ID=com.example.android flow.yaml
 
 When your suite grows, local sequential execution becomes a bottleneck. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) spins up multiple virtual Android devices to run your tests in parallel.
 
-| **Feature**         | **Local Android**  | **Maestro Cloud**                 |
-| ------------------- | ------------------ | --------------------------------- |
-| **Parallelization** | 1 device at a time | 10+ devices simultaneously        |
-| **Speed**           | Slow (Sequential)  | Blazingly Fast (Parallel)         |
-| **Cleanup**         | Manual             | Automatic Infrastructure Teardown |
+| **Feature**         | **Local Android**  | **Maestro Cloud**                  |
+| ------------------- | ------------------ | ---------------------------------- |
+| **Parallelization** | 1 device at a time | Scale to as many devices as needed |
+| **Speed**           | Slow (Sequential)  | Blazingly Fast (Parallel)          |
+| **Cleanup**         | Manual             | Automatic Infrastructure Teardown  |
 
 ### Next steps
+
+Explore the dedicated [Android Native](https://www.google.com/search?q=https://mobile-dev-1.gitbook.io/docs-vnext/get-started/supported-platform/android-native) and [Jetpack Compose](jetpack.md) documentation for platform-specific patterns.
 
 If you already know the Maestro solution you are going to use, access the desired documentation:
 

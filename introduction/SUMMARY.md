@@ -22,7 +22,7 @@
 * [Supported platforms](get-started/supported-platform/README.md)
   * [Android](get-started/supported-platform/android/README.md)
     * [Android Native](get-started/supported-platform/android/android-native.md)
-    * [Jetpack](get-started/supported-platform/android/jetpack.md)
+    * [Jetpack Compose](get-started/supported-platform/android/jetpack.md)
   * [iOS](get-started/supported-platform/ios.md)
   * [SwiftUI](get-started/supported-platform/swiftui.md)
   * [UIKit](get-started/supported-platform/uikit.md)
