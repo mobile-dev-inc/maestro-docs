@@ -8,14 +8,14 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-Maestro treats Flutter as a first-class citizen, supporting both pure and hybrid ([add-to-app](https://docs.flutter.dev/add-to-app)) mobile applications. Unlike internal tools that inject Dart code, Maestro interacts with Flutter through the device's Semantics Tree, ensuring your tests reflect the actual experience of an end-user.
+Maestro treats Flutter as a first-class citizen, supporting both pure and hybrid ([add-to-app](https://docs.flutter.dev/add-to-app)) mobile applications. Unlike internal tools that inject Dart code, Maestro interacts with the device elements that Flutter exposes through its Semantics Tree, ensuring your tests reflect the actual experience of an end-user.
 
 ### Black-box approach
 
 Maestro operates externally, orchestrating input events and validating outcomes based on the actual pixels and accessibility labels rendered on the device.
 
 * **Zero Framework Dependencies**: No `pubspec.yaml` integration is required. Maestro tests the compiled APK or IPA directly.
-* **Stability Across Upgrades**: Your tests remain stable across Flutter version updates because Maestro does not depend on internal widget tree.
+* **Stability Across Upgrades**: Your tests remain stable across Flutter version updates because Maestro does not depend on the internal widget tree.
 * **System-Level Automation**: Since Maestro lives at the OS level, it can handle system-level flows, like push notifications or permission dialogs, that in-app Dart frameworks cannot reach.
 
 ### Element interaction strategies
@@ -26,7 +26,7 @@ To interact with a widget, Maestro needs it to have semantic information. By def
 
 Maestro can target any widget that displays text content. For widgets without implicit text, such as an `Icon`, you can manually provide a `semanticLabel`.
 
-To target Icon, for example, in this Dart code, you need to add a label to an Icon so Maestro can "see" it. For more details, see the official [Flutter Icon documentation](https://api.flutter.dev/flutter/widgets/Icon-class.html). In the following example, `semanticLabel` is beeing used to add a label.
+To target Icon, for example, in this Dart code, you need to add a label to an Icon so Maestro can "see" it. For more details, see the official [Flutter Icon documentation](https://api.flutter.dev/flutter/widgets/Icon-class.html). In the following example, `semanticLabel` is being used to add a label.
 
 ```dart
 FloatingActionButton(
@@ -43,9 +43,9 @@ This way, you can easily identify the element when creating a flow:
 
 #### **The semantics widget**
 
-You can wrap any layout component, such as a `Container` or `SizedBox`, with a [Semantics widget](https://api.flutter.dev/flutter/widgets/Semantics-class.html) to make it interactable.
+You can wrap any layout component, such as a `Container` or `SizedBox`, with a [Semantics widget](https://api.flutter.dev/flutter/widgets/Semantics-class.html) to make it inspectable by Maestro.
 
-When you add semantics to a layout, it allows you to perform actions such as tapping on a visual area that does not inherently contain text. The following example adds a label using semantics, allowing Maestro to interact with the element during testing.
+When you add semantics to a layout, it allows you to perform actions such as tapping on a visual area that does not inherently contain text. The following example adds a label using semantics, allowing Maestro to target the element during testing.
 
 ```dart
 Semantics(
@@ -70,7 +70,7 @@ This feature was [contributed by the Maestro team to Flutter](https://github.com
 
 This pattern creates a permanent link between your Dart code and your YAML [Flow ](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)that never changes, even if you translate your app into 20 languages.
 
-To use the pattern, the developer need to assign a unique `identifier` that is invisible to the user but exposed to Maestro.
+To use the pattern, the developer needs to assign a unique `identifier` that is invisible to the user but exposed to Maestro.
 
 ```dart
 Semantics(
@@ -79,7 +79,7 @@ Semantics(
 )
 ```
 
-This way, the the test can target that identifier using the `id` [selector](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors).
+This way, the test can target that identifier using the `id` [selector](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors).
 
 ```yaml
 - tapOn:
