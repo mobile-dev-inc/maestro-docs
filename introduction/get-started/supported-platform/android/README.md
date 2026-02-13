@@ -78,7 +78,7 @@ When your suite grows, local sequential execution becomes a bottleneck. [Maestro
 
 ### Next steps
 
-Explore the dedicated [Android Native](https://www.google.com/search?q=https://mobile-dev-1.gitbook.io/docs-vnext/get-started/supported-platform/android-native) and [Jetpack Compose](jetpack.md) documentation for platform-specific patterns.
+Explore the dedicated [Android Native](android-native.md) and [Jetpack Compose](jetpack.md) documentation for platform-specific patterns.
 
 If you already know the Maestro solution you are going to use, access the desired documentation:
 
