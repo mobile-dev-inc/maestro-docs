@@ -30,7 +30,7 @@ After creating your Flows, you can initiate a [cloud](https://app.gitbook.com/s/
 Clicking **Run on Cloud** opens a configuration modal. You must complete the following required settings before launching the run:
 
 * **Device**: Select the specific device model and API level for your test (e.g., Pixel 6 - API 34).
-* **App Selection**: Select your application. If this is your first time testing the app, click the app selector and choose **Upload App File** to pick your APK or `.app` bundle.
+* **App Selection**: Select your application. If this is your first time testing the app, click the app selector and choose **Upload App File** to pick your `.apk` or `.app` bundle.
 
 <figure><img src=".gitbook/assets/configure-run-on-cloud.png" alt=""><figcaption></figcaption></figure>
 
