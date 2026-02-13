@@ -132,4 +132,4 @@ Explore the complementary content to improve your GitHub Action to run Maestro t
 * [Platform guides](platform-guides.md): Explore the guides to use the official GitHub Action for Android, iOS, and Flutter.
 * [Advanced configurations](advanced-configuration.md): Learn how to configure async mode, environment variables, and custom workspaces.
 * [Outputs and triggers](outputs-and-triggers.md): Learn how to use action outputs and configure CI triggers.
-* Explore all the [subcommand options for `claud`.](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud)
+* Explore all the [subcommand options for cloud.](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options#cloud)
