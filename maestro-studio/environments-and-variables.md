@@ -42,7 +42,7 @@ To add a new environment, follow these steps:
 
 Imagine you have created a set of generic Flows to be used across all available operating systems. To ensure the correct tests run for a specific platform, you can create a dedicated Android Environment:
 
-* **Filter with Tags**: Add `Android` to **includedTags** and add `iOS` and `Web` to **excludedTags**. This ensures that only Flows applicable to Android are executed.
+* **Filter with Tags**: Add `Android` to **includedTags**. This ensures that only Flows applicable to Android are executed. Alternatively, add `iOS` and `Web` to **excludedTags.**
 * **Define Variables**: Specify an `appId` variable containing the unique package name for your Android app (e.g., `com.example.android`).
 {% endhint %}
 
