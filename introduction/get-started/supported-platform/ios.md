@@ -13,13 +13,13 @@ Maestro provides a high-level abstraction for iOS testing by simulating end-user
 Maestro analyzes the rendered frames of the iOS device, ensuring your tests are framework-agnostic. Whether your app is built with Swift, Objective-C, Flutter, React Native, or SwiftUI, Maestro interacts only with the visual output.
 
 * **Physical Input Simulation**: Declarative commands are translated into native touch events. When you use `tapOn`, Maestro triggers the same iOS input pipeline that a physical touch would.
-* [**Arm's Length**](../how-maestro-works.md): Maestro doesn't require access to your source code or bytecode. You test the same `.app` or `.ipa` bundle that your users install.
+* [**Arm's Length**](../how-maestro-works.md): Maestro doesn't require access to your source code or bytecode. You test the same `.app` bundle (the Simulator version) that runs on your virtual testing environment.
 
 ### System-level control
 
 Maestro’s architecture allows it to pilot the entire device hardware, not just your application process. This enables testing for complex real-world scenarios.
 
-iOS is known for its strict permission dialogs (Location, Camera, FaceID). However, Maestro can interact with these system prompts directly:
+iOS is known for its strict permission dialogs (Location, Camera). However, Maestro can interact with these system prompts directly:
 
 ```yaml
 - launchApp:
@@ -48,9 +48,9 @@ Maestro connects to your target via native Apple development tools.
 
 ### Platform-specific configuration
 
-Since Android and iOS use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environments-and-variables) in your `config.yaml` or [Flows ](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)to keep them cross-platform.
+If your Android and iOS applications use different identifiers, we recommend using [Environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) in your `config.yaml` or [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) to keep them cross-platform.
 
-For example, if you are executing a cross-platform testing that will use different App IDs you can prepare your Flows:
+For example, if you are executing a cross-platform test that uses different App IDs, you can prepare your Flows like this:
 
 ```yaml
 # In your Flow
@@ -59,15 +59,17 @@ appId: ${APP_ID}
 - launchApp
 ```
 
-To run it locally using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), just inform the App ID:
+To run it locally using the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), use the subcommand option `-e` or `--env` to inform the `APP_ID` as an environment variable:
 
 ```bash
-export APP_ID=com.example.app.ios && maestro test flow.yaml
+maestro test -e APP_ID=com.example.app.ios flow.yaml
+## or
+maestro test --env APP_ID=com.example.app.ios flow.yaml
 ```
 
 ### Parallelization for iOS
 
-Scaling iOS tests locally can be difficult due to macOS hardware requirements.[ Maestro Cloud ](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
+Scaling iOS tests locally can be difficult due to macOS hardware requirements. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
 
 * **Speed**: Reduce test time drastically.
 * **Reliability**: Eliminate "flaky" results caused by local machine resource contention.
@@ -75,7 +77,7 @@ Scaling iOS tests locally can be difficult due to macOS hardware requirements.[ 
 
 ### Next steps
 
-Explore the dedicated [UIKit](uikit.md) or [SwiftUI](swiftui.md) documentation, or access the [Quickstart](../quickstart.md) guide to get up and running in minutes if you do not know how to create tests with Maestro.
+Explore the dedicated [UIKit](uikit.md) or [SwiftUI](swiftui.md) documentation, or access the [QuickStart](../quickstart.md) guide to get up and running in minutes if you do not know how to create tests with Maestro.
 
 If you already know which Maestro solution you are going to use, access the relevant documentation:
 

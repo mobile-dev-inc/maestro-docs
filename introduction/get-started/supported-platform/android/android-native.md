@@ -6,7 +6,7 @@ description: >-
 
 # Android Native
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Maestro provides a black-box testing approach for native Android applications. By interacting with the app through the Android Accessibility layer rather than internal code instrumentation, you can test production-ready binaries without modifying your source code.
 
@@ -87,7 +87,7 @@ While Maestro can detect and tap on views containing Unicode characters, direct 
 
 ### Next steps
 
-If you don't know how to create tests with Maestro, access the [QuickStart](../quickstart.md) guide to get up and running in minutes.
+If you don't know how to create tests with Maestro, access the [QuickStart](../../quickstart.md) guide to get up and running in minutes.
 
 To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 

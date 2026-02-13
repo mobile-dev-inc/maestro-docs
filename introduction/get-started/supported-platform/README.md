@@ -46,9 +46,9 @@ Maestro supports device-level automation beyond app boundaries:
 
 Explore the details on how to use Maestro in each one of the supported operating systems and frameworks:
 
-* [android.md](android.md "mention")
-* [android-native.md](android-native.md "mention")
-* [jetpack.md](jetpack.md "mention")
+* [android](android/ "mention")
+* [android-native.md](android/android-native.md "mention")
+* [jetpack.md](android/jetpack.md "mention")
 * [ios.md](ios.md "mention")
 * [swiftui.md](swiftui.md "mention")
 * [uikit.md](uikit.md "mention")

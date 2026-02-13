@@ -4,7 +4,7 @@ description: Configure Maestro for Android app testing with emulators or physica
 
 # Android
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Maestro provides a high-level abstraction for Android testing by simulating end-user interactions at the presentation layer. Unlike other frameworks, Maestro doesn't live inside your app, it pilots the device from the outside.
 
@@ -17,7 +17,7 @@ Maestro operates through the Android display stack, ensuring your tests are fram
 
 ### System-level control
 
-Maestro drives the entire device, not just your app. If you need to change Wi-Fi settings, read a notification, create system contacts, or manage anything else that depends on device state, you can do so in exactly the same way a real user would. Check the [how-maestro-works.md](../how-maestro-works.md "mention") for more information.&#x20;
+Maestro drives the entire device, not just your app. If you need to change Wi-Fi settings, read a notification, create system contacts, or manage anything else that depends on device state, you can do so in exactly the same way a real user would. Check the [how-maestro-works.md](../../how-maestro-works.md "mention") for more information.&#x20;
 
 To toggle the system settings, for example, Maestro can navigate to the system drawer or settings to change the environment mid-test.
 
@@ -80,4 +80,4 @@ If you already know the Maestro solution you are going to use, access the desire
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
 * [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
 
-If you are new to the platform, follow the [QuickStart](../quickstart.md) guide to get up and running in minutes.
+If you are new to the platform, follow the [QuickStart](../../quickstart.md) guide to get up and running in minutes.
