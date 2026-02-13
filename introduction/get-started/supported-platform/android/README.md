@@ -23,10 +23,8 @@ To manage system settings mid-test, you can interact with the OS directly or use
 
 ```yaml
 - toggleAirplaneMode
-# or
-- runFlow: toggle_wifi.yaml # Use a subflow for complex system interactions
-# or
 - tapOn: "Airplane mode"
+- runFlow: toggle_wifi.yaml # Use a subflow for complex system interactions
 ```
 
 Android apps often cache data that can lead to flaky tests. The `clearState` command ensures a reproducible environment by clearing app data (the equivalent of`adb shell pm clear <package-name>`) before the app launches, giving the app a "just installed" state.
@@ -42,7 +40,7 @@ Android apps often cache data that can lead to flaky tests. The `clearState` com
 Maestro connects to your target via ADB (Android Debug Bridge).
 
 * **Emulators & Physical Devices**: Maestro automatically detects and connects to running emulators or physical devices. For physical hardware, ensure "USB Debugging" is enabled in Developer Options.
-* **App Identification**: Maestro targets your application using the **Package Name** found in your `AndroidManifest.xml` (the `appId`).
+* **App Identification**: Maestro targets your application using the **Package** found in your `AndroidManifest.xml` (the `appId`).
 * **Installation**: Maestro assumes the application is already installed on the target device/emulator before the test begins.
 
 ### Cross-platform configuration
