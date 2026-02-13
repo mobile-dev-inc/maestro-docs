@@ -17,7 +17,7 @@ Maestro provides native, transparent support for iOS applications built with UIK
 
 ### Element interaction strategies
 
-Maestro interacts with UIKit components by simulating authentic user interactions through the accessibility layer and visual recognition.
+Maestro interacts with UIKit components by simulating authentic user interactions through the accessibility layer.
 
 #### **Interacting with views by text**
 
@@ -55,10 +55,6 @@ The corresponding tap command in your Flow would use the `id`:
     id: "login_button_id"
 ```
 
-{% hint style="info" %}
-If an element has both text content and an `accessibilityLabel`, Maestro will prioritize the `accessibilityLabel` as the value for the `text` selector.
-{% endhint %}
-
 ### Handling lists and complex components
 
 Maestro abstracts away the complexity of coordinate calculations and cell enumeration in `UITableView` and `UICollectionView`.
@@ -77,11 +73,11 @@ Instead of manual index or offset calculations, use `scrollUntilVisible`. Maestr
 ### Known limitations
 
 * **Simulators**: Full support for local execution on iOS Simulators.
-* **Unicode Input**: Similar to Android, direct inputting of Unicode text via `inputText` can be limited depending on the environment, though views containing Unicode are detectable.
+* **Physical Devices**: Executing tests on physical iOS devices is not supported yet.
 
 ### Next steps
 
-If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
+If you don't know how to create tests with Maestro, access the [QuickStart](../quickstart.md) guide to get up and running in minutes.
 
 To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 
