@@ -2,6 +2,7 @@
 description: >-
   Download Maestro Studio for macOS, Windows, or Linux. Requires Java 17+ and
   JAVA_HOME configured.
+hidden: true
 ---
 
 # How to install Maestro Studio

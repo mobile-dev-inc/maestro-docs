@@ -2,6 +2,7 @@
 description: >-
   Create YAML test flows in Maestro Studio. Select a device, add commands via
   Insert Command, Inspect Screen, or write YAML directly, then Run Locally.
+hidden: true
 ---
 
 # How to create tests with Maestro Studio
