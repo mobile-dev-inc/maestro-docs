@@ -1,4 +1,10 @@
-# Build and run tests with Maestro Studio
+---
+description: >-
+  Build and run mobile tests visually with Maestro Studio. Install the IDE,
+  create Flows via screen inspection, and automate tests without writing code.
+---
+
+# Run tests with Maestro Studio
 
 Maestro Studio is a visual IDE that simplifies mobile automation. This guide covers how to install the application and use its interactive tools to build a contact-creation Flow without writing code from scratch.
 
