@@ -24,6 +24,11 @@ To ensure the best performance and privacy, it is recommended to use Local Rende
 maestro record --local YourFlow.yaml
 ```
 
+After rendering, the video will be available in the same directory as the [reports and artifacts](test-reports-and-artifacts.md):&#x20;
+
+* **macOS and Linux**: `~/.maestro/tests`
+* **Windows**: `%userprofile%\.maestro\tests`
+
 {% embed url="https://vimeo.com/775621555/736930f7f9?fe=cm&fl=pl&turnstile=0.v5Dvsunbspg6mWzDMUSHFs0dMs0yAkm68v2PnKbKZbbCDrOqeOLFVw7a0MDCeXvmnW8VegEoLLgaCXp384i5Zsdw_-C9fdftxSav1doTnmY7rd7yUrocp8Nt5uXZnhtq2HrH4XYHOs41wjwywt-DI8xquooSNTamIjkZ3Bhvizb-F5riR4BsvLxhJGgdDIdAu4QlcFA95sQwEExtLRvrPFMeMzUBsoeGBecion0aVfg_3XmCmkm3fypkyOVMJElpjXb_8tK7WxWXQKmqDFOKf4Gm-Aowm12ohdCbZsc6LFN0XrwaPg4zZv8eYuqcrekH0PfcVcPnVM4uSYXy3Rpo_J1dDMTQyxadLRBX_rc8olaBC-MyI4hBvyDWbfm1N6VapDlTh0p5ahB5P_MGNoNdDyvckhJn5o_1C3TvzatOpRosZEav3RI5CN0CdvxoUm5Q4ci46wrkaO-3mDeef2Mu8uqwBzhyXIg_1n_WyPKRd56jO0FW_B9P8kwo4rdEVEBrivbqzEa46ypxiZwps3oVgkgSUDB6T1QlgL9evbNWo40QW26ut8vSseur3VBCMPC9ZjqwXGC5PevVGYZvfoZuirg-m3yDLBK1Rc74Z4RQJMIreAhF6G5xRJFtW56ntaD-PLcP-pxoy_aESMTDiolfcYD9CNy4LG5BRXSGPhSx7vlsWkNwbmz_pgfm40WSEAm900ypHSL5N4lXlJubejTV_yyEk5GpItHBvXAU9D3ZncstuVj8jsV8pMzYONiMbMHwCJ9lnES1yeql2Rp1Tf02l9owTIFPZ1UdgQ2AnH-XAjZy_vi0oT8gyKZ53oeLqRoQNqkSORIBZouPt2N5bnZ0oWW_AwEkU021KAvKFWdBKjDWduhrdwfwqAzwvl54i0hBTtUPRQaNXZkyi3_DBV6afpvz1d_3-19Gqp22NHlPH_voGzCgr2NDjibcwbRBWds6.2fM6XVw1thFNfTonAE7BUg.f69c9372bcce305de3604bbfb8f35e381ea503296a0c3decd7c88e7db84e967b" %}
 
 It's important to notice that recordings are limited to a maximum of two minutes. If your Flow runs longer, the recording will stop automatically.
