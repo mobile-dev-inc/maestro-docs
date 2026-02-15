@@ -1,7 +1,7 @@
 ---
 description: >-
-  Target specific devices or emulators using the --device flag. Supports
-  sharding for parallel test execution.
+  Learn how to launch Android and iOS virtual devices using the Maestro CLI,
+  identify connected hardware, and target specific devices for local testing.
 ---
 
 # Specify and start devices
