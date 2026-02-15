@@ -92,7 +92,10 @@ onFlowStart:
 
 The `maestro` object is a built-in utility that provides information about the current test environment and captured UI data.
 
-<table data-header-hidden><thead><tr><th width="185.6666259765625"></th><th></th></tr></thead><tbody><tr><td><strong>Property</strong></td><td><strong>Description</strong></td></tr><tr><td><code>maestro.copiedText</code></td><td>Contains the text retrieved by the most recent <a href="https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/copytextfrom"><code>copyTextFrom</code></a> command.</td></tr><tr><td><code>maestro.platform</code></td><td><p>Identifies the OS:</p><ul><li><code>ios</code> </li><li><code>android</code> </li><li><code>web</code></li></ul><p>This is useful for <a href="../flow-control-and-logic/conditions.md">conditional</a> cross-platform logic.</p></td></tr></tbody></table>
+| Property             | Description                                                                                                                                                                                                           |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `maestro.copiedText` | Contains the text retrieved by the most recent  [`copyTextFrom`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/copytextfrom) command.                                                             |
+| `maestro.platform`   | <p>Identifies the OS:<br><br>- <code>ios</code><br>- <code>android</code><br>- <code>web</code><br><br>This is useful for <a href="../flow-control-and-logic/conditions.md">conditional</a> cross-platform logic.</p> |
 
 #### Capturing UI Text
 

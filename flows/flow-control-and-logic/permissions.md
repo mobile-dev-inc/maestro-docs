@@ -88,7 +88,11 @@ Note that `all: allow` also covers custom permissions, so you don't need to spec
 
 You can set permissions to one of the following states:
 
-<table><thead><tr><th width="122.3333740234375">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>allow</code></td><td><p>Grants the permission. </p><p></p><p>On iOS, this also automatically dismisses the system prompt.</p></td></tr><tr><td><code>deny</code></td><td><p>Denies the permission.<br></p><p>Android will request permission during the Flow execution if the app requires access to a specific feature.</p></td></tr><tr><td><code>unset</code></td><td>Resets the permission state, causing the system to prompt permission requests when running the Flow.</td></tr></tbody></table>
+| Value   | Description                                                                                                                        |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `allow` | Grants the permission. On iOS, this also automatically dismisses the system prompt.                                                |
+| `deny`  | Denies the permission. Android will request permission during the Flow execution if the app requires access to a specific feature. |
+| `unset` | Resets the permission state, causing the system to prompt permission requests when running the Flow.                               |
 
 {% hint style="info" %}
 #### **Push notifications on iOS**
@@ -102,7 +106,12 @@ On Android, the permission is granted silently without a prompt.
 
 iOS supports additional granular values for certain permissions.
 
-<table><thead><tr><th width="122.3333740234375">Permission</th><th width="98">Value</th><th>Description</th></tr></thead><tbody><tr><td><code>location</code></td><td><code>always</code></td><td>Grants <strong>Always Allow</strong> location access.</td></tr><tr><td></td><td><code>inuse</code></td><td>Grants <strong>While Using the App</strong> location access.</td></tr><tr><td></td><td><code>never</code></td><td>Same as <code>deny</code>.</td></tr><tr><td><code>photos</code></td><td><code>limited</code></td><td>Grants <strong>Limited Access</strong> to the photo library.</td></tr></tbody></table>
+| Permission | Value     | Description                                     |
+| ---------- | --------- | ----------------------------------------------- |
+| `location` | `always`  | Grants **Always Allow** location access.        |
+|            | `inuse`   | Grants **While Using the App** location access. |
+|            | `never`   | Same as `deny`.                                 |
+| `photos`   | `limited` | Grants **Limited Access** to the photo library. |
 
 ### Usage examples
 
