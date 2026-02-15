@@ -16,4 +16,4 @@
 
 * [Automate Android Contacts Flow](real-world-examples/automate-android-contacts-flow.md)
 * [Automate Facebook Sign-Up (Android)](real-world-examples/automate-facebook-sign-up-android.md)
-* [Wikipedia on Android: Advanced Automation](real-world-examples/wikipedia-on-android-advanced-automation.md)
+* [Advanced: Wikipedia on Android](real-world-examples/advanced-wikipedia-on-android.md)

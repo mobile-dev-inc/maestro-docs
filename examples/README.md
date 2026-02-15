@@ -25,7 +25,7 @@ See how Maestro handles real-world complexity in popular applications.
 
 * [automate-android-contacts-flow.md](real-world-examples/automate-android-contacts-flow.md "mention"): A perfect starting point to see how Maestro interacts with native Android system apps using text and ID selectors.
 * [automate-facebook-sign-up-android.md](real-world-examples/automate-facebook-sign-up-android.md "mention"): Covers complex form filling, handling multiple screens, and navigating onboarding.
-* [wikipedia-on-android-advanced-automation.md](real-world-examples/wikipedia-on-android-advanced-automation.md "mention"): Demonstrates deep navigation, search interactions, and content verification.
+* [advanced-wikipedia-on-android.md](real-world-examples/advanced-wikipedia-on-android.md "mention"): Demonstrates deep navigation, search interactions, and content verification.
 
 
 
