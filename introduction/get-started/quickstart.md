@@ -66,14 +66,16 @@ Once your device is running and Maestro Studio is open, you can create your firs
 {% tabs %}
 {% tab title="Android" %}
 * **Name**: Name for your YAML file.
-* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.android.chrome** from the dropdown menu.
+* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.android.contacts** from the dropdown menu.
 
-<figure><img src="../.gitbook/assets/quickstart-create-test.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="iOS" %}
 * **Name**: Name for your YAML file.
-* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.apple.mobilesafari** from the dropdown menu.
+* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.apple.MobileAddressBook** from the dropdown menu.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -88,7 +90,7 @@ You can also add tags to keep your tests organized.
 {% tabs %}
 {% tab title="Android" %}
 ```yaml
-appId: com.android.chrome
+appId: com.android.contacts
 ---
 - launchApp:
     clearState: true
@@ -97,7 +99,7 @@ appId: com.android.chrome
 
 {% tab title="iOS" %}
 ```yaml
-appId: com.apple.mobilesafari
+appId: com.apple.MobileAddressBook 
 ---
 - launchApp:
     clearState: true
@@ -111,24 +113,31 @@ appId: com.apple.mobilesafari
 
 With your first YAML file created, let's add a few commands to perform a search.
 
-1. In the Maestro Studio editor, copy and paste the example below for your platform.
+In the Maestro Studio editor, copy and paste the example below for your platform.
 
 {% tabs %}
 {% tab title="Android (Chrome)" %}
 ```yaml
-appId: com.android.chrome         # Target the Chrome
+appId: com.google.android.contacts
 ---
-- launchApp:                       # Launch the app
-    clearState: true               # Start with a clean app state
-- tapOn: Use without an account    # Skip account sign-in
-- tapOn: Got it                    # Dismiss onboarding prompt
-- tapOn: Search or type URL        # Focus the address bar
-- inputText: "Maestro mobile test" # Enter search text
-- pressKey: Enter                  # Submit the search
-- takeScreenshot: Chrome           # Capture a screenshot
+- launchApp:
+    clearState: true
+- tapOn: Allow
+- tapOn: Create contact
+- tapOn: First name
+- inputText: John
+- tapOn: Last name
+- inputText: Doe
+- tapOn: Company
+- inputText: Maestro
+- tapOn: "+1"
+- inputText: 111-111-1111
+- tapOn: Save
+- back
+- takeScreenshot: All Contacts
 ```
 
-The test launches the Chrome Android app in a clean state, walks through the initial onboarding prompts, interacts with the address bar to perform a search, and captures a screenshot of the results.
+The test launches the Contacts Android app in a clean state, creates a new contact by filling in first name, last name, and company, adds a phone number, saves the contact, navigates back to the list, and captures a screenshot of all contacts.
 
 {% hint style="info" %}
 To learn more about the commands you can use to create tests, access the [Commands overview](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
@@ -138,24 +147,44 @@ To learn about how you can structure tests, also referred to in Maestro as Flows
 
 After pasting, click **Run Locally**. Watch your virtual device execute the steps automatically. Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
 
-<figure><img src="../.gitbook/assets/first-test-quickstart-android.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2026-02-15_18-41-27.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="iOS (Safari)" %}
 ```yaml
-appId: com.apple.mobilesafari
+appId: com.apple.MobileAddressBook 
 ---
 - launchApp:
     clearState: true
-- tapOn: "Search or enter website name"
-- inputText: "Maestro mobile test"
-- pressKey: Enter
-- takeScreenshot: Safari
+- tapOn: All iPhone
+- tapOn: Add
+- tapOn: First name
+- inputText: John
+- tapOn: Last name
+- inputText: Doe
+- tapOn: Company
+- inputText: Maestro
+- tapOn: John
+- tapOn: add phone
+- inputText: +1 111-111-1111
+- tapOn: Done
+- tapOn: Back
+- takeScreenshot: All Contacts
 ```
+
+The test launches the Address Book app in a clean state, creates a new contact by filling in first name, last name, and company, adds a phone number, saves the contact, navigates back to the list, and captures a screenshot of all contacts.
+
+{% hint style="info" %}
+To learn more about the commands you can use to create tests, access the [Commands overview](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
+
+To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+{% endhint %}
+
+After pasting, click **Run Locally**. Watch your virtual device execute the steps automatically. Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
+
+<figure><img src="../.gitbook/assets/2026-02-15_18-26-33.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
-
-The test launches the Safari iOS app in a clean state, interacts with the address bar to perform a search, and captures a screenshot of the results.
 {% endstep %}
 {% endstepper %}
 
@@ -181,6 +210,4 @@ Now that you’ve seen the power of "arm's length" automation, explore these res
 
 * Visit the [Maestro Studio overview](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/ "mention") to learn how to use visual element inspection and the Live REPL to build tests without writing code from scratch.
 * If you prefer a programmatic approach or need to integrate tests into your CI/CD pipeline, head to the [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention").
-* To learn the best practices for logic, modularity, and nesting, check out the  [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
-
-You can also learn how to [organize your repository](https://www.google.com/search?q=https://docs.maestro.dev/get-started/repository-config) for scalable testing or use the [Maestro MCP Server](https://www.google.com/search?q=https://docs.maestro.dev/get-started/maestro-mcp) to enable AI tools like Claude or Cursor to help build your tests.
+* To learn the best practices for logic, modularity, and nesting, or learn how to add JavaScript scripts to your tests check out the  [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").

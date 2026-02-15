@@ -6,7 +6,7 @@ description: >-
 
 # Android Native
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Maestro provides a black-box testing approach for native Android applications. By interacting with the app through the Android Accessibility layer rather than internal code instrumentation, you can test production-ready binaries without modifying your source code.
 
