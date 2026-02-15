@@ -10,7 +10,9 @@ The `travel` command mocks the motion of a user along a specified path at a give
 
 When using the `travel` command, you need to inform the following parameter:
 
-<table><thead><tr><th width="116">Parameter</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>timeout</code></td><td><code>integer</code></td><td>The maximum time to wait, in milliseconds. Defaults to 15000 (15 seconds). If the animation is still running when the timeout is reached, the command succeeds and execution continues. If the animation finishes before the timeout, execution continues immediately.</td></tr></tbody></table>
+| Parameter | Type      | Description                                                                                                                                                                                                                                                            |
+| --------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `timeout` | `integer` | The maximum time to wait, in milliseconds. Defaults to 15000 (15 seconds). If the animation is still running when the timeout is reached, the command succeeds and execution continues. If the animation finishes before the timeout, execution continues immediately. |
 
 ### Usage examples
 

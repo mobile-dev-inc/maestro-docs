@@ -10,7 +10,9 @@ The `waitForAnimationToEnd` command pauses command execution until on-screen ani
 
 This command accepts the following optional parameter:
 
-<table><thead><tr><th width="122">Parameter</th><th width="94">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>timeout</code></td><td><code>integer</code></td><td>The maximum time to wait, in milliseconds. Defaults to 15000 (15 seconds). If the animation is still running when the timeout is reached, the command succeeds and execution continues. If the animation finishes before the timeout, execution continues immediately.</td></tr></tbody></table>
+| Parameter | Type      | Description                                                                                                                                                                                                                                                            |
+| --------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `timeout` | `integer` | The maximum time to wait, in milliseconds. Defaults to 15000 (15 seconds). If the animation is still running when the timeout is reached, the command succeeds and execution continues. If the animation finishes before the timeout, execution continues immediately. |
 
 ### Usage examples
 

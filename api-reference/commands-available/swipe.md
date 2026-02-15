@@ -10,7 +10,14 @@ The `swipe` command simulates a swipe gesture on the device screen. You can defi
 
 Depending on the swipe behavior you expected, you need to choose between the following available parameters.
 
-<table><thead><tr><th width="214">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>start</code></td><td>The starting coordinate for the swipe. Specify as <code>x, y</code> pixel coordinates or as <code>x%, y%</code> percentages relative to the screen dimensions.</td></tr><tr><td><code>end</code></td><td>The ending coordinate for the swipe. Specify as <code>x, y</code> pixel coordinates or as <code>x%, y%</code> percentages relative to the screen dimensions.</td></tr><tr><td><code>direction</code></td><td>The direction of the swipe. Accepts <code>LEFT</code>, <code>RIGHT</code>, <code>UP</code>, or <code>DOWN</code>. This parameter cannot be used with <code>start</code> and <code>end</code>.</td></tr><tr><td><code>from</code></td><td>An element selector to use as the starting point for the swipe. The swipe begins from the center of the specified element. Use the selectors available to define the element. Cannot be used with <code>start</code> and <code>end</code>.</td></tr><tr><td><code>duration</code></td><td>The duration of the swipe in milliseconds. A longer duration results in a slower swipe. Default: <code>400</code> milliseconds.</td></tr><tr><td><code>waitToSettleTimeoutMs</code></td><td>The maximum time in milliseconds to wait for the screen to settle before executing the next command. This is a best-effort timeout and does not interrupt core operations. Useful for screens with continuous animations like countdown timers.</td></tr></tbody></table>
+| Parameter               | Description                                                                                                                                                                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `start`                 | The starting coordinate for the swipe. Specify as `x, y` pixel coordinates or as `x%, y%` percentages relative to the screen dimensions.                                                                                                        |
+| `end`                   | The ending coordinate for the swipe. Specify as `x, y` pixel coordinates or as `x%, y%` percentages relative to the screen dimensions.                                                                                                          |
+| `direction`             | The direction of the swipe. Accepts `LEFT`, `RIGHT`, `UP`, or `DOWN`. This parameter cannot be used with `start` and `end`.                                                                                                                     |
+| `from`                  | An element selector to use as the starting point for the swipe. The swipe begins from the center of the specified element. Use the selectors available to define the element. Cannot be used with `start` and `end`.                            |
+| `duration`              | The duration of the swipe in milliseconds. A longer duration results in a slower swipe. Default: `400` milliseconds.                                                                                                                            |
+| `waitToSettleTimeoutMs` | The maximum time in milliseconds to wait for the screen to settle before executing the next command. This is a best-effort timeout and does not interrupt core operations. Useful for screens with continuous animations like countdown timers. |
 
 ### Usage examples
 
@@ -27,7 +34,12 @@ This example performs a swipe from the right to the left of the screen.
 
 The `direction` parameter uses the following relative start and end coordinates:
 
-<table><thead><tr><th width="110">Direction</th><th width="268">Start (width%, height%)</th><th>End (width%, height%)</th></tr></thead><tbody><tr><td><code>LEFT</code></td><td>(90% of width, 50% of height)</td><td>(10% of width, 50% of height)</td></tr><tr><td><code>RIGHT</code></td><td>(10% of width, 50% of height)</td><td>(90% of width, 50% of height)</td></tr><tr><td><code>DOWN</code></td><td>(50% of width, 20% of height)</td><td>(50% of width, 90% of height)</td></tr><tr><td><code>UP</code></td><td>(50% of width, 50% of height)</td><td>(50% of width, 10% of height)</td></tr></tbody></table>
+| Direction | Start (width%, height%)       | End (width%, height%)         |
+| --------- | ----------------------------- | ----------------------------- |
+| `LEFT`    | (90% of width, 50% of height) | (10% of width, 50% of height) |
+| `RIGHT`   | (10% of width, 50% of height) | (90% of width, 50% of height) |
+| `DOWN`    | (50% of width, 20% of height) | (50% of width, 90% of height) |
+| `UP`      | (50% of width, 50% of height) | (50% of width, 10% of height) |
 
 #### **Swipe from an element**
 

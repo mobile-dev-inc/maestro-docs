@@ -20,7 +20,14 @@ The `assertVisible` command uses a selector to identify the target UI element. Y
 
 The following table lists common selector properties. For a complete list of all available selectors, see the [Selectors](https://docs.maestro.dev/api-reference/selectors) documentation.
 
-<table><thead><tr><th width="120">Selector</th><th>Description</th></tr></thead><tbody><tr><td><code>text</code></td><td>The text content of the element.</td></tr><tr><td><code>id</code></td><td>The ID of the element.</td></tr><tr><td><code>enabled</code></td><td>Specifies if the element is enabled (<code>true</code>) or disabled (<code>false</code>).</td></tr><tr><td><code>checked</code></td><td>Specifies if the element is checked (<code>true</code>) or unchecked (<code>false</code>).</td></tr><tr><td><code>focused</code></td><td>Specifies if the element has keyboard focus (<code>true</code>) or not (<code>false</code>).</td></tr><tr><td><code>selected</code></td><td>Specifies if the element is selected (<code>true</code>) or not (<code>false</code>).</td></tr></tbody></table>
+| Selector   | Description                                                            |
+| ---------- | ---------------------------------------------------------------------- |
+| `text`     | The text content of the element.                                       |
+| `id`       | The ID of the element.                                                 |
+| `enabled`  | Specifies if the element is enabled (`true`) or disabled (`false`).    |
+| `checked`  | Specifies if the element is checked (`true`) or unchecked (`false`).   |
+| `focused`  | Specifies if the element has keyboard focus (`true`) or not (`false`). |
+| `selected` | Specifies if the element is selected (`true`) or not (`false`).        |
 
 ### Usage examples
 

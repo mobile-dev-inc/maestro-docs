@@ -17,7 +17,11 @@ The `startRecording` command begins a screen recording of the test Flow. Use thi
 
 To use the `startRecording`, you can provide only the file name to be saved, or you can use all the following parameters:
 
-<table><thead><tr><th width="122">Parameter</th><th width="89">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>path</code></td><td><code>string</code></td><td>Specifies the file path for the recording, relative to the Flow file's directory.</td></tr><tr><td><code>label</code></td><td><code>string</code></td><td><strong>(Optional)</strong> A descriptive label for the command step that appears in the test report.</td></tr><tr><td><code>optional</code></td><td><code>boolean</code></td><td><strong>(Optional)</strong> If <code>true</code>, the command does not fail the test if it cannot be executed. Defaults to <code>false</code>.</td></tr></tbody></table>
+| Parameter  | Type    | Description                                                                                                 |
+| ---------- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| `path`     | string  | Specifies the file path for the recording, relative to the Flow file's directory.                           |
+| `label`    | string  | **(Optional)** A descriptive label for the command step that appears in the test report.                    |
+| `optional` | boolean | **(Optional)** If `true`, the command does not fail the test if it cannot be executed. Defaults to `false`. |
 
 ### Usage examples
 
