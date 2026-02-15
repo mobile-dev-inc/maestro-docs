@@ -89,6 +89,18 @@ Once triggered, the Maestro Cloud Pipe automates the following lifecycle:
 * Runs your tests on dedicated cloud infrastructure.
 * By default, the pipe waits for all Flows to complete. You can configure this option.
 * Returns an exit code of `0` on success or `1` if failures are detected, allowing you to block builds based on test results.
+
+{% hint style="info" %}
+#### Troubleshooting: Connection timeouts
+
+If your CI runner fails to start the Maestro driver within the default 15 seconds, you may see a timeout error. You can extend this by setting a custom millisecond value in your pipeline environment:
+
+Example (60-second timeout):
+
+```bash
+export MAESTRO_DRIVER_STARTUP_TIMEOUT=60000
+```
+{% endhint %}
 {% endstep %}
 {% endstepper %}
 

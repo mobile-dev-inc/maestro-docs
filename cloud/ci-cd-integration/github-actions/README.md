@@ -85,6 +85,18 @@ jobs:
 {% endstep %}
 {% endstepper %}
 
+{% hint style="info" %}
+#### Troubleshooting: Connection timeouts
+
+If your CI runner fails to start the Maestro driver within the default 15 seconds, you may see a timeout error. You can extend this by setting a custom millisecond value in your pipeline environment:
+
+Example (60-second timeout):
+
+```bash
+export MAESTRO_DRIVER_STARTUP_TIMEOUT=60000
+```
+{% endhint %}
+
 ### Inputs reference
 
 Below are all available inputs for the `mobile-dev-inc/action-maestro-cloud` action.

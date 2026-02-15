@@ -88,6 +88,18 @@ The following table describes all the parameter you must pass:
 {% hint style="info" %}
 For a complete list of advanced flags, refer to the [Maestro CLI commands and options](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/maestro-cli-commands-and-options "mention") reference.
 {% endhint %}
+
+{% hint style="info" %}
+#### Troubleshooting: Connection timeouts
+
+If your CI runner fails to start the Maestro driver within the default 15 seconds, you may see a timeout error. You can extend this by setting a custom millisecond value in your pipeline environment:
+
+Example (60-second timeout):
+
+```bash
+export MAESTRO_DRIVER_STARTUP_TIMEOUT=60000
+```
+{% endhint %}
 {% endstep %}
 
 {% step %}
