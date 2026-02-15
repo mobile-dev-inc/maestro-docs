@@ -11,7 +11,7 @@
 * [Loops](flow-control-and-logic/loops.md)
 * [Conditions](flow-control-and-logic/conditions.md)
 * [Parameters and constants](flow-control-and-logic/parameters-and-constants.md)
-* [Specify a device](flow-control-and-logic/specify-a-device.md)
+* [Specify and start devices](flow-control-and-logic/specify-and-start-devices.md)
 * [Hooks](flow-control-and-logic/hooks.md)
 * [Test in different locales](flow-control-and-logic/test-in-different-locales/README.md)
   * [Locales supported by Maestro](flow-control-and-logic/test-in-different-locales/locales-supported-by-maestro.md)

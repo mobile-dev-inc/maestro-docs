@@ -52,7 +52,7 @@ env:
 ```
 
 {% hint style="info" %}
-If you are using Maestro Studio, it provides an interface for managing [environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environment-variables).
+If you are using Maestro Studio, it provides an interface for managing [environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environments-and-variables).
 {% endhint %}
 
 {% hint style="warning" %}

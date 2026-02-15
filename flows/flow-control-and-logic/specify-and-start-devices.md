@@ -4,13 +4,69 @@ description: >-
   sharding for parallel test execution.
 ---
 
-# Specify a device
+# Specify and start devices
 
-When you have multiple simulators, emulators, or physical devices connected to your machine, Maestro needs to know which one to target. This tutorial covers how to find device identifiers, target specific devices via the CLI's `--device` flag, and use sharding strategies to run local tests in parallel.
+When managing multiple simulators, emulators, or physical devices, Maestro needs to know which one to target. This guide covers how to spin up new virtual devices using Maestro, find their identifiers, and target specific hardware for your tests.
+
+### Start a device
+
+Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to match the environment hosted on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/), ensuring your Flows are compatible when you scale up.
+
+To view all available options and configurations available, run:
+
+```bash
+maestro start-device
+```
+
+Maestro will list the devices, platforms, and OS versions available in the cloud, similar to the following example:
+
+```bash
+Supported device types: iPhone11 (iOS), Pixel 6 (Android)
+      --os-version=<osVersion>
+                       OS version to use:
+                       iOS: 16, 17, 18
+                       Android: 28, 29, 30, 31, 33
+      --platform=<platform>
+                       Platforms: android, ios
+```
+
+{% tabs %}
+{% tab title="Android" %}
+To create and launch a default Android emulator (Pixel 6, Google API 30), run:
+
+```bash
+maestro start-device --platform android
+```
+
+If the device already exists, Maestro will simply launch it.
+
+{% hint style="info" %}
+**Cloud Compatibility**
+
+The device configurations created by this command are limited to specific OS versions and models recommended for Maestro Cloud. Using these defaults helps prevent compatibility issues when moving from local development to cloud execution.
+{% endhint %}
+{% endtab %}
+
+{% tab title="iOS" %}
+To create and launch a default iOS simulator (iPhone 11, iOS 15.5), run:
+
+```bash
+maestro start-device --platform ios
+```
+
+If the device already exists, Maestro will simply launch it.
+
+{% hint style="info" %}
+**Cloud Compatibility**
+
+The device configurations created by this command are limited to specific OS versions and models recommended for Maestro Cloud. Using these defaults helps prevent compatibility issues when moving from local development to cloud execution.
+{% endhint %}
+{% endtab %}
+{% endtabs %}
 
 ### Find the device identifier
 
-Before running a command, you need to obtain the unique identifier (ID) for your target device.
+Once your devices are running, you need to obtain their unique identifier (ID) to target them specifically.
 
 {% tabs %}
 {% tab title="Android" %}
