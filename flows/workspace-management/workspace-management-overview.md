@@ -40,6 +40,7 @@ As your suite grows, you need control over how tests are discovered and executed
 Maestro doesn't just tell you if a test passed, it provides the why:
 
 * [Reports and artifacts](test-reports-and-artifacts.md): Generate JUnit (XML) for CI/CD pipelines or human-readable HTML reports with failure screenshots.
+* [Record your Flow](record-your-flow.md): Record Maestro tests as MP4 videos for debugging and sharing.
 * [AI insights](ai-test-analysis.md): Use the `--analyze` flag to automatically detect spelling errors, layout breaks, and internationalization issues that traditional assertions might miss.
 {% endstep %}
 {% endstepper %}

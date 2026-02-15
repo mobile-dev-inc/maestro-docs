@@ -42,6 +42,7 @@
 * [Test discovery and tags](workspace-management/test-discovery-and-tags.md)
 * [Sequential execution](workspace-management/sequential-execution.md)
 * [Test reports and artifacts](workspace-management/test-reports-and-artifacts.md)
+* [Record your Flow](workspace-management/record-your-flow.md)
 * [AI test analysis](workspace-management/ai-test-analysis.md)
 
 ## Examples
