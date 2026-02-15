@@ -1,4 +1,11 @@
-# Wikipedia on Android: Advanced Automation
+---
+description: >-
+  Explore a complete example using Maestro and Wikipedia App. Use subflows,
+  interactive scrolling, and JavaScript for robust, data-driven mobile
+  automation.
+---
+
+# Advanced: Wikipedia on Android
 
 This guide demonstrates how to use Maestro to automate complex user journeys in the Wikipedia Android app. You will learn how to manage multi-step onboarding, interact with dynamic feeds using scrolling, and integrate JavaScript for data-driven testing.
 
@@ -28,7 +35,7 @@ The onboarding subflow handles the initial setup of the application. By using `c
 
 {% tabs %}
 {% tab title="main.yml" %}
-This flow serves as the entry point for the onboarding sequence. It orchestrates the addition and removal of languages before progressing through the introductory "New ways to explore" and "Reading lists" informational screens.
+This Flow serves as the entry point for the onboarding sequence. It orchestrates the addition and removal of languages before progressing through the introductory informational screens like "New ways to explore" and "Reading lists".
 
 ```yaml
 # onboarding/main.yml
@@ -47,7 +54,7 @@ appId: org.wikipedia
 {% endtab %}
 
 {% tab title="add-language.yml" %}
-This sub-flow navigates the language settings menu to search for and add "Greek" to the app's configuration.&#x20;
+This Flow navigates the language settings menu to search for and add "Greek" to the app's configuration. It concludes by tapping "Navigate up" to return to the previous screen.
 
 ```yaml
 # onboarding/add-language.yml
@@ -65,7 +72,7 @@ appId: org.wikipedia
 {% endtab %}
 
 {% tab title="remove-language.yml" %}
-This flow verifies the deletion process by selecting the newly added language and removing it. It uses index-based selection and assertions to ensure the UI updates correctly after the deletion.
+This Flow verifies the deletion process by selecting the newly added language and removing it. It uses index-based selection and assertions to ensure the UI updates correctly after the deletion.
 
 ```yaml
 # onboarding/remove-language.yml
@@ -94,6 +101,8 @@ The dashboard contains dynamic content that varies daily. These tests illustrate
 
 {% tabs %}
 {% tab title="main.yaml" %}
+This orchestrator Flow for the dashboard sequentially executes tests for searching, checking saved articles, interacting with the feed, and performing copy-paste operations.
+
 ```yaml
 # dashboard/main.yml
 appId: org.wikipedia
@@ -142,6 +151,8 @@ appId: org.wikipedia
 {% endtab %}
 
 {% tab title="feed.yaml" %}
+This Flow shows how to execute vertical scrolling on the Explore tab. It uses `scrollUntilVisible` to locate the "Today on Wikipedia" section before interacting with it.
+
 ```yaml
 # dashboard/feed.yml
 appId: org.wikipedia
@@ -155,7 +166,7 @@ appId: org.wikipedia
 {% endtab %}
 
 {% tab title="copy-paste.yml" %}
-This flow demonstrates complex interaction patterns by scrolling through the feed to find a specific card. It then uses the `copyTextFrom` command to store a title in `${maestro.copiedText}` and pastes that value into the search bar.
+This Flow captures a title from the feed using `copyTextFrom`. It then navigates to the search bar and uses the `${maestro.copiedText}` variable to paste the captured text as input.
 
 ```yaml
 # dashboard/copy-paste.yml
@@ -185,7 +196,7 @@ Maestro supports JavaScript execution to handle logic that is difficult to achie
 
 {% tabs %}
 {% tab title="signup.yml" %}
-This test automates the account creation form. It executes a local script to generate unique strings for the username, password, and email fields to prevent collisions during repeated test runs.
+This test automates the account creation form by running `generateCredentials.js` to populate the username, password, and email fields with unique data.
 
 ```yaml
 # auth/signup.yml
@@ -208,6 +219,8 @@ appId: org.wikipedia
 {% endtab %}
 
 {% tab title="login.yaml" %}
+This Flow fetches a real user from an API using `fetchTestUser.js`. It then populates the login form with the retrieved username.
+
 ```yaml
 # auth/login.yml
 appId: org.wikipedia
@@ -228,7 +241,7 @@ appId: org.wikipedia
 {% endtab %}
 
 {% tab title="generateCredentials.js" %}
-This JavaScript file creates a unique set of credentials by appending a timestamp to strings. The resulting object is assigned to `output.credentials`, making it accessible within the Maestro YAML flow.
+This script creates unique credentials by appending a timestamp to placeholders using `.replace()`. The data is exported via the `output` object.
 
 ```javascript
 function username() {
@@ -255,6 +268,8 @@ output.credentials = {
 {% endtab %}
 
 {% tab title="fetchTestUsers.js" %}
+This script uses [`http.get`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/make-http-requests) to fetch user data from a placeholder API. It then parses the JSON response to provide a username and email to the Maestro Flow.
+
 ```javascript
 // Fetches test user from API
 function getTestUserFromApi() {
@@ -313,7 +328,8 @@ maestro test run-test.yml
 
 ### Related content
 
-* Nested flows
-* inputText
-* Generate Syntetic data
-* JavaScript Overview
+* [Nested Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/nested-flows): Build modular, reusable tests by embedding existing Flows into complex user journeys.
+* [inputText](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext): Learn how to simulate realistic keyboard entries.
+* [Make HTTP requests](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/make-http-requests): Make HTTP API calls from your flows to set up test data or verify backend state.
+*   [JavaScript overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview): Unlock advanced logic and conditional testing power by integrating scripts into your YAML.
+
