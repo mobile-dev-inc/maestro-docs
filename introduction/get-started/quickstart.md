@@ -6,7 +6,7 @@ description: >-
 
 # QuickStart
 
-You are starting your journey with Maestro. This guide will help you install Maestro, set up your environment, and execute your first automated test (called a **Flow**) in just five minutes.
+You are starting your journey with Maestro. This guide will help you install [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/), set up your environment, and execute your first automated test (called a **Flow**) in just five minutes.
 
 {% stepper %}
 {% step %}
@@ -19,6 +19,11 @@ Maestro requires a running target device to execute your tests. Use the tabs bel
 1. Download the latest version of Android Studio from the [official site](https://developer.android.com/studio) and install it.
 2. Open Android Studio, click **More Actions**, and select **Virtual Device Manager**.
 3. Click **Create Virtual Device (+)**, select a modern device (e.g., Pixel 8), and download a system image (API 31 or higher is recommended).
+
+{% hint style="info" %}
+Maestro currently supports **API Levels 29, 30, 31, 33, and 34**. API 35 and 36 support is arriving in Q1 2026.
+{% endhint %}
+
 4. Finish the wizard and click the **Play** button to start the emulator.
 {% endtab %}
 
@@ -26,7 +31,7 @@ Maestro requires a running target device to execute your tests. Use the tabs bel
 1. Download Xcode from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and install it.
 2. Open Xcode, go to `Settings > Locations`, and ensure the **Command Line Tools** are selected.
 3. Open Xcode and go to `Xcode > Open Developer Tool > Simulator` to launch the simulator.
-4. If no device is available, go to `Xcode > Settings > Platforms` and ensure an iOS runtime (e.g., iOS 17 or 18) is installed.
+4. If no device is available, go to `Xcode > Settings > Platforms` and ensure an iOS runtime (iOS 16, 17, 18, or 24) is installed.
 {% endtab %}
 {% endtabs %}
 {% endstep %}
@@ -44,7 +49,12 @@ Follow the platform-specific installation prompts:
 
 * **Windows:** Double-click the `.exe` and follow the setup wizard.
 * **macOS:** Open the `.dmg` and drag Maestro Studio to your `Applications` folder.
-* **Linux:** Make the `.AppImage` executable (`chmod +x MaestroStudio.AppImage`) and run it with  `./MaestroStudio.AppImage`.
+*   **Linux:** Make the `.AppImage` executable and run it with the `--no-sandbox` flag:
+
+    ```bash
+    chmod +x MaestroStudio.AppImage
+    ./MaestroStudio.AppImage --no-sandbox
+    ```
 {% endstep %}
 
 {% step %}
@@ -56,7 +66,7 @@ Once your device is running and Maestro Studio is open, you can create your firs
 
 <figure><img src="../.gitbook/assets/quickstart-1 (2).png" alt=""><figcaption></figcaption></figure>
 
-2. Click the **No device connected** button at the top. Select your running Android Emulator or iOS Simulator from the list. The virtual device will popup.
+2. Click the **No device connected** button at the top. Select your running Android Emulator or iOS Simulator from the list. The virtual device will pop up.
 3. Click **Create a new test** to open the setup window.
 
 <figure><img src="../.gitbook/assets/quickstart-create-a-new-test (1).png" alt=""><figcaption></figcaption></figure>
@@ -116,7 +126,7 @@ With your first YAML file created, let's add a few commands to perform a search.
 In the Maestro Studio editor, copy and paste the example below for your platform.
 
 {% tabs %}
-{% tab title="Android (Chrome)" %}
+{% tab title="Android" %}
 ```yaml
 appId: com.google.android.contacts
 ---
@@ -137,7 +147,7 @@ appId: com.google.android.contacts
 - takeScreenshot: All Contacts
 ```
 
-The test launches the Contacts Android app in a clean state, creates a new contact by filling in first name, last name, and company, adds a phone number, saves the contact, navigates back to the list, and captures a screenshot of all contacts.
+The test launches the native Contacts app, creates a new entry, saves it, and captures a screenshot.
 
 {% hint style="info" %}
 To learn more about the commands you can use to create tests, access the [Commands overview](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
@@ -150,7 +160,7 @@ After pasting, click **Run Locally**. Watch your virtual device execute the step
 <figure><img src="../.gitbook/assets/2026-02-15_18-41-27.gif" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="iOS (Safari)" %}
+{% tab title="iOS" %}
 ```yaml
 appId: com.apple.MobileAddressBook 
 ---
@@ -172,7 +182,7 @@ appId: com.apple.MobileAddressBook
 - takeScreenshot: All Contacts
 ```
 
-The test launches the Address Book app in a clean state, creates a new contact by filling in first name, last name, and company, adds a phone number, saves the contact, navigates back to the list, and captures a screenshot of all contacts.
+The test launches the Address Book app, adds a new contact, and saves the result.
 
 {% hint style="info" %}
 To learn more about the commands you can use to create tests, access the [Commands overview](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
@@ -188,15 +198,17 @@ After pasting, click **Run Locally**. Watch your virtual device execute the step
 {% endstep %}
 {% endstepper %}
 
+{% hint style="info" %}
 #### Interactive Flow authoring
 
-While this Quickstart focuses on writing commands manually in the YAML file, Maestro Studio offers three ways to build your test:
+While this QuickStart focuses on manual YAML, Maestro Studio offers three interactive ways to build your test:
 
 * **Insert Command**: Click the **Insert Command** button in the IDE to choose from a list of standard actions.
-* Manual Entry: Type commands directly into the YAML editor for precise control.
-* Inspect Screen: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands
+* **Manual Entry**: Type commands directly into the YAML editor for precise control.
+* **Inspect Screen**: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands.
 
-<figure><img src="../.gitbook/assets/quickstart-explore-options.gif" alt=""><figcaption></figcaption></figure>
+Access [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") for more information.
+{% endhint %}
 
 ### Video walkthrough
 
