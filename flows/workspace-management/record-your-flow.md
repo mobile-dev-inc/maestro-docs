@@ -49,3 +49,7 @@ If you run `maestro record` without the `--local` flag, Maestro currently sends 
 * **Signed URLs**: Remote recordings generate a [signed URL](https://cloud.google.com/storage/docs/access-control/signed-urls) valid for 60 minutes.
 * **Auto-Deletion**: All videos sent to our servers are automatically deleted after 24 hours.
 {% endhint %}
+
+### Related content
+
+You can also record your tests using [startRecording](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/startrecording "mention") or take screenshots for specific steps using [takeScreenshot](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/takescreenshot "mention").
