@@ -17,7 +17,7 @@ Maestro analyzes the rendered frames of the iOS device, ensuring your tests are 
 
 ### System-level control
 
-Maestro’s architecture allows it to pilot the entire device hardware, not just your application process. This enables testing for complex real-world scenarios.
+Maestro’s architecture allows it to pilot the entire device, not just your application process. This enables testing for complex real-world scenarios.
 
 iOS is known for its strict permission dialogs (Location, Camera). However, Maestro can interact with these system prompts directly:
 
