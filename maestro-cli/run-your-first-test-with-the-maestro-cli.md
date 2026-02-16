@@ -90,6 +90,20 @@ maestro test contacts.yaml
 To see all the options and commands available when using the Maestro CLI, [access the Maestro CLI documentation](maestro-cli-commands-and-options.md).
 {% endhint %}
 
+{% hint style="success" %}
+#### Troubleshooting: Connection timeouts
+
+If your CI runner fails to start the Maestro driver within the default timeframe, you may see a timeout error.
+
+The default timeout is 15 seconds (15000 ms) for Android and 120 seconds (120000 ms) for iOS.
+
+You can extend this by setting a custom millisecond value in your pipeline environment. Here's an example to increase the timeout to 3 minutes (180000 ms):
+
+```bash
+export MAESTRO_DRIVER_STARTUP_TIMEOUT=180000
+```
+{% endhint %}
+
 Maestro will connect to the emulator and execute the steps sequentially. You will see a live progress report in your terminal.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
@@ -105,6 +119,8 @@ Maestro will connect to the emulator and execute the steps sequentially. You wil
 {% endhint %}
 {% endstep %}
 {% endstepper %}
+
+
 
 ### Final Outcome
 
