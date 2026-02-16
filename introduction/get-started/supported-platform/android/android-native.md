@@ -13,7 +13,7 @@ Maestro provides a black-box testing approach for native Android applications. B
 ### Technical advantages
 
 * **Zero Instrumentation**: No custom Gradle configurations, `build.gradle` dependencies, or test-specific APK builds are required. You test the exact binary your users receive.
-* **Refactoring Resilience**: Migrating from XML-based Views to Jetpack Compose will not break your tests as long as the user-visible text or semantic IDs remain consistent.
+* **Refactoring Resilience**: Migrating your UI implementation will not break your tests as long as the user-visible text or semantic IDs remain consistent.
 * **UI-Layer Interaction**: Maestro interacts with rendered UI elements, ensuring that tests validate the actual user experience rather than internal component states.
 
 ### Element interaction strategies
@@ -38,39 +38,11 @@ In Android development, Maestro leverages the accessibility layer of the device 
     ```
 * **Hints**: For input fields that have not yet been filled, the `android:hint` attribute is also exposed to the text selector.
 
-**Jetpack Compose**
-
-Maestro supports Jetpack Compose by traversing the semantic tree. While Compose is declarative, Maestro maps its output to the standard accessibility framework.
-
-* **Text Composables**: Target `Text` elements directly by their displayed string content.
-* **Semantics and TestTags**: For elements without text (like FABs or custom graphics), use the `semantics` modifier. By enabling `testTagsAsResourceId`, you can target these using the `id` selector.
-
-You can add a `testTag` to tell Compose to treat it like a standard Android ID:
-
-```kotlin
-Button(
-    modifier = Modifier.semantics { 
-        // This line makes the tag visible to Maestro's ID selector
-        testTagsAsResourceId = true 
-    }.testTag("submit_btn")
-) { 
-    Text("Confirm Order") 
-}
-```
-
-The tester can target that button by its ID, making the test much more reliable than searching for the text "Confirm Order", which might change or be translated:
-
-```yaml
-# In your Maestro Flow
-- tapOn:
-    id: "submit_btn"
-```
-
 #### Handling lists and dynamic content
 
 Native Android often uses `RecyclerView` or `LazyColumn` for long lists. Maestro abstracts the complexity of view recycling through intelligent scrolling.
 
-For example, to scroll to a specific item, instead of calculating scroll offsets, use the built-in intelligence of Maestro to find elements that are currently off-screen.
+Instead of calculating scroll offsets, use the built-in intelligence of Maestro to find elements that are currently off-screen:
 
 ```yaml
 - scrollUntilVisible:
@@ -79,7 +51,7 @@ For example, to scroll to a specific item, instead of calculating scroll offsets
     direction: DOWN
 ```
 
-Maestro will automatically swipe down, wait for the next items to load, and stop only when "Item #50" is detected in the view hierarchy.
+Maestro will automatically swipe down, wait for the next items to load, and stop only when the target element is detected in the view hierarchy.
 
 ### Known limitations
 
