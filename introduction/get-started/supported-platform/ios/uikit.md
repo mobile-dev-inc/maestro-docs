@@ -11,7 +11,7 @@ Maestro provides native, transparent support for iOS applications built with UIK
 
 ### Technical advantages
 
-* **Zero Instrumentation**: Maestro does not require test libraries, delegates, or ViewController exposure. You test the exact production binaries (.app or .ipa) distributed to your users.
+* **Zero Instrumentation**: Maestro does not require test libraries, delegates, or ViewController exposure. You test the built `.app` binary, nothing else.
 * **Implementation Agnostic**: Because Maestro validates user-facing features rather than internal code, you can refactor UIKit components to SwiftUI without breaking your tests, provided the visual output remains consistent.
 * **Black-Box Model**: Maestro adopts an [arm's length](../../how-maestro-works.md) approach, simulating authentic user interactions with the rendered UI without needing access to internal source code.
 
