@@ -111,7 +111,7 @@ tags:
 
 Click **Run Locally** to watch Maestro Studio execute these steps automatically on your device.
 
-<figure><img src=".gitbook/assets/2026-02-16_08-42-49.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/2026-02-16_17-49-33.gif" alt=""><figcaption></figcaption></figure>
 
 After a successful run, the recording file will be available in the `.maestro` directory.
 {% endstep %}
