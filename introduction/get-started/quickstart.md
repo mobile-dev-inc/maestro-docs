@@ -209,7 +209,9 @@ While this QuickStart focuses on manual YAML, Maestro Studio offers three intera
 
 #### **Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
 
+:point\_right:**Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
 
+<i class="fa-hand-point-right">:hand-point-right:</i>**Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
 {% endhint %}
 
 ### Interactive Flow authoring
