@@ -65,23 +65,21 @@ Before you begin building the Flow logic, test the app initialization. Click **R
 {% step %}
 ### Interactive authoring&#x20;
 
-Now it is time to build the Flow. Instead of manual typing, we will use the IDE's interactive features.
+Now it is time to build the Flow logic. Instead of manual typing, we will use **Insert Command** and **Inspect Screen** features to build the steps.
 
-First, click **Insert Command**, search for the `startRecording` command, and select it. This step will record the device screen during the test.
+First, click **Insert Command**, search for the `startRecording` command, and select it. This will record the device screen during the test execution.
 
-To add the following steps, use **Inspect Screen** to add commands based on your interaction with the app:
+To build the following steps of your Flow, use **Inspect Screen** to select the element and use the **Run and Insert** action to build the test as you go:
 
-1. Click the **Inspect Screen** button.
-2. **Allow notifications**: Click the **Allow** button on the device screen. Maestro will suggest a command; select `tapOn: Allow`.
-3. **Note**: Disable **Inspect Mode** to interact with the device again and click **Allow** manually. You must repeat this "inspect then interact" process for each step.
-4. **Create Contact**: Use **Inspect Screen** on the **Create contact** button and select `tapOn: Create contact`.
-5. **First Name**: Inspect the **First name** field and select `tapOn`. Immediately follow this by using **Insert Command** to add `inputText`, replacing `"Hello world"` with `"Jane"`.
-6. **Last Name**: Inspect the **Last name** field, select `tapOn`, and use **Insert Command** to add `inputText`, replacing `"Hello world"` with `"Doe"`.
-7. **Phone**: Use **Insert Command** to add `tapOn: "+1"` to select the phone field. Immediately follow this with `inputText`, replacing `"Hello world"` with `"111-111-1111"`.
-8. **Save**: Inspect the **Save** button and select `tapOn: Save`.
-9. **Confirmation**: Use **Insert Command** to add the `back` command to return to the list, and finally add `stopRecording` to save the test video.
+1. **Allow notifications**: Click **Inspect Screen**, click the **Allow** button on the device, and select **Run and Insert** for `tapOn: Allow`. This executes the tap on your device and adds the command to your YAML.
+2. **Create Contact**: Click the **Create contact** button on the device and select **Run and Insert** for `tapOn: Create contact`.
+3. **First Name**: Click the **First name** field, select **Run and Insert** for `tapOn`. Use **Insert Command** to add `inputText`, replacing the default text with `"Jane"`.
+4. **Last Name**: Click the **Last name** field, select **Run and Insert** for `tapOn`, and use **Insert Command** to add `inputText` with the value `"Doe"`.
+5. **Phone**: Use **Insert Command** to add `tapOn: "+1"` to select the phone field. Use **Insert Command** to add `eraseText` to clear any default formatting, then add `inputText` with the value `"+1 111-111-1111"`.
+6. **Save**: Click the **Save** button and select **Run and Insert** for `tapOn: Save`.
+7. **Confirmation**: Use **Insert Command** to add `back` to return to the list, then add `stopRecording` to save the test video.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FeQi66gxHTt2vx4HjhM9V%2Fuploads%2Fpa1PNWe7SRhirsart2Lq%2Fcreate-flow.mp4?alt=media&token=0d37763d-2534-4e20-9d42-3a969383caaf" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FeQi66gxHTt2vx4HjhM9V%2Fuploads%2FG2Ah0XbkirPXZIV6jLqJ%2Fcreate-test-maestro-studio-ezgif.com-video-speed%20(1).mp4?alt=media&token=0928ec82-7d19-4359-809a-5fa24f4640a6" %}
 {% endstep %}
 
 {% step %}
@@ -104,7 +102,8 @@ tags:
 - tapOn: Last name
 - inputText: Doe
 - tapOn: "+1"
-- inputText: 111-111-1111
+- eraseText
+- inputText: "+1 111-111-1111"
 - tapOn: Save
 - back
 - stopRecording
@@ -112,7 +111,7 @@ tags:
 
 Click **Run Locally** to watch Maestro Studio execute these steps automatically on your device.
 
-<figure><img src=".gitbook/assets/2026-02-12_22-30-00.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/2026-02-16_08-42-49.gif" alt=""><figcaption></figcaption></figure>
 
 After a successful run, the recording file will be available in the `.maestro` directory.
 {% endstep %}
