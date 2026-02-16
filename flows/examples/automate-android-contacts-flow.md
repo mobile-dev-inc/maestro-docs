@@ -25,7 +25,7 @@ This Flow interacts with the default Google Contacts app available on Android em
 
 ```yaml
 # contacts.yaml
-appId: com.android.contacts
+appId: com.google.android.contacts
 ---
 - launchApp
 
