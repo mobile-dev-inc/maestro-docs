@@ -93,12 +93,14 @@ Once triggered, the Maestro Cloud Pipe automates the following lifecycle:
 {% hint style="info" %}
 #### Troubleshooting: Connection timeouts
 
-If your CI runner fails to start the Maestro driver within the default 15 seconds, you may see a timeout error. You can extend this by setting a custom millisecond value in your pipeline environment:
+If your CI runner fails to start the Maestro driver within the default timeframe, you may see a timeout error.
 
-Example (60-second timeout):
+The default timeout is 15 seconds (15000 ms) for Android and 120 seconds (120000 ms) for iOS.
+
+You can extend this by setting a custom millisecond value in your pipeline environment. Here's an example to increase the timeout to 3 minutes (180000 ms):
 
 ```bash
-export MAESTRO_DRIVER_STARTUP_TIMEOUT=60000
+export MAESTRO_DRIVER_STARTUP_TIMEOUT=180000
 ```
 {% endhint %}
 {% endstep %}
