@@ -10,7 +10,7 @@ When managing multiple simulators, emulators, or physical devices, Maestro needs
 
 ### Start a device
 
-Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to match the environment hosted on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/), ensuring your Flows are compatible when you scale up.
+Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to approximate the environment hosted on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/), ensuring your Flows are compatible when you scale up.
 
 To view all available options and configurations available, run:
 
@@ -20,7 +20,7 @@ maestro start-device
 
 Maestro will list the devices, platforms, and OS versions available in the cloud, similar to the following example:
 
-```bash
+```
 Supported device types: iPhone11 (iOS), Pixel 6 (Android)
       --os-version=<osVersion>
                        OS version to use:
@@ -41,9 +41,9 @@ maestro start-device --platform android
 If the device already exists, Maestro will simply launch it.
 
 {% hint style="info" %}
-**Cloud Compatibility**
+**Compatibility**
 
-The device configurations created by this command are limited to specific OS versions and models recommended for Maestro Cloud. Using these defaults helps prevent compatibility issues when moving from local development to cloud execution.
+The device configurations created by this command are limited to specific OS versions and models supported by Maestro.
 {% endhint %}
 {% endtab %}
 
