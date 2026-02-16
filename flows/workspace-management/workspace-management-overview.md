@@ -16,7 +16,7 @@ When organizing your workspace, consider the following four pillars:
 {% step %}
 #### **Configuration**
 
-A Maestro workspace is centered around the [`config.yaml`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/workspace-configuration) file, which defines global rules like your `appId`, environment variables, and platform-specific behaviors. Access the [Project configuration](project-configuration.md) guide to learn how to create and manage configuration files for your suite.&#x20;
+A Maestro workspace is centered around the [`config.yaml`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/workspace-configuration) file, which settings that apply to your entire test suite or workspace directory. Access the [Project configuration](project-configuration.md) guide to learn how to create and manage configuration files for your suite.&#x20;
 {% endstep %}
 
 {% step %}
