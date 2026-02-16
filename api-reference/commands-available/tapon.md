@@ -102,7 +102,7 @@ This example finds an element containing specific text and then taps a point nea
 This example demonstrates a sequence of commands to add a new contact.
 
 ```yaml
-appId: com.android.contacts
+appId: com.google.android.contacts
 ---
 - launchApp
 - tapOn:
