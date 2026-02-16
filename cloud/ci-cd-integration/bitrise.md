@@ -42,20 +42,6 @@ Visit the [Maestro Step in the Bitrise catalog](https://bitrise.io/integrations/
 
 5. **Workspace Validation**: Ensure that the **Flow Workspace** path matches your repository’s directory structure.
 
-{% hint style="info" %}
-#### Troubleshooting: Connection timeouts
-
-If your CI runner fails to start the Maestro driver within the default timeframe, you may see a timeout error.
-
-The default timeout is 15 seconds (15000 ms) for Android and 120 seconds (120000 ms) for iOS.
-
-You can extend this by setting a custom millisecond value in your pipeline environment. Here's an example to increase the timeout to 3 minutes (180000 ms):
-
-```bash
-export MAESTRO_DRIVER_STARTUP_TIMEOUT=180000
-```
-{% endhint %}
-
 Once configured, Bitrise automatically triggers your Maestro tests in the cloud as part of your pipeline.
 
 #### Next steps
