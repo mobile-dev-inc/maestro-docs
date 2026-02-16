@@ -76,7 +76,7 @@ Once your device is running and Maestro Studio is open, you can create your firs
 {% tabs %}
 {% tab title="Android" %}
 * **Name**: Name for your YAML file.
-* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.android.contacts** from the dropdown menu.
+* **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.google.android.contacts** from the dropdown menu.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
