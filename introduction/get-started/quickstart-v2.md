@@ -88,7 +88,7 @@ You can also add tags to keep your tests organized.
 {% tabs %}
 {% tab title="Android" %}
 ```yaml
-appId: com.android.contacts
+appId: com.google.android.contacts
 ---
 - launchApp:
     clearState: true
