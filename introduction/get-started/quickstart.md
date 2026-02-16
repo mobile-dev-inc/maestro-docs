@@ -198,7 +198,7 @@ After pasting, click **Run Locally**. Watch your virtual device execute the step
 {% endstep %}
 {% endstepper %}
 
-{% hint style="info" %}
+{% hint style="success" %}
 #### Interactive Flow authoring
 
 While this QuickStart focuses on manual YAML, Maestro Studio offers three interactive ways to build your test:
@@ -208,6 +208,8 @@ While this QuickStart focuses on manual YAML, Maestro Studio offers three intera
 * **Inspect Screen**: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands.
 
 #### **Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
+
+
 {% endhint %}
 
 ### Interactive Flow authoring
