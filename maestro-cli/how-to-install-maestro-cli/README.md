@@ -74,6 +74,10 @@ Installing Maestro in WSL2 allows you to use a Linux environment while using And
 Although it is possible to run the Maestro CLI on WSL, Maestro recommends using one of the other supported environments (macOS, Windows, or Linux). The WSL setup requires advanced port configuration, which can introduce issues when testing your app.
 {% endhint %}
 
+{% hint style="success" %}
+If you encounter problems running your tests using Maestro CLI on WSL, check the troubleshooting guide.
+{% endhint %}
+
 #### 1. Install Java and Maestro
 
 First, ensure you have Java 17+ installed.
