@@ -13,7 +13,7 @@ This guide explains how to execute your tests using Maestro Cloud via the [Maest
 Before running tests on Maestro Cloud, ensure you have the following:
 
 * **Maestro account:** [Sign up for a Maestro account](https://signin.maestro.dev/sign-up).
-* **Cloud plan:** Maestro Cloud requires a Cloud plan, which you can start as a trial from the [Maestro Console](https://signin.maestro.dev/sign-up).
+* **Cloud plan:** Maestro Cloud requires a Cloud plan, which you can start as a trial from the [Maestro Dashboard](https://signin.maestro.dev/sign-up).
 * [**Maestro CLI**](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/how-to-install-maestro-cli)**:** Install the Maestro CLI on your local machine or CI environment.
 
 {% hint style="info" %}
