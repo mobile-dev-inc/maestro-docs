@@ -18,6 +18,14 @@ The following example hides the keyboard.
 This command is a no-op on web. It has no effect when running web tests.
 {% endhint %}
 
+{% hint style="success" %}
+#### Update
+
+Maestro has updated the `hideKeyboard` command to verify that the keyboard is actually hidden. If the system fails to dismiss the keyboard, the command will now fail the test.
+
+**This behavior is currently only available on Maestro Cloud.** It will be released to Maestro CLI and Maestro Studio soon.
+{% endhint %}
+
 ### Implementation details
 
 Unlike other UI actions, mobile operating systems do not provide a native way for closing the keyboard. To achieve this, Maestro simulates the specific gestures or actions a user would perform on each platform:
