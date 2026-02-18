@@ -8,7 +8,7 @@ description: >-
 
 In Maestro, you can use the built-in DataFaker integration to generate dynamic, randomized data for your test. This is useful for bypassing unique-field constraints (like sign-up forms) and creating realistic testing environments without manual data entry.
 
-### The `faker` Object
+### The `faker` object
 
 Maestro provides a global `faker` object available within the JavaScript engine. This object is a wrapper around the DataFaker library and follows the same usage patterns and providers found in its Java documentation.
 
@@ -18,7 +18,7 @@ Maestro provides a global `faker` object available within the JavaScript engine.
 For additional information about DataFaker, check its [documentation](https://www.datafaker.net/documentation/getting-started/#usage).
 {% endhint %}
 
-### Common Data Providers
+### Common data providers
 
 The `faker` object provides access to a wide variety of data types, ranging from standard user information to specialized domains.&#x20;
 

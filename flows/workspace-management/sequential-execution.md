@@ -35,7 +35,7 @@ When you configure `executionOrder`, Maestro will:
 Sequential execution is designed for **local test runs only**. On [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/), tests are automatically parallelized across multiple virtual devices to provide the fastest possible feedback.&#x20;
 {% endhint %}
 
-#### Handling Failures
+#### Handling failures
 
 The `continueOnFailure` flag determines how the sequence behaves if a step fails:
 

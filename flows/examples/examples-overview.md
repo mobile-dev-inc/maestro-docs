@@ -8,7 +8,7 @@ This section of the documentation is a curated library of real-world scenarios d
 
 While the core documentation explains how commands work, this section focuses on implementation patterns, solving specific technical hurdles like system-level interactions, dynamic content, and scalable architecture.
 
-### Implementation Recipes
+### Implementation recipes
 
 These guides provide targeted solutions for specific technical requirements:
 

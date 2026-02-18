@@ -96,6 +96,6 @@ When using both flags, you must consider the following behaviour:
 * **Same directory**: If both flags point to the same location, all artifacts are consolidated into that single folder.
 * **Different directories**: If the flags point to different directories, the `--debug-output` directory will receive **only** the `maestro.log`, while the `--test-output-dir` will receive everything else (Screenshots, Videos, Commands JSON, and AI Reports).
 
-### Next Steps
+### Next steps
 
 Now that you can see your results, take your debugging to the next level. Learn how to generate an automated insights reports that identifies UI and spelling bugs using [AI test analysis](ai-test-analysis.md).

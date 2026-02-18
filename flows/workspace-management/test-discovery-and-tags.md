@@ -147,6 +147,6 @@ includeTags:
   - smoke         # But only run the smoke tests
 ```
 
-### Next Steps
+### Next steps
 
 Now that you've discovered your tests, learn how to manage their [sequential execution](sequential-execution.md).
