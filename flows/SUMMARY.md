@@ -25,13 +25,6 @@
 * [Manage data and states](javascript/manage-data-and-states.md)
 * [Make HTTP requests](javascript/make-http-requests.md)
 * [Generate synthetic data](javascript/generate-synthetic-data.md)
-* [JavaScript on Maestro flows](javascript/javascript-on-maestro-flows.md)
-* [JavaScript outputs](javascript/javascript-outputs.md)
-* [Maestro support for GraalJS](javascript/maestro-support-for-graaljs.md)
-* [How to use logging](javascript/how-to-use-logging.md)
-* [How to generate random data](javascript/how-to-generate-random-data.md)
-* [How to make HTTP requests](javascript/how-to-make-http-requests.md)
-* [How to access text elements](javascript/how-to-access-text-elements.md)
 
 ## Workspace Management
 
@@ -44,17 +37,3 @@
 * [Test reports and artifacts](workspace-management/test-reports-and-artifacts.md)
 * [Record your Flow](workspace-management/record-your-flow.md)
 * [AI test analysis](workspace-management/ai-test-analysis.md)
-
-## Examples
-
-* [Examples overview](examples/examples-overview.md)
-* [Check the clipboard content](examples/check-the-clipboard-content.md)
-* [Choose images from the gallery](examples/choose-images-from-the-gallery.md)
-* [Download and open a file](examples/download-and-open-a-file.md)
-* [Reset device state (Android)](examples/reset-device-state-android.md)
-* [Get the last matching element](examples/get-the-last-matching-element.md)
-* [Custom scrolling for screen fragments](examples/use-scrolluntilvisible-for-fragments.md)
-* [Automate Android Contacts Flow](examples/automate-android-contacts-flow.md)
-* [Automating Facebook Sign-Up (Android)](examples/automating-facebook-sign-up-android.md)
-* [Wikipedia on Android with Maestro](examples/wikipedia-on-android-with-maestro.md)
-* [Implementing the Page Object Model (POM)](examples/implementing-the-page-object-model-pom.md)
