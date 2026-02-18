@@ -24,6 +24,8 @@ This command is a no-op on web. It has no effect when running web tests.
 Maestro has updated the `hideKeyboard` command to verify that the keyboard is actually hidden. If the system fails to dismiss the keyboard, the command will now fail the test.
 
 **This behavior is currently only available on Maestro Cloud.** It will be released to Maestro CLI and Maestro Studio soon.
+
+If your tests start failing after this release, use the [workaround ](hidekeyboard.md#workarounds)described in the documentation.
 {% endhint %}
 
 ### Implementation details
