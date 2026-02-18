@@ -203,15 +203,13 @@ After pasting, click **Run Locally**. Watch your virtual device execute the step
 
 While this QuickStart focuses on manual YAML, Maestro Studio offers three interactive ways to build your test:
 
+* **Inspect Screen**: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands.
 * **Insert Command**: Click the **Insert Command** button in the IDE to choose from a list of standard actions.
 * **Manual Entry**: Type commands directly into the YAML editor for precise control.
-* **Inspect Screen**: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands.
 
-#### **Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
 
-:point\_right:**Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
 
-<i class="fa-hand-point-right">:hand-point-right:</i>**Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
+<i class="fa-hand-point-right">:hand-point-right:</i> **Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
 {% endhint %}
 
 ### Interactive Flow authoring
