@@ -17,7 +17,7 @@ To get up and running with the Maestro CLI, follow these foundational steps:
 3. [Maestro CLI reference](maestro-cli-commands-and-options.md): A complete list of all global options and subcommands.
 
 {% hint style="info" %}
-If you are using WSL and encounter issues running tests, see the [Troubleshooting](troubleshooting-wsl2-and-android-connections.md) page for additional guidance.
+If you are using WSL and encounter issues running tests, see the [Troubleshooting](/broken/pages/5QVQrTAL6a5OzHx1rpyp) page for additional guidance.
 {% endhint %}
 
 ### Maestro CLI features
