@@ -136,6 +136,27 @@ The `hideKeyboard` command does not always dismiss the keyboard.
 
 iOS does not provide a native API to hide the keyboard. Maestro attempts to dismiss it by scrolling from the center of the screen, which is not always reliable.
 
+{% hint style="success" %}
+#### Update
+
+Maestro has updated the `hideKeyboard` command to verify that the keyboard is actually hidden. If the system fails to dismiss the keyboard, the command will now fail the test.
+
+**This behavior is currently only available on Maestro Cloud.** It will be released to Maestro CLI and Maestro Studio soon.
+
+If your tests start failing after this release, replace the command:
+
+```yaml
+- hideKeyboard
+```
+
+With tapping on a non-interactive element:
+
+```yaml
+# Instead of hideKeyboard, tap a safe area
+- tapOn: "Header Title"
+```
+{% endhint %}
+
 #### **Workaround**
 
 Use `tapOn` with the `point` parameter to tap on a non-tappable area of the screen (for example, above or beside the keyboard), mimicking how a user would dismiss it.
