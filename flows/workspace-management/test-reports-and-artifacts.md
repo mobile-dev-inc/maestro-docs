@@ -18,7 +18,7 @@ However, you can customize this location for better organization in your CI envi
 {% tabs %}
 {% tab title="Maestro CLI" %}
 ```bash
-maestro test . --test-output-dir=build/maestro-results
+maestro test --test-output-dir=build/maestro-results .
 ```
 {% endtab %}
 
@@ -38,7 +38,7 @@ The CLI flag always overrides the `config.yaml` setting, which in turn overrides
 
 ### Generating reports
 
-Maestro supports industry-standard formats to ensure compatibility with tools like Jenkins, GitHub Actions, and Azure DevOps.
+Maestro supports industry-standard formats to ensure compatibility with tools like Jenkins, GitHub Actions, and Azure DevOps, as well as most Testcase Management Systems.
 
 {% hint style="info" %}
 #### CLI-dependent
@@ -50,12 +50,12 @@ It is not possible to define report generation directly in the `config.yaml` fil
 
 #### **JUnit (XML) reports**
 
-JUnit is the standard for CI/CD integration. To generate the report, use the `--format junit` flag.
+JUnit is the standard for CI/CD integration and for test reporting. To generate a JUnit report, use the `--format junit` flag.
 
-If you do not specify an explicit output file using the `--output` flag, Maestro will generate a `report.xml` file in your current working directory. Note that these reports are not included in the `--test-output-dir` or `--debug-output` folders by default.
+You can specify an output file using the `--output` flag. If omitted, Maestro will generate a `report.xml` file in your current working directory. Note that these reports are not included in the `--test-output-dir` or `--debug-output` folders.
 
 ```bash
-maestro test . --format junit --output build/report.xml
+maestro test --format junit --output build/report.xml .
 ```
 
 #### **HTML reports**
@@ -63,7 +63,7 @@ maestro test . --format junit --output build/report.xml
 HTML reports provide a human-readable summary, including screenshots of failed steps. Similar to JUnit, use the `--output` flag to define a specific destination.
 
 ```bash
-maestro test . --format html --output build/report.html
+maestro test --format html --output build/report.html .
 ```
 
 #### Custom properties
