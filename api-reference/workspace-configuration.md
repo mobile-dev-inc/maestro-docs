@@ -46,7 +46,7 @@ Platform-specific settings allow you to optimize the environment for Android or 
 
 #### Maestro cloud configuration
 
-These properties are used only when running tests on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/).
+These properties are used only when running tests on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/maestro-cloud-overview).
 
 | **Key**                          | **Description**                                                                                                                                                                                                   |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
