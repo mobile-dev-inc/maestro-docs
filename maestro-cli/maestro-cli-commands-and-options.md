@@ -78,6 +78,7 @@ Run tests on your local device or emulator.
 | `--headless`                        | (Web only) Run the tests in headless mode.                                                                   |
 | `--include-tags=<includeTags>`      | List of tags. Only flows containing these tags will be run.                                                  |
 | `--output=<output>`                 | Specify the output destination.                                                                              |
+| `--screen-size=<width>x<height>`    | Specify the dimensions of the headless browser, e.g. 1920x1080. Web only.                                    |
 | `-s`, `--shards=<count>`            | Number of parallel shards to distribute tests across.                                                        |
 | `--shard-all=<shardAll>`            | Run all the tests across N connected devices.                                                                |
 | `--shard-split=<shardSplit>`        | Run the tests across N connected devices, splitting the tests evenly across them.                            |
