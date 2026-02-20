@@ -4,7 +4,7 @@ description: Run an external JavaScript file and capture its output.
 
 # runScript
 
-The `runScript` command executes a specified JavaScript file. The script can access environment variables and set [output](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-outputs) values for subsequent commands in the flow.
+The `runScript` command executes a specified JavaScript file. The script can access environment variables and set [output](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/manage-data-and-states) values for subsequent commands in the flow.
 
 ### Parameters
 
@@ -99,8 +99,8 @@ If you do not include the script files in the upload, the execution fails with a
 ### Related content
 
 * [JavaScript overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-overview): Start exploring how to use JavaScript in your tests.
-* [JavaScript outputs](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/javascript-outputs): Learn how to store and consume JavaScript outputs in Maestro flows.
+* [JavaScript outputs](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/manage-data-and-states): Learn how to store and consume JavaScript outputs in Maestro flows.
 * [Parameters](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants): Learn how to define and use parameters in flows to make them reusable.
-* [Constants](/broken/spaces/mS3lsb9jRwfRHqddeRXG/pages/DLtBiFLCJpsE4uxGnPNx): Learn how to define constant values and reuse them across your flows.
+* [Constants](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants): Learn how to define constant values and reuse them across your flows.
 * [Nested flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/nested-flows): Learn how to compose flows by calling one flow from another.
 * [Conditional execution](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/conditions): Learn how to control flow execution using conditions and branching logic.
