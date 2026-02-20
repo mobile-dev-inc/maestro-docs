@@ -18,7 +18,7 @@ If you expect an element to take longer than 7 seconds to appear, use the [`exte
 
 The `assertVisible` command uses a selector to identify the target UI element. You can specify the selector as a single string (shorthand for the `text` property) or as a YAML object with multiple properties.
 
-The following table lists common selector properties. For a complete list of all available selectors, see the [Selectors](https://docs.maestro.dev/api-reference/selectors) documentation.
+The following table lists common selector properties. For a complete list of all available selectors, see the [Selectors](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors) documentation.
 
 | Selector   | Description                                                            |
 | ---------- | ---------------------------------------------------------------------- |
