@@ -4,7 +4,9 @@ description: >-
   text-based matching and semantics over testTag for refactoring resilience.
 ---
 
-# Jetpack
+# Jetpack Compose
+
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Maestro follows a fundamental principle: **UI-level automation without framework intrusion**. Unlike instrumentation-based tools such as Espresso or Robolectric, which execute inside the app process and depend on framework-specific APIs, Maestro operates externally using Android’s system automation interfaces. This allows Maestro to perform reliable black-box testing regardless of whether your UI is implemented with XML Views, Jetpack Compose, or other UI frameworks.
 
