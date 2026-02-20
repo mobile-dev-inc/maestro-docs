@@ -43,8 +43,8 @@ You can pass these subcommands with the Maestro CLI:
 | ------------------ | ------------------------------------------------------------------------------------ |
 | `bugreport`        | Send a bug report.                                                                   |
 | `chat`             | Use Maestro GPT to help you with the apps and tests.                                 |
-| `cloud`            | Upload your Fflows to Maestro Cloud.                                                 |
-| `download-samples` | Download sample Fflows and sample apps for running with the Maestro CLI.             |
+| `cloud`            | Upload your Flows to Maestro Cloud.                                                  |
+| `download-samples` | Download sample Flows and sample apps for running with the Maestro CLI.              |
 | `driver-setup`     | Setup Maestro drivers for your device.                                               |
 | `login`            | Login into Maestro Cloud.                                                            |
 | `logout`           | Logout from Maestro Cloud.                                                           |
