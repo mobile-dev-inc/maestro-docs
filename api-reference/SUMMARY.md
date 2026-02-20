@@ -5,6 +5,7 @@
   * [addMedia](commands-available/addmedia.md)
   * [assertNoDefectsWithAI](commands-available/assertnodefectswithai.md)
   * [assertNotVisible](commands-available/assertnotvisible.md)
+  * [assertScreenshot](commands-available/assertscreenshot.md)
   * [assertTrue](commands-available/asserttrue.md)
   * [assertVisible](commands-available/assertvisible.md)
   * [assertWithAI](commands-available/assertwithai.md)
