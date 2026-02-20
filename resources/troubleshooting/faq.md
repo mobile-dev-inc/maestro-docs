@@ -201,7 +201,7 @@ Always verify that `adb devices` returns a valid device ID in your WSL2 terminal
 
 #### Still having issues?
 
-If you are not using WSL2 and are seeing different errors, join the `#maestro-questions` channel in the Maestro [Slack community](https://maestrodev.typeform.com/to/FelIEe8A).
+If you are not using WSL2 and are seeing different errors, join the `#maestro-questions` channel in the Maestro [Slack community](https://slack.maestro.dev).
 
 #### &#xD;
 

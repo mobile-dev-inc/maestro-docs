@@ -2,7 +2,7 @@
 
 * [maestro.dev](https://www.maestro.dev)
 * [Star us on GitHub](https://github.com/mobile-dev-inc/maestro)
-* [Join our Slack](https://maestrodev.typeform.com/to/FelIEe8A?typeform-source=maestro.dev)
+* [Join our Slack](https://slack.maestro.dev)
 
 ## Get Started
 
