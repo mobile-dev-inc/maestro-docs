@@ -18,7 +18,7 @@ However, you can customize this location for better organization in your CI envi
 {% tabs %}
 {% tab title="Maestro CLI" %}
 ```bash
-maestro test --test-output-dir=build/maestro-results .
+maestro test --test-output-dir=build/maestro-results ./e2e
 ```
 {% endtab %}
 
@@ -55,15 +55,18 @@ JUnit is the standard for CI/CD integration and for test reporting. To generate 
 You can specify an output file using the `--output` flag. If omitted, Maestro will generate a `report.xml` file in your current working directory. Note that these reports are not included in the `--test-output-dir` or `--debug-output` folders.
 
 ```bash
-maestro test --format junit --output build/report.xml .
+maestro test --format junit --output build/report.xml ./e2e
 ```
 
 #### **HTML reports**
 
 HTML reports provide a human-readable summary, including screenshots of failed steps. Similar to JUnit, use the `--output` flag to define a specific destination.
 
+For simple reports, use the `html` format. There's a more detailed report available with `html-detailed` that includes steps.
+
 ```bash
-maestro test --format html --output build/report.html .
+maestro test --format html --output build/report.html ./e2e
+maestro test --format html-detailed --output build/detailed-report.html ./e2e
 ```
 
 #### Custom properties

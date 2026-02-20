@@ -10,7 +10,7 @@ When managing multiple simulators, emulators, or physical devices, Maestro needs
 
 ### Start a device
 
-Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to approximate the environment hosted on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/), ensuring your Flows are compatible when you scale up.
+Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to approximate the environment hosted on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/maestro-cloud-overview), ensuring your Flows are compatible when you scale up.
 
 To view all available options and configurations available, run:
 
@@ -150,6 +150,14 @@ maestro test --device "emulator-5554,emulator-5556" --shard-split 2 ./myTests
 
 To use these flags, you must have the required number of devices already booted and ready. If you request 3 shards but only 2 devices are connected, Maestro will return an error.
 {% endhint %}
+
+#### Screenshots when sharding
+
+When sharding, you're using the same workspace on multiple devices at the same time. Taking a screenshot with the same name will cause overwriting. Look at the available environment variables to differentiate.
+
+```yaml
+- takeScreenshot: "LoginScreen-shard_${MAESTRO_SHARD_INDEX}-device_${MAESTRO_DEVICE_UDID}.png"
+```
 
 #### Related content
 

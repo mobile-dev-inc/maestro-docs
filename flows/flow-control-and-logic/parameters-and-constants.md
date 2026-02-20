@@ -133,9 +133,12 @@ env:
 
 Maestro provides a set of built-in parameters that are available in all flows.
 
-| Parameter          | Description                                            |
-| ------------------ | ------------------------------------------------------ |
-| `MAESTRO_FILENAME` | The filename of the current flow (e.g., `login.yaml`). |
+| Parameter             | Description                                                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MAESTRO_FILENAME`    | The filename of the current flow (e.g., `login.yaml`).                                                                                         |
+| `MAESTRO_DEVICE_UDID` | The identifier for the device under test                                                                                                       |
+| `MAESTRO_SHARD_ID`    | Identifies the shard this test is running on. Starts counting at 1, and defaults to 1 when not using [sharding](specify-and-start-devices.md). |
+| `MAESTRO_SHARD_INDEX` | Identifies the shard this test is running on. Starts counting at 0, and defaults to 0 when not using [sharding](specify-and-start-devices.md). |
 
 ### Next steps
 
