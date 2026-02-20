@@ -1,5 +1,6 @@
 # Table of contents
 
+* [System status](https://status.mobile.dev/)
 * [Maestro Cloud overview](README.md)
 * [Run tests on Maestro Cloud](run-tests-on-maestro-cloud.md)
 * [Build your app for the cloud](build-your-app-for-the-cloud.md)
