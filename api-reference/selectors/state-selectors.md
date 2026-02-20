@@ -20,7 +20,7 @@ All state selectors accept a boolean value (`true` or `false`).
 {% hint style="success" %}
 #### Usage tips
 
-State Selectors are most effective when combined with [Core Selectors](https://www.google.com/search?q=core-selectors). For example, finding a specific button that is also enabled: `tapOn: { text: "Next", enabled: true }`.
+State Selectors are most effective when combined with [Core Selectors](core-selectors.md). For example, finding a specific button that is also enabled: `tapOn: { text: "Next", enabled: true }`.
 {% endhint %}
 
 ### `enabled`
