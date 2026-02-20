@@ -146,4 +146,4 @@ Access the [app-locales-and-device-timezones.md](../../environment-configuration
 
 #### Next steps
 
-* [Outputs and triggers](https://www.google.com/search?q=./outputs-and-triggers.md): Learn how to access build results and configure CI triggers.
+* [Outputs and triggers](outputs-and-triggers.md): Learn how to access build results and configure CI triggers.
