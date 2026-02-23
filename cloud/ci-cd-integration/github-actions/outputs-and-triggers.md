@@ -64,7 +64,7 @@ In order to access these variables you can use the following approach:
 
 ```yaml
 - id: upload
-  uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+  uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'

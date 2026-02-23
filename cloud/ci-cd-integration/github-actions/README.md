@@ -46,7 +46,7 @@ Add the following step to your workflow `.yaml` file. This basic configuration u
 
 ```yaml
 - name: Run Maestro Cloud
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_API_KEY }}
     project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
@@ -76,7 +76,7 @@ jobs:
           java-version: 11
           distribution: 'temurin'
       - run: ./gradlew assembleDebug
-      - uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+      - uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
         with:
           api-key: ${{ secrets.MAESTRO_API_KEY }}
           project-id: ${{ secrets.MAESTRO_PROJECT_ID }}

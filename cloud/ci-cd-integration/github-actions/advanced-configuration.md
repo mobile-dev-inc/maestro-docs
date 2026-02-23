@@ -13,7 +13,7 @@ Once you have the basics running, you can customize how Maestro Cloud executes y
 By default, the action looks for a `.maestro` folder in the root of your repository. If your Flows are located elsewhere, use the `workspace` argument.
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
@@ -32,7 +32,7 @@ Maestro Cloud automatically names your upload based on the context:
 To override this manually, use the `name` argument:
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
@@ -49,7 +49,7 @@ When running in async mode, the action will not fail if tests fail, and output v
 {% endhint %}
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
@@ -60,7 +60,7 @@ When running in async mode, the action will not fail if tests fail, and output v
 If you want to wait for results but need more time than the default 30 minutes, use the `timeout` argument (in minutes).
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
@@ -73,7 +73,7 @@ If you want to wait for results but need more time than the default 30 minutes, 
 You can pass environment variables to your Maestro Flows (accessible via `${env.VARIABLE_NAME}` in your YAML flows) using the `env` argument. Use a multiline string for multiple variables.
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
@@ -93,7 +93,7 @@ You can use [Tags](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-mana
 Values can be single tags or comma-separated lists.
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
@@ -108,13 +108,13 @@ If you have a workflow where you want to run multiple distinct test suites again
 
 ```yaml
 - id: upload
-  uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+  uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
     app-file: app.zip
 
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
@@ -134,7 +134,7 @@ To run your tests on a device with a specific locale (default is `en_US`), use t
 The following code snippet displays an example:
 
 ```yaml
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.1
+- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
     project-id: 'proj_01example0example1example2'
