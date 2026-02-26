@@ -27,3 +27,11 @@ The following example retries tapping a button up to three times. If the process
       - tapOn:
           id: 'button-that-might-not-be-here-yet'
 ```
+
+
+
+{% hint style="info" %}
+**Note:** It's an anti-pattern to wrap large parts of your flow in a retry block. You could hide genuine app flakiness, like a button that only works 50% of the time.&#x20;
+
+Wrapping the _entire_ flow in a retry command may give unpredictable results.
+{% endhint %}
