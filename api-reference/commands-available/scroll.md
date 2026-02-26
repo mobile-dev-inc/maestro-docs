@@ -1,5 +1,5 @@
 ---
-description: Scroll the screen up, down, left, or right by a specified amount.
+description: A simple vertical scroll to move down the screen to see the content below
 ---
 
 # scroll
@@ -16,4 +16,5 @@ The command takes no arguments.
 
 #### How it works
 
-`scroll` runs an upward [swipe](swipe.md) from the center of the screen (`start: 50%, 50%`; `end: 50%, 10%`). It is equivalent to `swipe: direction: UP`. The swipe uses a per-platform duration: 333 ms on iOS and 400 ms on Android.
+On a mobile device, the the `scroll` command performs an upward [swipe](swipe.md) from the center of the screen to 10% from the top. It is equivalent to a `swipe` with `direction: UP`.
+
