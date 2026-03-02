@@ -29,12 +29,6 @@ When you configure `executionOrder`, Maestro will:
 1. First, run the flows listed in `flowsOrder` sequentially, in the specified order.
 2. After that sequence completes, run any discovered Flows that are not included in `flowsOrder` in a non-deterministic order.
 
-{% hint style="info" %}
-#### Execution environment
-
-Sequential execution is designed for **local test runs only**. On [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/), tests are automatically parallelized across multiple virtual devices to provide the fastest possible feedback.&#x20;
-{% endhint %}
-
 #### Handling failures
 
 The `continueOnFailure` flag determines how the sequence behaves if a step fails:
