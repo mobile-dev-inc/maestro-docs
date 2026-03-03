@@ -16,6 +16,7 @@
 * [Test in different locales](flow-control-and-logic/test-in-different-locales/README.md)
   * [Locales supported by Maestro](flow-control-and-logic/test-in-different-locales/locales-supported-by-maestro.md)
 * [Permissions](flow-control-and-logic/permissions.md)
+* [Labeling and error handling](flow-control-and-logic/labeling-and-error-handling.md)
 * [Detect Maestro](flow-control-and-logic/detect-maestro.md)
 
 ## JavaScript
