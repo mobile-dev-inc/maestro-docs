@@ -1,4 +1,7 @@
 ---
+description: >-
+  Configure label and optional in Maestro to improve test reporting,
+  documentation, and resilient error handling for UI flows.
 hidden: true
 ---
 
