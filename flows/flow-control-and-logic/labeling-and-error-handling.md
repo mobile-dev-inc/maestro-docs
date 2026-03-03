@@ -32,7 +32,7 @@ The following code snippet shows how you can use labels to improve the test repo
     label: "Navigate through the onboarding tutorial"
 ```
 
-If you use labels, the output will be more clear to read and understand:
+If you use labels, the output will be clearer to read and understand:
 
 ```shellscript
 ✅ Input text "super-secret-password-123" ## Standard output
@@ -47,7 +47,7 @@ While labels hide sensitive text from the UI and console summaries, the actual v
 
 By default, Maestro follows a "fail-fast" philosophy, which means that if a command fails to find an element or execute an action, the Flow stops immediately. The `optional: true` attribute overrides this, allowing the test to continue even if a specific step fails.
 
-Some common use cases to use `optional` include:
+Some common use cases for `optional` include:
 
 * **Non-critical UI**: Verifying elements that don't block the user journey, such as a "new feature" badge or a footer link.
 * **Transient content**: Handling banners, pop-ups, or A/B test variations that might only appear for specific users or regions.
@@ -74,7 +74,7 @@ If an optional command fails, it is marked with a warning icon in the output, bu
 Maestro uses the following rules to define the default value of `optional` for the available commands:
 
 * Standard Commands: Default to `optional: false`.
-* AI Commands: Often default to `optional: true` due to the probabilistic nature of the model.
+* AI Commands: Commands such as [`assertNoDefectsWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertnodefectswithai) and [`assertWithAI`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/assertwithai) default to `optional: true` due to their probabilistic nature.
 
 {% hint style="info" %}
 While `optional` can be added to any command, it has no practical effect on actions that cannot technically "fail" to execute, such as `back`, `stopRecording`, or `clearState`.
