@@ -46,16 +46,15 @@ Platform-specific settings allow you to optimize the environment for Android or 
 
 #### Maestro cloud configuration
 
-These properties are used only when running tests on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/maestro-cloud-overview).
+These properties are used only when running tests on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme).
 
-| **Key**                          | **Description**                                                                                                                                                                                                   |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `baselineBranch`                 | Defines the source-of-truth branch (e.g., `main`) for PR comparisons.                                                                                                                                             |
-| `disableAnimations`              | <p>(<strong>Cloud-only)</strong>. Disables system-level animations to prevent flakiness. <br><br>This only affects system-level animations. Custom animations like those powered by Lottie won't be disabled.</p> |
-| `notifications`                  | Configures automated alerts upon test completion.                                                                                                                                                                 |
-| `notifications.email.enabled`    | Set to `true` to enable email notifications.                                                                                                                                                                      |
-| `notifications.email.recipients` | A list of email addresses to receive the test reports.                                                                                                                                                            |
-| `notifications.slack.endpoint`   | The Webhook URL for posting results directly to a Slack channel.                                                                                                                                                  |
+| **Key**                          | **Description**                                                       |
+| -------------------------------- | --------------------------------------------------------------------- |
+| `baselineBranch`                 | Defines the source-of-truth branch (e.g., `main`) for PR comparisons. |
+| `notifications`                  | Configures automated alerts upon test completion.                     |
+| `notifications.email.enabled`    | Set to `true` to enable email notifications.                          |
+| `notifications.email.recipients` | A list of email addresses to receive the test reports.                |
+| `notifications.slack.endpoint`   | The Webhook URL for posting results directly to a Slack channel.      |
 
 ### Usage example
 
