@@ -34,7 +34,7 @@ Or you can use `homebrew` by running the commands:
 
 ```bash
 brew tap mobile-dev-inc/tap
-brew install maestro
+brew install mobile-dev-inc/tap/maestro
 ```
 
 Run `maestro --help` to verify that the Maestro CLI is working properly.

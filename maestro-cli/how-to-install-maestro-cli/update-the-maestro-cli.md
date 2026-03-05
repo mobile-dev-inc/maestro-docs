@@ -34,7 +34,7 @@ If you used the Homebrew tap, update using the standard brew commands:
 
 ```bash
 brew update
-brew upgrade maestro
+brew upgrade mobile-dev-inc/tap/maestro
 ```
 
 #### Manual update (Windows)
