@@ -15,6 +15,7 @@ To get up and running with the Maestro CLI, follow these foundational steps:
 1. [Installation](how-to-install-maestro-cli/): Step-by-step instructions for installing the Maestro CLI on macOS, Windows, WSL, and Linux.
 2. [Run your first test](run-your-first-test-with-the-maestro-cli.md): A hands-on guide to writing and executing your first Flow on an Android emulator.
 3. [Maestro CLI reference](maestro-cli-commands-and-options.md): A complete list of all global options and subcommands.
+4. [Environment variables](environment-variables.md): A list of environment variables you can set to change the Maestro behaviour.
 
 {% hint style="info" %}
 If you are using WSL and encounter issues running tests, see the [Troubleshooting](/broken/pages/5QVQrTAL6a5OzHx1rpyp) page for additional guidance.
