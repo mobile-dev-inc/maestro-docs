@@ -40,26 +40,16 @@ Ensure the file is named exactly `config.yaml`.
 {% endstep %}
 
 {% step %}
-#### Set the global environment variables
+#### Configure where flows are stored
 
-Use the `env` block to define data that changes across environments (staging vs. production, for example). This allows you to reference them in any Flow using the `${VARIABLE_NAME}` syntax without hardcoding secrets.
+Use the `flows` block to define where in your repository the test flows are stored. Typically this will be a single line, but the config permits for a list of locations. Simple globbing syntax is permitted here, where `*` means the contents of a folder, but `**` includes all subfolders too.
 
 ```yaml
 # config.yaml
-env:
-    USERNAME: "test_user_01"
-    API_URL: "https://staging.api.com"
+flows:
+  - e2e/*
+  - smoke/**
 ```
-
-{% hint style="info" %}
-If you are using Maestro Studio, it provides an interface for managing [environment variables](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/environments-and-variables).
-{% endhint %}
-
-{% hint style="warning" %}
-**`appId` in configuration**
-
-The `appId` is defined at the **top of individual Flow files**, not within the `config.yaml`. While Maestro Studio may prompt for an ID, it does not currently read this value from configuration files.
-{% endhint %}
 {% endstep %}
 
 {% step %}
