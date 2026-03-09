@@ -56,6 +56,24 @@ Below are the known issues that affect Maestro when testing Android apps.
 
 <details>
 
+<summary>Failed to activate device</summary>
+
+#### What is happening
+
+When testing on a physical Android device, you may see the error `Failed to active device`. This seems more prevalent on Redmi devices.
+
+#### Workaround
+
+To resolve it:
+
+* Open **Developer Settings** (where you enabled ADB debugging).
+* Tap **Reset to default values** between 5 and 8 times
+* Tap **Disable permission monitoring** option when it appears
+
+</details>
+
+<details>
+
 <summary>Text input is not supported for Unicode</summary>
 
 #### What is happening
