@@ -77,7 +77,7 @@ maestro test --env APP_ID=com.example.app.ios flow.yaml
 
 ### Parallelization for iOS
 
-Scaling iOS tests locally can be difficult due to macOS hardware requirements. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
+Scaling iOS tests locally can be difficult due to macOS hardware requirements. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) provides instant access to a fleet of iOS Simulators, allowing you to run your entire suite in parallel.
 
 * **Speed**: Reduce test time drastically.
 * **Reliability**: Eliminate "flaky" results caused by local machine resource contention.
@@ -91,4 +91,4 @@ If you already know which Maestro solution you are going to use, access the rele
 
 * [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)

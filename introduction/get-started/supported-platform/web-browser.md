@@ -6,7 +6,7 @@ description: >-
 
 # Web Browsers
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 Maestro extends its one framework to rule them all philosophy to the desktop browser. By using the same declarative YAML syntax you use for mobile, you can automate web applications, enabling unified end-to-end testing across your entire product surface.
 
@@ -67,4 +67,4 @@ To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3
 
 * [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)

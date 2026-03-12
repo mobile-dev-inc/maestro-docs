@@ -28,7 +28,7 @@ To learn more about its technical capabilities and orchestration features, check
 
 Maestro Cloud is a managed execution solution designed to scale your testing infrastructure without the overhead of managing local device farms. It leverages the Maestro CLI to run your tests on a distributed cloud of virtual devices, enabling massive parallelization and providing fast and reliable feedback loops for production-ready reliability.
 
-Explore how to scale your regression suites in the [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) documentation.&#x20;
+Explore how to scale your regression suites in the [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) documentation.&#x20;
 
 ### Which solution should I use?
 
@@ -48,7 +48,7 @@ Most teams follow a three-stage journey to automation success:
 
 1. **Creation**: Start with [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/) to visually build and debug your first [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/).
 2. **Automation**: Use the[ Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/) to run those Flows locally and integrate them into your basic development workflow.
-3. **Scaling**: Once your test suite grows, transition to [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) to run those same tests in parallel for instant feedback on every Pull Request.
+3. **Scaling**: Once your test suite grows, transition to [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) to run those same tests in parallel for instant feedback on every Pull Request.
 
 ### Next steps
 
@@ -56,6 +56,6 @@ If you already know the Maestro solution you are going to use, access the desire
 
 * [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)
 
 If you don't know how to create tests with Maestro, access the [QuickStart](quickstart.md) guide to get up and running in minutes.

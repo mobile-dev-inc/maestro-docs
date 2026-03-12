@@ -85,7 +85,7 @@ Once your device is running and Maestro Studio is open, you can create your firs
 * **Name**: Name for your YAML file.
 * **App Id**: From the dropdown menu, select the App Id for testing. For this QuickStart, select **com.apple.MobileAddressBook** from the dropdown menu.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

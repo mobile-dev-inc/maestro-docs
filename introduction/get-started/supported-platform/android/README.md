@@ -4,7 +4,7 @@ description: Configure Maestro for Android app testing with emulators or physica
 
 # Android
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 Maestro provides a high-level abstraction for Android testing by simulating end-user interactions at the presentation layer. Unlike other frameworks, Maestro doesn't live inside your app, it pilots the device from the outside.
 
@@ -72,7 +72,7 @@ maestro test --env APP_ID=com.example.android flow.yaml
 
 ### Maestro Cloud
 
-When your suite grows, local sequential execution becomes a bottleneck. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) spins up multiple virtual Android devices to run your tests in parallel.
+When your suite grows, local sequential execution becomes a bottleneck. [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) spins up multiple virtual Android devices to run your tests in parallel.
 
 | **Feature**         | **Local Android**  | **Maestro Cloud**                  |
 | ------------------- | ------------------ | ---------------------------------- |
@@ -88,6 +88,6 @@ If you already know the Maestro solution you are going to use, access the desire
 
 * [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)
 
 If you are new to the platform, follow the [QuickStart](../../quickstart.md) guide to get up and running in minutes.

@@ -106,4 +106,4 @@ To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3
 
 * [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/maestro-cloud-overview)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)

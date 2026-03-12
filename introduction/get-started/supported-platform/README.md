@@ -6,7 +6,7 @@ description: >-
 
 # Supported platforms
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Maestro operates on the principle of UI-layer automation rather than code instrumentation. Like a test driver interacting with any vehicle through its controls (steering wheel, pedals), Maestro interfaces with applications through their visual and accessibility layers, regardless of the underlying technology stack.
 

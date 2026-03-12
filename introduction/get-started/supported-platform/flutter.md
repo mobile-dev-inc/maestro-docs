@@ -6,7 +6,7 @@ description: >-
 
 # Flutter
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 Maestro treats Flutter as a first-class citizen, supporting both pure and hybrid ([add-to-app](https://docs.flutter.dev/add-to-app)) mobile applications. Unlike internal tools that inject Dart code, Maestro interacts with the device elements that Flutter exposes through its Semantics Tree, ensuring your tests reflect the actual experience of an end-user.
 
@@ -103,4 +103,4 @@ To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3
 
 * [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
 * [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
-* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/)
+* [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)
