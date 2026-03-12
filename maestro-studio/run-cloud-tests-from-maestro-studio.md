@@ -16,7 +16,7 @@ You need an account to take advantage of Maestro Cloud solution. Access [Maestro
 {% step %}
 ### Trigger a cloud runs
 
-After creating your Flows, you can initiate a [cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/) execution directly from the Studio interface in two ways:
+After creating your Flows, you can initiate a [cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) execution directly from the Studio interface in two ways:
 
 1. **Run All Tests**: Click the **Run on Cloud** button in the sidebar to execute all root-level Flows in your workspace.
 2. **Run a Single Flow**: Open a specific test file in the editor and click **Run on Cloud** at the top of the file to execute only that specific test.
