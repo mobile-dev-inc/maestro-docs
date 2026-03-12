@@ -29,7 +29,7 @@ Any variable prefixed with `MAESTRO_` will be [added as environment variable](ht
 
 3. Open the **Workflow Editor** and search for "Maestro" in the Bitrise step library. Add the step after your application binary build step.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 4. **Configure the Step**:
    * **API Key**: Enter your secret variable (e.g., `CLOUD_API_KEY`).

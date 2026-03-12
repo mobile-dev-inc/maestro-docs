@@ -9,7 +9,7 @@ description: >-
 Maestro Cloud has a integration with GitHub Actions that allows you to automate your mobile and web testing pipelines. By using the official [Maestro Cloud GitHub Action](https://github.com/marketplace/actions/maestro-cloud-upload-action), you can trigger tests on every push or pull request and view results directly in the Maestro Console.
 
 {% hint style="info" %}
-**Maestro Cloud Plan required.**&#x20;
+**Maestro Cloud Plan required.**
 
 GitHub Actions integration is available on the [Maestro Cloud Plan](https://signin.maestro.dev/sign-up).
 {% endhint %}
@@ -20,7 +20,7 @@ The following steps describe how to configure and use the GitHub Action to run M
 
 {% stepper %}
 {% step %}
-#### Add your API key secret
+**Add your API key secret**
 
 The GitHub Action requires an API key to authenticate with Maestro Cloud. You must expose your API key as a [GitHub Repository Secret](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets):
 
@@ -32,7 +32,7 @@ The GitHub Action requires an API key to authenticate with Maestro Cloud. You mu
 {% endstep %}
 
 {% step %}
-#### Add your Project ID
+**Add your Project ID**
 
 You can find your Project ID in the **Settings** section of the [Maestro Dashboard](https://app.maestro.dev/). Open the **Settings** menu and select the desired project to have access to the ID. While not a secret, you can also store it as a Repository Secret (e.g., `MAESTRO_PROJECT_ID`) for convenience.
 
@@ -40,7 +40,7 @@ You can find your Project ID in the **Settings** section of the [Maestro Dashboa
 {% endstep %}
 
 {% step %}
-### Update your action
+#### Update your action
 
 Add the following step to your workflow `.yaml` file. This basic configuration uploads your app and runs all Flows found in the `.maestro` directory.
 

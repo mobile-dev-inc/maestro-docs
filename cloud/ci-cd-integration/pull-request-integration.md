@@ -99,7 +99,7 @@ Maestro requires permission to update pull request statuses. To accomplish this,
 
 Once configured, open a pull request. The Maestro Cloud status check appears in the checks section. A passing check indicates all Flows ran successfully, while a failing check indicates that at least one Flow failed.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
