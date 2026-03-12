@@ -24,6 +24,12 @@ If you want to clear the state of a specific app by its ID, add the app ID:
 - clearState: app.id
 ```
 
+Or for a website, when testing on the web platform:
+
+```yaml
+- clearState: https://example.com
+```
+
 You can also add a `label` when invoking `clearState` to improve the readability of the report.
 
 ```yaml
@@ -52,4 +58,9 @@ On iOS, the `clearState` command causes Maestro to reinstall the entire app, res
 
 As described in [Stack Overflow](https://stackoverflow.com/a/56746729/7009800) discussion, it's also possible to  `xcrun simctl` to perform the same action.
 {% endtab %}
+
+{% tab title="Web" %}
+The command clears all browser data (cookies, local storage, etc.) for the [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) of the current web app, or of the provided web app URL.
+{% endtab %}
+
 {% endtabs %}

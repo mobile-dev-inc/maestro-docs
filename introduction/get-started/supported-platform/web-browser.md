@@ -51,6 +51,10 @@ maestro test example.yaml
 * **Flutter Web**: Just like Flutter Mobile, Flutter Web renders elements differently. You should use Semantics to make elements addressable. Refer to the [Flutter](https://docs.maestro.dev/platform-support/flutter) documentation for best practices.
 * [**Selectors**](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/how-to-use-selectors): Maestro prioritizes user-visible text. For complex web apps, using unique text labels or stable accessibility attributes is recommended to ensure your tests remain "refactoring resilient."
 
+### State Management
+
+By default, browser state (cookies, local storage, etc.) is retained between flows in the same test run. State can be cleared by [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) by using the [clearState](../../../api-reference/commands-available/clearstate.md) command or the `clearState` option of the [launchApp](../../../api-reference/commands-available/launchapp.md) command.
+
 ### Known limitations
 
 As this feature is in Beta, certain advanced browser configurations are not yet supported:
