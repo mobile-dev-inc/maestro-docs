@@ -65,7 +65,7 @@ On Android 12 and higher, web links open in a web browser by default. The `autoV
 
 On some iOS versions, the operating system shows a security confirmation dialog the first time an app is launched from a deep link.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="232"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="232"><figcaption></figcaption></figure>
 
 Accepting this prompt is a permanent choice for that Simulator and is not affected by clearing app state.&#x20;
 
