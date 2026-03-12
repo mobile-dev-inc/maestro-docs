@@ -78,7 +78,7 @@ You can use the [`inputRandomNumber`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9Y
     length: 8
 ```
 
-Another option is to use Faker. Use this option if you need to store the number in a variable or use it within a specific range, use the built-in [`faker`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/generate-synthetic-data) library via `evalScript`:&#x20;
+Another option is to use Faker. Use this option if you need to store the number in a variable or use it within a specific range, use the built-in [`faker`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/javascript/generate-synthetic-data) library via `evalScript`:
 
 ```yaml
 - evalScript: ${output.thisNumber = faker.expression("#{number.numberBetween '1' '10'}")}
@@ -142,7 +142,7 @@ To reduce total run time:
 
 When attempting to bridge the connection between WSL2 and Windows using `adb -a -P 5037 nodaemon server`, you may encounter `smart_sockets` errors. This typically indicates that port 5037 is already in use or a background ADB process is conflicting with your setup.
 
-#### Host environment cleanup (Windows)&#xD;
+**Host environment cleanup (Windows)**
 
 Before re-initializing the connection, you must isolate the environment on your Windows host.
 
@@ -154,14 +154,14 @@ Before re-initializing the connection, you must isolate the environment on your 
 2. Close Android Studio to prevent it from automatically restarting the ADB server with default settings. Keep the Android Emulator active.
 3. If `adb devices` shows the emulator as `offline` at this stage, proceed anyway; the status usually resolves once the bridge is established.
 
-#### Network and firewall configuration
+**Network and firewall configuration**
 
 WSL2 runs on a virtualized network. Your Windows firewall must be configured to allow this external traffic.
 
 * **Inbound Rule**: Create a rule in Windows Defender Firewall to allow TCP traffic on port 5037.
 * **Corporate Policies**: If using a managed work machine, ensure your administrator has not blocked local network socket binding.
 
-#### Initialize the global ADB daemon
+**Initialize the global ADB daemon**
 
 Open a PowerShell terminal and run the following command. Keep this window open, as closing it will terminate the connection bridge:
 
@@ -169,7 +169,7 @@ Open a PowerShell terminal and run the following command. Keep this window open,
 adb -a -P 5037 nodaemon server
 ```
 
-#### WSL2 client configuration&#xD;
+**WSL2 client configuration**
 
 Configure your WSL2 instance to look for the ADB server on your Windows host rather than its own local environment.
 
@@ -192,17 +192,17 @@ Configure your WSL2 instance to look for the ADB server on your Windows host rat
 The output should now list the emulator instance running on the Windows host.
 
 {% hint style="info" %}
-#### Maestro integration note
+**Maestro integration note**
 
 Maestro requires a stable ADB connection to orchestrate tests. If the Windows ADB daemon does not recognize the emulator before you start a Maestro Flow, the test will fail.
 
 Always verify that `adb devices` returns a valid device ID in your WSL2 terminal before running Maestro commands.
 {% endhint %}
 
-#### Still having issues?
+**Still having issues?**
 
 If you are not using WSL2 and are seeing different errors, join the `#maestro-questions` channel in the Maestro [Slack community](https://slack.maestro.dev).
 
-#### &#xD;
+
 
 </details>
