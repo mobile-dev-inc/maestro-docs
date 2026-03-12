@@ -12,7 +12,7 @@ To build scalable tests, you will utilize five pillars:
 
 #### **Selection**
 
-Identify UI elements with precision. Before building the test logic, you must master [how to use Selectors](../how-to-use-selectors.md) to ensure Maestro can reliably find and interact with the correct parts of your application screen.
+Identify UI elements with precision. Before building the test logic, you must master [how to use Selectors](how-to-use-selectors.md) to ensure Maestro can reliably find and interact with the correct parts of your application screen.
 
 #### **Modularity**
 

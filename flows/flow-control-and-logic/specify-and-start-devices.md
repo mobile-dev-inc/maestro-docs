@@ -10,7 +10,7 @@ When managing multiple simulators, emulators, or physical devices, Maestro needs
 
 ### Start a device
 
-Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to approximate the environment hosted on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/maestro-cloud-overview), ensuring your Flows are compatible when you scale up.
+Maestro allows you to create and launch Android emulators or iOS simulators directly from the CLI. These devices are configured to approximate the environment hosted on [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme), ensuring your Flows are compatible when you scale up.
 
 To view all available options and configurations available, run:
 
