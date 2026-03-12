@@ -153,7 +153,7 @@ To use these flags, you must have the required number of devices already booted 
 
 #### Screenshots when sharding
 
-When sharding, you're using the same workspace on multiple devices at the same time. Taking a screenshot with the same name will cause overwriting. Look at the available environment variables to differentiate.
+When sharding, you're using the same workspace on multiple devices at the same time. Taking a screenshot with the same name will cause overwriting. Look at the [available environment variables](parameters-and-constants.md#built-in-parameters) to differentiate.
 
 ```yaml
 - takeScreenshot: "LoginScreen-shard_${MAESTRO_SHARD_INDEX}-device_${MAESTRO_DEVICE_UDID}.png"
