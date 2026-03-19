@@ -14,22 +14,20 @@ These settings define the identity of your application and how Maestro discovers
 
 | Key                                                                                                               | Description                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `appId`                                                                                                           | Required. The unique identifier for your app. Use the Bundle ID for iOS, Package Name for Android, or the starting URL for Web.                        |
 | [`flows`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)                                                        | Glob patterns defining which files to include in a test suite. Defaults to `*` (only YAML files in the root folder). Use `**` for recursive discovery. |
-| `env`                                                                                                             | Global key-value pairs accessible as variables (e.g., `${MY_VAR}`) within your Flows.                                                                  |
 | [`testOutputDir`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts) | Custom directory where screenshots, logs, and metadata are saved. Defaults to `~/.maestro/tests/`.                                                     |
 
 #### Execution and filtering
 
 Use these keys to control the order and selection of tests during a suite run.
 
-| **Key**                                                                                                                        | **Description**                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| [`includeTags`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags)                   | Only executes Flows that contain at least one of these tags in their internal configuration.                                 |
-| [`excludeTags`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags)                   | Skips any Flows that contain one or more of these tags.                                                                      |
-| [`executionOrder`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution)                   | **(Local-only)**. A nested object used to force a specific sequence of Flows. This property does not apply to Maestro Cloud. |
-| [`executionOrder.continueOnFailure`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution) | If `false`, Maestro stops the sequential execution immediately if a Flow fails. Default is `true`.                           |
-| [`executionOrder.flowsOrder`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution)        | The ordered list of Flow names or filenames (without `.yaml`) to execute sequentially.                                       |
+| **Key**                                                                                                                        | **Description**                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| [`includeTags`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags)                   | Only executes Flows that contain at least one of these tags in their internal configuration.       |
+| [`excludeTags`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags)                   | Skips any Flows that contain one or more of these tags.                                            |
+| [`executionOrder`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution)                   | A nested object used to force a specific sequence of Flows.                                        |
+| [`executionOrder.continueOnFailure`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution) | If `false`, Maestro stops the sequential execution immediately if a Flow fails. Default is `true`. |
+| [`executionOrder.flowsOrder`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/sequential-execution)        | The ordered list of Flow names or filenames (without `.yaml`) to execute sequentially.             |
 
 #### Platform configuration
 
