@@ -6,10 +6,6 @@ description: Clear app data, cache, and preferences to reset to fresh install st
 
 Clears all data for a specified mobile application.
 
-{% hint style="warning" %}
-The `clearState` command is not available for Web.
-{% endhint %}
-
 ### Usage examples
 
 To clear the state of the current app, use add the `clearState` command alone.
