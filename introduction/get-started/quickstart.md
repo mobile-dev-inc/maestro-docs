@@ -21,7 +21,7 @@ Maestro requires a running target device to execute your tests. Use the tabs bel
 3. Click **Create Virtual Device (+)**, select a modern device (e.g., Pixel 8), and download a system image (API 31 or higher is recommended).
 
 {% hint style="info" %}
-Maestro currently supports **API Levels 29, 30, 31, 33, and 34**. API 35 and 36 support is arriving in Q1 2026.
+Maestro currently supports **API Levels 29, 30, 31, 33, and 34**. API 35 and 36 support is arriving in Q2 2026.
 {% endhint %}
 
 4. Finish the wizard and click the **Play** button to start the emulator.
