@@ -1,7 +1,7 @@
 ---
 description: >-
   Set Android API levels or iOS runtime versions and device models for Maestro
-  Cloud tests. Supports Android 10-14 and iOS 16-18.
+  Cloud tests. Supports Android 10-14 and iOS 16-24.
 ---
 
 # Configure the OS
@@ -12,23 +12,31 @@ Maestro Cloud allows you to test your application across multiple Android and iO
 **Maestro Cloud Plan required.** OS configuration options are available on the [Maestro Cloud Plan](https://maestro.dev/cloud).
 {% endhint %}
 
-### Android
+### Full list of supported Cloud devices
 
-You can specify the Android OS version (API level) using the `--android-api-level` flag when using Maestro Cloud.
+You can access the full list of supported Cloud devices and operating systems by using the following command:
 
 ```bash
-maestro cloud --android-api-level "<API_LEVEL>" --app-file "<APP_FILE>" --flows "<FLOWS>"
+maestro list-cloud-devices
+```
+
+### Android
+
+You can specify the Android OS version (API level) using the `--device-os` flag when using Maestro Cloud.
+
+```bash
+maestro cloud --device-os "<DEVICE_OS>" --app-file "<APP_FILE>" --flows "<FLOWS>"
 ```
 
 The following table lists the supported Android versions:
 
-| Android Version          | API Level |
-| ------------------------ | --------- |
-| Android 14               | 34        |
-| **Android 13 (Default)** | **33**    |
-| Android 12               | 31        |
-| Android 11               | 30        |
-| Android 10               | 29        |
+| Android Version          | Device OS / API Level |
+| ------------------------ | --------------------- |
+| Android 14               | android-34            |
+| **Android 13 (Default)** | **android-33**        |
+| Android 12               | android-31            |
+| Android 11               | android-30            |
+| Android 10               | android-29            |
 
 {% hint style="info" %}
 #### Reproducing Cloud runs locally
@@ -46,27 +54,27 @@ Maestro recommends specifying both the minor OS version and the device model. Us
 maestro cloud --device-os "<DEVICE_OS>" --device-model "<DEVICE_MODEL>" --app-file "<APP_FILE>" --flows "<FLOWS>"
 ```
 
-The following table lists the supported device models and their available iOS versions:
+The following table lists an example of the supported device models and their available iOS versions:
 
-| Device Model             | Supported iOS Versions       |
-| ------------------------ | ---------------------------- |
-| **iPhone-11**            | iOS-16-2, iOS-17-5, iOS-18-2 |
-| **iPhone-13-mini**       | iOS-18-2                     |
-| **iPhone-16**            | iOS-18-2                     |
-| **iPhone-16-Pro**        | iOS-18-2                     |
-| **iPhone-16-Pro-Max**    | iOS-18-2                     |
-| **iPad-10th-generation** | iOS-16-2, iOS-17-5, iOS-18-2 |
+| Device Model             | Supported iOS Versions                 |
+| ------------------------ | -------------------------------------- |
+| **iPhone-11**            | iOS-16-4, iOS-17-5, iOS-18-2, iOS-26-2 |
+| **iPhone-13-mini**       | iOS-18-2, iOS-26-2                     |
+| **iPhone-16**            | iOS-18-2, iOS-26-2                     |
+| **iPhone-17-Pro**        | iOS-26-2                               |
+| **iPhone-17-Pro-Max**    | iOS-26-2                               |
+| **iPad-10th-generation** | iOS-16-4, iOS-17-5, iOS-18-2, iOS-26-2 |
 
-For example, to run your flows on iOS 18.2 using an iPhone 16 Pro, use the following command:
+For example, to run your flows on iOS 26.2 using an iPhone 17 Pro, use the following command:
 
 ```bash
-maestro cloud --device-os "iOS-18-2" --device-model "iPhone-16-Pro" --app-file myapp.app --flows myflows/
+maestro cloud --device-os "iOS-26-2" --device-model "iPhone-17-Pro" --app-file myapp.app --flows myflows/
 ```
 
 {% hint style="info" %}
-#### Deprecated: `--ios-version` &#x20;
+#### Deprecated: `--ios-version`  & `--android-api-level`
 
-The `--ios-version` option is deprecated and will no longer be available. Use the `--device-os` and `--device-model` flags instead.
+The `--ios-version` and `--android-api-level` options are deprecated and will be removed in a future release. Use the `--device-os` and `--device-model` flags instead.
 
 
 
