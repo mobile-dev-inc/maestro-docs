@@ -16,23 +16,23 @@ You need an account to take advantage of Maestro Cloud solution. Access [Maestro
 {% step %}
 ### Trigger a cloud runs
 
-After creating your Flows, you can initiate a [cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) execution directly from the Studio interface in two ways:
+After creating your tests, you can initiate a [cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) execution directly from the Studio interface in two ways:
 
-1. **Run All Tests**: Click the **Run on Cloud** button in the sidebar to execute all root-level Flows in your workspace.
-2. **Run a Single Flow**: Open a specific test file in the editor and click **Run on Cloud** at the top of the file to execute only that specific test.
+1. **Run All Tests**: Click on the **Cloud tab**, and then click on the **Run All Tests** button to execute all root-level tests in your workspace.
+2. **Run a Single Test**: Open a specific test file in the editor and click on the **Cloud** tab, then click on **Run Test**.
 
-<figure><img src=".gitbook/assets/run-on-cloud (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/cloud.gif" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Configure the run
 
-Clicking **Run on Cloud** opens a configuration modal. You must complete the following required settings before launching the run:
+Clicking on **Cloud,** and then on **Run Test**, opens a configuration modal. You must complete the following required settings before launching the run:
 
 * **Device**: Select the specific device model and API level for your test (e.g., Pixel 6 - API 34).
 * **App Selection**: Select your application. If this is your first time testing the app, click the app selector and choose **Upload App File** to pick your `.apk` or `.app` bundle.
 
-<figure><img src=".gitbook/assets/configure-run-on-cloud.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2026-04-21 at 19.03.33.png" alt=""><figcaption></figcaption></figure>
 
 For more advanced testing scenarios, you can expand **More Options** to select:
 
@@ -40,7 +40,7 @@ For more advanced testing scenarios, you can expand **More Options** to select:
 * Project
 * Device Locale
 
-You can select an existing Environment, or create a new one. To create a new one, click **Manage Environments** to define tags (for filtering flows) and environment variables.
+You can select an existing Environment, or create a new one. To create a new one, click **Manage Environments** to define tags (for filtering tests) and environment variables.
 
 {% hint style="info" %}
 &#x20;For further information about tags, access [Test discovery and tags](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-discovery-and-tags "mention").
@@ -56,14 +56,12 @@ Use the **Device Locale** option to manually set the locale for the cloud device
 {% step %}
 ### Execute and monitor
 
-After defining your settings, click **Run Flow on Cloud**. Maestro Studio will package your flows and app binary, then upload them to the cloud infrastructure.
+After defining your settings, click **Run Test**. Maestro Studio will package your tests and app binary, then upload them to the cloud infrastructure.
 
 You can monitor the execution directly within the Maestro Studio output terminal:
 
-* **Real-time Updates**: The output terminal displays the upload status and the live progress of each flow.
-* **Success and Failure**: A summary shows how many tests passed or failed. If a flow fails, the specific error or failed assertion is displayed directly in the output terminal.
-
-<figure><img src=".gitbook/assets/run-on-cloud-sucess.png" alt=""><figcaption></figcaption></figure>
+* **Real-time Updates**: The output terminal displays the upload status and the live progress of each test.
+* **Success and Failure**: A summary shows how many tests passed or failed. If a testfails, the specific error or failed assertion is displayed directly in the output terminal.
 
 To deep-dive into a specific run, click the **View on Maestro Cloud** button in the output terminal. This opens the Maestro Cloud Console, where you can:
 
