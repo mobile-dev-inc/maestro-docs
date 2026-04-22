@@ -33,8 +33,8 @@ To add a new environment, follow these steps:
 
 <figure><img src=".gitbook/assets/enviroments (1).gif" alt=""><figcaption></figcaption></figure>
 
-5. Specify the **Included** and **Excluded** tags for this environment.
-6. Add your variables as **Key-Value** pairs.
+4. Specify the **Included** and **Excluded** tags for this environment.
+5. Add your variables as **Key-Value** pairs.
 
 {% hint style="success" %}
 #### Example

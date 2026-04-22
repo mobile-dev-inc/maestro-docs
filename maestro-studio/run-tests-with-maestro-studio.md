@@ -7,7 +7,7 @@ description: >-
 
 # Run tests with Maestro Studio
 
-Maestro Studio is a visual desktop app that simplifies mobile test automation. This guide covers how to install the application and use its interactive tools to build a contact-creation test without writing code from scratch.
+Maestro Studio is a visual desktop app that simplifies mobile test automation. This guide covers how to install the application and use its interactive tools to build a contact creation test without writing any code.
 
 ### Prerequisites&#x20;
 

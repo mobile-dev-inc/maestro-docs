@@ -7,7 +7,7 @@ description: >-
 
 # Maestro Studio overview
 
-Maestro Studio is the desktop app for writing, running, and debugging mobile UI tests visually. Connect a device, build your tests by interacting directly with your app, and run them without switching tools.
+With Maestro Studio you can connect a device, build your tests by interacting directly with your app, and run them without switching tools.
 
 ### Learn how to use Maestro Studio
 

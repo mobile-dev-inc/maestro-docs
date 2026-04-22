@@ -61,7 +61,7 @@ After defining your settings, click **Run Test**. Maestro Studio will package yo
 You can monitor the execution directly within the Maestro Studio output terminal:
 
 * **Real-time Updates**: The output terminal displays the upload status and the live progress of each test.
-* **Success and Failure**: A summary shows how many tests passed or failed. If a testfails, the specific error or failed assertion is displayed directly in the output terminal.
+* **Success and Failure**: A summary shows how many tests passed or failed. If a test fails, the specific error or failed assertion is displayed directly in the output terminal.
 
 To deep-dive into a specific run, click the **View on Maestro Cloud** button in the output terminal. This opens the Maestro Cloud Console, where you can:
 
