@@ -87,12 +87,8 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 
 <summary>Claude Desktop</summary>
 
-If you already added Maestro through the Claude Code CLI with user scope, Claude Desktop will pick it up automatically, so no extra setup is needed.
-
-Otherwise:
-
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. Open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
+2. In Claude Desktop, open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
 
     ```json
     {
@@ -109,6 +105,10 @@ Otherwise:
     ```
 
     The config file lives at `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS or `%APPDATA%\Claude\claude_desktop_config.json` on Windows. Claude Desktop launches from a minimal shell, so pass `JAVA_HOME` explicitly and use the full path to the `maestro` binary.
+
+{% hint style="info" %}
+The **Connectors** UI in Claude Desktop only supports remote MCP servers that use OAuth. Local stdio servers like Maestro must be added by editing `claude_desktop_config.json` directly.
+{% endhint %}
 
 </details>
 
