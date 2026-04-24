@@ -53,7 +53,7 @@ This assumes `maestro` is on your `PATH`. If it isn't, replace `"maestro"` with 
 2. Run:
 
     ```bash
-    claude mcp add maestro maestro mcp
+    claude mcp add maestro -- maestro mcp
     ```
 
 See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) for scope options (`--scope user`, `--scope project`, etc.).
@@ -130,7 +130,7 @@ Otherwise:
     {
         "mcpServers": {
             "maestro": {
-                "type": "stdio",
+                "type": "local",
                 "command": "maestro",
                 "args": ["mcp"]
             }
