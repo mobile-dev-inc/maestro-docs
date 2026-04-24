@@ -62,6 +62,29 @@ See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) 
 
 <details>
 
+<summary>Codex</summary>
+
+1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+2. Run:
+
+    ```bash
+    codex mcp add maestro -- maestro mcp
+    ```
+
+    Or add to `~/.codex/config.toml` manually:
+
+    ```toml
+    [mcp_servers.maestro]
+    command = "maestro"
+    args = ["mcp"]
+    ```
+
+See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
+
+</details>
+
+<details>
+
 <summary>Claude Desktop</summary>
 
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
@@ -82,6 +105,36 @@ See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) 
     ```
 
     The config file lives at `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS or `%APPDATA%\Claude\claude_desktop_config.json` on Windows. Claude Desktop launches from a minimal shell, so pass `JAVA_HOME` explicitly and use the full path to the `maestro` binary.
+
+</details>
+
+<details>
+
+<summary>GitHub Copilot CLI</summary>
+
+1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+2. In a Copilot CLI session, run `/mcp add` and follow the interactive form with:
+
+    * Name: `maestro`
+    * Type: `stdio`
+    * Command: `maestro`
+    * Args: `mcp`
+
+    Or add to `~/.copilot/mcp-config.json` manually:
+
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "type": "stdio",
+                "command": "maestro",
+                "args": ["mcp"]
+            }
+        }
+    }
+    ```
+
+See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers).
 
 </details>
 
@@ -137,59 +190,6 @@ See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
 
 <details>
 
-<summary>GitHub Copilot CLI</summary>
-
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. In a Copilot CLI session, run `/mcp add` and follow the interactive form with:
-
-    * Name: `maestro`
-    * Type: `stdio`
-    * Command: `maestro`
-    * Args: `mcp`
-
-    Or add to `~/.copilot/mcp-config.json` manually:
-
-    ```json
-    {
-        "mcpServers": {
-            "maestro": {
-                "type": "stdio",
-                "command": "maestro",
-                "args": ["mcp"]
-            }
-        }
-    }
-    ```
-
-See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers).
-
-</details>
-
-<details>
-
-<summary>Codex</summary>
-
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. Run:
-
-    ```bash
-    codex mcp add maestro -- maestro mcp
-    ```
-
-    Or add to `~/.codex/config.toml` manually:
-
-    ```toml
-    [mcp_servers.maestro]
-    command = "maestro"
-    args = ["mcp"]
-    ```
-
-See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
-
-</details>
-
-<details>
-
 <summary>Gemini CLI</summary>
 
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
@@ -232,11 +232,11 @@ The Maestro MCP is bundled inside the Maestro CLI, so upgrading the CLI upgrades
 | Agent                | How to reload                                                                  |
 | -------------------- | ------------------------------------------------------------------------------ |
 | Claude Code CLI      | Run `/mcp`, select **maestro**, then **Reconnect**.                            |
+| Codex                | Restart the Codex CLI.                                                         |
 | Claude Desktop       | Restart Claude Desktop.                                                        |
+| GitHub Copilot CLI   | Restart the Copilot CLI.                                                       |
 | Cursor IDE           | **Cursor Settings → MCP → Restart** the Maestro server, or restart Cursor.     |
 | Cursor CLI           | Restart `cursor-agent`. No in-session reload command exists.                   |
-| GitHub Copilot CLI   | Restart the Copilot CLI.                                                       |
-| Codex                | Restart the Codex CLI.                                                         |
 | Gemini CLI           | Restart the Gemini CLI.                                                        |
 
 ## MCP tools
