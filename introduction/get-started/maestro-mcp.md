@@ -87,7 +87,7 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 
 <summary>Claude Desktop</summary>
 
-If you already added Maestro through the Claude Code CLI with user scope, Claude Desktop will pick it up automatically — no extra setup needed.
+If you already added Maestro through the Claude Code CLI with user scope, Claude Desktop will pick it up automatically, so no extra setup is needed.
 
 Otherwise:
 
@@ -252,7 +252,7 @@ The Maestro MCP is bundled inside the Maestro CLI, so upgrading the CLI upgrades
 | `take_screenshot`      | Take a screenshot of the current device screen. Useful when a visual helps disambiguate elements.                                                                                                         |
 | `run`                  | Execute Maestro flows. Accepts exactly one of `{ yaml }` (inline YAML, preferred for exploration), `{ files }` (specific `.yaml` files), or `{ dir, include_tags, exclude_tags }`. Syntax is validated as part of the call. Replaces the old `run_flow` + `run_flow_files` pair and the imperative single-action tools. |
 | `cheat_sheet`          | Return the Maestro cheat sheet covering common commands, flow syntax, and best practices. The agent should call this before authoring unfamiliar commands.                                                |
-| `list_cloud_devices`   | List valid `{ device_model, device_os }` pairs available on Maestro Cloud. Call before `run_on_cloud` — OS versions must be passed verbatim (e.g. `iOS-17-5`, `android-34`).                               |
+| `list_cloud_devices`   | List valid `{ device_model, device_os }` pairs available on Maestro Cloud. Call before `run_on_cloud`. OS versions must be passed verbatim (e.g. `iOS-17-5`, `android-34`).                                |
 | `run_on_cloud`         | Submit a flow (or folder of flows) to Maestro Cloud. Returns `upload_id`, `project_id`, and a dashboard URL immediately.                                                                                  |
 | `get_cloud_run_status` | Poll the status and per-flow results of a Cloud run. Poll every 60s until the status is terminal (`SUCCESS`, `ERROR`, `CANCELED`, `WARNING`).                                                             |
 
