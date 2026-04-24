@@ -153,9 +153,9 @@ See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilo
 <summary>Cursor IDE</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2. Install the MCP. The quickest option is the one-click deep link:
+2. Install the MCP. The quickest option is the one-click button:
 
-    [**Add Maestro to Cursor**](cursor://anysphere.cursor-deeplink/mcp/install?name=maestro&config=eyJjb21tYW5kIjoibWFlc3RybyBtY3AifQ%3D%3D)
+    [![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=maestro&config=eyJjb21tYW5kIjoibWFlc3RybyBtY3AifQ%3D%3D)
 
     Or set it up manually: open **Cursor Settings → Tools & MCPs → Add Custom MCP**. Cursor opens `~/.cursor/mcp.json` for editing. Merge the following into it (or into a project-scoped `.cursor/mcp.json` in your repo root):
 
