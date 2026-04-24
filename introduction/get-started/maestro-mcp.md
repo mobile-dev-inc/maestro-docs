@@ -160,8 +160,6 @@ See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilo
     }
     ```
 
-On older Cursor versions, the equivalent UI path is **Cursor Settings → MCP → Add new MCP Server**. Name it `maestro`, choose the `command` type, and enter `maestro mcp` as the command.
-
 See the [Cursor MCP docs](https://cursor.com/docs/context/mcp) for more.
 
 </details>
