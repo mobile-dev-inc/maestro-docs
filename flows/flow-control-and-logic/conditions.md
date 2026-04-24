@@ -37,7 +37,7 @@ In this example, the test executes a specific subflow to handle permissions, dep
 
 ```yaml
 - runFlow:
-      when:
+    when:
       platform: Android
     file: subflows/android-permissions.yaml
 
