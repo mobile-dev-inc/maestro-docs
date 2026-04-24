@@ -56,7 +56,9 @@ This assumes `maestro` is on your `PATH`. If it isn't, replace `"maestro"` with 
     claude mcp add maestro -- maestro mcp
     ```
 
+{% hint style="info" %}
 See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) for scope options (`--scope user`, `--scope project`, etc.).
+{% endhint %}
 
 </details>
 
@@ -218,7 +220,9 @@ See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
     }
     ```
 
-See the [Gemini CLI MCP docs](https://geminicli.com/docs/tools/mcp-server/) for scope options (`-s user` writes to `~/.gemini/settings.json`, `-s project` to `.gemini/settings.json`; default is `project`).
+{% hint style="info" %}
+See the [Gemini CLI MCP docs](https://geminicli.com/docs/tools/mcp-server/) for scope options (`-s user`, `-s project`, etc.).
+{% endhint %}
 
 </details>
 
