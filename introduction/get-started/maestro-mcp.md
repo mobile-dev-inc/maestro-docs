@@ -241,8 +241,6 @@ The Maestro MCP is bundled inside the Maestro CLI, so upgrading the CLI upgrades
 
 ## MCP tools
 
-Maestro's MCP server exposes the following tools. The server also ships instructions that guide the agent through the local (`list_devices → inspect_screen → run`) and Cloud (`list_cloud_devices → run_on_cloud → get_cloud_run_status`) workflows.
-
 ### Local
 
 | Tool              | Description                                                                                                                                                                                              |
