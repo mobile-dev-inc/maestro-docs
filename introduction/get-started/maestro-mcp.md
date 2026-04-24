@@ -87,6 +87,10 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 
 <summary>Claude Desktop</summary>
 
+If you already added Maestro through the Claude Code CLI with user scope, Claude Desktop will pick it up automatically — no extra setup needed.
+
+Otherwise:
+
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
 2. Open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
 
