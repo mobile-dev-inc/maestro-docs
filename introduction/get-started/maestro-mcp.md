@@ -47,7 +47,7 @@ This assumes `maestro` is on your `PATH`. If it isn't, replace `"maestro"` with 
 
 <details>
 
-<summary><i class="fa-sparkles">:sparkles:</i> Claude Code CLI</summary>
+<summary>Claude Code CLI</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Run:
@@ -64,7 +64,7 @@ See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) 
 
 <details>
 
-<summary><i class="fa-atom">:atom:</i> Codex</summary>
+<summary>Codex</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Run:
@@ -87,7 +87,7 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 
 <details>
 
-<summary><i class="fa-desktop">:desktop:</i> Claude Desktop</summary>
+<summary>Claude Desktop</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. In Claude Desktop, open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
@@ -121,7 +121,7 @@ The **Connectors** UI in Claude Desktop only supports remote MCP servers that us
 
 <details>
 
-<summary><i class="fa-github">:github:</i> GitHub Copilot CLI</summary>
+<summary>GitHub Copilot CLI</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. In a Copilot CLI session, run `/mcp add` and follow the interactive form with:
@@ -150,7 +150,7 @@ See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilo
 
 <details>
 
-<summary><i class="fa-cube">:cube:</i> Cursor IDE</summary>
+<summary>Cursor IDE</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Install the MCP. The quickest option is the one-click button:
@@ -176,7 +176,7 @@ See the [Cursor MCP docs](https://cursor.com/docs/context/mcp) for more.
 
 <details>
 
-<summary><i class="fa-terminal">:terminal:</i> Cursor CLI</summary>
+<summary>Cursor CLI</summary>
 
 The Cursor CLI shares its MCP config with the Cursor IDE. If Maestro is already set up in the IDE, there's nothing else to do.
 
@@ -202,7 +202,7 @@ See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
 
 <details>
 
-<summary><i class="fa-gem">:gem:</i> Gemini CLI</summary>
+<summary>Gemini CLI</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Run:
