@@ -245,7 +245,7 @@ The Maestro MCP is bundled inside the Maestro CLI, so upgrading the CLI upgrades
 | Codex                | Restart the Codex CLI.                                                         |
 | Claude Desktop       | Restart Claude Desktop.                                                        |
 | GitHub Copilot CLI   | Restart the Copilot CLI.                                                       |
-| Cursor IDE           | **Cursor Settings → MCP → Restart** the Maestro server, or restart Cursor.     |
+| Cursor IDE           | **Cursor Settings → Tools & MCPs** and toggle the Maestro server off and on, or restart Cursor. |
 | Cursor CLI           | Restart `cursor-agent`. No in-session reload command exists.                   |
 | Gemini CLI           | Restart the Gemini CLI.                                                        |
 
