@@ -18,14 +18,14 @@ The Maestro MCP server ships inside the Maestro CLI and exposes Maestro's author
 
 ## Prerequisites
 
-* The [Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md) installed and available on your `PATH`.
+* The [Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli) installed and available on your `PATH`.
 * A coding agent that supports MCP (see the install paths below).
 
 ## Install the Maestro MCP server on your coding agent
 
 Installing the Maestro MCP takes two steps:
 
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md) (via the curl script or Homebrew).
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli) (via the curl script or Homebrew).
 2. Register the Maestro MCP with your coding agent, using either the agent's one-line install command or a manual JSON/TOML config.
 
 If your agent isn't listed below, the generic stdio config is:
@@ -49,7 +49,7 @@ This assumes `maestro` is on your `PATH`. If it isn't, replace `"maestro"` with 
 
 <summary>Claude Code CLI</summary>
 
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Run:
 
     ```bash
@@ -66,7 +66,7 @@ See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) 
 
 <summary>Codex</summary>
 
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Run:
 
     ```bash
@@ -89,7 +89,7 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 
 <summary>Claude Desktop</summary>
 
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. In Claude Desktop, open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
 
     ```json
@@ -123,7 +123,7 @@ The **Connectors** UI in Claude Desktop only supports remote MCP servers that us
 
 <summary>GitHub Copilot CLI</summary>
 
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. In a Copilot CLI session, run `/mcp add` and follow the interactive form with:
 
     * Name: `maestro`
@@ -152,7 +152,7 @@ See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilo
 
 <summary>Cursor IDE</summary>
 
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Open **Cursor Settings → Tools & MCPs → Add Custom MCP**. Cursor opens `~/.cursor/mcp.json` for editing. Merge the following into it (or into a project-scoped `.cursor/mcp.json` in your repo root):
 
     ```json
@@ -178,7 +178,7 @@ The Cursor CLI shares its MCP config with the Cursor IDE. If Maestro is already 
 
 Otherwise:
 
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Add Maestro to `.cursor/mcp.json` in your project root:
 
     ```json
@@ -200,7 +200,7 @@ See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
 
 <summary>Gemini CLI</summary>
 
-1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
 2. Run:
 
     ```bash
@@ -236,7 +236,7 @@ See the [Gemini CLI MCP docs](https://geminicli.com/docs/tools/mcp-server/) for 
 
 The Maestro MCP is bundled inside the Maestro CLI, so upgrading the CLI upgrades the MCP server. After upgrading, your agent needs to reload the MCP connection to pick up the new binary.
 
-1. [Update the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/update-the-maestro-cli.md).
+1. [Update the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli/update-the-maestro-cli).
 2. Reload the Maestro MCP in your agent:
 
 | Agent                | How to reload                                                                  |
