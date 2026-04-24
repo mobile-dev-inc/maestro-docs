@@ -218,7 +218,7 @@ See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
     }
     ```
 
-See the [Gemini CLI MCP docs](https://geminicli.com/docs/tools/mcp-server/).
+See the [Gemini CLI MCP docs](https://geminicli.com/docs/tools/mcp-server/) for scope options (`-s user` writes to `~/.gemini/settings.json`, `-s project` to `.gemini/settings.json`; default is `project`).
 
 </details>
 
