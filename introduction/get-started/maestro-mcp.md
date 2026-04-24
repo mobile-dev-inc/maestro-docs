@@ -65,38 +65,23 @@ See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) 
 <summary>Claude Desktop</summary>
 
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. Add Maestro to Claude Desktop's config.
+2. Open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
 
-{% tabs %}
-{% tab title="Prompt" %}
-In a Claude Desktop Code tab, prompt:
-
-```
-update claude_desktop_config.json to add the maestro mcp server:
-"maestro": { "command": "<full path to maestro>", "args": ["mcp"], "env": { <include JAVA_HOME> } }
-```
-{% endtab %}
-
-{% tab title="Manual" %}
-Open **Settings → Developer → Edit Config** and merge:
-
-```json
-{
-    "mcpServers": {
-        "maestro": {
-            "command": "<full path to maestro binary>",
-            "args": ["mcp"],
-            "env": {
-                "JAVA_HOME": "<full JAVA_HOME directory>"
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "<full path to maestro binary>",
+                "args": ["mcp"],
+                "env": {
+                    "JAVA_HOME": "<full JAVA_HOME directory>"
+                }
             }
         }
     }
-}
-```
+    ```
 
-The config file lives at `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS or `%APPDATA%\Claude\claude_desktop_config.json` on Windows. Claude Desktop launches from a minimal shell, so pass `JAVA_HOME` explicitly and use the full path to the `maestro` binary.
-{% endtab %}
-{% endtabs %}
+    The config file lives at `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS or `%APPDATA%\Claude\claude_desktop_config.json` on Windows. Claude Desktop launches from a minimal shell, so pass `JAVA_HOME` explicitly and use the full path to the `maestro` binary.
 
 </details>
 
@@ -133,35 +118,20 @@ The Cursor CLI shares its MCP config with the Cursor IDE. If Maestro is already 
 Otherwise:
 
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. Add Maestro to `.cursor/mcp.json`.
+2. Add Maestro to `.cursor/mcp.json` in your project root:
 
-{% tabs %}
-{% tab title="Prompt" %}
-In a cursor-agent session, prompt:
-
-```
-update .cursor/mcp.json to add the maestro mcp server:
-"maestro": { "command": "maestro", "args": ["mcp"] }
-```
-{% endtab %}
-
-{% tab title="Manual" %}
-Add to `.cursor/mcp.json` in your project root:
-
-```json
-{
-    "mcpServers": {
-        "maestro": {
-            "command": "maestro",
-            "args": ["mcp"]
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "maestro",
+                "args": ["mcp"]
+            }
         }
     }
-}
-```
+    ```
 
 See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
-{% endtab %}
-{% endtabs %}
 
 </details>
 
@@ -170,36 +140,28 @@ See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
 <summary>GitHub Copilot CLI</summary>
 
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. Add Maestro to Copilot CLI.
+2. In a Copilot CLI session, run `/mcp add` and follow the interactive form with:
 
-{% tabs %}
-{% tab title="Prompt" %}
-In a Copilot CLI session, run `/mcp add` and follow the interactive form:
+    * Name: `maestro`
+    * Type: `stdio`
+    * Command: `maestro`
+    * Args: `mcp`
 
-* Name: `maestro`
-* Type: `stdio`
-* Command: `maestro`
-* Args: `mcp`
+    Or add to `~/.copilot/mcp-config.json` manually:
 
-See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers).
-{% endtab %}
-
-{% tab title="Manual" %}
-Add to `~/.copilot/mcp-config.json`:
-
-```json
-{
-    "mcpServers": {
-        "maestro": {
-            "type": "stdio",
-            "command": "maestro",
-            "args": ["mcp"]
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "type": "stdio",
+                "command": "maestro",
+                "args": ["mcp"]
+            }
         }
     }
-}
-```
-{% endtab %}
-{% endtabs %}
+    ```
+
+See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers).
 
 </details>
 
@@ -208,31 +170,21 @@ Add to `~/.copilot/mcp-config.json`:
 <summary>Codex</summary>
 
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. Add Maestro to Codex.
+2. Run:
 
-{% tabs %}
-{% tab title="Prompt" %}
-Run:
+    ```bash
+    codex mcp add maestro -- maestro mcp
+    ```
 
-```bash
-codex mcp add maestro -- maestro mcp
-```
+    Or add to `~/.codex/config.toml` manually:
 
-See the [Codex MCP docs](https://developers.openai.com/codex/mcp).
-{% endtab %}
+    ```toml
+    [mcp_servers.maestro]
+    command = "maestro"
+    args = ["mcp"]
+    ```
 
-{% tab title="Manual" %}
-Add to `~/.codex/config.toml`:
-
-```toml
-[mcp_servers.maestro]
-command = "maestro"
-args = ["mcp"]
-```
-
-See the [Codex config reference](https://developers.openai.com/codex/config-reference).
-{% endtab %}
-{% endtabs %}
+See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
 
 </details>
 
@@ -241,34 +193,26 @@ See the [Codex config reference](https://developers.openai.com/codex/config-refe
 <summary>Gemini CLI</summary>
 
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. Add Maestro to Gemini CLI.
+2. Run:
 
-{% tabs %}
-{% tab title="Prompt" %}
-Run:
+    ```bash
+    gemini mcp add maestro maestro mcp
+    ```
 
-```bash
-gemini mcp add maestro maestro mcp
-```
+    Or add to `~/.gemini/settings.json` manually:
 
-See the [Gemini CLI MCP docs](https://geminicli.com/docs/tools/mcp-server/).
-{% endtab %}
-
-{% tab title="Manual" %}
-Add to `~/.gemini/settings.json`:
-
-```json
-{
-    "mcpServers": {
-        "maestro": {
-            "command": "maestro",
-            "args": ["mcp"]
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "maestro",
+                "args": ["mcp"]
+            }
         }
     }
-}
-```
-{% endtab %}
-{% endtabs %}
+    ```
+
+See the [Gemini CLI MCP docs](https://geminicli.com/docs/tools/mcp-server/).
 
 </details>
 
