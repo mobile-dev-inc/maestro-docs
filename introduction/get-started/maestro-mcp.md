@@ -1,64 +1,257 @@
 ---
 description: >-
-  Use Maestro's Model Context Protocol (MCP) to integrate AI assistants with
-  mobile testing.
+  Use Maestro's Model Context Protocol (MCP) server to let your coding agent
+  write, run, and debug mobile and web UI tests.
 ---
 
 # Maestro MCP Server
 
-Maestro implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), enabling direct integration with MCP-compliant client apps such as Claude, Cursor, and Windsurf.
+Maestro implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), enabling direct integration with MCP-compliant coding agents such as Claude Code, Claude Desktop, Cursor, GitHub Copilot, Codex, Gemini, Windsurf, and JetBrains AI Assistant.
 
 The Model Context Protocol is an open standard that provides a uniform interface for connecting Large Language Models to external data sources, tools, and services. MCP defines a client-server architecture where:
 
-* **MCP Servers** expose resources like data sources, APIs, and tools through a standardized interface
-* **MCP Clients**, such as AI apps, consume these resources via the protocol
-* **Transport Layer** handles communication using JSON Remote Procedure Call (RPC) 2.0 over stdio, HTTP with Server-Sent Events (SSE), or WebSocket connections
+* **MCP Servers** expose resources like data sources, APIs, and tools through a standardized interface.
+* **MCP Clients**, such as AI apps, consume these resources via the protocol.
+* **Transport Layer** handles communication using JSON-RPC 2.0 over stdio, HTTP with Server-Sent Events (SSE), or WebSocket connections.
 
-This architectural pattern decouples LLMs from specific integrations, allowing Maestro to function as an MCP server that exposes its capabilities through a protocol-defined interface rather than requiring custom SDK implementations for each client.
+The Maestro MCP server ships inside the Maestro CLI and exposes Maestro's authoring, device, and Cloud capabilities to your agent over stdio.
 
 ## Prerequisites
 
-To install and use the Maestro MCP server, you need the following:
+* The [Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli) installed and available on your `PATH`.
+* A coding agent that supports MCP (see the install paths below).
 
-* Maestro command-line tool installed
-* An IDE compatible with MCP servers
+## Install the Maestro MCP server on your coding agent
 
-## Install the Maestro MCP server
+Installing the Maestro MCP takes two steps:
 
-To install the Maestro MCP server, on your terminal, run `maestro mcp`
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli) (via the curl script or Homebrew).
+2. Register the Maestro MCP with your coding agent, using either the agent's one-line install command or a manual JSON/TOML config.
 
-The Maestro command-line tool preinstalls the MCP server, so this is enough to install.
-
-## Configure the MCP server on your IDE
-
-Most IDEs have a `json` configuration file to indicate to IDE how to run the MCP server. To do this, open your MCP configuration file. For example, if you're using Claude Desktop, it is `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS or `%APPDATA%\Claude\claude_desktop_config.json` on Windows. For VSCode, edit the `.vscode/mcp.json` for your workspace.
-
-The `json` configuration file for Maestro MCP serve is:
+If your agent isn't listed below, the generic stdio config is:
 
 ```json
 {
     "mcpServers": {
         "maestro": {
             "command": "maestro",
-            "args": [
-                "mcp"
-            ]
+            "args": ["mcp"]
         }
     }
 }
 ```
 
 {% hint style="info" %}
-Assumes Maestro CLI is installed and available on your PATH. If it's not on your PATH, use the full path to the Maestro CLI executable instead of `maestro`.
+This assumes `maestro` is on your `PATH`. If it isn't, replace `"maestro"` with the full path to the Maestro CLI executable (e.g. `/opt/homebrew/bin/maestro`).
 {% endhint %}
 
-**For other IDEs and more information, consult their documentation:**
+<details>
 
-* [Codex](https://developers.openai.com/codex/mcp)
-* [Cursor](https://cursor.com/docs/context/mcp#installing-mcp-servers)
+<summary>Claude Code CLI</summary>
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2. Run:
+
+    ```bash
+    claude mcp add maestro -- maestro mcp
+    ```
+
+{% hint style="info" %}
+See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) for scope options (`--scope user`, `--scope project`, etc.).
+{% endhint %}
+
+</details>
+
+<details>
+
+<summary>Codex</summary>
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2. Run:
+
+    ```bash
+    codex mcp add maestro -- maestro mcp
+    ```
+
+    Or add to `~/.codex/config.toml` manually:
+
+    ```toml
+    [mcp_servers.maestro]
+    command = "maestro"
+    args = ["mcp"]
+    ```
+
+See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
+
+</details>
+
+<details>
+
+<summary>Claude Desktop</summary>
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2. In Claude Desktop, open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
+
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "<full path to maestro binary>",
+                "args": ["mcp"],
+                "env": {
+                    "JAVA_HOME": "<full JAVA_HOME directory>"
+                }
+            }
+        }
+    }
+    ```
+
+    The config file lives at:
+
+    * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+    * **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+
+    Claude Desktop launches from a minimal shell, so pass `JAVA_HOME` explicitly and use the full path to the `maestro` binary (run `which maestro` in your terminal to find it).
+
+{% hint style="info" %}
+The **Connectors** UI in Claude Desktop only supports remote MCP servers that use OAuth. Local stdio servers like Maestro must be added by editing `claude_desktop_config.json` directly.
+{% endhint %}
+
+</details>
+
+<details>
+
+<summary>GitHub Copilot CLI</summary>
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2. In a Copilot CLI session, run `/mcp add` and follow the interactive form with:
+
+    * Name: `maestro`
+    * Type: `local`
+    * Command: `maestro mcp`
+
+    Or add to `~/.copilot/mcp-config.json` manually:
+
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "type": "local",
+                "command": "maestro",
+                "args": ["mcp"]
+            }
+        }
+    }
+    ```
+
+See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers).
+
+</details>
+
+<details>
+
+<summary>Cursor IDE</summary>
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2. Install the MCP. The quickest option is the one-click button:
+
+    <a href="https://cursor.com/en-US/install-mcp?name=maestro&config=eyJjb21tYW5kIjoibWFlc3RybyBtY3AifQ%3D%3D"><img src="https://cursor.com/deeplink/mcp-install-dark.svg" alt="Install MCP Server"></a>
+
+    Or set it up manually: open **Cursor Settings → Tools & MCPs → Add Custom MCP**. Cursor opens `~/.cursor/mcp.json` for editing. Merge the following into it (or into a project-scoped `.cursor/mcp.json` in your repo root):
+
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "maestro",
+                "args": ["mcp"]
+            }
+        }
+    }
+    ```
+
+See the [Cursor MCP docs](https://cursor.com/docs/context/mcp) for more.
+
+</details>
+
+<details>
+
+<summary>Cursor CLI</summary>
+
+The Cursor CLI shares its MCP config with the Cursor IDE. If Maestro is already set up in the IDE, there's nothing else to do.
+
+Otherwise:
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2. Add Maestro to `.cursor/mcp.json` in your project root:
+
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "maestro",
+                "args": ["mcp"]
+            }
+        }
+    }
+    ```
+
+See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
+
+</details>
+
+<details>
+
+<summary>Gemini CLI</summary>
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2. Run:
+
+    ```bash
+    gemini mcp add maestro maestro mcp
+    ```
+
+    Or add to `~/.gemini/settings.json` manually:
+
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "maestro",
+                "args": ["mcp"]
+            }
+        }
+    }
+    ```
+
+{% hint style="info" %}
+See the [Gemini CLI MCP docs](https://geminicli.com/docs/tools/mcp-server/) for scope options (`-s user`, `-s project`, etc.).
+{% endhint %}
+
+</details>
+
+**For other IDEs, use the generic stdio config above and consult their documentation:**
+
+* [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
 * [JetBrains IDEs](https://www.jetbrains.com/help/ai-assistant/configure-an-mcp-server.html)
-* [VSCode](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
 * [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp)
+
+## Update the Maestro MCP server
+
+The Maestro MCP is bundled inside the Maestro CLI, so upgrading the CLI upgrades the MCP server. After upgrading, your agent needs to reload the MCP connection to pick up the new binary.
+
+1. [Update the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli/update-the-maestro-cli).
+2. Reload the Maestro MCP in your agent:
+
+| Agent                | How to reload                                                                  |
+| -------------------- | ------------------------------------------------------------------------------ |
+| Claude Code CLI      | Run `/mcp`, select **maestro**, then **Reconnect**.                            |
+| Codex                | Restart the Codex CLI.                                                         |
+| Claude Desktop       | Restart Claude Desktop.                                                        |
+| GitHub Copilot CLI   | Restart the Copilot CLI.                                                       |
+| Cursor IDE           | **Cursor Settings → Tools & MCPs** and toggle the Maestro server off and on, or restart Cursor. |
+| Cursor CLI           | Restart `cursor-agent`. No in-session reload command exists.                   |
+| Gemini CLI           | Restart the Gemini CLI.                                                        |
 
 ## MCP commands
 
