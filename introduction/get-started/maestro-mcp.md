@@ -126,8 +126,7 @@ The **Connectors** UI in Claude Desktop only supports remote MCP servers that us
 
     * Name: `maestro`
     * Type: `local`
-    * Command: `maestro`
-    * Args: `mcp`
+    * Command: `maestro mcp`
 
     Or add to `~/.copilot/mcp-config.json` manually:
 
