@@ -47,10 +47,10 @@ This assumes `maestro` is on your `PATH`. If it isn't, replace `"maestro"` with 
 
 <details>
 
-<summary>Claude Code CLI</summary>
+<summary><i class="fa-claude">:claude:</i>  Claude Code CLI</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2. Run:
+2.  Run:
 
     ```bash
     claude mcp add maestro -- maestro mcp
@@ -64,10 +64,10 @@ See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) 
 
 <details>
 
-<summary>Codex</summary>
+<summary><i class="fa-chatgpt">:chatgpt:</i>  Codex</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2. Run:
+2.  Run:
 
     ```bash
     codex mcp add maestro -- maestro mcp
@@ -87,10 +87,10 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 
 <details>
 
-<summary>Claude Desktop</summary>
+<summary><i class="fa-claude">:claude:</i>  Claude Desktop</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2. In Claude Desktop, open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
+2.  In Claude Desktop, open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
 
     ```json
     {
@@ -121,10 +121,10 @@ The **Connectors** UI in Claude Desktop only supports remote MCP servers that us
 
 <details>
 
-<summary>GitHub Copilot CLI</summary>
+<summary><i class="fa-github">:github:</i>  GitHub Copilot CLI</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2. In a Copilot CLI session, run `/mcp add` and follow the interactive form with:
+2.  In a Copilot CLI session, run `/mcp add` and follow the interactive form with:
 
     * Name: `maestro`
     * Type: `local`
@@ -150,12 +150,12 @@ See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilo
 
 <details>
 
-<summary>Cursor IDE</summary>
+<summary><i class="fa-cursor">:cursor:</i>  Cursor IDE</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2. Install the MCP. The quickest option is the one-click button:
+2.  Install the MCP. The quickest option is the one-click button:
 
-    <a href="https://cursor.com/en-US/install-mcp?name=maestro&config=eyJjb21tYW5kIjoibWFlc3RybyBtY3AifQ%3D%3D"><img src="https://cursor.com/deeplink/mcp-install-dark.svg" alt="Install MCP Server"></a>
+    [![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=maestro\&config=eyJjb21tYW5kIjoibWFlc3RybyBtY3AifQ%3D%3D)
 
     Or set it up manually: open **Cursor Settings → Tools & MCPs → Add Custom MCP**. Cursor opens `~/.cursor/mcp.json` for editing. Merge the following into it (or into a project-scoped `.cursor/mcp.json` in your repo root):
 
@@ -176,14 +176,14 @@ See the [Cursor MCP docs](https://cursor.com/docs/context/mcp) for more.
 
 <details>
 
-<summary>Cursor CLI</summary>
+<summary><i class="fa-cursor">:cursor:</i>  Cursor CLI</summary>
 
 The Cursor CLI shares its MCP config with the Cursor IDE. If Maestro is already set up in the IDE, there's nothing else to do.
 
 Otherwise:
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2. Add Maestro to `.cursor/mcp.json` in your project root:
+2.  Add Maestro to `.cursor/mcp.json` in your project root:
 
     ```json
     {
@@ -202,10 +202,10 @@ See the [Cursor CLI MCP docs](https://cursor.com/docs/cli/mcp).
 
 <details>
 
-<summary>Gemini CLI</summary>
+<summary><i class="fa-rectangle-terminal">:rectangle-terminal:</i>  Gemini CLI</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2. Run:
+2.  Run:
 
     ```bash
     gemini mcp add maestro maestro mcp
@@ -243,15 +243,15 @@ The Maestro MCP is bundled inside the Maestro CLI, so upgrading the CLI upgrades
 1. [Update the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli/update-the-maestro-cli).
 2. Reload the Maestro MCP in your agent:
 
-| Agent                | How to reload                                                                  |
-| -------------------- | ------------------------------------------------------------------------------ |
-| Claude Code CLI      | Run `/mcp`, select **maestro**, then **Reconnect**.                            |
-| Codex                | Restart the Codex CLI.                                                         |
-| Claude Desktop       | Restart Claude Desktop.                                                        |
-| GitHub Copilot CLI   | Restart the Copilot CLI.                                                       |
-| Cursor IDE           | **Cursor Settings → Tools & MCPs** and toggle the Maestro server off and on, or restart Cursor. |
-| Cursor CLI           | Restart `cursor-agent`. No in-session reload command exists.                   |
-| Gemini CLI           | Restart the Gemini CLI.                                                        |
+| Agent              | How to reload                                                                                   |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| Claude Code CLI    | Run `/mcp`, select **maestro**, then **Reconnect**.                                             |
+| Codex              | Restart the Codex CLI.                                                                          |
+| Claude Desktop     | Restart Claude Desktop.                                                                         |
+| GitHub Copilot CLI | Restart the Copilot CLI.                                                                        |
+| Cursor IDE         | **Cursor Settings → Tools & MCPs** and toggle the Maestro server off and on, or restart Cursor. |
+| Cursor CLI         | Restart `cursor-agent`. No in-session reload command exists.                                    |
+| Gemini CLI         | Restart the Gemini CLI.                                                                         |
 
 ## MCP commands
 
