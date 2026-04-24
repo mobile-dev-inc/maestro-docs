@@ -147,22 +147,22 @@ See the [Copilot CLI MCP docs](https://docs.github.com/en/copilot/how-tos/copilo
 <summary>Cursor IDE</summary>
 
 1. [Install the Maestro CLI](../../maestro-cli/how-to-install-maestro-cli/README.md).
-2. Open **Cursor Settings → MCP → Add new MCP Server**. Name it `maestro`, choose the `command` type, and enter `maestro mcp` as the command.
+2. Add Maestro to `.cursor/mcp.json` (project scope) or `~/.cursor/mcp.json` (global scope):
 
-Alternatively, add to `.cursor/mcp.json` in your project root:
-
-```json
-{
-    "mcpServers": {
-        "maestro": {
-            "command": "maestro",
-            "args": ["mcp"]
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "maestro",
+                "args": ["mcp"]
+            }
         }
     }
-}
-```
+    ```
 
-See the [Cursor MCP docs](https://cursor.com/docs/context/mcp#installing-mcp-servers) for more.
+3. Open **Cursor Settings → Features → Model Context Protocol** to confirm the `maestro` server is toggled on.
+
+See the [Cursor MCP docs](https://cursor.com/docs/context/mcp) for more.
 
 </details>
 
