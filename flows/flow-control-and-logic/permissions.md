@@ -46,6 +46,7 @@ The following table list all permissions available in iOS and Android.
 
 | Permission      | iOS | Android |
 | --------------- | --- | ------- |
+| `bluetooth`     | ❌   | ✅       |
 | `calendar`      | ✅   | ✅       |
 | `camera`        | ✅   | ✅       |
 | `contacts`      | ✅   | ✅       |
@@ -56,15 +57,14 @@ The following table list all permissions available in iOS and Android.
 | `microphone`    | ✅   | ✅       |
 | `motion`        | ✅   | ❌       |
 | `notifications` | ✅   | ✅       |
+| `phone`         | ❌   | ✅       |
 | `photos`        | ✅   | ❌       |
 | `reminders`     | ✅   | ❌       |
 | `siri`          | ✅   | ❌       |
-| `speech`        | ✅   | ❌       |
-| `usertracking`  | ✅   | ❌       |
-| `bluetooth`     | ❌   | ✅       |
-| `phone`         | ❌   | ✅       |
-| `storage`       | ❌   | ✅       |
 | `sms`           | ❌   | ✅       |
+| `speech`        | ✅   | ❌       |
+| `storage`       | ❌   | ✅       |
+| `usertracking`  | ✅   | ❌       |
 
 {% hint style="success" %}
 To grant all available permissions, use `all: allow` to represent all the permissions that the app can request.
@@ -83,6 +83,21 @@ If a specific Android permission isn't listed above, you can use the full Androi
 {% hint style="info" %}
 Note that `all: allow` also covers custom permissions, so you don't need to specify them individually unless you want to deny everything else.
 {% endhint %}
+
+#### Android special permissions
+
+Not all permissions are prompted for in the app, like location is. Some require the user to leave the app and grant the permission within the Settings app.
+
+`android.permission.MANAGE_EXTERNAL_STORAGE` permission has been required since Android 12 if an app wished to access files that weren't its own (e.g. file browsers, virus scanners).&#x20;
+
+Maestro can manage this like other permissions without additional user interaction, acting like an app's "second use" rather than first use. If it's declared in the app's AndroidManifest.xml then it'll be set automatically. If you want fine grained control, do as with custom permissions:
+
+```yaml
+- launchApp:
+    clearState: true
+    permissions:
+      android.permission.MANAGE_EXTERNAL_STORAGE: deny
+```
 
 ### Permission values
 
@@ -138,5 +153,5 @@ This is a common pattern for testing specific features in isolation.
 
 ### Related resources&#xD;
 
-* [`launchApp`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp): See the full technical reference for launching apps.
-* &#x20;[`setPermissions`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/setpermissions): Technical parameters for mid-flow configuration.
+* [`launchApp`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/launchapp): See the full reference for launching apps.
+* &#x20;[`setPermissions`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/setpermissions): Command for altering permissions configuration mid-flow.
