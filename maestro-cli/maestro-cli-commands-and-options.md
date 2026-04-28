@@ -153,7 +153,7 @@ Launch an emulator or simulator.
 | `--device-os=<os>`         | OS version to use. iOS: `iOS-18-2`, `iOS-26-2` etc. Android: `android-33`, `android-34`, etc. Run `maestro list-devices` to see all supported versions. |
 | `--force-create`           | Overrides the existing device if it already exists.                                     |
 | `-h`, `--help`             | Display the help message.                                                               |
-| `--os-version=<version>`   | (Deprecated) OS version. Use `--device-os` instead.                                     |
+| `--os-version=<version>`   | OS version. (Deprecated - use `device-os` instead.)                                     |
 | `--platform=<platform>`    | Platforms: `android`, `ios`, or `web`                                                   |
 
 #### `list-devices`
