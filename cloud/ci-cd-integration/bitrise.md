@@ -44,6 +44,29 @@ Visit the [Maestro Step in the Bitrise catalog](https://bitrise.io/integrations/
 
 Once configured, Bitrise automatically triggers your Maestro tests in the cloud as part of your pipeline.
 
+#### Device configuration
+
+To target a specific OS version or device model, use the `device_os` and `device_model` inputs. Both inputs accept iOS and Android values.
+
+```yaml
+- maestro-cloud-upload@1:
+    inputs:
+    - api_key: $CLOUD_API_KEY
+    - project_id: $MAESTRO_PROJECT_ID
+    - app_file: $BITRISE_APK_PATH
+    - device_os: android-34
+    - device_model: pixel_6
+```
+
+| Input          | Description                                                                              | Example                    |
+| -------------- | ---------------------------------------------------------------------------------------- | -------------------------- |
+| `device_os`    | OS version to run against. Run `maestro list-cloud-devices` to see all supported values. | `iOS-26-2`, `android-34`     |
+| `device_model` | Device model to run against. Run `maestro list-cloud-devices` to see all supported values. | `iPhone-17-Pro`, `pixel_6` |
+
+{% hint style="warning" %}
+The `android_api_level` input is **deprecated** in favor of `device_os`. Existing workflows that set `android_api_level` continue to work but emit a deprecation warning. Migrate to `device_os` (e.g. `device_os: android-34`) when convenient.
+{% endhint %}
+
 #### Next steps
 
 Now that your CI pipeline is connected, consider optimizing your cloud runs:

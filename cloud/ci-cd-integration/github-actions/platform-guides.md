@@ -60,7 +60,7 @@ The default API level on Maestro Cloud is 33 (Android 13). You can override the 
 with:
   # ... other inputs
   device-model: pixel_6
-  device-os: android-29
+  device-os: android-34
 ```
 
 {% hint style="info" %}
@@ -151,8 +151,8 @@ The default iOS version is 16. You can specify a different OS version or device 
 ```yaml
 with:
   # ... other inputs
-  device-model: iPhone-16
-  device-os: iOS-18-2
+  device-model: iPhone-17-Pro
+  device-os: iOS-26-2
 ```
 
 {% hint style="info" %}
