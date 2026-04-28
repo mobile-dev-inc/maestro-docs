@@ -28,8 +28,8 @@ Supported device types: iPhone11 (iOS), Pixel 6 (Android)
                        Android: pixel_6, pixel_7, etc. Run command: maestro list-devices
       --device-os=<deviceOs>
                        OS version to use:
-                       iOS: iOS-16-2, iOS-17-5, iOS-18-2, etc.
-                       Android: android-33, android-34, etc.
+                         iOS: iOS-18-2, iOS-26-2 etc.
+                         Android: android-33, android-34, etc.
       --platform=<platform>
                        Platforms: android, ios, web
 ```
