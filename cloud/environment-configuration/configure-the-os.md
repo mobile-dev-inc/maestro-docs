@@ -1,7 +1,8 @@
 ---
 description: >-
-  Set Android API levels or iOS runtime versions and device models for Maestro
-  Cloud tests. Supports Android 10-14 and iOS 16-24.
+  Set OS versions and device models for Maestro Cloud tests using the
+  `--device-os` and `--device-model` flags. Supports Android 10-14 and iOS
+  16-26.
 ---
 
 # Configure the OS
@@ -22,10 +23,10 @@ maestro list-cloud-devices
 
 ### Android
 
-You can specify the Android OS version (API level) using the `--device-os` flag when using Maestro Cloud.
+For Android, you can configure both the OS version and the device model. Use the `--device-os` and `--device-model` flags to select a specific combination:
 
 ```bash
-maestro cloud --device-os "<DEVICE_OS>" --app-file "<APP_FILE>" --flows "<FLOWS>"
+maestro cloud --device-os "<DEVICE_OS>" --device-model "<DEVICE_MODEL>" --app-file "<APP_FILE>" --flows "<FLOWS>"
 ```
 
 The following table lists the supported Android versions:
@@ -37,6 +38,14 @@ The following table lists the supported Android versions:
 | Android 12               | android-31            |
 | Android 11               | android-30            |
 | Android 10               | android-29            |
+
+For example, to run your flows on Android 14 using a Pixel 6, use the following command:
+
+```bash
+maestro cloud --device-os "android-34" --device-model "pixel_6" --app-file myapp.apk --flows myflows/
+```
+
+Run `maestro list-cloud-devices` to see the full list of supported Android device models.
 
 {% hint style="info" %}
 #### Reproducing Cloud runs locally
@@ -70,6 +79,8 @@ For example, to run your flows on iOS 26.2 using an iPhone 17 Pro, use the follo
 ```bash
 maestro cloud --device-os "iOS-26-2" --device-model "iPhone-17-Pro" --app-file myapp.app --flows myflows/
 ```
+
+Run `maestro list-cloud-devices` to see the full list of supported iOS device models and OS versions.
 
 {% hint style="info" %}
 #### Deprecated: `--ios-version`  & `--android-api-level`
