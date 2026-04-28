@@ -112,13 +112,13 @@ Below are all available inputs for the `mobile-dev-inc/action-maestro-cloud` act
 
 #### Device configuration
 
-| Input               | Description                                   | Example        |
-| ------------------- | --------------------------------------------- | -------------- |
-| `android-api-level` | Android API level to use.                     | `30`           |
-| `device-model`      | Specific iOS device model.                    | `iPhone-16`    |
-| `device-os`         | Specific iOS OS version.                      | `iOS-18-2`     |
-| `device-locale`     | Device locale (ISO-639-1 + ISO-3166-1).       | `de_DE`        |
-| `mapping-file`      | Path to ProGuard map (Android) or dSYM (iOS). | `./MyApp.dSYM` |
+| Input               | Description                                                                                       | Example        |
+| ------------------- | ------------------------------------------------------------------------------------------------- | -------------- |
+| `android-api-level` | Android API level. (Deprecated - use `device-os` instead.)                                        | `30`           |
+| `device-model`      | Device model to run against. Run `maestro list-cloud-devices` to see all supported models.                                                                         | `iPhone-16` , `pixel_6` |
+| `device-os`         | OS version to run against. Run `maestro list-cloud-devices` to see all supported versions.                                                                             | `iOS-18-2`, `android-34` |
+| `device-locale`     | Device locale (ISO-639-1 + ISO-3166-1).                                                           | `de_DE`        |
+| `mapping-file`      | Path to ProGuard map (Android) or dSYM (iOS).                                                     | `./MyApp.dSYM` |
 
 {% hint style="info" %}
 Access the [configure-the-os.md](../../environment-configuration/configure-the-os.md "mention") page for more information.

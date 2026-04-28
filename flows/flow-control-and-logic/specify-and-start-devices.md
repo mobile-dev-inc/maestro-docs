@@ -18,16 +18,32 @@ To view all available options and configurations available, run:
 maestro start-device
 ```
 
-Maestro will list the devices, platforms, and OS versions available in the cloud, similar to the following example:
+Maestro will list the devices, platforms, and OS versions available, similar to the following example:
 
 ```
 Supported device types: iPhone11 (iOS), Pixel 6 (Android)
-      --os-version=<osVersion>
+      --device-model=<deviceModel>
+                       Device model to run against
+                       iOS: iPhone-11, iPhone-11-Pro, etc. Run command: maestro list-devices
+                       Android: pixel_6, pixel_7, etc. Run command: maestro list-devices
+      --device-os=<deviceOs>
                        OS version to use:
-                       iOS: 16, 17, 18
-                       Android: 28, 29, 30, 31, 33
+                         iOS: iOS-18-2, iOS-26-2 etc.
+                         Android: android-33, android-34, etc.
       --platform=<platform>
-                       Platforms: android, ios
+                       Platforms: android, ios, web
+```
+
+To list all supported local device models and OS versions, run:
+
+```bash
+maestro list-devices
+```
+
+To list the device models and OS versions available on Maestro Cloud, run:
+
+```bash
+maestro list-cloud-devices
 ```
 
 {% tabs %}

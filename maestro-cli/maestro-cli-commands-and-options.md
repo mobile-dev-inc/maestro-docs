@@ -44,14 +44,16 @@ You can pass these subcommands with the Maestro CLI:
 | `bugreport`        | Send a bug report.                                                                   |
 | `chat`             | Use Maestro GPT to help you with the apps and tests.                                 |
 | `cloud`            | Upload your Flows to Maestro Cloud.                                                  |
-| `download-samples` | Download sample Flows and sample apps for running with the Maestro CLI.              |
-| `driver-setup`     | Setup Maestro drivers for your device.                                               |
-| `login`            | Login into Maestro Cloud.                                                            |
-| `logout`           | Logout from Maestro Cloud.                                                           |
-| `mcp`              | Start the Maestro Model Context Protocol (MCP).                                      |
-| `record`           | Record your Flows.                                                                   |
-| `start-device`     | Start an iOS Simulator or an Android Emulator.                                       |
-| `test`             | Test a Flow or a selected set of Flows on a local iOS Simulator or Android Emulator. |
+| `download-samples`    | Download sample Flows and sample apps for running with the Maestro CLI.              |
+| `driver-setup`        | Setup Maestro drivers for your device.                                               |
+| `list-cloud-devices`  | List devices available on Maestro Cloud, grouped by platform.                        |
+| `list-devices`        | List local devices available, grouped by platform.                                   |
+| `login`               | Login into Maestro Cloud.                                                            |
+| `logout`              | Logout from Maestro Cloud.                                                           |
+| `mcp`                 | Start the Maestro Model Context Protocol (MCP).                                      |
+| `record`              | Record your Flows.                                                                   |
+| `start-device`        | Start an iOS Simulator or an Android Emulator.                                       |
+| `test`                | Test a Flow or a selected set of Flows on a local iOS Simulator or Android Emulator. |
 
 ### Subcommand Options
 
@@ -92,7 +94,7 @@ Upload and run your flows on Maestro Cloud.
 
 | Option                                      | Description                                                           |
 | ------------------------------------------- | --------------------------------------------------------------------- |
-| `--android-api-level=<level>`               | Android API level to run your flow against.                           |
+| `--android-api-level=<level>`               | (Deprecated) Android API level. Use `--device-os` instead.            |
 | `--apiKey`, `--api-key=<key>`               | API key for Maestro Cloud.                                            |
 | `--apiUrl`, `--api-url=<url>`               | API base URL.                                                         |
 | `--appBinaryId`, `--app-binary-id=<id>`     | The ID of an app binary previously uploaded to Maestro Cloud.         |
@@ -102,8 +104,8 @@ Upload and run your flows on Maestro Cloud.
 | `--commitSha`, `--commit-sha=<sha>`         | The commit SHA of this upload.                                        |
 | `--config=<file>`                           | Optional .yaml configuration file for Flows.                          |
 | `--device-locale=<locale>`                  | Locale for the device (e.g., "de\_DE" for Germany).                   |
-| `--device-model=<model>`                    | iOS device model to run against (e.g., iPhone-11).                    |
-| `--device-os=<os>`                          | iOS version to run against (e.g., iOS-17-5, iOS-18-2).                |
+| `--device-model=<model>`                    | Device model to run against. iOS: `iPhone-11`, `iPhone-17-Pro`, etc. Android: `pixel_6`, `pixel_7`, etc. Run `maestro list-cloud-devices` to see all supported models. |
+| `--device-os=<os>`                          | OS version to run against. iOS: `iOS-18-2`, `iOS-26-2` etc. Android: `android-33`, `android-34`, etc. Run `maestro list-cloud-devices` to see all supported versions. |
 | `-e`, `--env=<Key=Value>`                   | Environment variables to inject into your Flows.                      |
 | `--exclude-tags=<tags>`                     | List of tags that will remove the Flows containing the provided tags. |
 | `--flows=<path>`                            | A Flow path or a folder path that contains Flows.                     |
@@ -147,10 +149,30 @@ Launch an emulator or simulator.
 | Option                     | Description                                                                             |
 | -------------------------- | --------------------------------------------------------------------------------------- |
 | `--device-locale=<locale>` | Combination of lowercase ISO-639-1 code and uppercase ISO-3166-1 code (e.g., "de\_DE"). |
+| `--device-model=<model>`   | Device model to run against. iOS: `iPhone-11`, `iPhone-17-Pro`, etc. Android: `pixel_6`, `pixel_7`, etc. Run `maestro list-devices` to see all supported models. |
+| `--device-os=<os>`         | OS version to use. iOS: `iOS-18-2`, `iOS-26-2` etc. Android: `android-33`, `android-34`, etc. Run `maestro list-devices` to see all supported versions. |
 | `--force-create`           | Overrides the existing device if it already exists.                                     |
 | `-h`, `--help`             | Display the help message.                                                               |
-| `--os-version=<version>`   | OS version to use. iOS: 16, 17, 18. Android: 28, 29, 30, 31, 33.                        |
+| `--os-version=<version>`   | OS version. (Deprecated - use `device-os` instead.)                                     |
 | `--platform=<platform>`    | Platforms: `android`, `ios`, or `web`                                                   |
+
+#### `list-devices`
+
+List local devices available, grouped by platform.
+
+| Option                     | Description                                          |
+| -------------------------- | ---------------------------------------------------- |
+| `-h`, `--help`             | Display the help message.                            |
+| `--platform=<platform>`    | Filter by platform: `android`, `ios`, or `web`.      |
+
+#### `list-cloud-devices`
+
+List devices available on Maestro Cloud, grouped by platform.
+
+| Option                     | Description                                          |
+| -------------------------- | ---------------------------------------------------- |
+| `-h`, `--help`             | Display the help message.                            |
+| `--platform=<platform>`    | Filter by platform: `android`, `ios`, or `web`.      |
 
 ### Named parameters
 
