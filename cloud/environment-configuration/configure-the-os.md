@@ -1,8 +1,7 @@
 ---
 description: >-
   Set OS versions and device models for Maestro Cloud tests using the
-  `--device-os` and `--device-model` flags. Supports Android 10-14 and iOS
-  16-26.
+  `--device-os` and `--device-model` flags.
 ---
 
 # Configure the OS
@@ -23,29 +22,19 @@ maestro list-cloud-devices
 
 ### Android
 
-For Android, you can configure both the OS version and the device model. Use the `--device-os` and `--device-model` flags to select a specific combination:
+You can specify the Android OS version using the `--device-os` flag when using Maestro Cloud:
 
 ```bash
-maestro cloud --device-os "<DEVICE_OS>" --device-model "<DEVICE_MODEL>" --app-file "<APP_FILE>" --flows "<FLOWS>"
+maestro cloud --device-os "<DEVICE_OS>" --app-file "<APP_FILE>" --flows "<FLOWS>"
 ```
 
-The following table lists the supported Android versions:
-
-| Android Version          | Device OS / API Level |
-| ------------------------ | --------------------- |
-| Android 14               | android-34            |
-| **Android 13 (Default)** | **android-33**        |
-| Android 12               | android-31            |
-| Android 11               | android-30            |
-| Android 10               | android-29            |
-
-For example, to run your flows on Android 14 using a Pixel 6, use the following command:
+For example, to run your flows on Android 14:
 
 ```bash
-maestro cloud --device-os "android-34" --device-model "pixel_6" --app-file myapp.apk --flows myflows/
+maestro cloud --device-os "android-34" --app-file myapp.apk --flows myflows/
 ```
 
-Run `maestro list-cloud-devices` to see the full list of supported Android device models.
+Run `maestro list-cloud-devices` to see the full list of supported Android OS versions.
 
 {% hint style="info" %}
 #### Reproducing Cloud runs locally
@@ -62,17 +51,6 @@ Maestro recommends specifying both the minor OS version and the device model. Us
 ```bash
 maestro cloud --device-os "<DEVICE_OS>" --device-model "<DEVICE_MODEL>" --app-file "<APP_FILE>" --flows "<FLOWS>"
 ```
-
-The following table lists an example of the supported device models and their available iOS versions:
-
-| Device Model             | Supported iOS Versions                 |
-| ------------------------ | -------------------------------------- |
-| **iPhone-11**            | iOS-16-4, iOS-17-5, iOS-18-2, iOS-26-2 |
-| **iPhone-13-mini**       | iOS-18-2, iOS-26-2                     |
-| **iPhone-16**            | iOS-18-2, iOS-26-2                     |
-| **iPhone-17-Pro**        | iOS-26-2                               |
-| **iPhone-17-Pro-Max**    | iOS-26-2                               |
-| **iPad-10th-generation** | iOS-16-4, iOS-17-5, iOS-18-2, iOS-26-2 |
 
 For example, to run your flows on iOS 26.2 using an iPhone 17 Pro, use the following command:
 
