@@ -115,8 +115,8 @@ Below are all available inputs for the `mobile-dev-inc/action-maestro-cloud` act
 | Input               | Description                                                                                       | Example        |
 | ------------------- | ------------------------------------------------------------------------------------------------- | -------------- |
 | `android-api-level` | Android API level. (Deprecated - use `device-os` instead.)                                        | `30`           |
-| `device-model`      | Device model to run against. iOS: `iPhone-11`, `iPhone-16`, etc. Android: `pixel_6`, `pixel_7`, etc. Run `maestro list-cloud-devices` to see all supported models. | `iPhone-16`    |
-| `device-os`         | OS version to run against. iOS: `iOS-17-5`, `iOS-18-2`, etc. Android: `android-33`, `android-34`, etc. Run `maestro list-cloud-devices` to see all supported versions. | `iOS-18-2`     |
+| `device-model`      | Device model to run against. Run `maestro list-cloud-devices` to see all supported models.                                                                         | `iPhone-16` , `pixel_6` |
+| `device-os`         | OS version to run against. Run `maestro list-cloud-devices` to see all supported versions.                                                                             | `iOS-18-2`, `android-34` |
 | `device-locale`     | Device locale (ISO-639-1 + ISO-3166-1).                                                           | `de_DE`        |
 | `mapping-file`      | Path to ProGuard map (Android) or dSYM (iOS).                                                     | `./MyApp.dSYM` |
 
