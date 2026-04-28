@@ -149,8 +149,8 @@ Launch an emulator or simulator.
 | Option                     | Description                                                                             |
 | -------------------------- | --------------------------------------------------------------------------------------- |
 | `--device-locale=<locale>` | Combination of lowercase ISO-639-1 code and uppercase ISO-3166-1 code (e.g., "de\_DE"). |
-| `--device-model=<model>`   | Device model to run against. iOS: `iPhone-11`, `iPhone-11-Pro`, etc. Android: `pixel_6`, `pixel_7`, etc. Run `maestro list-devices` to see all supported models. |
-| `--device-os=<os>`         | OS version to use. iOS: `iOS-16-2`, `iOS-17-5`, `iOS-18-2`, etc. Android: `android-33`, `android-34`, etc. Run `maestro list-devices` to see all supported versions. |
+| `--device-model=<model>`   | Device model to run against. iOS: `iPhone-11`, `iPhone-17-Pro`, etc. Android: `pixel_6`, `pixel_7`, etc. Run `maestro list-devices` to see all supported models. |
+| `--device-os=<os>`         | OS version to use. iOS: `iOS-18-2`, `iOS-26-2` etc. Android: `android-33`, `android-34`, etc. Run `maestro list-devices` to see all supported versions. |
 | `--force-create`           | Overrides the existing device if it already exists.                                     |
 | `-h`, `--help`             | Display the help message.                                                               |
 | `--os-version=<version>`   | (Deprecated) OS version. Use `--device-os` instead.                                     |
