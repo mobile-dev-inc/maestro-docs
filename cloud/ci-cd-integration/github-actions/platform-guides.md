@@ -52,15 +52,20 @@ If your app uses ProGuard/R8, you should upload the mapping file to deobfuscate 
     mapping-file: app/build/outputs/mapping/release/mapping.txt
 ```
 
-#### Specifying Android API level
+#### Specifying the Android OS version and device
 
-The default API level on Maestro Cloud is 33 (Android 13). You can override this using `android-api-level`.
+The default API level on Maestro Cloud is 33 (Android 13). You can override the OS version and the device model using `device-os` and `device-model`:
 
 ```yaml
 with:
   # ... other inputs
-  android-api-level: 29
+  device-model: pixel_6
+  device-os: android-29
 ```
+
+{% hint style="info" %}
+The `android-api-level` input is deprecated in favor of `device-os`. Run `maestro list-cloud-devices` to see all supported Android device models and OS versions.
+{% endhint %}
 
 #### Complete example for Android
 
@@ -149,6 +154,10 @@ with:
   device-model: iPhone-16
   device-os: iOS-18-2
 ```
+
+{% hint style="info" %}
+The `ios-version` input is deprecated in favor of `device-os`. Run `maestro list-cloud-devices` to see all supported iOS device models and OS versions.
+{% endhint %}
 
 #### Complete example for iOS
 
