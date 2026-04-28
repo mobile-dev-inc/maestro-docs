@@ -104,8 +104,8 @@ Upload and run your flows on Maestro Cloud.
 | `--commitSha`, `--commit-sha=<sha>`         | The commit SHA of this upload.                                        |
 | `--config=<file>`                           | Optional .yaml configuration file for Flows.                          |
 | `--device-locale=<locale>`                  | Locale for the device (e.g., "de\_DE" for Germany).                   |
-| `--device-model=<model>`                    | Device model to run against. iOS: `iPhone-11`, `iPhone-11-Pro`, etc. Android: `pixel_6`, `pixel_7`, etc. Run `maestro list-cloud-devices` to see all supported models. |
-| `--device-os=<os>`                          | OS version to run against. iOS: `iOS-16-2`, `iOS-17-5`, `iOS-18-2`, etc. Android: `android-33`, `android-34`, etc. Run `maestro list-cloud-devices` to see all supported versions. |
+| `--device-model=<model>`                    | Device model to run against. iOS: `iPhone-11`, `iPhone-17-Pro`, etc. Android: `pixel_6`, `pixel_7`, etc. Run `maestro list-cloud-devices` to see all supported models. |
+| `--device-os=<os>`                          | OS version to run against. iOS: `iOS-18-2`, `iOS-26-2` etc. Android: `android-33`, `android-34`, etc. Run `maestro list-cloud-devices` to see all supported versions. |
 | `-e`, `--env=<Key=Value>`                   | Environment variables to inject into your Flows.                      |
 | `--exclude-tags=<tags>`                     | List of tags that will remove the Flows containing the provided tags. |
 | `--flows=<path>`                            | A Flow path or a folder path that contains Flows.                     |
