@@ -107,7 +107,7 @@ or
 
 #### **Workaround**
 
-This issue is common on some physical devices from Oppo. To resolve it, return to the Developer Settings where ADB debugging was enabled:
+This issue is common on some physical devices from Oppo and Realme. To resolve it, return to the Developer Settings where ADB debugging was enabled:
 
 1. Open **Developer Settings** (where you enabled ADB debugging).
 2. Disable **Verify apps over USB**.
