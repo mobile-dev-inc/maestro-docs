@@ -93,7 +93,19 @@ Flutter [Keys](https://api.flutter.dev/flutter/foundation/Key-class.html) are de
 ### Known limitations
 
 * **Flutter Desktop**: Maestro does not yet support Flutter for Desktop.
-* **Flutter Web**: It is fully supported by Maestro. It works identically to standard [Web Testing](https://www.google.com/search?q=web-browsers). Simply use Semantics to make your web elements addressable.
+* **Flutter Web**: It is fully supported by Maestro. It works identically to standard [Web Testing](web-browser.md). However, Flutter web renders to `<canvas>` and does **not** enable the DOM accessibility/semantics overlay by default. Maestro relies on this overlay to find elements, so you must explicitly enable it in your app's `main()`:
+
+```dart
+import 'package:flutter/rendering.dart';
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SemanticsBinding.instance.ensureSemantics(); // required for Maestro on web
+  runApp(const MyApp());
+}
+```
+
+Without this call, Maestro cannot find any elements — `assertVisible` and `tapOn` will fail silently even though the app renders correctly. Once semantics are enabled, use Semantics widgets to make your web elements addressable.
 
 ### Next steps
 
