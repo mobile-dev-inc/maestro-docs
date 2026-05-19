@@ -45,13 +45,9 @@ For macOS, ensure that your have also the last version os [XCode](https://apps.a
 {% endtab %}
 
 {% tab title="Windows" %}
-To install on Windows, you can either run:
+To install on Windows:
 
-```bash
-curl -fsSL "https://get.maestro.mobile.dev" | bash
-```
-
-Or you can install using the [releases page on GitHub](https://github.com/mobile-dev-inc/Maestro/releases). To install using the release package, follow these steps:
+Install using the [releases page on GitHub](https://github.com/mobile-dev-inc/Maestro/releases). To install using the release package, follow these steps:
 
 1. Download the latest [maestro.zip](https://github.com/mobile-dev-inc/maestro/releases/latest/download/maestro.zip).
 2. Extract the content to a stable location (e.g., `C:maestro`).
