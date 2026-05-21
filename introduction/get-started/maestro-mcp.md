@@ -6,7 +6,7 @@ description: >-
 
 # Maestro MCP Server
 
-Maestro implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), enabling direct integration coding agents like Claude Code, Claude Desktop, Cursor, GitHub Copilot, Codex, Gemini, Windsurf, and JetBrains AI Assistant ([full list](https://modelcontextprotocol.io/clients)). For more information on MCP see [#what-is-mcp](maestro-mcp.md#what-is-mcp "mention").
+Maestro implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), enabling direct integration coding agents like Claude Code, Claude Desktop, Cursor, GitHub Copilot, Codex, Codex Desktop, Gemini, Windsurf, and JetBrains AI Assistant ([full list](https://modelcontextprotocol.io/clients)). For more information on MCP see [#what-is-mcp](maestro-mcp.md#what-is-mcp "mention").
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FCbCMt5C3rawmE9oIus7f%2Fuploads%2FmkNE7cEla6mI7Ikp0aH5%2Fmaestro-mcp.mp4?alt=media&token=b63eb192-ce07-4614-878c-69cf447eae2e" %}
 
@@ -42,29 +42,6 @@ See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) 
 
 <details>
 
-<summary><i class="fa-chatgpt">:chatgpt:</i>  Codex CLI</summary>
-
-1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2.  Run:
-
-    ```bash
-    codex mcp add maestro -- maestro mcp
-    ```
-
-    Or add to `~/.codex/config.toml` manually:
-
-    ```toml
-    [mcp_servers.maestro]
-    command = "maestro"
-    args = ["mcp"]
-    ```
-
-See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
-
-</details>
-
-<details>
-
 <summary><i class="fa-claude">:claude:</i>  Claude Desktop</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
@@ -94,6 +71,52 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 {% hint style="info" %}
 The **Connectors** UI in Claude Desktop only supports remote MCP servers that use OAuth. Local stdio servers like Maestro must be added by editing `claude_desktop_config.json` directly.
 {% endhint %}
+
+</details>
+
+<details>
+
+<summary><i class="fa-chatgpt">:chatgpt:</i>  Codex CLI</summary>
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2.  Run:
+
+    ```bash
+    codex mcp add maestro -- maestro mcp
+    ```
+
+    Or add to `~/.codex/config.toml` manually:
+
+    ```toml
+    [mcp_servers.maestro]
+    command = "maestro"
+    args = ["mcp"]
+    ```
+
+See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
+
+</details>
+
+<details>
+
+<summary><i class="fa-chatgpt">:chatgpt:</i>  Codex Desktop App</summary>
+
+The Codex Desktop App shares its MCP config (`~/.codex/config.toml`) with the Codex CLI. If Maestro is already set up there, the Desktop App will pick it up automatically.
+
+Otherwise:
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2. In the Codex Desktop App, click the **Settings** button, then **Settings** again, and select **MCP servers** in the sidebar.
+3.  Click **Add server** and fill in the form:
+
+    * **Name:** `maestro`
+    * **Type:** `STDIO`
+    * **Command to launch:** `maestro`
+    * **Arguments:** `mcp`
+
+    Then click **Save**.
+
+See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
 
 </details>
 
@@ -312,6 +335,14 @@ Restart Claude Desktop.
 <summary><i class="fa-chatgpt">:chatgpt:</i>  Codex CLI</summary>
 
 Restart the Codex CLI.
+
+</details>
+
+<details>
+
+<summary><i class="fa-chatgpt">:chatgpt:</i>  Codex Desktop App</summary>
+
+Restart the Codex Desktop App.
 
 </details>
 
