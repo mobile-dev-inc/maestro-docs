@@ -114,6 +114,8 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 
     Claude Desktop launches from a minimal shell, so pass `JAVA_HOME` explicitly and use the full path to the `maestro` binary (run `which maestro` in your terminal to find it).
 
+    After saving the config, restart Claude Desktop for the new server to be picked up.
+
 {% hint style="info" %}
 The **Connectors** UI in Claude Desktop only supports remote MCP servers that use OAuth. Local stdio servers like Maestro must be added by editing `claude_desktop_config.json` directly.
 {% endhint %}
