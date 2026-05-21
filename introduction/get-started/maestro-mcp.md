@@ -67,18 +67,20 @@ See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [confi
 
 <summary><i class="fa-chatgpt">:chatgpt:</i>  Codex Desktop App</summary>
 
-The Codex Desktop App shares its MCP config with the Codex CLI and IDE extension. If Maestro is already set up there, the Desktop App will pick it up automatically.
+The Codex Desktop App shares its MCP config (`~/.codex/config.toml`) with the Codex CLI. If Maestro is already set up there, the Desktop App will pick it up automatically.
 
 Otherwise:
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2.  In the Codex Desktop App, open the gear menu and select **MCP settings → Open config.toml**. Merge the following into `~/.codex/config.toml`:
+2. In the Codex Desktop App, click the **Settings** button, then **Settings** again, and select **MCP servers** in the sidebar.
+3.  Click **Add server** and fill in the form:
 
-    ```toml
-    [mcp_servers.maestro]
-    command = "maestro"
-    args = ["mcp"]
-    ```
+    * **Name:** `maestro`
+    * **Type:** `STDIO`
+    * **Command to launch:** `maestro`
+    * **Arguments:** `mcp`
+
+    Then click **Save**.
 
 See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
 
