@@ -42,6 +42,40 @@ See the [Claude Code MCP docs](https://docs.claude.com/en/docs/claude-code/mcp) 
 
 <details>
 
+<summary><i class="fa-claude">:claude:</i>  Claude Desktop</summary>
+
+1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
+2.  In Claude Desktop, open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
+
+    ```json
+    {
+        "mcpServers": {
+            "maestro": {
+                "command": "<full path to maestro binary>",
+                "args": ["mcp"],
+                "env": {
+                    "JAVA_HOME": "<full JAVA_HOME directory>"
+                }
+            }
+        }
+    }
+    ```
+
+    The config file lives at:
+
+    * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+    * **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+
+    Claude Desktop launches from a minimal shell, so pass `JAVA_HOME` explicitly and use the full path to the `maestro` binary (run `which maestro` in your terminal to find it).
+
+{% hint style="info" %}
+The **Connectors** UI in Claude Desktop only supports remote MCP servers that use OAuth. Local stdio servers like Maestro must be added by editing `claude_desktop_config.json` directly.
+{% endhint %}
+
+</details>
+
+<details>
+
 <summary><i class="fa-chatgpt">:chatgpt:</i>  Codex CLI</summary>
 
 1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
@@ -83,40 +117,6 @@ Otherwise:
     Then click **Save**.
 
 See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
-
-</details>
-
-<details>
-
-<summary><i class="fa-claude">:claude:</i>  Claude Desktop</summary>
-
-1. [Install the Maestro CLI](https://docs.maestro.dev/maestro-cli/how-to-install-maestro-cli).
-2.  In Claude Desktop, open **Settings → Developer → Edit Config** and merge the following into `claude_desktop_config.json`:
-
-    ```json
-    {
-        "mcpServers": {
-            "maestro": {
-                "command": "<full path to maestro binary>",
-                "args": ["mcp"],
-                "env": {
-                    "JAVA_HOME": "<full JAVA_HOME directory>"
-                }
-            }
-        }
-    }
-    ```
-
-    The config file lives at:
-
-    * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
-    * **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
-
-    Claude Desktop launches from a minimal shell, so pass `JAVA_HOME` explicitly and use the full path to the `maestro` binary (run `which maestro` in your terminal to find it).
-
-{% hint style="info" %}
-The **Connectors** UI in Claude Desktop only supports remote MCP servers that use OAuth. Local stdio servers like Maestro must be added by editing `claude_desktop_config.json` directly.
-{% endhint %}
 
 </details>
 
