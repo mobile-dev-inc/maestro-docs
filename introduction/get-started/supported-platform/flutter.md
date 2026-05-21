@@ -6,7 +6,7 @@ description: >-
 
 # Flutter
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 Maestro treats Flutter as a first-class citizen, supporting both pure and hybrid ([add-to-app](https://docs.flutter.dev/add-to-app)) mobile applications. Unlike internal tools that inject Dart code, Maestro interacts with the device elements that Flutter exposes through its Semantics Tree, ensuring your tests reflect the actual experience of an end-user.
 
@@ -68,7 +68,7 @@ As your app adds multi-language support or A/B tests, text-based labels can beco
 This feature was [contributed by the Maestro team to Flutter](https://github.com/flutter/engine/pull/47961) and is available in Flutter 3.19+.
 {% endhint %}
 
-This pattern creates a permanent link between your Dart code and your YAML [Flow ](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)that never changes, even if you translate your app into 20 languages.
+This pattern creates a permanent link between your Dart code and your YAML [Flow ](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/)that never changes, even if you translate your app into 20 languages.
 
 To use the pattern, the developer needs to assign a unique `identifier` that is invisible to the user but exposed to Maestro.
 
@@ -111,8 +111,8 @@ Without this call, Maestro cannot find any elements — `assertVisible` and `tap
 
 If you don't know how to create tests with Maestro, access the [Quickstart](../quickstart.md) guide to get up and running in minutes.
 
-To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
+To learn how to create tests, refer to the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 
-* [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
-* [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
+* [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/)
+* [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/)
 * [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)

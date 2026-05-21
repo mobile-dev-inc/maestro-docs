@@ -10,7 +10,7 @@ You are starting your journey with Maestro. This guide will help you install [Ma
 
 {% stepper %}
 {% step %}
-### Platform-specific setup
+#### Platform-specific setup
 
 Maestro requires a running target device to execute your tests. Use the tabs below to configure your virtual environment.
 
@@ -37,7 +37,7 @@ Maestro currently supports **API Levels 29, 30, 31, 33, and 34**. API 35 and 36 
 {% endstep %}
 
 {% step %}
-### Installation
+#### Installation
 
 Download the appropriate installer for your operating system:
 
@@ -58,13 +58,13 @@ Follow the platform-specific installation prompts:
 {% endstep %}
 
 {% step %}
-### Create your first test
+#### Create your first test
 
 Once your device is running and Maestro Studio is open, you can create your first Flow.
 
 1. Open Maestro Studio and click **Choose new workspace location** to define the directory on your computer to store your tests.
 
-<figure><img src="../.gitbook/assets/quickstart-1 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/quickstart-1.png" alt=""><figcaption></figcaption></figure>
 
 2. Click the **No device connected** button at the top. Select your running Android Emulator or iOS Simulator from the list. The virtual device will pop up.
 3. Click **Create a new test** to open the setup window.
@@ -119,7 +119,7 @@ appId: com.apple.MobileAddressBook
 {% endstep %}
 
 {% step %}
-### Run your first test
+#### Run your first test
 
 With your first YAML file created, let's add a few commands to perform a search.
 
@@ -150,9 +150,9 @@ appId: com.google.android.contacts
 The test launches the native Contacts app, creates a new entry, saves it, and captures a screenshot.
 
 {% hint style="info" %}
-To learn more about the commands you can use to create tests, access the [Commands overview](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
+To learn more about the commands you can use to create tests, access the [Commands](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
 
-To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/ "mention").
 {% endhint %}
 
 After pasting, click **Run Locally**. Watch your virtual device execute the steps automatically. Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
@@ -185,9 +185,9 @@ appId: com.apple.MobileAddressBook
 The test launches the Address Book app, adds a new contact, and saves the result.
 
 {% hint style="info" %}
-To learn more about the commands you can use to create tests, access the [Commands overview](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
+To learn more about the commands you can use to create tests, access the [Commands](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/HqSeOOzxPCLfnK9YzOkb/ "mention")page.
 
-To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+To learn about how you can structure tests, also referred to in Maestro as Flows, access the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/ "mention").
 {% endhint %}
 
 After pasting, click **Run Locally**. Watch your virtual device execute the steps automatically. Maestro Studio will highlight each step as it succeeds or provide a failure reason if an element cannot be found.
@@ -199,15 +199,13 @@ After pasting, click **Run Locally**. Watch your virtual device execute the step
 {% endstepper %}
 
 {% hint style="success" %}
-#### Interactive Flow authoring
+**Interactive Flow authoring**
 
 While this QuickStart focuses on manual YAML, Maestro Studio offers three interactive ways to build your test:
 
 * **Inspect Screen**: Click the **Inspect Screen** button to select elements visually on the device and receive recommended commands.
 * **Insert Command**: Click the **Insert Command** button in the IDE to choose from a list of standard actions.
 * **Manual Entry**: Type commands directly into the YAML editor for precise control.
-
-
 
 <i class="fa-hand-point-right">:hand-point-right:</i> **Access** [Run tests with Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/run-tests-with-maestro-studio "mention") **for more information.**
 {% endhint %}
@@ -222,6 +220,6 @@ Watch this step-by-step video to see the first test creation process in detail:
 
 Now that you’ve seen the power of "arm's length" automation, explore these resources to master the ecosystem:
 
-* Visit the [Maestro Studio overview](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/ "mention") to learn how to use visual element inspection and the Live REPL to build tests without writing code from scratch.
-* If you prefer a programmatic approach or need to integrate tests into your CI/CD pipeline, head to the [Maestro CLI overview](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/ "mention").
-* To learn the best practices for logic, modularity, and nesting, or learn how to add JavaScript scripts to your tests check out the  [Maestro Flows overview](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/ "mention").
+* Visit the [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/ "mention") to learn how to use visual element inspection and the Live REPL to build tests without writing code from scratch.
+* If you prefer a programmatic approach or need to integrate tests into your CI/CD pipeline, head to the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/ "mention").
+* To learn the best practices for logic, modularity, and nesting, or learn how to add JavaScript scripts to your tests check out the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/ "mention").

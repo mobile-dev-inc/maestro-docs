@@ -82,14 +82,14 @@ A major advantage of using Maestro with SwiftUI is migration safety. If you rewr
 
 * **Hierarchy Quirks**: Some specific styles (like `WheelPickerStyle`) may not return a full hierarchy to the accessibility layer, making text-based selection preferred over ID selection in those cases.
 * **Merged Elements**: When a `Toggle` is initialized with text, iOS often merges the text and the switch into a single accessibility element.
-* **Maestro Studio**: Always use [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/) to inspect SwiftUI views. It helps you see exactly how the nested view composition is resolved by the accessibility tree before you write your YAML.
+* **Maestro Studio**: Always use [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/) to inspect SwiftUI views. It helps you see exactly how the nested view composition is resolved by the accessibility tree before you write your YAML.
 
 ### Next steps
 
 If you don't know how to create tests with Maestro, access the [Quickstart](../../quickstart.md) guide to get up and running in minutes.
 
-To learn how to create tests, refer to the [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
+To learn how to create tests, refer to the [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/) documentation. If you want to explore Maestro solutions, consult the appropriate documentation:
 
-* [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
-* [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
+* [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/)
+* [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/)
 * [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)

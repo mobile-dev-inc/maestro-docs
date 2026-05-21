@@ -45,7 +45,7 @@ Maestro connects to your target via ADB (Android Debug Bridge).
 
 ### Cross-platform configuration
 
-If your Android and iOS applications use different identifiers, we recommend using [environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) to keep your [Flows](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/) cross-platform.
+If your Android and iOS applications use different identifiers, we recommend using [environment variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants) to keep your [Flows](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/mS3lsb9jRwfRHqddeRXG/) cross-platform.
 
 You can manage these variables in three primary ways:
 
@@ -62,7 +62,7 @@ appId: ${APP_ID}
 - launchApp
 ```
 
-When executing locally with the [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/), use the `-e` or `--env` flag to inject the correct identifier for that specific run:
+When executing locally with the [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/), use the `-e` or `--env` flag to inject the correct identifier for that specific run:
 
 ```bash
 maestro test -e APP_ID=com.example.android flow.yaml
@@ -86,8 +86,8 @@ Explore the dedicated [Android Native](android-native.md) and [Jetpack Compose](
 
 If you already know the Maestro solution you are going to use, access the desired documentation:
 
-* [Maestro Studio](https://app.gitbook.com/s/eQi66gxHTt2vx4HjhM9V/)
-* [Maestro CLI](https://app.gitbook.com/s/kq23kwiAeAnHkGJYMGDk/)
+* [Maestro Studio](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/eQi66gxHTt2vx4HjhM9V/)
+* [Maestro CLI](https://app.gitbook.com/o/zCVYm3M93B0sOcjR1Oj4/s/kq23kwiAeAnHkGJYMGDk/)
 * [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme)
 
 If you are new to the platform, follow the [QuickStart](../../quickstart.md) guide to get up and running in minutes.
