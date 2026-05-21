@@ -80,7 +80,7 @@ Otherwise:
     * **Command to launch:** `maestro`
     * **Arguments:** `mcp`
 
-    Then click **Save**.
+    Then click **Save** and restart the Codex Desktop App for the new server to be picked up.
 
 See the [Codex MCP docs](https://developers.openai.com/codex/mcp) and the [config reference](https://developers.openai.com/codex/config-reference).
 
