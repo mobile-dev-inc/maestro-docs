@@ -71,7 +71,7 @@ maestro test --format html-detailed --output build/detailed-report.html ./e2e
 
 #### Custom properties
 
-You can add custom metadata to your JUnit report using the `properties` field in your Flow header. This is only possible in your Flow YAML file.
+You can add custom metadata to your JUnit report using the `properties` field in your Flow header. These properties appear as `<property>` child elements on the `<testcase>` in the XML output.
 
 ```yaml
 appId: com.example.app
@@ -82,6 +82,31 @@ properties:
 ---
 - launchApp
 ```
+
+#### Controlling JUnit XML attributes
+
+Two reserved property keys let you override the `id` and `classname` attributes on the `<testcase>` element:
+
+| Key | JUnit attribute | Default |
+|-----|----------------|---------|
+| `junitId` | `id` | Flow name |
+| `junitClassname` | `classname` | Flow name |
+
+By default, `id`, `name`, and `classname` are all set to the flow's `name`. Set `junitId` when you want a stable identifier independent of the display name, and `junitClassname` when your CI tooling groups or deduplicates results by class.
+
+```yaml
+appId: com.example.app
+name: Login Flow
+properties:
+    junitId: TC-LOGIN-001
+    junitClassname: com.example.tests.LoginTest
+---
+- launchApp
+```
+
+{% hint style="info" %}
+`junitId` and `junitClassname` are reserved — they set XML attributes on the `<testcase>` element and are not emitted as `<property>` child elements. All other properties are emitted as `<property>` elements.
+{% endhint %}
 
 #### What's inside the Artifact Folder?
 
