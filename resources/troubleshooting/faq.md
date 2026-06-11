@@ -125,6 +125,25 @@ To work around this, force the value to be treated as literal text by quoting it
 
 <details>
 
+<summary>Why does my tap fail on an element after scrolling to it?</summary>
+
+`scrollUntilVisible` stops as soon as the element appears in the viewport — which can mean only a sliver of it is on screen. The subsequent tap then fails because the tappable area isn't fully within view. Typically, `visibilityPercentage` on `scrollUntilVisible` would help, but some UI frameworks do not report accurate visibility data to the OS, reporting 100% regardless of how much is actually visible.
+
+Instead, add the expected `width` or `height` of the element (use whichever axis you're scrolling) and a `tolerance` directly to the `scrollUntilVisible` element selector. The scroll will then only stop when the element is at its expected size on screen, not a sliver of it:
+
+```yaml
+- scrollUntilVisible:
+    element:
+      text: "My Tappable Item"
+      height: 300
+      tolerance: 50  # matches 250–350px tall, not a sliver
+- tapOn: "My Tappable Item"
+```
+
+</details>
+
+<details>
+
 <summary>Why are my tests slower in Maestro's cloud environment?</summary>
 
 The cloud environment prioritizes reliability and repeatability: each device is wiped and recreated between tests so one run cannot affect another. While this adds about 45 seconds between tests compared with running locally, it ensures a clean state for every execution.
