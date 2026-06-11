@@ -34,6 +34,7 @@ Or you can use `homebrew` by running the commands:
 
 ```bash
 brew tap mobile-dev-inc/tap
+brew trust --formula mobile-dev-inc/tap/maestro
 brew install mobile-dev-inc/tap/maestro
 ```
 
