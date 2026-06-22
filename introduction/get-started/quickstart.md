@@ -32,6 +32,25 @@ Maestro currently supports **API Levels 29, 30, 31, 33, and 34**. API 35 and 36 
 2. Open Xcode, go to `Settings > Locations`, and ensure the **Command Line Tools** are selected.
 3. Open Xcode and go to `Xcode > Open Developer Tool > Simulator` to launch the simulator.
 4. If no device is available, go to `Xcode > Settings > Platforms` and ensure an iOS runtime (iOS 16, 17, 18, or 24) is installed.
+
+{% hint style="warning" %}
+**Xcode is installed but no iOS simulators appear?**
+
+If you installed Xcode without opening it (for example via [`xcodes`](https://github.com/XcodesOrg/xcodes) or a scripted install), macOS may not have installed Xcode's required system components - so the CoreSimulator framework is missing and simulators won't load. In Maestro Studio this shows up as no iOS devices in the device list.
+
+Complete the one-time component install:
+
+```bash
+xcodebuild -runFirstLaunch
+
+# If you're prompted to accept the license first, run:
+
+sudo xcodebuild -license accept
+
+# Then restart Maestro Studio
+# iOS simulators should now appear.
+```
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 {% endstep %}
