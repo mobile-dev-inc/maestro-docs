@@ -25,5 +25,6 @@
   * [Manage secrets](advanced-features/manage-secrets.md)
   * [Reuse app binary](advanced-features/reuse-app-binary.md)
   * [IP allowlist](advanced-features/ip-allowlist.md)
+  * [Automatic Retries](advanced-features/automatic-retries.md)
 * [Limits](limits.md)
 * [Cloud commands](cloud-commands.md)
