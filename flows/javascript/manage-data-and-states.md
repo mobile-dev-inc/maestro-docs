@@ -28,8 +28,6 @@ Once the Flow runs `myScript.js`, the value is assigned to the global object. Yo
 
 ### Output Namespacing
 
-Because the `output` object is global, scripts can accidentally overwrite each other’s data if they use the same variable names. To prevent this, use namespaces, sub-objects named after your specific script or feature.
-
 Because the `output` object is global, different scripts can accidentally overwrite each other’s data if they use the same variable names. To prevent this, use namespaces (sub-objects named after your specific script or feature).
 
 For example, instead of assigning variables directly to the root of `output`, group them by context:
