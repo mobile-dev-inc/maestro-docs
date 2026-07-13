@@ -76,11 +76,14 @@ Below is an example of the data sent:
       "properties": {
         "jira_ticket": "ENG-402",
         "deployment_env": "staging"
-      }
+      },
+      "videoUrl": "https://storage.googleapis.com/.../screen-recording.mp4?X-Goog-Signature=..."
     }
   ]
 }
 ```
+
+Each flow includes a `videoUrl` field: a signed link to the flow's screen recording (`screen-recording.mp4`), valid for 7 days. It is available for all platforms (Android, iOS, and web). The value is `null` when the flow has no recording — for example, if the recording failed and per-step screenshots were captured instead.
 
 ### Related content
 
