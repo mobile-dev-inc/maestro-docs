@@ -42,7 +42,6 @@ You can pass these subcommands with the Maestro CLI:
 | Subcommand         | Description                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------ |
 | `bugreport`        | Send a bug report.                                                                   |
-| `chat`             | Use Maestro GPT to help you with the apps and tests.                                 |
 | `cloud`            | Upload your Flows to Maestro Cloud.                                                  |
 | `download-samples`    | Download sample Flows and sample apps for running with the Maestro CLI.              |
 | `driver-setup`        | Setup Maestro drivers for your device.                                               |
@@ -54,6 +53,12 @@ You can pass these subcommands with the Maestro CLI:
 | `record`              | Record your Flows.                                                                   |
 | `start-device`        | Start an iOS Simulator or an Android Emulator.                                       |
 | `test`                | Test a Flow or a selected set of Flows on a local iOS Simulator or Android Emulator. |
+
+{% hint style="info" %}
+**`maestro chat` (MaestroGPT) has been discontinued.**
+
+Use [Maestro MCP](https://docs.maestro.dev/get-started/maestro-mcp) instead — it connects your coding agent (Claude Code, Cursor, Codex, and others) directly to Maestro so it can write, run, and debug your flows, not just answer questions about them.
+{% endhint %}
 
 ### Subcommand Options
 
