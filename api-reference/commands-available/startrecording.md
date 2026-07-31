@@ -19,7 +19,7 @@ To use the `startRecording`, you can provide only the file name to be saved, or 
 
 | Parameter  | Type    | Description                                                                                                 |
 | ---------- | ------- | ----------------------------------------------------------------------------------------------------------- |
-| `path`     | string  | Specifies the file path for the recording, relative to the Flow file's directory.                           |
+| `path`     | string  | The filename for the recording, without the extension. May include subdirectories. See [Artifact paths](#artifact-paths) for info about where it's saved. |
 | `label`    | string  | **(Optional)** A descriptive label for the command step that appears in the test report.                    |
 | `optional` | boolean | **(Optional)** If `true`, the command does not fail the test if it cannot be executed. Defaults to `false`. |
 
@@ -49,6 +49,22 @@ This example uses the expanded syntax to specify a directory, a descriptive labe
     label: "Capture onboarding sequence for evidence"
     optional: true
 ```
+
+### Artifact paths
+
+Maestro writes this command's output into the `startRecording` folder of the Flow's artifact bundle. See [Layout of a Flow's artifact folder](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts#layout-of-a-flows-artifact-folder).
+
+The `path` must name a file, and must not attempt to escape the artifacts folder. Maestro rejects the command with an `Invalid path` error (and will fail the flow) if the value:
+
+* names a directory rather than a file
+* climbs out of the command's output folder using `..`, such as `../escape`
+* is an empty string, which happens when a variable in the path resolves to `""`
+
+An absolute path is allowed as long as it still points at the correct directory. This might be used, for example, via `maestro test --test-output-dir=/tmp/maestro123 --env OUTPUTDIR=/tmp/maestro123 ...` to compute paths that work for the environment at runtime.
+
+A variable that was never defined does **not** fail the command. It resolves to `undefined`, and the recording is silently written to `undefined.mp4`.
+
+If the file cannot be written (e.g. full disk or read-only destination), the Flow fails with `Cannot write startRecording output to ...`.
 
 ### Related commands
 
