@@ -108,6 +108,50 @@ properties:
 `junitId` and `junitClassname` are reserved — they set XML attributes on the `<testcase>` element and are not emitted as `<property>` child elements. All other properties are emitted as `<property>` elements.
 {% endhint %}
 
+#### Maestro Cloud metadata in test reports
+
+When you generate a report for a [Maestro Cloud](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/readme) run, Maestro adds properties that link each result back to the Cloud dashboard. You don't need to configure anything; they are added to the report automatically.
+
+| Property         | Element       | Description                                             |
+|------------------|---------------|---------------------------------------------------------|
+| `cloud.uploadId` | `<testsuite>` | The ID of the upload that produced this suite.          |
+| `cloud.url`      | `<testsuite>` | Link to the upload in the Maestro Cloud dashboard.      |
+| `cloud.runId`    | `<testcase>`  | The ID of the individual Flow run.                      |
+| `cloud.runUrl`   | `<testcase>`  | Link to that Flow's run in the Maestro Cloud dashboard. |
+
+```xml
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="Test Suite" tests="1" failures="0" time="27.521" timestamp="2026-07-27T10:54:35">
+  <properties>
+    <property name="cloud.uploadId" value="mupload_01kyhfysy0ecrbjt1t6n0p8bgm"/>
+    <property name="cloud.url" value="https://app.maestro.dev/.../upload/mupload_01kyhfysy0ecrbjt1t6n0p8bgm"/>
+  </properties>
+  <testcase id="Login Flow" name="Login Flow" classname="Login Flow" time="27.406" timestamp="2026-07-27T10:54:35" status="SUCCESS">
+    <properties>
+      <property name="cloud.runId" value="run_01kyhfysykehzbz8x1ztx0w53k"/>
+      <property name="cloud.runUrl" value="https://app.maestro.dev/.../flow/run_01kyhfysykehzbz8x1ztx0w53k"/>
+    </properties>
+  </testcase>
+</testsuite>
+```
+
+This extra data has two primary uses:
+
+* Most CI report viewers surface `<property>` values on the test detail page, which gives you a direct jump from a failing test in CI to its screenshots and logs in Cloud.
+* An agent using the Maestro MCP can use this report as key information to investigate failures
+
+HTML reports contain the same information to hyperlink to the suite and to each Flow run.
+
+These properties are only present for Cloud runs. A local `maestro test` run has no Cloud counterpart, so they are omitted rather than left blank.
+
+#### Timestamps and durations
+
+Both report formats record when a run started and how long it took:
+
+* The `timestamp` attribute is populated for local runs as well as Cloud runs, in the local timezone, and is truncated to whole seconds so that strict JUnit XSD validators and CI importers accept it.
+* The suite-level `time` for a local run is the wall-clock time elapsed across the run, not the sum of the individual Flow durations.
+* HTML reports render start times in a human-readable form rather than as raw epoch or ISO-8601 values.
+
 #### What's inside the Artifact Folder?
 
 The contents of your artifact folders depend on which output directory you configure and whether you use one or both CLI flags.
