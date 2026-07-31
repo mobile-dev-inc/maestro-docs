@@ -109,6 +109,20 @@ You can set permissions to one of the following states:
 | `deny`  | Denies the permission. Android will request permission during the Flow execution if the app requires access to a specific feature. |
 | `unset` | Resets the permission state, causing the system to prompt permission requests when running the Flow.                               |
 
+Permission values can come from a variable or a JavaScript expression instead of being hard-coded:
+
+```yaml
+appId: com.example.app
+env:
+  CAMERA_PERMISSION_STATE: deny
+---
+- launchApp:
+    permissions:
+      camera: ${CAMERA_PERMISSION_STATE}
+```
+
+This lets one Flow cover both the granted and the denied journey, driven by `--env` or by the `env` block of the calling Flow.
+
 {% hint style="info" %}
 #### **Push notifications on iOS**
 

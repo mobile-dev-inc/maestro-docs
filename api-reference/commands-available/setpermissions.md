@@ -19,6 +19,8 @@ Maestro has no control over Chrome’s permissions.
 | `permissions` | A map of permissions to set. The key is the permission name, and the value is either `allow` or `deny`. Use the `all` key to apply a state to all permissions. |
 | `appId`       | **(Optional)** The ID of the app to target. Defaults to the app under test.                                                                                    |
 
+All parameters can be set via a variable or a JavaScript expression.
+
 ### Usage examples
 
 The following examples demonstrate how to use the `setPermissions` command.
@@ -43,6 +45,20 @@ This example sets the `camera` permission to `allow` and the `notifications` per
     permissions:
       camera: allow
       notifications: deny
+```
+
+#### Set a permission from a variable
+
+Permission values are interpolated, so you can drive them from a parameter or an environment variable and run the same Flow for both the granted and denied cases.
+
+```yaml
+appId: com.example.app
+env:
+  CAMERA_STATE: allow
+---
+- setPermissions:
+    permissions:
+      camera: ${CAMERA_STATE}
 ```
 
 ### Related content
