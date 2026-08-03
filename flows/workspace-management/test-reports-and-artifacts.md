@@ -171,7 +171,7 @@ Each session gets a timestamped folder inside the output directory, holding the 
     │   ├── crash-report.txt             # if the app under test crashed
     │   └── anr-report.txt               # Android only: if the app stopped responding
     ├── screenshots/                     # step screenshots
-    ├── screen-hierarchy/                # view hierarchy JSON per step
+    ├── screen-hierarchy/                # view hierarchy JSON on failing steps
     ├── takeScreenshot/                  # your takeScreenshot output
     ├── startRecording/                  # your startRecording output
     └── ai-analysis/                     # screenshots analyzed by AI commands
