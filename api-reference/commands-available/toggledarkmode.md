@@ -7,7 +7,7 @@ description: Toggle dark mode on or off during test execution.
 Toggles the device's system-wide dark mode (light/dark appearance) state.
 
 {% hint style="info" %}
-On Android, this toggles the system night mode setting. On iOS, this requires iOS 15+ and controls the simulator's system appearance. On web, the command will pass but has no effect.
+On Android, this toggles the system night mode setting. On iOS, this requires iOS 15+ and controls the simulator's system appearance. On web, this forces the `prefers-color-scheme` media query, which affects any page using it to detect dark mode.
 {% endhint %}
 
 ### Syntax
