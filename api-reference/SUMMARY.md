@@ -3,6 +3,8 @@
 * [Commands overview](README.md)
 * [Commands available](commands-available/README.md)
   * [addMedia](commands-available/addmedia.md)
+  * [assertDarkMode](commands-available/assertdarkmode.md)
+  * [assertLightMode](commands-available/assertlightmode.md)
   * [assertNoDefectsWithAI](commands-available/assertnodefectswithai.md)
   * [assertNotVisible](commands-available/assertnotvisible.md)
   * [assertScreenshot](commands-available/assertscreenshot.md)

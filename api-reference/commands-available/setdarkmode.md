@@ -29,3 +29,5 @@ The following example disables dark mode:
 ### Related commands
 
 * [toggledarkmode.md](toggledarkmode.md "mention")
+* [assertdarkmode.md](assertdarkmode.md "mention")
+* [assertlightmode.md](assertlightmode.md "mention")

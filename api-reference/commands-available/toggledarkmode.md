@@ -21,3 +21,5 @@ This command takes no arguments.
 ### Related commands
 
 * [setdarkmode.md](setdarkmode.md "mention")
+* [assertdarkmode.md](assertdarkmode.md "mention")
+* [assertlightmode.md](assertlightmode.md "mention")
