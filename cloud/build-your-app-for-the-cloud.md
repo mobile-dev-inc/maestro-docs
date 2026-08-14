@@ -26,6 +26,12 @@ Maestro Cloud now uses ARM architectures for Android. Ensure your app binary mee
 * **Architecture:** Must be compatible with ARM or be a multi-architecture build. x86-only APKs will fail to launch in the cloud environment.
 * **Build Type:** Both Release and Debug builds are supported.
 
+{% hint style="info" %}
+#### Apps that use Google Maps
+
+Apps that display a Google Map can crash on Maestro Cloud (but not on real devices) with a `NoClassDefFoundError` for `org.apache.http`. A one-line manifest workaround is available, see [Google Maps crashes on Maestro Cloud](https://docs.maestro.dev/troubleshooting/known-issues).
+{% endhint %}
+
 To build your app, use one of the following approaches:&#x20;
 
 {% tabs %}
