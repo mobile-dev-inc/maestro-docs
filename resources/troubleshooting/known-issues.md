@@ -86,7 +86,7 @@ thrown from inside Google's Maps module (`dynamite_mapsdynamite`), not from your
 
 #### Why it happens
 
-Maestro Cloud runs on `google_apis` Android emulator images. Google's Maps module still references a legacy library (`org.apache.http`), which these images don't put on your app's classpath by default — it's opt-in. Physical devices and Play-Store emulator images provide that library automatically, so the crash only appears on Cloud.
+Maestro Cloud runs on `google_apis` Android emulator images. Google's Maps module still references a legacy library (`org.apache.http`), which these images don't put on your app's classpath by default as it's opt-in. Physical devices and Play-Store emulator images provide that library automatically, so the crash only appears on Cloud.
 
 #### Workaround
 
