@@ -25,6 +25,26 @@ flows:
   - "tests/**"     # Recursive: Includes all Flows in tests and its subfolders
 ```
 
+#### Exclude files with negation patterns
+
+Prefix a glob with `!` to exclude files that would otherwise be included. Use this to skip anything you don't want Maestro to run, whether that's a `.yaml` file that isn't a Flow (such as a helper or data file living alongside your tests), a work-in-progress Flow, or an entire subdirectory.
+
+Maestro first collects every file matched by the positive patterns, then removes any file matched by a negation pattern.
+
+```yaml
+# config.yaml
+appId: com.example.app
+flows:
+  - "**"                    # Include every Flow, recursively
+  - "!ignored.yaml"         # Exclude a single file
+  - "!config_dir/**"        # Exclude an entire subdirectory
+  - "!featureA/skip.yaml"   # Exclude a specific file within an included folder
+```
+
+{% hint style="warning" %}
+A `flows` list must contain at least one positive pattern. Maestro rejects a list made up only of negation patterns and throws a validation error prompting you to add a positive pattern.
+{% endhint %}
+
 ### Filter test via tags
 
 Tags allow you to categorize your Flows based on their purpose, priority, or execution environment without changing your folder structure.

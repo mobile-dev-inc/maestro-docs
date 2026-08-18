@@ -14,7 +14,7 @@ These settings define the identity of your application and how Maestro discovers
 
 | Key                                                                                                               | Description                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`flows`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)                                                        | Glob patterns defining which files to include in a test suite. Defaults to `*` (only YAML files in the root folder). Use `**` for recursive discovery. |
+| [`flows`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/)                                                        | Glob patterns defining which files to include in a test suite. Defaults to `*` (only YAML files in the root folder). Use `**` for recursive discovery. Prefix a pattern with `!` to exclude matching files; at least one positive pattern is required. |
 | [`testOutputDir`](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/workspace-management/test-reports-and-artifacts) | Custom directory where screenshots, logs, and metadata are saved. Defaults to `~/.maestro/tests/`.                                                     |
 
 #### Execution and filtering
@@ -63,6 +63,7 @@ The following example shows a typical Maestro workspace configuration file. This
 flows:
   - 'subFolder/*'
   - 'anotherSubfolder/**'
+  - '!anotherSubfolder/helper.yaml' # Exclude files with a '!' prefix
 includeTags:
   - tagNameToInclude
 excludeTags:
