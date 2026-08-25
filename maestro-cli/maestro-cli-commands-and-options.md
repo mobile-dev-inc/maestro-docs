@@ -108,6 +108,8 @@ maestro test flow.yaml \
 
 You can also enable either artifact type independently with `--capture-step-screenshots` or `--capture-step-hierarchy`.
 
+Step artifact capture is not supported in `--continuous` mode. Expect each capture point to add a few hundred milliseconds to a couple of seconds, depending on the device, screen, and artifact types enabled.
+
 Artifacts captured before a visible step use the command sequence number and command name:
 
 ```text
