@@ -74,6 +74,34 @@ To resolve it:
 
 <details>
 
+<summary>Google Maps crashes on Maestro Cloud</summary>
+
+#### What is happening
+
+An app that displays a Google Map may crash when the map screen opens **on Maestro Cloud**, while working fine on physical devices and local emulators. The crash is:
+
+`java.lang.NoClassDefFoundError: Failed resolution of: Lorg/apache/http/ProtocolVersion;`
+
+thrown from inside Google's Maps module (`dynamite_mapsdynamite`), not from your app's own code.
+
+#### Why it happens
+
+Maestro Cloud runs on `google_apis` Android emulator images. Google's Maps module still references a legacy library (`org.apache.http`), which these images don't put on your app's classpath by default as it's opt-in. Physical devices and Play-Store emulator images provide that library automatically, so the crash only appears on Cloud.
+
+#### Workaround
+
+Declare the library in your app's `AndroidManifest.xml`, inside the `<application>` tag:
+
+```xml
+<uses-library android:name="org.apache.http.legacy" android:required="false" />
+```
+
+This makes the library available to the Maps module. It is harmless on physical devices and Play-Store images (`android:required="false"` means the app still installs where the library isn't needed), so it's safe to keep in all builds.
+
+</details>
+
+<details>
+
 <summary>Companion driver APK fails to install (<code>INSTALL_PARSE_FAILED_NO_CERTIFICATES</code>)</summary>
 
 #### What is happening
