@@ -26,5 +26,6 @@
   * [Reuse app binary](advanced-features/reuse-app-binary.md)
   * [IP allowlist](advanced-features/ip-allowlist.md)
   * [Automatic Retries](advanced-features/automatic-retries.md)
+  * [Stop previous flows](advanced-features/stop-previous-flows.md)
 * [Limits](limits.md)
 * [Cloud commands](cloud-commands.md)
