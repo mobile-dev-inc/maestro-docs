@@ -95,6 +95,10 @@ You can input dynamic data stored in variables or the results of JavaScript expr
 - inputText: ${'testuser_' + Math.floor(Math.random() * 1000)}
 ```
 
+{% hint style="warning" %}
+On iOS simulators, `inputText` can fail on password fields (`secureTextEntry`) because of iOS Password AutoFill. See [Known issues](https://app.gitbook.com/s/htfynyR39703f5pJOF1P/troubleshooting/known-issues) for workarounds.
+{% endhint %}
+
 ### Related commands
 
 * [copytextfrom.md](copytextfrom.md "mention")
