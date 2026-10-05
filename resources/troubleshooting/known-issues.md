@@ -267,3 +267,33 @@ func tableView(_ tableView: UITableView,
 
 </details>
 
+<details>
+
+<summary><code>inputText</code> fails on password fields (<code>secureTextEntry</code>)</summary>
+
+#### What is happening
+
+On an iOS simulator, `inputText` fails when the focused field is a secure text field, such as a password field using `secureTextEntry`. iOS shows a **Strong Password** suggestion over the field and text entry stops working, so the step fails.
+
+This comes from iOS Password AutoFill, not from Maestro. Apple does not expose secure text fields to automation in a way that lets Maestro work around it.
+
+Whether AutoFill is on by default depends on the iOS version of the simulator, so the same flow can pass on one simulator and fail on another.
+
+#### **Workaround**
+
+Use one of the following:
+
+* **Turn off AutoFill Passwords in the simulator.** In the simulator, open **Settings** → **Passwords** → **Password Options** and turn off **AutoFill Passwords**. If the simulator asks for a password to open the Passwords settings, any text works. The exact menu path varies between iOS versions.
+* **Turn off AutoFill from the command line.** This is useful on CI. Boot the simulator first, then run both of these, replacing `<DEVICE_ID>` with the simulator's UDID from `xcrun simctl list devices`:
+
+  ```bash
+  plutil -replace restrictedBool.allowPasswordAutoFill.value -bool NO \
+    ~/Library/Developer/CoreSimulator/Devices/<DEVICE_ID>/data/Library/UserConfigurationProfiles/EffectiveUserSettings.plist
+  plutil -replace restrictedBool.allowPasswordAutoFill.value -bool NO \
+    ~/Library/Developer/CoreSimulator/Devices/<DEVICE_ID>/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles/Library/ConfigurationProfiles/UserSettings.plist
+  ```
+
+  These files are internal to the simulator and Apple may change them, so this approach may stop working on newer iOS versions.
+* **Use a plain text field in test builds.** Disable `secureTextEntry` on the password field when the app is built for testing. This is the most reliable option, but it means the test build differs from the release build.
+
+</details>
