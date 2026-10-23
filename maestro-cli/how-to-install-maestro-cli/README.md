@@ -4,7 +4,7 @@ description: Step-by-step installation guide for Maestro CLI on macOS, Windows, 
 
 # How to install Maestro CLI
 
-Maestro also provides you with the option to use the CLI by terminal. This document will cover the installation of Maestro CLI on the three operational system supported: macOS, Windows and Linux.
+Maestro also provides you with the option to use the CLI by terminal. This document will cover the installation of Maestro CLI on the three operating systems supported: macOS, Windows and Linux.
 
 ### Prerequisites
 
@@ -41,7 +41,7 @@ brew install mobile-dev-inc/tap/maestro
 Run `maestro --help` to verify that the Maestro CLI is working properly.
 
 {% hint style="warning" %}
-For macOS, ensure that your have also the last version os [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [XCode Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/) installed.
+For macOS, ensure that you have also the last version of [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [XCode Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/) installed.
 {% endhint %}
 {% endtab %}
 
@@ -208,7 +208,7 @@ adb devices
 ```
 
 {% hint style="success" %}
-To identify the `WINDOWS_IP`, run the following command in yout WSL terminal:
+To identify the `WINDOWS_IP`, run the following command in your WSL terminal:
 
 ```bash
 ip route show | grep default | awk '{print $3}'

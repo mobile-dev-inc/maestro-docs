@@ -4,7 +4,7 @@ description: Implement the Page Object Model pattern for maintainable Maestro te
 
 # Implementing the Page Object Model (POM)
 
-As the number of test grows, one problem shows up quickly, you will use selectors in every Flow file.
+As the number of tests grows, one problem shows up quickly, you will use selectors in every Flow file.
 
 Hardcoded `id`s spread across dozens of YAML files are easy at first, but the moment a developer renames a button or changes a label, you may find yourself updating several tests just to fix one UI change. This is an example of a non-scalable approach.
 

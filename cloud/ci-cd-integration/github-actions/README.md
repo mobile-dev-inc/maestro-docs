@@ -6,7 +6,7 @@ description: >-
 
 # GitHub Actions
 
-Maestro Cloud has a integration with GitHub Actions that allows you to automate your mobile and web testing pipelines. By using the official [Maestro Cloud GitHub Action](https://github.com/marketplace/actions/maestro-cloud-upload-action), you can trigger tests on every push or pull request and view results directly in the Maestro Console.
+Maestro Cloud has an integration with GitHub Actions that allows you to automate your mobile and web testing pipelines. By using the official [Maestro Cloud GitHub Action](https://github.com/marketplace/actions/maestro-cloud-upload-action), you can trigger tests on every push or pull request and view results directly in the Maestro Console.
 
 {% hint style="info" %}
 **Maestro Cloud Plan required.**
@@ -53,7 +53,7 @@ Add the following step to your workflow `.yaml` file. This basic configuration u
     app-file: app/build/outputs/apk/debug/app-debug.apk
 ```
 
-To help you, the following code snippet shows an example of a complete GItHub Action used to build and run Maestro tests:
+To help you, the following code snippet shows an example of a complete GitHub Action used to build and run Maestro tests:
 
 ```yaml
 name: Build and run Maestro tests (Native Android)
