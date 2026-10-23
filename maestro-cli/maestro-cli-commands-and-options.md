@@ -122,6 +122,7 @@ Upload and run your flows on Maestro Cloud.
 | `--name=<name>`                             | Name of the upload.                                                   |
 | `--[no-]ansi`, `--[no-]color`               | Enable / disable colors and ANSI output.                              |
 | `--output=<path>`                           | File to write report into (default is report.xml).                    |
+| `--priority=<level>`                        | Queue priority of this upload within your organization: `low`, `normal` or `high` (default: `normal`). Requires Maestro CLI 2.12.0 or later. See [Queue priority](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/advanced-features/queue-priority "mention"). |
 | `--projectId`, `--project-id=<id>`          | Project ID.                                                           |
 | `--pullRequestId`, `--pull-request-id=<id>` | The ID of the pull request this upload originated from.               |
 | `--repoName`, `--repo-name=<name>`          | Repository name (e.g., GitHub repo slug).                             |

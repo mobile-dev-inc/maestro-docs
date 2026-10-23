@@ -27,5 +27,6 @@
   * [IP allowlist](advanced-features/ip-allowlist.md)
   * [Automatic Retries](advanced-features/automatic-retries.md)
   * [Stop previous flows](advanced-features/stop-previous-flows.md)
+  * [Queue priority](advanced-features/queue-priority.md)
 * [Limits](limits.md)
 * [Cloud commands](cloud-commands.md)
