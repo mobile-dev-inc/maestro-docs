@@ -69,7 +69,7 @@ The `android-api-level` input is deprecated in favor of `device-os`. Run `maestr
 
 #### Complete example for Android
 
-The following code snippet shows a complete GitHub Action to build your Android app and test is using Maestro Cloud.
+The following code snippet shows a complete GitHub Action to build your Android app and test it using Maestro Cloud.
 
 ```yaml
 name: Build and run Maestro tests (Native Android)
@@ -161,7 +161,7 @@ The `ios-version` input is deprecated in favor of `device-os`. Run `maestro list
 
 #### Complete example for iOS
 
-The following code snippet shows a complete GitHub Action to build your iOS app and test is using Maestro Cloud.
+The following code snippet shows a complete GitHub Action to build your iOS app and test it using Maestro Cloud.
 
 ```yaml
 name: Build and run Maestro tests (Native iOS)

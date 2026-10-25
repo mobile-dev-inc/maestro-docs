@@ -259,7 +259,7 @@ func tableView(_ tableView: UITableView,
   // do not unintentional data fetch request
   guard let visibleIndexPaths = tableView.indexPathsForVisibleRows,
             visibleIndexPaths.contains(indexPath),
-            <additional checks that were previosly there> else { return }
+            <additional checks that were previously there> else { return }
         
   print("load new data..")
 }
