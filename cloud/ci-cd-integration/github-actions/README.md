@@ -107,6 +107,7 @@ Below are all available inputs for the `mobile-dev-inc/action-maestro-cloud` act
 | `exclude-tags`  | Comma-separated list of tags to **exclude**.        | `null`     |
 | `include-tags`  | Comma-separated list of tags to **include**.        | `null`     |
 | `name`          | Friendly name for the upload.                       | Commit Msg |
+| `priority`      | [Queue priority](../../advanced-features/queue-priority.md): `low`, `normal` or `high`. Requires Maestro CLI 2.12.0 or later. | `normal` |
 | `timeout`       | Max time (in minutes) to wait for completion.       | `30`       |
 | `workspace`     | Path to the directory containing Flows.             | `.maestro` |
 
