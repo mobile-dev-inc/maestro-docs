@@ -293,6 +293,42 @@ A later job that lists the Maestro job in `needs` or `after` can read these outp
 With `async: true`, only `maestro_cloud_url` is guaranteed to be valid. The other outputs can be empty because the job does not wait for the Flows to run.
 {% endhint %}
 
+This example sends the Flow counts to Slack after the Maestro Cloud run. It uses the EAS `slack` job, which reads a webhook URL from the `SLACK_WEBHOOK_URL` environment variable.
+
+```yaml
+# .eas/workflows/maestro-cloud-slack.yml
+name: Maestro Cloud with Slack notification
+
+jobs:
+  build_android:
+    name: Build Android
+    type: build
+    params:
+      platform: android
+      profile: e2e-test
+
+  maestro_test:
+    name: Maestro Cloud (Android)
+    needs: [build_android]
+    type: maestro-cloud
+    environment: preview
+    params:
+      build_id: ${{ needs.build_android.outputs.build_id }}
+      maestro_project_id: <YOUR_PROJECT_ID>
+      flows: ./.maestro
+
+  notify:
+    name: Send test results
+    after: [maestro_test]
+    type: slack
+    environment: preview
+    params:
+      webhook_url: ${{ env.SLACK_WEBHOOK_URL }}
+      message: 'Maestro Cloud: ${{ after.maestro_test.outputs.successful_flows_count }}/${{ after.maestro_test.outputs.total_flows_count }} Flows passed. Results: ${{ after.maestro_test.outputs.maestro_cloud_url }}'
+```
+
+`after` runs the `notify` job once `maestro_test` finishes, whether the Flows pass or fail. Add `SLACK_WEBHOOK_URL` to the environment the `notify` job uses.
+
 ### The `maestro` job
 
 The `maestro` job runs your Flows on EAS workers. Expo marks this job as [alpha](https://docs.expo.dev/more/release-statuses/#alpha).
@@ -351,6 +387,45 @@ jobs:
 {% hint style="info" %}
 Android Emulator jobs need a `linux-*-nested-virtualization` worker, set with `runs_on`. iOS Simulator jobs need a `macos-*` worker. See [`runs_on`](https://docs.expo.dev/eas/workflows/syntax/#jobsjob_idruns_on) in the Expo documentation.
 {% endhint %}
+
+This example splits an Android suite into 3 shards and retries failed Flows up to 2 times:
+
+```yaml
+jobs:
+  maestro_android:
+    name: Maestro (Android, sharded)
+    needs: [build_android]
+    type: maestro
+    environment: preview
+    runs_on: linux-large-nested-virtualization
+    params:
+      build_id: ${{ needs.build_android.outputs.build_id }}
+      flow_path: ./.maestro
+      shards: 3
+      retries: 2
+```
+
+Expo marks `shards` as experimental.
+
+### Pass variables to your Flows
+
+Both jobs pass environment variables that start with `MAESTRO_` to your Flows. Set them with `env` on the job. See [Accessing shell variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#accessing-shell-variables) for details.
+
+```yaml
+jobs:
+  maestro_cloud_android:
+    name: Maestro Cloud (Android)
+    needs: [build_android]
+    type: maestro-cloud
+    env:
+      MAESTRO_APP_ID: 'com.yourhost.yourapp'
+    params:
+      build_id: ${{ needs.build_android.outputs.build_id }}
+      maestro_project_id: <YOUR_PROJECT_ID>
+      flows: ./.maestro
+```
+
+The `env` key works the same way on the `maestro` job.
 
 ### Find device models and OS versions
 
