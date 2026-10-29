@@ -21,6 +21,7 @@ Refer to the appropriate guide if you are using one of the following CI/CD integ
 * [bitrise.md](bitrise.md "mention")
 * [bitbucket-pipelines.md](bitbucket-pipelines.md "mention")
 * [circleci.md](circleci.md "mention")
+* [expo-eas.md](expo-eas.md "mention")
 {% endhint %}
 
 ### Prerequisites
