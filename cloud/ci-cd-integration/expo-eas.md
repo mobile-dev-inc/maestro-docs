@@ -1,23 +1,20 @@
 ---
 description: >-
-  Run Maestro Flows from EAS Workflows with the maestro-cloud and maestro
-  pre-packaged jobs. Set up the API key, Project ID, and build jobs for Android
+  Run Maestro Flows on Maestro Cloud from EAS Workflows with the maestro-cloud
+  pre-packaged job. Set up the API key, Project ID, and build jobs for Android
   and iOS.
 ---
 
 # Expo EAS Workflows
 
-[EAS Workflows](https://docs.expo.dev/eas/workflows/get-started/) includes 2 pre-packaged jobs that run Maestro Flows against an app built by an EAS `build` job:
+[EAS Workflows](https://docs.expo.dev/eas/workflows/get-started/) includes a pre-packaged `maestro-cloud` job. It takes the app built by an EAS `build` job, uploads it with your Flows to Maestro Cloud, and runs them on Maestro Cloud devices.
 
-* `maestro-cloud`: uploads the build and your Flows to Maestro Cloud and runs them on Maestro Cloud devices.
-* `maestro`: runs your Flows on an Android Emulator or iOS Simulator on EAS workers.
-
-This guide covers both jobs, with a focus on `maestro-cloud`. For the full reference, see [Pre-packaged jobs](https://docs.expo.dev/eas/workflows/pre-packaged-jobs/) in the Expo documentation.
+For Expo's full reference, see [Pre-packaged jobs](https://docs.expo.dev/eas/workflows/pre-packaged-jobs/#maestro-cloud) in the Expo documentation.
 
 {% hint style="info" %}
 **Maestro Cloud Plan required.**
 
-The `maestro-cloud` job requires a Maestro Cloud account on the [Maestro Cloud Plan](https://signin.maestro.dev/sign-up). The `maestro` job runs on EAS workers and does not use Maestro Cloud.
+The `maestro-cloud` job requires a Maestro Cloud account on the [Maestro Cloud Plan](https://signin.maestro.dev/sign-up).
 {% endhint %}
 
 ### Prerequisites
@@ -38,7 +35,7 @@ The `maestro-cloud` job reads the API key from the `MAESTRO_CLOUD_API_KEY` envir
 1. In the Expo dashboard, open your project's [Environment variables](https://expo.dev/accounts/\[account]/projects/\[project]/environment-variables) page.
 2. Add a variable named `MAESTRO_CLOUD_API_KEY` with your Maestro Cloud API key as the value.
 3. Set its visibility to **Secret**. Secret variables are not readable outside of the EAS servers and are obfuscated in EAS Workflows job logs.
-4. Add it to the environment the job runs in. The `maestro` and `maestro-cloud` jobs use the `preview` environment unless you set `environment` on the job.
+4. Add it to the environment the job runs in. The `maestro-cloud` job uses the `preview` environment unless you set `environment` on the job.
 {% endstep %}
 
 {% step %}
@@ -92,10 +89,8 @@ Files in subdirectories (like `subflows/`) will not be executed as top-level tes
 {% step %}
 ### Create the workflow
 
-Create a `.eas/workflows/` directory at the root of your project and add a workflow file. A `build` job produces the app, and the Maestro job reads its ID from the `build_id` output with `${{ needs.<build_job_id>.outputs.build_id }}`. The `needs` keyword makes the Maestro job wait until the build job succeeds.
+Create a `.eas/workflows/` directory at the root of your project and add a workflow file. A `build` job produces the app, and the `maestro-cloud` job reads its ID from the `build_id` output with `${{ needs.<build_job_id>.outputs.build_id }}`. The `needs` keyword makes the `maestro-cloud` job wait until the build job succeeds.
 
-{% tabs %}
-{% tab title="Maestro Cloud" %}
 This workflow builds Android and iOS on every pull request and runs the Flows in `.maestro/` on Maestro Cloud.
 
 ```yaml
@@ -145,53 +140,6 @@ jobs:
       device_model: iPhone-17-Pro
       device_os: iOS-26-2
 ```
-{% endtab %}
-
-{% tab title="EAS workers" %}
-This workflow builds Android and iOS on every pull request and runs the Flows in `.maestro/` on EAS workers.
-
-```yaml
-# .eas/workflows/maestro-eas.yml
-name: Maestro tests on EAS
-
-on:
-  pull_request:
-    branches: ['*']
-
-jobs:
-  build_android:
-    name: Build Android
-    type: build
-    params:
-      platform: android
-      profile: e2e-test
-
-  build_ios:
-    name: Build iOS
-    type: build
-    params:
-      platform: ios
-      profile: e2e-test
-
-  maestro_android:
-    name: Maestro (Android)
-    needs: [build_android]
-    type: maestro
-    runs_on: linux-medium-nested-virtualization
-    params:
-      build_id: ${{ needs.build_android.outputs.build_id }}
-      flow_path: ./.maestro
-
-  maestro_ios:
-    name: Maestro (iOS)
-    needs: [build_ios]
-    type: maestro
-    params:
-      build_id: ${{ needs.build_ios.outputs.build_id }}
-      flow_path: ./.maestro
-```
-{% endtab %}
-{% endtabs %}
 
 Replace `<YOUR_PROJECT_ID>` with your Maestro Project ID.
 {% endstep %}
@@ -199,24 +147,13 @@ Replace `<YOUR_PROJECT_ID>` with your Maestro Project ID.
 {% step %}
 ### Run the workflow
 
-The workflows above run automatically when someone opens a pull request. You can also start a workflow manually with the EAS CLI:
+The workflow above runs automatically when someone opens a pull request. You can also start a workflow manually with the EAS CLI:
 
 ```bash
 eas workflow:run .eas/workflows/maestro-cloud.yml
 ```
 {% endstep %}
 {% endstepper %}
-
-### Choose a job
-
-| | `maestro-cloud` | `maestro` |
-| --- | --- | --- |
-| Where Flows run | Maestro Cloud devices | Android Emulator or iOS Simulator on EAS workers |
-| Device selection | `device_model` and `device_os`, from `maestro list-cloud-devices` | `device_identifier` and `android_system_image_package` |
-| Results | Maestro Cloud dashboard, plus job outputs in EAS | Job logs and the "Maestro Test Results" artifact in EAS |
-| Maestro Cloud Plan | Required | Not required |
-
-Use the `maestro` job when you run a small suite inside a pipeline that already runs on EAS. Use the `maestro-cloud` job when you want to run Flows in parallel across device models and OS versions on Maestro Cloud, and review results in the Maestro Cloud dashboard.
 
 ### The `maestro-cloud` job
 
@@ -278,7 +215,7 @@ jobs:
 
 #### Outputs
 
-A later job that lists the Maestro job in `needs` or `after` can read these outputs, for example with `${{ after.maestro_cloud_android.outputs.maestro_cloud_url }}`.
+A later job that lists the `maestro-cloud` job in `needs` or `after` can read these outputs, for example with `${{ after.maestro_cloud_android.outputs.maestro_cloud_url }}`.
 
 | Output                       | Description                                                       |
 | ---------------------------- | ----------------------------------------------------------------- |
@@ -329,87 +266,9 @@ jobs:
 
 `after` runs the `notify` job once `maestro_test` finishes, whether the Flows pass or fail. Add `SLACK_WEBHOOK_URL` to the environment the `notify` job uses.
 
-### The `maestro` job
-
-The `maestro` job runs your Flows on EAS workers. Expo marks this job as [alpha](https://docs.expo.dev/more/release-statuses/#alpha).
-
-```yaml
-jobs:
-  run_maestro_tests:
-    type: maestro
-    environment: production | preview | development # optional, defaults to preview
-    image: string # optional
-    runs_on: string # optional
-    params:
-      build_id: string # required
-      flow_path: string | string[] # required
-      shards: number # optional, defaults to 1
-      retries: number # optional, defaults to 0
-      retry_failed_only: boolean # optional, defaults to true
-      record_screen: boolean # optional, defaults to false
-      include_tags: string | string[] # optional
-      exclude_tags: string | string[] # optional
-      maestro_version: string # optional
-      android_system_image_package: string # optional
-      device_identifier: string | { android?: string, ios?: string } # optional
-      output_format: string # optional, defaults to junit
-      skip_build_check: boolean # optional, defaults to false
-    hooks:
-      after_checkout: step[] # optional
-      before_maestro_tests: step[] # optional
-      after_maestro_tests: step[] # optional
-```
-
-#### Parameters
-
-| Parameter                      | Required | Description                                                                                                                                                                  |
-| ------------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `build_id`                     | Yes      | ID of the build to test.                                                                                                                                                     |
-| `flow_path`                    | Yes      | Path to the Flow files or directory to run. Accepts a string or a list.                                                                                                      |
-| `shards`                       | No       | Number of shards to split the tests into. Experimental. Defaults to `1`.                                                                                                     |
-| `retries`                      | No       | Number of times to retry the tests if they fail. Defaults to `0`.                                                                                                            |
-| `retry_failed_only`            | No       | When `true`, retries re-run only the Flows that failed on the previous attempt, when applicable. Set to `false` to re-run all Flows. Defaults to `true`.                     |
-| `record_screen`                | No       | Record the screen. Defaults to `false`. Recording can affect emulator performance.                                                                                           |
-| `include_tags`                 | No       | Only run Flows with these tags. Passed to Maestro as `--include-tags`.                                                                                                       |
-| `exclude_tags`                 | No       | Skip Flows with these tags. Passed to Maestro as `--exclude-tags`.                                                                                                           |
-| `maestro_version`              | No       | Maestro CLI version to use. Defaults to the version preinstalled on the image, or the latest version if none is found. Set to `latest` to always install the newest version. |
-| `android_system_image_package` | No       | Android Emulator system image package. Use an `x86_64` variant. Example: `system-images;android-36;google_apis;x86_64`.                                                      |
-| `device_identifier`            | No       | Device to use. Accepts a string such as `pixel_6` or an object such as `{ android: "pixel_6", ios: "iPhone 16 Plus" }`. Available iOS devices depend on the runner image.    |
-| `output_format`                | No       | Test report format. Passed to Maestro as `--format`. Defaults to `junit`.                                                                                                    |
-| `skip_build_check`             | No       | Skip the check that an iOS build is a simulator build. Defaults to `false`.                                                                                                  |
-
-#### Hooks
-
-* `after_checkout`: steps to run after the job checks out your project.
-* `before_maestro_tests`: steps to run before the tests start.
-* `after_maestro_tests`: steps to run after the tests complete.
-
-{% hint style="info" %}
-Android Emulator jobs need a `linux-*-nested-virtualization` worker, set with `runs_on`. iOS Simulator jobs need a `macos-*` worker. See [`runs_on`](https://docs.expo.dev/eas/workflows/syntax/#jobsjob_idruns_on) in the Expo documentation.
-{% endhint %}
-
-This example splits an Android suite into 3 shards and retries failed Flows up to 2 times:
-
-```yaml
-jobs:
-  maestro_android:
-    name: Maestro (Android, sharded)
-    needs: [build_android]
-    type: maestro
-    environment: preview
-    runs_on: linux-large-nested-virtualization
-    params:
-      build_id: ${{ needs.build_android.outputs.build_id }}
-      flow_path: ./.maestro
-      shards: 3
-      retries: 2
-```
-
-Expo marks `shards` as experimental.
-
 ### Pass variables to your Flows
 
-Both jobs pass environment variables that start with `MAESTRO_` to your Flows. Set them with `env` on the job. See [Accessing shell variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#accessing-shell-variables) for details.
+The `maestro-cloud` job passes environment variables that start with `MAESTRO_` to your Flows. Set them with `env` on the job. See [Accessing shell variables](https://app.gitbook.com/s/mS3lsb9jRwfRHqddeRXG/flow-control-and-logic/parameters-and-constants#accessing-shell-variables) for details.
 
 ```yaml
 jobs:
@@ -425,8 +284,6 @@ jobs:
       flows: ./.maestro
 ```
 
-The `env` key works the same way on the `maestro` job.
-
 ### Find device models and OS versions
 
 The `device_model` and `device_os` values for the `maestro-cloud` job are the same values the `maestro cloud` command accepts. To list them, run:
@@ -441,15 +298,13 @@ The command lists the devices available on Maestro Cloud, grouped by platform. F
 
 * **Maestro Cloud dashboard**: Each `maestro-cloud` run creates an upload in the [Maestro Dashboard](https://app.maestro.dev/). The `maestro_cloud_url` output links to its results page.
 * **EAS workflow run**: Each job shows its status and logs in the EAS dashboard. Without `async`, a `maestro-cloud` job fails when Flows fail.
-* **EAS artifacts**: For the `maestro` job, screenshots and recordings saved by your Flows are available in the "Maestro Test Results" artifact.
 
 ### Troubleshooting
 
 * **Missing API key**: Set the `maestro_api_key` parameter or the `MAESTRO_CLOUD_API_KEY` environment variable. Check that the variable exists in the environment the job runs in, which is `preview` unless you set `environment`.
-* **iOS build check fails**: Unless `skip_build_check` is `true`, both jobs check that an iOS build is a simulator build. Use a build profile with `"ios": { "simulator": true }`.
+* **iOS build check fails**: Unless `skip_build_check` is `true`, the job checks that an iOS build is a simulator build. Use a build profile with `"ios": { "simulator": true }`.
 * **Unsupported device**: Run `maestro list-cloud-devices` and use a `device_model` and `device_os` value from its output.
 * **Job passes but Flows failed**: With `async: true`, the job status only reflects the upload. Check the results in the Maestro Dashboard, or remove `async` to make the job wait for the Flows.
-* **Android Emulator jobs on EAS workers**: Set `runs_on` to a `linux-*-nested-virtualization` worker on the `maestro` job.
 
 #### Next steps
 
