@@ -11,6 +11,7 @@
 * [Get the last matching element](recipes/get-the-last-matching-element.md)
 * [Custom scrolling for screen fragments](recipes/custom-scrolling-for-screen-fragments.md)
 * [Implementing the Page Object Model (POM)](recipes/implementing-the-page-object-model-pom.md)
+* [Test in different time zones](recipes/test-in-different-time-zones.md)
 
 ## Real world examples
 

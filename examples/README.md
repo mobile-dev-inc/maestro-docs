@@ -18,6 +18,7 @@ These guides provide targeted solutions for specific technical requirements:
 * [custom-scrolling-for-screen-fragments.md](recipes/custom-scrolling-for-screen-fragments.md "mention"): Master scrolling in complex layouts where elements are hidden inside sub-containers or fragments.
 * [get-the-last-matching-element.md](recipes/get-the-last-matching-element.md "mention"): Learn how to target a specific instance of an element when multiple identical items (like "Delete" buttons) appear in a list.
 * [implementing-the-page-object-model-pom.md](recipes/implementing-the-page-object-model-pom.md "mention"): Learn how to separate your element selectors from your test logic. This is the industry-standard approach for reducing maintenance and making tests readable for the whole team.
+* [test-in-different-time-zones.md](recipes/test-in-different-time-zones.md "mention"): Learn how to set the Android device time zone through the Settings app, by region or by UTC offset, to test features that depend on the time of day.
 
 ### Real world examples
 
