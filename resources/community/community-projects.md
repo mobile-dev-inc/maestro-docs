@@ -31,6 +31,7 @@ Supercharge your local development and CI/CD pipelines with these community-buil
 * [Codemagic Integration](https://docs.codemagic.io/integrations/maestro-integration/): Documentation for running Maestro tests within Codemagic pipelines.
 * [Fastlane Plugin](https://github.com/inf2381/fastlane-plugin-maestro): Automate flow execution directly from your Fastlane lanes.
 * [Slack Test Results](https://github.com/brett-james-rocketlab/maestro-test-results-to-slack): Automatically parse results and post status updates to your Slack channels.
+* [Qualflare Reporter](https://github.com/Qualflare/qualflare-maestro): Wraps `maestro test` and turns its output into a report with a step per command, screenshots and tags, for upload to Qualflare.
 
 ### Explore more
 
