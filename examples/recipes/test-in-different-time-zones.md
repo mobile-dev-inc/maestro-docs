@@ -4,11 +4,17 @@ description: >-
   UTC offset, so you can test time-dependent features in any zone.
 ---
 
-# Test in different time zones
+# Test in different time zones (Android)
 
 Features that depend on the time of day, such as delivery windows, opening hours, countdowns, or "today" and "yesterday" labels, can behave differently depending on the user's time zone. A test that passes on your laptop in London can fail on a device that is set to New York, or the other way round.
 
-Locally, an emulator matches your machine timezone by default. In Maestro Cloud, devices start in a fixed zone (see [Default device timezones](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/environment-configuration/app-locales-and-device-timezones#default-device-timezones)). Maestro doesn't drive an app, it drives the whole device, so we can drive a change in the device settings.
+Locally, an emulator matches your machine timezone by default. In Maestro Cloud, devices start in a fixed zone (see [Default device timezones](https://app.gitbook.com/s/ky7LkNoLfvcORtXOzzBs/environment-configuration/app-locales-and-device-timezones#default-device-timezones)). Maestro doesn't drive an app, it drives the whole device, so on Android we can drive a change in the device settings.
+
+{% hint style="warning" %}
+#### Android only
+
+The iOS Simulator has no time zone setting. It uses the time zone of the Mac it runs on, so iOS devices on Maestro Cloud are always on Pacific Time.
+{% endhint %}
 
 {% hint style="info" %}
 #### Credits
@@ -185,10 +191,6 @@ maestro test set_timezone.yaml
 ```
 
 Because `REGION`, `CITY`, and `OFFSET` use the `${NAME || "default"}` form, the Flows use their defaults when run on their own, and the values you pass when you call them from another Flow or with `-e`. A plain value in the subflow's `env` header would replace the values you pass in.
-
-### iOS
-
-The iOS Simulator has no time zone setting in its Settings app. It uses the time zone of the Mac it runs on, so on Maestro Cloud iOS devices are always in Pacific Time.
 
 ### Related content
 
