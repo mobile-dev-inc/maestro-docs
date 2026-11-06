@@ -55,7 +55,7 @@ Install using the [releases page on GitHub](https://github.com/mobile-dev-inc/Ma
 3.  Update your `PATH` to add the Maestro CLI environment variable. Run the following in PowerShell to add the Maestro `bin` folder to your environment variables:<br>
 
     ```powershell
-    setx PATH "%PATH%;C:\maestro\bin"
+    [Environment]::SetEnvironmentVariable("Path", "$Env:PATH;c:\maestro\bin", "User")
     ```
 4. Restart your terminal to apply changes.
 
