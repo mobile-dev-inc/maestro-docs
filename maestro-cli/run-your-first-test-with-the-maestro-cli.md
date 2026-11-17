@@ -68,7 +68,7 @@ If you don't know to create and structure Flows, access the [specific documentat
 
 The Maestro CLI provides the `download-samples` command, which lets you download a curated collection of Flow files to help you learn Maestro. Use these samples to explore examples and understand how different Maestro features work in practice.
 
-To use this command, run `maestro doenload-samples`.
+To use this command, run `maestro download-samples`.
 {% endhint %}
 {% endstep %}
 
