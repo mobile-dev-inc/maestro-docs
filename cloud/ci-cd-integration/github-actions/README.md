@@ -46,7 +46,7 @@ Add the following step to your workflow `.yaml` file. This basic configuration u
 
 ```yaml
 - name: Run Maestro Cloud
-- uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
+  uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
   with:
     api-key: ${{ secrets.MAESTRO_API_KEY }}
     project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
@@ -99,26 +99,26 @@ Below are all available inputs for the `mobile-dev-inc/action-maestro-cloud` act
 
 #### Optional configuration
 
-| Input           | Description                                         | Default    |
-| --------------- | --------------------------------------------------- | ---------- |
-| `app-binary-id` | ID of a previously uploaded binary to reuse.        | `null`     |
-| `async`         | If `true`, starts the upload and exits immediately. | `false`    |
-| `env`           | Environment variables to pass to the Flow run.      | `null`     |
-| `exclude-tags`  | Comma-separated list of tags to **exclude**.        | `null`     |
-| `include-tags`  | Comma-separated list of tags to **include**.        | `null`     |
-| `name`          | Friendly name for the upload.                       | Commit Msg |
-| `priority`      | [Queue priority](../../advanced-features/queue-priority.md): `low`, `normal` or `high`. Requires Maestro CLI 2.12.0 or later. | `normal` |
-| `timeout`       | Max time (in minutes) to wait for completion.       | `30`       |
-| `workspace`     | Path to the directory containing Flows.             | `.maestro` |
+| Input           | Description                                                                                                                   | Default    |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `app-binary-id` | ID of a previously uploaded binary to reuse.                                                                                  | `null`     |
+| `async`         | If `true`, starts the upload and exits immediately.                                                                           | `false`    |
+| `env`           | Environment variables to pass to the Flow run.                                                                                | `null`     |
+| `exclude-tags`  | Comma-separated list of tags to **exclude**.                                                                                  | `null`     |
+| `include-tags`  | Comma-separated list of tags to **include**.                                                                                  | `null`     |
+| `name`          | Friendly name for the upload.                                                                                                 | Commit Msg |
+| `priority`      | [Queue priority](../../advanced-features/queue-priority.md): `low`, `normal` or `high`. Requires Maestro CLI 2.12.0 or later. | `normal`   |
+| `timeout`       | Max time (in minutes) to wait for completion.                                                                                 | `30`       |
+| `workspace`     | Path to the directory containing Flows.                                                                                       | `.maestro` |
 
 #### Device configuration
 
-| Input           | Description                                                                                  | Example                  |
-| --------------- | -------------------------------------------------------------------------------------------- | ------------------------ |
-| `device-model`  | Device model to run against. Run `maestro list-cloud-devices` to see all supported values.   | `iPhone-17-Pro`, `pixel_6` |
-| `device-os`     | OS version to run against. Run `maestro list-cloud-devices` to see all supported values.     | `iOS-26-2`, `android-34`   |
-| `device-locale` | Device locale (ISO-639-1 + ISO-3166-1).                                                      | `de_DE`                  |
-| `mapping-file`  | Path to ProGuard map (Android) or dSYM (iOS).                                                | `./MyApp.dSYM`           |
+| Input           | Description                                                                                | Example                    |
+| --------------- | ------------------------------------------------------------------------------------------ | -------------------------- |
+| `device-model`  | Device model to run against. Run `maestro list-cloud-devices` to see all supported values. | `iPhone-17-Pro`, `pixel_6` |
+| `device-os`     | OS version to run against. Run `maestro list-cloud-devices` to see all supported values.   | `iOS-26-2`, `android-34`   |
+| `device-locale` | Device locale (ISO-639-1 + ISO-3166-1).                                                    | `de_DE`                    |
+| `mapping-file`  | Path to ProGuard map (Android) or dSYM (iOS).                                              | `./MyApp.dSYM`             |
 
 {% hint style="warning" %}
 The `android-api-level` and `ios-version` inputs are **deprecated** in favor of `device-os`. Existing workflows that set them continue to work but emit a deprecation warning. Migrate to `device-os` (e.g. `device-os: android-34` or `device-os: iOS-26-2`) when convenient.
