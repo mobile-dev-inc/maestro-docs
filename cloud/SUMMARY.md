@@ -13,6 +13,7 @@
   * [Bitbucket Pipelines](ci-cd-integration/bitbucket-pipelines.md)
   * [CircleCI](ci-cd-integration/circleci.md)
   * [Expo EAS Workflows](ci-cd-integration/expo-eas.md)
+  * [Appcircle](ci-cd-integration/appcircle.md)
   * [Generic CI platform](ci-cd-integration/generic-ci-platform.md)
   * [Pull request integration](ci-cd-integration/pull-request-integration.md)
 * [Environment configuration](environment-configuration/README.md)
