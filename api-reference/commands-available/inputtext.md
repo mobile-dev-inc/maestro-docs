@@ -24,9 +24,22 @@ You can also use the expanded syntax to include the label:
 
 The `label` parameter provides real-world context in your test reports, making it clear what specific data is being entered during that step.
 
-{% hint style="warning" %}
-Unicode characters are not supported on Android. See [GitHub issue #146](https://github.com/mobile-dev-inc/maestro/issues/146) for status updates.
-{% endhint %}
+### Unicode input on Android
+
+Since Maestro 2.7.0, `inputText` supports non-ASCII text on Android, including accented letters, non-Latin scripts such as Arabic, Chinese, Japanese and Korean, and emoji. This works both locally and in Maestro Cloud. Earlier versions fail with a `Unicode character input is not supported` error.
+
+```yaml
+- tapOn: "Search"
+- inputText: "こんにちは世界"
+- eraseText
+- inputText: "Hello 👋 World 🌍"
+```
+
+If the text contains any non-ASCII character, Maestro enters it differently from ASCII-only text:
+
+* **The text is inserted all at once.** It is not typed as a series of key presses, which often makes it faster than typing ASCII text. This applies to the whole string, so `"Hello 👋"` is inserted in one go even though it is mostly ASCII.
+* **A text field must be focused.** Maestro switches to its own input method and inserts the text into the focused field. If no field is focused, the command fails after about 5 seconds with `No active input connection`. Tap the field first, as shown above. ASCII-only text does not need a focused field.
+* **The keyboard is switched temporarily.** Maestro sets its own input method on the device, then restores the original keyboard once the text is entered.
 
 ### Random text input commands
 

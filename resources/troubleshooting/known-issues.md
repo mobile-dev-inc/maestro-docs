@@ -126,20 +126,6 @@ Use a standard (non-hardened) Android device or emulator for your Maestro tests,
 
 <details>
 
-<summary>Text input is not supported for Unicode</summary>
-
-#### What is happening
-
-When testing Android apps, the [`inputText`](https://app.gitbook.com/s/HqSeOOzxPCLfnK9YzOkb/commands-available/inputtext) command does not work as expected when the input contains non-ASCII characters.
-
-#### **Limitation**
-
-On Android, only ASCII characters are supported. Follow [this GitHub issue](https://github.com/mobile-dev-inc/maestro/issues/146) for updates.
-
-</details>
-
-<details>
-
 <summary>Unable to clear state</summary>
 
 #### What is happening

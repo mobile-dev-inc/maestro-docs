@@ -50,9 +50,16 @@ It is important to note that these timezones are fixed and cannot currently be c
 * **Android:** Regardless of the physical host region, the Android emulator defaults to UTC.
 * **iOS:** iOS simulators inherit the system time of the host macOS instance, which is set to GMT -7.
 
+{% hint style="info" %}
+#### Change the time zone on Android
+
+On Android, your Flow can change the time zone through the device's Settings app. See [Test in different time zones (Android)](https://app.gitbook.com/s/JjfcEdmJ9ojsT3Jtpsi8/recipes/test-in-different-time-zones "mention").
+{% endhint %}
+
 ### Related content
 
 Now that you understand how locales and timezones work in the Maestro Cloud, explore other ways to customize your test environment:
 
 * [configure-the-os.md](configure-the-os.md "mention"): Run your tests on specific Android API levels or iOS versions.
+* [Test in different time zones (Android)](https://app.gitbook.com/s/JjfcEdmJ9ojsT3Jtpsi8/recipes/test-in-different-time-zones "mention"): Change the device time zone from a Flow to test time-dependent features.
 * Set up notifications via [Slack](../notifications/set-slack-notification.md), [email](../notifications/set-email-notification.md), or [webhooks](../notifications/configure-webhooks.md) to stay informed about build and test results.

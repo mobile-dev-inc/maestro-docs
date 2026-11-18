@@ -53,10 +53,6 @@ Instead of calculating scroll offsets, use the built-in intelligence of Maestro 
 
 Maestro will automatically swipe down, wait for the next items to load, and stop only when the target element is detected in the view hierarchy.
 
-### Known limitations
-
-While Maestro can detect and tap on views containing Unicode characters, direct inputting (typing) of Unicode text via the `inputText` command is currently not possible.
-
 ### Next steps
 
 If you don't know how to create tests with Maestro, access the [QuickStart](../../quickstart.md) guide to get up and running in minutes.
