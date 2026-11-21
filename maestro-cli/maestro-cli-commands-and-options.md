@@ -74,6 +74,9 @@ Run tests on your local device or emulator.
 | `--api-key=<apiKey>`                | \[Beta] API key.                                                                                             |
 | `--api-url=<apiUrl>`                | \[Beta] API base URL.                                                                                        |
 | `--[no-]ansi`, `--[no-]color`       | Enable / disable colors and ANSI output.                                                                     |
+| `--capture-all-step-artifacts`      | Capture screenshots and view hierarchies before each visible step and at flow end.                           |
+| `--[no-]capture-step-hierarchy`      | Enable or disable view hierarchy capture before each visible step and at flow end.                           |
+| `--[no-]capture-step-screenshots`    | Enable or disable screenshot capture before each visible step and at flow end.                               |
 | `--config=<configFile>`             | Optional YAML configuration file for the workspace.                                                          |
 | `-c`, `--continuous`                | Run tests in continuous mode.                                                                                |
 | `--debug-output=<debugOutput>`      | Configures the debug output in this path, instead of default.                                                |
@@ -92,6 +95,38 @@ Run tests on your local device or emulator.
 | `--test-output-dir=<testOutputDir>` | Configures the test output directory for screenshots and other test artifacts.                               |
 | `--test-suite-name=<testSuiteName>` | Test suite name.                                                                                             |
 | `<flowFiles>...`                    | One or more flow files or folders containing flow files.                                                     |
+
+##### Capturing step artifacts
+
+Step artifact capture is opt-in. Enable screenshots and view hierarchies together with the convenience flag:
+
+```bash
+maestro test flow.yaml \
+  --capture-all-step-artifacts \
+  --test-output-dir artifacts
+```
+
+You can also enable either artifact type independently with `--capture-step-screenshots` or `--capture-step-hierarchy`.
+
+Step artifact capture is not supported in `--continuous` mode. Expect each capture point to add a few hundred milliseconds to a couple of seconds, depending on the device, screen, and artifact types enabled.
+
+Artifacts captured before a visible step use the command sequence number and command name:
+
+```text
+screenshots/step-003-launchApp-com.android.settings.png
+screen-hierarchy/step-003-launchApp-com.android.settings.json
+```
+
+Each step artifact is referenced by its command in `commands.json`. The requested artifact types are captured once more at flow end:
+
+```text
+screenshots/final.png
+screen-hierarchy/final.json
+```
+
+The final artifacts represent the flow-end boundary and are not assigned to the last command. This closes the pre-step sequence by recording the state after the final command.
+
+These flags do not enable AI analysis. Existing failure and warning artifacts are still captured when step capture is disabled. When `--analyze` is enabled, its step screenshots remain enabled; `--capture-step-hierarchy` can add matching hierarchy capture.
 
 #### `cloud`
 
